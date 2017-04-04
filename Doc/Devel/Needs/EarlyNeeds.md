@@ -29,4 +29,4 @@ Additionally CityGML accepts information model "extensions" (called ADE e.g. [En
 ## Chalenge 4: from abstract treatment data model to treatment target language generated concrete data structure
  * Google [Protocol Buffers](https://developers.google.com/protocol-buffers/docs/overview)
  * [Proto + Spark](http://stackoverflow.com/questions/34487996/how-can-i-use-proto3-with-hadoop-spark)
- * Code generation [mixins](https://en.wikipedia.org/wiki/Mixin#Programming_languages_that_use_mixins)
+ * Code generation (through [mixins](https://en.wikipedia.org/wiki/Mixin#Programming_languages_that_use_mixins) ?) are the occasion of blending CityGML + ADE + Treatment needs
