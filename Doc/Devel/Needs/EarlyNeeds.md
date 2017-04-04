@@ -25,3 +25,8 @@ CityGML last specification is now defined as an abstract model in the form of an
 Additionally CityGML accepts information model "extensions" (called ADE e.g. [Energy_ADE](http://www.citygmlwiki.org/index.php/CityGML_Energy_ADE)) themselves described in their abstract or concrete forms.
 
 **When working (defining or producing data) with such ADE's what are the modular methods and tools to be used in order to maintain such an extensible data repository ?**  
+
+## Chalenge 4: from abstract treatment data model to treatment target language generated concrete data structure
+ * Google [Protocol Buffers](https://developers.google.com/protocol-buffers/docs/overview)
+ * [Proto + Spark](http://stackoverflow.com/questions/34487996/how-can-i-use-proto3-with-hadoop-spark)
+ * Code generation [mixins](https://en.wikipedia.org/wiki/Mixin#Programming_languages_that_use_mixins)
