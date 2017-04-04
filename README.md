@@ -1,5 +1,5 @@
 ## The needs
-Refer here.
+A brief description of the [early needs](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/EarlyNeeds.md).
 
 ## Objective
 The objective of the RICT (Representation Information CiTy) project is to design and realize 
