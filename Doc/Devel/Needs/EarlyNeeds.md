@@ -1,3 +1,7 @@
+
+FIXME: en fait pas de pb de passage a l'echelle coté données grace à un tuilage (venant de la geographie)
+
+
 ## Fuzzy description of the needs
 Consider an organization developing Computational Models (CM aka Filter) working on city related data. Such an organization is facing different challenges:
 
