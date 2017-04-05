@@ -1,9 +1,3 @@
-
-FIXME: GGE said que en fait
-   - pas de pb de passage a l'echelle coté données grace à un tuilage (venant de la geographie)
-   - pas de passage a l'echelle parallelisme n'est pas notre coeur metier car on accepte du batch (pas conditionné par des temps de reponses acceptable pour les utilisateurs ni de streaming)
-
-
 ## What the project needs (fuzzy/early description)
 Consider an organization developing Computational Models (CM aka Filter) working on city related data. Such an organization is facing different challenges:
 
