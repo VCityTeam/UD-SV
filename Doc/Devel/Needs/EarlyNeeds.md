@@ -4,7 +4,7 @@ FIXME: GGE said que en fait
    - pas de passage a l'echelle parallelisme n'est pas notre coeur metier car on accepte du batch (pas conditionné par des temps de reponses acceptable pour les utilisateurs ni de streaming)
 
 
-## Fuzzy description of the needs
+## What the project needs (fuzzy/early description)
 Consider an organization developing Computational Models (CM aka Filter) working on city related data. Such an organization is facing different challenges:
 
 ### Challenge 1: how to define and use a [**CM type signature**](https://en.wikipedia.org/wiki/Type_signature)
@@ -32,7 +32,18 @@ Additionally CityGML accepts information model "extensions" (called ADE e.g. [En
 
 **When working (defining or producing data) with such ADE's what are the modular methods and tools to be used in order to maintain such an extensible data repository ?**  
 
-## Chalenge 4: from abstract treatment data model to treatment target language generated concrete data structure
+### Chalenge 4: from abstract treatment data model to treatment target language generated concrete data structure
  * Google [Protocol Buffers](https://developers.google.com/protocol-buffers/docs/overview)
  * [Proto + Spark](http://stackoverflow.com/questions/34487996/how-can-i-use-proto3-with-hadoop-spark)
  * Code generation (through [mixins](https://en.wikipedia.org/wiki/Mixin#Programming_languages_that_use_mixins) ?) are the occasion of blending CityGML + ADE + Treatment needs
+
+## What the project doesn't need
+
+### Dropped-challenge 1: data volume doesn't require scaling up
+Although city data volumes are ramping up (new acquisition techniques, censors...):
+  - their global volume for a given city (2 To) still remain "reachable" for HPC high memory nodes 
+  - the coordinate ordering allows to scale down 
+   - pas de pb de passage a l'echelle coté données grace à un tuilage (venant de la geographie)
+   - pas de passage a l'echelle parallelisme n'est pas notre coeur metier car on accepte du batch (pas conditionné par des temps de reponses acceptable pour les utilisateurs ni de streaming)
+
+
