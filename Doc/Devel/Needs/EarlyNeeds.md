@@ -26,10 +26,13 @@ Additionally CityGML accepts information model "extensions" (called ADE e.g. [En
 
 **When working (defining or producing data) with such ADE's what are the modular methods and tools to be used in order to maintain such an extensible data repository ?**  
 
-### Chalenge 4: from abstract treatment data model to treatment target language generated concrete data structure
+### Chalenge 4: from treatment data model to data bindings
+A CM specifier will express the needs in terms of data elements (entities with attributes) and data structure (relationships between the entities) for the CM to be effective. The CM specifier will also need the such an [abstract data model](https://en.wikipedia.org/wiki/Conceptual_schema) in order to specify the output of the CM. A some point of the concrete realization workflow of that CM, an implementation will have to be produced. A component of that implementation will be the concrete implementation of the specified data structure (possibly enriched with implementation details: going from the [CIM](https://en.wikipedia.org/wiki/Model_Driven_Interoperability) (Computational Independent Model) to the [Platform Model](http://www.theenterprisearchitect.eu/blog/2008/01/16/mda-model-driven-architecture-basic-concepts/) (software)) as well as the associated I/O mechanisms in order to offer a [data binding](https://en.wikipedia.org/wiki/Data_binding) software component.
+
+When following the [Model Driven Architecture](https://en.wikipedia.org/wiki/Model-driven_architecture) the chain of model transformations might use partially automated production tools that might avoid tedious manual implementations. In the case of VCity the goal is to avoid having to maintain a libCityGML C++ (in case this is the target language )library as well as the XML data bindings. Among those tools explore:
  * Google [Protocol Buffers](https://developers.google.com/protocol-buffers/docs/overview)
- * [Proto + Spark](http://stackoverflow.com/questions/34487996/how-can-i-use-proto3-with-hadoop-spark)
- * Code generation (through [mixins](https://en.wikipedia.org/wiki/Mixin#Programming_languages_that_use_mixins) ?) are the occasion of blending CityGML + ADE + Treatment needs
+ * [Protocol buffers and Hadoop/Spark usage](http://stackoverflow.com/questions/34487996/how-can-i-use-proto3-with-hadoop-spark)
+ * At the stage of code generation the [mixins technique](https://en.wikipedia.org/wiki/Mixin#Programming_languages_that_use_mixins) ) are the occasion of blending CityGML data model with ADE data model extensions together with Treatment technical needs (e.g. traces mechanisms for logs/debug).
 
 ## What the project doesn't need
 
