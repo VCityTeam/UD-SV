@@ -38,9 +38,12 @@ When following the [Model Driven Architecture](https://en.wikipedia.org/wiki/Mod
 
 ### Dropped-challenge 1: data volume doesn't require scaling up
 Although city data volumes are ramping up (new acquisition techniques, censors...):
-  - their global volume for a given city (2 To) still remain "reachable" for HPC high memory nodes 
-  - the coordinate ordering allows to scale down 
-   - pas de pb de passage a l'echelle coté données grace à un tuilage (venant de la geographie)
-   - pas de passage a l'echelle parallelisme n'est pas notre coeur metier car on accepte du batch (pas conditionné par des temps de reponses acceptable pour les utilisateurs ni de streaming)
+  - their global volume for a given city (2 To) still remain "within reach" for HPC high memory nodes (currently 512Go and moving to 1To as for 2017),
+  - the geographical layout (modeled as some coordinate system) offers a natural ordering (think of latitude/longitude) that offer a simple occasion for domain decomposition through [tiling](https://en.wikipedia.org/wiki/Uniform_tiling).
+
+### Dropped-challenge 1: computational needs can be considered as bounded
+We can consider that we set aside the scale up of the computational demand (due to both the data size and the treatment inherent [computation al complexity](https://en.wikipedia.org/wiki/Analysis_of_algorithms) because of the following remarks:
+  - Domain decomposition (tiling) allows the usage of [grid computing](https://en.wikipedia.org/wiki/Grid_computing)
+  - the project is at the research level where the goal of the prototypes is to illustrate feasibility and understand its limitations. Batch computational jobs are thus OK and user driven interactive delay constraints of production can be set aside.
 
 
