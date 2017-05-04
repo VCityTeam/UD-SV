@@ -1,3 +1,5 @@
+Developers: there is some [additional information on the wiki](https://github.com/MEPP-team/RICT/wiki)
+
 ## The needs
 A brief description of the [early needs](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/EarlyNeeds.md).
 
