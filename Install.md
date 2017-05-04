@@ -163,7 +163,7 @@ Assert all is well by opening `http://localhost:8080/examples/planar.html` with 
     - bozo=# \q` 
     ````
     
-## Install the http server
+### Install the http server
  * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
  * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
  * `git clone https://github.com/Oslandia/building-server.git`
@@ -177,6 +177,11 @@ Assert all is well by opening `http://localhost:8080/examples/planar.html` with 
      pip install -e .
      pip install uwsgi
    ````
+   
+### Install branch b3dm of py3dtiles
+ * `git clone https://github.com/Oslandia/py3dtiles.git`
+ * `git checkout b3dm`
+ * go into building-server folder and run : `pip install /chemin/vers/py3dtiles --upgrade`
     
 ### Upload CityGML data to data base. Warning : citygml2pgsql.py works with python 2.7
  * The original source for the CityGML based description of the building geometries is the Grand Lyon open data. For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the `LYON_6EME_BATI_2012_SplitBuildings.gml` file (manually handled over by JGA).
