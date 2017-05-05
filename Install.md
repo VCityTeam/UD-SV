@@ -1,13 +1,5 @@
 
-
-# Architecture notes:
 ![Sketchy iTowns usage/developing  context](Doc/Devel/Needs/Architecture/Diagrams/OslandiaiTown2Context.png)
-
-Notes:
- * [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) is a [Web Server Gateway Interface (WSGI)](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) compatible applications and frameworks (used among the Python community). [uWSGI can be deployed](https://uwsgi-docs.readthedocs.io/en/latest/WebServers.html) with its own integrated http server. [Flask](http://flask.pocoo.org/) is a [web micro-framework](https://en.wikipedia.org/wiki/Flask_(web_framework)) that uses [uWSGI as web deployment option](http://flask.pocoo.org/docs/0.12/deploying/uwsgi/).
- * The `citygml2PSQL.py` and `building_server_processdb.py` both update a database. Yet note that the usage of `citygml2PSQL.py` is at the command line level (its input is a file and it uses a [shell based pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix) mechanism) and is hence offline) whereas `building_server_processdb.py` is at the SQL protocol level (hence online or networked). 
- * The [DTM](https://en.wikipedia.org/wiki/Digital_elevation_model) terrain data is downloaded on the fly by iTowns (in the case of Lyon directly from [Grand Lyon WMS server](https://download.data.grandlyon.com/wms/grandlyon?SERVICE=WMS&REQUEST=GetMap&LAYERS=MNT2012_Altitude_10m_CC46&VERSION=1.3.0&STYLES=&FORMAT=image/jpeg&TRANSPARENT=false&BBOX=1840285.7887575002,5172130.550769992,1841520.2114662502,5173177.596804991&CRS=EPSG:3946&WIDTH=256&HEIGHT=256).
- * The deployed REST server uses [3DTiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) (made by the [Cesium consortium](http://cesiumjs.org/about.html) i.e. mainly an [AGI ( Analytical Graphics, Inc.)](http://www.agi.com/home) emanation.
   
 # Install notes for OSX users
 
@@ -22,7 +14,7 @@ Notes:
  * `initdb /usr/local/var/postgres -E utf8`
  * `postgres -D /usr/local/var/postgres &` (for launching a server)
  * createdb bozo
- * 
+ * *Note : it is advised to replace 'myuser' by your session name in the following instructions.'*
     ```` 
     psql bozo
     - bozo=# create extension postgis;
@@ -33,11 +25,11 @@ Notes:
     ````
 
 ### Data base: upload CityGML data to the DB
- * The original source for the CityGML based description of the building geometries is the [Grand Lyon open data](https://data.grandlyon.com/). For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the [`LYON_6EME_BATI_2012_SplitBuildings.gml` file](git clone https://github.com/MEPP-team/RICT.wiki.git). In the following we'll assume this file is located in the HOME (shortened as `~`) directory. 
+ * The original source for the CityGML based description of the building geometries is the [Grand Lyon open data](https://data.grandlyon.com/). For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the [`LYON_6EME_BATI_2012_SplitBuildings.gml` file](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml). In the following we'll assume this file is located in the HOME (shortened as `~`) directory. 
     ````
       git clone https://github.com/Oslandia/citygml2pgsql
       mv citygml2pgsql citygml2pgsql.git && cd citygml2pgsql.git
-      wget http://liris.cnrs.fr/vcity/Data/LYON_6EME_BATI_2012_SplitBuildings.gml
+      wget http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml
       ./citygml2pgsql.py -l LYON_6EME_BATI_2012_SplitBuildings.gml
       python ./citygml2pgsql.py LYON_6EME_BATI_2012_SplitBuildings.gml 2 3946 geom lyon |  psql bozo
     ````
@@ -149,26 +141,19 @@ Assert all is well by opening `http://localhost:8080/examples/planar.html` with 
 
 # For Ubuntu users
 
-FIXME VJA : Consider JGA remark : 
-Il n'est pas obligatoire que la modif soit faite pour qu'on puisse installer le serveur de bâtiment. C'est juste qu'il faut faire une opération en plus.
-Après avoir installer bnuilding-server (branche 3d-tiles), il faut installer la branche b3dm de py3dtiles.
--> clone le git + checkout branche b3dm
--> à partir du dossier building-server "pip install /chemin/vers/py3dtiles --upgrade"
-
 ### Install pre-requisite tools
  * The data base packages 
    - `sudo apt-get install postgis` (that will pull postGRE)
  * Python tools
    - `sudo apt-get install install python3` (**Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...)
    - `sudo apt-get install python-pip`
-   - `unset PYTHONPATH && pip3 install virtualenv`
+   - `pip3 install virtualenv`
    - `pip install lxml` might be required
 
 ### Initialize and prepare the Data Base
- * `initdb /usr/local/var/postgres -E utf8` FIXME VJA: voir avec JGA
- * `postgres -D /usr/local/var/postgres` (for launching a server)
+ * `service postgres start`
  * createdb bozo
- * 
+ * *Note : it is advised to replace 'myuser' by your session name in the following instructions.'*
     ```` 
     psql bozo
     - bozo=# create extension postgis;
@@ -177,8 +162,28 @@ Après avoir installer bnuilding-server (branche 3d-tiles), il faut installer la
     - bozo=# alter user myuser with superuser;
     - bozo=# \q` 
     ````
-
-### Upload CityGML data to data base
+    
+### Install the http server
+ * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
+ * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
+ * `git clone https://github.com/Oslandia/building-server.git`
+ * `cd building-server/`
+ * `git checkout 3d-tiles` (the "correct" branch is not the master) 
+ * Deploy a Python [virtual environment](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/):
+   ````
+     virtualenv -p /usr/bin/python3 venv
+     . venv/bin/activate
+     pip install --upgrade setuptools
+     pip install -e .
+     pip install uwsgi
+   ````
+   
+### Install branch b3dm of py3dtiles
+ * `git clone https://github.com/Oslandia/py3dtiles.git`
+ * `git checkout b3dm`
+ * go into building-server folder and run : `pip install /chemin/vers/py3dtiles --upgrade`
+    
+### Upload CityGML data to data base. Warning : citygml2pgsql.py works with python 2.7
  * The original source for the CityGML based description of the building geometries is the Grand Lyon open data. For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the `LYON_6EME_BATI_2012_SplitBuildings.gml` file (manually handled over by JGA).
  * `git clone https://github.com/Oslandia/citygml2pgsql` 
  * `./citygml2pgsql.py -l LYON_6EME_BATI_2012_SplitBuildings.gml`
@@ -187,7 +192,7 @@ Après avoir installer bnuilding-server (branche 3d-tiles), il faut installer la
 
     `psql bozo` and `bozo=# select count(*) from lyon;`
 
-### Add bounding box data to database (JGA specific) FIXME VJA: you might need to be in venv to do this (i.e. you might need to do the install http server part before this one)
+### Add bounding box data to database (JGA specific). You need to be in venv to do this
 JGA specific quad-tree based display uses a hierarchy of bounding boxes. 
 It seems to use the same configuration file as flask (see below).
  * Extract the domain size from db with `bozo=# select ST_extent(geom) from lyon;`
@@ -197,22 +202,6 @@ It seems to use the same configuration file as flask (see below).
    `python building-server-processdb.py conf/building.yml lyon`
 will compute the bounding boxes out of the content of the pointed table within the concerned database and push the resulting hierarchy of bounding box data to a corresponding new table (named with a trailing `_bbox`) within that database.
  * Note: the `conf/bulding.yml` configuration file mentions flask entries (and is also used to configure flask). Yet the `building-server-processdb.py` script only uses this file to retrieve the database access information and doesn't make any usage of flask. This lack of separation of concerns for the configuration files is an historical side effect...
-
-## Install the http server
- * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
- * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
- * `git clone https://github.com/Oslandia/building-server.git`
- * `cd building-server/`
- * `git checkout 3d-tiles` (the "correct" branch is not the master) 
- * Deploy a Python [virtual environment](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/):
-   ````
-     which python3
-     virtualenv -p /usr/bin/python3 venv
-     . venv/bin/activate
-     pip install --upgrade setuptools
-     pip install -e .
-     pip install uwsgi
-   ````
 
 ### Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
  * Edit bulding.uwsgi.yml (refer to result)
@@ -231,3 +220,12 @@ cd itowns2
 npm install
 ````
 Now either open `itowns2/index.html` file with your browser or alternatively run `npm start` and open `http://localhost:8080/examples/planar.html` with your browser.
+
+
+# Architecture notes:
+
+Notes:
+ * [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) is a [Web Server Gateway Interface (WSGI)](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) compatible applications and frameworks (used among the Python community). [uWSGI can be deployed](https://uwsgi-docs.readthedocs.io/en/latest/WebServers.html) with its own integrated http server. [Flask](http://flask.pocoo.org/) is a [web micro-framework](https://en.wikipedia.org/wiki/Flask_(web_framework)) that uses [uWSGI as web deployment option](http://flask.pocoo.org/docs/0.12/deploying/uwsgi/).
+ * The `citygml2PSQL.py` and `building_server_processdb.py` both update a database. Yet note that the usage of `citygml2PSQL.py` is at the command line level (its input is a file and it uses a [shell based pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix) mechanism) and is hence offline) whereas `building_server_processdb.py` is at the SQL protocol level (hence online or networked). 
+ * The [DTM](https://en.wikipedia.org/wiki/Digital_elevation_model) terrain data is downloaded on the fly by iTowns (in the case of Lyon directly from [Grand Lyon WMS server](https://download.data.grandlyon.com/wms/grandlyon?SERVICE=WMS&REQUEST=GetMap&LAYERS=MNT2012_Altitude_10m_CC46&VERSION=1.3.0&STYLES=&FORMAT=image/jpeg&TRANSPARENT=false&BBOX=1840285.7887575002,5172130.550769992,1841520.2114662502,5173177.596804991&CRS=EPSG:3946&WIDTH=256&HEIGHT=256).
+ * The deployed REST server uses [3DTiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) (made by the [Cesium consortium](http://cesiumjs.org/about.html) i.e. mainly an [AGI ( Analytical Graphics, Inc.)](http://www.agi.com/home) emanation.
