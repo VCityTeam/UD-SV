@@ -1,4 +1,12 @@
 ## Architecture
+
+### iTowns2
+![JGA's architecture diagram](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Architecture/Pictures/2017_05_03_-_JGA_Achitecture_diagrama.png)
+[Associated JGA's description](https://github.com/MEPP-team/RICT/wiki/2017_05_03_-_JGA_iTowns2_presentation)
+
+![Sketchy iTowns usage/developing  context](Diagrams/OslandiaiTown2Context.png)
+
+### 3DCityDB
 [3DCityDB architecture diagram](https://github.com/3dcitydb/3dcitydb-web-map#architecture)
 
 ## People
