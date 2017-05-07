@@ -1,10 +1,18 @@
 Inspiring experiments
 Here are some links to interesting projects : 
 
- == titre == 
- 
-http://www.delftdatascience.tudelft.nl/research/research-domains/smart-cities/
+Platforms for smart cities
+===========================
+  * [[http://www.open311.org|API open311]]
+  * [[http://www.citysdk.eu|citySDK]] 
+  * [[http://oascities.org| Open & Agile Smart Cities]]
+  * [[https://www.fiware.org/data-models/| Plateformes FIREWARE proposée par la communauté Européenne]]
+  * [[http://espresso-project.eu/ | Espresso]]    
+  * [[http://www.journaldunet.com/economie/services/1185199-l-europe-et-le-japon-creent-une-plateforme-open-data-pour-la-smart-city/| Plateforme Open Data Europe / Japon]]  
 
-http://www.ams-institute.org/solution/test/
 
-[3] http://crowdinsights.eu/
+Smart Cities en social media
+===========================
+ * http://www.delftdatascience.tudelft.nl/research/research-domains/smart-cities/
+ * http://www.ams-institute.org/solution/test/
+ * http://crowdinsights.eu/
