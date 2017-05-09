@@ -14,11 +14,24 @@
    - OSX : `unset PYTHONPATH && pip3 install virtualenv`
    - Ubuntu : `pip3 install virtualenv`
 
+   - Ubuntu : 
+   ```` 
+     sudo apt-get install postgresql-9.6
+     sudo apt-get install postgresql-9.6-postgis-2.3 postgresql-contrib-9.6
+
+     #to get the commandline tools shp2pgsql, raster2pgsql you need to do this
+     sudo apt-get install postgis
+   ````
+    
 ### Data base: initialization and preparation
  * OSX : `initdb /usr/local/var/postgres -E utf8`
  * OSX : `postgres -D /usr/local/var/postgres &` (for launching a server)
  * Ubuntu : `service postgres start`
- * createdb bozo
+ * Ubuntu : `sudo -u postgres psql`
+ * Ubuntu : `CREATE ROLE mysuperuser LOGIN PASSWORD 'whatever' SUPERUSER;`
+ * Ubuntu : `sudo apt-get install postgresql-9.6-postgis-2.3-scripts`
+ * both : `createdb bozo`
+ 
  * *Note : it is advised to replace 'myuser' by your session name in the following instructions.'*
     ```` 
     psql bozo
@@ -72,6 +85,7 @@ Building that bounding box hierarchy is achieved by using an utility code (`buil
 First grab the bounding boxes hierarchy building code:
 ````
   git clone https://github.com/Oslandia/building-server.git
+  git checkout 3d-tiles
   mv building-server building-server.git
 ````
 Then extract the domain size from the DB with 
@@ -154,6 +168,7 @@ Technical notes:
 cd <somewhere>
 git clone https://github.com/iTowns/itowns2.git
 cd itowns2
+git checkout 3d-tiles
 npm install
 ````
 Now either open `itowns2/index.html` file with your browser or alternatively run `npm start`.
