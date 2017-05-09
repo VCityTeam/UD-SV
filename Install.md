@@ -1,18 +1,23 @@
 
 ![Sketchy iTowns usage/developing  context](Doc/Devel/Needs/Architecture/Diagrams/OslandiaiTown2Context.png)
   
-# Install notes for OSX users
+# Install notes for Unix users
 
 ### Install pre-requisite tools
  * The data base packages 
-   - `brew install postgis` (that will pull postGRE)
+   - OSX : `brew install postgis` (that will pull postGRE) 
+   - Ubuntu : `sudo sudo apt-get install postgis` (that will pull postGRE) 
  * Python tools
-   - `brew install python3` (**Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...)
-   - `unset PYTHONPATH && pip3 install virtualenv`
+   - OSX : `brew install python3` (**Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...)
+   - Ubuntu : `sudo apt-get install python3`
+   - Ubuntu : `sudo apt-get install python-pip`
+   - OSX : `unset PYTHONPATH && pip3 install virtualenv`
+   - Ubuntu : `pip3 install virtualenv`
 
 ### Data base: initialization and preparation
- * `initdb /usr/local/var/postgres -E utf8`
- * `postgres -D /usr/local/var/postgres &` (for launching a server)
+ * OSX : `initdb /usr/local/var/postgres -E utf8`
+ * OSX : `postgres -D /usr/local/var/postgres &` (for launching a server)
+ * Ubuntu : `service postgres start`
  * createdb bozo
  * *Note : it is advised to replace 'myuser' by your session name in the following instructions.'*
     ```` 
@@ -40,6 +45,8 @@
 
 ### Switch to python3 (and install required dependencies)
 Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) with all the bells and whistles:
+
+ * OSX :
    ````
      unset PYTHONPATH 
      virtualenv venv      # Make sure this was installed with pip3
@@ -49,7 +56,15 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
      pip install uwsgi
      pip install lxml     # Note sure this is truly required but it can't hurt
    ````
-
+ * Ubuntu :
+   ````
+     virtualenv -p /usr/bin/python3 venv      # Make sure this was installed with pip3
+     . venv/bin/activate
+     pip install --upgrade setuptools
+     pip install -e .
+     pip install uwsgi
+     pip install lxml     # Note sure this is truly required but it can't hurt
+   ````
 ### Data base: add bounding box data to database (JGA specific)
 JGA specific quad-tree based display uses a hierarchy of bounding boxes. 
 Building that bounding box hierarchy is achieved by using an utility code (`building-server-processdb.py`) that comes bundled with the http server deployment code. Also notice although `building-server-processdb.py` make usage of Flask (see below) it nevertheless shares its configuration file with some Flak related concerns (see below for more).
@@ -99,7 +114,13 @@ which will compute the bounding boxes out of the content of the pointed table wi
  * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
  * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
  * `cd building-server.git/`
- * ** FIXME**: we probably don't need this anymore `git checkout 3d-tiles` (the "correct" branch is not the master) 
+ * **FIXME**: we probably don't need this anymore `git checkout 3d-tiles` (the "correct" branch is not the master) 
+ * Install branch b3dm of py3dtiles: **FIXME**: the following is a temporary patch, but it won't be needed anymore in the next comming weeks.
+   ````
+     git clone https://github.com/Oslandia/py3dtiles.git`
+     git checkout b3dm`
+     go into building-server folder and run : `pip install /chemin/vers/py3dtiles --upgrade`
+   ````
 
 ### Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
  * Edit bulding.uwsgi.yml to obtain a configuration like
@@ -138,89 +159,6 @@ npm install
 Now either open `itowns2/index.html` file with your browser or alternatively run `npm start`.
 
 Assert all is well by opening `http://localhost:8080/examples/planar.html` with your browser.
-
-# For Ubuntu users
-
-### Install pre-requisite tools
- * The data base packages 
-   - `sudo apt-get install postgis` (that will pull postGRE)
- * Python tools
-   - `sudo apt-get install install python3` (**Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...)
-   - `sudo apt-get install python-pip`
-   - `pip3 install virtualenv`
-   - `pip install lxml` might be required
-
-### Initialize and prepare the Data Base
- * `service postgres start`
- * createdb bozo
- * *Note : it is advised to replace 'myuser' by your session name in the following instructions.'*
-    ```` 
-    psql bozo
-    - bozo=# create extension postgis;
-    - bozo=# create table lyon(gid serial primary key, geom GEOMETRY('POLYHEDRALSURFACEZ', 3946));
-    - bozo=# create user myuser with password 'password';
-    - bozo=# alter user myuser with superuser;
-    - bozo=# \q` 
-    ````
-    
-### Install the http server
- * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
- * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
- * `git clone https://github.com/Oslandia/building-server.git`
- * `cd building-server/`
- * `git checkout 3d-tiles` (the "correct" branch is not the master) 
- * Deploy a Python [virtual environment](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/):
-   ````
-     virtualenv -p /usr/bin/python3 venv
-     . venv/bin/activate
-     pip install --upgrade setuptools
-     pip install -e .
-     pip install uwsgi
-   ````
-   
-### Install branch b3dm of py3dtiles
- * `git clone https://github.com/Oslandia/py3dtiles.git`
- * `git checkout b3dm`
- * go into building-server folder and run : `pip install /chemin/vers/py3dtiles --upgrade`
-    
-### Upload CityGML data to data base. Warning : citygml2pgsql.py works with python 2.7
- * The original source for the CityGML based description of the building geometries is the Grand Lyon open data. For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the `LYON_6EME_BATI_2012_SplitBuildings.gml` file (manually handled over by JGA).
- * `git clone https://github.com/Oslandia/citygml2pgsql` 
- * `./citygml2pgsql.py -l LYON_6EME_BATI_2012_SplitBuildings.gml`
- * `python ./citygml2pgsql.py "LYON_6EME_BATI_2012_SplitBuildings.gml" 2 3946 geom lyon |  psql bozo`
- * Assert there is some content in the DB
-
-    `psql bozo` and `bozo=# select count(*) from lyon;`
-
-### Add bounding box data to database (JGA specific). You need to be in venv to do this
-JGA specific quad-tree based display uses a hierarchy of bounding boxes. 
-It seems to use the same configuration file as flask (see below).
- * Extract the domain size from db with `bozo=# select ST_extent(geom) from lyon;`
- * Edit configuration file `Bozo/building-server/conf/building.yml`:
-   - ...
- * The command
-   `python building-server-processdb.py conf/building.yml lyon`
-will compute the bounding boxes out of the content of the pointed table within the concerned database and push the resulting hierarchy of bounding box data to a corresponding new table (named with a trailing `_bbox`) within that database.
- * Note: the `conf/bulding.yml` configuration file mentions flask entries (and is also used to configure flask). Yet the `building-server-processdb.py` script only uses this file to retrieve the database access information and doesn't make any usage of flask. This lack of separation of concerns for the configuration files is an historical side effect...
-
-### Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
- * Edit bulding.uwsgi.yml (refer to result)
-   - Shell: `uwsgi --yml conf/building.uwsgi.yml --http-socket :9090`
-   - Assert that resulting REST server is operational by opening e.g. `http://localhost:9090/#!/default/get_api_get_geometry`
- * Developer notes:
-   - http gateway code is in
-     [App.py](https://github.com/Oslandia/building-server/blob/3d-tiles/building_server/app.py)
-   - Conversion SQL to client content is defined in [database.py](https://github.com/Oslandia/building-server/blob/3d-tiles/building_server/database.py)
-
-### Launch a local iTowns server
-````
-cd <somewhere>
-git clone https://github.com/iTowns/itowns2.git
-cd itowns2
-npm install
-````
-Now either open `itowns2/index.html` file with your browser or alternatively run `npm start` and open `http://localhost:8080/examples/planar.html` with your browser.
-
 
 # Architecture notes:
 
