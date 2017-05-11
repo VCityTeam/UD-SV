@@ -11,7 +11,7 @@ Notes:
    
 ### Challenge 2: abstracting the CM/DR IO interface (API)
 The CM type signature says nothing about (doesn't require) the implementation details of the CM (e.g. in C/C++ think of the the distinction between the [function prototype](https://en.wikipedia.org/wiki/Function_prototype) and the function definition/body). 
-Yet, a concrete CM implementation not only relies on its input/output data models but it also relies on the behavior ([accesors/mutators](https://en.wikipedia.org/wiki/Mutator_method)) as well as data structure means for traversal/walk (e.g. [graph traversal](https://en.wikipedia.org/wiki/Graph_traversal) or [tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)). 
+Yet, a concrete CM implementation not only relies on its input/output data models but it also relies on the behavior ([accesors/mutators](https://en.wikipedia.org/wiki/Mutator_method)) as well as data structure means for traversal/walk (e.g. [graph traversal](https://en.wikipedia.org/wiki/Graph_traversal) or [tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)) or the DR (Data Repository). 
 Additionally this says nothing of possible behaviors attached/associated with such data models: 
  * the behavior associated to the data structure when one does numerical simulations  
  * or more simply of behavioral decoration (e.g. with the [visitor technique](https://en.wikipedia.org/wiki/Visitor_pattern)). 
