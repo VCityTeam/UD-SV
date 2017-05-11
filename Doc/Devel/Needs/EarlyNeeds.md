@@ -2,8 +2,8 @@
 Consider an organization developing Computational Models (CM aka Filter) working on city related data. Such an organization is facing different challenges:
 
 ### Challenge 1: how to define and use a [**CM type signature**](https://en.wikipedia.org/wiki/Type_signature)
-A given CM (Computational Model aka Filter) needs a data context in order to be executed: it requires/relies/assumes that the data it will be provided with at execution time will fulfill/respect/provide some data structures (distinct for both input and output). 
-Those needs are a characteristic of the considered CM and each CM should be conceived has requiring its own specific input and output Data Models (DMs).
+A given CM (Computational Model aka Filter) needs a data context in order to be executed: it requires/relies/assumes that the data it will be provided with (at execution time) will fulfill/respect/provide some data structures (distinct for both input and output). 
+Those needs are a characteristic of the considered CM and each CM should be conceived ha requiring its own specific input and output Data Models (DMs).
 When the CM will be executed the CM will concretely access some Data Repository (DR) at which point the data model interface between the DM of the CM should better match with the DM of the DR. The challenge is then: **through which description/mechanism does one assert (statically or dynamically) the alignment/fitting of the CM and DR models ?** In other terms how to describe and use the [**CM type signature**](https://en.wikipedia.org/wiki/Type_signature) ?
 
 Notes:
