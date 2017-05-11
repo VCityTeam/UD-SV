@@ -3,15 +3,14 @@ Here are some links to interesting projects :
 
 ## Platforms for smart cities
   * [Open311 API](http://www.open311.org)
-  * [[http://www.citysdk.eu|citySDK]] 
-  * [[http://oascities.org| Open & Agile Smart Cities]]
-  * [[https://www.fiware.org/data-models/| FIREWARE platform]] (as proposed by the [EU](https://en.wikipedia.org/wiki/European_Union))
-  * [[http://espresso-project.eu/ | Espresso]]    
-  * [[http://www.journaldunet.com/economie/services/1185199-l-europe-et-le-japon-creent-une-plateforme-open-data-pour-la-smart-city/| Europe-Japan Open Data plateform]]  
+  * [citySDK](http://www.citysdk.eu) 
+  * [Open & Agile Smart Cities](http://oascities.org)
+  * [FIREWARE platform](https://www.fiware.org/data-models/) (as proposed by the [EU](https://en.wikipedia.org/wiki/European_Union))
+  * [Espresso](http://espresso-project.eu/) (EU research project)    
+  * [Europe-Japan Open Data plateform](http://www.journaldunet.com/economie/services/1185199-l-europe-et-le-japon-creent-une-plateforme-open-data-pour-la-smart-city/) (in french)  
 
 
-Smart Cities en social media
-===========================
- * http://www.delftdatascience.tudelft.nl/research/research-domains/smart-cities/
- * http://www.ams-institute.org/solution/test/
- * http://crowdinsights.eu/
+## Smart Cities and the social media
+ * [Delft's smart cities research domain portal](http://www.delftdatascience.tudelft.nl/research/research-domains/smart-cities/)
+ * [AMS (Advanced Metropolitan Solutions) portal](http://www.ams-institute.org/solution/test/
+ * [CrowdInsights initiative](http://crowdinsights.eu/)
