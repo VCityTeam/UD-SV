@@ -1,7 +1,7 @@
 ## What the project needs (fuzzy/early description)
 Consider an organization developing Computational Models (CM aka Filter) working on city related data. Such an organization is facing different challenges:
 
-### Challenge 1: how to define and use a [**CM type signature**](https://en.wikipedia.org/wiki/Type_signature)
+### Challenge 1: how to define and use a [**CM type signature**](https://en.wikipedia.org/wiki/Type_signature)?
 A given CM (Computational Model aka Filter) needs a data context in order to be executed: it requires/relies/assumes that the data it will be provided with (at execution time) will fulfill/respect/provide some data structures (distinct for both input and output). 
 Those needs are a characteristic of the considered CM and each CM should be conceived ha requiring its own specific input and output Data Models (DMs).
 When the CM will be executed the CM will concretely access some Data Repository (DR) at which point the data model interface between the DM of the CM should better match with the DM of the DR. The challenge is then: **through which description/mechanism does one assert (statically or dynamically) the alignment/fitting of the CM and DR models ?** In other terms how to describe and use the [**CM type signature**](https://en.wikipedia.org/wiki/Type_signature) ?
@@ -9,7 +9,7 @@ When the CM will be executed the CM will concretely access some Data Repository 
 Notes:
  * This problem arises when moving away from the rigid but classic databases context (for which the logical schema guaranties the existence of attributes or relationships) to data contexts that are more abstract (like [Hadoop](http://hadoop.apache.org/), [Apache Spark](http://spark.apache.org/) of [Flink](https://flink.apache.org/)). The freedom offered by those loose environment impose to assert some preconditions (assert the existence of some attributes for an object) at treatment execution time (think of some equivalent of C++ concept checking but for the data structure).
    
-### Challenge 2: abstracting the CM/DR IO interface (API)
+### Challenge 2: abstracting the CM/DR IO interface (API)?
 The CM type signature says nothing about (doesn't require) the implementation details of the CM (e.g. in C/C++ think of the the distinction between the [function prototype](https://en.wikipedia.org/wiki/Function_prototype) and the function definition/body). 
 Yet, a concrete CM implementation not only relies on its input/output data models but it also relies on the behavior ([accesors/mutators](https://en.wikipedia.org/wiki/Mutator_method)) as well as data structure means for traversal/walk (e.g. [graph traversal](https://en.wikipedia.org/wiki/Graph_traversal) or [tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)) or the DR (Data Repository). 
 Additionally this says nothing of possible behaviors attached/associated with such data models: 
@@ -20,11 +20,19 @@ The concern of the CM producer is to **interface, through some data access API, 
  * to deal with the data repository specifics/details belonging to data logical or even physical model
  * to hardwire in the CM code some given database query language requests (e.g. `SQL` and/or "spatial SQL"). 
 
-### Challenge 3: how to evolve/extend the data server data model  
+### Challenge 3: how to evolve/extend the data server data model?  
 CityGML last specification is now defined as an abstract model in the form of an UML based description as opposed to previous specifications that were given as XML Schema (XSD)  based concrete form. 
 Additionally CityGML accepts information model "extensions" (called ADE e.g. [Energy_ADE](http://www.citygmlwiki.org/index.php/CityGML_Energy_ADE)) themselves described in their abstract or concrete forms.
 
-**When working (defining or producing data) with such ADE's what are the modular methods and tools to be used in order to maintain such an extensible data repository ?**  
+The challenge can be summarized as: **when working (defining or producing data) with such ADE's what are the modular methods and tools to be used in order to maintain such an extensible data repository ?**
+
+In order to illustrate this challenge, let us consider the [UML diagram](http://cadastralvocabulary.org/citygml/tax_ade/1.0/CityGML_TaxADE_UML.png) of an ADE ([the Immovable Property_Taxation_ADE](http://www.citygmlwiki.org/index.php?title=CityGML_Immovable_Property_Taxation_ADE)). In such UML class diagram, the classes beloging to [CityGML core specification](http://portal.opengeospatial.org/files/?artifact_id=47842) is depicted with one color (yellow for this example with classes like `LandUse`, `_CityObject`, `_AbstactBuilding`) whereas the ADE classes are depicted with a distinguished color  (green for this example with classes like `tax::PropertyUnit`, `tax::BuildingUsePart`). 
+Let us assume that some DB (Data Base) deployed with CityGML logical model already exists, and further assume that a treament developer wishes to work with this ADE.
+Such a developer will have (at least) two possibilities:
+ 1. **DB migration path**: Merge/assemble/aggregate the CityGML information model together with the considered ADE, deploy a new DB with this integrated model and migrate the CityGML (core) content to this new ADE extended DB
+ 2. build a **separate ADE specific DB** restricted to hold the ADE data
+
+The clear advantage of the "ADE specific DB" is its modularity (one can combine easily many ADE) as well as avoiding the cumbersome DB migration. It's drawback is how to blur/hide-away/abtract the existence of two DBs to the CM (Computational Model).
 
 ### Chalenge 4: from treatment data model to data bindings
 A CM specifier will express the needs in terms of data elements (entities with attributes) and data structure (relationships between the entities) for the CM to be effective. The CM specifier will also need the such an [abstract data model](https://en.wikipedia.org/wiki/Conceptual_schema) in order to specify the output of the CM. A some point of the concrete realization workflow of that CM, an implementation will have to be produced. A component of that implementation will be the concrete implementation of the specified data structure (possibly enriched with implementation details: going from the [CIM](https://en.wikipedia.org/wiki/Model_Driven_Interoperability) (Computational Independent Model) to the [Platform Model](http://www.theenterprisearchitect.eu/blog/2008/01/16/mda-model-driven-architecture-basic-concepts/) (software)) as well as the associated I/O mechanisms in order to offer a [data binding](https://en.wikipedia.org/wiki/Data_binding) software component.
