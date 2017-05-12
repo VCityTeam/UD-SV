@@ -12,5 +12,5 @@ Here are some links to interesting projects :
 
 ## Smart Cities and the social media
  * [Delft's smart cities research domain portal](http://www.delftdatascience.tudelft.nl/research/research-domains/smart-cities/)
- * [AMS (Advanced Metropolitan Solutions) portal](http://www.ams-institute.org/solution/test/
+ * [AMS (Advanced Metropolitan Solutions) portal](http://www.ams-institute.org/solution/test/)
  * [CrowdInsights initiative](http://crowdinsights.eu/)
