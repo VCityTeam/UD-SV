@@ -8,11 +8,18 @@
    - OSX : `brew install postgis` (that will pull postGRE) 
    - Ubuntu : `sudo sudo apt-get install postgis` (that will pull postGRE) 
  * Python tools
-   - OSX : `brew install python3` (**Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...)
-   - Ubuntu : `sudo apt-get install python3`
-   - Ubuntu : `sudo apt-get install python-pip`
-   - OSX : `unset PYTHONPATH && pip3 install virtualenv`
-   - Ubuntu : `pip3 install virtualenv`
+   - **Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...
+   - OSX : 
+      ````
+      brew install python3
+      unset PYTHONPATH && pip3 install virtualenv
+      ````
+   - Ubuntu : 
+      ````
+      sudo apt-get install python3
+      sudo apt-get install python-pip
+      pip3 install virtualenv
+      ````
 
    - Ubuntu : 
    ```` 
