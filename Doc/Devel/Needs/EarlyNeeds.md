@@ -55,3 +55,6 @@ We can consider that we set aside the scale up of the computational demand (due 
   - the project is at the research level where the goal of the prototypes is to illustrate feasibility and understand its limitations. Batch computational jobs are thus OK and user driven interactive delay constraints of production can be set aside.
 
 In other terms if some considered CM takes an hour of elapsed time to be executed, then consider a smaller tile size of accept to wait for an hour delay...
+
+## References
+ * Chapter 1.1 p. 15 of [3DCityDB](http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB_Documentation_v3.3.pdf) decribes its feature list. 
