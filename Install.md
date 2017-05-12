@@ -24,13 +24,19 @@
    ````
     
 ### Data base: initialization and preparation
- * OSX : `initdb /usr/local/var/postgres -E utf8`
- * OSX : `postgres -D /usr/local/var/postgres &` (for launching a server)
- * Ubuntu : `service postgres start`
- * Ubuntu : `sudo -u postgres psql`
- * Ubuntu : `CREATE ROLE mysuperuser LOGIN PASSWORD 'whatever' SUPERUSER;`
- * Ubuntu : `sudo apt-get install postgresql-9.6-postgis-2.3-scripts`
- * both : `createdb bozo`
+ * OSX :
+   ```` 
+    initdb /usr/local/var/postgres -E utf8
+    postgres -D /usr/local/var/postgres &` (for launching a server)
+   ````
+ * Ubuntu : 
+   ````
+   service postgres start
+   sudo -u postgres psql
+      CREATE ROLE mysuperuser LOGIN PASSWORD 'whatever' SUPERUSER;
+   sudo apt-get install postgresql-9.6-postgis-2.3-scripts
+   createdb bozo
+   ````
  
  * *Note : it is advised to replace 'myuser' by your session name in the following instructions.'*
     ```` 
