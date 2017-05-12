@@ -6,7 +6,16 @@
 ### Install pre-requisite tools
  * The data base packages 
    - OSX : `brew install postgis` (that will pull postGRE) 
-   - Ubuntu : `sudo sudo apt-get install postgis` (that will pull postGRE) 
+   - Ubuntu : 
+   ```` 
+     sudo apt-get install postgresql-9.6
+     sudo apt-get install postgresql-9.6-postgis-2.3 postgresql-contrib-9.6
+
+     #to get the commandline tools shp2pgsql, raster2pgsql you need to do this
+     sudo apt-get install postgis
+   ````
+   (http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt)
+   
  * Python tools
    - **Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...
    - OSX : 
@@ -21,14 +30,7 @@
       pip3 install virtualenv
       ````
 
-   - Ubuntu : 
-   ```` 
-     sudo apt-get install postgresql-9.6
-     sudo apt-get install postgresql-9.6-postgis-2.3 postgresql-contrib-9.6
 
-     #to get the commandline tools shp2pgsql, raster2pgsql you need to do this
-     sudo apt-get install postgis
-   ````
     
 ### Data base: initialization and preparation
  * OSX :
