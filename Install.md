@@ -27,7 +27,7 @@
       ````
       sudo apt-get install python3
       sudo apt-get install python-pip
-      pip3 install virtualenv
+      sudo pip3 install virtualenv      # Mind the sudo or the install will happen in `$(HOME)/.local/...`
       ````
 
 
