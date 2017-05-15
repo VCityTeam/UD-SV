@@ -68,28 +68,6 @@
 
     `psql bozo` and `bozo=# select count(*) from lyon;`
 
-### Switch to python3 (and install required dependencies)
-Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) with all the bells and whistles:
-
- * OSX :
-   ````
-     unset PYTHONPATH 
-     virtualenv venv      # Make sure this was installed with pip3
-     . venv/bin/activate
-     pip install --upgrade setuptools
-     pip install -e .
-     pip install uwsgi
-     pip install lxml     # Note sure this is truly required but it can't hurt
-   ````
- * Ubuntu :
-   ````
-     virtualenv -p /usr/bin/python3 venv      # Make sure this was installed with pip3
-     . venv/bin/activate
-     pip install --upgrade setuptools
-     pip install -e .
-     pip install uwsgi
-     pip install lxml     # Note sure this is truly required but it can't hurt
-   ````
 ### Data base: add bounding box data to database (JGA specific)
 JGA specific quad-tree based display uses a hierarchy of bounding boxes. 
 Building that bounding box hierarchy is achieved by using an utility code (`building-server-processdb.py`) that comes bundled with the http server deployment code. Also notice although `building-server-processdb.py` make usage of Flask (see below) it nevertheless shares its configuration file with some Flak related concerns (see below for more).
@@ -130,6 +108,33 @@ cities:
     featurespertile: 20
 ````
 
+### Install python3 required dependencies
+Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) with all the bells and whistles.
+
+**WARNING**: make sure that
+ - you are located side by side with the `building-server.git` that you cloned
+ - that you are using version3 of python and pip (that pip should be pip3!)
+ 
+ * OSX :
+   ````
+      unset PYTHONPATH 
+      virtualenv venv      # Make sure this was installed with pip3
+   ````
+ * Ubuntu :
+   ````
+      virtualenv -p /usr/bin/python3 venv      # Make sure this was installed with pip3
+   ````
+ * OSX or Ubuntu:
+ ````
+     cd building-server.git
+     . ../venv/bin/activate
+     pip install --upgrade setuptools
+     pip install -e .
+     pip install uwsgi
+     pip install lxml     # Note sure this is truly required but it can't hurt
+   ````
+
+### Eventually compute the bounding boxes
 Then launch
 ````
   (venv): python building-server-processdb.py conf/building.yml lyon
