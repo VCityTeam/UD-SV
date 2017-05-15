@@ -152,7 +152,7 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
      pip install /chemin/vers/py3dtiles --upgrade
    ````
    
-### Enable remote access to PostgreSQL database server via TCP/IP (inspired from [Enable remote access to PostgreSQL database](https://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html)
+### Enable remote access to PostgreSQL database server via TCP/IP (inspired from [this](https://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html))
 
  * Change user to postgres : sudo su postgres
  * Enable lient authentication : vim /etc/postgresql/9.6/main/pg_hba.conf
