@@ -23,9 +23,10 @@ The key purpose of a need is thus to untangle the initial idea, its implicit/exp
  * How will we know if we succeed? (what is hoped outcome?) 
 
 The description of a need should have the following items:
- * Identifier: a string of the form `N<integer_need_number>` e.g. `N042`.
- * Maturity: choose among immature, ongoing, mature, complete
- * Beneficiary role: the role (researcher, developper, operations) that would directly benefit from the realisation of the need. 
- * Impact: choose among critical (project maker), major (would have heavy/significant benefits) or minor (nice to have).
- * Cost evaluation: some ball park estimation in man weeks or man months for its full realization (requirements, designs, implementation, tests, packaging, integration, documentation).
- * Tags or keywords: be them known (client, server, database) or not already mentioned (user experience...). 
+ * **Identifier**: a string of the form `N<integer_need_number>` e.g. `N042`.
+ * **User story**: a suggestive one liner description in the form "As a [role], I want to [do something] so that [reason/benefit]".
+ * **Beneficiary role**: the role (researcher, developper, operations) that would directly benefit from the realisation of the need. 
+ * **Impact**: choose among critical (project maker), major (would have heavy/significant benefits) or minor (nice to have).
+ * **Maturity**: choose among immature, ongoing, mature, complete
+ * **Cost evaluation**: some ball park estimation in man weeks or man months for its full realization (requirements, designs, implementation, tests, packaging, integration, documentation).
+ * **Tags or keywords**: be them known (client, server, database) or not already mentioned (user experience...). 
