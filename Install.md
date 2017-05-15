@@ -151,6 +151,28 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
      cd ..
      pip install /chemin/vers/py3dtiles --upgrade
    ````
+   
+### Enable remote access to PostgreSQL database server via TCP/IP (inspired from [Enable remote access to PostgreSQL database](https://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html)
+
+ * Change user to postgres : sudo su postgres
+ * Enable lient authentication : vim /etc/postgresql/9.6/main/pg_hba.conf
+ * Add the following line to this file (host) : all all 127.0.0.1/24 trust
+ * Open PostgreSQL config file : vim /etc/postgresql/9.6/main/postgresql.conf
+  * Change listen_adresses and port to the following :
+  ````
+      # - Connection Settings -
+
+      listen_addresses = 'localhost'          # what IP address(es) to listen on;
+                                              # comma-separated list of addresses;
+                                              # defaults to 'localhost'; use '*' for all
+                                              # (change requires restart)
+      port = 5432                             # (change requires restart)
+  ````
+
+  * switch back user : exit
+  * restart psql : sudo service postgresql restart
+  * go back into building-server.git folder
+  * activate venv : . venv/bin/activate
 
 ### Eventually compute the bounding boxes
 Then launch
