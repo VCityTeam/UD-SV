@@ -151,7 +151,7 @@ which will compute the bounding boxes out of the content of the pointed table wi
    ````
 
 ### Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
- * Edit bulding.uwsgi.yml to obtain a configuration like
+ * Edit building-server.git/conf/building.uwsgi.yml to obtain a configuration like
    ````
     uwsgi:
         virtualenv: /Users/mylogin/tmp/building-server.git/venv      # <--- adapt this      
