@@ -29,7 +29,8 @@
       sudo apt-get install python-pip
       sudo pip3 install virtualenv      # Mind the sudo or the install will happen in `$(HOME)/.local/...`
       ````
-
+ * Node.js
+   - sudo apt-get install npm
 
     
 ### Data base: initialization and preparation
