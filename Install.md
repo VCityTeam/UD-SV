@@ -68,8 +68,12 @@
 
     `psql bozo` and `bozo=# select count(*) from lyon;`
 
-### Data base: add bounding box data to database (JGA specific)
+### Data base: add bounding box data to database (JGA specific) & Install the http server
+
+ * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
+ * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
 JGA specific quad-tree based display uses a hierarchy of bounding boxes. 
+
 Building that bounding box hierarchy is achieved by using an utility code (`building-server-processdb.py`) that comes bundled with the http server deployment code. Also notice although `building-server-processdb.py` make usage of Flask (see below) it nevertheless shares its configuration file with some Flak related concerns (see below for more).
 
 First grab the bounding boxes hierarchy building code:
@@ -156,20 +160,6 @@ Then launch
 which will compute the bounding boxes out of the content of the pointed table within the concerned database and push the resulting hierarchy of bounding box data to a corresponding new table (named with a trailing `_bbox`) within that database.
 
 **Technical note**: the `conf/bulding.yml` configuration file mentions flask entries (and is also used to configure flask). Yet the `building-server-processdb.py` script only uses this file to retrieve the database access information and doesn't make any usage of flask. This lack of separation of concerns for the configuration files is an historical side effect...
-
-## Install the http server
- * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
- * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
- * `cd building-server.git/`
- * **FIXME**: we probably don't need this anymore `git checkout 3d-tiles` (the "correct" branch is not the master) 
- * Install branch b3dm of py3dtiles: **FIXME**: the following is a temporary patch, but it won't be needed anymore in the next comming weeks.
-   ````
-     git clone https://github.com/Oslandia/py3dtiles.git
-     cd py3dtiles
-     git checkout b3dm
-     cd ..
-     pip install /chemin/vers/py3dtiles --upgrade
-   ````
 
 ### Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
  * Edit building-server.git/conf/building.uwsgi.yml to obtain a configuration like
