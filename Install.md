@@ -38,14 +38,9 @@
     initdb /usr/local/var/postgres -E utf8
     postgres -D /usr/local/var/postgres &` (for launching a server)
    ````
- * Ubuntu : 
-   ````
-   service postgres start
-   sudo -u postgres psql
-      CREATE ROLE mysuperuser LOGIN PASSWORD 'whatever' SUPERUSER;
-   sudo apt-get install postgresql-9.6-postgis-2.3-scripts
-   createdb bozo
-   ````
+
+  * Ubuntu : `service postgresql start`
+  * createdb bozo
  
  * *Note : it is advised to replace 'myuser' by your session name in the following instructions.'*
     ```` 
