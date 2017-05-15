@@ -81,7 +81,7 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
    ````
  * Ubuntu :
    ````
-     virtualenv -p /usr/bin/python3 venv      # Make sure this was installed with pip3
+     virtualenv -p /usr/bin/python3 venv      # Make sure this was installed with pip3 (if not, run : pip3 uninstall virtualenv && sudo pip3 install virtualenv)
      . venv/bin/activate
      pip install --upgrade setuptools
      pip install -e .
@@ -95,11 +95,13 @@ Building that bounding box hierarchy is achieved by using an utility code (`buil
 First grab the bounding boxes hierarchy building code:
 ````
   git clone https://github.com/Oslandia/building-server.git
-  git checkout 3d-tiles
   mv building-server building-server.git
+  cd building-server.git/
+  git checkout 3d-tiles
 ````
 Then extract the domain size from the DB with 
 ```
+  psql bozo
   bozo=# select ST_extent(geom) from lyon;
 ````
 which should yield a result of the form
