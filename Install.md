@@ -169,10 +169,10 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
       port = 5432                             # (change requires restart)
   ````
 
-  * switch back user : exit
-  * restart psql : sudo service postgresql restart
+  * switch back user : `exit`
+  * restart psql : `sudo service postgresql restart`
   * go back into building-server.git folder
-  * activate venv : . venv/bin/activate
+  * activate venv : `. venv/bin/activate`
 
 ### Eventually compute the bounding boxes
 Then launch
