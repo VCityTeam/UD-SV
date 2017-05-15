@@ -143,9 +143,11 @@ which will compute the bounding boxes out of the content of the pointed table wi
  * **FIXME**: we probably don't need this anymore `git checkout 3d-tiles` (the "correct" branch is not the master) 
  * Install branch b3dm of py3dtiles: **FIXME**: the following is a temporary patch, but it won't be needed anymore in the next comming weeks.
    ````
-     git clone https://github.com/Oslandia/py3dtiles.git`
-     git checkout b3dm`
-     go into building-server folder and run : `pip install /chemin/vers/py3dtiles --upgrade`
+     git clone https://github.com/Oslandia/py3dtiles.git
+     cd py3dtiles
+     git checkout b3dm
+     cd ..
+     pip install /chemin/vers/py3dtiles --upgrade
    ````
 
 ### Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
