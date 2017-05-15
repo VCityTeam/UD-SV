@@ -83,7 +83,7 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
    ````
  * Ubuntu :
    ````
-     virtualenv -p /usr/bin/python3 venv      # Make sure this was installed with pip3 (if not, run : pip3 uninstall virtualenv && sudo pip3 install virtualenv)
+     virtualenv -p /usr/bin/python3 venv      # Make sure this was installed with pip3
      . venv/bin/activate
      pip install --upgrade setuptools
      pip install -e .
