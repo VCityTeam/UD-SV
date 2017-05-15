@@ -53,12 +53,14 @@
     ````
 
 ### Data base: upload CityGML data to the DB
- * The original source for the CityGML based description of the building geometries is the [Grand Lyon open data](https://data.grandlyon.com/). For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the [`LYON_6EME_BATI_2012_SplitBuildings.gml` file](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml). In the following we'll assume this file is located in the HOME (shortened as `~`) directory. 
+ * The original source for the CityGML based description of the building geometries is the [Grand Lyon open data](https://data.grandlyon.com/). For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the [`LYON_6EME_BATI_2012_SplitBuildings.gml` file](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml). In the following we'll assume this file is located in the HOME (shortened as `~`) directory.
+**WARNING**: the following set of commands must be executed with **VERSION 2 of python** (and pip) ! 
     ````
       git clone https://github.com/Oslandia/citygml2pgsql
       mv citygml2pgsql citygml2pgsql.git && cd citygml2pgsql.git
       wget http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml
-      ./citygml2pgsql.py -l LYON_6EME_BATI_2012_SplitBuildings.gml
+      pip install lxml
+      python ./citygml2pgsql.py -l LYON_6EME_BATI_2012_SplitBuildings.gml
       python ./citygml2pgsql.py LYON_6EME_BATI_2012_SplitBuildings.gml 2 3946 geom lyon |  psql bozo
     ````
    If you plateform doesn't have `wget` simply [open the LYON_6EME_BATI_2012_SplitBuildings.gml` link](git clone https://github.com/MEPP-team/RICT.wiki.git) with your favorite browser and place the downloaded gml file in the ad-hoc directory.
