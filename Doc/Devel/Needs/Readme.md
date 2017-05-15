@@ -10,6 +10,14 @@ A requirement **targets a technical audience** as its readers, like engineers, d
 ### Need 
 **Definition**: a **need** or [feature](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/) is a set of related requirements that allows the user to satisfy a "business" objective or need.
 
-Needs are thus high level requirements that **target management or project leader** and abstracts the technical details. For example
+Needs are thus high level requirements that **target general audience like management or project leader** and abstracts the technical details. For example
  * Need 1: "We need to offer web based access to city visualisation."
- * Need 2: "The portal of the system should list all the available city datas." 
+ * Need 2: "The portal of the system should list all the available city datas."
+ 
+ ## Why, when and how to write a need
+A need arises when formilizing new product ideas informally expressed during a brainstorm, overheard at a confereence/meeting, or mentioned during discussions with product users. The main reason for formilizing a need ("ideas" can come from many sources, but needs cannot be written by the general audience) is to provide a support for discussing and assessing (political decision) the product evolutions opportunities. 
+
+The key purpose of a need is thus to untangle the initial idea, its implicit/explicit assumptions about the solution a new answering feature would solve. A need must thus clearly express what problem it addresses (even though they are possibly many features or approaches that could solve it) as well as specify means to assess when it is solved. In other terms the questions to answer when writing a need are:
+ * What problem are we trying to solve? (Why should we be doing this? What is the pain?)
+ * Who are we trying to solve this problem for? (Who's pain would be relieved?)
+ * How will we know if we succeed? (what is hoped outcome?) 
