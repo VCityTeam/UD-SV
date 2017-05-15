@@ -112,7 +112,7 @@ cities:
 Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) with all the bells and whistles.
 
 **WARNING**: make sure that
- - you are located side by side with the `building-server.git` that you cloned
+ - you are located in the `building-server.git` that you cloned
  - that you are using version3 of python and pip (that pip should be pip3!)
  
  * OSX :
@@ -126,12 +126,26 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
    ````
  * OSX or Ubuntu:
  ````
-     cd building-server.git
-     . ../venv/bin/activate
+     . /venv/bin/activate
      pip install --upgrade setuptools
      pip install -e .
      pip install uwsgi
      pip install lxml     # Note sure this is truly required but it can't hurt
+   ````
+   
+### Temporary patch for handling gltf and b3dm
+
+**WARNING**: make sure that
+ - you are located in the `building-server.git` that you cloned
+ - that you are using version3 of python and pip (that pip should be pip3!)
+ 
+ * Install branch b3dm of py3dtiles: **FIXME**: the following is a temporary patch, but it won't be needed anymore in the next comming weeks.
+   ````
+     git clone https://github.com/Oslandia/py3dtiles.git
+     cd py3dtiles
+     git checkout b3dm
+     cd ..
+     pip install /chemin/vers/py3dtiles --upgrade
    ````
 
 ### Eventually compute the bounding boxes
