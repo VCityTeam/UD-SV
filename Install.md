@@ -214,14 +214,21 @@ Technical notes:
  * Conversion SQL to client content is defined in [database.py](https://github.com/Oslandia/building-server/blob/3d-tiles/building_server/database.py)
 
 ### Launch a local iTowns server
+
+**FIXME**: Currently, you have to clone a branch of JGA fork to have 3d-tiles support (https://github.com/Jeremy-Gaillard/itowns2/tree/3d-tiles-refacto)
 ````
 cd <somewhere>
-git clone https://github.com/iTowns/itowns2.git
+git clone https://github.com/Jeremy-Gaillard/itowns2.git
 cd itowns2
-git checkout 3d-tiles
+git checkout 3d-tiles-refacto
 npm install
 ````
+
+* **FIXME**: Temporary patch : Open `itowns2/examples/planar.html` and change `url: 'http://localhost:9090/getCity=lyon&layer=buildings&representations=lod1,lod2&weights=10,20&maxdepth=1',` to `url: 'http://localhost:9090/getCity?city=lyon'`
+
 Now either open `itowns2/index.html` file with your browser or alternatively run `npm start`.
+
+*Note : if after running `npm start` you have an error message saying that node is not find in `/usr/bin/env`, try running the following : `sudo ln -s /usr/bin/nodejs /usr/bin/node`. Explainations : on ubuntu node.js package is installed in /usr/bin/nodejs and when npm starts, it runs a the command `/usr/bin/env node` which it doesn't find. `sudo ln -s /usr/bin/nodejs /usr/bin/node` allows to create a symbolic link between node and nodejs in order to allow npm to find nodejs.*
 
 Assert all is well by opening `http://localhost:8080/examples/planar.html` with your browser.
 
