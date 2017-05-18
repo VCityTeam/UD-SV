@@ -5,8 +5,14 @@ A brief description of the [early needs](https://github.com/MEPP-team/RICT/blob/
 
 ## Objective
 The objective of the RICT (Representation Information CiTy) project is to design and realize 
-  * a backend: an infrastructure enabling the storage of city related data, as well as hosting and executing computational models using the backend data.  
-  * a frontend: a simple interactive visualizer of the backend data 
+  * a backend: 
+     - an infrastructure enabling the storage of city related data,
+     - an infrastructure for hosting and executing computational models (using the local backend data as well as online open data).  
+  * a frontend: 
+     - a simple interactive visualizer of the backend data
+     - a computational model treatment handler (configure, trigger, explore results of a treatment)
+
+As central "side effect", RICT aims at emerging shared and open data models, computational models, their mutual interactions (data and treatement) as well as good practices for doing so.  
  
 ### Aimed backend features
 The aimed backend features could be:
