@@ -26,6 +26,8 @@ Such a developer will have (at least) two possibilities:
 
 The clear advantage of the "ADE specific DB" is its modularity (one can combine easily many ADE) as well as avoiding the cumbersome DB migration. It's drawback is how to blur/hide-away/abtract the existence of two DBs to the CM (Computational Model).
 
+References: [Implementing modular Domain Specific Languages and Analyses](voelter.de/data/pub/modevva2012.pdf), Markus Voelter et al. 
+
 ### Chalenge 4: from treatment data model to data bindings
 A CM specifier will express the needs in terms of data elements (entities with attributes) and data structure (relationships between the entities) for the CM to be effective. The CM specifier will also need the such an [abstract data model](https://en.wikipedia.org/wiki/Conceptual_schema) in order to specify the output of the CM. A some point of the concrete realization workflow of that CM, an implementation will have to be produced. A component of that implementation will be the concrete implementation of the specified data structure (possibly enriched with implementation details: going from the [CIM](https://en.wikipedia.org/wiki/Model_Driven_Interoperability) (Computational Independent Model) to the [Platform Model](http://www.theenterprisearchitect.eu/blog/2008/01/16/mda-model-driven-architecture-basic-concepts/) (software)) as well as the associated I/O mechanisms in order to offer a [data binding](https://en.wikipedia.org/wiki/Data_binding) software component.
 
