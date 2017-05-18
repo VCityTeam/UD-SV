@@ -12,7 +12,7 @@ The objective of the RICT (Representation Information CiTy) project is to design
      - a simple interactive visualizer of the backend data
      - a computational model treatment handler (configure, trigger, explore results of a treatment)
 
-As central "side effect", RICT aims at emerging shared and open data models, computational models, their mutual interactions (data and treatement) as well as good practices for doing so.  
+We believe that in order to succeed with data usage one must not separate data concerns (information models, database infrastructure) from the offered tools, treatment process and the associated methodology. Questions like how to migrate a database when the information model changes (e.g. from CityGML version 2 to version 3), how to deal with information model modularity and extensions, what are the interactions between data and their treatment or how does one hangle data storage and computation scale up, must be dealt at first. RICT will try to propose good practices for doing so.  
  
 ### Aimed backend features
 The aimed backend features could be:
