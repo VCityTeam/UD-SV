@@ -215,12 +215,12 @@ Technical notes:
 
 ### Launch a local iTowns server
 
-**FIXME**: Currently, you have to clone a branch of JGA fork to have 3d-tiles support (https://github.com/Jeremy-Gaillard/itowns2/tree/3d-tiles-refacto)
+**FIXME**: Currently, you have to clone a branch of JGA fork to have 3d-tiles support (https://github.com/Jeremy-Gaillard/itowns2/tree/3d-tiles-strict)
 ````
 cd <somewhere>
 git clone https://github.com/Jeremy-Gaillard/itowns2.git
 cd itowns2
-git checkout 3d-tiles-refacto
+git checkout 3d-tiles-strict
 npm install
 ````
 
