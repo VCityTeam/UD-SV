@@ -117,7 +117,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      (citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
      (citydb_user)$ ./3DCityDB-Importer-Exporter.sh&
      ````
-     **Note**: there is a console on the right side. 
+     **Note**: there is a console on the right side of the graphical interface.
    - Go to database tab and change database connection to the following:
 
    ````
