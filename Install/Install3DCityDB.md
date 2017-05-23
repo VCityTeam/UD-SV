@@ -20,8 +20,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
    ````
    Test that the server is accessible with
    ````
-   su - citydb_user
-   psql -d citydb_v3 -U citydb_user
+   (root)$ psql -d citydb_v3 -U citydb_user
    ````
    If you get an error message of the form `psql: FATAL:  Peer authentication failed for user "citydb_user" `then
      1. Obtain the server IP number  e.g. with the `ifconfig` command (below this IP is referred as ``<server_IP_number>`)  
