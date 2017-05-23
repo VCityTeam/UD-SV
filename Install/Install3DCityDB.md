@@ -60,7 +60,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      ````
      (root)$ su - citydb_user
      (citydb_user)$ psql -d citydb_v3
-        # create extension postgis;
+        citydb_v3=# create extension postgis;
+        citydb_v3=# \q
      ````
  * Install Java Runtime Environment (version 8 or higher) (as [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/). We follow the ["Manual install" section of Ask Ubuntu(https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (see also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/):
      - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (you'
