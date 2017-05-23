@@ -220,7 +220,7 @@ Technical notes:
 cd <somewhere>
 git clone https://github.com/Jeremy-Gaillard/itowns2.git
 cd itowns2
-git checkout 3d-tiles-strict
+git checkout 3d-tiles-refacto
 npm install
 ````
 
