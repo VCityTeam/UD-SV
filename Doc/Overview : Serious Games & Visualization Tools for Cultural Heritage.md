@@ -17,6 +17,8 @@ Doc : [Conception de serious games exploitant les technologies de réalité augm
 * [Abbaye de Jumiège](https://www.youtube.com/watch?v=B1r38B4FJ_0) : virtual tour (AR)
 * Renaissance Toul 2013 : serious game (SG) : quizz / track game (jeu de piste) using AR
 
+### More examples :
+
 [Versailles 1685](https://fr.wikipedia.org/wiki/Versailles_1685_:_Complot_%C3%A0_la_cour_du_Roi_Soleil) & [Egypte 1156](https://fr.wikipedia.org/wiki/%C3%89gypte_:_1156_av._J.-C._-_L%27%C3%89nigme_de_la_tombe_royale), the first mainstream "serious games" for cultural heritage. Point & click, 360° vision around the player, adventure / quizz game ([gameplay video](https://www.youtube.com/watch?v=clZzDv2UpVM)).
 
 [ArchiGuide](http://www.archiguide-lyon.com/) : mobile app to find information about architectural points of interest in your vicinity ([browser demo version](http://www.archipel-cdcu.fr/archiguide/)).
