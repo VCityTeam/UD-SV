@@ -63,16 +63,22 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
         citydb_v3=# create extension postgis;
         citydb_v3=# \q
      ````
- * Install Java Runtime Environment (version 8 or higher) (as [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/). We follow the ["Manual install" section of Ask Ubuntu(https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (see also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/):
+ * Install Java Runtime Environment (version 8 or higher) (as [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/). We follow the ["Manual install" section of Ask Ubuntu](https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (refer also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/)):
      - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (you'
      - ````
-       cd /tmp
+       cd /tmp       # in case the tarball is not clean
        tar zxvf jre-8u131-linux-x64.tar.gz
+       mkdir /usr/lib/jvm
        sudo mv jre1.8.0_131 /usr/lib/jvm/oracle_jre1.8.0_131
        sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/oracle_jre1.8.0_131/bin/java 2000
        rm -f jre-8u131-linux-x64.tar.gz
        ````
-     - Create a `/etc/profile.d/oraclejdk.sh` with ad-hoc content
+     - Create a `/etc/profile.d/oraclejdk.sh` with ad-hoc content e.g.
+       ````
+       export J2REDIR=/usr/lib/jvm/oracle_jre1.8.0_131
+       export PATH=$PATH:/usr/lib/jvm/oracle_jre1.8.0_131/bin:
+       export JAVA_HOME=/usr/lib/jvm/oracle_jre1.8.0_131
+       ````
 
  * Download 3DCityDB software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/) 
      - `wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
