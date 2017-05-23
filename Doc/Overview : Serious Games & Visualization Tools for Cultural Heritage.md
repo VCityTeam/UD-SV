@@ -25,4 +25,6 @@ Doc : [Conception de serious games exploitant les technologies de réalité augm
 
 [Ancient Colosseum : A VR Experience (Occulus Rift)](https://www.youtube.com/watch?v=bAWTJO6oz-o) : an attempt at displaying historical documents in the 3D scene (at 1:00 in the video).
 
+[Versailles 3D](https://www.youtube.com/watch?v=FSHzMdfu-60) : good example of smooth transition from historical document to 3d scene and vice-versa
+
 
