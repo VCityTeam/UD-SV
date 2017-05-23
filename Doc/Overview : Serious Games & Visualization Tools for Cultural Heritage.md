@@ -23,4 +23,6 @@ Doc : [Conception de serious games exploitant les technologies de réalité augm
 
 [PIVOTTheWorld](http://www.pivottheworld.com/) : PIVOT (the Point of Interest Visual Optimization Tool) is a mobile app that reveals to users what places looked like in the past - showing authenticated histories of locations (from everyday places to popular tourist attractions), through images, videos, and text-audio ([wired article](https://www.wired.com/2015/03/clever-app-reveals-snapshot-locationin-past/)).
 
+[Ancient Colosseum : A VR Experience (Occulus Rift)](https://www.youtube.com/watch?v=bAWTJO6oz-o) : an attempt at displaying historical documents in the 3D scene (at 1:00 in the video).
+
 
