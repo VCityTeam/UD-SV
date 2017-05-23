@@ -111,17 +111,17 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
     - When asked for `Please enter a valid SRID (e.g., 3068 for DHDN/Soldner Berlin):` , enter : `3946` (which is the standard coordinate system for Lyon)
     - When asked for `Please enter the corresponding SRSName to be used in GML exports (e.g., urn:ogc:def:crs, crs:EPSG::3068, crs:EPSG::5783):` , enter : `crs:EPSG::3946`
 
-* Start 3DCityDB:
+* Import some CityGML file content:
+   - Start 3DCityDB:
    ````
    (citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
    (citydb_user)$ ./3DCityDB-Importer-Exporter.sh&
    ````
-
- * Go to database tab and change database connection to the following:
+   - Go to database tab and change database connection to the following:
 
    ````
     Connection: new connection
-
+    ...
     Connection Details
       Description: citydb_v3
       Username: citydb_user
@@ -131,13 +131,11 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
       Port:5432
       Database: citydb_v3
    ````
-
-   Hit `Connect button`
- 
- * Import a CityGML file: 
-   * Go back to import tab. 
-   * Hit browse and choose a CityGML file.
-   * Hit Import 
+  - Hit `Connect button`
+  - Import a CityGML file: 
+     * Go back to import tab. 
+     * Hit browse and choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
+     * Hit Import 
 
  *Note: there is a console on the right side.* 
 
