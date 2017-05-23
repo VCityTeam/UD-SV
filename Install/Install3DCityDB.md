@@ -64,14 +64,14 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
         citydb_v3=# \q
      ````
  * Install Java Runtime Environment (version 8 or higher) (as [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/). We follow the ["Manual install" section of Ask Ubuntu](https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (refer also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/)):
-     - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (you'
+     - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (because of Oracle's acceptance policy uses a cookie validation you might not be able to use wget directly in which case rebounce e.g. on your desktop) 
      - ````
-       cd /tmp       # in case the tarball is not clean
-       tar zxvf jre-8u131-linux-x64.tar.gz
-       mkdir /usr/lib/jvm
-       sudo mv jre1.8.0_131 /usr/lib/jvm/oracle_jre1.8.0_131
-       sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/oracle_jre1.8.0_131/bin/java 2000
-       rm -f jre-8u131-linux-x64.tar.gz
+       (root)$ cd /tmp       # in case the tarball is not clean
+       (root)$ tar zxvf jre-8u131-linux-x64.tar.gz
+       (root)$ mkdir /usr/lib/jvm
+       (root)$ sudo mv jre1.8.0_131 /usr/lib/jvm/oracle_jre1.8.0_131
+       (root)$ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/oracle_jre1.8.0_131/bin/java 2000
+       (root)$ rm -f jre-8u131-linux-x64.tar.gz
        ````
      - Create a `/etc/profile.d/oraclejdk.sh` with ad-hoc content e.g.
        ````
@@ -81,11 +81,13 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
        ````
 
  * Download 3DCityDB software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/) 
-     - `wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
+     - `(citydb_user)$ wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
 
- * Install 3DCityDB and follow installer steps: https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit
- Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit
-     - `java -jar 3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
+ * Install 3DCityDB and follow installer steps:
+     - `(citydb_user)$ java -jar 3DCityDB-Importer-Exporter-3.3.1-Setup.jar`
+     - Trouble shooting:
+        * on **debian** when getting the `Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit` error message then [cross fingers](https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit)) and try `apt-get install libxtst6`.
+        * the installer interface uses GUI. In case you get the `X11 connection rejected because of wrong authentication` error message and you are using ssh to log on the server you are configuring then make sure ssh is configured to allow for "x11 forwarding")
 
  * Configure 3DCityDB to match your postgresql configuration:
 
