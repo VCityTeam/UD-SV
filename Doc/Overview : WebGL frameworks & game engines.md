@@ -1,6 +1,4 @@
-(Work in progess)
-
-## Overview : WebGL frameworks & game engines
+## Overview : WebGL frameworks & game engines for an upcoming virtual tour / gamification
 
 [List of WebGL frameworks (wikipedia)](https://en.wikipedia.org/wiki/List_of_WebGL_frameworks)
 
