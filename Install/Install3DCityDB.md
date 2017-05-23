@@ -113,10 +113,11 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
 
 * Import some CityGML file content:
    - Start 3DCityDB:
-   ````
-   (citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
-   (citydb_user)$ ./3DCityDB-Importer-Exporter.sh&
-   ````
+     ````
+     (citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
+     (citydb_user)$ ./3DCityDB-Importer-Exporter.sh&
+     ````
+     **Note**: there is a console on the right side. 
    - Go to database tab and change database connection to the following:
 
    ````
@@ -137,7 +138,6 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      * Hit browse and choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
      * Hit Import 
 
- *Note: there is a console on the right side.* 
 
  
 ## References
