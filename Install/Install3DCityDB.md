@@ -83,7 +83,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
  * Download 3DCityDB software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/) 
      - `wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
 
- * Install 3DCityDB and follow installer steps:
+ * Install 3DCityDB and follow installer steps: https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit
+ Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit
      - `java -jar 3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
 
  * Configure 3DCityDB to match your postgresql configuration:
