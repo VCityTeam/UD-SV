@@ -54,6 +54,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      (root)$ su - postgres
      (postgres)$ psql -d citydb_v3 -U postgres
         citydb_v3=# alter role citydb_user with superuser;
+        citydb_v3=# \q
      ````
    - Add the postgis extension to the citydb_v3 database
      ````
