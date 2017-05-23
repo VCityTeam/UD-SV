@@ -14,8 +14,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
    (root)$ sudo adduser citydb_user               # that is at OS level
            ...
    (root)$ sudo su postgres
-   (postgres)$ createuser citydb_user             # this account (same name as above) is at PostGreSql level  
-   (postgres)$ createdb -O citydb_user citydb_v3  # creates a new citydb_v3 database
+   (postgres)$ createuser --password <new_password> citydb_user  # this account (same name as above) is at PostGreSql level  
+   (postgres)$ createdb -O citydb_user citydb_v3                 # creates a new citydb_v3 database
    (postgres)$ exit
    ````
    Test that the server is accessible with
