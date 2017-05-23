@@ -30,7 +30,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
          ...
          host all all <server_IP_number>/24 trust
          ````
-     3. Edit the `/etc/postgresql/9.3/main/postgresql.conf` file and allow for IPV4 bindings (i.e. on "which interfaces should PostgreSQL accept connections on" as opposed to specifying "who is allowed to connect to")
+     3. Edit the `/etc/postgresql/X.Y/main/postgresql.conf` file and allow for IPV4 bindings (i.e. on "which interfaces should PostgreSQL accept connections on" as opposed to specifying "who is allowed to connect to")
          ````
          listen_addresses = '0.0.0.0'
          port = 5432 
