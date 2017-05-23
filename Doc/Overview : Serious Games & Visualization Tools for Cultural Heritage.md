@@ -8,7 +8,7 @@ Doc : [Developing Serious Games for Cultural Heritage: A State-of-the-Art Review
 
 Doc : [Conception de serious games exploitant les technologies de réalité augmentée pour la valoristation du patrimoine culturel bâti (MESSAOUDI)](http://meurthe.crai.archi.fr/wordpressFr/wp-content/plugins/Lab_BD/media/pdf/MESSAOUDITommyMemoireAME.pdf) : focus on augmented reality (AR), detailed info about interactive scenarisation.
 * [TerraNumerica](http://competitivite.gouv.fr/des-exemples-de-projets-r-d-aboutis/terra-numerica-en-images-527.html) (Paris) : "Représenter des espaces urbains de grande dimension de façon réaliste, en 3 dimensions et haute définition, visualiser ces représentations sur internet ou sur son téléphone portable, développer de nouveaux services pour les collectivités urabaines, le tourisme, l'immobilier ou la valorisation du patrimoine."
-* [Chateau de Cherbourg](https://www.youtube.com/watch?v=HbYa8Ta_l44) : virtual tour (AR)
+* [Chateau de Cherbourg](http://www.club-innovation-culture.fr/cherbourg-fait-revivre-son-chateau-avec-une-application-mobile-en-realite-augmentee/) : virtual tour (AR)
 * [Abbaye de Cluny](https://www.youtube.com/watch?v=-4v_GhA_S0A) : virtual tour (AR)
 * [Abbaye de Jumiège](https://www.youtube.com/watch?v=B1r38B4FJ_0) : virtual tour (AR)
 * Renaissance Toul 2013 : serious game (SG) : quizz / track game (jeu de piste) using AR
