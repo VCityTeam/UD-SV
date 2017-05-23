@@ -20,7 +20,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
    ````
    Test that the server is accessible with
    ````
-   (root)$ psql -d citydb_v3 -U citydb_user
+   (postgres)$ psql -d citydb_v3 -U citydb_user
    ````
    If you get an error message of the form `psql: FATAL:  Peer authentication failed for user "citydb_user" `then
      1. Obtain the server IP number  e.g. with the `ifconfig` command (below this IP is referred as ``<server_IP_number>`)  
@@ -35,15 +35,17 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
          listen_addresses = '0.0.0.0'
          port = 5432 
          ```` 
-     4. Restart the server with `(root)$ service progresql restart
+     4. Restart the server with :
+         - Ubuntu: `(postgres)$ service postgresql restart`
+         - Debian: `(postgres)$ systemctl restart postgresql`
 
     Test again with 
     ````
-    psql -d citydb_v3 -U citydb_user
+    (postgres)$ psql -d citydb_v3 -U citydb_user
     ````
     and the network connection (from the server) with
     ````
-    psql -h <server_IP_number> -d citydb_v3 -U citydb_user
+    (postgres)$ psql -h <server_IP_number> -d citydb_v3 -U citydb_user
     ````
  
  * Chapter 3.3.2 P. 100, Step 2: **Add the postgis extension**
