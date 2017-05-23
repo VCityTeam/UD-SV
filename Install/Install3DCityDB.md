@@ -6,8 +6,8 @@ Tested on:
 We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB_Documentation_v3.3.pdf) for the PostGRESql case:  
  * Chapter 3.1.1 p. 93: **install PostgreSQL 9.1 or higher and PostGIS 2.0 or higher**
    ````
-   (bash)$ sudo apt-get install postgresql-9.3-postgis-2.1
-   ```   
+   (bash)$ sudo apt-get install postgresql-9.4-postgis-2.1
+   ````   
  * Chapter 3.3.2 P. 100, Step 1: **create an empty PostgreSQL database**
    We follow [debian PostgreSql tutorial](https://wiki.debian.org/PostgreSql) (with some help of [: 
    ````
@@ -20,6 +20,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
    ````
    Test that the server is accessible with
    ````
+   su - citydb_user
    psql -d citydb_v3 -U citydb_user
    ````
    If you get an error message of the form `psql: FATAL:  Peer authentication failed for user "citydb_user" `then
