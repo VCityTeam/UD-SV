@@ -1,6 +1,6 @@
 ## List of needs
-[Need 001](Need001.md): means for computational model API
-[Need 002](Need002.md): means for modular information models
+ * [Need 001](Need001.md): means for computational model API
+ * [Need 002](Need002.md): means for modular information models
 
 ## Definitions
 ### Requirement
