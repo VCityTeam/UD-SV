@@ -12,22 +12,6 @@ The concern of the CM producer is to **interface, through some data access API, 
  * to deal with the data repository specifics/details belonging to data logical or even physical model
  * to hardwire in the CM code some given database query language requests (e.g. `SQL` and/or "spatial SQL"). 
 
-### Challenge 3: how to evolve/extend the data server data model?  
-CityGML last specification is now defined as an abstract model in the form of an UML based description as opposed to previous specifications that were given as XML Schema (XSD)  based concrete form. 
-Additionally CityGML accepts information model "extensions" (called ADE e.g. [Energy_ADE](http://www.citygmlwiki.org/index.php/CityGML_Energy_ADE)) themselves described in their abstract or concrete forms.
-
-The challenge can be summarized as: **when working (defining or producing data) with such ADE's what are the modular methods and tools to be used in order to maintain such an extensible data repository ?**
-
-In order to illustrate this challenge, let us consider the [UML diagram](http://cadastralvocabulary.org/citygml/tax_ade/1.0/CityGML_TaxADE_UML.png) of an ADE ([the Immovable Property_Taxation_ADE](http://www.citygmlwiki.org/index.php?title=CityGML_Immovable_Property_Taxation_ADE)). In such UML class diagram, the classes beloging to [CityGML core specification](http://portal.opengeospatial.org/files/?artifact_id=47842) is depicted with one color (yellow for this example with classes like `LandUse`, `_CityObject`, `_AbstactBuilding`) whereas the ADE classes are depicted with a distinguished color  (green for this example with classes like `tax::PropertyUnit`, `tax::BuildingUsePart`). 
-Let us assume that some DB (Data Base) deployed with CityGML logical model already exists, and further assume that a treament developer wishes to work with this ADE.
-Such a developer will have (at least) two possibilities:
- 1. **DB migration path**: Merge/assemble/aggregate the CityGML information model together with the considered ADE, deploy a new DB with this integrated model and migrate the CityGML (core) content to this new ADE extended DB
- 2. build a **separate ADE specific DB** restricted to hold the ADE data
-
-The clear advantage of the "ADE specific DB" is its modularity (one can combine easily many ADE) as well as avoiding the cumbersome DB migration. It's drawback is how to blur/hide-away/abtract the existence of two DBs to the CM (Computational Model).
-
-References: [Implementing modular Domain Specific Languages and Analyses](voelter.de/data/pub/modevva2012.pdf), Markus Voelter et al. 
-
 ### Chalenge 4: from treatment data model to data bindings
 A CM specifier will express the needs in terms of data elements (entities with attributes) and data structure (relationships between the entities) for the CM to be effective. The CM specifier will also need the such an [abstract data model](https://en.wikipedia.org/wiki/Conceptual_schema) in order to specify the output of the CM. A some point of the concrete realization workflow of that CM, an implementation will have to be produced. A component of that implementation will be the concrete implementation of the specified data structure (possibly enriched with implementation details: going from the [CIM](https://en.wikipedia.org/wiki/Model_Driven_Interoperability) (Computational Independent Model) to the [Platform Model](http://www.theenterprisearchitect.eu/blog/2008/01/16/mda-model-driven-architecture-basic-concepts/) (software)) as well as the associated I/O mechanisms in order to offer a [data binding](https://en.wikipedia.org/wiki/Data_binding) software component.
 
