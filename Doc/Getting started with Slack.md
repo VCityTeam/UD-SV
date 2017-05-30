@@ -1,9 +1,9 @@
 
 ## Getting started with Slack
 
-Slack is a cloud-based set of team collaboration tools and services While no longer using an IRC backend, Slack offers a lot of IRC-like features: persistent chat rooms (channels) organized by topic, as well as private groups and direct messaging.
-
 (Toute la doc est disponible en français sur le site) 
+
+Slack is a cloud-based set of team collaboration tools and services While no longer using an IRC backend, Slack offers a lot of IRC-like features: persistent chat rooms (channels) organized by topic, as well as private groups and direct messaging.
 
 [What is Slack ?](https://get.slack.help/hc/en-us/articles/115004071768)
 
