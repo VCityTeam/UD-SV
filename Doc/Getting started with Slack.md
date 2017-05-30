@@ -11,7 +11,7 @@ Slack is a cloud-based set of team collaboration tools and services While no lon
 
 [Using Slack : Basics, Tips & Tricks](https://get.slack.help/hc/en-us/categories/200111606-Using-Slack)
 
-## Quelques astuces :
+### Quelques astuces en vrac :
 
  * formatage de texte : https://get.slack.help/hc/en-us/articles/202288908-Format-your-messages
 
