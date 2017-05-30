@@ -1,4 +1,4 @@
-# Vilo 3D : Design Document
+# Vilo 3D : Overview
 
 ## Goals
 * the display of historical documents whithin a 3D representation of the city
