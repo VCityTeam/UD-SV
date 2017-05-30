@@ -7,13 +7,12 @@
 * Renaissance Toul 2013 : serious game (SG) : quizz / track game (jeu de piste) using AR [1]
 * Priory Undercroft : immersive simulation (first person view, detailed geometry & texturing, non playing character (NPC) with artificial intelligence (AI), use of Virtual Reality (VR). [2] [3]
 
-### Guided Tour (Virtual/Augmented Reality)
+### Guided Tour & Simulation (Virtual/Augmented Reality)
 
 * [Chateau de Cherbourg](http://www.club-innovation-culture.fr/cherbourg-fait-revivre-son-chateau-avec-une-application-mobile-en-realite-augmentee/) : virtual tour (AR) [1]
 * [Abbaye de Cluny](https://www.youtube.com/watch?v=-4v_GhA_S0A) : virtual tour (AR) [1]
 * [Abbaye de Jumiège](https://www.youtube.com/watch?v=B1r38B4FJ_0) : virtual tour (AR) [1]
 * [Rome Reborn](https://www.youtube.com/watch?v=vrIEwjgfbYs) [2]
-
 * [Ancient Colosseum : A VR Experience (Occulus Rift)](https://www.youtube.com/watch?v=bAWTJO6oz-o) : an attempt at displaying historical documents in the 3D scene (at 1:00 in the video).
 * [Versailles 3D](https://www.youtube.com/watch?v=FSHzMdfu-60) : good example of smooth transition from historical document to 3d scene and vice-versa
 
