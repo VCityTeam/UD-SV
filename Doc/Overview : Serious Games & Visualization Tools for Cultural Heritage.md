@@ -1,6 +1,8 @@
 
 ## Overview : Serious Games & Visualization Tools for Cultural Heritage
 
+![](http://imgur.com/r1ew3zs.png)
+
 ### Traditional Games & Serious Games
 
 * [Versailles 1685](https://fr.wikipedia.org/wiki/Versailles_1685_:_Complot_%C3%A0_la_cour_du_Roi_Soleil) & [Egypte 1156](https://fr.wikipedia.org/wiki/%C3%89gypte_:_1156_av._J.-C._-_L%27%C3%89nigme_de_la_tombe_royale), the first mainstream "serious games" for cultural heritage. Point & click, 360° vision around the player, adventure / quizz game ([gameplay video](https://www.youtube.com/watch?v=clZzDv2UpVM)).
