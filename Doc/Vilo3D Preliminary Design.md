@@ -20,7 +20,7 @@ Experts in various fields, ranging from information technology to human sciences
 
 ## Solutions
 
-![](http://imgur.com/n7hyxLm.gif)
+[Quick video test...](http://i.imgur.com/n7hyxLm.gifv)
 
 ![](http://imgur.com/r1ew3zs.png)
 
