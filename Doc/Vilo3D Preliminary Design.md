@@ -20,7 +20,7 @@ Experts in various fields, ranging from information technology to human sciences
 
 ## Solutions
 
-![](http://i.imgur.com/yEBI85K.png)
+![](http://imgur.com/r1ew3zs.png)
 
 ## Ideas
 * display the past in grayscale (visual similarity with old photos ?)
