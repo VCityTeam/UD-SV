@@ -20,6 +20,8 @@ Experts in various fields, ranging from information technology to human sciences
 
 ## Solutions
 
+![](http://imgur.com/n7hyxLm.gif)
+
 ![](http://imgur.com/r1ew3zs.png)
 
 ## Ideas
