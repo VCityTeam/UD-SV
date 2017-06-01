@@ -1,4 +1,5 @@
-In this file, you will find the process of creation of the 3D buildings for the project Vilo3D
+In this file, you will find the process of creation of the 3D buildings for the project Vilo3D.
+
 This process is based from the discussions with Anne-Sophie Clémençon, but also from photos and archives.
 
 
