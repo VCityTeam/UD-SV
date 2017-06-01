@@ -1,1 +1,1 @@
-Lien vers le .doc contenant la méthodologie CityGML (https://drive.google.com/file/d/0B8Rk8pkiGT4VYnlKWE1YbkctSTA/view?usp=sharing)
+Lien vers le .doc contenant la méthodologie CityGML : (https://www.dropbox.com/s/zmmik7c15zcxyfh/Methodology_CityGML.docx?dl=0)
