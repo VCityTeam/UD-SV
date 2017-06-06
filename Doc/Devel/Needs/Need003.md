@@ -8,7 +8,7 @@ Sub Needs :
 * [Need004](Need004.md) : integration of historical data (images & text) within a 3D representation of the city
 * [Need005](Need005.md) : ergonomic user exploration of time : temporal slider 
 * [Need006](Need006.md) : ergonomic user exploration of space (advanced camera control, shortcut to point of interest...)
-* [Need007](Need007.md) :'guided tour' : points of interest linked together, which the user can enter/leave/return to at will
+* [Need007](Need007.md) : guided tour, between spatiotemporal points of interest, which the user can enter/leave/return to at will
 * [Need008](Need008.md) : ability to display the historical uncertainty of the 3d reconstruction
 * [Need009](Need009.md) : ability to use texture in the 3d scene
 
