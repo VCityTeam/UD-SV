@@ -98,7 +98,7 @@ Now, we have a part of our place Bellecour.
 
 In the hierarchy, select “ LayerCityGML”
 
-<img src="Image_3Duse_layers.jpg" width="604" height="344" />
+<img src="Image/3Duse_layers.jpg" width="604" height="344" />
 
 Then in the tab « File », click on « Export OBJ »
 <img src="Image/3Duse_export.jpg" width="393" height="264" />
