@@ -18,6 +18,6 @@ Voici les différentes tâches que j'ai prévu de faire dans les mois qui arrive
 4. Avancer sur les problèmes qu'il y a avec la lecture des points b3dm (Semaine du 12/06, car Jérémy n'est pas la)
  - Il y a certaines parties de la lecture des données de b3dm qui ne sont pas gerées à cause de three.js et de la norme cesium pour GLTF.
    - Voir ce qui est possible de faire pour palier à ce problème soit en passant par notre code soit en faisant une issue sur le git de three.js pour qu'ils puissent lire la norme de Cesium
-   - Fix ce problème et tester.
+   - Régler ce problème et tester.
 
 
