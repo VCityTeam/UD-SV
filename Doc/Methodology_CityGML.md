@@ -36,13 +36,13 @@ you’ll see that is the same model but with different dates. We will take
 
 Now, you have a zip these files:
 
-<img src="Image/zip-files.jpg" width="152" height="22" />
+<img src="Image/zip_files.jpg" width="152" height="22" />
 
 For the future, we shall need that the .gml which interests us is alone
 in a file, we are going to create a case LyonTilling and copy him
 inside.
 
-<img src="Image/zip_files2.jpg" width="604" height="318" />
+<img src="Image/zip_files_2.jpg" width="604" height="318" />
 
 1.  <span id="Tilling_et_récupération_de_la_tuile"
     class="anchor"></span>*Tilling et recovering of a part which
