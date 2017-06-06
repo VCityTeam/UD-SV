@@ -26,6 +26,6 @@ Sub Needs :
 
 ### Notes:
 
-Target audience : Experts in various fields, ranging from information technology to human sciences. Tools must be easy to use for non-technicians (focus needed on ergonomy).
-Challenges : visual clarity (image (historical doc) + text (info) + 3d scene), user movement in 3d space + time, transition between free exploration and guided tour (access, exit, resume), display the historical uncertainty of the 3d reconstruction.
-Ideas : display the past in grayscale (visual similarity with old photos ?)
+* Target audience : Experts in various fields, ranging from information technology to human sciences. Tools must be easy to use for non-technicians (focus needed on ergonomy).
+* Challenges : visual clarity (image (historical doc) + text (info) + 3d scene), user movement in 3d space + time, transition between free exploration and guided tour (access, exit, resume), display the historical uncertainty of the 3d reconstruction.
+* Ideas : display the past in grayscale (visual similarity with old photos ?)
