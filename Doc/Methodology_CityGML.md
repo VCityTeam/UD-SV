@@ -117,6 +117,7 @@ In the main menu of 3ds max, click on the arrow near to « Import » and
 select « Import - import non native file formats into 3ds max-  »
 
 Then go find the .obj where you save it.
+
 <img src="Image/3dsMax_Import.jpg" width="604" height="322" />
 
 <img src="Image/3dsMax_Import2.jpg" width="604" height="322" />
