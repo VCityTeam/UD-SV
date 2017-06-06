@@ -1,4 +1,4 @@
-# Need 005: ability to display historical uncertainty in the 3d reconstruction
+# Need 008: ability to display historical uncertainty in the 3d reconstruction
 
 ### User story
 
