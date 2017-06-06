@@ -36,7 +36,7 @@ you’ll see that is the same model but with different dates. We will take
 
 Now, you have a zip these files:
 
-<img src="Image/zip_files.jpg" width="152" height="22" />
+<img src="Image/zip_files.jpg" width="604" height="318" />
 
 For the future, we shall need that the .gml which interests us is alone
 in a file, we are going to create a case LyonTilling and copy him
