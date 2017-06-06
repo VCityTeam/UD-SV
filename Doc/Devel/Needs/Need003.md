@@ -11,7 +11,7 @@ Sub Needs :
 * [Need007](Need007.md) : guided tour, between spatiotemporal points of interest, which the user can enter/leave/return to at will
 * [Need008](Need008.md) : ability to display the historical uncertainty of the 3d reconstruction
 * [Need009](Need009.md) : ability to use texture in the 3d scene
-* [Need010](Need010.md) : multiple representations of the city (allow override of generic behavior/geometry for the guided tour)
+* [Need010](Need010.md) : multiple representations of the city (override of generic behavior & geometry, while in guided tour)
 
 
 ### Beneficiary role: ?
