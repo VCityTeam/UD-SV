@@ -20,4 +20,5 @@ Voici les différentes tâches que j'ai prévu de faire dans les mois qui arrive
    - Voir ce qui est possible de faire pour palier à ce problème soit en passant par notre code soit en faisant une issue sur le git de three.js pour qu'ils puissent lire la norme de Cesium
    - Régler ce problème et tester.
 
-
+5. Continuer la lecture des differents fichier comme pour .pnts mais pour les autres comme Vector Data (*.vctr) mais aussi Instanced 3D Model (*.i3dm).... 
+  - De voir comment ça se transforme dans les classe de three.js
