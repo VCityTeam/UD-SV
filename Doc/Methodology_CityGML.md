@@ -266,7 +266,7 @@ In the hierarchy, we applied dates to our folder -Tout\_Bellecour-, but
 by developing the file, there are buildings inside, it’s possible to put
 dates to each building or put same dates to the totality.
 
-> <img src="Image_Hierarchy.jpg" width="262" height="329" />
+> <img src="Image/Hierarchy.jpg" width="262" height="329" />
 >
 > We can see date’s details when we are on the building.
 
@@ -278,6 +278,7 @@ In the hierarchy, select «  LayerCityGML »
 <img src="Image/Saving_gml.jpg" width="604" height="352" />
 
 Then, in the tab « File » click on « Export citygml »
+
 <img src="Image/Export_gml.jpg" width="406" height="270" />
 
 Then, save your .gml where you want.
