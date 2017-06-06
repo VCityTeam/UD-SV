@@ -28,7 +28,7 @@ In the search bar, we will search the 2<sup>nd</sup> arrondisssement
 
 <img src="Image/Search_website.jpg" width="604" height="347" />
 
-<img src="media/image2.png" width="604" height="441" />
+<img src="Image/Download_website.jpg" width="604" height="441" />
 
 You can see there are several CityGML, if you let your cursor above,
 you’ll see that is the same model but with different dates. We will take
@@ -36,30 +36,28 @@ you’ll see that is the same model but with different dates. We will take
 
 Now, you have a zip these files:
 
-<img src="media/image3.png" width="152" height="22" /><img src="media/image4.png" width="604" height="259" />
+<img src="Image/zip-files.jpg" width="152" height="22" />
 
 For the future, we shall need that the .gml which interests us is alone
 in a file, we are going to create a case LyonTilling and copy him
 inside.
 
-<img src="media/image5.png" width="604" height="318" />
+<img src="Image/zip_files2.jpg" width="604" height="318" />
 
 1.  <span id="Tilling_et_récupération_de_la_tuile"
     class="anchor"></span>*Tilling et recovering of a part which
     interest us.*
 
-<img src="media/image6.png" width="74" height="75" />
-
 Open the software 3D use
 
 Click on « Tiling CityGML » in the tab « Tools ».
 
-<img src="media/image7.png" width="604" height="352" />
+<img src="Image/3Duse_Software.jpg" width="604" height="352" />
 
 It’s opens this following window, it’s necessary to complete fields
 being there::
 
-<img src="media/image8.png" width="604" height="313" />
+<img src="Image/3Duse_Software2.jpg" width="604" height="313" />
 
 A - Path of the file containing files CityGML to. Watch out, all the
 files being in this folder will be treated. That's why we separated,
@@ -90,7 +88,7 @@ This process can take some time…
 
 In 3D use, click on on “ Load ” in the tab “File”.
 
-<img src="media/image9.png" width="604" height="344" />
+<img src="Image/3Duse_Software3.jpg" width="604" height="344" />
 
 Make the path to load the files .gml. In our example, the place
 Bellecour is divided in 2 tiles, we need to load the first, and repeat
@@ -100,10 +98,10 @@ Now, we have a part of our place Bellecour.
 
 In the hierarchy, select “ LayerCityGML”
 
-<img src="media/image10.png" width="604" height="344" />
+<img src="Image_3Duse_layers.jpg" width="604" height="344" />
 
-<img src="media/image11.png" width="393" height="264" />Then in the tab
-« File », click on « Export OBJ »
+Then in the tab « File », click on « Export OBJ »
+<img src="Image/3Duse_export.jpg" width="393" height="264" />
 
 Then save your .obj when you want.
 
@@ -113,17 +111,15 @@ Here, we’ll name our file –Bellecour-.
 
 1.  *Import in 3DS Max, modification, export in .obj*
 
-<img src="media/image12.png" width="71" height="64" />
-
 Open the software 3Ds Max
 
 In the main menu of 3ds max, click on the arrow near to « Import » and
 select « Import - import non native file formats into 3ds max-  »
 
-<img src="media/image13.png" width="604" height="322" />Then go find the
-.obj where you save it.
+Then go find the .obj where you save it.
+<img src="Image/3dsMax_Import.jpg" width="604" height="322" />
 
-<img src="media/image14.png" width="604" height="322" />
+<img src="Image/3dsMax_Import2.jpg" width="604" height="322" />
 
 The import page opens
 
@@ -139,12 +135,11 @@ these coordinates are reused by CityGML.
 For the example, we are going to put a tower in the middle of the place
 Bellecour :
 
-<img src="media/image15.png" width="604" height="321" />
+<img src="Image/3dsMax_model.jpg" width="604" height="321" />
 
 Sélectionnez la tour que vous venez de créer
 
-<img src="media/image16.png" width="20" height="32" />Select the tower
-that you created.
+Select the tower that you created.
 
 Then, in the main menu of 3ds max, click on the arrow near to « 
 Export » and select “ Export selected – export only selected object as
@@ -152,10 +147,10 @@ non-native file formats from the current 3ds scene- “
 
 Save in .obj format where you want.
 
-<img src="media/image17.png" width="527" height="474" />Here, we will
-name our file -Tour-Bellecour-.
+Here, we will name our file -Tour-Bellecour-.
+<img src="Image/3dsMax_Export.jpg" width="527" height="474" /
 
-<img src="media/image18.png" width="227" height="259" />
+<img src="Image/3dsMax_Export2.jpg" width="227" height="259" />
 
 > Don’t change parameters. Let « by default »
 >
@@ -166,7 +161,7 @@ name our file -Tour-Bellecour-.
 
 In 3D use, click on « Convert OBJ to CityGML » in the tab « Tools ».
 
-<img src="media/image19.png" width="508" height="227" />
+<img src="Image/Convert_OBJ_CityGML.jpg" width="508" height="227" />
 
 The conversion page opens,
 
@@ -176,7 +171,7 @@ it.
 2 - « Output path » with « Browse… » Indicate where you want save your
 new .gml
 
-<img src="media/image20.png" width="343" height="242" />
+<img src="Image/Select_folder.jpg" width="343" height="242" />
 
 > Watch out : You need to select a folder and not to put the name of
 > .gml that you want to create.
@@ -204,13 +199,12 @@ name than your .obj
 1.  <span id="Application_des_dates" class="anchor"></span>*Application
     of a date of construction and destruction*
 
-<img src="media/image21.png" width="116" height="77" />In 3D use, we are
-going to prepare the timeline, it’s her which is going to allow us to
+In 3D use, we aregoing to prepare the timeline, it’s her which is going to allow us to
 evolve in time.
 
 Click on « Settings… » in the tab « Options »
 
-<img src="media/image22.png" width="457" height="329" />
+<img src="Image/Date_CityGML.jpg" width="457" height="329" />
 
 In the tab « General »
 
@@ -227,17 +221,16 @@ If you let him to 1, time will pass day to day.
 
 4 – « OK »
 
-<img src="media/image23.png" width="428" height="249" />
+<img src="Image/Date_CityGML2.jpg" width="428" height="249" />
 
 Above, the timeline. (check the box).
 
-<img src="media/image24.png" width="17" height="17" />The put the
-timeline in automactic reading, as we settled it, the timeline will pass
+The put thetimeline in automactic reading, as we settled it, the timeline will pass
 in 5 years to 5 years since 01/01/1800 to 01/01/2016
 
 *DATE OF CONSTRUCTION :*
 
-<img src="media/image25.png" width="565" height="328" />
+<img src="Image/Date_construction.jpg" width="565" height="328" />
 
 In the hierarchy, select element where you want to get a date.
 
@@ -245,7 +238,7 @@ Here, our -Tour\_Bellecour-
 
 Right click on it and in a slider, select « Add creationDate »
 
-> <img src="media/image26.png" width="248" height="156" />In this
+> <img src="Image/Date_construction2.jpg" width="248" height="156" />In this
 > window, get « creationDate » and enter the date of creation of your
 > choice.
 >
@@ -253,12 +246,12 @@ Right click on it and in a slider, select « Add creationDate »
 
 *DATE OF DESTRUCTION :*
 
-<img src="media/image27.png" width="562" height="327" />
+<img src="Image/Date_destruction.jpg" width="562" height="327" />
 
 In the hierarchy, do the same manipulation than before, but select « 
 Add terminationDate »
 
-<img src="media/image28.png" width="248" height="154" />
+<img src="Image/Date_destruction2.jpg" width="248" height="154" />
 
 > In this window, get « terminationDate » and enter the date of
 > destruction of your choice
@@ -272,7 +265,7 @@ In the hierarchy, we applied dates to our folder -Tout\_Bellecour-, but
 by developing the file, there are buildings inside, it’s possible to put
 dates to each building or put same dates to the totality.
 
-> <img src="media/image29.png" width="262" height="329" />
+> <img src="Image_Hierarchy.jpg" width="262" height="329" />
 >
 > We can see date’s details when we are on the building.
 
@@ -281,10 +274,10 @@ dates to each building or put same dates to the totality.
 
 In the hierarchy, select «  LayerCityGML »
 
-<img src="media/image30.png" width="604" height="352" />
+<img src="Image/Saving_gml.jpg" width="604" height="352" />
 
-<img src="media/image31.png" width="406" height="270" />Then, in the tab
-« File » click on « Export citygml »
+Then, in the tab « File » click on « Export citygml »
+<img src="Image/Export_gml.jpg" width="406" height="270" />
 
 Then, save your .gml where you want.
 
