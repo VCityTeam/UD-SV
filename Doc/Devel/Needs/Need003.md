@@ -4,7 +4,7 @@
 As developper & game designer, I want to implement a guided tour of the city to illustrate historical urbanization processes, as a part of the Vilo3D project. 
 
 Sub Needs :
-* integration of historical data (images & text) whithin a 3D representation of the city
+* integration of historical data (images & text) within a 3D representation of the city
 * ergonomic user exploration of space (camera control, shortcut to point of interest...)
 * ergonomic user exploration of time : temporal slider 
 * 'guided tour' : points of interest linked together, which the user can enter/leave/return to at will
