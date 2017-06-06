@@ -26,7 +26,7 @@ The recovery of part of city is made on this website :
 In the search bar, we will search the 2<sup>nd</sup> arrondisssement
 (where Bellecour is).
 
-<img src="RICT/Doc/Image/Search_website.jpg" width="604" height="347" />
+<img src="Image/Search_website.jpg" width="604" height="347" />
 
 <img src="media/image2.png" width="604" height="441" />
 
