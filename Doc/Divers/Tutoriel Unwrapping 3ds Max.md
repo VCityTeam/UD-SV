@@ -11,7 +11,7 @@ For this tutorial, we will go unwrap a dog.
 
 <img src="media/image1.jpeg" width="313" height="217" /><img src="media/image2.jpeg" width="304" height="217" />
 
-**Final Preview **
+**Final Preview**
 
 **Getting started**
 
@@ -20,7 +20,7 @@ have it up and open your file. Inside you should see an unshaded dog.
 
 <img src="media/image3.jpeg" width="354" height="254" />
 
-**Figure 1 **
+**Figure 1**
 
 **Setting Up a Checker Pattern**
 
@@ -44,7 +44,7 @@ little square diffuse. **(Figure 2, 2)**
 
 <img src="media/image4.jpeg" width="354" height="483" />
 
-> **Figure 2**
+**Figure 2**
 
 Click that square will bring up the Material/Map Browser. From that list
 go ahead and double click on the “Checker” map (Figure 3)
@@ -60,14 +60,14 @@ change the 0 to a higher value like 20. (Figure 4)
 
 <img src="media/image6.jpeg" width="392" height="231" />
 
-> **Figure 4 **
+**Figure 4**
 
 Click and drag the material you just created over to your model. (Figure
 5)
 
 <img src="media/image7.jpeg" width="373" height="221" />
 
-> **Figure 5**
+**Figure 5**
 
 Even though we dragged the material over to our model it still shows up
 grey.
@@ -101,7 +101,7 @@ do this, go to the modifier dropdown menu (Figure 7) and select the
 
 **Figure 8**
 
-**Figure 7 **
+**Figure 7**
 
 Once you’ve selected the modifier we’re going to be able to edit the UVs
 of our model. In the Parameters section of the Unwrap modifier there’s a
@@ -126,7 +126,7 @@ everything is and make your texturing process a lot more simpler.
 
 **Figure 10**
 
-**Peel mode **
+**Peel mode**
 
 The Peel toolset provides an implementation of the LSCM (Least Square
 Conformal Maps) method of unwrapping texture coordinates, for an easy
@@ -223,7 +223,7 @@ Here, for the dog tutorial, we are going to use the Pelt Mode (Figure
 
 <img src="media/image22.jpeg" width="518" height="387" />
 
-> **Figure 14**
+**Figure 14**
 
 The primary function of the Pelt Map dialog is to let you stretch out
 the UVW coordinates into a flat, unified map that you can then use for
