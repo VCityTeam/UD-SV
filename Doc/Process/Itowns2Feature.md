@@ -119,7 +119,7 @@ This work about this issue [Itown2 - 185](https://github.com/iTowns/itowns2/issu
   * We calcul the distance between the frustum of the camera and the center of the object in world location, and we compare this with the geometrieError.
   [In computeNodeSSE function](https://github.com/iTowns/itowns2/blob/master/src/Process/3dTilesProcessing.js) 
   
-  #### Viewer request volume for sphere 
+  #### [Viewer request volume](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples/tree/master/tilesets/TilesetWithRequestVolume) for sphere 
   * After we retrieve the radius of sphere for the viewer request volume.
   We test if the radius is smaller than the distance between the camera and the object, we display the object else no.
   [In $3dtilesCulling function](https://github.com/iTowns/itowns2/blob/master/src/Process/3dTilesProcessing.js)
