@@ -115,7 +115,7 @@ This work about this issue [Itown2 - 185](https://github.com/iTowns/itowns2/issu
   
   <img src="../Image/regionBox.png" width="450" height="100" />
   
-  #### Geometric error
+  #### [Geometric error](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples/tree/master/tilesets/TilesetWithDiscreteLOD)
   * We calcul the distance between the frustum of the camera and the center of the object in world location, and we compare this with the geometrieError.
   [In computeNodeSSE function](https://github.com/iTowns/itowns2/blob/master/src/Process/3dTilesProcessing.js) 
   
