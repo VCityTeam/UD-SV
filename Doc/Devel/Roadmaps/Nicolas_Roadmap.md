@@ -13,6 +13,7 @@ Voici les différentes tâches que j'ai prévu de faire dans les mois qui arrive
  Donc globalement :
    - Essayer de charger le nuage de points avec [Lopocs](https://github.com/Oslandia/lopocs) un loader de points en Python fait par Oslandia.
    - Voir pour tester ces points sur une scène pour voir si le client tien le coup et que ça ne lag pas. 
+   - Intégration d'autres données comme par exemple des données de terrain (Modele Numerique de terrain)
    - Continuer ensuite la lecture des données que Zanzibar nous envoie.
 
 4. Avancer sur les problèmes qu'il y a avec la lecture des points b3dm (Semaine du 12/06, car Jérémy n'est pas la)
@@ -22,3 +23,5 @@ Voici les différentes tâches que j'ai prévu de faire dans les mois qui arrive
 
 5. Continuer la lecture des differents fichiers comme pour .pnts mais pour les autres comme Vector Data (*.vctr) mais aussi Instanced 3D Model (*.i3dm).... 
   - Globalement de voir comment ça se transforme dans les classes de three.js
+
+6. Rajouter la gestion des textures coté serveur.
