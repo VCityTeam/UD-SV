@@ -44,9 +44,20 @@ Here is an example of tileset:
 
 We have 3 types of bounding volume: 
 
-Box, region and sphere. Box are already read and show but no the region and Sphere. 
+Box, region and sphere. Box are already read and show but the region and Sphere not yet. 
 
 <img src="../Image/tile.png" width="483" height="600" />
+
+````
+   "region": [
+        -1.2418882438584018,
+        0.7395016240301894,
+        -1.2415422846940714,
+        0.7396461198389616,
+        0,
+        19.4
+      ]
+````
 
 Here for regions we have six number they correspond to geographic coordonate with the order ````[west, south , east, north, min  height, max height]```` 
 
@@ -111,18 +122,16 @@ This work about this issue [Itown2 - 185](https://github.com/iTowns/itowns2/issu
   
   #### Visible for Camera
   * We check if the frustum of camera is intersect by the object (box, region or sphere). We use the program intersect of [Three.js](https://threejs.org/docs/index.html#api/math/Frustum).
-  * For the regions we transform this form into box to simplify intersection calculations, [In getBox function](https://github.com/iTowns/itowns2/blob/master/src/Core/Scheduler/Providers/3dTiles_Provider.js)
+  * For the regions we transform this form into box to simplify intersection calculations, [In getBox function](https://github.com/iTowns/itowns2/blob/master/src/Core/Scheduler/Providers/3dTiles_Provider.js).
   
   <img src="../Image/regionBox.png" width="450" height="100" />
   
   #### [Geometric error](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples/tree/master/tilesets/TilesetWithDiscreteLOD)
   * We calcul the distance between the frustum of the camera and the center of the object in world location, and we compare this with the geometrieError.
-  [In computeNodeSSE function](https://github.com/iTowns/itowns2/blob/master/src/Process/3dTilesProcessing.js) 
+  [In computeNodeSSE function](https://github.com/iTowns/itowns2/blob/master/src/Process/3dTilesProcessing.js).
   
   #### [Viewer request volume](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples/tree/master/tilesets/TilesetWithRequestVolume) for sphere 
-  * After we retrieve the radius of sphere for the viewer request volume.
-  We test if the radius is smaller than the distance between the camera and the object, we display the object else no.
-  [In $3dtilesCulling function](https://github.com/iTowns/itowns2/blob/master/src/Process/3dTilesProcessing.js)
+  * For Sphere, we test if the radius is smaller than the distance between the camera and the object if yes: we display the object else no.[In $3dtilesCulling function](https://github.com/iTowns/itowns2/blob/master/src/Process/3dTilesProcessing.js).
   
   <img src="../Image/schemaViewer1.jpg" width="512" height="384" /> <img src="../Image/schemaViewer2.jpg" width="512" height="384" />
   
@@ -182,7 +191,7 @@ such as color and normal, and optional properties that define application-specif
 
 We read this file with the layout [here](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/PointCloud/README.md), we selectionne what we need 
 and we send the information for display that.
-The file is [pntsLoader](https://github.com/iTowns/itowns2/tree/master/src/Renderer/ThreeExtended)
+The code is [pntsLoader](https://github.com/iTowns/itowns2/tree/master/src/Renderer/ThreeExtended)
 
 ## Example 
 
@@ -192,7 +201,7 @@ This is the new interface for select the tileset you want to see:
 
 we have 2 example for now the DiscreteLOD and the RequestVolume 
 
-* For create a new case (layer) you can copy this program:
+* For create a new example (layer) you can copy this program:
 ````
 const $3dTilesLayerDiscreteLOD = new itowns.GeometryLayer('3d-tiles');
 $3dTilesLayerDiscreteLOD.preUpdate = preUpdateGeo;
@@ -219,11 +228,11 @@ debug3dt.visible = $3dTilesLayerDiscreteLOD.visible;
 itowns.View.prototype.addLayer.call(globe, debug3dt, $3dTilesLayerDiscreteLOD);
 ````
 
-* We use the [helper box](https://threejs.org/docs/#api/helpers/BoxHelper) (it's an object to show the world-axis-aligned bounding box around an object) for show the box arround object (box, region).
+* We use the [helper box](https://threejs.org/docs/#api/helpers/BoxHelper) (It is an object that serves to show the world-axis-aligned bounding box around an object) for show the box arround object (box, region).
 <img src="../Image/boxHelper.png" width="959" height="456" />
 
 ## References 
- * The image and the must part of my introduction: [3d-tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles).
+ * Some image and much part of my introduction: [3d-tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles).
  
  * For the part of [PointsCloud](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/PointCloud/README.md).
  
