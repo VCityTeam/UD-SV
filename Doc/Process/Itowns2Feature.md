@@ -44,7 +44,7 @@ Here is an example of tileset:
 
 We have 3 types of bounding volume: 
 
-Box, region and sphere. Box are already read and load but no the region and Sphere. 
+Box, region and sphere. Box are already read and show but no the region and Sphere. 
 
 <img src="../Image/tile.png" width="483" height="600" />
 
