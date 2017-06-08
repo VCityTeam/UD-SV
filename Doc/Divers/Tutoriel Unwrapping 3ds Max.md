@@ -9,7 +9,7 @@ Max.
 
 For this tutorial, we will go unwrap a dog.
 
-<img src="RICT/Doc/Divers/Photos/Checker_dog.jpg" width="313" height="217" /><img src="media/image2.jpeg" width="304" height="217" />
+<img src="Photos/Checker_dog.jpg" width="313" height="217" /><img src="media/image2.jpeg" width="304" height="217" />
 
 **Final Preview**
 
