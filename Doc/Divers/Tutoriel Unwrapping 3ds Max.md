@@ -1,6 +1,5 @@
-3DS Max Unwrapping
-
-Step by step tutorial
+                                                      3DS Max Unwrapping
+                                                     Step by step tutorial
 
 **Objective**
 
@@ -9,7 +8,7 @@ Max.
 
 For this tutorial, we will go unwrap a dog.
 
-<img src="Photos/Checker_dog.jpg" width="313" height="217" /><img src="media/image2.jpeg" width="304" height="217" />
+<img src="Photos/Checker_dog.JPG" width="313" height="217" /><img src="Photos/Texture_dog.JPG" width="304" height="217" />
 
 **Final Preview**
 
