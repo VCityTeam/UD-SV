@@ -241,6 +241,8 @@ points.
 
 
 
+
+
 **Export UVW in Photoshop**
 
 When you finished to clean/reposition the mesh, you can export your UVW
@@ -263,6 +265,7 @@ A new windowappears with your UV. Click in the left corner on “Save”.(Figure
 *Figure 17*
 
 You can save your file where you want. In jpg, png or tga.
+
 You can import your photo in Photoshop and begin texturing.
 
 
