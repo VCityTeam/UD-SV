@@ -95,12 +95,9 @@ First and foremost we’re going to have to add an Unwrap modifier to our
 model.
 To do this, go to the modifier dropdown menu (Figure 7) and select the “Unwrap UVW” modifier (Figure 8).
 
-<img src="Photos/ModifierList.JPG" width="150" height="250" />
-<img src="Photos/Unwrap.JPG" width="220" height="240" />
+<img src="Photos/ModifierList.JPG" width="150" height="250" />                <img src="Photos/Unwrap.JPG" width="220" height="240" />
 
-**Figure 8**
-
-**Figure 7**
+                        **Figure 7**                                                                 **Figure 8**
 
 Once you’ve selected the modifier we’re going to be able to edit the UVs
 of our model. In the Parameters section of the Unwrap modifier there’s a
