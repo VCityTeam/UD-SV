@@ -17,7 +17,7 @@ For this tutorial, we will go unwrap a dog.
 Let’s get started. Go ahead and launch 3DS Max if you do not already
 have it up and open your file. Inside you should see an unshaded dog.
 
-<img src="Photos/Shaded_dog.JPG" width="380" height="250/>
+<img src="Photos/Shaded_dog.JPG" width="380" height="250 />
 
                       **Figure 1**
 
@@ -41,14 +41,14 @@ named Ambient, Diffuse, and Specular.
 We want to make this pattern in the “Diffuse” property. Click on the
 little square diffuse. **(Figure 2, 2)**
 
-<img src="media/image4.jpeg" width="354" height="483" />
+<img src="Photos/Material_Editor1.JPG" width="354" height="483" />
 
-**Figure 2**
+                        **Figure 2**
 
 Click that square will bring up the Material/Map Browser. From that list
 go ahead and double click on the “Checker” map (Figure 3)
 
-<img src="media/image5.jpeg" width="427" height="283" />
+<img src="Photos/MapBrowser.JPG" width="427" height="283" />
 
 **Figure 3**
 
@@ -57,14 +57,14 @@ tiling coordinates so that we can better see where stretching will
 occur. Under the Coordinates Section locate the U and V Tiling and
 change the 0 to a higher value like 20. (Figure 4)
 
-<img src="media/image6.jpeg" width="392" height="231" />
+<img src="Photos/Coordinates.JPG" width="392" height="231" />
 
 **Figure 4**
 
 Click and drag the material you just created over to your model. (Figure
 5)
 
-<img src="media/image7.jpeg" width="373" height="221" />
+<img src="Photos/MaterialOnMesh.JPG" width="373" height="221" />
 
 **Figure 5**
 
