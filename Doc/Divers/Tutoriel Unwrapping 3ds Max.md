@@ -141,6 +141,8 @@ peeling.
 
 <img src="Photos/Select_Seams.JPG" width="132" height="382" />
 
+*Figure 11*
+
 > We are going to create the seams directly on the dog. We are going to
 > cut the mesh, what will allow us to apply better the texture, and to
 > render “peel mode” easier and cleaner.
@@ -152,7 +154,6 @@ peeling.
 > where we see it least. For example, for the dog, we’ll create seams in
 > the interior side of his body.
 
-*Figure 11*
 
 So, with the tool “Point to Point seams”, you are going to create your
 seams (Figure 12 and 12.1)
@@ -238,9 +239,6 @@ In the tab “Selection” click on the points and clean/reposition certain
 points.
 
 <img src="Photos/UV_final.JPG" width="362" height="359" />
-
-
-
 
 
 **Export UVW in Photoshop**
