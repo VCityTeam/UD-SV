@@ -143,17 +143,10 @@ peeling.
 
 *Figure 11*
 
-> We are going to create the seams directly on the dog. We are going to
-> cut the mesh, what will allow us to apply better the texture, and to
-> render “peel mode” easier and cleaner.
->
-> In the tab “Selection”, select the edges and in the tab “Peel”, select
-> Point to Point seams. (Figure 11)
->
-> Tip: When you create your seams, the best way is to hide your seams
-> where we see it least. For example, for the dog, we’ll create seams in
-> the interior side of his body.
+We are going to create the seams directly on the dog. We are going to cut the mesh, what will allow us to apply better the texture, and torender “peel mode” easier and cleaner.
 
+In the tab “Selection”, select the edges and in the tab “Peel”, select Point to Point seams. (Figure 11)
+Tip: When you create your seams, the best way is to hide your seams where we see it least. For example, for the dog, we’ll create seams in the interior side of his body.
 
 So, with the tool “Point to Point seams”, you are going to create your
 seams (Figure 12 and 12.1)
