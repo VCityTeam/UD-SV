@@ -97,7 +97,7 @@ To do this, go to the modifier dropdown menu (Figure 7) and select the “Unwrap
 
 <img src="Photos/ModifierList.JPG" width="150" height="250" />    <img src="Photos/Unwrap.JPG" width="180" height="240" />
 
-                        **Figure 7**                                             **Figure 8**
+**Figure 7**      **Figure 8**
 
 Once you’ve selected the modifier we’re going to be able to edit the UVs
 of our model. In the Parameters section of the Unwrap modifier there’s a
@@ -105,7 +105,7 @@ big button called “Edit…” (Figure 9)
 
 Go ahead and click that button to bring up the Edit UVW window.
 
-<img src="media/image12.jpeg" width="166" height="348" />
+<img src="Photos/OpenUVeditor.JPG" width="166" height="348" />
 
 **Figure 9**
 
@@ -118,7 +118,7 @@ bring lot of frustration. We’re going to be cleaning these up and
 setting them up in a way that you’ll be able to know exactly where
 everything is and make your texturing process a lot more simpler.
 
-<img src="media/image13.jpeg" width="604" height="329" />
+<img src="Photos/EditUV.JPG" width="604" height="329" />
 
 **Figure 10**
 
@@ -137,7 +137,7 @@ projects with more-complex objects such as character meshes.
 For this method, we need to create seams for subdividing the model for
 peeling.
 
-<img src="media/image14.jpeg" width="132" height="382" />
+<img src="Photos/Select_Seams.JPG" width="132" height="382" />
 
 > We are going to create the seams directly on the dog. We are going to
 > cut the mesh, what will allow us to apply better the texture, and to
@@ -155,7 +155,7 @@ peeling.
 So, with the tool “Point to Point seams”, you are going to create your
 seams (Figure 12 and 12.1)
 
-<img src="media/image15.jpeg" width="321" height="326" /><img src="media/image16.jpeg" width="337" height="326" />
+<img src="Photos/Seams_dog1.JPG" width="400" height="326" />      <img src="Photos/Seams_dog2.JPG" width="400" height="326" />
 
 **Figure 12** **Figure 12.1**
 
@@ -163,59 +163,39 @@ When you ended your seams, you can pass in the peel mode. The latter is
 in the tab “Peel”. Here, several mode offer themselves to you, I am
 going to explain them to you one by one. (Figure 13)
 
-<img src="media/image17.jpeg" width="110" height="422" />
+<img src="Photos/Peel_mode.JPG" width="110" height="422" />
 
-<img src="media/image18.png" width="37" height="37" />
+<img src="Photos/Peel_quick.png" width="37" height="37" />
 
-Quick Peel
+**Quick Peel**
 
-Performs a "best-guess" Peel operation on all vertices that belong to
-the
+Performs a "best-guess" Peel operation on all vertices that belong to the selected texture polygons.
+To do so, Quick Peel distributes the vertices evenly based on their average locations while trying to maintain existing polygon shapes.
 
-selected texture polygons.
+<img src="Photos/Peel_mode.png" width="37" height="37" />
 
-To do so, Quick Peel distributes the vertices evenly based on their
-average
+**Peel Mode**
 
-locations while trying to maintain existing polygon shapes.
+Applies a Quick Peel and then stays active so you can adjust the layout of the texture coordinates interactively.
+While Peel Mode is active, you can create seams with the Edit Seams and Point-to-Point Seams tools and they automatically "peel" off as you go.
 
-<img src="media/image19.png" width="34" height="34" />
+<img src="Photos/Peel_reset.png" width="37" height="37" />
 
-Peel Mode
+**Reset Peel**
 
-Applies a Quick Peel and then stays active so you can adjust the layout
-of the
+Merges existing map seams of the polygon selection, converts Peel seams to new map seams, and then Peels the resulting clusters.
 
-texture coordinates interactively.
+The borders of the selection are separated from the other clusters and become new map seams.
 
-While Peel Mode is active, you can create seams with the Edit Seams and
+<img src="Photos/Pelt.png" width="37" height="37" />
 
-Point-to-Point Seams tools and they automatically "peel" off as you go.
+**Pelt**
 
-<img src="media/image20.png" width="35" height="35" />
-
-Reset Peel
-
-Merges existing map seams of the polygon selection, converts Peel seams
-to new map seams, and then Peels the resulting clusters.
-
-The borders of the selection are separated from the other clusters and
-become new map seams.
-
-<img src="media/image21.png" width="33" height="33" />
-
-Pelt
-
-Applies pelt mapping to selected polygons. Clicking this button
-activates Pelt mode, in which you can adjust the mapping and edit the
+Applies pelt mapping to selected polygons. Clicking this button activates Pelt mode, in which you can adjust the mapping and edit the
 pelt map.
 
-**Watch Out**: Pelt mapping always uses a single planar mapping for the
-entire pelt. If you've applied a different type of mapping, such as Box,
-and then switch to Pelt, the previous mapping is lost.
-
-Here, for the dog tutorial, we are going to use the Pelt Mode (Figure
-14)
+**Watch Out**: Pelt mapping always uses a single planar mapping for the entire pelt. If you've applied a different type of mapping, such as Box,and then switch to Pelt, the previous mapping is lost.
+Here, for the dog tutorial, we are going to use the Pelt Mode (Figure 14)
 
 <img src="media/image22.jpeg" width="518" height="387" />
 
