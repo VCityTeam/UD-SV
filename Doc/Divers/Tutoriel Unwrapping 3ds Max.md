@@ -159,7 +159,7 @@ When you ended your seams, you can pass in the peel mode. The latter is
 in the tab “Peel”. Here, several mode offer themselves to you, I am
 going to explain them to you one by one. (Figure 13)
 
-<img src="Photos/Peel_mode.JPG" width="150" height="422" />
+<img src="Photos/Peel_mode.JPG" width="130" height="422" />
 
 <img src="Photos/Peel_quick.png" width="37" height="37" /> **Quick Peel**
 
