@@ -93,10 +93,10 @@ We’re going to fix that.
 
 First and foremost we’re going to have to add an Unwrap modifier to our
 model.
-
-<img src="Photos/ModifierList.JPG" width="150" height="250" /><img src="Photos/Unwrap.JPG" width="220" height="240" />
-
 To do this, go to the modifier dropdown menu (Figure 7) and select the “Unwrap UVW” modifier (Figure 8).
+
+<img src="Photos/ModifierList.JPG" width="150" height="250" />
+<img src="Photos/Unwrap.JPG" width="220" height="240" />
 
 **Figure 8**
 
