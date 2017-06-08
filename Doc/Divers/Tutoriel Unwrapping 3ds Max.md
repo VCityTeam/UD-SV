@@ -10,7 +10,7 @@ For this tutorial, we will go unwrap a dog.
 
 <img src="Photos/Checker_dog.JPG" width="380" height="250" />  <img src="Photos/Texture_dog.JPG" width="380" height="250" />
            
-                                              **Final Preview**
+                                              Final Preview
 
 **Getting started**
 
@@ -19,7 +19,7 @@ have it up and open your file. Inside you should see an unshaded dog.
 
 <img src="Photos/Shaded_dog.JPG" width="380" height="250 />
 
-                      **Figure 1**
+                      Figure 1
 
 **Setting Up a Checker Pattern**
 
@@ -43,7 +43,7 @@ little square diffuse. **(Figure 2, 2)**
 
 <img src="Photos/Material_Editor1.JPG" width="354" height="483" />
 
-                        **Figure 2**
+**Figure 2**
 
 Click that square will bring up the Material/Map Browser. From that list
 go ahead and double click on the “Checker” map (Figure 3)
@@ -78,7 +78,7 @@ With your material selected click the “Show Standard Map in Viewport”
 Button (Figure 5.1). The checker pattern should now be visible in the
 viewport.
 
-<img src="media/image8.jpeg" width="366" height="126" />
+<img src="Photos/ShowMap.JPG" width="366" height="126" />
 
 **Figure 5.1**
 
@@ -87,16 +87,16 @@ on. (Figure 6)
 
 We’re going to fix that.
 
-<img src="media/image9.jpeg" width="340" height="243" />
+<img src="Photos/Stretch_dog.JPG" width="340" height="243" />
 
 **Unwrapping**
 
 First and foremost we’re going to have to add an Unwrap modifier to our
 model.
 
-<img src="media/image10.jpeg" width="188" height="152" /><img src="media/image11.jpeg" width="178" height="253" />To
-do this, go to the modifier dropdown menu (Figure 7) and select the
-“Unwrap UVW” modifier (Figure 8).
+<img src="Photos/ModifierList.JPG" width="150" height="250" /><img src="Photos/Unwrap.JPG" width="220" height="240" />
+
+To do this, go to the modifier dropdown menu (Figure 7) and select the “Unwrap UVW” modifier (Figure 8).
 
 **Figure 8**
 
