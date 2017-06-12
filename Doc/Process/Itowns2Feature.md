@@ -1,5 +1,3 @@
-![](http://imgur.com/r1ew3zs.png)
-
 ## Introduction:
 
 In 3D-Tiles, a tileset is a set of tiles organized in a spatial data structure, the <i>tree</i>.
