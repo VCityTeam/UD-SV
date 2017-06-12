@@ -39,5 +39,5 @@ The clear advantages of this "separate ADE specific DB" are:
 Its drawback is the necessity to blur/hide-away/abtract the existence of two underlying DBs (`DB_Ref` together with `DB_ADE`) to the DB users, namely the CMs (Computational Model).
 
 ### Notes:
-References: [Implementing modular Domain Specific Languages and Analyses](voelter.de/data/pub/modevva2012.pdf), Markus Voelter et al. 
+References: [Implementing modular Domain Specific Languages and Analyses](http://mbeddr.com/files/modevva2012.pdf), Markus Voelter et al. 
 
