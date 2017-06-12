@@ -18,7 +18,7 @@ Needs are thus high level requirements that **target general audience like manag
  * Need 2: "The portal of the system should list all the available city datas."
  
  ## When, why and how to write a need
-A need arises when formalizing new product ideas informally expressed during a brainstorm, overheard at a confereence/meeting, or mentioned during discussions with product users. The main reason for formilizing a need ("ideas" can come from many sources, but needs cannot be written by the general audience) is to provide a support for discussing and assessing (political decision) the product evolutions opportunities. 
+A need arises when formalizing new product ideas informally expressed during a brainstorm, overheard at a conference/meeting, or mentioned during discussions with product users. The main reason for formalizing a need ("ideas" can come from many sources, but needs cannot be written by the general audience) is to provide a support for discussing and assessing (political decision) the product evolutions opportunities. 
 
 The key purpose of a need is thus to untangle the initial idea, its implicit/explicit assumptions about the solution a new answering feature would solve. A need must thus clearly express what problem it addresses (even though they are possibly many features or approaches that could solve it) as well as specify means to assess when it is solved. In other terms the questions to answer when writing a need are:
  * What problem are we trying to solve? (Why should we be doing this? What is the pain?)
