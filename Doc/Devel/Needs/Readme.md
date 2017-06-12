@@ -1,6 +1,14 @@
 ## List of needs
  * [Need 001](Need001.md): means for computational model API
  * [Need 002](Need002.md): means for modular information models
+ * [Need 003](Need003.md): means for a guided tour through space and time
+ * [Need 004](Need004.md): integration of historical data (images & text) within a 3D representation of the city
+ * [Need 005](Need005.md): ergonomic user exploration of time : temporal slider
+ * [Need 006](Need006.md): ergonomic user exploration of space (advanced camera control, shortcut to point of interest...)
+ * [Need 007](Need007.md): guided tour, between spatiotemporal points of interest, which the user can enter/leave/return to at will
+ * [Need 008](Need008.md): ability to display the historical uncertainty of the 3d reconstruction
+ * [Need 009](Need009.md): ability to use texture in the 3d scene
+ * [Need 010](Need010.md): multiple representations of the city (override of generic behavior & geometry, while in guided tour)
 
 ## Definitions
 ### Requirement
