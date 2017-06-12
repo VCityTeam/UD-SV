@@ -15,7 +15,7 @@
      #to get the commandline tools shp2pgsql, raster2pgsql you need to do this
      sudo apt-get install postgis
    ````
-   (http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt)
+   [Ubuntu Reference](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt)
    
  * Python tools
    - **Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...
