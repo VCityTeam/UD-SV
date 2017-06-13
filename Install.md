@@ -16,6 +16,7 @@
      sudo apt-get install postgis
    ````
    [Ubuntu Reference](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt)
+   Nice tool to have (for database management) : pgAdmin (`sudo apt-get install pgadmin3`)
    
  * Python tools
    - **Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...
