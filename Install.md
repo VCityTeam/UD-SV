@@ -68,7 +68,7 @@
       python ./citygml2pgsql.py -l LYON_6EME_BATI_2012_SplitBuildings.gml
       python ./citygml2pgsql.py LYON_6EME_BATI_2012_SplitBuildings.gml 2 3946 geom lyon |  psql bozo
     ````
-   If you plateform doesn't have `wget` simply [open the LYON_6EME_BATI_2012_SplitBuildings.gml link](git clone https://github.com/MEPP-team/RICT.wiki.git) with your favorite browser and place the downloaded gml file in the ad-hoc directory.
+   If you plateform doesn't have `wget` simply [open the LYON_6EME_BATI_2012_SplitBuildings.gml link](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml) with your favorite browser and place the downloaded gml file in the ad-hoc directory.
  * Assert there is some content in the DB
 
     `psql bozo` and `bozo=# select count(*) from lyon;`
