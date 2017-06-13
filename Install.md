@@ -45,7 +45,7 @@
    ````
 
   * Ubuntu : `service postgresql start`
-  * createdb bozo
+  * `createdb bozo`
  
  * *Note : it is advised to replace 'myuser' by your session name in the following instructions.'*
     ```` 
