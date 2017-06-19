@@ -17,7 +17,7 @@ For this tutorial, we will go unwrap a dog.
 Let’s get started. Go ahead and launch 3DS Max if you do not already
 have it up and open your file. Inside you should see an unshaded dog.
 
-<img src="Photos/Shaded_dog.JPG" width="380" height="250 />
+<img src="Photos/Shaded_dog.JPG" width="380" height="250" />
 
                       Figure 1
 
