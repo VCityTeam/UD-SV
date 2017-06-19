@@ -121,8 +121,9 @@ cities:
 Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) with all the bells and whistles.
 
 **WARNING**: make sure that
- - you are located in the `building-server.git` that you cloned
- - that you are using version3 of python and pip (that pip should be pip3!)
+ 1. you are located in the `building-server.git` that you cloned
+ 1. you are indeed on the `3d-tiles` branch
+ 1. that you are using version3 of python and pip (that pip should be pip3!)
  
  * OSX :
    ````
