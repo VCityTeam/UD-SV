@@ -143,14 +143,14 @@ Template in Photoshop for texturing.
 
 In the UV Editor, click on the tab “Tool” and “UV Snapshot”. **(Figure 13)**
 
-<img src="Photos/UV Snapshot1.JPG" width="165" height="390" />
+<img src="Photos/UV Snapshot1.JPG" width="200" height="400" />
 
 *Figure 13*
 
 Now, you have the window “UV Snapshot” **(Figure 14)**
 In this window, you can change the size of your image, or put a color on your edges.
 
-<img src="Photos/UV Snapshot.JPG" width="165" height="390" />
+<img src="Photos/UV Snapshot.JPG" width="600" height="400" />
 *Figure 14*
 
 You can save your file where you want. In jpg, png or tga.
