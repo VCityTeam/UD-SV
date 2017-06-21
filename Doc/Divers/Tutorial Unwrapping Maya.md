@@ -138,12 +138,12 @@ Here, we'll use Unfold3D. Don't change parameters and click on Apply. Your UV's 
 
 **Export UVW in Photoshop**
 
-When you finished to clean/reposition the mesh, you can export your UVW
-Template in Photoshop for texturing.
+When you finished to clean/reposition the mesh, you can export your UV
+Snapshot in Photoshop for texturing.
 
-In the UV Editor, click on the tab “Tool” and “UV Snapshot”. **(Figure 13)**
+In the UV Editor, click on the tab “Polygons” and “UV Snapshot”. **(Figure 13)**
 
-<img src="Photos/UV Snapshot1.JPG" width="200" height="400" />
+<img src="Photos/UV Snapshot1.JPG" width="150" height="450" />
 
 *Figure 13*
 
