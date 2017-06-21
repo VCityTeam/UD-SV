@@ -267,7 +267,7 @@ itowns.View.prototype.addLayer.call(globe, debug3dt, $3dTilesLayerDiscreteLOD);
 ````
 
 * We use the [helper box](https://threejs.org/docs/#api/helpers/BoxHelper) (It is an object that serves to show the world-axis-aligned bounding box around an object) for show the box arround object (box, region).
-<img src="../Image/boxHelper.png" width="959" height="456" />
+<img src="../Image/b3dm_RTC.png" width="959" height="456" />
 
 ## References 
  * Some image and much part of my introduction: [3d-tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles).
