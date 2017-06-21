@@ -24,7 +24,7 @@ Schema 1
   
   ````lopocs load --work-dir . nameFile.las --table lopocs````
   
-  <img src="../Image/lopocs2.png" width="1007" height="257" /> 
+  <img src="../Image/tutolopocs.png" width="1007" height="257" /> 
   
  
 
@@ -32,12 +32,13 @@ Schema 1
 
   Now you have 3 files: your .las, the .json pipeline and the .json:
   
+  <img src="../Image/tutolopocs2.png" width="443" height="118" /> 
   
-  Put the ....json on your server of itowns, me it's 3d-tiles-samples/tilesets ... 
+  Put the tileset-public.lopocs.points.json on your server of itowns, me it's 3d-tiles-samples/tilesets ... 
   
-  Now in this [example]() replace the url with your name of your tileset.
+  Now in this [example](https://github.com/iTowns/itowns2/blob/master/examples/3dtiles.html) replace the url with your name of your tileset.
   
-  And it's done.
+  And it's done, you can view your .las in itown.
   
   
   
