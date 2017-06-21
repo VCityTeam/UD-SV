@@ -241,7 +241,7 @@ Edit the resulting `planar_3dtiles.js`:
  * copy all the addlayer related code contained in `examples/3dtiles.js` into this `planar_3dtiles.js`  
  * configure this addlayer code by 
     - change the URL to hardwire yours e.g. "http://localhost:9090/getCity?city=citydb_v3" 
-    - change `globe` for `view` within the line FIXME VJA
+    - change `globe` for `view` within the line : `itowns.View.prototype.addLayer.call(globe, $3dTilesLayer);`
 
 Now open the resulting `itowns2/examples/planar-3Dtiles.html` file with your favorite browser.
 
