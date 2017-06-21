@@ -25,9 +25,11 @@ A checker pattern? Why do we need a checker pattern? This checker pattern that w
 unwrapping process. 
 With the checker pattern we can visually see where stretching is occurring in our unwrap and easily fix the problem.
 
-Go ahead and open the hypershade by going to “Windows" > Rendering Editor > Hypershade …” in the top menu of Maya. **(Figure 1)**
+Go ahead and open the hypershade by going to “Windows" > Rendering Editor > Hypershade …” in the top menu of Maya. **(Figure 2)**
 
 <img src="Photos/Find_Hypershade.jpg" width="600" height="400" />
+
+*Figure 2*
 
 Once in the hypershade, right-click in the material slot, and "create > Materials > Lambert **(Figure 3)**
 
@@ -42,12 +44,14 @@ We want to make this pattern in the “Color” property. Click on the little sq
 *Figure 4*
 
 Now, you just have to click on your mesh and " Assign Existing Material " and the name of your material.
-Don't forget to click on the button will show your material in the viewport. **(Figure4)**
+Don't forget to click on the button will show your material in the viewport. **(Figure 5)**
 
-Looking at our model we can see that there is very bad stretching going on. **(Figure 4)**
+Looking at our model we can see that there is very bad stretching going on. **(Figure 5)**
 We’re going to fix that.
 
-<img src="Photos/Stretch.JPG" width="340" height="243" />
+<img src="Photos/Stretch.JPG" width="680" height="500" />
+
+*Figure 5*
 
 
 ***Unwrapping***
@@ -77,13 +81,14 @@ Tip: When you create your seams, the best way is to hide your seams where we see
 If you want to see your seams in the viewport, in the main menu in the top, click on "Display > Polygons > Texture Border Edges" and 
 your seams will be in bold. **(Figure 6)**
 
-<img src="Photos/Seams_bold.JPG" width="400" height="326" />     
+<img src="Photos/Seams_bold.JPG" width="400" height="326" />    
+
 *Figure 6*
 
 When you ended your seams, you can pass in the Unfold3D mode.
 In the UV Editor, click on Polygons and Unfold (click on the square to open parameters). **(Figure 7)**.
 
-<img src="Photos/Unfold.JPG" width="380" height="250" />
+<img src="Photos/Unfold.JPG" width="200" height="800" />
 
 *Figure 7*
 
@@ -104,18 +109,18 @@ For this tutorial, we'll use Unfold3D method.Don't change parameters and click o
 
 *Figure 8"
 
-Now, you can see on the UV Editor that your coordinates UVW changed.**(Figure9)**
+Now, you can see on the UV Editor that your coordinates UVW changed.**(Figure 9)**
 The result is almost perfect.
 You just have to clean the mesh and reposition certain points to be able to texture more easily.
 
-<img src="Photos/UV.JPG" width="380" height="250" />
+<img src="Photos/UV.JPG" width="450" height="500" />
 
 *Figure 9"
 
 Like in 3ds max, you can relax or optimize your UV.
 In the UV editor, click on "Polygons > Optimize" (on the square). **(Figure 10)**
 
-<img src="Photos/Optimize.JPG" width="380" height="250" />
+<img src="Photos/Optimize.JPG" width="600" height="500" />
 
 *Figure 10"
 
