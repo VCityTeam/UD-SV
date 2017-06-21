@@ -187,6 +187,46 @@ such as color and normal, and optional properties that define application-specif
   </tr>
 </table>
 
+### Global Semantics
+
+<table>
+  <tr>
+    <td><b>Semantic</b></td>
+    <td><b>Description</b></td>
+    <td><b>Status</b></td>
+  </tr>
+  <tr>
+    <td>POINTS_LENGTH</td>
+    <td>The number of points to render. The length of each array value for a point semantic should be equal to this.</td>
+    <td><img src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" width="32" height="32" /></td>
+  </tr>
+  <tr>
+    <td>RTC_CENTER</td>
+    <td>A 3-component array of numbers defining the center position when point positions are defined relative-to-center.</td>
+    <td><img src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" width="32" height="32" /></td>
+  </tr>
+  <tr>
+    <td>QUANTIZED_VOLUME_OFFSET</td>
+    <td>A 3-component array of numbers defining the offset for the quantized volume.</td>
+    <td><img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f534.png?v5" width="32" height="32" /></td>
+  </tr>
+  <tr>
+    <td>QUANTIZED_VOLUME_SCALE</td>
+    <td>A 3-component array of numbers defining the scale for the quantized volume.</td>
+    <td><img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f534.png?v5" width="32" height="32" /></td>
+  </tr>
+  <tr>
+    <td>CONSTANT_RGBA</td>
+    <td>A 4-component array of values defining a constant RGBA color for all points in the tile.	</td>
+    <td><img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f534.png?v5" width="32" height="32" /></td>
+  </tr>
+  <tr>
+    <td>BATCH_LENGTH</td>
+    <td>The number of unique BATCH_ID values.</td>
+    <td><img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f534.png?v5" width="32" height="32" /></td>
+  </tr>
+</table>
+
 We read this file with the layout [here](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/PointCloud/README.md), we selectionne what we need 
 and we send the information for display that.
 The code is [pntsLoader](https://github.com/iTowns/itowns2/tree/master/src/Renderer/ThreeExtended)
