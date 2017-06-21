@@ -226,8 +226,24 @@ cd itowns2
 git checkout master
 npm install
 ````
+Configure a planar example over your data:
+````
+cd itowns2/examples
+cp planar.html planar_3dtiles.html
+````
+Edit the resulting `planar_3dtiles.html` and 
+  - comment out the line `new debug.Debug(view, viewerdDic);`
+  - replace `planar.js` with `planar_3dtiles.js` 
+````
+cp planar.js planar_3dtiles.js
+````
+Edit the resulting `planar_3dtiles.js`:
+ * copy all the addlayer related code contained in `examples/3dtiles.js` into this `planar_3dtiles.js`  
+ * configure this addlayer code by 
+    - change the URL to hardwire yours e.g. "http://localhost:9090/getCity?city=citydb_v3" 
+    - change `globe` for `view` within the line FIXME VJA
 
-Now open `itowns2/Exampples/planar.html` file with your browser or alternatively run `npm start`.
+Now open the resulting `itowns2/examples/planar-3Dtiles.html` file with your favorite browser.
 
 *Note : if after running `npm start` you have an error message saying that node is not find in `/usr/bin/env`, try running the following : `sudo ln -s /usr/bin/nodejs /usr/bin/node`. Explainations : on ubuntu node.js package is installed in /usr/bin/nodejs and when npm starts, it runs a the command `/usr/bin/env node` which it doesn't find. `sudo ln -s /usr/bin/nodejs /usr/bin/node` allows to create a symbolic link between node and nodejs in order to allow npm to find nodejs.*
 
