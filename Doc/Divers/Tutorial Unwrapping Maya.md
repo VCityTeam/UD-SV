@@ -27,17 +27,17 @@ With the checker pattern we can visually see where stretching is occurring in ou
 
 Go ahead and open the hypershade by going to “Windows" > Rendering Editor > Hypershade …” in the top menu of Maya. **(Figure 1)**
 
-<img src="Photos/Find_Hypershade.JPG" width="380" height="250" />
+<img src="Photos/Find_Hypershade.jpg" width="600" height="400" />
 
 Once in the hypershade, right-click in the material slot, and "create > Materials > Lambert **(Figure 3)**
 
-<img src="Photos/Create_Lambert.JPG" width="380" height="250" />
+<img src="Photos/Create_Lambert.jpg" width="800" height="900" />
 
 *Figure 3*
 
 We want to make this pattern in the “Color” property. Click on the little square Color and on Checker. **(Figure 4)**
 
-<img src="Photos/Checker.JPG" width="354" height="483" />
+<img src="Photos/Checker.JPG" width="1000" height="700" />
 
 *Figure 4*
 
@@ -47,7 +47,7 @@ Don't forget to click on the button will show your material in the viewport. **(
 Looking at our model we can see that there is very bad stretching going on. **(Figure 4)**
 We’re going to fix that.
 
-<img src="Photos/Stretch.JPG" width="340" height="243" />
+<img src="Photos/Stretch.jpg" width="340" height="243" />
 
 
 ***Unwrapping***
@@ -61,7 +61,7 @@ Trying to texture a layout like this will get you terrible results and bring lot
 We’re going to be cleaning these up and setting them up in a way that you’ll be able to know exactly where everything 
 is and make your texturing process a lot more simpler.
 
-<img src="Photos/UV_Editor.JPG" width="604" height="329" />
+<img src="Photos/UV_Editor.jpg" width="604" height="329" />
 
 *Figure 5*
 
