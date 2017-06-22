@@ -1,22 +1,23 @@
 
 ## Display a file .Las in Itowns with lopocs
 
-Schema 1 
+  This diagram shows how the communication between Itowns and lopocs works:
+  
+  <img src="../Image/diapo2Sevimg26.png" width="900" height="175" />
 
-         [O]      ===========>   [O]   =============>   [O]
-        Lopocs                 .las                    Display
-        Install               in .json                on Itowns
-        
+  In a first step we put our file (.las here) on the lopocs's server, then lopocs gives us a tileset, the tileset is used by Itowns's server, and both servers communicate when Itowns needs files.
+
+  <img src="../Image/Lopocs Schema1.png" width="900" height="175" />
+  
 ### [Lopocs](https://github.com/Oslandia/lopocs#installation)
 
   When you install Lopocs ([here](https://github.com/Oslandia/lopocs#installation)) you have to install PDAL, take the branch lopocs [here](https://github.com/pblottiere/PDAL/tree/lopocs) (download and cmake, make, sudo make install).
 
-  You should have that when you write 
-  ````lopocs check````
+  You should have this when you write ````lopocs check````
   
   <img src="../Image/LopocsValidation.png" width="643" height="180" /> 
     
-### .las in .json
+### file .las in tileset
 
   You have lopocs installed, so now take your .las if you don't have take it [here](https://oslandia.github.io/lopocs/).
   
@@ -34,13 +35,22 @@ Schema 1
   
   <img src="../Image/tutolopocs2.png" width="443" height="118" /> 
   
-  Put the tileset-public.lopocs.points.json on your server of itowns, me it's 3d-tiles-samples/tilesets ... 
+  Put the tileset-public.lopocs.points.json on your server of itowns, for me the path 3d-tiles-samples/tilesets ... 
   
-  Now in this [example](https://github.com/iTowns/itowns2/blob/master/examples/3dtiles.html) replace the url with your name of your tileset.
+  Now in this [example](https://github.com/iTowns/itowns2/blob/master/examples/3dtiles.html) replace the url with the name of your tileset.
   
-  And it's done, you can view your .las in itown.
+  And it's done, you can view your .las in Itown.
   
   
+### Optimisation 
+
+  Right now we can't read multiple .las in the same time just one by one, we expect PDAL to optimize that.
+  
+  For itowns when you have a lot of point, there is some lag, we can optimize that too.
+  
+### References
+
+ * The git [lopocs](https://github.com/Oslandia/lopocs#installation)  
   
   
   
