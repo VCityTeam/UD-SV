@@ -1,7 +1,7 @@
 ## Architecture
 
 ### People
- * [Tatjana Kutzner]([an XSD](https://github.com/TatjanaKutzner/CityGML-UtilityNetwork-ADE) from [TUM](https://www.gis.bgu.tum.de/unser-team/lehrstuhlangehoerige/dr-tatjana-kutzner/)
+ * [Tatjana Kutzner](https://github.com/TatjanaKutzner/CityGML-UtilityNetwork-ADE) from [TUM](https://www.gis.bgu.tum.de/unser-team/lehrstuhlangehoerige/dr-tatjana-kutzner/)
  * [Kanishk Chaturvedi](https://github.com/kanishk-chaturvedi/CityGML-3.0) from [TUM](https://www.gis.bgu.tum.de/unser-team/lehrstuhlangehoerige/kanishk-chaturvedi/)
 
 ### iTowns2
