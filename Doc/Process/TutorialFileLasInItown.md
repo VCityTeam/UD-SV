@@ -1,11 +1,11 @@
 
-## Display a file .Las in Itowns with lopocs
+## Display a file .Las in iTowns with lopocs
 
-  This diagram shows how the communication between Itowns and lopocs works:
+  This diagram shows how the communication between iTowns and lopocs works:
   
   <img src="../Image/diapo2Sevimg26.png" width="900" height="175" />
 
-  In a first step we put our file (.las here) on the lopocs's server, then lopocs gives us a tileset, the tileset is used by Itowns's server, and both servers communicate when Itowns needs files.
+  In a first step we put our file (.las here) on the lopocs's server, then lopocs gives us a tileset, the tileset is used by iTowns's server, and both servers communicate when iTowns needs files.
 
   <img src="../Image/Lopocs Schema1.png" width="900" height="175" />
   
@@ -29,13 +29,13 @@
   
  
 
-### Display on Itowns
+### Display on iTowns
 
   Now you have 3 files: your .las, the .json pipeline and the .json:
   
   <img src="../Image/tutolopocs2.png" width="443" height="118" /> 
   
-  Put the tileset-public.lopocs.points.json on your server of itowns, for me the path 3d-tiles-samples/tilesets ... 
+  Put the tileset-public.lopocs.points.json on your server of iTowns, for me the path 3d-tiles-samples/tilesets ... 
   
   Now in this [example](https://github.com/iTowns/itowns2/blob/master/examples/3dtiles.html) replace the url with the name of your tileset.
   
@@ -46,7 +46,7 @@
 
   Right now we can't read multiple .las in the same time just one by one, we expect PDAL to optimize that.
   
-  For itowns when you have a lot of point, there is some lag, we can optimize that too.
+  For iTowns when you have a lot of point, there is some lag, we can optimize that too.
   
 ### References
 
