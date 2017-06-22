@@ -19,7 +19,7 @@
     
 ### file .las in tileset
 
-  You have lopocs installed, so now take your .las if you don't have take it [here](https://oslandia.github.io/lopocs/).
+  You have lopocs installed, so now take your .las (if you don't have take it [here](https://oslandia.github.io/lopocs/)).
   
   ````cd demos```` 
   
