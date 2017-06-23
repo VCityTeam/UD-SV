@@ -42,7 +42,7 @@
   And it's done, you can view your .las in Itown.
  
   Example: 
-   <img src="../Image/screenLopocs2.png" width="1616" height="805" />
+   <img src="../Image/screenLopocs2.png" width="1200" height="400" />
   
 ### Optimisation 
 
