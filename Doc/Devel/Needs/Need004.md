@@ -1,18 +1,6 @@
 
 # Need 004: integration of medias (images, text, audio, video, etc.) within a 4D (spatio-temp) representation of the city
 
-Definitions:
- - City object: refer to CityGML definition 
- - media: images, text, audio, and video
- - media link: link sourced at a city object or a media and targeting a given media
- - city object link: link sourced at a given media and targeting a city object
- - scenario link: link sourced at media or city object and targeting a scenario
- - media metadata: 
-    * FIXME description, source (who edited it), related media
-    * FIXME VJA/ESC: those documents already exist and have an information model. Express this definition by referencing it.
- - Region of a city model: FIXME
- - scenario = guided tour: FIXME point to definition
-
 ### User story:
 As an historian, I want to be able to add, modify, delete the media links, city object links and scenario links so that I can provide more information about city objects or regions of the city model.
 FIXME VJA: what do you mean by "I can source metadata information linked to city objects"
