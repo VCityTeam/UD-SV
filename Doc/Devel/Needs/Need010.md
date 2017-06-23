@@ -1,4 +1,4 @@
-# Need 010 : multiple representations of the city (override of generic behavior & geometry, while in guided tour)
+# Need 010 : ability to display multiple temporal versions of a building
 
 ### User story
 
