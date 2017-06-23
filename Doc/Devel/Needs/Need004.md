@@ -1,9 +1,21 @@
 
-
 # Need 004: integration of medias (images, text, audio, video, etc.) within a 4D (spatio-temp) representation of the city
 
+Definitions:
+ - City object: refer to CityGML definition 
+ - media: images, text, audio, and video
+ - media link: link sourced at a city object or a media and targeting a given media
+ - city object link: link sourced at a given media and targeting a city object
+ - scenario link: link sourced at media or city object and targeting a scenario
+ - media metadata: 
+    * FIXME description, source (who edited it), related media
+    * FIXME VJA/ESC: those documents already exist and have an information model. Express this definition by referencing it.
+ - Region of a city model: FIXME
+ - scenario = guided tour: FIXME point to definition
+
 ### User story:
-As an historian, I want to be able to add, modify, delete and access medias so that I can source metadata information linked to city objects, scenarios of urban evolution, etc.  and / or give more information about city objects or regions of the city model.
+As an historian, I want to be able to add, modify, delete the media links, city object links and scenario links so that I can provide more information about city objects or regions of the city model.
+FIXME VJA: what do you mean by "I can source metadata information linked to city objects"
 
 ### Beneficiary role:
 Researchers (historians, geographers, urbanists) and general audience
@@ -11,8 +23,10 @@ Researchers (historians, geographers, urbanists) and general audience
 ### Impact: 
 Major
 
-### Maturity:
-immature
+### Maturity: immature. 
+FIXME VJA:
+ - please validate this need.
+ - where are the media stored? In a remote data base hosted by historians or in a to be created by VCity database ? 
 
 ### Cost evaluation:
 ?
@@ -20,7 +34,7 @@ immature
 ### Tags or keywords
 
 ### Description
-Researchers and practitionners using virtual representations of cities might need to add documents to these representations in order to complement them. These documents are heterogeneous medias (images, text, audio, video, etc.), can come from multiple sources (i.e. from random citizen to experts) and can be linked to different scales objects (i.e. smokestack, bridge, city, etc.). Most of the time, these documents are linked to objects through their semantic information but they might also only be linked to geometry ?
+Researchers and practitionners using virtual representations of cities need to add/attach documents to these representations in order to complement them. These documents are heterogeneous medias (images, text, audio, video, etc.), can come from multiple sources (i.e. from random citizen to experts) and can be linked to different scales objects (i.e. smokestack, bridge, city, etc.). Most of the time, these documents are linked to objects through their semantic information but they might also only be linked to geometry ?
 To answer this need we might implement the model allowing to store documents ([Samuel et al. 2016])
 
 ### Notes:
