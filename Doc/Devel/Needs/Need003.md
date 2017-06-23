@@ -15,13 +15,17 @@ Sub Needs :
 * [Need011](Need011.md) : user interface (document, temporal slider, map...)
 * [Need012](Need012.md) : ability to browse through a document base 
 
-### Beneficiary role: ?
+### Beneficiary role: 
+ - Experts in various fields, ranging from information technology to human sciences. Tools must be easy to use for non-technicians (focus needed on ergonomy).
+ - VCity team: irst client/server demonstrator for the VCity team with many re-usable features
 
-### Impact: ?
+### Impact:
+Major: for the VCity team.
 
-### Maturity: young / ongoing
+### Maturity: ongoing
 
-### Cost evaluation: 3 months ?
+### Cost evaluation: 
+36 man months (3 trainees for 5 months, 2 Phd student (each half time), 1 post doc (quarter time), 1 software engineer (half time), Professor (1 man month)
 
 ### Tags or keywords
 
@@ -36,6 +40,6 @@ Vilo3D aims to provide a visualization tool for 3d city geometry (with temporal 
 
 ### Notes:
 
-* Target audience : Experts in various fields, ranging from information technology to human sciences. Tools must be easy to use for non-technicians (focus needed on ergonomy).
+
 * Challenges : visual clarity (image (historical doc) + text (info) + 3d scene), user movement in 3d space + time, transition between free exploration and guided tour (access, exit, resume), display the historical uncertainty of the 3d reconstruction.
 * Ideas : display the past in grayscale (visual similarity with old photos ?)
