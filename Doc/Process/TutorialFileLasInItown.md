@@ -40,7 +40,9 @@
   Now in this [example](https://github.com/iTowns/itowns2/blob/master/examples/3dtiles.html) replace the url with the name of your tileset.
   
   And it's done, you can view your .las in Itown.
-  
+ 
+  Example: 
+   <img src="../Image/screenLopocs2.png" width="1616" height="805" />
   
 ### Optimisation 
 
