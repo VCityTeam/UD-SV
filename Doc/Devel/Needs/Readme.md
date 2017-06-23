@@ -8,8 +8,10 @@
  * [Need 007](Need007.md): guided tour, between spatiotemporal points of interest, which the user can enter/leave/return to at will
  * [Need 008](Need008.md): ability to display the historical uncertainty of the 3d reconstruction
  * [Need 009](Need009.md): ability to use texture in the 3d scene
- * [Need 010](Need010.md): multiple representations of the city (override of generic behavior & geometry, while in guided tour)
-
+ * [Need 010](Need010.md): ability to display multiple temporal versions of a building
+ * [Need 011](Need011.md): user interface : document browser, temporal slider, minimap, filters, preferences...
+ * [Need 012](Need012.md): ability to browse through a document base
+ 
 ## Definitions
 ### Requirement
 **Definition**: a **[requirement](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/)** is a capability that a product must possess or something a product must do in order to ultimately satisfy a customer need.
