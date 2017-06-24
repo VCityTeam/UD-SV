@@ -1,4 +1,4 @@
-
+## Definitions/categories
 
 ### City object
 Refer to [CityGML definition of CityObject](https://portal.opengeospatial.org/files/?artifact_id=16675): buildings, bridges, tunnels, vegetation, water bodies, transportation facilities, city furniture...
