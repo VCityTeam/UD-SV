@@ -1,7 +1,7 @@
 
 ## Need 004: integration of medias (images, text, audio, video, etc.) within a 4D (spatio-temp) representation of the city
 
-### How to imporove this need
+### How to improve this need
 FIXME VJA:
  - please validate this need.
  - where are the media stored? In a remote data base hosted by historians or in a to be created by VCity database ? 
