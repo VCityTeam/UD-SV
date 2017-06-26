@@ -28,3 +28,20 @@ A sub-part of a city, a set of buildings, the interior of a perimeter
    
 ### Scenario reference
 A reference to a scenario originatingg at a media or city object
+
+## To be defined
+### Interface: the GUI ? FIXME
+
+### Historical moment
+A date (possibly a symbolic name refering to that date e.g. "1856 flood")
+
+### Historical period: 
+Two historical moments (begining, end) ? 
+All the times between two historical moments 
+
+### Media browser: 
+FIXME
+
+### Geometrical view
+The inteface component handling the 3D view of the geometry of the city ?
+ 
