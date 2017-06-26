@@ -14,11 +14,9 @@ Images, text, audio, and video.
 ### Media reference
 A reference targeting a given media.
 
-### Media metadata: FIXME
-Textual description, author (person, organisation), related media
-FIXME VJA/ESC: within Vilo3D those media and associated metadata already exist and 
-thus the associated information model must exist somewhere. 
-Express this definition by referencing this information model.
+### Media metadata:
+These metadata depend on the media and on the quantity of information available in and about this media. Media metadata and the associated information model are described in the following paper:
+Samuel, J., Périnaud, C., Servigne, S., Gay, G., & Gesquière, G. (2016, October). Representation and Visualization of Urban Fabric through Historical Documents. In EUROGRAPHICS Workshop on Graphics and Cultural Heritage. : [Link](https://www.researchgate.net/profile/Sylvie_Servigne/publication/308416831_Representation_and_Visualization_of_Urban_Fabric_through_Historical_Documents/links/57e3d8a008ae4d15ffae8de9.pdf)
 
 ### Reference (aka link)
 A [reference](https://en.wikipedia.org/wiki/Reference_(computer_science)) like a URI or an [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#URNs) 
@@ -27,7 +25,7 @@ A [reference](https://en.wikipedia.org/wiki/Reference_(computer_science)) like a
 A sub-part of a city, a set of buildings, the interior of a perimeter
    
 ### Scenario reference
-A reference to a scenario originatingg at a media or city object
+A reference to a scenario originating at a media or city object
 
 ## To be defined
 ### Interface: the GUI ? FIXME
@@ -44,4 +42,7 @@ FIXME
 
 ### Geometrical view
 The inteface component handling the 3D view of the geometry of the city ?
+
+### Scenario
+FIXME
  
