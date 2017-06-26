@@ -1,14 +1,6 @@
 # Need 005: Temporal mode: ergonomic exploration of time 
 
-Definition:
- - part of a city: "region", portion, set of selected objectsFIXME
- - interface: the GUI FIXME
- - Historical moment: a date (possibly a symbolic name refering to that date e.g. "1856 flood")
- - Historical period: ???
- - Media browser: FIXME
- - geometrical view: a 3D view of the geometry of the cityFIXME
- 
-**Open questions: FIXME VJA ESC, GGE)**:
+**Open questions: FIXME VJA ESC, GGE**:
  * do we need date (instant time), period (time interval) ?
  * what is the time step for the slide ? (discrete or continuous time)
  * When discrete is the slides allowed to stop in between dates (historical moments) ?
