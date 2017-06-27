@@ -1,5 +1,5 @@
 
-# Need 013: visualization of documents within the city model
+# Need 013: Visualization of documents within a 3D representation of the city
 
 ### User story
 
