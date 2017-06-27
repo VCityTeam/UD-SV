@@ -87,7 +87,8 @@ In the following interactions with the above created data base it is advised to 
    ````
     (db_user)$ psql bozo
       bozo=# select count(*) from lyon;
-   `
+      bozo=# \q`  (or use CTRL d equivalently)
+   ````
 
 ### Data base (5): add bounding box data to database (JGA specific) & Install the http server
 
