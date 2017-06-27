@@ -1,4 +1,4 @@
-# Need 003: 
+# Need 003: A document-enhanced 4d representation of the city to detail historical processes
 
 ### User story
 As an historian, I want a document-enhanced 4d representation of the city in which historical processes can be detailed.
@@ -11,7 +11,6 @@ Sub Needs :
 * [Need007](Need007.md) : guided tour, step by step between spatiotemporal points of interest
 * [Need008](Need008.md) : ability to display the historical uncertainty of the 3d reconstruction
 * [Need009](Need009.md) : ability to use texture in the 3d scene
-* [Need010](Need010.md) : Modelisation of temporal dimension of city models
 * [Need011](Need011.md) : user interface (document, temporal slider, map...)
 * [Need012](Need012.md) : ability to browse through a document base 
 
@@ -31,7 +30,7 @@ Major: for the VCity team (demonstrator) & for historians
 
 ### Description
 
-The purpose is to have a visualization tool for 3d city models (with temporal evolution : 4d), historical documents, and urbanization processes. The tool will have two modes : free tour and guided tour.
+We need a visualization tool for 4d city models (3d space + time), historical documents, and urbanization/historical processes. The tool will allow the user to explore a document base as well as the 4d scene, and it will feature two modes : free tour and guided tour.
 * In **free tour**, documents are integrated in the 3d scene (billboards) with some of them being hidden (LoD and/or filters) and the user can move freely in the 3d scene, and in time (which modifies which documents are displayed, and city gemotry when available).
 * In **guided tour**, the user is moved from a "tour step" to another. A tour step is composed of a date (with corresponding city geometry), a position, an orientation, a document, and a text explaining the relation of this tour step with the global process. In each step, the associated historical document is superimposed on the 3d scene and the user camera is positioned so that the 3d scene corresponds to what the document shows (for example : top view camera for a map document). Each tour focuses on a specific process, and can link to other related tours.
 
