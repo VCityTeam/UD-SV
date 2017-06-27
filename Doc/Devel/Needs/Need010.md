@@ -1,4 +1,4 @@
-# Need 010 : ability to display multiple temporal versions of a building
+# Need 010 : Modelisation of temporal dimension of city models
 
 ### User story
 
