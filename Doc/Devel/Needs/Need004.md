@@ -11,7 +11,8 @@ As an historian, I want to be able to enhance city models with documents. I want
 ### Impact: 
 Major
 
-### Maturity: immature. 
+### Maturity: 
+immature. 
 
 ### Cost evaluation:
 ?
