@@ -1,5 +1,5 @@
 
-# Need 014: Ability to manage documents and their links 
+# Need 014: Manage documents and their links with other city objects and documents
 
 ### User story
 
