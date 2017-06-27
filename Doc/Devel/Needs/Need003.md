@@ -1,12 +1,12 @@
-# Need 003: Enhancing city models with documents
+# Need 003: Means for a guided tour through time and space
 
 ### User story
 As developper & game designer, I want to implement a guided tour of the city to illustrate historical urbanization processes, as a part of the Vilo3D project. 
 
 Sub Needs :
 
-* [Need004](Need004.md) : integration of historical data (images & text) within/over a 3D representation of the city
-* [Need005](Need005.md) : ergonomic user exploration of time : temporal slider 
+* [Need004](Need004.md) : Enhancing city models with documents
+* [Need005](Need005.md) : Adding a temporal dimension to city models
 * [Need006](Need006.md) : ergonomic user exploration of space (advanced camera control, shortcut to point of interest...)
 * [Need007](Need007.md) : guided tour, between spatiotemporal points of interest
 * [Need008](Need008.md) : ability to display the historical uncertainty of the 3d reconstruction
