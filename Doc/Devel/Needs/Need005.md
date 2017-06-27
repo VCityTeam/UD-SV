@@ -7,7 +7,7 @@ Sub Needs:
 
   * Need 010: [Modelisation of temporal dimension of city models](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need010.md)
   * Need 016: [Ergonomic exploration of time](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need016.md)
-  * Need 017: [Sending temporal urban data to web client](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need017.md)
+  * Need 017: [Develop a server to stream PostGIS 3D objects and having a temporal dimension to the web](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need017.md)
 
 ### Beneficiary role:
 [Historian](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person), [General audience](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#general-audience)
