@@ -17,3 +17,5 @@
 
 ### Notes:
 
+(example : fade image when mouse cursor is over doc)
+
