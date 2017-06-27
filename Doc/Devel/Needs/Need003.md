@@ -1,14 +1,14 @@
-# Need 003: Means for a guided tour through time and space
+# Need 003: 
 
 ### User story
-As developper & game designer, I want to implement a guided tour of the city to illustrate historical urbanization processes, as a part of the Vilo3D project. 
+As an historian, I want a document-enhanced 4d representation of the city in which historical processes can be detailed.
 
 Sub Needs :
 
 * [Need004](Need004.md) : Enhancing city models with documents
 * [Need005](Need005.md) : Adding a temporal dimension to city models
 * [Need006](Need006.md) : ergonomic user exploration of space (advanced camera control, shortcut to point of interest...)
-* [Need007](Need007.md) : guided tour, between spatiotemporal points of interest
+* [Need007](Need007.md) : guided tour, step by step between spatiotemporal points of interest
 * [Need008](Need008.md) : ability to display the historical uncertainty of the 3d reconstruction
 * [Need009](Need009.md) : ability to use texture in the 3d scene
 * [Need010](Need010.md) : Modelisation of temporal dimension of city models
@@ -17,10 +17,10 @@ Sub Needs :
 
 ### Beneficiary role: 
  - Experts in various fields, ranging from information technology to human sciences. Tools must be easy to use for non-technicians (focus needed on ergonomy).
- - VCity team: irst client/server demonstrator for the VCity team with many re-usable features
+ - VCity team: first client/server demonstrator for the VCity team with many re-usable features
 
 ### Impact:
-Major: for the VCity team.
+Major: for the VCity team (demonstrator) & for historians
 
 ### Maturity: ongoing
 
@@ -31,15 +31,13 @@ Major: for the VCity team.
 
 ### Description
 
-Vilo3D aims to provide a visualization tool for 3d city geometry (with temporal evolution), historical documents, and urbanization processes on the theme of "La Ville Ordinaire" (ordinary town : smallscale events) by Anne-Sophie Clemençon. The tool will have two modes : free tour and guided tour.
+The purpose is to have a visualization tool for 3d city models (with temporal evolution : 4d), historical documents, and urbanization processes. The tool will have two modes : free tour and guided tour.
 * In **free tour**, documents are integrated in the 3d scene (billboards) with some of them being hidden (LoD and/or filters) and the user can move freely in the 3d scene, and in time (which modifies which documents are displayed, and city gemotry when available).
 * In **guided tour**, the user is moved from a "tour step" to another. A tour step is composed of a date (with corresponding city geometry), a position, an orientation, a document, and a text explaining the relation of this tour step with the global process. In each step, the associated historical document is superimposed on the 3d scene and the user camera is positioned so that the 3d scene corresponds to what the document shows (for example : top view camera for a map document). Each tour focuses on a specific process, and can link to other related tours.
 
 **Example of guided tour** : "L'ilôt du lac" which aims to illustrate how a small lake in the 1850s affected the evolution of a building block until the 1980s. A first "step" shows the city block in the 1850s with the lake and an historical map, a second step shows the block after the lake was filled (with another historcal map), another step shows the demolition and reconstruction of the block (modern buildings) etc...
 
-
 ### Notes:
-
 
 * Challenges : visual clarity (image (historical doc) + text (info) + 3d scene), user movement in 3d space + time, transition between free exploration and guided tour (access, exit, resume), display the historical uncertainty of the 3d reconstruction.
 * Ideas : display the past in grayscale (visual similarity with old photos ?)
