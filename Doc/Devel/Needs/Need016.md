@@ -6,7 +6,8 @@
  * When discrete is the slides allowed to stop in between dates (historical moments) ?
  * When decided fix the above definitions (change the name if required)
  
- subneed : temporal slider
+ todo :
+   subneed : temporal slider
 
 ### User story
 As [historian](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person), I want (within the interface) to select an historical moment (among the set of predefined moments) so that the displayed city corresponds to the state of the city as it was at this moment.
