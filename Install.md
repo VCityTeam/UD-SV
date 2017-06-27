@@ -63,7 +63,7 @@
 
 ### Data base (3): Add postgis extension and create a city table
 ```` 
-(root)$ psql bozo
+(postgres)$ psql bozo
   bozo=# create extension postgis;
   bozo=# \q`  (or use CTRL d equivalently)
 ````    
