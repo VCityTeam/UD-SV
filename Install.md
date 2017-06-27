@@ -62,10 +62,14 @@
    ````
 
 ### Data base (3): Add postgis extension and create a city table
+```` 
+(root)$ psql bozo
+  bozo=# create extension postgis;
+  bozo=# \q`  (or use CTRL d equivalently)
+````    
 In the following interactions with the above created data base it is advised to `sudo su db_user`
 ```` 
   (db_user)$ psql bozo
-    bozo=# create extension postgis;
     bozo=# create table lyon(gid serial primary key, geom GEOMETRY('POLYHEDRALSURFACEZ', 3946));
     bozo=# alter user dbuser with superuser;
     bozo=# \q`  (or use CTRL d equivalently)
