@@ -7,11 +7,11 @@ As an historian, I want to be able to enhance city models with documents. I want
 
 Sub Needs:
 
-Need 013: [Visualization of documents within a 3D representation of the city](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need013.md)
+  * Need 013: [Visualization of documents within a 3D representation of the city](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need013.md)
 
-Need 014: [Manage documents and their links with other city objects and documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need014.md)
+  * Need 014: [Manage documents and their links with other city objects and documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need014.md)
 
-Need 015: [User interaction with documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need015.md)
+  * Need 015: [User interaction with documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need015.md)
 
 ### Beneficiary role:
 [Researchers (historians, geographers, urbanists)](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) and [general audience](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#general-audience)
