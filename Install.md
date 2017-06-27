@@ -6,7 +6,7 @@
 ### Install pre-requisite tools
  * The data base packages 
    - OSX : `brew install postgis` (that will pull postGRE) 
-   - Ubuntu : 
+   - Ubuntu ([reference](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt)): 
    ```` 
      sudo apt-get install postgresql-9.6
      sudo apt-get install postgresql-9.6-postgis-2.3 postgresql-contrib-9.6
@@ -15,9 +15,7 @@
      #to get the commandline tools shp2pgsql, raster2pgsql you need to do this
      sudo apt-get install postgis
    ````
-   [Ubuntu Reference](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt)
-   
-   Nice tool to have (for database management) : pgAdmin (`sudo apt-get install pgadmin3`)
+     * Additionaly [pgAdmin](https://www.pgadmin.org/) (install with `sudo apt-get install pgadmin3`) is a convenient database management tool.
    
  * Python tools
    - **Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...
@@ -35,29 +33,45 @@
  * Node.js
    - `sudo apt-get install node.js`
    - `sudo apt-get install npm`
-
     
-### Data base: initialization and preparation
+### Data base (1): start a postgres service
  * OSX :
    ```` 
-    initdb /usr/local/var/postgres -E utf8
-    postgres -D /usr/local/var/postgres &` (for launching a server)
+   (root)$ initdb /usr/local/var/postgres -E utf8
+   (root)$ postgres -D /usr/local/var/postgres &` (for launching a server)
+   ````
+ * Ubuntu : 
+   ````
+   (root)$ service postgresql start
+   ````
+   
+### Data base (2): Create an empty database
+ * OSX:
+   ````
+   createdb bozo
    ````
 
-  * Ubuntu : `service postgresql start`
-  * `createdb bozo`
- 
- * *Note : it is advised to replace 'myuser' by your session name in the following instructions.'*
+* Ubuntu ([reference](https://wiki.debian.org/PostgreSql)): 
+   ````
+   (root)$ sudo adduser db_user          # that is at OS level
+           ...
+   (root)$ sudo su postgres
+   (postgres)$ createuser db_user        # this account (same name as above) is at PostGreSql level  
+   (postgres)$ createdb -O db_user bozo  # creates a new citydb_v3 database
+   (postgres)$ exit
+   ````
+
+### Data base (3): Add postgis extension and create a city table
+In the following interactions with the above created data base it is advised to `sudo su db_user`
     ```` 
-    psql bozo
+    (db_user)$ psql bozo
     - bozo=# create extension postgis;
     - bozo=# create table lyon(gid serial primary key, geom GEOMETRY('POLYHEDRALSURFACEZ', 3946));
-    - bozo=# create user myuser with password 'password';
-    - bozo=# alter user myuser with superuser;
+    - bozo=# alter user dbuser with superuser;
     - bozo=# \q`  (or use CTRL d equivalently)
     ````
 
-### Data base: upload CityGML data to the DB
+### Data base (4): upload CityGML data to the DB
  * The original source for the CityGML based description of the building geometries is the [Grand Lyon open data](https://data.grandlyon.com/). For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the [`LYON_6EME_BATI_2012_SplitBuildings.gml` file](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml). In the following we'll assume this file is located in the HOME (shortened as `~`) directory.
 **WARNING**: the following set of commands must be executed with **VERSION 2 of python** (and pip) ! 
     ````
@@ -73,7 +87,7 @@
 
     `psql bozo` and `bozo=# select count(*) from lyon;`
 
-### Data base: add bounding box data to database (JGA specific) & Install the http server
+### Data base (5): add bounding box data to database (JGA specific) & Install the http server
 
  * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
  * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
