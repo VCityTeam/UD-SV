@@ -4,7 +4,7 @@
 As a developper I want to model and implement the temporal dimension of city models. 
 
 ### Beneficiary role: 
-City knowledgeable person
+Developper, City knowledgeable person, general audience
 
 ### Impact: 
 Major
