@@ -11,7 +11,7 @@ Sub Needs :
 * [Need007](Need007.md) : guided tour, between spatiotemporal points of interest
 * [Need008](Need008.md) : ability to display the historical uncertainty of the 3d reconstruction
 * [Need009](Need009.md) : ability to use texture in the 3d scene
-* [Need010](Need010.md) : ability to display multiple temporal versions of a building
+* [Need010](Need010.md) : Modelisation of temporal dimension of city models
 * [Need011](Need011.md) : user interface (document, temporal slider, map...)
 * [Need012](Need012.md) : ability to browse through a document base 
 
