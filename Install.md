@@ -63,13 +63,13 @@
 
 ### Data base (3): Add postgis extension and create a city table
 In the following interactions with the above created data base it is advised to `sudo su db_user`
-    ```` 
-    (db_user)$ psql bozo
-    - bozo=# create extension postgis;
-    - bozo=# create table lyon(gid serial primary key, geom GEOMETRY('POLYHEDRALSURFACEZ', 3946));
-    - bozo=# alter user dbuser with superuser;
-    - bozo=# \q`  (or use CTRL d equivalently)
-    ````
+```` 
+  (db_user)$ psql bozo
+  - bozo=# create extension postgis;
+  - bozo=# create table lyon(gid serial primary key, geom GEOMETRY('POLYHEDRALSURFACEZ', 3946));
+  - bozo=# alter user dbuser with superuser;
+  - bozo=# \q`  (or use CTRL d equivalently)
+````
 
 ### Data base (4): upload CityGML data to the DB
  * The original source for the CityGML based description of the building geometries is the [Grand Lyon open data](https://data.grandlyon.com/). For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the [`LYON_6EME_BATI_2012_SplitBuildings.gml` file](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml). In the following we'll assume this file is located in the HOME (shortened as `~`) directory.
