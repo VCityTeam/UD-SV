@@ -1,7 +1,7 @@
 # Need 018 : Enhance geometry of the city by adding semantic information
 
 ### User story
-As a city knowledgeable person, I want to have semantic information about the geometry representing the city.
+As a city knowledgeable person, I want to access semantic information about the geometry representing the city.
 
 ### Beneficiary role: 
 City knowledgeable person, general audience
