@@ -1,4 +1,4 @@
-# Need 005: Adding a temporal dimension to city
+# Need 005: Adding a temporal dimension to city models
 
 **Open questions: FIXME VJA ESC, GGE**:
  * do we need date (instant time), period (time interval) ?
@@ -7,20 +7,27 @@
  * When decided fix the above definitions (change the name if required)
 
 ### User story
-As [historian](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person), I want (within the interface) to select an historical moment (among the set of predefined moments) so that the displayed city corresponds to the state of the city as it was at this moment. 
+As an [historian](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person), I want to add a temporal dimension to city models. I want to be able to store different versions of city models corresponding to different periods of time. I also want to be able to visualise the evolution of the city along the time using a 4D (spatio-temporal) representation of the city.
 
 Sub Needs:
+
+Need 010: [Modelisation of temporal dimension of city models](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need010.md)
+
 Need 016: [Ergonomic exploration of time](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need016.md)
 
+Need 017: [Sending temporal urban data to web client]()
+
 ### Beneficiary role:
-[Historian](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
+[Historian](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person), [General audience](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#general-audience)
 
 ### Impact: 
+Major.
 
 ### Maturity:
+Ongoing
 
 ### Cost evaluation:
-Ball park estimate limited to the interface: 1 person-month. 
+Ball park estimate: 4 person-month. 
 
 ### Tags or keywords
 
