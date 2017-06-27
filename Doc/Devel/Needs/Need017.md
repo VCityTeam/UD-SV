@@ -1,4 +1,4 @@
-# Need 017 : Develop a server to stream PostGIS 3D objects and having a temporal dimension to the web
+# Need 017 : Develop a server to stream PostGIS 3D objects having a temporal dimension to the web
 
 ### User story
 
