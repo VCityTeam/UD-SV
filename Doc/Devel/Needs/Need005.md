@@ -1,4 +1,4 @@
-# Need 005: Temporal mode: ergonomic exploration of time 
+# Need 005: Adding a temporal dimension to city
 
 **Open questions: FIXME VJA ESC, GGE**:
  * do we need date (instant time), period (time interval) ?
@@ -8,6 +8,9 @@
 
 ### User story
 As [historian](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person), I want (within the interface) to select an historical moment (among the set of predefined moments) so that the displayed city corresponds to the state of the city as it was at this moment. 
+
+Sub Needs:
+Need 016: [Ergonomic exploration of time](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need016.md)
 
 ### Beneficiary role:
 [Historian](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
