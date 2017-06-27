@@ -9,7 +9,7 @@ A reference to a city object (associate to a given media)
 ### Guided tour
 A navigation in space and time step by step. Each step correspond to an historical moment and the camera is positioned and oriented depending on the document(s) related to this historical moment. A complementary text is displayed next to the document.
 
-### Media 
+### Document 
 Images, text, audio, and video.
 
 ### Reference (aka link)
@@ -18,8 +18,8 @@ A [reference](https://en.wikipedia.org/wiki/Reference_(computer_science)) like a
 ### Associative entity 
 A reference between city object(s) and document(s)
 
-### Media metadata:
-These metadata depend on the media and on the quantity of information available in and about this media. Media metadata and the associated information model are described in [Sam16]
+### Document metadata:
+These metadata depend on the document and on the quantity of information available in and about this document. Document metadata and the associated information model are described in [Sam16]
 
 ### Region of a city model:
 Refer to [CityGML definition of LandUse](https://portal.opengeospatial.org/files/?artifact_id=16675)
@@ -33,7 +33,7 @@ Period between two historical moments (begining, end)
 ## To be defined
 ### Interface: the GUI ? FIXME
 
-### Media browser: 
+### Document browser: 
 FIXME
 
 ### Geometrical view
