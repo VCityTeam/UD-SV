@@ -1,4 +1,4 @@
-# Need 003: means for a guided tour through space and time
+# Need 003: Enhancing city models with documents
 
 ### User story
 As developper & game designer, I want to implement a guided tour of the city to illustrate historical urbanization processes, as a part of the Vilo3D project. 
