@@ -1,10 +1,4 @@
 # Need 016 : Ergonomic exploration of time
-
-**Open questions: FIXME VJA ESC, GGE**:
- * do we need date (instant time), period (time interval) ?
- * what is the time step for the slide ? (discrete or continuous time)
- * When discrete is the slides allowed to stop in between dates (historical moments) ?
- * When decided fix the above definitions (change the name if required)
  
  todo :
    subneed : temporal slider
