@@ -65,10 +65,10 @@
 In the following interactions with the above created data base it is advised to `sudo su db_user`
 ```` 
   (db_user)$ psql bozo
-  - bozo=# create extension postgis;
-  - bozo=# create table lyon(gid serial primary key, geom GEOMETRY('POLYHEDRALSURFACEZ', 3946));
-  - bozo=# alter user dbuser with superuser;
-  - bozo=# \q`  (or use CTRL d equivalently)
+    bozo=# create extension postgis;
+    bozo=# create table lyon(gid serial primary key, geom GEOMETRY('POLYHEDRALSURFACEZ', 3946));
+    bozo=# alter user dbuser with superuser;
+    bozo=# \q`  (or use CTRL d equivalently)
 ````
 
 ### Data base (4): upload CityGML data to the DB
@@ -84,8 +84,10 @@ In the following interactions with the above created data base it is advised to 
     ````
    If you plateform doesn't have `wget` simply [open the LYON_6EME_BATI_2012_SplitBuildings.gml link](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml) with your favorite browser and place the downloaded gml file in the ad-hoc directory.
  * Assert there is some content in the DB
-
-    `psql bozo` and `bozo=# select count(*) from lyon;`
+   ````
+    (db_user)$ psql bozo
+      bozo=# select count(*) from lyon;
+   `
 
 ### Data base (5): add bounding box data to database (JGA specific) & Install the http server
 
