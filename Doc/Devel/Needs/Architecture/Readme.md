@@ -5,7 +5,23 @@
     - Defines [ADE (network among others)](https://github.com/TatjanaKutzner/CityGML-UtilityNetwork-ADE) 
     - [Tatjana Kutzner's thesis (chapter 4.1 p63)](https://mediatum.ub.tum.de/doc/1341432/1341432.pdf) states that the key point is the ATL (Transformation Language) availability. In chapter 4.3.2 three tools are mentions FME (proprietary), Go Publisher (proprietary) and HALE (open-source).
  * [Kanishk Chaturvedi](https://github.com/kanishk-chaturvedi/CityGML-3.0) from [TUM](https://www.gis.bgu.tum.de/unser-team/lehrstuhlangehoerige/kanishk-chaturvedi/)
-
+ 
+### Tools
+ * [Enterprise Architect](http://www.sparxsystems.com/products/index.html#ult)
+    - [OSX-Wine install](https://github.com/MEPP-team/VCity/wiki/OSX_Instal_Enterprise_Architect_-_2017_06_08)
+    - [ShapeChange trial](https://github.com/MEPP-team/VCity/wiki/EA_and_ShapeChange_trial_-_2017_06_22)
+    - EA automation:
+      * [Java](https://exploringea.com/2013/12/11/ea-automation-with-java/)
+      * [JavaScript](http://www.sparxsystems.com/enterprise_architect_user_guide/10/automation_and_scripting/the_scripter_window.html)
+ * [OBEO designer](https://www.obeodesigner.com/en/) and [UML designer](http://www.umldesigner.org/) 
+   - [Obeo Designer Academic Program](https://www.obeodesigner.com/en/academic-program) is available for research or educational purposes.
+   - [Sirius community](https://www.eclipse.org/forums/index.php?t=thread&frm_id=262) (pointed [here](https://www.obeodesigner.com/en/resources))
+   - See also [Importing CityGML trial](https://github.com/MEPP-team/VCity/wiki/Obeo_designer_trial_-_2017_06_22/_edit)     
+ * [MEGA UML](http://www.mega.com/en/resource/mega-uml-hopex) by [MEGA](http://www.mega.com/en)
+ * Generate postgresql database tables diagram with  
+    - [schemaspy](https://stackoverflow.com/questions/3223770/tools-to-generate-database-tables-diagram-with-postgresql) looked promising but couldn't make it work. Whatever arguments you provide for host, port, password it will generate something in `./schemapy/index.html` instead of complaining about wrong authentication (or could it be that is a social engineering scam to obtain the access codes?)
+    - Note: Mysql-workbench only works with MySQL...
+ 
 ### iTowns2
 ![JGA's architecture diagram](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Architecture/Pictures/2017_05_03_-_JGA_Achitecture_diagrama.png)
 [Associated JGA's description](https://github.com/MEPP-team/RICT/wiki/2017_05_03_-_JGA_iTowns2_presentation)
