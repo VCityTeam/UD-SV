@@ -170,13 +170,10 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
  - you are located in the `building-server.git` that you cloned
  - that you are using version3 of python and pip (that pip should be pip3!)
  
- * Install branch b3dm of py3dtiles: **FIXME**: the following is a temporary patch, but it won't be needed anymore in the next comming weeks.
+ * Install py3dtiles:
    ````
      git clone https://github.com/Oslandia/py3dtiles.git
-     cd py3dtiles
-     git checkout b3dm
-     cd ..
-     pip install /chemin/vers/py3dtiles --upgrade
+     pip install py3dtiles --upgrade
    ````
    
 ### Enable remote access to PostgreSQL database server via TCP/IP (inspired from [this](https://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html))
