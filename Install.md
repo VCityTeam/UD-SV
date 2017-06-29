@@ -157,7 +157,7 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
    ````
  * OSX or Ubuntu:
  ````
-     . /venv/bin/activate
+     . venv/bin/activate
      pip install --upgrade setuptools
      pip install -e .
      pip install uwsgi
