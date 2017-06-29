@@ -247,7 +247,7 @@ npm install
 ````
 Configure a planar example over your data:
 ````
-cd itowns2/examples
+cd examples
 cp planar.html planar_3dtiles.html
 ````
 Edit the resulting `planar_3dtiles.html` and 
