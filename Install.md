@@ -257,7 +257,7 @@ Edit the resulting `planar_3dtiles.html` and
 cp planar.js planar_3dtiles.js
 ````
 Edit the resulting `planar_3dtiles.js`:
- * copy all the addlayer related code contained in `examples/3dtiles.js` into this `planar_3dtiles.js`  
+ * copy from `(examples/)3dtiles.html` the section of js code contained in the "paragraph" named `Create a new Layer 3d-tiles` into this `planar_3dtiles.js` (place it in global scope e.g. after the calls to `view.addLayer()`.    
  * configure this addlayer code by 
     - change the URL to hardwire yours e.g. "http://localhost:9090/getCity?city=citydb_v3" 
     - change `globe` for `view` within the line : `itowns.View.prototype.addLayer.call(globe, $3dTilesLayer);`
