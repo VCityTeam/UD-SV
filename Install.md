@@ -264,7 +264,8 @@ Edit the resulting `planar_3dtiles.js`:
     - change the URL to hardwire yours e.g. "http://localhost:9090/getCity?city=citydb_v3" 
     - change `globe` for `view` within the line : `itowns.View.prototype.addLayer.call(globe, $3dTilesLayer);`
 
-Now open the resulting `itowns2/examples/planar-3Dtiles.html` file with your favorite browser.
+Run `npm start`
+Now open the resulting `http://localhost:8080/itowns2/examples/planar_3dtiles.html` file with your favorite browser.
 
 *Note : if after running `npm start` you have an error message saying that node is not find in `/usr/bin/env`, try running the following : `sudo ln -s /usr/bin/nodejs /usr/bin/node`. Explainations : on ubuntu node.js package is installed in /usr/bin/nodejs and when npm starts, it runs a the command `/usr/bin/env node` which it doesn't find. `sudo ln -s /usr/bin/nodejs /usr/bin/node` allows to create a symbolic link between node and nodejs in order to allow npm to find nodejs.*
 
