@@ -173,7 +173,7 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
  * Install py3dtiles:
    ````
      git clone https://github.com/Oslandia/py3dtiles.git
-     pip install ./py3dtiles --upgrade
+     pip install ./py3dtiles/ --upgrade
    ````
    Warning: when doing the `pip install` make sure you are pointing to the `./py3dtiles` local directory as opposed to just `py3dtiles` that will look for some online repository version that won't be correct.
    
