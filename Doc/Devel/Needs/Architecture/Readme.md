@@ -7,6 +7,7 @@
  * [Kanishk Chaturvedi](https://github.com/kanishk-chaturvedi/CityGML-3.0) from [TUM](https://www.gis.bgu.tum.de/unser-team/lehrstuhlangehoerige/kanishk-chaturvedi/)
  
 ### Tools
+ * [iTowns2 documentation](https://github.com/iTowns/itowns2/blob/1f748406ba1213ee50e941876c3134686ae7e998/README.md)
  * [Enterprise Architect](http://www.sparxsystems.com/products/index.html#ult)
     - [OSX-Wine install](https://github.com/MEPP-team/VCity/wiki/OSX_Instal_Enterprise_Architect_-_2017_06_08)
     - [ShapeChange trial](https://github.com/MEPP-team/VCity/wiki/EA_and_ShapeChange_trial_-_2017_06_22)
