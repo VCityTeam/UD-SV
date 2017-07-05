@@ -15,8 +15,10 @@ As a historian i need to visualize and situate documents (images, videos, text..
 ### Tags or keywords
 
 ### Description
+The need can be fulfilled by billboards integrated in the 3d representation of the city, anchored to the city object which is the subject of the document.
+Filtering/culling of the billboards may be needed to avoid cluttering.
 
 ### Notes:
 
-Possible solution : billboards image (oriented to face the user camera), with additional features (Clement Chagnaud's work)
+to link : Clement Chagnaud's work
 
