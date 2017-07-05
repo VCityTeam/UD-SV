@@ -237,12 +237,10 @@ Technical notes:
 
 ### Launch a local iTowns server
 
-**FIXME**: Currently, you have to clone a branch of JGA fork to have 3d-tiles support (https://github.com/Jeremy-Gaillard/itowns2/tree/3d-tiles-refacto)
 ````
 cd <somewhere>
 git clone https://github.com/itowns/itowns2.git
 cd itowns2
-git checkout master
 npm install
 ````
 Configure a planar example over your data:
