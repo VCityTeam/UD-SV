@@ -1,19 +1,32 @@
 # Interface Design
 
+OPEN QUESTIONS :
+* modularity : this GUI is originally for Vilo3D. Will some of its elements be used by other projects ?
+* priorities : what do we focus on first ?
+* editor mode (ability for end users to edit/add elements) accessed through this interface ? or another tool ?
+
 ![](http://imgur.com/r1ew3zs.png)
 
-The GUI needs to provide access to the following functionalities :
-* 3d scene window : preference, camera controls, map
-* temporal evolution : jump to a date, specify start/end date (animation), move slider to change time
-* document browser : previous/next doc, related doc, filters, search, orient doc + camera in the 3d scene
-* guided tour : means to access the tour(s), start, exit, previous/next step
+The GUI will need to provide access to the following functionalities (with associated time priority) :
 
-The GUI will use minimizing/maximimizing windows & sliders to keep from being too cluttered
+* (prio : high) 3d scene window : camera controls, map (prio : medium)
+* (prio : high) temporal evolution : jump to a date, specify start/end date (animation), move slider to change time
+* (prio : medium) document browser : previous/next doc, related doc, filters, search, orient doc + camera in the 3d scene
+* (prio : high) guided tour : means to access the tour(s), start, exit, previous/next step
+* (prio : low) city browser (tree view of the city objects) : select scene object by selecting an item in the list, and vice-versa; provides info about the selected object.
+* (prio : medium) menu : preferences, tools
 
+The GUI will use minimizing/maximimizing windows and tabs to keep from being too cluttered.
+
+Ergonomy is important : end users will include people with no technical background.
+
+## Web interface concept
 ![](images/schema_interface.png)
 
+## Prototyped GUI (free tour mode)
 ![](images/img1.png)
 
+## Prototyped GUI (guided tour mode)
 ![](images/img2.png)
 
 
