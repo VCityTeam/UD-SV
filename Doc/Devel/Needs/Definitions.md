@@ -33,13 +33,13 @@ Period between two historical moments (begining, end)
 ## To be defined
 ### Interface: the GUI ? FIXME
 
-### Document browser: 
+### Document browser
 FIXME
 
 ### Geometrical view
 The inteface component handling the 3D view of the geometry of the city ?
 
-### Oriented camera mode:
+### Oriented camera mode
 Related to a photo or video document. When the user interact with this document, he can enter into oriented camera mode : the document is displayed over/in the 3d scene and the camera moves to a position and orientation such that the document corresponds to the city geometry (example for a plan document : the plan is displayed over the region it represents, and the camera is placed so that the plan image is over the corresponding geometry).
 
  
