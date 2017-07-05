@@ -11,7 +11,7 @@ Sub Needs:
 
   * Need 014: [Manage documents and their links with other city objects and documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need014.md)
 
-  * Need 015: [User interaction with documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need015.md)
+  * Need 015: [Oriented camera mode for documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need015.md)
 
 ### Beneficiary role:
 [Researchers (historians, geographers, urbanists)](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) and [general audience](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#general-audience)
