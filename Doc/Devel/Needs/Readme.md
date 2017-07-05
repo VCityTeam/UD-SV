@@ -11,6 +11,13 @@
  * [Need 010](Need010.md): ability to display multiple temporal versions of a building
  * [Need 011](Need011.md): user interface : document browser, temporal slider, minimap, filters, preferences...
  * [Need 012](Need012.md): ability to browse through a document base
+ * [Need 013](Need013.md): visualization of documents within a 3D representation of the city
+ * [Need 014](Need014.md): manage documents and their links with other city objects and documents
+ * [Need 015](Need015.md): user interaction with documents
+ * [Need 016](Need016.md): ergonomic exploration of time
+ * [Need 017](Need017.md): develop a server to stream PostGIS 3D objects having a temporal dimension to the web
+ * [Need 018](Need018.md): provide means for storing and accessing semantic information extending the geometric information of a city 
+ * [Need 019](Need019.md): navigate from selected geometries within the interface to the attached semantic information
  
 ## Definitions
 ### Requirement
