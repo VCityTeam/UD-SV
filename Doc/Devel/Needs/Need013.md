@@ -18,5 +18,5 @@ As a historian i need to visualize and situate documents (images, videos, text..
 
 ### Notes:
 
-A solution : billboards image (oriented to face the user camera), with additional features (Clement Chagnaud's work)
+Possible solution : billboards image (oriented to face the user camera), with additional features (Clement Chagnaud's work)
 
