@@ -249,16 +249,62 @@ cd examples
 cp planar.html planar_3dtiles.html
 ````
 Edit the resulting `planar_3dtiles.html` and 
-  - comment out the line `new debug.Debug(view, viewerdDic);`
   - replace `planar.js` with `planar_3dtiles.js` 
 ````
 cp planar.js planar_3dtiles.js
 ````
 Edit the resulting `planar_3dtiles.js`:
- * copy from `(examples/)3dtiles.html` the section of js code contained in the "paragraph" named `Create a new Layer 3d-tiles` into this `planar_3dtiles.js` (place it in global scope e.g. after the calls to `view.addLayer()`.    
- * configure this addlayer code by 
-    - change the URL to hardwire yours e.g. "http://localhost:9090/getCity?city=citydb_v3" 
-    - change `globe` for `view` within the line : `itowns.View.prototype.addLayer.call(globe, $3dTilesLayer);`
+ * copy the following section of js code into this `planar_3dtiles.js` (place it in global scope e.g. after the calls to `view.addLayer()`.  :
+ ````
+     // function use :
+    // For preupdate Layer geomtry :
+    const preUpdateGeo = (context, layer) => {
+        if(layer.root === undefined) {
+            itowns.init3dTilesLayer(context, layer);
+            return [];
+        }
+        itowns.pre3dTilesUpdate(context, layer);
+        return [layer.root];
+    };
+
+    // Create a new Layer 3d-tiles For DiscreteLOD
+    // -------------------------------------------
+    const $3dTilesLayerDiscreteLOD = new itowns.GeometryLayer('3d-tiles-discrete-lod');
+
+    $3dTilesLayerDiscreteLOD.preUpdate = preUpdateGeo;
+    $3dTilesLayerDiscreteLOD.update = itowns.process3dTilesNode(
+        itowns.$3dTilesCulling,
+        itowns.$3dTilesSubdivisionControl
+    );
+    $3dTilesLayerDiscreteLOD.name = 'DiscreteLOD';
+    $3dTilesLayerDiscreteLOD.url = 'http://localhost:9090/getCity?city=citydb_v3';
+    $3dTilesLayerDiscreteLOD.protocol = '3d-tiles'
+    $3dTilesLayerDiscreteLOD.overrideMaterials = true;  // custom cesium shaders are not functional
+    $3dTilesLayerDiscreteLOD.type = 'geometry';
+    $3dTilesLayerDiscreteLOD.visible = true;
+
+    itowns.View.prototype.addLayer.call(view, $3dTilesLayerDiscreteLOD);
+
+    // Create a new Layer 3d-tiles For Viewer Request Volume
+    // -----------------------------------------------------
+    const $3dTilesLayerRequestVolume = new itowns.GeometryLayer('3d-tiles-request-volume');
+
+    $3dTilesLayerRequestVolume.preUpdate = preUpdateGeo;
+    $3dTilesLayerRequestVolume.update = itowns.process3dTilesNode(
+        itowns.$3dTilesCulling,
+        itowns.$3dTilesSubdivisionControl
+    );
+
+    $3dTilesLayerRequestVolume.name = 'RequestVolume';
+    $3dTilesLayerRequestVolume.url = 'http://localhost:9090/getCity?city=citydb_v3';
+    $3dTilesLayerRequestVolume.protocol = '3d-tiles'
+    $3dTilesLayerRequestVolume.overrideMaterials = true;  // custom cesium shaders are not functional
+    $3dTilesLayerRequestVolume.type = 'geometry';
+    $3dTilesLayerRequestVolume.visible = true;
+
+    itowns.View.prototype.addLayer.call(view, $3dTilesLayerRequestVolume);
+
+ ````  
 
 Run `npm start`
 Now open the resulting `http://localhost:8080/itowns2/examples/planar_3dtiles.html` file with your favorite browser.
