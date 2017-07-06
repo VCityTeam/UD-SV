@@ -3,7 +3,7 @@
 
 ### User story:
 
-As an historian, I want to be able to enhance city models with documents. I want to be able to manage, visualise and interact with the documents. I also want to be able to associate them with city object(s) and/or other document(s).
+As an historian, I want to be able to enhance city models with documents. I want to be able to manage, visualise (in the 3D scene as billboard AND in the document browser) and interact with the documents. I also want to be able to associate them with city object(s) and/or other document(s).
 
 Sub Needs:
 
