@@ -23,7 +23,8 @@ These metadata depend on the document and on the quantity of information availab
 FIXME VJA
 
 ### Extended document
-The bundle of a raw-document and its document-metadata
+The bundle of a raw-document and its document-metadata. 
+An extended document [is a](https://en.wikipedia.org/wiki/Is-a) cityObject.
 
 ### Region of a city model:
 Refer to [CityGML definition of LandUse](https://portal.opengeospatial.org/files/?artifact_id=16675)
