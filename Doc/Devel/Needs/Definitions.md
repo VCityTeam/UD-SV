@@ -9,8 +9,8 @@ A reference to a city object (associate to a given media)
 ### Guided tour
 A navigation in space and time step by step. Each step correspond to an historical moment and the camera is positioned and oriented depending on the document(s) related to this historical moment. A complementary text is displayed next to the document.
 
-### Document 
-Images, text, audio, and video.
+### Raw document 
+Images, text, audio, and video
 
 ### Reference (aka link)
 A [reference](https://en.wikipedia.org/wiki/Reference_(computer_science)) like a URI or an [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#URNs) 
@@ -19,7 +19,11 @@ A [reference](https://en.wikipedia.org/wiki/Reference_(computer_science)) like a
 A reference between city object(s) and document(s)
 
 ### Document metadata:
-These metadata depend on the document and on the quantity of information available in and about this document. Document metadata and the associated information model are described in [Sam16]
+These metadata depend on the document and on the quantity of information available in and about this document. Document metadata and the associated information model are described in [Sam16] 
+FIXME VJA
+
+### Extended document
+The bundle of a raw-document and its document-metadata
 
 ### Region of a city model:
 Refer to [CityGML definition of LandUse](https://portal.opengeospatial.org/files/?artifact_id=16675)
