@@ -18,6 +18,7 @@
  * [Need 017](Need017.md): develop a server to stream PostGIS 3D objects having a temporal dimension to the web
  * [Need 018](Need018.md): provide means for storing and accessing semantic information extending the geometric information of a city 
  * [Need 019](Need019.md): navigate from selected geometries within the interface to the attached semantic information
+ * [Need 020](Need020.md): CRUD (manage) extended documents
  
 ## Definitions
 ### Requirement
