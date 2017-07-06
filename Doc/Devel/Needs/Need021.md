@@ -1,4 +1,4 @@
-# Need 021: 
+# Need 021: ability to 3D display the city for a given date 
 
 Definition: a **time-state-city** is a set of city objects all sharing the given date.
 
@@ -31,4 +31,6 @@ FIXME-ESC
  4. 3Dtiles-server packages the answer into a b3dm object that it handles 
     over to the iTowns framework
  5. The 3Dtiles-provider parses the b3dm object to convert it to Threejs object (mesh) 
-    that is integrated to the scene  
+    that is integrated to the scene
+    
+This implies changing the 3Dtiles specification making it a 3D+time specification.
