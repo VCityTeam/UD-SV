@@ -1,7 +1,7 @@
-# Need 010 : Modelisation of temporal dimension of city models
+# Need 010 : database modeling of temporal dimension of city models
 
 ### User story
-As a developper I want to model and implement the temporal dimension of city models. 
+As a database maintainer I want to provide a database model derived from the existing conceptual model so that I can CRUD city models with an additional temporal dimension. 
 
 ### Beneficiary role: 
 Developper, City knowledgeable person, general audience
