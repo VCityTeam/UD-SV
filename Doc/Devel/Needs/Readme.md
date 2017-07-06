@@ -19,6 +19,7 @@
  * [Need 018](Need018.md): provide means for storing and accessing semantic information extending the geometric information of a city 
  * [Need 019](Need019.md): navigate from selected geometries within the interface to the attached semantic information
  * [Need 020](Need020.md): CRUD (manage) extended documents
+ * [Need 021](Need021.md): ability to 3D display the city for a given date
  
 ## Definitions
 ### Requirement
