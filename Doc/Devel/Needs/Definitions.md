@@ -34,9 +34,13 @@ A date associated to a known event (e.g. modification of a geometry, new semanti
 ### Historical period: 
 Period between two historical moments (begining, end)
 
+### GUI
+A client side interface.
+
+### Authoring interface
+An end user (simple i.e. at the level of the GUI) interface that allows the user to author information. 
+
 ## To be defined
-### Interface
-The GUI FIXME ?
 
 ### Document browser
 FIXME
