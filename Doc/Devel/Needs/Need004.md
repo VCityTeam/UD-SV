@@ -13,6 +13,8 @@ Sub Needs:
 
   * Need 015: [Oriented camera mode for documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need015.md)
 
+  * Need 020: [manage (CRUD) extended documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need020.md)
+
 ### Beneficiary role:
 [Researchers (historians, geographers, urbanists)](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) and [general audience](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#general-audience)
 
