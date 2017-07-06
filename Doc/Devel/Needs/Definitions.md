@@ -35,7 +35,8 @@ A date associated to a known event (e.g. modification of a geometry, new semanti
 Period between two historical moments (begining, end)
 
 ## To be defined
-### Interface: the GUI ? FIXME
+### Interface
+The GUI FIXME ?
 
 ### Document browser
 FIXME
