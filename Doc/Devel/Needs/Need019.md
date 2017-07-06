@@ -24,11 +24,7 @@ Ongoing
 ### Tags or keywords
 
 ### Description
-Geometry is a restricted concern that might not sufficient (e.g. to the considered domain of concern like noise, economics, light, sociology...) when modeling (representing) cities. It is also usefull to have 
-  - semantic information such as the kind of city objects (this is the type of object) 
-  - a modeling hierarchy between such levels of semantic information
-  - additional (to the geometry) information concerning these city objects such as the construction date of a building or the owner of a terrain (these are the object attributes)
+This is essentially a technical need requiring the ability to retrieve semantic information (a priori not sent at first to the client GUI) out of the selection of a geometry displayed by the GUI. More precisely, and at first, obtaining the graphical representation of the geometry doesn't require more information than...the geometry. But once display this need expresses the fact that the GUI is a mean to retrieve semantic information and thus the client must have the ability to retrieve that information. When sent to the GUI the geometric information must thus be attached/decorated with a reference some information allowing to retrieve semantic information linked/related to that information.
 
 ### Notes:
-* [CityGML](https://www.citygml.org/) allows to have semantic and a geometric model representing the city and has a strong community.
-* [3DCityDB](www.3dcitydb.org/) is a free CityGML compliant 3D geo database to store, represent, and manage virtual 3D city models on top of PostGIS.
+Note that nothing is said about the hierarchic level of the semantic information that is attained.
