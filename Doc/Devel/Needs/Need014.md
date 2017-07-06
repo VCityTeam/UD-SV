@@ -6,12 +6,13 @@
 As an historian I want to be able to add, modify, delete the [documents](Definitions.md#document), their [references](Definitions.md#reference-aka-link) to [city objects](Definitions.md#city-object) or other documents.
 
 ### Beneficiary role: 
+[City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
 
-### Impact: 
+### Impact: minor
 
-### Maturity:
+### Maturity: immature
 
-### Cost evaluation:
+### Cost evaluation: ?
 
 ### Tags or keywords
 
