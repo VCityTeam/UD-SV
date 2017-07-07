@@ -34,3 +34,7 @@ FIXME-ESC
     that is integrated to the scene
     
 This implies changing the 3Dtiles specification making it a 3D+time specification.
+
+
+ <img src="../Design/images/Architecture Vilo3D example.png" width="1000" height="650" />
+ 
