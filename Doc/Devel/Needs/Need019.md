@@ -1,4 +1,4 @@
-## Need 019 : Provide means for storing and accessing semantic information extending the geometric information of a city 
+## Need 019 : navigate from selected geometries within the interface to the attached semantic information
 
 ### User story
 As a GUI user, I want to retrieve the semantic information attached 
