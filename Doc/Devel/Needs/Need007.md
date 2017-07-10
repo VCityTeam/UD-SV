@@ -1,6 +1,8 @@
 
 # Need 007: 'guided tour' : step by step tour to describe a historical process
 
+subneed : [Need 25](Need025.md)
+
 ### User story
 As an historian, i want a document-enhanced step by step guided tour in the 4d scene (3d + time), in order to describe a historical process. 
 
