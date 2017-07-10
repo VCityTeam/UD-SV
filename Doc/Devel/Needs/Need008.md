@@ -1,5 +1,7 @@
 # Need 008: ability to display historical accuracy in the 3d reconstruction
 
+subneed : [Need 024](Need024.md)
+
 ### User story
 As an historian, i want to display the historical accuracy of city objects constructed from incomplete sources (subject to interpretation). 
 
