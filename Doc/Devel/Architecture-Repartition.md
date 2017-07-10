@@ -5,7 +5,7 @@
 ![](images/Architecture.png)
 
 
-* <img src="Design/images/A.png" width="30" height="30" />: it's the web application blabla...
+* <img src="Design/images/A.png" width="30" height="30" />: it's the web application 
 
 * <img src="Design/images/B.png" width="30" height="30" />: When the (A) send a request (a tileset) here, iTowns request to the (C) the adapter the data. When the (C) return the data on format 3dtiles, iTowns parse this and put the data on Three.js class. iTowns also manages the display.
 
