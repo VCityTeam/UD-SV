@@ -16,10 +16,13 @@
  * [Need 015](Need015.md): user interaction with documents
  * [Need 016](Need016.md): ergonomic exploration of time
  * [Need 017](Need017.md): develop a server to stream PostGIS 3D objects having a temporal dimension to the web
- * [Need 018](Need018.md): provide means for storing and accessing semantic information extending the geometric information of a city 
+ * [Need 018](Need018.md): provide means for storing and accessing thematic information extending the geometric information of a city 
  * [Need 019](Need019.md): navigate from selected geometries within the interface to the attached semantic information
  * [Need 020](Need020.md): CRUD (manage) extended documents
  * [Need 021](Need021.md): ability to 3D display the city for a given date
+ * [Need 022](Need022.md): game controller support
+ * [Need 023](Need023.md): VR support
+ * [Need 024](Need024.md): Provide means for storing and accessing quality information extending the geometric information of a city
  
 ## Definitions
 ### Requirement
