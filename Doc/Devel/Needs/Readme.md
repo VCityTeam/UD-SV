@@ -23,7 +23,7 @@
  * [Need 022](Need022.md): game controller support
  * [Need 023](Need023.md): VR support
  * [Need 024](Need024.md): Provide means for storing and accessing quality information extending the geometric information of a city
-  * [Need 024](Need025.md): Provide means for storing and accessing 'guided tours' data
+  * [Need 025](Need025.md): Provide means for storing and accessing 'guided tours' data
  
  
 ## Definitions
