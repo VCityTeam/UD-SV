@@ -1,4 +1,4 @@
-# Need 008: Game controller support
+# Need 022: Game controller support
 
 ### User story
 As an developper, i want to provide support for game controller input, to facilitate user control for people not used to mouse+keyboard.
