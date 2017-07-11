@@ -25,4 +25,6 @@ The GUI will need to provide access to the following functionalities :
 The GUI will use minimizing/maximimizing windows & sliders to keep from being too cluttered
 
 ### Notes:
-Temporal slider presence must be toggable within the GUI. 
+ * Temporal slider presence must be toggable within the GUI. 
+ * The slider should be a modular component used by the Application 
+   (re-using it in another application must be straighforward)
