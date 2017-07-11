@@ -1,10 +1,5 @@
 # Need 011: a graphical user interface (GUI)
 
-OPEN QUESTIONS :
-tree view ?
-temporal slider always show ? (common to all use case or not)
-
-
 ### User story
 As a historian, i will need easy access to all the functionalities of the tool : movement in the 3d scene, temporal evolution, document browser, guided tour, preferences... though a GUI.
 
@@ -30,3 +25,4 @@ The GUI will need to provide access to the following functionalities :
 The GUI will use minimizing/maximimizing windows & sliders to keep from being too cluttered
 
 ### Notes:
+Temporal slider presence must be toggable within the GUI. 
