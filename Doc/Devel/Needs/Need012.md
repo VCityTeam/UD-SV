@@ -2,7 +2,7 @@
 # Need 012: ability to browse through a document base 
 
 ### User story
-As a historian, i will need to visualize and browse a corpus of historical documents (images/videos..)
+Historians want to visualize and browse a corpus of historical documents (images/videos..) from the document corpus.
 
 TODO Subneeds : UI & backend
 
@@ -10,11 +10,14 @@ TODO Subneeds : UI & backend
 
 ### Impact: 
 
-### Maturity:
+### Maturity: Work in progress
+* Database (UML) model is ready.
 
 ### Cost evaluation:
+1 man month
 
 ### Tags or keywords
+Documents, Images, Search, Filter
 
 ### Description
 
