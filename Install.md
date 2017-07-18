@@ -119,6 +119,8 @@ which should yield a result of the form
   BOX(1843184.223319 5175387.163907,1845435.993083 5177744.541117)
 ````
 Edit configuration file `building-server.git/conf/building.yml` in order to inform the extent entry labeled with the result of the above command (remove `lyon_lod1:`, `lyon_lod2:` and `test:` sections). The `cities:` section of the `building.yml` configuration file should then be of the form (note that the DB access was also modified):
+
+Under ''flask'' related configuration, enter the details of Postgis DB you have just created.
 ````
 flask:
   DEBUG: True
@@ -174,6 +176,7 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
    ````
      git clone https://github.com/Oslandia/py3dtiles.git
      pip install ./py3dtiles/ --upgrade
+     deactivate #since you are done with all necessary installation
    ````
    Warning: when doing the `pip install` make sure you are pointing to the `./py3dtiles` local directory as opposed to just `py3dtiles` that will look for some online repository version that won't be correct.
    
@@ -307,7 +310,7 @@ Edit the resulting `planar_3dtiles.js`:
  ````  
 
 Run `npm start`
-Now open the resulting `http://localhost:8080/itowns2/examples/planar_3dtiles.html` file with your favorite browser.
+Now open the resulting `http://localhost:8080/examples/planar_3dtiles.html` file with your favorite browser.
 
 *Note : if after running `npm start` you have an error message saying that node is not find in `/usr/bin/env`, try running the following : `sudo ln -s /usr/bin/nodejs /usr/bin/node`. Explainations : on ubuntu node.js package is installed in /usr/bin/nodejs and when npm starts, it runs a the command `/usr/bin/env node` which it doesn't find. `sudo ln -s /usr/bin/nodejs /usr/bin/node` allows to create a symbolic link between node and nodejs in order to allow npm to find nodejs.*
 
