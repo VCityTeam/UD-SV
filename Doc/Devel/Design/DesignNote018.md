@@ -15,25 +15,39 @@ The current process for streaming the geometries to the server is:
 We thus need to:
 
 1. Modify the API of building-server in order to get the identifier of the geometries when fetching them.
-2. Modify py3dtiles to add this identifier next to the geometries
+2. Modify py3dtiles to add this identifier next to the geometries.
+3. Modify the API of building-server to provide methods to retrieve semantic information from a list of geometries' ids.
 
-### Modifification of the API of building-server
+We will detail these 3 steps below
+
+### 1. First modifification of the API of building-server 
 
 
 
-### Modification of py3dtiles
+### 2. Modification of py3dtiles
 
-In the 3d-tiles standard, a tile can represent different type of geometries and be in different formats (more information [here](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status)). In our application, we mainly need stream geometries that will be converted into [Batched 3D Model](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/Batched3DModel/README.md) (*.b3dm) files to form tiles. Thus, we will only modify the creation of b3dm tiles for adding the identifier of the geometries in the tiles for now. We will deal with the other tiles formats later if needed.
+In the 3d-tiles standard, a tile can represent different type of geometries and be in different formats (more information [here](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status)). In our application, we mainly need stream geometries that will be converted into [Batched 3D Model](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/Batched3DModel/README.md) (*.b3dm) files to form tiles. Thus, we first focus on this format for adding the identifier of the geometries in the tiles. 
 
 Important information from the [b3dm doc](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/Batched3DModel/README.md):
 
 * [b3dm Layout](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/Batched3DModel#layout)
-* Each geometry has a batchId attribute in the glTF section of the b3dm file which is an integer with values in [0, number of models in the batch - 1]. It is not very clear what "model" means here but it seems to be the same as what we call "geometry" in this document.
+* Each geometry has a batchId attribute in the glTF section of the b3dm file which is an integer with values in [0, number of models in the batch - 1]. Here model is the same as what we call "geometry" in this document (it is also called "feature" in a b3dm file).
 * Each b3dm file has a [batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/Batched3DModel#batch-table) which contains per-model application-specific metadata, indexable by batchId.
 
 We thus propose to use this batch table to stream the identifier of the geometries from the database to the client.
 
+Additional documentation about the batch table can be found [here](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/BatchTable).
 
+This documentation teaches us that:
 
+* b3dm is not the only format using a batch table. There is also [Instanced 3D Model](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/Instanced3DModel/README.md) (i3dm), [Point Cloud](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/PointCloud/README.md) (pnts) and [Vector](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/VectorData/README.md) (vctr) which are formats supported by 3d-tiles standard. Using the batch table to transfer information linked to the geometry is thus not format dependant.
+
+* [Different ways to use the batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/BatchTable#layout). 
+
+* There is an example with what we want to do (transfer an id). Related to design note 17, there is also examples with temporal information streamed this way. In [this example](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/BatchTable#json-header) it seems possible to stream a lot of semantic information which could be another way of doing this step: instead of only streaming the id of the geometries, we could stream all the semantic information in this batched table which would avoid more queries on the server. This is a design choice that needs to be discussed (maybe with JGA ?). How do other applications using 3d-tiles do ?
+
+* There is the possibility of creating a [hierarchy in the metadata of the batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/BatchTable#json-header) for complex cases. This might be useful in our case ?
+
+### 3. Second Modification of the API of building-server 
 
 
