@@ -20,7 +20,7 @@ The workflow is described [here](https://github.com/MEPP-team/RICT/blob/master/D
 Note: The client (iTowns) only knows the hierarchy of the tiles and when it needs to display a region, it gets the geometries of the tiles that are in this region.
 
 Each cityGML object natively has a `creationDate` and a `terminationDate` attribute as shown illustrated on the following diagram (extracted from CityGML 2.0 documentation):
-![](Pictures/CityGMLCore.png)
+![](images/CityGMLCore.png)
 
 We have one choice (and two solutions) in order to use this temporal information:
 
@@ -43,7 +43,7 @@ We choose solution 2.
 
 The workflow is detailed here:
 
-![](Pictures/Workflow_For_Temporal_Server_Side.png)
+![](images/Workflow_For_Temporal_Server_Side.png)
 
 Currently, we know the valid period of each tile. This period begins at the earliest starting date among the city objects in the tile and end at the latest ending date among these. It might be possible that some objects don't exist at a certain date for which a tile is diplayed ( because the date is in the valid period of the tile but not in the valid period of the object).
 The problem is that with the method proposed above, we don't know the valid period of a city object on the client side. For that, we propose the following method:
@@ -52,4 +52,4 @@ Currently, in the gltf file each geometry has an id named: batch_id. In the b3dm
 In the client, we use these temporal information to know if a city object should be displayed or not. This comparison process is done in the shaders.
 
 The explication of tile and b3dm:
-![](Pictures/B3dmExplication.png)
+![](images/B3dmExplication.png)
