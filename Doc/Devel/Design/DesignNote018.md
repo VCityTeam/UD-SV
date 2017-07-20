@@ -21,7 +21,7 @@ We thus need to:
 
 
 
-#### Modification of py3dtiles
+### Modification of py3dtiles
 
 In the 3d-tiles standard, a tile can represent different type of geometries and be in different formats (more information [here](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status)). In our application, we mainly need stream geometries that will be converted into [Batched 3D Model](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/Batched3DModel/README.md) (*.b3dm) files to form tiles. Thus, we will only modify the creation of b3dm tiles for adding the identifier of the geometries in the tiles for now. We will deal with the other tiles formats later if needed.
 
