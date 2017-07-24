@@ -48,6 +48,13 @@ This documentation teaches us that:
 
 * There is the possibility of creating a [hierarchy in the metadata of the batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/BatchTable#json-header) for complex cases. This might be useful in our case ?
 
+**Open questions**: 
+ - there is the technical freedom to leave any information associated to a geometry within the server (hierarchy, attributes, ADE...) or to transmsit it to the client. What are the additionnal criteria enabling to make a decision concerning the "optimal" tradeof ? Are there 
+     * some use cases that will add some criteria ? (note that the experimental handling of hierarchies as done in [the "Using glTF for streaming CityGML 3D city models" artcile](http://sci-hub.cc/10.1145/2945292.2945312) does not add any constraint: when queried about a hierarchy of a geometrical object, we can request this hierarchy from the server)
+     * some communication constraints ? (the server sends the information once and no further request shall be made)
+     * some delay constraints ? (having to handle server querries when dealing with end-user interaction would introduce a delay that is not compatible with the expected fluidity of contemporary GUI)
+     * ...
+
 ### 3. Second Modification of the API of building-server 
 
 
