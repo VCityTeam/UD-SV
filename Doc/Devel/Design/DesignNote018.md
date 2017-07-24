@@ -34,7 +34,7 @@ Important information from the [b3dm doc](https://github.com/AnalyticalGraphicsI
 * Each geometry has a batchId attribute in the glTF section of the b3dm file which is an integer with values in [0, number of models in the batch - 1]. Here model is the same as what we call "geometry" in this document (it is also called "feature" in a b3dm file).
 * Each b3dm file has a [batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/Batched3DModel#batch-table) which contains per-model application-specific metadata, indexable by batchId.
 
-We thus propose to use this batch table to stream the identifier of the geometries from the database to the client.
+We thus propose to use this batch table to stream the identifier of the geometries of the database from the database server to the client.
 
 Additional documentation about the batch table can be found [here](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/BatchTable).
 
