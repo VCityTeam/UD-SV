@@ -39,8 +39,8 @@ This documentation teaches us that:
 ## Proposition and Discussions
 
 In order to provide access to semantic and hierarchical information of cityobjects client-side, there are two choices:
-  * __Solution n°1:__ We transfer the id of the geometries of the database in the batch table, we store it on the client side and when some semantic or hirarchical information is needed client-side, we run queries in the database using this id.
-  * __Solution n°2:__ We transfer all the semantic and hierarchical information of city objects to the client by using the method described in [Schi16], we store it in the client so we don't have to run queries every time we need semantic or hierarchical information.
+  * __Solution n°1:__ We transfer the id of the geometries of the database in the batch table, we store it on the client side and when some semantic or hierarchical information is needed on the client-side, we run queries in the database using this id.
+  * __Solution n°2:__ We transfer all the semantic and hierarchical information of city objects to the client by using the method described in [Schi16] and we store it in the client so we don't have to run queries every time we need semantic or hierarchical information.
      
 **Inputs for choosing between the two solutions:**
 
