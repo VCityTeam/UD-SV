@@ -64,7 +64,16 @@ If we choose this solution, we need to:
 2. Modify py3dtiles to add this identifier next to the geometries.
 3. Modify the API of building-server to provide methods to retrieve semantic information from a list of geometries' ids.   
 
+### Solution n°1 description:
+1. Modify the API of building-server: when a geometry is requested add the ability to retrieve
+   * the back-link to 3DCityDB (just as for solution 1): the identifier of the geometry within the 3DCityDB database
+   * the hierachical information: the identifier of its parent within the geometrical hierarchy (the id is still the one the 3DCityDB)
+2. Modify py3dtiles to add this identifier **together with the hierachical identifier** asside to the geometries
+3. Nothing ! This is precisely what is avoided by pre-sending all the required information to the client
 
+Note:
+  - On step 2., when sending the hierarchical information, there is the additional difficulty of having to represent semantic nodes (e.g. Building) for which the geometry is not present but defined as the sum of the geometries of its semantic sub-nodes (Wall, Roof). Note that [Schi16] uses the trick of extending the Batch Table beyond the number of Geometric batches in order to store entries without geometries. An alternative is to defined such nodes as having a batch id but an empty (null) geometry.
+  
 ## References
 
 [Schi16] Schilling, A., Bolling, J., & Nagel, C. (2016, July). Using glTF for streaming CityGML 3D city models. In Proceedings of the 21st International Conference on Web3D Technology (pp. 109-116). ACM.
