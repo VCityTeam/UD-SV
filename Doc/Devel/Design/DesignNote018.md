@@ -64,7 +64,7 @@ If we choose this solution, we need to:
 2. Modify py3dtiles to add this identifier next to the geometries.
 3. Modify the API of building-server to provide methods to retrieve semantic information from a list of geometries' ids.   
 
-### Solution n°1 description:
+### Solution n°2 description:
 1. Modify the API of building-server: when a geometry is requested add the ability to retrieve
    * the back-link to 3DCityDB (just as for solution 1): the identifier of the geometry within the 3DCityDB database
    * the hierachical information: the identifier of its parent within the geometrical hierarchy (the id is still the one the 3DCityDB)
