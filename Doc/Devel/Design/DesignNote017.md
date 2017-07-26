@@ -53,3 +53,16 @@ In the client, we use these temporal information to know if a city object should
 
 The explication of tile and b3dm:
 ![](images/B3dmExplication.png)
+
+
+### Discussion on the 26/07/2017
+
+What we need to do next:
+
+  * In the database:
+     * Fill the database with temporal CityGML examples (refer to [this issue](https://github.com/MEPP-team/RICT/issues/23))
+  * In building-server:
+     * Modify the API of building server to retrieve this temporal information from the database
+     * Modify the way tiles are created in order to add a temporal bounding interval to them
+  * In py3dtiles:
+     * Add the temporal information into the tiles: in the attributes of the b3dm linked to the batch_ids, add a temporal attribute having the corresponding value from the database
