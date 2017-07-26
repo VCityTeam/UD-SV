@@ -73,5 +73,3 @@ Each part is detailed below:
 
 We create a dev database for the issues linked to temporality. Then, we insert temporal CityGML files in it (provided by FPE).
 In these temporal files sometimes the creationDate and terminatioNDate of CityGML objects are used and sometimes the yearOfConstruction and yearOfDemolition dates are used. What are the differences between these dates and which ones should we use ?
-
-### Fill the database with temporal CityGML examples
