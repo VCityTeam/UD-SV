@@ -53,7 +53,8 @@ In order to provide access to semantic and hierarchical information of cityobjec
      * ...
   * Search for feedback regarding the proposition of Schilling et al. in [Schi16]. (maybe from the 3d-tiles community or in other articles citing it).
   * Search for general criteria of decision in similar problems.
-  * How does NSA manage the picking of one building or one roof or one wall from a tile ?
+  * How does NSA manage the picking of one building or one roof or one wall from a tile ? [video](https://sendvid.com/9cl7253z#)
+In order to do that, in each tile, every building has a batch_id. This is done on the server when building the tiles. Client-side, three.js propose a gltf loader function. However, it does not implement the functionnality to retrieve the batch_id from a gltf file. This functionnality has been added by NSA in iTowns and JGA asked three.js to add it to their gltf loader. After parsing the gltf file, a three.js object containing the b3dm + batch_ids + gltf information is created (and this object is potentially linked to the tile of the tileset stored client side). Then, when the user picks something in the scene, the batch_ids are transmistted to the shaders next to the geometries and a test allow to know all the triangles having the same batch_id as the one selected.
   * Look if other people had the same problem and justified their choices.
 
 ### Solution n°1 description:
