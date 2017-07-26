@@ -55,7 +55,7 @@ The explication of tile and b3dm:
 ![](images/B3dmExplication.png)
 
 
-### Discussion on the 26/07/2017
+### Discussion of the 26/07/2017
 
 What we need to do next:
 
@@ -66,3 +66,12 @@ What we need to do next:
      * Modify the way tiles are created in order to add a temporal bounding interval to them
   * In py3dtiles:
      * Add the temporal information into the tiles: in the attributes of the b3dm linked to the batch_ids, add a temporal attribute having the corresponding value from the database
+
+Each part is detailed below:
+     
+### Fill the database with temporal CityGML examples
+
+We create a dev database for the issues linked to temporality. Then, we insert temporal CityGML files in it (provided by FPE).
+In these temporal files sometimes the creationDate and terminatioNDate of CityGML objects are used and sometimes the yearOfConstruction and yearOfDemolition dates are used. What are the differences between these dates and which ones should we use ?
+
+### Fill the database with temporal CityGML examples
