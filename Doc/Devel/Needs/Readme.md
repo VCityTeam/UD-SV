@@ -24,6 +24,8 @@
  * [Need 023](Need023.md): VR support
  * [Need 024](Need024.md): Provide means for storing and accessing quality information extending the geometric information of a city
   * [Need 025](Need025.md): Provide means for storing and accessing 'guided tours' data
+  * [Need 026](Need026.md): Workspaces to manage concurrent points of view of historians
+  * [Need 027](Need027.md): Explicit and justify architecture and software component choices
  
  
 ## Definitions
