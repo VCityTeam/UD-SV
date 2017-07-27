@@ -41,22 +41,7 @@ This documentation teaches us that:
 In order to provide access to semantic and hierarchical information of cityobjects client-side, there are two choices:
   * __Solution n°1:__ We transfer the id of the geometries of the database in the batch table, we store it on the client side and when some semantic or hierarchical information is needed on the client-side, we run queries in the database using this id.
   * __Solution n°2:__ We transfer all the semantic and hierarchical information of city objects to the client by using the method described in [Schi16] and we store it in the client so we don't have to run queries every time we need semantic or hierarchical information.
-     
-**Inputs for choosing between the two solutions:**
-
- There is the technical freedom to leave any information associated to a geometry within the server (hierarchy, attributes, ADE...) or to transmsit it to the client. 
- 
-   * Is there additionnal criteria enabling to make a decision concerning the "optimal" tradeof ? Are there:
-     * some use cases that will add some criteria ? (note that the experimental handling of hierarchies as done in [Schi16] does not add any constraint: when queried about a hierarchy of a geometrical object, we can request this hierarchy from the server)
-     * some communication constraints ? (the server sends the information once and no further request shall be made)
-     * some delay constraints ? (having to handle server querries when dealing with end-user interaction would introduce a delay that is not compatible with the expected fluidity of contemporary GUI)
-     * ...
-  * Search for feedback regarding the proposition of Schilling et al. in [Schi16]. (maybe from the 3d-tiles community or in other articles citing it).
-  * Search for general criteria of decision in similar problems.
-  * How does NSA manage the picking of one building or one roof or one wall from a tile ? [video](https://sendvid.com/9cl7253z#)
-In order to do that, in each tile, every building has a batch_id. This is done on the server when building the tiles. Client-side, three.js propose a gltf loader function. However, it does not implement the functionnality to retrieve the batch_id from a gltf file. This functionnality has been added by NSA in iTowns and JGA asked three.js to add it to their gltf loader. After parsing the gltf file, a three.js object containing the b3dm + batch_ids + gltf information is created (and this object is potentially linked to the tile of the tileset stored client side). Then, when the user picks something in the scene, the batch_ids are transmistted to the shaders next to the geometries and a test allow to know all the triangles having the same batch_id as the one selected.
-  * Look if other people had the same problem and justified their choices.
-
+  
 ### Solution n°1 description:
 
 If we choose this solution, we need to:
@@ -74,6 +59,26 @@ If we choose this solution, we need to:
 
 Note:
   - On step 2., when sending the hierarchical information, there is the additional difficulty of having to represent semantic nodes (e.g. Building) for which the geometry is not present but defined as the sum of the geometries of its semantic sub-nodes (Wall, Roof). Note that [Schi16] uses the trick of extending the Batch Table beyond the number of Geometric batches in order to store entries without geometries. An alternative is to defined such nodes as having a batch id but an empty (null) geometry.
+     
+     
+### Inputs for choosing between the two solutions:
+
+ There is the technical freedom to leave any information associated to a geometry within the server (hierarchy, attributes, ADE...) or to transmsit it to the client. 
+ 
+   * Is there additionnal criteria enabling to make a decision concerning the "optimal" tradeof ? Are there:
+     * some use cases that will add some criteria ? (note that the experimental handling of hierarchies as done in [Schi16] does not add any constraint: when queried about a hierarchy of a geometrical object, we can request this hierarchy from the server)
+     * some communication constraints ? (the server sends the information once and no further request shall be made)
+     * some delay constraints ? (having to handle server querries when dealing with end-user interaction would introduce a delay that is not compatible with the expected fluidity of contemporary GUI)
+     * ...
+  * Search for feedback regarding the proposition of Schilling et al. in [Schi16]. (maybe from the 3d-tiles community or in other articles citing it).
+  * Search for general criteria of decision in similar problems.
+  * How does NSA manage the picking of one building or one roof or one wall from a tile ? [video](https://sendvid.com/9cl7253z#)
+In order to do that, in each tile, every building has a batch_id. This is done on the server when building the tiles. Client-side, three.js propose a gltf loader function. However, it does not implement the functionnality to retrieve the batch_id from a gltf file. This functionnality has been added by NSA in iTowns and JGA asked three.js to add it to their gltf loader. After parsing the gltf file, a three.js object containing the b3dm + batch_ids + gltf information is created (and this object is potentially linked to the tile of the tileset stored client side). Then, when the user picks something in the scene, the batch_ids are transmistted to the shaders next to the geometries and a test allow to know all the triangles having the same batch_id as the one selected.
+  * Look if other people had the same problem and justified their choices
+
+In conclusion, the choice between the two solutions is linked to [this discussion](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote027.md#thick---thin-client---server-strategy). What we need to do next is to clearly define the use of the semantic information client-side. This will allow to choose if we need to send all the information to the client or if we should leave it in the database.
+
+Another remaining question is how to transfer the hierarchical information to the client. This is currently difficult using 3d-tiles as explained in [Schi16]. Indeed, the semantic information can easily transfered using the attributes of b3dm but there is nothing yet that is implemented to efficiently transfer the hierarchy of city objects. [Schi16] make a proposition but what are the feedbacks from the 3d-tiles comunity and how is it done in other applications ?
   
 ## References
 
