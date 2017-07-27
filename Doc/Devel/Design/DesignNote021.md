@@ -3,7 +3,7 @@
 
 This is the part of client of this [design note](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md)
 
-![](images/PartieClient.png)
+![](images/PartieClient2.png)
 
 ### The work we have to do in iTowns, the client part.
 
