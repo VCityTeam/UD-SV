@@ -9,7 +9,7 @@ This is the part of client of this [design note](https://github.com/MEPP-team/RI
 
 #### Modify the reader of tileset
 
-After the [server modify the tileset with temporal information from database](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md#modify-the-api-of-building-server-to-retrieve-this-temporal-information-from-the-database), we have to modify in iTowns the reader of tileset for manage the temporal information. When we do that, we can know if we display the city object inside the bounding.
+After the [server modify the tileset with temporal information from database](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md#modify-the-api-of-building-server-to-retrieve-this-temporal-information-from-the-database), we have to modify in iTowns the reader of tileset for manage the temporal information. When we do that, we can know if we display the tile inside the bounding, if the tile is in the camera frustum and display date is in the temporal interval of existence of the tile.
 
 #### Recover/ Parse [the b3dm file](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/Batched3DModel)
 
