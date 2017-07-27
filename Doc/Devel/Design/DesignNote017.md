@@ -65,7 +65,7 @@ What we need to do next:
      * Modify the API of building server to retrieve this temporal information from the database
      * Modify the way tiles are created in order to add their temporal interval of existence
   * In py3dtiles:
-     * Add the temporal information into the tiles: in the attributes of the b3dm linked to the batch_ids, add a temporal attribute having the corresponding value from the database
+     * Add temporal interval of existence of each city object in the tiles: in the attributes of the b3dm linked to the batch_ids, add a temporal attribute having the corresponding value from the database
 
 Each part is detailed below:
      
@@ -86,7 +86,7 @@ Like this example:
 
 ![](images/TileExample.png)
 
-#### Add the temporal information into the tiles
+#### Add temporal interval of existence of each city object in the tiles
 
 Changes should be made to [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3d-tiles-temporal based on 3dCityDB branch and to [MEPP-team's fork of Oslandia's py3dtiles](https://github.com/MEPP-team/py3dtiles) on a to be created branch named 3d-tiles-temporal.
 
