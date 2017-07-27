@@ -83,7 +83,7 @@ This should be done in [MEPP-team's fork of Oslandia's building-server](https://
 Each tile is composed of city objects which have a temporal interval of existence. The temporal interval of existence of a tile is starting at the earliest creationDate from its city objects and ending at the latest terminationDate of its city objects. The bounding volume of each tile (currently 3D) should be extended with this temporal interval. This should be done in [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3d-tiles-temporal based on 3dCityDB branch.
 
 Like this example: 
-![](images/Tile.png)
+![](images/TileExample.png)
 
 #### Add the temporal information into the tiles
 
