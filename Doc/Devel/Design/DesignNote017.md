@@ -19,10 +19,16 @@ The workflow is described [here](https://github.com/MEPP-team/RICT/blob/master/D
 
 Note: The client (iTowns) only knows the hierarchy of the tiles and when it needs to display a region, it gets the geometries of the tiles that are in this region.
 
-Each cityGML object natively has a `creationDate` and a `terminationDate` attribute as shown illustrated on the following diagram (extracted from CityGML 2.0 documentation):
-![](images/CityGMLCore.png)
+Each CityGML object natively has a `creationDate` and a `terminationDate` attribute as shown illustrated on the following diagram (extracted from CityGML 2.0 documentation):
+![](images/CityGMLCore&ThematicModules.png)
 
-We have one choice (and two solutions) in order to use this temporal information:
+There is not much precision about whether this dates reffers to [validTime](https://en.wikipedia.org/wiki/Temporal_database) or to [Transaction time](https://en.wikipedia.org/wiki/Temporal_database). In addition, some of the thematic modules (represented in blue in the UML diagram above) also have attributes linked to temporality: `yearOfConstruction` and `yearOfDemolition`. Their description in the CityGML 2.0 documentation is more detailed. Example for the building model:
+
+"The year of construction (yearOfConstruction) and the year of demolition (yearOfDemolition) of the building or building part. These attributes can be used to describe the chronology of the building development within a city model. The points of time refer to real world time."
+
+We can thus deduce that `creationDate` and a `terminationDate` reffer to Transation time and `yearOfConstruction` and `yearOfDemolition` reffer to Valid time. In conclusion, we will use `yearOfConstruction` and `yearOfDemolition` to answer our need because they reffer to real world time.
+
+We have two solutions in order to use this temporal information:
 
 1. Solution A: leave this information on the server side
 
@@ -71,8 +77,7 @@ Each part is detailed below:
      
 #### Fill the database with temporal CityGML examples
 
-We create a dev database for the issues linked to temporality. Then, we insert temporal CityGML files in it (provided by FPE).
-In these temporal files sometimes the creationDate and terminatioNDate of CityGML objects are used and sometimes the yearOfConstruction and yearOfDemolition dates are used. What are the differences between these dates and which ones should we use ?
+We create a dev database for answering the issues linked to adding a temporal dimension to our application. Then, we insert temporal CityGML files in it (provided by FPE).
 
 #### Modify the API of building server to retrieve this temporal information from the database
 
