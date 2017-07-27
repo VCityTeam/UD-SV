@@ -272,7 +272,7 @@ Edit the resulting `planar_3dtiles.js`:
 
     // Create a new Layer 3d-tiles For DiscreteLOD
     // -------------------------------------------
-    const $3dTilesLayerDiscreteLOD = new itowns.GeometryLayer('3d-tiles-discrete-lod');
+    const $3dTilesLayerDiscreteLOD = new itowns.GeometryLayer('3d-tiles-discrete-lod', view.scene);
 
     $3dTilesLayerDiscreteLOD.preUpdate = preUpdateGeo;
     $3dTilesLayerDiscreteLOD.update = itowns.process3dTilesNode(
@@ -290,7 +290,7 @@ Edit the resulting `planar_3dtiles.js`:
 
     // Create a new Layer 3d-tiles For Viewer Request Volume
     // -----------------------------------------------------
-    const $3dTilesLayerRequestVolume = new itowns.GeometryLayer('3d-tiles-request-volume');
+    const $3dTilesLayerRequestVolume = new itowns.GeometryLayer('3d-tiles-request-volume', view.scene);
 
     $3dTilesLayerRequestVolume.preUpdate = preUpdateGeo;
     $3dTilesLayerRequestVolume.update = itowns.process3dTilesNode(
