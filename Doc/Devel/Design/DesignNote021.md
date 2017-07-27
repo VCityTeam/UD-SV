@@ -6,7 +6,7 @@ This is the part of client of this [design note](https://github.com/MEPP-team/RI
 
 ### The work we have to do in iTowns, the client part.
 
-![](images/Partie client.png)
+![](images/PartieClient.png)
 
 #### Modify the reader of tileset
 
