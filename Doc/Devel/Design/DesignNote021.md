@@ -6,6 +6,8 @@ This is the part of client of this [design note](https://github.com/MEPP-team/RI
 
 ### The work we have to do in iTowns, the client part.
 
+![](images/Partie client.png)
+
 #### Modify the reader of tileset
 
 After the [server modify the tileset with temporal information from database](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md#modify-the-api-of-building-server-to-retrieve-this-temporal-information-from-the-database), we have to modify in iTowns the reader of tileset for manage the temporal information. When we do that, we can know if we display the city object inside the bounding.
