@@ -229,7 +229,7 @@ which will compute the bounding boxes out of the content of the pointed table wi
         logto2: /Users/mylogin/tmp/building-server.git/building-server.log                # <--- change this
         env: BUILDING_SETTINGS=/Users/mylogin/tmp/building-server.git/conf/building.yml   # <--- change this
    ````
- * `(venv): uwsgi --yml conf/building.uwsgi.yml --http-socket :9090 &`
+ * `(venv): uwsgi --yml conf/building.uwsgi.yml --http-socket :9090`
  * `(venv): deactivate     # Exiting the python virtual environment`
  * Assert that resulting REST server is operational by opening e.g. `http://localhost:9090/#!/default/get_api_get_geometry`
 
