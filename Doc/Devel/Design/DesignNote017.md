@@ -60,16 +60,31 @@ The explication of tile and b3dm:
 What we need to do next:
 
   * In the database:
-     * Fill the database with temporal CityGML examples (refer to [this issue](https://github.com/MEPP-team/RICT/issues/23))
+     * Fill the database with temporal CityGML examples (refer to the first task of [this issue](https://github.com/MEPP-team/RICT/issues/23))
   * In building-server:
      * Modify the API of building server to retrieve this temporal information from the database
-     * Modify the way tiles are created in order to add a temporal bounding interval to them
+     * Modify the way tiles are created in order to add their temporal interval of existence
   * In py3dtiles:
      * Add the temporal information into the tiles: in the attributes of the b3dm linked to the batch_ids, add a temporal attribute having the corresponding value from the database
 
 Each part is detailed below:
      
-### Fill the database with temporal CityGML examples
+#### Fill the database with temporal CityGML examples
 
 We create a dev database for the issues linked to temporality. Then, we insert temporal CityGML files in it (provided by FPE).
 In these temporal files sometimes the creationDate and terminatioNDate of CityGML objects are used and sometimes the yearOfConstruction and yearOfDemolition dates are used. What are the differences between these dates and which ones should we use ?
+
+#### Modify the API of building server to retrieve this temporal information from the database
+
+This should be done in [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3d-tiles-temporal based on 3dCityDB branch. It is needed to change the SQL queries retrieving the city objects of the tiles to also get the temporal information.
+
+#### Modify the way tiles are created in order to add their temporal interval of existence
+
+Each tile is composed of city objects which have a temporal interval of existence. The temporal interval of existence of a tile is starting at the earliest creationDate from its city objects and ending at the latest terminationDate of its city objects. The bounding volume of each tile (currently 3D) should be extended with this temporal interval. This should be done in [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3d-tiles-temporal based on 3dCityDB branch.
+
+#### Add the temporal information into the tiles
+
+Changes should be made to [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3d-tiles-temporal based on 3dCityDB branch and to [MEPP-team's fork of Oslandia's py3dtiles](https://github.com/MEPP-team/py3dtiles) on a to be created branch named 3d-tiles-temporal.
+
+In building-server, the temporal information of each city object must be transferred to py3dtiles. In py3dtiles, the temporal information must be added in the attributes of the b3dm using the batch_id.
+
