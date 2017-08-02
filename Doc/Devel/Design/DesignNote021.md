@@ -1,7 +1,7 @@
 ## Design note of [need 21](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need021.md)
 
 
-This is the client side design corresponding to [this server side design](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md)
+This is the client side design corresponding to [this server side design](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md).
 
 ![](images/PartieClient2.png)
 
