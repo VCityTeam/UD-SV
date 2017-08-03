@@ -97,3 +97,10 @@ Changes should be made to [MEPP-team's fork of Oslandia's building-server](https
 
 In building-server, the temporal information of each city object must be transferred to py3dtiles. In py3dtiles, the temporal information must be added in the attributes of the b3dm using the batch_id.
 
+
+
+### Discussion of the 03/08/2017
+
+#### In the data base, how we can do the communication between the cityobject and the building.
+
+When we select the cityobject, we have to do a jointure between the table cityobject and the table building with the id of them. With that we can associte the date with the geometry.
