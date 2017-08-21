@@ -13,7 +13,7 @@ We have 3 types of data
  - Elevation in Geotiff 
  
 
-#### Points Cloud 
+### Points Cloud 
 
   You have to install [Potree Converter](https://github.com/potree/PotreeConverter), when you have this 
 create a new folder, put the folder point_cloud from Zanzibar file (*.las) .
@@ -38,6 +38,6 @@ Now you should have that:
 
 <img src="../Image/ZanzibarPointCloud.png"/>
 
-#### Orthophoto 
+### Orthophoto 
 
-#### Elevation 
+### Elevation 
