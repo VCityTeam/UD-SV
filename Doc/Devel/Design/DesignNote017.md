@@ -7,7 +7,7 @@ We chose to contribute to 3dtiles standard because it:
  - is implemented in iTowns (and our solution is based on iTowns framework for now).
  - is also used by Cesium.
 
-The workflow is described [here](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need021.md#notes). This design note answers parts 3 to 5 of this workflow that goes: 
+The client/server workflow for displaying a city is described [here](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need021.md#notes). This design note answers parts 3 to 5 of this workflow that goes: 
 
 ````
 3. the 3Dtiles-server forwards the request to a 3DBCity server
