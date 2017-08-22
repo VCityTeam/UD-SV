@@ -31,13 +31,14 @@ Copy the folder data temp cloud.js and sources.json in 3d-tiles-sample/tileset/Z
 In iTowns: 
 
 Open the pointcloud.html, change the url [here](https://github.com/iTowns/itowns/blob/master/examples/pointcloud.html#L105)
-with 
-```` http://localhost:8003/tilesets/Zanzibar/cloud.js ````
+with
+````http://localhost:8003/tilesets/Zanzibar/cloud.js ````
 
 Now you should have that: 
 
 <img src="../Image/ZanzibarPointCloud.png"/>
 
 ### Orthophoto 
+
 
 ### Elevation 
