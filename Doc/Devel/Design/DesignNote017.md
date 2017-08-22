@@ -45,7 +45,7 @@ We have two solutions in order to use this temporal information:
  
    We propose a 4D evolution of 3D-tiles (4D-tiles ?) : 3D-tiles + temporal. With this evolutoin, each tile has then a bounding volume as well as an additional temporal interval of existence (corresponding to `yearOfConstruction` and `yearOfDemolition` attributes). This requires to change the way tilesets are constructed in order to add the temporal information. Indeed, if we don't, we might have tiles with objects close to each other in the spatial dimension but existing on very disparate time periods. On the client side, we will choose if a tile is displayed not only based on its 3D bounding volume but also on its temporal existence. If a tile is displayed at a date d but a city object in the tile doesn't exist at this date d, then we will use culling process to not display this city object (kind of a temporal culling by city object).
 
-We choose solution 2.
+We choose solution B because the temporal informations are needed for the visualisation process and thus leaving the intelligence server-side will require to run queries at every frame. Moreover, by choosing this solution, we use the same strategy for the geometry and the temporal information. More information [here](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote027.md#thick---thin-client---server-strategy)
 
 The workflow is detailed here:
 
