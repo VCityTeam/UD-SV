@@ -26,7 +26,7 @@ There is not much precision about whether this dates reffers to [validTime](http
 
 "The year of construction (yearOfConstruction) and the year of demolition (yearOfDemolition) of the building or building part. These attributes can be used to describe the chronology of the building development within a city model. The points of time refer to real world time."
 
-We can thus deduce that `creationDate` and a `terminationDate` reffer to Transation time and `yearOfConstruction` and `yearOfDemolition` reffer to Valid time. In conclusion, we will use `yearOfConstruction` and `yearOfDemolition` to answer our need because they reffer to real world time.
+It seems that having two possible way of storing dates linked to objects is an issue of CityGML. We can either use `creationDate` and a `terminationDate` or `yearOfConstruction` and `yearOfDemolition`. In the following, we will use `yearOfConstruction` and `yearOfDemolition` (our datasets are constructed like this).
 
 We have two solutions in order to use this temporal information:
 
@@ -79,17 +79,17 @@ Each part is detailed below:
 
 We create a dev database for answering the issues linked to adding a temporal dimension to our application. Then, we insert temporal CityGML files in it (provided by FPE).
 
-#### Modify the API of building server to retrieve this temporal information from the database
-
-This should be done in [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3dtiles-temporal based on 3dCityDB branch. It is needed to change the SQL queries retrieving the city objects of the tiles to also get the temporal information.
-
 #### Modify the way tiles are created in order to add their temporal interval of existence
 
 Each tile is composed of city objects which have a temporal interval of existence. The temporal interval of existence of a tile is starting at the earliest creationDate from its city objects and ending at the latest terminationDate of its city objects. The bounding volume of each tile (currently 3D) should be extended with this temporal interval. This should be done in [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3dtiles-temporal based on 3dCityDB branch.
 
-Like this example: 
+Like in this example: 
 
 ![](images/TileExample.png)
+
+#### Modify the API of building server to retrieve this temporal information from the database
+
+This should be done in [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3dtiles-temporal based on 3dCityDB branch. We need to change the SQL queries allowing to retrieve the city objects of the tiles to also get the temporal information.
 
 #### Add temporal interval of existence of each city object in the tiles
 
