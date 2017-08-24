@@ -69,7 +69,8 @@ What we need to do next:
      * Fill the database with temporal CityGML examples (refer to the first task of [this issue](https://github.com/MEPP-team/RICT/issues/23))
   * In building-server:
      * Modify the API of building server to retrieve this temporal information from the database
-     * Modify the way tiles are created in order to add their temporal interval of existence
+     * Add their temporal interval of existence to the tiles
+     * Modify the way tiles are created
   * In py3dtiles:
      * Add temporal interval of existence of each city object in the tiles: in the attributes of the b3dm linked to the batch_ids, add a temporal attribute having the corresponding value from the database
 
@@ -79,7 +80,7 @@ Each part is detailed below:
 
 We create a dev database for answering the issues linked to adding a temporal dimension to our application. Then, we insert temporal CityGML files in it (provided by FPE).
 
-#### Modify the way tiles are created in order to add their temporal interval of existence
+#### Add their temporal interval of existence to the tiles
 
 Each tile is composed of city objects which have a temporal interval of existence. The temporal interval of existence of a tile is starting at the earliest creationDate from its city objects and ending at the latest terminationDate of its city objects. The bounding volume of each tile (currently 3D) should be extended with this temporal interval. This should be done in [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3dtiles-temporal based on 3dCityDB branch.
 
@@ -100,7 +101,11 @@ Changes should be made to [MEPP-team's fork of Oslandia's building-server](https
 
 In building-server, the temporal information of each city object must be transferred to py3dtiles. In py3dtiles, the temporal information must be added in the attributes of the b3dm using the batch_id.
 
+#### Modify the way tiles are created
 
+On the server, currently, there is a number of feature (geometric object, currently a building) per tile which can be configured in the file conf/building.yml. In addition, tiles are created based on spatial conditions (i.e. closests features are assigned to a tile up to the configured number of feature). We now must also consider temporal information when creating the tiles in order to avoid having objects existing at periods of times far from each other. 
+
+*Note: It might be a good idea to provide a schema illustrating this part.*
 
 ### Discussion of the 03/08/2017
 
