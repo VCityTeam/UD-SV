@@ -87,6 +87,9 @@ Like in this example:
 
 ![](images/TileExample.png)
 
+As for now, there is a pre-processing step on the server which creates a hierarchy of tiles (building-server-processdb.py) and store it in new tables of the database (see [here](https://github.com/MEPP-team/RICT/wiki/2017_06_29_-_3DCityDB_iTowns_adapter#server-workflow)). In the tatble tile, a bounding volume is associated to each tile. We will modify the script of building-server-processdb.py in order to add a column to store the creationDate of the tile and a column for the terminationDate of the tile. These dates will be computed using the creation dates and the destruction dates of the objects of the tiles. 
+Then, we will modify the server API (particularly GetCity Method) in order to fetch this temporal time of existence of the tile and to add it into the 3dtiles tileset.
+
 #### Modify the API of building server to retrieve this temporal information from the database
 
 This should be done in [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3dtiles-temporal based on 3dCityDB branch. We need to change the SQL queries allowing to retrieve the city objects of the tiles to also get the temporal information.
