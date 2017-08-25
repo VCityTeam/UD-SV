@@ -103,7 +103,16 @@ In building-server, the temporal information of each city object must be transfe
 
 #### Modify the way tiles are created
 
-On the server, currently, there is a number of feature (geometric object, currently a building) per tile and a maximum tile size which can be configured in the file conf/building.yml. The tile hierarchy is a quadtree created using the extent of the city, and the two parameters abovementionned. A score function allowing to assign features (geometric objects) to each tile is defined. Default value is `ST_Area(Box2D(cityobject.enveloppe))` which computes the area of the 2D Bounding Box of geom (geometric object). Tiles are thus created based on spatial conditions. We must modify this score function in order to also consider temporal information when creating the tiles. 
+On the server, currently, there is a number of feature (geometric object, currently a building) per tile and a maximum tile size which can be configured in the file conf/building.yml. The tile hierarchy is a quadtree created using the extent of the city, and the two parameters abovementionned:
+ * The root englobe all the scene
+ * There is eventually "an intermediate level" which is a subdivision of the root in `n` part
+ * Then, there one level of depth of the quadtree
+ * If the number of feature in the tile of the previous level is higher than the configured number of feature per tile:
+  * The tile is subdivided in is subdivided in subtiles. The tiles with the highest scores go into the parent tile and the ones with the lowest scores go into the children tiles.
+  
+More details about the tile creation process can be found in [Gai16].
+ 
+We must modify the hierarchy creation process in order to consider the temporal information of the geometries when creating the tiles. 
 
 *Note: It might be a good idea to provide a schema illustrating this part.*
 
@@ -112,3 +121,7 @@ On the server, currently, there is a number of feature (geometric object, curren
 #### In the data base, how we can do the communication between the cityobject and the building.
 
 When we select the cityobject, we have to do a jointure between the table cityobject and the table building with the id of them. With that we can associte the date with the geometry.
+
+## References
+
+[Gai16] Gaillard, J., Peytavie, A., & Gesquière, G. (2016, October). A Data Structure for Progressive Visualisation and Edition of Vectorial Geospatial Data. In 3D GeoInfo (Vol. 2, pp. 201-209).
