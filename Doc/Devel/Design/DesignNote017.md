@@ -103,7 +103,7 @@ In building-server, the temporal information of each city object must be transfe
 
 #### Modify the way tiles are created
 
-On the server, currently, there is a number of feature (geometric object, currently a building) per tile which can be configured in the file conf/building.yml. In addition, tiles are created based on spatial conditions (i.e. closests features are assigned to a tile up to the configured number of feature). We now must also consider temporal information when creating the tiles in order to avoid having objects existing at periods of times far from each other. 
+On the server, currently, there is a number of feature (geometric object, currently a building) per tile and a maximum tile size which can be configured in the file conf/building.yml. The tile hierarchy is a quadtree created using the extent of the city, and the two parameters abovementionned. A score function allowing to assign features (geometric objects) to each tile is defined. Default value is `ST_Area(Box2D(cityobject.enveloppe))` which computes the area of the 2D Bounding Box of geom (geometric object). Tiles are thus created based on spatial conditions. We must modify this score function in order to also consider temporal information when creating the tiles. 
 
 *Note: It might be a good idea to provide a schema illustrating this part.*
 
