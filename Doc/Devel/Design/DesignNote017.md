@@ -99,7 +99,8 @@ This should be done in [MEPP-team's fork of Oslandia's building-server](https://
 
 Changes should be made to [MEPP-team's fork of Oslandia's building-server](https://github.com/MEPP-team/building-server/tree/3dCityDB) on a to be created branch named 3dtiles-temporal based on 3dCityDB branch and to [MEPP-team's fork of Oslandia's py3dtiles](https://github.com/MEPP-team/py3dtiles) on a to be created branch named 3dtiles-temporal.
 
-In building-server, the temporal information of each city object must be transferred to py3dtiles. In py3dtiles, the temporal information must be added in the attributes of the b3dm using the batch_id.
+In building-server, the temporal information of each city object must be transferred to py3dtiles. In py3dtiles, the temporal information must be added in the [batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/BatchTable) of the tile in which a batch_id will represent each feature of the gltf file.
+Currently, the tiles are created with an empty batch table so we need to provide the feature of creating a batch table with the ids the features of the gltf file (or [other formats supported by 3d-tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status))
 
 #### Modify the way tiles are created
 
