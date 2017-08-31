@@ -22,7 +22,7 @@ Après cela nous avons fait un programme qui parcours ces fichiers. Nous avons e
 de iTowns.
 Voici un exemple de résultat: 
 
-  ![](./Schemes/Capture du 2017-06-19 16-18-06.png)
+ ![](./Schemes/Capture du 2017-06-19 16-18-06.png)
 
 ### Notes:
 
