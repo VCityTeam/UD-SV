@@ -2,10 +2,10 @@
 
 ### User story
 
-Nous avons dans [3dtiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) le format de streaming de donnée, un type de fichier
-qui s'appelle les pnts ce sont un format de nuage de points.
+Nous avons dans [3dtiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) le format de streaming de donné, un type de fichier 
+qui s'appelle les pnts (un format de nuage de points).
 
-Actuellement, Itowns lit des fichier B3dm, un format de maillage, et le but de ce need et de lire des pnts.
+Actuellement, Itowns lit des fichier B3dm, un format de maillage, le but de ce need et de lire des pnts.
 
 ### Beneficiary role: iTowns et la norme 3dtiles
 
@@ -17,9 +17,8 @@ Actuellement, Itowns lit des fichier B3dm, un format de maillage, et le but de c
 
 ### Description 
 
-Pour faire ce need nous avons eu besoin d'analyser la structure des [pnts](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/PointCloud/README.md).
-Après cela nous avons fait un programme qui parcours ces fichiers. Nous avons ensuite placé les différentes données dans les structure 
-de iTowns.
+Pour faire ce need nous avons eu besoin d'analyser la structure des [pnts](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/PointCloud/README.md). 
+Après cela nous avons fait un programme qui parcourt ces fichiers. Nous avons ensuite placé les différentes données dans les structures de iTowns.
 Voici un exemple de résultat: 
 
  ![](./Schemes/pointCloud.png)
@@ -27,3 +26,4 @@ Voici un exemple de résultat:
 ### Notes:
 
 Un exemple est disponible sur [le site d'iTowns](http://www.itowns-project.org/itowns/examples/pointcloud.html)
+Et voici une [documentation](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/Itowns2Feature.md) qui explique en détaile ce qui a été fait.
