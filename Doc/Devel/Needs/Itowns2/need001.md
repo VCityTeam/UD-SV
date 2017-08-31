@@ -40,4 +40,5 @@ Pour faire ce need, nous avons adapté les coordonnées des regions pour qu'elle
 ### Notes:
 
 La solution proposée n'est pas obptimale car il y a du vide superflux dans la boite qui englobe la région. 
-Elle est néanmoins négligeable pour l'instant mais nous avons quand même noté ce changement à faire dans une issue.
+Mais une solution rapide devait être mit en place.
+Pour l'instant l'objectif n'est pas de changer ça, mais nous avons quand même noté ce changement à faire dans une issue.
