@@ -16,7 +16,7 @@
   
   ![](./Schemes/tile2.png)
   
-  Cette contribution à iTowns apportera la possiblité de pouvoir lire certain fichier de tuile qui utilisé les regions.
+  Cette contribution à iTowns apportera la possiblité de pouvoir lire certain fichier de tuile qui utilise les regions.
   
   ref: [issue 185 itowns](https://github.com/iTowns/itowns/issues/185)
 ### Beneficiary role: iTowns et la norme 3dtiles
