@@ -25,5 +25,6 @@ Voici un exemple de résultat:
 
 ### Notes:
 
-Un exemple est disponible sur [le site d'iTowns](http://www.itowns-project.org/itowns/examples/pointcloud.html)
+Un exemple est disponible sur [le site d'iTowns](http://www.itowns-project.org/itowns/examples/pointcloud.html).
+
 Et voici une [documentation](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/Itowns2Feature.md) qui explique en détaile ce qui a été fait.
