@@ -12,12 +12,12 @@
 
   ![](./Schemes/tile.png)
   
-  Sur notre schéma ci-dessus, nous avons donc les box, les régions et les sphères le but de ce need est donc d'implémenter les régions.
-  Les régions sont utiles pour la vision globe de iTowns, car ce n'est pas des boites:
+  Sur notre schéma ci-dessus, nous avons donc les box, les régions et les sphères.
+  le but de ce need est donc d'implémenter les régions car elles sont adapté à la visualisation globe contrairement au box.
   
   ![](./Schemes/tile2.png)
   
-  Cette contribution à iTowns apportera la possiblité de pouvoir lire certain fichier de tuile qui utilise les regions.
+  Cette contribution à iTowns apportera la possiblité de pouvoir lire certain fichier de tuile qui utilise les régions.
   
   ref: [issue 185 itowns](https://github.com/iTowns/itowns/issues/185)
 ### Beneficiary role: iTowns et la norme 3dtiles
