@@ -5,7 +5,7 @@
 Nous avons dans [3dtiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) le format de streaming de donné, un type de fichier 
 qui s'appelle les pnts (un format de nuage de points).
 
-Actuellement, Itowns lit des fichier B3dm, un format de maillage, le but de ce need et de lire des pnts.
+Le but de ce need est donc de pouvoir lire des pnts.
 
 ### Beneficiary role: iTowns et la norme 3dtiles
 
