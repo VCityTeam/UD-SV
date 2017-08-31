@@ -29,7 +29,7 @@
 
 Pour faire ce need, nous avons adapté les coordonnées des regions pour qu'elles soient englobées par des box
   
-  ![](./Schemes/regionsbox.png)
+  ![](./Schemes/regionBox.png)
   
   Ce qui du coup qui à permis de pouvoir utiliser les fonctions que nous avions pour les box, comme par exemple le culling.
   
