@@ -6,7 +6,7 @@
   
   ![](./Schemes/quadtree-tight.png)
   
-  Comme le montre cet exemple, il y a une tuile principale qui regroupe 4 tuiles qui elle regroupe des batiments.
+  Comme le montre cet exemple, il y a une tuile principale qui regroupe 4 tuiles qui elle regroupe des objets.
   Là ou les boundings volume sont importants c'est que pour savoir si la camera de la scène voit ou pas un objet.
   On regarde si le frustum de la camera intersecte avec le bounding volume si oui on rentre dans les enfants de la tuile 
   et ainsi de suite.
