@@ -4,14 +4,16 @@
   Actuellement iTowns possède un système de tuile. Chaque tuile posséde un attribue qui s'appelle le bounding volume.
   Ce bounding volume est une boite englobante qui regroupe l'intégralité des objets d'une tuile
   
-  ![](./Schemes/tile.png)
+  ![](./Schemes/quadtree-tight.png)
   
   Comme le montre cet exemple, il y a une tuile principale qui regroupe 4 tuiles qui elle regroupe des batiments.
   Là ou les boundings volume sont importants c'est que pour savoir si la camera de la scène voit ou pas un objet.
   On regarde si le frustum de la camera intersecte avec le bounding volume si oui on rentre dans les enfants de la tuile 
   et ainsi de suite.
 
-  Sur notre schéma nous avons donc les box, les régions et les sphères le but de ce need est donc d'implémenter les régions.
+  ![](./Schemes/tile.png)
+  
+  Sur notre schéma ci-dessus, nous avons donc les box, les régions et les sphères le but de ce need est donc d'implémenter les régions.
   Les régions sont utiles pour la vision globe de iTowns, car ce n'est pas des boites:
   
   ![](./Schemes/tile2.png)
