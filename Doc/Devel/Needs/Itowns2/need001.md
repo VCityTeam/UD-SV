@@ -11,8 +11,8 @@
   On regarde si le frustum de la camera intersecte avec le bounding volume si oui on rentre dans les enfants de la tuile 
   et ainsi de suite.
 
-  Sur notre shcéma nous avons donc les box, les régions et les sphères le but de ce need est donc d'implementer les régions.
-  Les régions sont utile pour la vision globe de iTowns, car ce n'est pas des boites:
+  Sur notre schéma nous avons donc les box, les régions et les sphères le but de ce need est donc d'implémenter les régions.
+  Les régions sont utiles pour la vision globe de iTowns, car ce n'est pas des boites:
   
   ![](./Schemes/tile2.png)
   
@@ -27,8 +27,13 @@
 
 ### Description
 
-Pour faire ce need, nous avons adapté les coordonnées des regions pour qu'elle soit englobé par une box
+Pour faire ce need, nous avons adapté les coordonnées des regions pour qu'elles soient englobées par des box
   
-  ![](./Schemes/regionbox.png)
-
+  ![](./Schemes/regionsbox.png)
+  
+  Ce qui du coup qui à permis de pouvoir utiliser les fonctions que nous avions pour les box, comme par exemple le culling.
+  
 ### Notes:
+
+La solution proposée n'est pas obptimale car il y a du vide superflux dans la boite qui englobe la région. 
+Elle est néanmoins négligeable pour l'instant mais nous avons quand même noté ce changement à faire dans une issue.
