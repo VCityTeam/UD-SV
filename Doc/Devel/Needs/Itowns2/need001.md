@@ -7,7 +7,7 @@
   ![](./Schemes/quadtree-tight.png)
   
   Comme le montre cet exemple, il y a une tuile principale qui regroupe 4 tuiles qui elle regroupe des objets.
-  Là ou les boundings volume sont importants c'est que pour savoir si la camera de la scène voit ou pas un objet.
+  Là ou les boundings volume sont importants c'est que pour savoir si la camera de la scène voit ou pas un objet (le culling).
   On regarde si le frustum de la camera intersecte avec le bounding volume de la tuile, si oui on rentre dans les enfants de celle-ci et ainsi de suite jusqu'à atteindre les derniers enfant pour pouvoir afficher les objets des dernières tuiles vue.
 
   ![](./Schemes/tile.png)
@@ -34,7 +34,8 @@ Pour faire ce need, nous avons adapté les coordonnées des regions pour qu'elle
   
   ![](./Schemes/regionBox.png)
   
-  Ce qui du coup qui à permis de pouvoir utiliser les fonctions que nous avions pour les box, comme par exemple le culling.
+  Ce qui du coup à permis de pouvoir utiliser les fonctions que nous avions pour les box, comme par exemple le 'culling' (le calcule avec la camera vu ce dessus).
+  Ce n'est pas aussi facile que de juste prendre le maximum et le minimum et faire une boite car il y avait des contraites de [quaternions](https://fr.wikipedia.org/wiki/Quaternion).
   
 ### Notes:
 
