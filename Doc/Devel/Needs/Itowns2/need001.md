@@ -1,4 +1,4 @@
-# Need 001: Contribution à 3dtiles - Lecture des regions - les boundings volumes
+# Need 001: Contribution à 3dtiles - Lecture des regions - les boundings volumes 
 
 ### User story
   Actuellement iTowns possède un système de tuile. Chaque tuile posséde un attribue qui s'appelle le bounding volume.
@@ -16,7 +16,9 @@
   
   ![](./Schemes/tile2.png)
   
+  Cette contribution à iTowns apportera la possiblité de pouvoir lire certain fichier de tuile qui utilisé les regions.
   
+  ref: [issue 185 itowns](https://github.com/iTowns/itowns/issues/185)
 ### Beneficiary role: iTowns et la norme 3dtiles
 
 ### Impact: Major
