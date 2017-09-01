@@ -32,7 +32,7 @@ en .potree qui lui est lu par iTowns.
 - Orthophotos et élévations
 
 Pour ce type de données, le travail n'est pas encore à ce jour terminé, la méthode que nous proposons fonctionne pour une image, mais pas plus pour l'instant. Nous travaillons actuellement sur une méthode plus rapide et qui peut elle prendre plusieurs images. Cependant, si il n'y a qu'une seule image cela fonction j'ai donc répondu à cette problématique pour Zanzibar. 
-Pour ce problème, j'ai utilisé un serveur wms (un protocole qui sert à l'échange de données) qu'a fait une des personnes qui travaillent sur iTowns (Monsieur Pelloux-Prayer), pour pouvoir mettre en base mes images puis les lires avec iTowns.
+Pour ce problème, j'ai utilisé [un serveur wms](https://github.com/peppsac/pywms) (un protocole qui sert à l'échange de données) qu'a fait une des personnes qui travaillent sur iTowns (Monsieur Pelloux-Prayer), pour pouvoir mettre en base mes images puis les lires avec iTowns.
 
 ### Notes:
 
