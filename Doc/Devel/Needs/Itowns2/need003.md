@@ -7,7 +7,7 @@ Le but de ce need est de pouvoir lire le type de données venant de drone par ex
 
 Il est possible d'avoir 3 types de données :
 
-- Les nuages de points (LIDAAR) 
+- Les nuages de points (LIDAR) 
 
 - OrthoPhoto
 
