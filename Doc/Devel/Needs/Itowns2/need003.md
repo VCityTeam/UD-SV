@@ -37,3 +37,5 @@ Pour ce problème, nous avons utilisé [un serveur wms](https://github.com/pepps
 ### Notes:
 
 Les résultats obtenus sont à la hauteur du travail effectué. Les difficultés majeures de ce travail était clairement de comprendre et de savoir ce qui existe. L'un des points positifs étaient de travailler avec de données de grandes tailles concrète, l'île de Zanzibar. Nous avons aussi dû réaliser de la documentation en anglais pour décrire les différentes étapes de lecture de ce genre de données. Maintenant, iTowns est donc capable de lire l'ensemble des données venant de drone.
+
+Sur ce [lien](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/TutorialOpenDataInItowns.md) vous pouvez avoir un tutorial pour lire les données de drone qui n'est pas encore fini à ce jour
