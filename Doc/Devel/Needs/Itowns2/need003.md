@@ -7,7 +7,7 @@ Le but de ce need est de pouvoir lire le type de données venant de drone par ex
 
 Il est possible d'avoir 3 types de données :
 
-- Les nuages de points (LIDAR) 
+- Les nuages de points (LiDAR) 
 
 - OrthoPhoto
 
@@ -25,7 +25,7 @@ Il est possible d'avoir 3 types de données :
 
 - Nuage de points : 
 
-Pour pouvoir lire les fichier LIDAR les .las nous sommes passé par un convertiseur.
+Pour pouvoir lire les fichier LiDAR les .las nous sommes passé par un convertiseur.
 Nous avons installé [potreeConverteur](https://github.com/potree/PotreeConverter) qui permet de convertir les .las 
 en .potree qui lui est lu par iTowns. 
 
