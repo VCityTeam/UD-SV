@@ -25,7 +25,7 @@ Il est possible d'avoir 3 types de données :
 
 - Nuage de points : 
 
-Pour pouvoir lire les fichier LIDAAR les .las nous sommes passé par un convertiseur.
+Pour pouvoir lire les fichier LIDAR les .las nous sommes passé par un convertiseur.
 Nous avons installé [potreeConverteur](https://github.com/potree/PotreeConverter) qui permet de convertir les .las 
 en .potree qui lui est lu par iTowns. 
 
