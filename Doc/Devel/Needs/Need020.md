@@ -1,7 +1,7 @@
 # Need 020: manage ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) [extended documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) 
 
 ## User story:
-As an database maintainer I want to offer a placeholder (database) and an API for extended documents.  
+As a database maintainer I want to offer a placeholder (database) and an API for extended documents. We require a mechanism where users having a set of files (especially excel files) that gives infomation about a documents and their links/references to other city objects. Example: Photo 321 -> Historical Building 20 -> 1927. 
 
 ## Beneficiary role:
 [Historians of need 004](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need004.md)
@@ -13,9 +13,18 @@ As an database maintainer I want to offer a placeholder (database) and an API fo
 ## Cost evaluation: 3 weeks
 
 ## Tags or keywords
+Documents, Text Files
+
+## Data format
+We require the following information to be mentioned in the excel (or csv file)
+* Document details (Important information:Id, name description)
+* City Object Id
+* Time (period or interval)
+* Tags (multivalued)
+
 
 ## Notes
- * The input is a set of excell files.
+ * The input is a set of excel files (or csv files).
  * Extended documents must be related/connected (have references) to other artefacts
     - cityobjects
     - other extended documents (e.g. through positions, dates, historical events)
