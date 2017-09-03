@@ -12,8 +12,12 @@ Historians want to manage different points of view of urban evolution
 ### Cost evaluation: 
 
 ### Tags or keywords
-concurrent
+concurrent viewpoints
 
 ### Description
+Different historians have different points of view concerning historical evolution. It is important to be able to represent, manage and visualize these different viewpoints. Following are key tasks:
+* Conceptual model that integrates these view points to city models.
+* Database changes (3DCityDB)
+* Test data and evaluation
 
 ### Notes:
