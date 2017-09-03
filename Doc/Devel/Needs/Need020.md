@@ -22,6 +22,9 @@ We require the following information to be mentioned in the excel (or csv file)
 * Time (period or interval)
 * Tags (multivalued)
 
+## API Operations
+* Create, Read, Update, Delete **document** with information specified in data format.
+* Create, Read, Update, Delete, List one or more **documents** with or without any matching criteria. Metadata for every document remains the same as specified in the data format above.
 
 ## Notes
  * The input is a set of excel files (or csv files).
