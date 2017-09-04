@@ -102,6 +102,9 @@ Changes should be made to [MEPP-team's fork of Oslandia's building-server](https
 In building-server, the temporal information of each city object must be transferred to py3dtiles. In py3dtiles, the temporal information must be added in the [batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/BatchTable) of the tile in which a batch_id will represent each feature of the gltf file.
 Currently, the tiles are created with an empty batch table so we need to provide the feature of creating a batch table with the ids the features of the gltf file (or [other formats supported by 3d-tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status))
 
+Technical note in [b3dm spec](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/Batched3DModel):
+"The glTF asset must be 8-byte aligned so that glTF's byte-alignment guarantees are met. This can be done by padding the Feature Table or Batch Table if they are present."
+
 #### Modify the way tiles are created
 
 On the server, currently, there is a number of feature (geometric object, currently a building) per tile and a maximum tile size which can be configured in the file conf/building.yml. The tile hierarchy is a quadtree created using the extent of the city, and the two parameters abovementionned:
