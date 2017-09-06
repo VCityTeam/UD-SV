@@ -78,7 +78,8 @@ In the following interactions with the above created data base it is advised to 
 ### Data base (4): upload CityGML data to the DB
  * The original source for the CityGML based description of the building geometries is the [Grand Lyon open data](https://data.grandlyon.com/). For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the [`LYON_6EME_BATI_2012_SplitBuildings.gml` file](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml). In the following we'll assume this file is located in the HOME (shortened as `~`) directory.
  
-**WARNING**: the following snipet the set of commands must be executed with **VERSION 2 of python** (and pip) ! 
+    **WARNING**: the following snipet the set of commands must be executed with **VERSION 2 of python** (and pip) ! 
+
     ````
       git clone https://github.com/Oslandia/citygml2pgsql
       mv citygml2pgsql citygml2pgsql.git && cd citygml2pgsql.git
