@@ -242,11 +242,11 @@ Technical notes:
  * Conversion SQL to client content is defined in [database.py](https://github.com/Oslandia/building-server/blob/3d-tiles/building_server/database.py)
 
 ### Launch a local iTowns server
-
+Note: this is iTowns version 2
 ````
 cd <somewhere>
-git clone https://github.com/itowns/itowns2.git
-cd itowns2
+git clone https://github.com/iTowns/itowns.git
+cd itowns
 npm install
 ````
 Configure a planar example over your data:
