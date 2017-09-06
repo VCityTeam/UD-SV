@@ -72,7 +72,7 @@ In the following interactions with the above created data base it is advised to 
   (db_user)$ psql bozo
     bozo=# create table lyon(gid serial primary key, geom GEOMETRY('POLYHEDRALSURFACEZ', 3946));
     bozo=# alter user dbuser with superuser;
-    bozo=# \q`  (or use CTRL d equivalently)
+    bozo=# \q  (or use CTRL d equivalently)
 ````
 
 ### Data base (4): upload CityGML data to the DB
