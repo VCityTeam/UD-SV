@@ -154,7 +154,7 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
  * OSX :
    ````
       unset PYTHONPATH 
-      virtualenv venv      # Make sure this was installed with pip3
+      virtualenv -p python3 venv      # Make sure this was installed with pip3
    ````
  * Ubuntu :
    ````
