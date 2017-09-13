@@ -34,7 +34,7 @@ Closer to google maps (minimalist, separate closable windows)
 
 ![](images/UDVDemoNoGUI.png)
 
-![](images/UDVDemoWithGUI.png)
+![](images/UDVDemoWithGUIAnnoted.png)
 
 ![](images/UDVDemoGUI2.png)
 
