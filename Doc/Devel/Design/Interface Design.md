@@ -35,6 +35,12 @@ Ergonomy is important : end users will include people with no technical backgrou
 
 Closer to google maps (minimalist, separate closable windows)
 
+![](images/UDVDemoNoGUI.png)
+
+![](images/UDVDemoWithGUI.png)
+
+![](images/UDVDemoGUI2.png)
+
 [Web demo video](https://www.youtube.com/watch?v=plZ2xftTcF4)
 
 
