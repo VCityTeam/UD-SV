@@ -28,8 +28,6 @@ Experts in various fields, ranging from information technology to human sciences
 
 ## Solutions
 
-[Quick video test...](http://i.imgur.com/n7hyxLm.gifv)
-
 Unity Prototype : [video playlist](https://www.youtube.com/playlist?list=PLDmMAvwsWZe_Pw0d0Kd7aDZE_VCRfTjKD)
 
 ## Ideas
