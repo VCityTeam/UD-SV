@@ -3,19 +3,19 @@
   
 # Install notes for Unix users
 
-### Install pre-requisite tools
+### (1) Install pre-requisite tools
  * The data base packages 
    - OSX : `brew install postgis` (that will pull postGRE) 
    - Ubuntu ([reference](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt)): 
-   ```` 
+     ```` 
      sudo apt-get install postgresql-9.6
      sudo apt-get install postgresql-9.6-postgis-2.3 postgresql-contrib-9.6
      sudo apt-get install postgresql-9.6-postgis-2.3-scripts
 
      #to get the commandline tools shp2pgsql, raster2pgsql you need to do this
      sudo apt-get install postgis
-   ````
-     * Additionaly [pgAdmin](https://www.pgadmin.org/) (install with `sudo apt-get install pgadmin3`) is a convenient database management tool.
+     ````
+     Additionaly you might consider installing [pgAdmin](https://www.pgadmin.org/) which is a convenient database management tool and thus usefull for debugging). If you choose to install pgAdmin on ther server (as opposed to your client/desktop) be aware that this will pull all the X11 related packages (which some consider as not belonging on a server).
    
  * Python tools
    - **Important notice**: in the following some scripts do work with python2.7 but some other scripts require python3...
@@ -34,7 +34,7 @@
    - `sudo apt-get install node.js`
    - `sudo apt-get install npm`
     
-### Data base (1): start a postgres service
+### (2) Data base (a): start a postgres service
  * OSX :
    ```` 
    (root)$ initdb /usr/local/var/postgres -E utf8
@@ -44,7 +44,7 @@
    ````
    (root)$ service postgresql start
    ````
-### Data base (2): enable remote access to PostgreSQL database server via TCP/IP 
+### (3) Data base (b): enable remote access to PostgreSQL database server via TCP/IP 
 The reference for this step [is here](https://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html))
  * Change user to postgres : sudo su postgres
  * Enable lient authentication : vim /etc/postgresql/9.6/main/pg_hba.conf
@@ -64,7 +64,7 @@ The reference for this step [is here](https://www.cyberciti.biz/tips/postgres-al
   * switch back user : `exit`
   * restart psql : `sudo service postgresql restart`  
 
-### Data base (3): Create an empty database
+### (4) Data base (c): Create an empty database
  * OSX:
    ````
    createdb bozo
@@ -80,7 +80,7 @@ The reference for this step [is here](https://www.cyberciti.biz/tips/postgres-al
    (postgres)$ exit
    ````
  
-### Data base (4): Add postgis extension and create a city table
+### (5) Data base (d): Add postgis extension and create a city table
 ```` 
 (postgres)$ psql bozo
   bozo=# create extension postgis;
@@ -94,7 +94,7 @@ In the following interactions with the above created data base it is advised to 
     bozo=# \q  (or use CTRL d equivalently)
 ````
 
-### Data base (5): upload CityGML data to the DB
+### (6) Data base (e): upload CityGML data to the DB
  * The original source for the CityGML based description of the building geometries is the [Grand Lyon open data](https://data.grandlyon.com/). For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the [`LYON_6EME_BATI_2012_SplitBuildings.gml` file](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml). In the following we'll assume this file is located in the HOME (shortened as `~`) directory.
  
     **WARNING**: the following snipet the set of commands must be executed with **VERSION 2 of python** (and pip) ! 
@@ -116,7 +116,7 @@ In the following interactions with the above created data base it is advised to 
       bozo=# \q`  (or use CTRL d equivalently)
    ````
 
-### Data base (6): add bounding box data to database (JGA specific) & Install the http server
+### (7) Data base (f): add bounding box data to database (JGA specific) & Install the http server
 
  * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
  * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
@@ -215,7 +215,7 @@ which will compute the bounding boxes out of the content of the pointed table wi
 
 **Technical note**: the `conf/bulding.yml` configuration file mentions flask entries (and is also used to configure flask). Yet the `building-server-processdb.py` script only uses this file to retrieve the database access information and doesn't make any usage of flask. This lack of separation of concerns for the configuration files is an historical side effect...
 
-### (6) Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
+### (8) Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
  * Edit building-server.git/conf/building.uwsgi.yml to obtain a configuration like
    ````
     uwsgi:
@@ -242,7 +242,7 @@ Technical notes:
      [App.py](https://github.com/Oslandia/building-server/blob/3d-tiles/building_server/app.py)
  * Conversion SQL to client content is defined in [database.py](https://github.com/Oslandia/building-server/blob/3d-tiles/building_server/database.py)
 
-### (7) Launch a local iTowns based application server
+### (9) Launch a local iTowns based application server
 Note: this is iTowns version 2
 ````
 cd <somewhere>
@@ -320,7 +320,7 @@ Now open the resulting `http://localhost:8080/examples/planar_3dtiles.html` file
 
 Assert all is well by opening `http://localhost:8080/examples/planar.html` with your browser.
 
-# Architecture notes:
+### Architecture notes:
 
 Notes:
  * [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) is a [Web Server Gateway Interface (WSGI)](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) compatible applications and frameworks (used among the Python community). [uWSGI can be deployed](https://uwsgi-docs.readthedocs.io/en/latest/WebServers.html) with its own integrated http server. [Flask](http://flask.pocoo.org/) is a [web micro-framework](https://en.wikipedia.org/wiki/Flask_(web_framework)) that uses [uWSGI as web deployment option](http://flask.pocoo.org/docs/0.12/deploying/uwsgi/).
