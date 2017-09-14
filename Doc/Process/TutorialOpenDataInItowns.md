@@ -2,6 +2,10 @@
  
 After you install iTowns go on the file pointsCloud.js
 
+for start the server you should have run with this command 
+
+```` npm start ```` ==> ```` npm start -- --port 7070````
+
 ## How to import data in iTowns
 
 We take an example the island of Zanzibar, data from a drone.
@@ -67,7 +71,29 @@ and
     <url-pattern>/*</url-pattern>
 </filter-mapping>
 ````
+ 
+Download [this](http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlets/9.2.13.v20150730/jetty-servlets-9.2.13.v20150730.jar)
+and put it /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/lib/
 
+Now go [here](http://localhost:8080/geoserver).
+for [documentation](http://docs.geoserver.org/)
+
+
+image du menu :
+
+To begin, add a new workspace
+Put Zanzibar for name and the URI : http://opengeo.org/Zanzibar
+And submit... then click on Zanzibar and check the checkbox for WMS and WMTS
+
+Now add new Store,
+take the imageMosaic, and do this:
+
+And publish.
+
+Now you should have the page 'Edit Layer'
+Change the name and the title check the Native SRS is correct.
+
+and copy the native bounding Box MinX, Min Y, Max X, Max Y on iTowns ==> pointsCloud.js 
 
 #### iTowns
 
