@@ -9,8 +9,8 @@ you can download this [here](www.google.com)
 
 We have 3 types of data 
  - Points Cloud in multiple [.las](http://desktop.arcgis.com/en/arcmap/10.3/manage-data/las-dataset/what-is-a-las-dataset-.htm) 
- - Orthophoto: multi image 
- - Elevation: multi image 
+ - Orthophoto: multi image in .tif with .tfw for information
+ - Elevation: multi image in .tif with .tfw for information
  
 
 ### Points Cloud 
@@ -38,7 +38,8 @@ Now you should have that:
 
 <img src="../Image/ZanzibarPointCloud.png"/>
 
-### Orthophoto 
+### Orthophoto and Elevation
 
+#### Geoserver
 
-### Elevation 
+#### iTowns
