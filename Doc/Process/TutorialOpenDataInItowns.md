@@ -40,6 +40,36 @@ Now you should have that:
 
 ### Orthophoto and Elevation
 
-#### Geoserver
+#### Geoserver 
+
+[install geoserver](http://docs.geoserver.org/stable/en/user/installation/linux.html) 
+
+If it's not working try with this command:
+
+````GEOSERVER_HOME=/usr/share/geoserver````
+ 
+After that, go on this file /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/
+you should have web.xml, open this and change 
+````
+<!-- Uncomment following filter to enable CORS -->
+<filter>
+  <filter-name>cross-origin</filter-name>
+     <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
+  </filter>
+````
+
+and
+
+````
+<!-- Uncomment following filter to enable CORS -->
+<filter-mapping>
+    <filter-name>cross-origin</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+````
 
 #### iTowns
+
+
+
+
