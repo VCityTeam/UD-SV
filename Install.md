@@ -44,8 +44,27 @@
    ````
    (root)$ service postgresql start
    ````
-   
-### Data base (2): Create an empty database
+### Data base (2): enable remote access to PostgreSQL database server via TCP/IP 
+The reference for this step [is here](https://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html))
+ * Change user to postgres : sudo su postgres
+ * Enable lient authentication : vim /etc/postgresql/9.6/main/pg_hba.conf
+ * Add the following line to this file (host) : all all 127.0.0.1/24 trust
+ * Open PostgreSQL config file : vim /etc/postgresql/9.6/main/postgresql.conf
+  * Change listen_adresses and port to the following :
+  ````
+      # - Connection Settings -
+
+      listen_addresses = 'localhost'          # what IP address(es) to listen on;
+                                              # comma-separated list of addresses;
+                                              # defaults to 'localhost'; use '*' for all
+                                              # (change requires restart)
+      port = 5432                             # (change requires restart)
+  ````
+
+  * switch back user : `exit`
+  * restart psql : `sudo service postgresql restart`  
+
+### Data base (3): Create an empty database
  * OSX:
    ````
    createdb bozo
@@ -60,8 +79,8 @@
    (postgres)$ createdb -O db_user bozo  # creates a new citydb_v3 database
    (postgres)$ exit
    ````
-
-### Data base (3): Add postgis extension and create a city table
+ 
+### Data base (4): Add postgis extension and create a city table
 ```` 
 (postgres)$ psql bozo
   bozo=# create extension postgis;
@@ -75,7 +94,7 @@ In the following interactions with the above created data base it is advised to 
     bozo=# \q  (or use CTRL d equivalently)
 ````
 
-### Data base (4): upload CityGML data to the DB
+### Data base (5): upload CityGML data to the DB
  * The original source for the CityGML based description of the building geometries is the [Grand Lyon open data](https://data.grandlyon.com/). For the time being (Q1 2017) this data doesn't separate the geometries of buildings. This is why FPE did a building split treatment (based on VCity) resulting in the [`LYON_6EME_BATI_2012_SplitBuildings.gml` file](http://liris.cnrs.fr/vcity/Data/iTowns2/LYON_6EME_BATI_2012_SplitBuildings.gml). In the following we'll assume this file is located in the HOME (shortened as `~`) directory.
  
     **WARNING**: the following snipet the set of commands must be executed with **VERSION 2 of python** (and pip) ! 
@@ -97,7 +116,7 @@ In the following interactions with the above created data base it is advised to 
       bozo=# \q`  (or use CTRL d equivalently)
    ````
 
-### Data base (5): add bounding box data to database (JGA specific) & Install the http server
+### Data base (6): add bounding box data to database (JGA specific) & Install the http server
 
  * The http server is based on [flask](http://flask.pocoo.org/). Note: the http server could also be configured to be Apache server.
  * We follow the install lines of [Oslandia's 3D tiles](https://github.com/Oslandia/building-server/tree/3d-tiles)
@@ -143,7 +162,7 @@ cities:
     featurespertile: 20
 ````
 
-### Install python3 required dependencies
+#### Install python3 required dependencies
 Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) with all the bells and whistles.
 
 **WARNING**: make sure that
@@ -169,7 +188,7 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
      pip install lxml     # Note sure this is truly required but it can't hurt
    ````
    
-### Temporary patch for handling gltf and b3dm
+#### Temporary patch for handling gltf and b3dm
 
 **WARNING**: make sure that
  - you are located in the `building-server.git` that you cloned
@@ -183,29 +202,11 @@ Deploy a Python3 [virtual environment](http://python-guide-pt-br.readthedocs.io/
    ````
    Warning: when doing the `pip install` make sure you are pointing to the `./py3dtiles` local directory as opposed to just `py3dtiles` that will look for some online repository version that won't be correct.
    
-### Enable remote access to PostgreSQL database server via TCP/IP (inspired from [this](https://www.cyberciti.biz/tips/postgres-allow-remote-access-tcp-connection.html))
 
- * Change user to postgres : sudo su postgres
- * Enable lient authentication : vim /etc/postgresql/9.6/main/pg_hba.conf
- * Add the following line to this file (host) : all all 127.0.0.1/24 trust
- * Open PostgreSQL config file : vim /etc/postgresql/9.6/main/postgresql.conf
-  * Change listen_adresses and port to the following :
-  ````
-      # - Connection Settings -
-
-      listen_addresses = 'localhost'          # what IP address(es) to listen on;
-                                              # comma-separated list of addresses;
-                                              # defaults to 'localhost'; use '*' for all
-                                              # (change requires restart)
-      port = 5432                             # (change requires restart)
-  ````
-
-  * switch back user : `exit`
-  * restart psql : `sudo service postgresql restart`
   * go back into building-server.git folder
   * activate venv : `. venv/bin/activate`
 
-### Eventually compute the bounding boxes
+#### Eventually compute the bounding boxes
 Then launch
 ````
   (venv): python building-server-processdb.py conf/building.yml lyon
@@ -214,7 +215,7 @@ which will compute the bounding boxes out of the content of the pointed table wi
 
 **Technical note**: the `conf/bulding.yml` configuration file mentions flask entries (and is also used to configure flask). Yet the `building-server-processdb.py` script only uses this file to retrieve the database access information and doesn't make any usage of flask. This lack of separation of concerns for the configuration files is an historical side effect...
 
-### Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
+### (6) Launch the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server 
  * Edit building-server.git/conf/building.uwsgi.yml to obtain a configuration like
    ````
     uwsgi:
@@ -241,7 +242,7 @@ Technical notes:
      [App.py](https://github.com/Oslandia/building-server/blob/3d-tiles/building_server/app.py)
  * Conversion SQL to client content is defined in [database.py](https://github.com/Oslandia/building-server/blob/3d-tiles/building_server/database.py)
 
-### Launch a local iTowns server
+### (7) Launch a local iTowns based application server
 Note: this is iTowns version 2
 ````
 cd <somewhere>
