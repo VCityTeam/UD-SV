@@ -1,8 +1,8 @@
 ## Install iTowns
  
-After you install iTowns go on the file pointsCloud.js
+After you install [iTowns](https://github.com/iTowns/itowns) this [fork and branch](https://github.com/NikoSaul/itowns2/tree/dataZanzibar)
 
-for start the server you should have run with this command 
+for start the server you should have run with this command (for iTowns him self)
 
 ```` npm start ```` ==> ```` npm start -- --port 7070````
 
@@ -79,21 +79,53 @@ Now go [here](http://localhost:8080/geoserver).
 for [documentation](http://docs.geoserver.org/)
 
 
-image du menu :
+image du menu : data.png
 
 To begin, add a new workspace
 Put Zanzibar for name and the URI : http://opengeo.org/Zanzibar
 And submit... then click on Zanzibar and check the checkbox for WMS and WMTS
 
-Now add new Store,
+Go on Disk Quota on your right and complet like that:
+
+IMAGE disk : diskquota.png
+
+And go on Gridsets just above Disk quota,
+Create a new gridset...
+
+IMAge Gridsset : gridset.png
+
+Then click on Caching Defaults just above gridsets,
+like this: 
+
+image caching....
+
+Don't forget to add the gridset EPSG:32737 on the bottom.
+
+
+
+
+
+
+
+Now add new Store, 
 take the imageMosaic, and do this:
+
+IMAGE DU STORE stores.png  
 
 And publish.
 
 Now you should have the page 'Edit Layer'
 Change the name and the title check the Native SRS is correct.
 
-and copy the native bounding Box MinX, Min Y, Max X, Max Y on iTowns ==> pointsCloud.js 
+If you have other data you have to change that [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L20)
+the EPSG: and the [values](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L26) with the native bounding box, you can see it on the geoserver 
+
+And [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L113) you have to change the name with the name of your layer same for the projection: [EPSG](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L114). 
+
+Now click on Publishing on the top.
+Add Raster like that : 
+
+IMAGE DU RASTER : raster.png
 
 #### iTowns
 
