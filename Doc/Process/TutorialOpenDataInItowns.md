@@ -9,8 +9,8 @@ you can download this [here](www.google.com)
 
 We have 3 types of data 
  - Points Cloud in multiple [.las](http://desktop.arcgis.com/en/arcmap/10.3/manage-data/las-dataset/what-is-a-las-dataset-.htm) 
- - Orthophoto in one big image in png 
- - Elevation in Geotiff 
+ - Orthophoto: multi image 
+ - Elevation: multi image 
  
 
 ### Points Cloud 
