@@ -100,6 +100,10 @@ like this:
 
 Don't forget to add the gridset EPSG:32737 on the bottom.
 
+Click on BlobStores and add new.
+
+<img src="../Image/blob.png" width="500" height="300" />
+
 Now add new Store, 
 take the imageMosaic, and do this:
 
@@ -131,4 +135,4 @@ Click on seed/Truncate:
 
 and submit.
 
-It can take quite some time...
+It can take quite some time... like 2 hours.
