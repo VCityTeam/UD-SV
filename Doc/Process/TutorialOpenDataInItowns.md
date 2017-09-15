@@ -84,7 +84,7 @@ Check the [documentation](http://docs.geoserver.org/) if you want to understand 
 <img src="../Image/data.png" width="200" height="150" />
 
 To begin, add a new workspace
-Put Zanzibar for name and the URI : http://opengeo.org/Zanzibar
+<img src="../Image/workspace.png" width="645" height="100" />
 And submit... then click on Zanzibar and check the checkbox for WMS and WMTS
 
 Go on Disk Quota on your left and complet like that:
