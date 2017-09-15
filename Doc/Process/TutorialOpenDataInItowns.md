@@ -78,7 +78,7 @@ and put it /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/lib/
 Now go [here](http://localhost:8080/geoserver).
 for [documentation](http://docs.geoserver.org/)
 
-<img src="../Image/data.png" width="200" height="400" />
+<img src="../Image/data.png" width="150" height="150" />
 
 To begin, add a new workspace
 Put Zanzibar for name and the URI : http://opengeo.org/Zanzibar
