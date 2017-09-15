@@ -73,12 +73,13 @@ and
 ````
  
 Download [this](http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlets/9.2.13.v20150730/jetty-servlets-9.2.13.v20150730.jar)
-and put it /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/lib/
+and put it on this folder: /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/lib/
 
-Now go [here](http://localhost:8080/geoserver).
-for [documentation](http://docs.geoserver.org/)
+Now go [**Geoserver**](http://localhost:8080/geoserver).
 
-<img src="../Image/data.png" width="150" height="150" />
+Check the [documentation](http://docs.geoserver.org/) if you want undestand what each menu are.
+
+<img src="../Image/data.png" width="200" height="150" />
 
 To begin, add a new workspace
 Put Zanzibar for name and the URI : http://opengeo.org/Zanzibar
@@ -100,8 +101,6 @@ like this:
 
 Don't forget to add the gridset EPSG:32737 on the bottom.
 
-
-
 Now add new Store, 
 take the imageMosaic, and do this:
 
@@ -121,6 +120,9 @@ Now click on Publishing on the top.
 Add Raster like that : 
 
 <img src="../Image/raster.png" width="650" height="200" />
+
+Then click on the top **Tile Caching**
+and add your grid subset on the bottom of this page
 
 #### iTowns
 
