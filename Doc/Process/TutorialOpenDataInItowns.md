@@ -112,10 +112,10 @@ And save.
 Now you should have the page 'Edit Layer'
 Change the name and the title check the Native SRS is correct.
 
-If you have other data you have to change that [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L20)
+If you have other data you have to change that [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L20) in iTowns, pointsCloud.js file,
 the EPSG: and the [values](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L26) with the native bounding box, you can see it on the geoserver 
 
-And [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L113) you have to change the name with the name of your layer same for the projection: [EPSG](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L114). 
+[here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L113) you have to change the name with the name of your layer same for the projection: [EPSG](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L114). 
 
 Click on Publishing on the top.
 Add Raster like that : 
@@ -124,8 +124,7 @@ Add Raster like that :
 
 Then click on the top **Tile Caching**
 and add your grid subset on the bottom of this page
-
-
+- - - - - - -
 You should have in the **Tile Layers**, Zanzibar:Zanzibar_Layer.
 
 Click on seed/Truncate: 
