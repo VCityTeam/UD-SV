@@ -86,7 +86,7 @@ And submit... then click on Zanzibar and check the checkbox for WMS and WMTS
 
 Go on Disk Quota on your right and complet like that:
 
-<img src="../Image/diskquota.png" width="500" height="170" />
+<img src="../Image/diskquota.png" width="500" height="250" />
 
 And go on Gridsets just above Disk quota,
 Create a new gridset...
