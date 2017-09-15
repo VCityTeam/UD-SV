@@ -126,7 +126,10 @@ Add Raster like that :
 
 <img src="../Image/raster.png" width="650" height="200" />
 
-Then click on the top **Tile Caching**
+Then click on the top **Tile Caching**:
+
+<img src="../Image/blobLayer.png" width="650" height="200" />
+
 and add your grid subset on the bottom of this page
 - - - - - - -
 You should have in the **Tile Layers**, Zanzibar:Zanzibar_Layer.
