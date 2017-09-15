@@ -120,7 +120,7 @@ And [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointc
 Now click on Publishing on the top.
 Add Raster like that : 
 
-<img src="../Image/raster.png" width="750" height="450" />
+<img src="../Image/raster.png" width="500" height="250" />
 
 #### iTowns
 
