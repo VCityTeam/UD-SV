@@ -124,6 +124,9 @@ Add Raster like that :
 Then click on the top **Tile Caching**
 and add your grid subset on the bottom of this page
 
+
+Now, you should have in the **Tile Layers**, Zanzibar:Zanzibar_Layer 
+
 #### iTowns
 
 
