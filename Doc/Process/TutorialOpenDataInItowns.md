@@ -138,3 +138,6 @@ Click on seed/Truncate:
 and submit.
 
 It can take quite some time... like 2 hours.
+
+You can do the same methode for elevation.
+
