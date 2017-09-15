@@ -91,12 +91,12 @@ Go on Disk Quota on your right and complet like that:
 And go on Gridsets just above Disk quota,
 Create a new gridset...
 
-<img src="../Image/gridsets.png" width="645" height="100" />
+<img src="../Image/gridsets.png" width="500" height="300" />
 
 Then click on Caching Defaults just above gridsets,
 like this: 
 
-<img src="../Image/cachingDefaults.png" width="645" height="100" />
+<img src="../Image/cachingDefaults.png" width="500" height="300" />
 
 Don't forget to add the gridset EPSG:32737 on the bottom.
 
@@ -105,7 +105,7 @@ Don't forget to add the gridset EPSG:32737 on the bottom.
 Now add new Store, 
 take the imageMosaic, and do this:
 
-<img src="../Image/stores.png" width="645" height="100" />
+<img src="../Image/stores.png" width="500" height="300" />
 
 And publish.
 
