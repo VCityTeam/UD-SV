@@ -104,7 +104,7 @@ Don't forget to add the gridset EPSG:32737 on the bottom.
 
 Click on BlobStores and add new.
 
-<img src="../Image/blob.png" width="500" height="300" />
+<img src="../Image/blob.png" width="500" height="400" />
 
 Now add new Store, 
 take the imageMosaic, and do this:
