@@ -116,7 +116,7 @@ the EPSG: and the [values](https://github.com/NikoSaul/itowns2/blob/dataZanzibar
 
 And [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L113) you have to change the name with the name of your layer same for the projection: [EPSG](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L114). 
 
-Now click on Publishing on the top.
+Click on Publishing on the top.
 Add Raster like that : 
 
 <img src="../Image/raster.png" width="650" height="200" />
@@ -125,7 +125,13 @@ Then click on the top **Tile Caching**
 and add your grid subset on the bottom of this page
 
 
-Now, you should have in the **Tile Layers**, Zanzibar:Zanzibar_Layer 
+You should have in the **Tile Layers**, Zanzibar:Zanzibar_Layer.
+
+Click on seed/Truncate: 
+
+<img src="../Image/geowebcach.png" width="501" height="366" />
+
+and submit.
 
 #### iTowns
 
