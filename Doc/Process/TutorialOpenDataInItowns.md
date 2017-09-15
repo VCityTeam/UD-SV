@@ -73,7 +73,9 @@ Download [this](http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlets/9
 and put it on this folder: /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/lib/
 
 Now go [**Geoserver**](http://localhost:8080/geoserver).
+
 login : admin, mdp: geoserver
+
 Check the [documentation](http://docs.geoserver.org/) if you want to understand each menu.
 
 <img src="../Image/data.png" width="200" height="150" />
