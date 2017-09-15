@@ -128,7 +128,7 @@ Add Raster like that :
 
 Then click on the top **Tile Caching**:
 
-<img src="../Image/blobLayer.png" width="650" height="200" />
+<img src="../Image/blobLayer.png" width="522" height="701" />
 
 and add your grid subset on the bottom of this page
 - - - - - - -
