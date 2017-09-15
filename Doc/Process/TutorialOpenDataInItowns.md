@@ -1,8 +1,8 @@
 ## Install iTowns
  
-After you install [iTowns](https://github.com/iTowns/itowns) this [fork and branch](https://github.com/NikoSaul/itowns2/tree/dataZanzibar)
+After you install [iTowns](https://github.com/iTowns/itowns) go on this [fork and branch](https://github.com/NikoSaul/itowns2/tree/dataZanzibar)
 
-for start the server you should have run with this command (for iTowns him self)
+for start the server, run with this command (for iTowns)
 
 ```` npm start ```` ==> ```` npm start -- --port 7070````
 
@@ -10,11 +10,12 @@ for start the server you should have run with this command (for iTowns him self)
 
 We take an example the island of Zanzibar, data from a drone.
 you can download this [here](www.google.com)
+Thank to the ZMI project (Zanzibar Mapping Initiative) 
 
 We have 3 types of data 
- - Points Cloud in multiple [.las](http://desktop.arcgis.com/en/arcmap/10.3/manage-data/las-dataset/what-is-a-las-dataset-.htm) 
- - Orthophoto: multi image in .tif with .tfw for information
- - Elevation: multi image in .tif with .tfw for information
+ - Points Cloud: multiple [.las](http://desktop.arcgis.com/en/arcmap/10.3/manage-data/las-dataset/what-is-a-las-dataset-.htm) 
+ - Orthophoto: multiple image in .tif with .tfw for information
+ - Elevation: multiple image in .tif with .tfw for information
  
 
 ### Points Cloud 
@@ -30,7 +31,7 @@ Now in your folder you should have that: (the format potree)
 
 <img src="../Image/tutoOpenData_folder.png" width="645" height="100" />
 
-Copy the folder data temp cloud.js and sources.json in 3d-tiles-sample/tileset/Zanzibar/
+Copy the folder **data temp cloud.js and sources.json** in 3d-tiles-sample/tileset/Zanzibar/
 
 In iTowns: 
 
@@ -134,6 +135,3 @@ Click on seed/Truncate:
 and submit.
 
 It can take quite some time...
-
-
-
