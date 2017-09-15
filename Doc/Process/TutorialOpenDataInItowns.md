@@ -53,7 +53,7 @@ If it's not working try with this command:
 ````GEOSERVER_HOME=/usr/share/geoserver````
  
 After that, go on this file /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/
-you should have web.xml, open this and change 
+you should have web.xml, open this and uncomment this: 
 ````
 <!-- Uncomment following filter to enable CORS -->
 <filter>
@@ -107,7 +107,7 @@ take the imageMosaic, and do this:
 
 <img src="../Image/stores.png" width="500" height="300" />
 
-And publish.
+And save.
 
 Now you should have the page 'Edit Layer'
 Change the name and the title check the Native SRS is correct.
