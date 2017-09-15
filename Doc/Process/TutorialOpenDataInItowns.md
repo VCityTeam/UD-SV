@@ -86,7 +86,7 @@ To begin, add a new workspace
 Put Zanzibar for name and the URI : http://opengeo.org/Zanzibar
 And submit... then click on Zanzibar and check the checkbox for WMS and WMTS
 
-Go on Disk Quota on your right and complet like that:
+Go on Disk Quota on your left and complet like that:
 
 <img src="../Image/diskquota.png" width="500" height="250" />
 
