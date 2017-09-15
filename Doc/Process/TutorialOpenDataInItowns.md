@@ -93,7 +93,7 @@ Go on Disk Quota on your left and complet like that:
 And go on Gridsets just above Disk quota,
 Create a new gridset...
 
-<img src="../Image/gridsets.png" width="750" height="450" />
+<img src="../Image/gridsets.png" width="850" height="450" />
 
 Then click on Caching Defaults just above gridsets,
 like this: 
