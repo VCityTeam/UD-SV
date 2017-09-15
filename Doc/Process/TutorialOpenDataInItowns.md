@@ -74,7 +74,9 @@ and put it on this folder: /usr/share/geoserver/geoserver-2.11.2/webapps/geoserv
 
 Now go [**Geoserver**](http://localhost:8080/geoserver).
 
-login : admin, mdp: geoserver
+login : admin
+
+mdp: geoserver
 
 Check the [documentation](http://docs.geoserver.org/) if you want to understand each menu.
 
@@ -107,7 +109,7 @@ Click on BlobStores and add new.
 Now add new Store, 
 take the imageMosaic, and do this:
 
-<img src="../Image/stores.png" width="500" height="300" />
+<img src="../Image/stores.png" width="500" height="400" />
 
 And save.
 
