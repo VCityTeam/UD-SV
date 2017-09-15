@@ -4,7 +4,7 @@ After you install [iTowns](https://github.com/iTowns/itowns) go on this [fork an
 
 for start the server, run with this command (for iTowns)
 
-```` npm start ```` ==> ```` npm start -- --port 7070````
+not: ```` npm start ```` == but ==> ```` npm start -- --port 7070````
 
 ## How to import data in iTowns
 
