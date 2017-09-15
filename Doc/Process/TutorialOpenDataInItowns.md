@@ -133,8 +133,7 @@ Click on seed/Truncate:
 
 and submit.
 
-#### iTowns
-
+It can take quite some time...
 
 
 
