@@ -10,7 +10,8 @@ not: ```` npm start ```` == but ==> ```` npm start -- --port 7070````
 
 We take an example the island of Zanzibar, data from a drone.
 you can download this [here](www.google.com)
-Thank to the ZMI project (Zanzibar Mapping Initiative) 
+
+Thanks to the ZMI project (Zanzibar Mapping Initiative) 
 
 We have 3 types of data 
  - Points Cloud: multiple [.las](http://desktop.arcgis.com/en/arcmap/10.3/manage-data/las-dataset/what-is-a-las-dataset-.htm) 
