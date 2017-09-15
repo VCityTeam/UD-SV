@@ -49,10 +49,6 @@ Now you should have that:
 
 [install geoserver](http://docs.geoserver.org/stable/en/user/installation/linux.html) 
 
-If it's not working try with this command:
-
-````GEOSERVER_HOME=/usr/share/geoserver````
- 
 After that, go on this file /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/
 you should have web.xml, open this and uncomment this: 
 ````
