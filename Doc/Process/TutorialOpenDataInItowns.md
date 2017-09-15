@@ -84,7 +84,9 @@ Check the [documentation](http://docs.geoserver.org/) if you want to understand 
 <img src="../Image/data.png" width="200" height="150" />
 
 To begin, add a new workspace
-<img src="../Image/workspace.png" width="645" height="100" />
+
+<img src="../Image/workspace.png" width="514" height="216" />
+
 And submit... then click on Zanzibar and check the checkbox for WMS and WMTS
 
 Go on Disk Quota on your left and complet like that:
