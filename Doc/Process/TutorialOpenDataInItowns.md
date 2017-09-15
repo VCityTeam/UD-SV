@@ -91,12 +91,12 @@ Go on Disk Quota on your right and complet like that:
 And go on Gridsets just above Disk quota,
 Create a new gridset...
 
-<img src="../Image/gridsets.png" width="500" height="300" />
+<img src="../Image/gridsets.png" width="750" height="450" />
 
 Then click on Caching Defaults just above gridsets,
 like this: 
 
-<img src="../Image/cachingDefaults.png" width="500" height="300" />
+<img src="../Image/cachingDefaults.png" width="750" height="450" />
 
 Don't forget to add the gridset EPSG:32737 on the bottom.
 
