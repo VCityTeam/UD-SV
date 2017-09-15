@@ -77,7 +77,7 @@ and put it on this folder: /usr/share/geoserver/geoserver-2.11.2/webapps/geoserv
 
 Now go [**Geoserver**](http://localhost:8080/geoserver).
 
-Check the [documentation](http://docs.geoserver.org/) if you want undestand what each menu are.
+Check the [documentation](http://docs.geoserver.org/) if you want undestand each menu.
 
 <img src="../Image/data.png" width="200" height="150" />
 
