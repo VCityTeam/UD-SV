@@ -22,9 +22,10 @@ We have 3 types of data
 ### Points Cloud 
 
   You have to install [Potree Converter](https://github.com/potree/PotreeConverter), when you have this 
-create a new folder, put the folder point_cloud from Zanzibar file (*.las) .
+create a new folder and put the folder point_cloud from Zanzibar file (*.las) in.
 
-Write this in the new folder in your console:
+In your console go on the new folder and:
+
 ```` PotreeConverter Zanzibar/Las/* -o Zanzibar/ --material RGB ````
 (It can take time like ~2 3 min)
 
@@ -38,6 +39,7 @@ In iTowns:
 
 Open the pointcloud.html, change the url [here](https://github.com/iTowns/itowns/blob/master/examples/pointcloud.html#L105)
 with
+
 ````http://localhost:8003/tilesets/Zanzibar/cloud.js ````
 
 Now you should have that: 
