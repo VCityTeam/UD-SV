@@ -37,7 +37,7 @@ Copy the folder **data temp cloud.js and sources.json** in 3d-tiles-sample/tiles
 
 In iTowns: 
 
-** If you use the data from Zanzibar you don't have to do this. Only if you use other data...** 
+**If you use the data from Zanzibar you don't have to do this. Only if you use other data...** 
 
 Open the pointcloud.html, change the url [here](https://github.com/iTowns/itowns/blob/master/examples/pointcloud.html#L105)
 with
