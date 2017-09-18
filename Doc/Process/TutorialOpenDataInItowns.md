@@ -121,7 +121,7 @@ take the imageMosaic, and do this:
 
 And save.
 
-Now you should have the page 'Edit Layer'
+Now you should have the page 'Edit Layer',
 Change the name and the title check the Native SRS is correct.
 
 If you have other data you have to change that [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L20) in iTowns, pointsCloud.js file,
