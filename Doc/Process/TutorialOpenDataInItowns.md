@@ -147,3 +147,6 @@ It can take quite some time... like 2 hours.
 
 You can do the same methode for elevation.
 
+and you have this result: 
+
+<img src="../Image/pointcloudOrtho.png" width="1213" height="914" />
