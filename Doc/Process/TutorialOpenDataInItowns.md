@@ -74,7 +74,7 @@ and
 </filter-mapping>
 ````
  
-After that, 
+Next, 
 download [this](http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlets/9.2.13.v20150730/jetty-servlets-9.2.13.v20150730.jar)
 and put it on this folder: /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/lib/
 
