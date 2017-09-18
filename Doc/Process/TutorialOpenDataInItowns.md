@@ -92,7 +92,7 @@ To begin, add a new workspace
 
 <img src="../Image/workspace.png" width="514" height="216" />
 
-And submit... then click on Zanzibar and check the checkbox for WMS and WMTS
+And submit... then click on Zanzibar and check the boxes for WMS and WMTS
 
 Go on Disk Quota on your left and complet like that:
 
