@@ -117,7 +117,7 @@ Click on BlobStores and add new.
 Now add new Store, 
 take the imageMosaic, and do this:
 
-<img src="../Image/store.png" width="500" height="400" />
+<img src="../Image/stores.png" width="500" height="400" />
 
 And save.
 
