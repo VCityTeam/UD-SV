@@ -101,7 +101,7 @@ Go on Disk Quota on your left and complet like that:
 And go on Gridsets just above Disk quota,
 Create a new gridset...
 
-<img src="../Image/gridset2.png" width="627" height="437" />
+<img src="../Image/gridset2.0.png" width="627" height="437" />
 
 Then click on Caching Defaults just above gridsets,
 like this: 
@@ -117,7 +117,7 @@ Click on BlobStores and add new.
 Now add new Store, 
 take the imageMosaic, and do this:
 
-<img src="../Image/stores.png" width="500" height="400" />
+<img src="../Image/taskgwc.png" width="500" height="400" />
 
 And save.
 
