@@ -117,7 +117,7 @@ Click on BlobStores and add new.
 Now add new Store, 
 take the imageMosaic, and do this:
 
-<img src="../Image/taskgwc.png" width="500" height="400" />
+<img src="../Image/store.png" width="500" height="400" />
 
 And save.
 
@@ -144,7 +144,7 @@ You should have in the **Tile Layers**, Zanzibar:Zanzibar_Layer.
 
 Click on seed/Truncate: 
 
-<img src="../Image/geowebcach.png" width="501" height="366" />
+<img src="../Image/taskgwc.png" width="501" height="366" />
 
 and submit.
 
