@@ -148,7 +148,7 @@ Click on seed/Truncate:
 
 and submit.
 
-It can take quite some time... like 2 hours.
+It can take quite some time... like 5 minute.
 
 and you have this result: 
 
@@ -158,14 +158,12 @@ and you have this result:
 
 It's the same process as for the orthophoto (i use the big file .tif here /Zanzibar/001_final/3_dsm_ortho/1_dsm/)
 
-But you should resize the .tif with gdalwarp like that :
+But you should resize the .tif with [gdalwarp](http://www.gdal.org/gdalwarp.html) like that :
 
 ````gdalwarp -tr 0.25 0.25 001_final_dsm.tif zanziReduce.tif````
 
 
-#### video 
-
-[link](https://www.dropbox.com/s/aer9t0x4db744s2/videotestGeoserver.mp4?dl=0)
+#### [video](https://www.dropbox.com/s/aer9t0x4db744s2/videotestGeoserver.mp4?dl=0)
 
 #### Problem and Conclusion
 
