@@ -48,7 +48,7 @@ Now you should have that:
 
 <img src="../Image/ZanzibarPointCloud.png"/>
 
-### Orthophoto and Elevation
+### Orthophoto
 
 #### Geoserver 
 
@@ -150,8 +150,33 @@ and submit.
 
 It can take quite some time... like 2 hours.
 
-You can do the same methode for elevation.
-
 and you have this result: 
 
 <img src="../Image/pointcloudOrtho.png" width="1213" height="914" />
+
+### Elevation
+
+It's the same process as for the orthophoto (i use the big file .tif here /Zanzibar/001_final/3_dsm_ortho/1_dsm/)
+
+But you should resize the .tif with gdalwarp like that :
+
+````gdalwarp -tr 0.25 0.25 001_final_dsm.tif zanziReduce.tif````
+
+
+#### video 
+
+[link](https://www.dropbox.com/s/aer9t0x4db744s2/videotestGeoserver.mp4?dl=0)
+
+#### Problem and Conclusion
+
+Like you see in this video, they have some lag, i think it's because the wmts are not managed. 
+We have probleme with the elevation because when you remove the pointcloud you see this: 
+
+<img src="../Image/problemEleve.png" width="1213" height="914" />
+
+This is a problem of interpolation but i don't why.
+
+So for the orthophoto the problem solve with the wmts probaly.
+For the elevation maybe when we reduce the image the problem appears (but it's not working with the big image).
+
+
