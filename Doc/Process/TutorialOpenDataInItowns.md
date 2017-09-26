@@ -56,6 +56,7 @@ Now you should have that:
 
 After that, go on this file /usr/share/geoserver/geoserver-2.11.2/webapps/geoserver/WEB-INF/
 you should have web.xml, open this and uncomment this: 
+
 ````
 <!-- Uncomment following filter to enable CORS -->
 <filter>
