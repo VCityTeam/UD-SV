@@ -6,6 +6,18 @@ for start the server, run with this command (for iTowns)
 
 not: ```` npm start ```` == but ==> ```` npm start -- --port 7070````
 
+## How to import data in iTowns
+
+We take an example the island of Zanzibar, data from a drone.
+you can download this [here](www.google.com)
+
+Thanks to the ZMI project (Zanzibar Mapping Initiative) 
+
+We have 3 types of data 
+ - Points Cloud: multiple [.las](http://desktop.arcgis.com/en/arcmap/10.3/manage-data/las-dataset/what-is-a-las-dataset-.htm) 
+ - Orthophoto: multiple image in .tif with .tfw for information
+ - Elevation: multiple image in .tif with .tfw for information
+ 
 
 ### Points Cloud 
 
