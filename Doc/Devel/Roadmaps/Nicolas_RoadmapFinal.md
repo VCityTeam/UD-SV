@@ -23,7 +23,6 @@
     * Read the points cloud from drone data in iTowns
     * Read the orthophoto from drone data in iTowns
     * Read the elevation from drone data in iTowns
-    * Read the 3 in iTowns in same time
     * Try Geoserver for hosting the ortho and elevation
 
 ## Global
