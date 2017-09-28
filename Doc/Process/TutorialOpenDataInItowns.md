@@ -173,7 +173,7 @@ But you should resize the .tif with [gdalwarp](http://www.gdal.org/gdalwarp.html
 Like you see in this video, they have some lag, i think it's because the wmts are not managed. 
 We have probleme with the elevation because when you remove the pointcloud you see this: 
 
-<img src="../Image/problemEleve.png" width="1213" height="800" />
+<img src="../Image/problemEleve.png" width="1213" height="600" />
 
 This is a problem of interpolation but i don't why.
 
