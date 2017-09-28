@@ -5,9 +5,9 @@
     * The option [Viewer request Volume](https://github.com/AnalyticalGraphicsInc/3d-tiles): done
     * Add early support for 3Dtiles [point cloud](https://github.com/AnalyticalGraphicsInc/3d-tiles) format.
     * Manage the Batch ID 
-    * The Picking 
     * RTC manage for b3dm and pnts
     * Manage the [Batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles)
+    * The Picking
     * GLTF adaptation
     
   * **iTowns**
