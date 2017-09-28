@@ -126,8 +126,9 @@ Now you should have the page 'Edit Layer',
 Change the name and the title (like Zanzibar_Layer_orthophoto), then check the Native SRS is correct.
 
 If you have other data you have to change that [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L20) in iTowns, pointsCloud.js file.
-(this values can be find [here](http://spatialreference.org/) you search your EPSG and you click on Proj4js format) 
-the EPSG: and the [values](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L26) with the native bounding box, you can see it on the geoserver.
+(this values can be find [here](http://spatialreference.org/), you search your EPSG and you click on Proj4js format) 
+
+The EPSG: and the [values](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L26) with the native bounding box, you can see it on the geoserver.
 
 [here](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L113) you have to change the name with the name of your layer same for the projection: [EPSG](https://github.com/NikoSaul/itowns2/blob/dataZanzibar/examples/pointcloud.js#L114). 
 
