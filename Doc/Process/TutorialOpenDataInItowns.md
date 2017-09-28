@@ -166,7 +166,9 @@ But you should resize the .tif with [gdalwarp](http://www.gdal.org/gdalwarp.html
 ````gdalwarp -tr 0.25 0.25 001_final_dsm.tif zanziReduce.tif````
 
 
-#### [video](https://www.dropbox.com/s/aer9t0x4db744s2/videotestGeoserver.mp4?dl=0)
+#### Video 
+
+[video](https://www.dropbox.com/s/aer9t0x4db744s2/videotestGeoserver.mp4?dl=0)
 
 #### Problem and Conclusion
 
