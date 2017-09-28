@@ -2,8 +2,8 @@
 
   * **3DTiles**: 
     * Bounding volume implementation for regions and sphere
-    * The option [Viewer request Volume](https://github.com/AnalyticalGraphicsInc/3d-tiles): done
-    * Add early support for 3Dtiles [point cloud](https://github.com/AnalyticalGraphicsInc/3d-tiles) format.
+    * The option [Viewer request Volume](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status): done
+    * Add early support for 3Dtiles [point cloud](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status) format.
     * Manage the Batch ID 
     * RTC manage for b3dm and pnts
     * Manage the [Batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles)
