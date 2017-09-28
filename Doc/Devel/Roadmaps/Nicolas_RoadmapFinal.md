@@ -4,11 +4,9 @@
     * Bounding volume implementation for regions and sphere
     * The option [Viewer request Volume](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status): done
     * Add early support for 3Dtiles [point cloud](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status) format.
-    * Manage the Batch ID 
-    * RTC manage for b3dm and pnts
-    * Manage the [Batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles)
-    * The Picking
-    * GLTF adaptation
+    * [RTC manage](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/iTowns3Dtiles.md) for b3dm and pnts
+    * Manage the Batch ID in iTowns and GLTF
+    * Manage the [Batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles) and the picking (when you selection a building you have the information about them)    
     
   * **iTowns**
     * Fix some bug with transformation
