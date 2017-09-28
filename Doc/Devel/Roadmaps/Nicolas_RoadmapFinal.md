@@ -1,6 +1,6 @@
 ## Task accomplished 
 
-  * 3DTiles: 
+  * **3DTiles**: 
     * Bounding volume implementation for regions and sphere
     * The option [Viewer request Volume](https://github.com/AnalyticalGraphicsInc/3d-tiles): done
     * Add early support for 3Dtiles [point cloud](https://github.com/AnalyticalGraphicsInc/3d-tiles) format.
@@ -10,16 +10,16 @@
     * Manage the [Batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles)
     * GLTF adaptation
     
-  * iTowns
+  * **iTowns**
     * Fix some bug with transformation
     * UI for example 3DTiles
  
-  * Temporel 
+  * **Temporel** 
     * Creation of [Need](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel/Needs)
     * Creation of [designNote](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md) and [this](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote021.md) for implementation.  
     * Early implementation both side (server and client)
   
-  * Data from [UAV](https://en.wikipedia.org/wiki/Unmanned_aerial_vehicle) ( Unmanned_aerial_vehicle ): Find a solution for read [the heterogeneous data](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/TutorialOpenDataInItowns.md)
+  * **Data from [UAV](https://en.wikipedia.org/wiki/Unmanned_aerial_vehicle)** ( Unmanned_aerial_vehicle ): Find a solution for read [the heterogeneous data](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/TutorialOpenDataInItowns.md)
     * Read the points cloud from drone data in iTowns
     * Read the orthophoto from drone data in iTowns
     * Read the elevation from drone data in iTowns
