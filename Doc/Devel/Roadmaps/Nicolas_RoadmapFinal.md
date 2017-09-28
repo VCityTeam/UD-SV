@@ -29,7 +29,7 @@
 
   * Documentation 
     * [3DTiles](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/iTowns3Dtiles.md): pnts in iTowns and other feature.
-    * [Lopocs](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/TutorialFileLasInItown.md): tutorial for how the server Lopocs work in iTowns
+    * [Lopocs](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/TutorialFileLasInItown.md): tutorial for how the server Lopocs works in iTowns
     * [Data From drone](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/TutorialOpenDataInItowns.md) in iTowns
 
   * [Needs](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel/Needs)
