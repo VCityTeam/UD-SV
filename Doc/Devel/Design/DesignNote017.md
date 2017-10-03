@@ -146,4 +146,4 @@ When we select the cityobject, we have to do a jointure between the table cityob
 
 ## References
 
-[Gai16] Gaillard, J., Peytavie, A., & Gesquière, G. (2016, October). A Data Structure for Progressive Visualisation and Edition of Vectorial Geospatial Data. In 3D GeoInfo (Vol. 2, pp. 201-209).
+[[Gai16](https://hal.archives-ouvertes.fr/hal-01420117/document)] Gaillard, J., Peytavie, A., & Gesquière, G. (2016, October). A Data Structure for Progressive Visualisation and Edition of Vectorial Geospatial Data. In 3D GeoInfo (Vol. 2, pp. 201-209).
