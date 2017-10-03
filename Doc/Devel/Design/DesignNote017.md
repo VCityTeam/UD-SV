@@ -105,38 +105,6 @@ Currently, the tiles are created with an empty batch table so we need to provide
 Technical note in [b3dm spec](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/Batched3DModel):
 "The glTF asset must be 8-byte aligned so that glTF's byte-alignment guarantees are met. This can be done by padding the Feature Table or Batch Table if they are present."
 
-#### Modify the way tiles are created
-
-On the server, currently, there is a number of feature (geometric object, currently a building) per tile and a maximum tile size which can be configured in the file conf/building.yml. The tile hierarchy is a quadtree created using the extent of the city, and the two parameters abovementionned:
- * The root englobe all the scene
- * There is eventually "an intermediate level" which is a subdivision of the root in `n` part
- * Then, there one level of depth of the quadtree
- * If the number of feature in the tile of the previous level is higher than the configured number of feature per tile:
-    - The tile is subdivided in subtiles. 
-    - The tiles with the highest scores go into the parent tile and the ones with the lowest scores go into the children tiles.
-  
-More details about the tile creation process can be found in [Gai16].
-
-**Design choice (refer to [GAi16])**
- - Sibling tiles can be geometrically overlapped ([example](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/figures/grid.png))
- - Nodes (of the hierarchy) can hold both features (references) and children sub-tiles.
- - Children-subtiles don't covert the parent tile geometry
- - Children sub-tiles are geometrically contained in their parent tile (geometrical nesting).
-
-**Impact of temporality on the hierarchy creation process**
-We must modify the hierarchy creation process in order to consider the temporal information.
-
-FIXME questions:
- - the configuration file could hold: 
-   * a maximum temporal interval of existence of a tile
-   * the relative weights of temporal weight_function vs spatial weight_function
- - il va falloir clarifier la metrique sur le temps: c'est quoi une bonne métrique sur le temps.
- - il faut partir d'un exemple avec 5 features ou l'ordre pour chacun des poids change et ensuite voir comment on melange.
- - il se peut que l'on ne trouve pas de poids relatifs servant les use cases et il qu'il sortir de cette méthode
- - il se peut que la "bonne" (pour les use case) facon de faire soit d'avoir deux hierachies _jusqu'au bout_ (par opposition a une hiérarchie obtenue en pondérant deux métriques).
- - the weight function based on time intervals could use a metric different from the length of the interval and use more sophisticated metrics.
-
-*Note: It might be a good idea to provide a schema illustrating this part.*
 
 ### Discussion of the 03/08/2017
 
