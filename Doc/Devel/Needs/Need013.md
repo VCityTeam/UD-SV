@@ -10,6 +10,8 @@ As a historian I want to visualize and locate documents (images, videos, text...
 
 ### Maturity:
 
+There is a prototype for this need in : https://github.com/MEPP-team/UDV/tree/master/Vilo3D . This prototype uses a 2D screen overlay to display the documents as opposed to a 3D spatial insertion (as billboards for instance).
+
 ### Cost evaluation:
 
 ### Tags or keywords
