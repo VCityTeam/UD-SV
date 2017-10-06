@@ -1,3 +1,9 @@
+## Hot to improve this page
+Move the content here:
+ - the Dwaring of the install.md page
+ - [that](https://github.com/MEPP-team/RICT/blob/master/Install.md#architecture-notes)
+ - [here](https://github.com/MEPP-team/RICT/blob/master/Install.md#architecture-notes)
+
 ## Architecture
 
 ### People
