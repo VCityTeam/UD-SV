@@ -2,6 +2,27 @@
 Move the content here:
  - [that](https://github.com/MEPP-team/RICT/blob/master/Install.md#architecture-notes)
  - [this](https://github.com/MEPP-team/RICT/wiki/2017_06_21_-_Architecture_next_step)
+ 
+## Components names
+ * UDV: client side
+  * [UDV/EarlyPrototype](https://github.com/MEPP-team/UDV/tree/master/EarlyPrototype) holds the first version
+  * Application UDV/FabPat (FABrique du PATrimoine
+  * Application UDV/Vilo3D
+  * Component UDV/UDV-Core: client side features that shared by all application
+
+Concernant iTowns
+
+    branche Temporal créée et gérée par Nicolas
+    sous-branch WorkSpace de temporal (à rebaser régulièrement contre temporal)
+    Note: la différence entre temporal et WorkSpace permet de réduire la barrière à l'acceptation de ce qui va remonter à court terme vers le master d'iTowns. Charge à JSA à finir le travail pour la branch WorkSpace
+
+Concernant 3DUSE:
+
+    Actuel contenu du repository 3DUSE repackagé en EarlyProtype
+    Création de libCityProcess qui est un revamping de filters (wrapping Python/Java)
+    Création de 3D-Use viewer qui s'appuie sur libCityProcess
+
+
 
 ## Architecture
 
