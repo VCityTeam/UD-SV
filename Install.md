@@ -1,5 +1,5 @@
 
-![Sketchy iTowns usage/developing  context](Doc/Devel/Needs/Architecture/Diagrams/OslandiaiTown2Context.png)
+![Sketchy iTowns usage/developing  context](Doc/Devel/Architecture/Diagrams/OslandiaiTown2Context.png)
   
 # Install notes for Unix users
 
