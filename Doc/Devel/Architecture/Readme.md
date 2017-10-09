@@ -1,5 +1,5 @@
 ## Hot to improve this page
-Move the content here:
+Move (some of) the content (at least diagrams) from the following document within the current page:
  - [that](https://github.com/MEPP-team/RICT/blob/master/Install.md#architecture-notes)
  - [this](https://github.com/MEPP-team/RICT/wiki/2017_06_21_-_Architecture_next_step)
  
