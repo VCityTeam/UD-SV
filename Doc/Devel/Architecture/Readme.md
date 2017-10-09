@@ -30,7 +30,7 @@ Move the content here:
 ### iTowns2
 [iTowns2 documentation](https://github.com/iTowns/itowns2/blob/1f748406ba1213ee50e941876c3134686ae7e998/README.md)
 
-![JGA's architecture diagram](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Architecture/Pictures/2017_05_03_-_JGA_Achitecture_diagrama.png)
+![JGA's architecture diagram](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Architecture/Pictures/2017_05_03_-_JGA_Achitecture_diagrama.png)
 [Associated JGA's description](https://github.com/MEPP-team/RICT/wiki/2017_05_03_-_JGA_iTowns2_presentation)
 
 ![Sketchy iTowns usage/developing  context](Diagrams/OslandiaiTown2Context.png)
