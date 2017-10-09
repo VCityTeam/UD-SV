@@ -4,25 +4,17 @@ Move the content here:
  - [this](https://github.com/MEPP-team/RICT/wiki/2017_06_21_-_Architecture_next_step)
  
 ## Components names
- * UDV: client side
-  * [UDV/EarlyPrototype](https://github.com/MEPP-team/UDV/tree/master/EarlyPrototype) holds the first version
-  * Application UDV/FabPat (FABrique du PATrimoine
-  * Application UDV/Vilo3D
-  * Component UDV/UDV-Core: client side features that shared by all application
+ * [UDV (Urban Data Viewer)](https://github.com/MEPP-team/UDV) : client side
+  * [UDV/EarlyPrototype](https://github.com/MEPP-team/UDV/tree/master/EarlyPrototype) holds the first prototype version
+  * UDV/FabPat: an application dedicated to "FABrique du PATrimoine"
+  * [UDV/Vilo3D](https://github.com/MEPP-team/UDV/tree/master/Vilo3D) ([tag](https://github.com/MEPP-team/UDV/releases/tag/Vilo3D-Demo-1.0): an demo application for the [Vilo3D project](http://imu.universite-lyon.fr/projet/vilo-3d-la-fabrique-urbaine-des-processus-a-leurs-representations-3d/)
+  * [UDV/UDV-Core](https://github.com/MEPP-team/UDV/tree/master/UDV-Core): a component for applications to share core client code
 
-Concernant iTowns
+ * iTowns
+  * [3dtiles-temporal](https://github.com/jailln/itowns/tree/3dtiles-temporal) a branch of an [iTowns fork](https://github.com/jailln/itowns/)
 
-    branche Temporal créée et gérée par Nicolas
-    sous-branch WorkSpace de temporal (à rebaser régulièrement contre temporal)
-    Note: la différence entre temporal et WorkSpace permet de réduire la barrière à l'acceptation de ce qui va remonter à court terme vers le master d'iTowns. Charge à JSA à finir le travail pour la branch WorkSpace
-
-Concernant 3DUSE:
-
-    Actuel contenu du repository 3DUSE repackagé en EarlyProtype
-    Création de libCityProcess qui est un revamping de filters (wrapping Python/Java)
-    Création de 3D-Use viewer qui s'appuie sur libCityProcess
-
-
+ * LibCityProcess:
+  * a library [repackaging 3DUse filters](https://github.com/MEPP-team/3DUSE/issues/39) as a separate component.
 
 ## Architecture
 
