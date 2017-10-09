@@ -1,7 +1,8 @@
 ## Hot to improve this page
 Move (some of) the content (at least diagrams) from the following document within the current page:
- - [that](https://github.com/MEPP-team/RICT/blob/master/Install.md#architecture-notes)
- - [this](https://github.com/MEPP-team/RICT/wiki/2017_06_21_-_Architecture_next_step)
+ - [Bottom page architecture](https://github.com/MEPP-team/RICT/blob/master/Install.md#architecture-notes)
+ - [Diagram](https://github.com/MEPP-team/RICT/wiki/2017_06_21_-_Architecture_next_step)
+ - [client-server diagram](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md)
  
 ## Components names
  * [UDV (Urban Data Viewer)](https://github.com/MEPP-team/UDV) : client side
