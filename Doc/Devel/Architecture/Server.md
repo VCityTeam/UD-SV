@@ -14,16 +14,19 @@ Independantly from building-server and py3dtiles, a new component called libCity
 
 Building-server is composed of the following services:
 
-  * __ProcessDB__
-
-  * __GetCity__
+  * __ProcessDB:__
+    * Ins:
+      * A configuration file containing a list of cities and some related information: name of the city, three output tables names (tile: contains the tiles and their bounding boxes, hierarchytable: contains the hierarchy of the tiles, featuretable: matches the features (i.e. the geometries) to the tiles), the name of the table containing the geometries (geometrytable), the extent of the data set, the max size of a tile in meters (square tiles), the srs (spatial reference system) and the number of features per tile.
+    * Outs:
+      * Three new tables (specified in inputs) containing the tiles, their hierarchy and the features they contains. Basically it is a representation in the DB of a 3dtiles tileset constructed from the geometries of the DB. 
+  * __GetCity:__
     * Ins: 
       * City Name: reffers to a city in the database.
       * Format (optionnal): format of the tiles of the returned tileset. Default value is "b3dm".
     * Outs: 
       * A 3d-tiles tileset: Only contains the tiled hierarchy representing the city but not the geometry of the city. The tileset is a json file.
 
-  * __GetGeometry__
+  * __GetGeometry:__
     * Ins: 
       * City Name: reffers to a city in the database.
       * Tile: tile identifier contained in the tileset.
@@ -31,9 +34,12 @@ Building-server is composed of the following services:
       * Format (optionnal): Format of the returned tile's geometries. Default value is "b3dm". Possible values: geojson, b3dm.
     * Outs: 
       * A file in input format containing the geometry of the input tile and optionnaly its linked attributes.
-  * __GetCities__
-  * __GetAttribute__
-
+      
+  * __GetCities:__
+    * Ins: None
+    * Outs: json file listing the cities and their attributes from the configuration file of the server.
+    
+  * __GetAttribute:__
 
 
 
