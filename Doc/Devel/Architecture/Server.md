@@ -42,4 +42,13 @@ Building-server is composed of the following services:
   * __GetAttribute:__
 
 
+## Py3dtiles
 
+### Services
+
+  * __Convert Geometries to b3dm file__
+    * Ins:
+      * A list of geometries in wkb format.
+      * A list of attributes of the geometries.
+    * Outs:
+      * a b3dm file containing the attributes of the geometries and containing the geometries in gltf format.
