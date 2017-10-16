@@ -1,6 +1,6 @@
 # Application Architecture 
 
-Architecture and related diagrams regarding the full application.
+Architecture and related diagrams regarding the whole application.
 
 
 ## Architecture Diagrams
