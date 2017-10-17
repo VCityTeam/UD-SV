@@ -1,7 +1,3 @@
-## Hot to improve this page
-Move (some of) the content (at least diagrams) from the following document within the current page:
- - [Bottom page architecture notes](https://github.com/MEPP-team/RICT/blob/master/Install.md#architecture-notes)
- 
 ## Components names
  * [UDV (Urban Data Viewer)](https://github.com/MEPP-team/UDV) : client side
    * [UDV/EarlyPrototype](https://github.com/MEPP-team/UDV/tree/master/EarlyPrototype) holds the first prototype version
