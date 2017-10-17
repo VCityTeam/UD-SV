@@ -32,20 +32,19 @@ Software architecture schema:
 
 ![](Pictures/iTownsInternalArchitecture.jpg)
 
-## Services
+## Existing Services
 
-  * __Display a city__
+In this part, services of iTowns are presented. First, there is its signature in the following format: _ServiceName_ (Ins) : Outs . Then, when necessary, there is more detailed information about ins and outs of the service.
+
+  * __DisplayCity__ (3D urban data set information, camera position) : Rendering of the 3D urban data set
     * Ins:
-      * Several information about the data set (e.g. name, URL, protocol, srs, etc.)
-      * Camera position
+      * _3D urban data set information_ : Several information about the data set (e.g. name, URL, protocol, srs, etc.)
     * Outs:
-      * 3D Rendering of the visible part of the given data set
+      * _Rendering of the 3D urban data set_ : 3D Rendering of the visible part of the given data set
    
-  * __Display a city at a given date__
+  * __DisplayCity4D__ (4D urban data set information, Camera position, Display date) : Rendering of the 4D urban data set
     * Ins:
-      * Several information about the data set (e.g. name, URL, protocol, srs, etc.)
-      * Camera position
-      * Display date
+      * _4D urban data set information_ : Several information about the data set (e.g. name, URL, protocol, srs, etc.)
     * Outs:
-      * 3D Rendering of the visible part of the given data set at the display date
+      * _Rendering of the 4D urban data set_ : 3D Rendering of the visible part of the given data set at the display date
 
