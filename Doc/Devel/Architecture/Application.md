@@ -13,9 +13,11 @@ Architecture and related diagrams regarding the whole application.
 
 ![](Pictures/2017_06_Architecture_prospective.jpg)
 
-### Software Architecture diagram (12/10/2017)
+### Software Architecture diagram (17/10/2017)
 
-![](Pictures/ArchiLogicielle.png)
+The following diagram present the current software architecture of our application, its component and associated technologies.
+
+![](Pictures/2017_10_17_-_ArchiLogicielle-ExistanteImplem.png)
 
 ## Sequence diagrams
 
