@@ -12,35 +12,33 @@ Independantly from building-server and py3dtiles, a new component called libCity
 
 ### Services
 
-Building-server is composed of the following services:
+In this part, services of iTowns are presented. First, there is its signature in the following format: _ServiceName_ (Ins) : Outs . Then, when necessary, there is more detailed information about ins and outs of the service.
 
-  * __ProcessDB:__
-    * Ins:
-      * A configuration file containing a list of cities and some related information: name of the city, three output tables names (tile: contains the tiles and their bounding boxes, hierarchytable: contains the hierarchy of the tiles, featuretable: matches the features (i.e. the geometries) to the tiles), the name of the table containing the geometries (geometrytable), the extent of the data set, the max size of a tile in meters (square tiles), the srs (spatial reference system) and the number of features per tile.
-    * Outs:
-      * Three new tables (specified in inputs) containing the tiles, their hierarchy and the features they contains. Basically it is a representation in the DB of a 3dtiles tileset constructed from the geometries of the DB. 
-  * __GetCity:__
-    * Ins: 
-      * City Name: reffers to a city in the database.
-      * Format (optionnal): format of the tiles of the returned tileset. Default value is "b3dm".
-    * Outs: 
-      * A 3d-tiles tileset: Only contains the tiled hierarchy representing the city but not the geometry of the city. The tileset is a json file.
+### Existing services
 
-  * __GetGeometry:__
-    * Ins: 
-      * City Name: reffers to a city in the database.
-      * Tile: tile identifier contained in the tileset.
-      * Attributes (optionnal): an attribute linked to a geometry and to be retrieved from the DB along with the geometry. Only works when format value is geojson.
-      * Format (optionnal): Format of the returned tile's geometries. Default value is "b3dm". Possible values: geojson, b3dm.
-    * Outs: 
-      * A file in input format containing the geometry of the input tile and optionnaly its linked attributes.
+  * __ProcessDB__ (configuration file about 3D urban data set) : hierarchy of tiles containing geometric features
+    * Details:
+      * _Configuration file about 3D urban data set_ : Contains a list of cities and some related information: name of the city, three output tables names (tile: contains the tiles and their bounding boxes, hierarchytable: contains the hierarchy of the tiles, featuretable: matches the features (i.e. the geometries) to the tiles), the name of the table containing the geometries (geometrytable), the extent of the data set, the max size of a tile in meters (square tiles), the srs (spatial reference system) and the number of features per tile.
+      * _Hierarchy of tiles containing geometric features_ : Three new tables (specified in inputs) containing the tiles, their hierarchy and the features they contains. Basically it is a representation in the DB of a 3dtiles tileset constructed from the geometries of the DB. 
+  * __GetCity__ (City Name, Format (optionnal)) : 3d-tiles tileset
+    * Details: 
+      * _City Name_ : reffers to a city in the database.
+      * _Format (optionnal)_ : format of the tiles of the returned tileset. Default value is "b3dm".
+      * _3d-tiles tileset_ : Only contains the tiled hierarchy representing the city but not the geometry of the city. The tileset is a json file.
+
+  * __GetGeometry__ (City Name, Tile, Attributes (optionnal), Format (optionnal)) : .Format file containing geometric features of the tile
+    * Details: 
+      * _City Name_ : reffers to a city in the database.
+      * _Tile_ : tile identifier contained in the tileset.
+      * _Attributes (optionnal)_ : an attribute linked to a geometry and to be retrieved from the DB along with the geometry. Only works when format value is geojson.
+      * _Format (optionnal)_ : Format of the returned tile's geometries. Default value is "b3dm". Possible values: geojson, b3dm.
+      * _.Format file containing geometric features of the tile_ : A file in input format containing the geometry of the input tile and optionnaly its linked attributes.
       
-  * __GetCities:__
-    * Ins: None
-    * Outs: json file listing the cities and their attributes from the configuration file of the server.
+  * __GetCities__ () : List of cities and their configured attributes as json.
+    * Details:
+      * _List of cities and their configured attributes as json_ : json file listing the cities and their attributes from the configuration file of the server.
     
-  * __GetAttribute:__
-
+  * __GetAttribute__ : Currently down.
 
 ## Py3dtiles
 
