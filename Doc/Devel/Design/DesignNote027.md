@@ -11,3 +11,5 @@ As we have different type of applications, data which has a complex structure (3
   * If it is an operation which is done only in some precise cases (e.g. display semantic data linked to building when picking them), it is better to 
     * client-side: store the minimum of information allowing to retrieve all the information needed for running the operation and to run queries to the server when needed (with the same example, it is better to only send the id of the geometry of the database to the client and to run queries to get the semantic information when a building is picked by the user).
     * server-side: provide means (via an API) to retrieve the needed information from the database when asked by the client.
+ 
+To sum up, view-independent computations are performed on the server-side and reused on the client-side while view-dependant computations are performed on the client-side.
