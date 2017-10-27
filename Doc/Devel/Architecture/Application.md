@@ -25,7 +25,7 @@ The following diagram present the current software architecture of our applicati
 
 The purpose of this sequence is to display a 3D urban area in a web client from a database containing georeferenced and standardized data.
 
-![](Diagrams/SequenceDisplayCity.png)
+![](Diagrams/SeqDisplay3DCity.png)
 
 ## Thick - Thin Client - server strategy
 
