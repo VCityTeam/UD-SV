@@ -1,25 +1,33 @@
-# Application Architecture 
+# Architecture of the application
 
 Architecture and related diagrams regarding the whole application.
 
 
 ## Architecture Diagrams
 
-### Architecture diagram of Oslandia developping context with iTowns:
+### Applicative architecture
+
+#### Applicative architecture (27/10/2017)
+
+![](Diagrams/ApplicativeArchitecture.png)
+
+### Software architecture
+
+#### Software architecture diagram of Oslandia's developping context with iTowns:
 
 ![Sketchy iTowns usage/developing  context](Diagrams/OslandiaiTown2Context.png)
 
-### Global architecture diagram (06/2017):
-
-![](Pictures/2017_06_Architecture_prospective.jpg)
-
-### Software Architecture diagram (17/10/2017)
+#### Software Architecture diagram (17/10/2017)
 
 The following diagram present the current software architecture of our application, its component and associated technologies.
 
-![](Pictures/2017_10_17_-_ArchiLogicielle-ExistanteImplem.png)
+![](Diagram/SoftwareArchitecture.png)
 
-## Sequence diagrams
+#### Global architecture diagram (06/2017):
+
+![](Pictures/2017_06_Architecture_prospective.jpg)
+
+### Sequence diagrams
 
 ### Sequence diagram describing the workflow when displaying a city using our application (without temporality)
 
