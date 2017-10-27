@@ -2,32 +2,29 @@
 
 Architecture and related diagrams regarding the whole application.
 
+## Applicative architecture
 
-## Architecture Diagrams
-
-### Applicative architecture
-
-#### Applicative architecture (27/10/2017)
+### Applicative architecture (27/10/2017)
 
 ![](Diagrams/ApplicativeArchitecture.png)
 
-### Software architecture
+## Software architecture
 
-#### Software architecture diagram of Oslandia's developping context with iTowns:
+### Software architecture diagram of Oslandia's developping context with iTowns:
 
 ![Sketchy iTowns usage/developing  context](Diagrams/OslandiaiTown2Context.png)
 
-#### Software Architecture diagram (17/10/2017)
+### Software Architecture diagram (17/10/2017)
 
 The following diagram present the current software architecture of our application, its component and associated technologies.
 
 ![](Diagram/SoftwareArchitecture.png)
 
-#### Global architecture diagram (06/2017):
+### Global architecture diagram (06/2017):
 
 ![](Pictures/2017_06_Architecture_prospective.jpg)
 
-### Sequence diagrams
+## Sequence diagrams
 
 ### Sequence diagram describing the workflow when displaying a city using our application (without temporality)
 
@@ -35,7 +32,9 @@ The purpose of this sequence is to display a 3D urban area in a web client from 
 
 ![](Diagrams/SeqDisplay3DCity.png)
 
-## Thick - Thin Client - server strategy
+## Discussions
+
+### Thick - Thin Client - server strategy
 
 Our application uses a client / server strategy. We thus have to choose between different strategies: thick client - thin server (the client has a data model and most of the work is done client-side), medium client - medium server (the work is either done client-side or server-side depending on the application), thin client - thick server (most of the work is done server-side). 
 
