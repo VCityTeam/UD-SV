@@ -23,18 +23,5 @@ The state of city is the geometry of the city for the considered date.
 FIXME-ESC
 
 ### Notes:
-[Sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram):
- 1. the applications requests a refreshement of the scene for a given date to the iTowns framework 
- 2. some iTown sub-component (3dtiles provider) passes the time-stat-city request to a 3Dtiles-server (or a server adapter)
- 3. the 3Dtiles-server forwards the request to a DBCity server
- 3. the DBCity server replies with a collection of a cityobjects to the 3Dtiles-server
- 4. 3Dtiles-server packages the answer into a b3dm object that it handles 
-    over to the iTowns framework
- 5. The 3Dtiles-provider parses the b3dm object to convert it to Threejs object (mesh) 
-    that is integrated to the scene
-    
-This implies changing the 3Dtiles specification making it a 3D+time specification.
-
-
- <img src="../Design/images/Architecture Vilo3D example.png" width="1000" height="650" />
+[Sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) for displaying a city can be found [here](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Architecture/Application.md#sequence-diagram-describing-the-workflow-when-displaying-a-city-using-our-application-without-temporality)
  
