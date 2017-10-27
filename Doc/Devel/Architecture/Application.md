@@ -18,7 +18,7 @@ Architecture and related diagrams regarding the whole application.
 
 The following diagram present the current software architecture of our application, its component and associated technologies.
 
-![](Diagram/SoftwareArchitecture.png)
+![](Diagrams/SoftwareArchitecture.png)
 
 ### Global architecture diagram (06/2017):
 
