@@ -26,11 +26,23 @@ The following diagram present the current software architecture of our applicati
 
 ## Sequence diagrams
 
-### Sequence diagram describing the workflow when displaying a city using our application (without temporality)
+### Sequence diagram describing the current workflow when displaying a city using our application (without temporality)
 
 The purpose of this sequence is to display a 3D urban area in a web client from a database containing georeferenced and standardized data.
 
 ![](Diagrams/SeqDisplay3DCity.png)
+
+### Sequence diagram of Application Setup and Navigation in a 3D representation of the city
+
+This is an evolution of the previous diagram and is a short term target. It is now separated in two parts : Application setup and  navigation in a 3D representation of the city. In comparison with the previous diagram, the 3d-tiles tileset and the b3dm tiles computations are done in a preprocess step. In addition, there is a new step at the beginning triggered by the signal buildView(viewAttributes). The Admin will now run a script to create a view on 3DCityDB. This view will contain each feature wanted in the dataset, its ids and any attribute related to the features that will be added in the b3dm files.
+
+**Application Setup diagram:**
+
+![](Diagrams/ApplicationSetup.png)
+
+**Navigation in a City in 3D diagram:**
+
+![](Diagrams/3DNavigation.png)
 
 ## Discussions
 
