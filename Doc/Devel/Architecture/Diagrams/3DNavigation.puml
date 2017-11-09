@@ -1,0 +1,47 @@
+@startuml
+autonumber
+
+title Navigate in a 3D representation of the City
+
+actor User
+participant iTowns
+participant "file-server" as FS
+database "3d-tiles tileset\n+ b3dm tiles" as TB3DM
+
+'Launch application
+User -> iTowns : LaunchApplication
+activate iTowns
+iTowns -> FS : getCapabilities
+activate FS
+FS -> TB3DM : GetCity
+TB3DM --> FS : 3d-tiles tileset
+FS --> iTowns : 3d-tiles Tileset
+deactivate FS
+deactivate iTowns
+
+'Move Camera
+User -> iTowns : MoveCamera
+activate iTowns
+iTowns -> iTowns : Compute visible\nTiles Tv
+activate iTowns
+deactivate iTowns
+
+loop for each Tvi of Tv
+  iTowns -> FS : GetTile(Tvi)
+  activate FS
+  FS -> TB3DM : GetTile(Tvi)
+  activate TB3DM
+  TB3DM --> FS : Tvi as b3dm
+  deactivate TB3DM
+  FS --> iTowns : Tvi as b3dm
+  deactivate FS
+
+  loop for each Feature of Tvi
+    iTowns -> iTowns : Display Feature if visible
+    activate iTowns
+    deactivate iTowns
+  end
+
+  deactivate iTowns
+end
+@enduml

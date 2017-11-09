@@ -1,0 +1,59 @@
+@startuml
+autonumber
+
+title Application Setup (Pre-Process)
+
+actor Admin
+participant ViewBuilder
+participant py3dtiles
+database 3DCityDB
+
+'viewAttributes represents mandatory + optionnal arguments:
+'mandatory arguments: geomTableName, idGeomColumn, idGeomColumn
+'optionnal arguments: attrib1Table, attrib1Column, .. attribnTable, attribnColumn
+Admin -> ViewBuilder : BuildView(viewAttributes)
+activate ViewBuilder
+ViewBuilder -> 3DCityDB : FetchViewAttributes
+activate 3DCityDB
+3DCityDB --> ViewBuilder : viewAttributes
+deactivate 3DCityDB
+'Note: In practice we could also:
+'create a new composant which could be named "3DCityDBView"
+'create a new DB which could be named "3DCityDBView" and contains a duplication
+'of the desired data (viewAttributes)
+create database 3DCityDBView
+ViewBuilder -> 3DCityDBView : CreateView
+deactivate ViewBuilder
+
+
+Admin -> py3dtiles : export_tileset
+activate py3dtiles
+
+py3dtiles -> 3DCityDBView : FetchViewAttributes
+activate 3DCityDBView
+3DCityDBView --> py3dtiles : viewAttributes
+deactivate 3DCityDBView
+
+py3dtiles -> py3dtiles : ComputeTiles and\nTilesHierarchy
+activate py3dtiles
+deactivate py3dtiles
+
+py3dtiles -> py3dtiles : Convert TilesHierarchy to 3d-tiles
+activate py3dtiles
+deactivate py3dtiles
+
+create database "3d-tiles tileset\n+ b3dm tiles" as TB3DM
+py3dtiles -> TB3DM : Export 3d-tiles Tileset
+
+loop Tiles
+  py3dtiles -> py3dtiles : Convert tile geometries to gltF
+  activate py3dtiles
+  deactivate py3dtiles
+  py3dtiles -> py3dtiles : Encapsulate gltF +\nnon-geom attributes in b3dm
+  activate py3dtiles
+  deactivate py3dtiles
+  py3dtiles -> TB3DM : Export b3dm tile
+  deactivate py3dtiles
+end
+
+@enduml
