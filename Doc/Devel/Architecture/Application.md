@@ -36,11 +36,11 @@ The purpose of this sequence is to display a 3D urban area in a web client from 
 
 This is an evolution of the previous diagram and is a short term target for our application. It is now separated in two parts : Application setup and  navigation in a 3D representation of the city. In comparison with the previous diagram, the 3d-tiles tileset and the b3dm tiles computations are done in a preprocess step. In addition, there is a new step at the beginning triggered by the signal buildView(viewAttributes). The Admin will now run a script to create a view on 3DCityDB. This view will contain each feature wanted in the dataset, its ids and any attribute related to the features that will be added in the b3dm files.
 
-**Application Setup diagram:**
+**Application Setup diagram:**[Puml source](Diagrams/ApplicationSetup.puml)
 
 ![](Diagrams/ApplicationSetup.png)
 
-**Navigation in a City in 3D diagram:**
+**Navigation in a City in 3D diagram:**[Puml source](Diagrams/3DNavigation.puml)
 
 ![](Diagrams/3DNavigation.png)
 
