@@ -42,7 +42,7 @@ py3dtiles -> py3dtiles : Convert TilesHierarchy to 3d-tiles
 activate py3dtiles
 deactivate py3dtiles
 
-create database "3d-tiles tileset\n+ b3dm tiles" as TB3DM
+create collections "3d-tiles tileset\n+ b3dm tiles" as TB3DM
 py3dtiles -> TB3DM : Export 3d-tiles Tileset
 
 loop Tiles

@@ -6,7 +6,7 @@ title Navigate in a 3D representation of the City
 actor User
 participant iTowns
 participant "file-server" as FS
-database "3d-tiles tileset\n+ b3dm tiles" as TB3DM
+collections "3d-tiles tileset\n+ b3dm tiles" as TB3DM
 
 'Launch application
 User -> iTowns : LaunchApplication
