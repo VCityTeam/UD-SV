@@ -47,10 +47,10 @@ has a `layer` attribute.
  * Updating of the elements of a layer: `update()`  
     - each element of the layer (e.g. tiles of the geometry layer) must present an `update()` method 
     - `update()` realizes the update of the considered element and optionnaly returns all the children objects that must also be updated 
-    - [Mainloop.js](https://github.com/iTowns/itowns/blob/master/src/Core/MainLoop.js) implements a recursion for updatingthe elements of a layer:
+    - [Mainloop.js](https://github.com/iTowns/itowns/blob/master/src/Core/MainLoop.js) implements a recursion for updating the elements of a layer:
       - Mainloop.js calls `update()` on the gateway element of the layer, 
-      - collects the returned elements (in need of update) and in turn,
-      - calls `update()` on such returned elementss until the list of elements in need of update is empty
+      - Mainloop.js collects the returned elements (in need of update) and in turn,
+      - it calls `update()` on such returned elementss until the list of elements in need of update is empty
     - `update()` is technically defined as a callback    
 
 Note: layers linked to other layers only define their `update()` callback (i.e. they a devoid of `pre-update()`)
