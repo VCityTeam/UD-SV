@@ -33,3 +33,24 @@ The organisation is as follow:
 
 Currently, the only way to know if an `Object3D` is a tile is by checking if it
 has a `layer` attribute.
+
+## Concerning the initialization/update of a layer data
+[iTowns main loop](https://github.com/iTowns/itowns/blob/master/src/Core/MainLoop.js) deals/echanges (possibly indirectly) with the data of a layer with the following sequence of calls:
+  1. Initialization of the data set: `preprocessDataLayer` (e.g. the [preprocessDataLayer for 3DTiles](https://github.com/iTowns/itowns/blob/master/src/Core/Scheduler/Providers/3dTiles_Provider.js#L78)) that is 
+    * defined within a Provider 
+    * called only once per layer
+    * pulls the data (e.g. a 3DTiles pointed to by some URL)
+  2. Initialization of the update mechanisme: `pre-update()` 
+    * called at each step of the Itowns engine (i.e. each time the screen must be refreshed)
+    * acts at the level of the layer
+    * technically defined as a callback 
+  3. Updating of the elements of a layer: `update()`  
+    * each element of the layer (e.g. tiles of the geometry layer) must present an `update()` method 
+    * `update()` realizes the update of the considered element and optionnaly returns all the children objects that must also be updated 
+    * [Mainloop.js](https://github.com/iTowns/itowns/blob/master/src/Core/MainLoop.js) implements a recursion for updatingthe elements of a layer:
+      - Mainloop.js calls `update()` on the gateway element of the layer, 
+      - collects the returned elements (in need of update) and in turn,
+      - calls `update()` on such returned elementss until the list of elements in need of update is empty
+    * `update()` is technically defined as a callback    
+
+Note: layers linked to other layers only define their `update()` callback (i.e. they a devoid of `pre-update()`)
