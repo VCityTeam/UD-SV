@@ -40,7 +40,7 @@ has a `layer` attribute.
     - defined within a Provider 
     - called only once per layer
     - pulls the data (e.g. a 3DTiles pointed to by some URL)
- * Initialization of the update mechanisme: `pre-update()` 
+ * Initialization of the update mechanism: `pre-update()` 
     - called at each step of the Itowns engine (i.e. each time the screen must be refreshed)
     - acts at the level of the layer
     - technically defined as a callback 
