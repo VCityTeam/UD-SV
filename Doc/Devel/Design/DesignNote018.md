@@ -80,7 +80,7 @@ In conclusion, the choice between the two solutions is linked to [this discussio
 
 Another remaining question is how to transfer the hierarchical information to the client. This is currently difficult using 3d-tiles as explained in [Schi16]. Indeed, the semantic information can easily transfered using the attributes of b3dm but there is nothing yet that is implemented to efficiently transfer the hierarchy of city objects. [Schi16] make a proposition but what are the feedbacks from the 3d-tiles comunity and how is it done in other applications ?
 
-## Notes (04/01/2018)
+### Notes (04/01/2018):
 
 * A solution seems to be proposed [here](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/BatchTable/README.md)
 * There is elements in the 3DCityDB documentation as well about how the hierarchy and the semantic are stored (especially in the part dealing with the database model).
