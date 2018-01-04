@@ -80,9 +80,14 @@ In conclusion, the choice between the two solutions is linked to [this discussio
 
 Another remaining question is how to transfer the hierarchical information to the client. This is currently difficult using 3d-tiles as explained in [Schi16]. Indeed, the semantic information can easily transfered using the attributes of b3dm but there is nothing yet that is implemented to efficiently transfer the hierarchy of city objects. [Schi16] make a proposition but what are the feedbacks from the 3d-tiles comunity and how is it done in other applications ?
 
-## Notes
+## Notes (04/01/2018)
 
 * A solution seems to be proposed [here](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/BatchTable/README.md)
+* There is elements in the 3DCityDB documentation as well about how the hierarchy and the semantic are stored (especially in the part dealing with the database model).
+* Currently, before running py3dtiles we preprocess the database in order to output a materialized view containing the ids, geometries and dates of the features of interrest. We only do it on buildings currently as they are the only ones having temporal informations. If other city objects have temporal information, we can extend it to all city objects. However, problems will arise when we will want to handle different type of city objects and their semantic attributes: they won't all have the same semantic informations so outputing the results in only one table will be problematic. Possible solutions: 
+    * Create a table containing semantic information for each type of city object
+    * Add a column `semantic` containing an array or a list encoded in a string
+More problem will come when we will want to add the hierarchical information of city objects. In addition, 3DCityDB allows to store all these information quite well so we don't need to do it again... I think a better way would be to get back to the "on the fly" calculation of the 3d-tiles tileset or to interface py3dtiles with 3DCityDB.
   
 ## References
 
