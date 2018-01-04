@@ -79,6 +79,10 @@ In order to do that, in each tile, every building has a batch_id. This is done o
 In conclusion, the choice between the two solutions is linked to [this discussion](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote027.md#thick---thin-client---server-strategy). What we need to do next is to clearly define the use of the semantic information client-side. This will allow to choose if we need to send all the information to the client or if we should leave it in the database.
 
 Another remaining question is how to transfer the hierarchical information to the client. This is currently difficult using 3d-tiles as explained in [Schi16]. Indeed, the semantic information can easily transfered using the attributes of b3dm but there is nothing yet that is implemented to efficiently transfer the hierarchy of city objects. [Schi16] make a proposition but what are the feedbacks from the 3d-tiles comunity and how is it done in other applications ?
+
+## Notes
+
+* A solution seems to be proposed [here](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/BatchTable/README.md)
   
 ## References
 
