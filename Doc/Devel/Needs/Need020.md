@@ -1,5 +1,12 @@
 # Need 020: manage ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) [extended documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) 
 
+BREAK DOWN THIS NEED INTO 3 sub-needs
+ 1. offer a placeholder (database)
+ 2. offer an web based API for accessing: this requires defining the exchange format (e.g. CZML).
+ 3. realize the UDV integration of such information (using the above API)
+ Relate this need to [need12](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need012.md)
+
+
 ## User story:
 As a database maintainer I want to offer a placeholder (database) and an API for extended documents. We require a mechanism where users having a set of files (especially excel files) that gives infomation about a documents and their links/references to other city objects. Example: Photo 321 -> Historical Building 20 -> 1927. 
 
