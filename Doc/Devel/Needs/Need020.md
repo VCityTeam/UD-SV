@@ -6,6 +6,7 @@ BREAK DOWN THIS NEED INTO 3 sub-needs
  3. realize the UDV integration of such information (using the above API): have this issue https://github.com/MEPP-team/RICT/issues/36 point to it.
  Relate this need to [need12](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need012.md)
 
+WATCH OUT: there is also [this issue with need13 that is closely related (redundant ?)](https://github.com/MEPP-team/RICT/issues/4)
 
 ## User story:
 As a database maintainer I want to offer a placeholder (database) and an API for extended documents. We require a mechanism where users having a set of files (especially excel files) that gives infomation about a documents and their links/references to other city objects. Example: Photo 321 -> Historical Building 20 -> 1927. 
