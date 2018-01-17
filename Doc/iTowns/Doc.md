@@ -56,3 +56,5 @@ has a `layer` attribute.
 Notes: 
   * layers linked to other layers only define their `update()` callback (i.e. they a devoid of `pre-update()`)
   * `preprocessDataLayer` parses the 3d-tiles' tiles in the function `$3dTilesIndex` which is called when creating the tileIndex of the layer. In `$3dTilesIndex`, the tile's attributes are parsed and especially the bounding volume attribute is parsed using the `getBox` function in which we added a switch allowing to parse the start_date and end_date of the tile when the layer is configured with `TemporalExtension=true` (see [this commit](https://github.com/jailln/itowns/commit/4ed8cd7e27d9af50e3a9c2b600f0371122b5f042))
+  * `layer.whenReady` allows to now when a layer is configured and ready to be used
+  
