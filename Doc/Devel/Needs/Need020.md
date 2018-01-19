@@ -11,6 +11,7 @@ WATCH OUT: there is also
   - [that issue  with need 12 under the hood](https://github.com/MEPP-team/RICT/issues/36)
 
 ## Related needs
+ - [Need 03](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need003.md): aggregation need
  - [Need 28](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md): corresponding API
  - [Need 19](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need029.md): web based API
 
