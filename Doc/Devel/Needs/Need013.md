@@ -1,6 +1,8 @@
 
 # Need 013: Visualization of documents within a 3D representation of the city
 
+[Associated issue](https://github.com/MEPP-team/RICT/issues/36)
+
 ### User story
 As a historian I want to visualize and locate documents (images, videos, text...) in the 3d representation of the city. I need a preview of what the document is, and a visual indication of its position in the scene.
 
