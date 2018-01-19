@@ -2,9 +2,7 @@
 
 Associated issue: [issue 35](https://github.com/MEPP-team/RICT/issues/35)
 
-BREAK DOWN THIS NEED INTO 3 sub-needs
- 1. offer a placeholder (database): have this issue  https://github.com/MEPP-team/RICT/issues/35 point to it.
- 2. offer an web based API for accessing: this requires defining the exchange format (e.g. CZML): have this issue https://github.com/MEPP-team/RICT/issues/37 point to it
+
  3. realize the UDV integration of such information (using the above API): have this issue https://github.com/MEPP-team/RICT/issues/36 point to it.
  Relate this need to [need12](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need012.md)
 
