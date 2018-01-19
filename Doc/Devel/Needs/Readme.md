@@ -10,7 +10,7 @@
  * [Need 009](Need009.md): ability to use texture in the 3d scene
  * [Need 010](Need010.md): ability to display multiple temporal versions of a building
  * [Need 011](Need011.md): user interface : document browser, temporal slider, minimap, filters, preferences...
- * [Need 012](Need012.md): ability to browse through a document base
+ * Need 012: free slot 
  * [Need 013](Need013.md): provide a user friendly interface to manage extended documents
  * [Need 014](Need014.md): manage documents and their links with other city objects and documents
  * [Need 015](Need015.md): user interaction with documents
@@ -26,6 +26,8 @@
   * [Need 025](Need025.md): Provide means for storing and accessing 'guided tours' data
   * [Need 026](Need026.md): Workspaces to manage concurrent points of view of historians
   * [Need 027](Need027.md): Explicit and justify architecture and software component choices
+  * [Need 028](Need028.md): CRUD API for extended documents
+  * [Need 029](Need029.md): web API for extended documents
  
  
 ## Definitions
