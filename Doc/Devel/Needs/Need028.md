@@ -6,11 +6,14 @@
 
 As an historian I want to be able to populate the database with extended documents.
 
-### Beneficiary role: Historian
+### Beneficiary role: 
+Database maintaner
 
-### Impact: minor
+### Impact: 
+minor
 
-### Maturity: immature
+### Maturity: 
+immature
 
 ### Cost evaluation: 
 
