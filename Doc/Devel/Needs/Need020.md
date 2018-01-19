@@ -1,5 +1,7 @@
 # Need 020: manage ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) [extended documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) 
 
+Associated issue: [issue 35](https://github.com/MEPP-team/RICT/issues/35)
+
 BREAK DOWN THIS NEED INTO 3 sub-needs
  1. offer a placeholder (database): have this issue  https://github.com/MEPP-team/RICT/issues/35 point to it.
  2. offer an web based API for accessing: this requires defining the exchange format (e.g. CZML): have this issue https://github.com/MEPP-team/RICT/issues/37 point to it
@@ -10,8 +12,12 @@ WATCH OUT: there is also
   -[this issue with need13 that is closely related (redundant ?)](https://github.com/MEPP-team/RICT/issues/4)
   - [that issue  with need 12 under the hood](https://github.com/MEPP-team/RICT/issues/36)
 
+## Related needs
+ - [Need 28](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md): corresponding API
+ - [Need 19](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need029.md): web based API
+
 ## User story:
-As a database maintainer I want to offer a placeholder (database) and an API for extended documents. We require a mechanism where users having a set of files (especially excel files) that gives infomation about a documents and their links/references to other city objects. Example: Photo 321 -> Historical Building 20 -> 1927. 
+As a database maintainer I want to offer a placeholder (database) for extended documents.
 
 ## Beneficiary role:
 [Historians of need 004](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need004.md)
@@ -25,21 +31,10 @@ As a database maintainer I want to offer a placeholder (database) and an API for
 ## Tags or keywords
 Documents, Text Files
 
-## Data format
-We require the following information to be mentioned in the excel (or csv file)
+## Data model
+[Reference article](https://liris.cnrs.fr/vcity/wiki/lib/exe/fetch.php?media=papers:historicaldocuments.pdf) introducing the conceptual model e.g.
 * Document details (Important information:Id, name description)
 * City Object Id
 * Time (period or interval)
 * Tags (multivalued)
 
-## API Operations
-* Create, Read, Update, Delete **document** with information specified in data format.
-* Create, Read, Update, Delete, List one or more **documents** with or without any matching criteria. Metadata for every document remains the same as specified in the data format above.
-
-## Notes
- * The input is a set of excel files (or csv files).
- * Extended documents must be related/connected (have references) to other artefacts
-    - cityobjects
-    - other extended documents (e.g. through positions, dates, historical events)
-    - [guided tours](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#guided-tour)
-    - have GUI related information (e.g. position in space of the billboard) 
