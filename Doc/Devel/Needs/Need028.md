@@ -1,5 +1,7 @@
 # Need 028 : A CRUD API for extended documents
 
+[Associated issue](https://github.com/MEPP-team/RICT/issues/38)
+
 ### User story
 
 As an historian I want to be able to populate the database with extended documents.
