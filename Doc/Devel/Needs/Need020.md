@@ -2,14 +2,6 @@
 
 Associated issue: [issue 35](https://github.com/MEPP-team/RICT/issues/35)
 
-
- 3. realize the UDV integration of such information (using the above API): have this issue https://github.com/MEPP-team/RICT/issues/36 point to it.
- Relate this need to [need12](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need012.md)
-
-WATCH OUT: there is also 
-  -[this issue with need13 that is closely related (redundant ?)](https://github.com/MEPP-team/RICT/issues/4)
-  - [that issue  with need 12 under the hood](https://github.com/MEPP-team/RICT/issues/36)
-
 ## Related needs
  - [Need 03](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need003.md): aggregation need
  - [Need 28](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md): corresponding API
@@ -36,4 +28,3 @@ Documents, Text Files
 * City Object Id
 * Time (period or interval)
 * Tags (multivalued)
-
