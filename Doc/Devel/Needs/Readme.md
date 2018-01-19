@@ -28,6 +28,7 @@
   * [Need 027](Need027.md): Explicit and justify architecture and software component choices
   * [Need 028](Need028.md): CRUD API for extended documents
   * [Need 029](Need029.md): web API for extended documents
+  * [Need 030](Need030.md): UI browser for extended documents
  
  
 ## Definitions
