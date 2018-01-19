@@ -1,6 +1,8 @@
 
 # Need 014: Provide a user friendly interface to manage extended documents
 
+[Issue](https://github.com/MEPP-team/RICT/issues/15)
+
 ### User story
 
 As an historian I want to be able to add, modify, delete the [documents](Definitions.md#document), their [references](Definitions.md#reference-aka-link) to [city objects](Definitions.md#city-object) or other documents.
