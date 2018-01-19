@@ -1,5 +1,7 @@
 # Need 030 : UI browser for extended documents
 
+[Issue](https://github.com/MEPP-team/RICT/issues/36)
+
 ### User story
 As an historian I want to be able to online browse the extended documents present in the database. 
 
