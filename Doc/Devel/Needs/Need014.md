@@ -8,9 +8,11 @@ As an historian I want to be able to add, modify, delete the [documents](Definit
 ### Beneficiary role: 
 [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
 
-### Impact: minor
+### Impact: 
+minor
 
-### Maturity: immature
+### Maturity: 
+immature
 
 ### Cost evaluation: ?
 
@@ -27,4 +29,4 @@ While working with historians, one major observation that has been made is their
      * Link to folder containing documents
  
 ### Notes:
-
+This need differs from [Need 028](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md). Need 028 is a process (e.g. script) allowing to import extended documents in the database from e.g. an excel file and a set of files. This need is a user friendly interface above this process.
