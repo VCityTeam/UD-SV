@@ -28,3 +28,4 @@ The data model must be consistent with the one of [Need 20](https://github.com/M
 
 ### Notes
 
+This need differs from [Need 014](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md). Need 028 is a process (e.g. script) allowing to import extended documents in the database from e.g. an excel file and a set of files. Need 014 is a user friendly interface above this process.
