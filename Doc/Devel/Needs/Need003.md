@@ -12,7 +12,8 @@ Sub Needs :
 * [Need008](Need008.md) : ability to display the historical uncertainty of the 3d reconstruction
 * [Need009](Need009.md) : ability to use texture in the 3d scene
 * [Need011](Need011.md) : user interface (document, temporal slider, map...)
-* [Need012](Need012.md) : ability to browse through a document base 
+* [Need028](Need028.md) : CRUD API
+* [Need029](Need029.md) : web API
 
 ### Beneficiary role: 
  - Experts in various fields, ranging from information technology to human sciences. Tools must be easy to use for non-technicians (focus needed on ergonomy).
