@@ -5,11 +5,7 @@ VCity's web application and then how to use them with two use-cases:
     * 3D urban data web exchange and visualisation
     * 3D+time urban data web exchange and visualisation
 
-The application is composed of server-side components and of a web client based
-on [iTowns](http://www.itowns-project.org/) (javascript web framework for
-visualisation 3D geospatial data). You can fin more information about these
-components and about the software architecture of the application
-[here](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel/Architecture)
+The application is composed of server-side components and of a web client based on [iTowns](http://www.itowns-project.org/) (javascript web framework for visualisation 3D geospatial data). You can find more information about these components and about the software architecture of the application [here](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel/Architecture).
 
 ## Install notes
 
@@ -17,27 +13,22 @@ components and about the software architecture of the application
 
 #### Install 3DCityDB
 
-If you need to install a 3DCityDB database, follow the instructions described
-[here](Install/Install3DCityDB.md).
+If you need to install a 3DCityDB database, follow the instructions described [here](Install/Install3DCityDB.md).
 
 #### Install UDV-server
 
-[UDV-server](https://github.com/MEPP-team/UDV-server) is a collection of tools
-useful for our application. For more information, refer to the README.md and the
-Install.md files of UDV-server.
+[UDV-server](https://github.com/MEPP-team/UDV-server) is a collection of tools useful for our application. For more information, refer to the README.md and the Install.md files of UDV-server.
 
 #### Install py3dtiles
 
-[py3dtiles](https://github.com/MEPP-team/py3dtiles)
-([forked from Oslandia](https://github.com/Oslandia/py3dtiles)) is a component
-allowing to compute a 3dtiles tileset from a directory or a database. More info
-[here](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst)
+[py3dtiles](https://github.com/MEPP-team/py3dtiles) ([forked from Oslandia](https://github.com/Oslandia/py3dtiles)) is a component allowing to compute a 3dtiles tileset from a directory or a database. More info [here](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst).
 
 Install pre-requisite tools:
 ````
     sudo apt-get install python3
     sudo apt-get install python3-pip
-    sudo pip3 install virtualenv      # Mind the sudo or the install will happen in `$(HOME)/.local/...`
+    sudo pip3 install virtualenv      # Mind the sudos or the install will
+                                      # happen in `$(HOME)/.local/...`
 ````
 
 Open a terminal and run:
@@ -61,23 +52,17 @@ Install python dependencies:
     python setup.py install
 ````
 
-[Setuptools](https://pypi.python.org/pypi/setuptools) allows to
-"Easily download, build, install, upgrade, and uninstall Python packages".
+[Setuptools](https://pypi.python.org/pypi/setuptools) allows to "Easily download, build, install, upgrade, and uninstall Python packages".
 
 `pip install -e .` gets the requirements from setup.py and install them automatically.
 
-*Dev note: If you modify the core of py3dtiles (py3dtiles/py3dtiles/), you need
-to run `pip install -e` before running a script (e.g. export_tileset) for changes
-to be considered.*
+*Dev note: If you modify the core of py3dtiles (`py3dtiles/py3dtiles/` subdirectory), you will need to run `pip install -e` before running a script (e.g. export_tileset) for changes to be considered.*
 
 #### Install a server for streaming 3dtiles tilesets to the client
 
-If you want to run a local server for streaming a 3d-tiles tileset, you can use
-the node server provided by 3d-tiles:
-[3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples)
+If you want to run a local server for streaming a 3d-tiles tileset, you can use the node.js based server provided by 3d-tiles: [3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples)
 
 Install:
-
 ````
     git clone https://github.com/AnalyticalGraphicsInc/3d-tiles-samples
     cd 3d-tiles-samples
@@ -85,37 +70,29 @@ Install:
     npm start
 ````
 
-The examples tilesets are hosted at `http://localhost:8003/tilesets/`
+The examples tilesets will then appear as hosted at `http://localhost:8003/tilesets/`
 
-If you want to run a remote server for streaming a 3d-tiles tileset, you can use
-an Apache server see Step (6) of Install/InstallVilo3D for more informations on
-how to setup one).
+If you want to run a remote server for streaming a 3d-tiles tileset, you can use an Apache server see Step (6) of Install/InstallVilo3D for more informations on how to setup one).
 
 ### Client install
 
 #### Install UDV web client and iTowns framework
 
- Follow the install notes described here:
- https://github.com/MEPP-team/UDV/blob/master/install.md
+ Follow the install notes described in https://github.com/MEPP-team/UDV/blob/master/install.md
 
 This will install UDV and pull the right version of itowns (with temporal extension).
 
-After this installation, if you need to work on itowns you can do it in
-`UDV/UDV-Core/dist/itowns`. If you do so, beware of the remote which is currently
-a fork  (https://github.com/jailln/itowns) of the master (https://github.com/iTowns/itowns).
+After this installation, if you need to work on itowns you can do it in `UDV/UDV-Core/dist/itowns`. If you do so, beware that the git remote is currently a fork (https://github.com/jailln/itowns) as opposed to the official repository (located at https://github.com/iTowns/itowns).
 
 ## Using the above installed client/server
 
-Now that you are done with all necessary installation, you can use these components
-with 3D or 3D+time data.
+Now that you are done with all necessary installation, you can use these components with 3D or 3D+time data.
 
 ### Usecase with 3D data
 
-##### Populate database
+##### Populate the database
 
-If you followed the install step of 3DCityDB you already have 3D data uploaded
-into your database. If not, please refer to the end of
-[these install notes](Install/Install3DCityDB.md).
+If you followed the install step of 3DCityDB you already have 3D data uploaded into your database. If not, please refer to the end of [these install notes](Install/Install3DCityDB.md).
 
 ##### Create a materialized view of your data
 
@@ -127,12 +104,8 @@ In this step you will run `ExtractCityData` tool of `UDV-server`.
 
 ##### Generate a 3d-tiles tileset
 
-This steps allows to run `export_tileset` tool of py3dtiles component in order to
-generate a 3d-tiles tileset from the materialized view we just created.
-
-`cd py3dtiles`
-
-edit the `tools/export_tileset_conf.yml` to match your database configuration.
+This steps allows to run `export_tileset` tool of py3dtiles component in order to generate a 3d-tiles tileset from the materialized view we just created.
+`cd py3dtiles` and edit the `tools/export_tileset_conf.yml` to match your database configuration.
 
 Activate venv and run `export_tileset` tool:
 ````
@@ -154,8 +127,7 @@ Copy the tileset generated by py3dtiles into 3d-tiles-samples and run the server
 
 *Note: if you want your node server to be publicly accessible, you need to install install and run an Apache server as explained above.*
 
-Check that your tileset is accessible by opening
-http://localhost:8003/tilesets/3DTileset/tileset.json in your web browser.
+Check that your tileset is accessible by opening http://localhost:8003/tilesets/3DTileset/tileset.json in your web browser.
 
 ##### Launch UDV client
 
@@ -163,19 +135,16 @@ http://localhost:8003/tilesets/3DTileset/tileset.json in your web browser.
     cd UDV
 ````
 
-(Optionnal) If you want to use UDV with your local tileset, then edit UDV building-server query:
-
-open `UDV/UDV-Core/examples/Demo.js` with your favorite editor and change the
-line `buildingServerRequest` to http://localhost:8003/tilesets/3DTileset/tileset.json
-
-(end optionnal)
+(Optional section)
+If you want to use UDV with your local tileset, then edit UDV building-server query: open `UDV/UDV-Core/examples/Demo.js` with your favorite editor and change the line `buildingServerRequest` to be http://localhost:8003/tilesets/3DTileset/tileset.json
+(end of optional section)
 
 ````
     cd UDV-Core
     npm start
 ````
 
-Open your web browser and go to `http://localhost:8080/examples/Demo.html`
+Launch your web browser and open http://localhost:8080/examples/Demo.html.
 
 ### Usecase with 3D+time data
 
@@ -192,11 +161,9 @@ Run `ExtractCityData` tool of UDV-server with -t option:
 
 ##### Generate a 3d-tiles tileset
 
-This steps allows to run `export_tileset` tool of py3dtiles component in order to
-generate a 3d-tiles tileset extended for time data from the materialized view we just created.
+This steps allows to run `export_tileset` tool of py3dtiles component in order to generate a 3d-tiles tileset extended for time data from the materialized view we just created.
 
-`cd py3dtiles`
-edit the `tools/export_tileset_conf.yml` to match your database configuration.
+`cd py3dtiles` and edit the `tools/export_tileset_conf.yml` to match your database configuration.
 
 Activate venv and run `export_tileset` tool
 ````
@@ -218,8 +185,7 @@ Copy the tileset generated by py3dtiles into 3d-tiles-samples and run the server
 
 *Note: if you want your node server to be publicly accessible, you need to install install and run an Apache server as explained above.*
 
-Check that your tileset is accessible by opening
-http://localhost:8003/tilesets/4DTileset/tileset.json in your web browser.
+Check that your tileset is accessible by opening http://localhost:8003/tilesets/4DTileset/tileset.json in your web browser.
 
 ##### Launch UDV client
 
@@ -239,4 +205,4 @@ line `buildingServerRequest` to http://localhost:8003/tilesets/4DTileset/tileset
     npm start
 ````
 
-Open your web browser and go to `http://localhost:8080/examples/Demo.html`
+Launch a web browser and open http://localhost:8080/examples/Demo.html .
