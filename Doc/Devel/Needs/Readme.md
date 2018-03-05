@@ -61,4 +61,5 @@ The description of a need should have the following items:
  * **Impact**: choose among critical (project maker), major (would have heavy/significant benefits) or minor (nice to have).
  * **Maturity**: choose among immature, ongoing, mature, complete
  * **Cost evaluation**: some ball park estimation in man weeks or man months for its full realization (requirements, designs, implementation, tests, packaging, integration, documentation).
- * **Tags or keywords**: be them known (client, server, database) or not already mentioned (user experience...). 
+ * **Tags or keywords**: be them known (client, server, database) or not already mentioned (user experience...).
+ * Once realization of the need started add **a link to the possibly ongoing issues** realizing part of/the whole concerned need. Within the concerned issue don't forget to **cross link the realization issue to the upstream need**.
