@@ -1,4 +1,6 @@
 
+TODO: split this need in smaller sub-needs (billboard vs set of documents)
+
 # Need 013: Visualization of documents within a 3D representation of the city
 
 [Associated issue](https://github.com/MEPP-team/RICT/issues/4)
