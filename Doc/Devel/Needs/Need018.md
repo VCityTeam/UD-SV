@@ -1,9 +1,8 @@
-# Need 018 : Provide means for storing and accessing thematic information extending the geometric information of a city 
+# Need 018 : Provide means for streaming and visualisation of semantic and hierarchical information of city objects 
 
 ### User story
-As a city knowledgeable person, I want to access thematic information attached to the geometry of a the city.
-As a computational model person, I want to access thematic information attached to the geometry so that I can run a view composition analysis.
-As a database maintainer, I want to populate the database with thematic information provided to me so that users can access it later on.
+As a city knowledgeable person, I want to access semantic information attached to the geometry of city objects (e.g. select a building and see its attached semantic information or select a wall and see its attached semantic information)
+As a computational model person, I want to access semantic information attached to the geometry so that I can run a view composition analysis.
 
 ### Beneficiary role: 
 City knowledgeable person, general audience
@@ -15,16 +14,17 @@ Major
 Ongoing
 
 ### Cost evaluation:
-1 man month
+1 - 2 weeks
 
 ### Tags or keywords
 
 ### Description
-Geometry is a restricted concern that might not sufficient (e.g. to the considered domain of concern like noise, economics, light, sociology...) when modeling (representing) cities. It is also usefull to have 
-  - thematic information such as the kind of city objects (this is the type of object) 
-  - a modeling hierarchy between such levels of thematic information
-  - additional (to the geometry) information concerning these city objects such as the construction date of a building or the owner of a terrain (these are the object attributes)
+Geometry is a restricted concern that might not be sufficient (e.g. to the considered domain of concern like noise, economics, light, sociology...) when modeling (representing) cities. It is also usefull to have 
+  - semantic information such as the kind of city objects (this is the type of object) 
+  - a modeling hierarchy between such levels of semantic information
+  - additional (to the geometry) information concerning these city objects such as the owner of a terrain (these are the object attributes)
+  
+A method to answer this need is detailed in (Schilling et al, 2016)
 
-### Notes:
-* [CityGML](https://www.citygml.org/) allows to have thematic and a geometric model representing the city and has a strong community.
-* [3DCityDB](www.3dcitydb.org/) is a free CityGML compliant 3D geo database to store, represent, and manage virtual 3D city models on top of PostGIS.
+### References
+(Schilling et al, 2016) Schilling, Arne, Jannes Bolling, and Claus Nagel. “Using GlTF for Streaming CityGML 3D City Models.” In Proceedings of the 21st International Conference on Web3D Technology, 109–116. ACM, 2016. http://dl.acm.org/citation.cfm?id=2945312.
