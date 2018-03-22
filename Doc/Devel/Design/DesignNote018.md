@@ -1,5 +1,16 @@
 # Design note of [need 18](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need018.md)
 
+## Notes on the 22/03/18
+
+To answer this need, one needs to:
+  * Change the [ExtractCityData script](https://github.com/MEPP-team/UDV-server/tree/master/ExtractCityData) of UDV server to extract semantic and hierarchy between city objects informations from the database into the view
+  * Modify [Py3DTiles](https://github.com/MEPP-team/py3dtiles) to include these semantic and hierarchy information into 3D Tiles, following the method proposed by (Schilling et al, 2016)
+  * Modify iTowns/UDV to 
+     * Read these information from Py3DTiles
+     * Provides GUI means to select city objects (e.g. building, wall, roof) and see their attributes 
+
+## Earlier Notes
+
 ## General informations
 
 ### Related software components
