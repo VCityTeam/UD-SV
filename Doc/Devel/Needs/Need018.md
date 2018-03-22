@@ -23,13 +23,6 @@ Geometry is a restricted concern that might not be sufficient (e.g. to the consi
   - semantic information such as the kind of city objects (this is the type of object) 
   - a modeling hierarchy between such levels of semantic information
   - additional (to the geometry) information concerning these city objects such as the owner of a terrain (these are the object attributes)
-  
-To answer this need, one needs to:
-  * Change the [ExtractCityData script](https://github.com/MEPP-team/UDV-server/tree/master/ExtractCityData) of UDV server to extract semantic and hierarchy between city objects informations from the database into the view
-  * Modify [Py3DTiles](https://github.com/MEPP-team/py3dtiles) to include these semantic and hierarchy information into 3D Tiles, following the method proposed by (Schilling et al, 2016)
-  * Modify iTowns/UDV to 
-     * Read these information from Py3DTiles
-     * Provides GUI means to select city objects (e.g. building, wall, roof) and see their attributes 
 
 ### References
 (Schilling et al, 2016) Schilling, Arne, Jannes Bolling, and Claus Nagel. “Using GlTF for Streaming CityGML 3D City Models.” In Proceedings of the 21st International Conference on Web3D Technology, 109–116. ACM, 2016. http://dl.acm.org/citation.cfm?id=2945312.
