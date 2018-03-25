@@ -718,4 +718,4 @@ _Note : La syntaxe JavaScript ‘ !!’ permet de convertir ‘properties.haut
 
 Vous devriez maintenant avoir un résultat de ce type :
 
-![]](TutorialImages/wfs.png)
+![](TutorialImages/wfs.png)
