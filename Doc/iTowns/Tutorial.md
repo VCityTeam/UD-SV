@@ -4,7 +4,7 @@ _Contributeurs actuels: Vincent Jaillot_
 
 ## Introduction
 
-Le but de ce tutoriel est d'apprendre à mettre en place une application utilisant certaines fonctionnalités proposées par iTowns en peu de temps. La durée de réalisation de ce tutoriel est d'environ 4h. Ce tutoriel est inspiré [des exemples fournis par iTowns](https://github.com/iTowns/itowns/tree/master/examples).
+Le but de ce tutoriel est d'apprendre à mettre en place une application utilisant certaines fonctionnalités proposées par iTowns en peu de temps. Ce tutoriel est inspiré [des exemples fournis par iTowns](https://github.com/iTowns/itowns/tree/master/examples).
 
 ## Préambule
 
