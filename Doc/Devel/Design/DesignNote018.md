@@ -8,6 +8,10 @@ To answer this need, one needs to:
   * Modify iTowns/UDV to 
      * Read these information from Py3DTiles
      * Provides GUI means to select city objects (e.g. building, wall, roof) and see their attributes 
+     
+## Work during iTowns code sprint (27/03/2018)
+
+Client side modifications to read a hierarchical batch table and display hierarchy and properties: https://github.com/iTowns/itowns/tree/batch_table_hierarchy . Not tested yet; waiting for a test tileset.
 
 ## Earlier Notes
 
