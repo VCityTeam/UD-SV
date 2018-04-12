@@ -5,7 +5,8 @@
 ### User story
 
 As an historian I want to be able to add documents and their relative metadata.
-Related Needs :
+
+ * Related Needs :
  - [Need 014](Need014.md)
 
 ### Beneficiary role: 
