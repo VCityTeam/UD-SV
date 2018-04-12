@@ -23,12 +23,13 @@
  * [Need 022](Need022.md): game controller support
  * [Need 023](Need023.md): VR support
  * [Need 024](Need024.md): Provide means for storing and accessing quality information extending the geometric information of a city
-  * [Need 025](Need025.md): Provide means for storing and accessing 'guided tours' data
-  * [Need 026](Need026.md): Workspaces to manage concurrent points of view of historians
-  * [Need 027](Need027.md): Explicit and justify architecture and software component choices
-  * [Need 028](Need028.md): CRUD API for extended documents
-  * [Need 029](Need029.md): web API for extended documents
-  * [Need 030](Need030.md): UI browser for extended documents
+ * [Need 025](Need025.md): Provide means for storing and accessing 'guided tours' data
+ * [Need 026](Need026.md): Workspaces to manage concurrent points of view of historians
+ * [Need 027](Need027.md): Explicit and justify architecture and software component choices
+ * [Need 028](Need028.md): CRUD API for extended documents
+ * [Need 029](Need029.md): web API for extended documents
+ * [Need 030](Need030.md): UI browser for extended documents
+ * [Need 031](Need031.md): user friendly interface add extended documents
  
  
 ## Definitions
