@@ -1,11 +1,12 @@
 
 # Need 031: Provide a user friendly interface add extended documents
 
-[Issue]()
 
 ### User story
 
 As an historian I want to be able to add documents and their relative metadata.
+Related Needs :
+ - [Need 01](Need014.md)
 
 ### Beneficiary role: 
 
@@ -27,3 +28,4 @@ An user-friendly interface that allows the historian to upload a file (picture, 
  
 ### Notes:
 The metadatas / the information that needs to be given from the have not been defined yet.
+
