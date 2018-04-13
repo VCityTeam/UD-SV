@@ -4,7 +4,7 @@
 
 ### User story
 
-As an historian I want to be able to add a document stored in my computer.
+As an historian I want to be able to add a document stored in my computer and give relative metadata.
 
 Related Needs :
  * [Need 014](Need014.md)
@@ -28,5 +28,5 @@ ongoing
 An user-friendly interface that allows the historian to upload a file (picture, drawing...) and relative metadatas.
  
 ### Notes:
-The metadatas have not been defined yet.
+The metadatas requirements have not been defined yet.
 
