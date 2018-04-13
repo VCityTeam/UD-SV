@@ -25,7 +25,7 @@ ongoing
  * [Authoring interface](Definitions.md#authoring-interface)
 
 ### Description
-An user-friendly interface that allows the historian to upload a file (picture, drawing...) and relative metadatas. It also gives the possibility to vizualise the document and choose where in the scene, and to what documents, it should be linked.
+An user-friendly interface that allows the historian to upload a file (picture, drawing...) and relative metadatas.
  
 ### Notes:
 The metadatas / the information that needs to be given from the have not been defined yet.
