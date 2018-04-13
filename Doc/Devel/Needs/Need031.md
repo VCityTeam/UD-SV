@@ -28,5 +28,5 @@ ongoing
 An user-friendly interface that allows the historian to upload a file (picture, drawing...) and relative metadatas.
  
 ### Notes:
-The metadatas / the information that needs to be given from the have not been defined yet.
+The metadatas have not been defined yet.
 
