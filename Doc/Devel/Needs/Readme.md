@@ -29,7 +29,7 @@
  * [Need 028](Need028.md): CRUD API for extended documents
  * [Need 029](Need029.md): web API for extended documents
  * [Need 030](Need030.md): UI browser for extended documents
- * [Need 031](Need031.md): user friendly interface add extended documents
+ * [Need 031](Need031.md): user friendly interface to add extended documents
  
  
 ## Definitions
