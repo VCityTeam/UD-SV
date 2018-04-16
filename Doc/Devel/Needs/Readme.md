@@ -30,6 +30,7 @@
  * [Need 029](Need029.md): web API for extended documents
  * [Need 030](Need030.md): UI browser for extended documents
  * [Need 031](Need031.md): user friendly interface to add extended documents
+ * [Need 032](Need032.md): tool to place and orient extended document in the scene.
  
  
 ## Definitions
