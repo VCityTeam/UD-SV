@@ -1,5 +1,5 @@
 
-# Need 031: Provide a user friendly interface add extended documents
+# Need 031: Provide a user friendly interface to add extended documents
 
 
 ### User story
