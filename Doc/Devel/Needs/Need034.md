@@ -2,7 +2,7 @@
 [Issue](https://github.com/MEPP-team/RICT/issues/47)
 
 ### User story
-As a user, I want to be able to navigate in time and multiple scenarisations.
+As a historian, I want to navigate in time and multiple scenarisations.
 
 ### Beneficiary role: 
 City knowledgeable person, general audience
