@@ -1,4 +1,5 @@
-# Need 034: Improved temporal navigation
+# Need 034: Improved temporal navigation tool
+[Issue](https://github.com/MEPP-team/RICT/issues/47)
 
 ### User story
 As a user, I want to be able to navigate in time and multiple scenarisations.
