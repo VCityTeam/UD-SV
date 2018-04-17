@@ -1,7 +1,7 @@
 
 # Need 014: Provide a user friendly interface to add one document
 
-[Issue](https://github.com/MEPP-team/RICT/issues/15)
+[Issue](https://github.com/MEPP-team/RICT/issues/44)
 
 ### User story
 
