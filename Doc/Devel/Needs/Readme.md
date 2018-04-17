@@ -12,7 +12,7 @@
  * [Need 011](Need011.md): user interface : document browser, temporal slider, minimap, filters, preferences...
  * Need 012: free slot 
  * [Need 013](Need013.md): provide a user friendly interface to manage extended documents
- * [Need 014](Need014.md): manage documents and their links with other city objects and documents
+ * [Need 014](Need014.md): provide a user friendly interface to add one document
  * [Need 015](Need015.md): user interaction with documents
  * [Need 016](Need016.md): ergonomic exploration of time
  * [Need 017](Need017.md): develop a server to stream PostGIS 3D objects having a temporal dimension to the web
@@ -31,6 +31,8 @@
  * [Need 030](Need030.md): UI browser for extended documents
  * [Need 031](Need031.md): user friendly interface to add extended documents
  * [Need 032](Need032.md): tool to place and orient extended document in the scene.
+ * [Need 033](Need033.md): provide a user friendly interface to modify and delete documents
+ * [Need 034](Need034.md): improved temporal navigation slider
  
  
 ## Definitions
