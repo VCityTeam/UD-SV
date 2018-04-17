@@ -1,6 +1,8 @@
 
 # Need 032: Provide a tool to place and orient document in the scene.
 
+[Issue](https://github.com/MEPP-team/RICT/issues/45)
+
 ### User story
 
 As an historian, I want to be able to place documents in the 3D scene.
