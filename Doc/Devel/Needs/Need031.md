@@ -1,6 +1,5 @@
 
-# Need 031: Provide a user friendly interface to add extended documents
-
+# Need 031: Provide a user friendly interface to bulk load documents
 
 ### User story
 
@@ -10,6 +9,7 @@ Related Needs :
  * [Need 014](Need014.md)
 
 ### Beneficiary role: 
+[City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
 
 ### Impact: 
 
@@ -25,7 +25,9 @@ ongoing
  * [Authoring interface](Definitions.md#authoring-interface)
 
 ### Description
-A user-friendly interface that allows the historian to upload a file (picture, drawing...) and relative metadatas.
+While working with historians, one major observation that has been made is their use of excel files (or csv files). Therefore in order to extend city model with documents, we need an interface that allows the user to bulk load documents along with an excel files (csv files) that specifies key metadata of all documents along with document references to city objects (or even other city documents). Thus this interface has two important parameters
+     * Link to excel file containing metadata
+     * Link to folder containing documents     
  
 ### Notes:
 The metadatas requirements have not been defined yet.
