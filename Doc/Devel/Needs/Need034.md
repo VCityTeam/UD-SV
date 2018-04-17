@@ -1,4 +1,4 @@
-# Need 034: Improved temporal navigation tool
+# Need 034: Improved temporal navigation slider
 [Issue](https://github.com/MEPP-team/RICT/issues/47)
 
 ### User story
