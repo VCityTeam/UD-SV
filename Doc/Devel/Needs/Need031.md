@@ -1,12 +1,10 @@
 
 # Need 031: Provide a user friendly interface to bulk load documents
+[Issue](https://github.com/MEPP-team/RICT/issues/44)
 
 ### User story
 
 As an historian I want to be able to add a document stored in my computer and give relative metadata.
-
-Related Needs :
- * [Need 014](Need014.md)
 
 ### Beneficiary role: 
 [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
