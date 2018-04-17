@@ -19,3 +19,4 @@ City knowledgeable person, general audience
 Based on the observation of different points of view or sources to explain on particular event,the need rose to provide a way to visualize multiple versions of the city.
 
 ### Notes:
+[Related need 026](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need026.md)
