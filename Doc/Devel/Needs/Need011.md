@@ -3,6 +3,9 @@
 ### User story
 As a historian, i will need easy access to all the functionalities of the tool : movement in the 3d scene, temporal evolution, document browser, guided tour, preferences... though a GUI.
 
+Aggregator super need :
+* Need 019: [navigate from selected geometries within the interface to the attached semantic information](Need019.md)
+
 ### Beneficiary role: 
 
 ### Impact:
