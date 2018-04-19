@@ -3,7 +3,7 @@
 ### User story
 As an [historian](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person), I want to add a temporal dimension to city models. I want to be able to store different versions of city models corresponding to different periods of time. I also want to be able to visualise the evolution of the city along the time using a 4D (spatio-temporal) representation of the city.
 
-Related needs :
+Related need :
 * Need 003: [document-enhanced 4d representation of the city to detail historical processes](Need003.md)
 
 Sub Needs:
