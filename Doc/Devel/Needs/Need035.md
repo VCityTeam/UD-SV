@@ -1,5 +1,7 @@
 # Need 035: conceptual and physical model of Extended Documents
 
+Related needs: [Aggregator super need](Need004.md)
+
 ### User story
 As an historian I can define the contents of Extended Documents shared in my scientific domain. 
 As an [Developer](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#developer) 
