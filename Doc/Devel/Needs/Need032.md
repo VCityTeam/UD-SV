@@ -7,6 +7,9 @@
 
 As an historian, I want to be able to place documents in the 3D scene.
 
+Aggregator super need :
+* Need 004: [enhancing city models with documents](Need004.md)
+
 ### Beneficiary role: 
 
 ### Impact: 
