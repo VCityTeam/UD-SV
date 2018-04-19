@@ -13,7 +13,7 @@
  * Need 012: free slot 
  * [Need 013](Need013.md): visualization of documents within a 3D representation of the city
  * [Need 014](Need014.md): provide a user friendly interface to add one document
- * [Need 015](Need015.md): user interaction with documents
+ * [Need 015](Need015.md): Oriented camera mode for documents
  * [Need 016](Need016.md): ergonomic exploration of time
  * [Need 017](Need017.md): develop a server to stream PostGIS 3D objects having a temporal dimension to the web
  * [Need 018](Need018.md): provide means for storing and accessing thematic information extending the geometric information of a city 
