@@ -8,7 +8,7 @@ Sub Needs :
 * [Need004](Need004.md) : Enhancing city models with documents
 * [Need005](Need005.md) : Adding a temporal dimension to city models
 * [Need006](Need006.md) : ergonomic user exploration of space (advanced camera control, shortcut to point of interest...)
-* [Need007](Need007.md) : guided tour, step by step between spatiotemporal points of interest
+* [Need007](Need007.md) : 'guided tour' : step by step tour to describe a historical process
 * [Need008](Need008.md) : ability to display the historical uncertainty of the 3d reconstruction
 * [Need009](Need009.md) : ability to use texture in the 3d scene
 * [Need011](Need011.md) : user interface (document, temporal slider, map...)
