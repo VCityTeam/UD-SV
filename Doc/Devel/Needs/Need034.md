@@ -14,6 +14,7 @@ City knowledgeable person, general audience
 ### Cost evaluation:
 
 ### Tags or keywords
+viewpoints, visualization
 
 ### Description
 Based on the observation of different points of view or sources to explain on particular event,the need rose to provide a way to visualize multiple versions of the city.
