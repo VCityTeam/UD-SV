@@ -2,7 +2,7 @@
 [Issue](https://github.com/MEPP-team/RICT/issues/47)
 
 ### User story
-As a historian, I want to navigate in time and multiple scenarisations.
+As a historian, I want to navigate in time and in multiple scenarisations.
 
 ### Beneficiary role: 
 City knowledgeable person, general audience
@@ -17,7 +17,7 @@ City knowledgeable person, general audience
 viewpoints, visualization
 
 ### Description
-Based on the observation of different points of view or sources to explain on particular event,the need rose to provide a way to visualize multiple versions of the city.
+Based on the observation of different points of view or sources to explain one particular event,the need rose to provide a way to visualize multiple versions of the city.
 
 ### Notes:
 [Related need 026](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need026.md)
