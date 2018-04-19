@@ -1,13 +1,13 @@
 
 # Need 014: Provide a user friendly interface to add one document
 
-[Issue](https://github.com/MEPP-team/RICT/issues/44)
+Related information
+ - [Aggregator super need](Need004.md)
+ - [Issue 14](https://github.com/MEPP-team/RICT/issues/44)
 
 ### User story
 
-As an historian I want to be able to 
-  - define a document structure based on well known types (text, images) 
-  - and share an [Extended Document](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) (a [document](Definitions.md#document) together with some [associatate metadata](Definitions.md#document-metadata)) through a web based site.
+As an historian I want to be able to share an [Extended Document](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) (as defined by [need 35](Need035.md)) through a web based site.
 
 ### Beneficiary role: 
 [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
