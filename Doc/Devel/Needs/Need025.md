@@ -1,5 +1,8 @@
 # Need 025 : Provide means for storing and accessing 'guided tours' data
 
+Related needs:
+[Need 7](Need007.md)
+
 ### User story
 As a computational model person, I want to access guided tours data so that I can display them to the user.
 As a database maintainer, I want to populate the database with guided tour data provided to me so that users can access it later on.
