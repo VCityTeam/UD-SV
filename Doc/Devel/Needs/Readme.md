@@ -17,7 +17,7 @@
  * [Need 017](Need017.md): develop a server to stream PostGIS 3D objects having a temporal dimension to the web
  * [Need 018](Need018.md): provide means for streaming and visualisation of semantic and hierarchical information of city objects
  * [Need 019](Need019.md): navigate from selected geometries within the interface to the attached semantic information
- * [Need 020](Need020.md): CRUD (manage) extended documents
+ * [Need 020](Need020.md): manage (CRUD) extended documents (backend side)
  * [Need 021](Need021.md): ability to 3D display the city for a given date
  * [Need 022](Need022.md): game controller support
  * [Need 023](Need023.md): VR support
