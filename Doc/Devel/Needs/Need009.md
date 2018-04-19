@@ -1,5 +1,8 @@
 # Need 009 : ability to use texture in the 3d scene
 
+Related needs :
+* [Need 003](Need.003.md)
+
 ### User story
 As a historian, i would like the 3d models to be as visually accurate as possible, to reflect the historical reality. 
 
