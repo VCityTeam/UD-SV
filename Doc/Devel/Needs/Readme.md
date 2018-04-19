@@ -33,6 +33,7 @@
  * [Need 032](Need032.md): tool to place and orient extended document in the scene.
  * [Need 033](Need033.md): provide a user friendly interface to modify and delete documents
  * [Need 034](Need034.md): improved temporal navigation slider
+ * [Need 035](Need035.md): conceptual and physical model of Extended Documents
  
  
 ## Definitions
