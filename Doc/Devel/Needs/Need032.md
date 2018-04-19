@@ -24,3 +24,4 @@ immature
 
 ### Description
 A tool that allows a user to pick up an image, see it on the scene, then place/orient/scale it and validate its position using the mouse and keyboard.
+We need to define how we want the documents to be visualized (billboard or 2D screen overlay) in order to provide an adequate tool.
