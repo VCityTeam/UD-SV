@@ -2,7 +2,7 @@
  * [Need 001](Need001.md): means for computational model API
  * [Need 002](Need002.md): means for modular information models
  * [Need 003](Need003.md): document-enhanced 4d representation of the city to detail historical processes
- * [Need 004](Need004.md): integration of medias (images, text, audio, video, etc.) within a 4D (spatio-temp) representation of the city
+ * [Need 004](Need004.md): enhancing city models with documents
  * [Need 005](Need005.md): ergonomic user exploration of time : temporal slider
  * [Need 006](Need006.md): ergonomic user exploration of space (advanced camera control, shortcut to point of interest...)
  * [Need 007](Need007.md): guided tour, between spatiotemporal points of interest, which the user can enter/leave/return to at will
