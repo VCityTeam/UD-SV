@@ -4,7 +4,9 @@
 see [corresponding definition](Definitions.md#oriented-camera-mode)
 
 ### User story
-As a historian i need the ability the orient my camera in the scene so that i can view the object (building, region...) of a document, with the document superimposed over the scene, and maximum visual clarity.
+As a historian I wish to
+  - selected an extended document
+  - require the camera to autamtically positionate and orient itself in space (and time) so that the extended document appears in overlay to the city objects (building, region...) constituting the scene.
 
 ### Beneficiary role: 
 
