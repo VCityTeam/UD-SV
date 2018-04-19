@@ -4,6 +4,9 @@
 As a city knowledgeable person, I want to access semantic information attached to the geometry of city objects (e.g. select a building and see its attached semantic information or select a wall and see its attached semantic information)
 As a computational model person, I want to access semantic information attached to the geometry so that I can run a view composition analysis.
 
+Aggregator super need :
+* Need 019: [navigate from selected geometries within the interface to the attached semantic information](Need019.md)
+
 ### Beneficiary role: 
 City knowledgeable person, general audience
 
