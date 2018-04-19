@@ -5,6 +5,9 @@
 As an historian, i want a document-enhanced step by step guided tour in the 4d scene (3d + time), in order to describe a historical process. 
 
 Related need :
+* Need 003: [document-enhanced 4d representation of the city to detail historical processes](Need003.md)
+
+Sub need :
 * Need 025: [provide means for storing and accessing 'guided tours' data](Need025.md)
 
 TODO :
