@@ -1,7 +1,7 @@
 # Need 025 : Provide means for storing and accessing 'guided tours' data
 
-Related needs:
-[Need 7](Need007.md)
+Related need:
+* Need 007: ['guided tour' : step by step tour to describe a historical process](Need007.md)
 
 ### User story
 As a computational model person, I want to access guided tours data so that I can display them to the user.
