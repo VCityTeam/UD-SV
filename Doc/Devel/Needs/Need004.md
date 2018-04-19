@@ -7,8 +7,9 @@ As an historian, I want to be able to enhance city models with documents. I want
 
 Sub Needs (in information stream order):
   * Need 035: [conceptual and physical model of Extended Documents](Need035.md)
-  * Need 014: [provide a user friendly interface to add one document](Need014.md)
   * Need 015: [Oriented camera mode for documents](Need015.md)
+  * Need 014: [provide a user friendly interface to add one document](Need014.md)
+  * Need 031: [Provide a user friendly interface to bulk load documents](Need031.md)
   * Need 020: [manage (CRUD) extended documents](Need020.md)
   * Need 028: [A CRUD API for extended documents](Need028.md)
   * Need 013: [visualization of documents within a 3D representation of the city](Need013.md)
