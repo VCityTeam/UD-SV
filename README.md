@@ -1,9 +1,9 @@
 ## Objective of the RICT project
 The objective of the RICT (Representation Information CiTy) project is to design and realize 
-  * a backend: 
+  * a [backend](#aimed-backend-features): 
      - an infrastructure enabling the storage of city related data,
      - an infrastructure for hosting and executing computational models (using the local backend data as well as online open data).  
-  * a frontend: 
+  * a [frontend](#aimed-frontend-features): 
      - a simple interactive visualizer of the backend data
      - a computational model treatment handler (configure, trigger, explore results of a treatment)
 
