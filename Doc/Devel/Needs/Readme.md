@@ -26,7 +26,7 @@
  * [Need 026](Need026.md): Workspaces to manage concurrent points of view of historians
  * [Need 027](Need027.md): Explicit and justify architecture and software component choices
  * [Need 028](Need028.md): CRUD API for extended documents
- * [Need 029](Need029.md): web API for extended documents
+ * [Need 029](Need029.md): web based API for exchanging extended document
  * [Need 030](Need030.md): UI browser for extended documents
  * [Need 031](Need031.md): Provide a user friendly interface to bulk load documents
  * [Need 032](Need032.md): tool to place and orient extended document in the scene.
