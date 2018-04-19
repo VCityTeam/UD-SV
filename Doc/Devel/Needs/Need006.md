@@ -3,6 +3,9 @@
 ### User story
 As an historian, i want to be able to easily navigate the 3d scene (camera control) and follow scripted paths from current location to a specific target (scripted movement).
 
+Related needs :
+* Need 003: [document-enhanced 4d representation of the city to detail historical processes](Need003.md)
+
 ### Beneficiary role:
 everyone, more specifically non-technical users
 
