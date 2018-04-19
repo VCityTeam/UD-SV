@@ -5,7 +5,9 @@
 
 ### User story
 
-As an historian I want to be able to add a [document](Definitions.md#document) stored in my computer and give the [document metadata](Definitions.md#document-metadata).
+As an historian I want to be able to 
+  - define a document structure based on well known types (text, images) 
+  - and share an [Extended Document](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) (a [document](Definitions.md#document) together with some [associatate metadata](Definitions.md#document-metadata)) through a web based site.
 
 ### Beneficiary role: 
 [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
