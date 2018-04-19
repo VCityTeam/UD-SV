@@ -4,7 +4,7 @@
 
 As a developper I want to be able to fetch 4D (spatio-temporal) objects from a database and to stream them to the web (to the client).
 
-Related need :
+Agregator super need :
 * Need 005: [adding a temporal dimension to city models](Need005.md)
 
 ### Beneficiary role: 
