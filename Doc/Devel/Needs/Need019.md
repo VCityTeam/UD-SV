@@ -6,8 +6,9 @@ to some geometry displayed in the interface so that I can then explore
 and navigate that semantic information within the interface.
 
 Sub Needs :
- - [Need 11](Need011.md) : user interface 
- - [Need 18](Need018.md) : means for storing and accessing semantic information
+* Need 011: [a graphical user interface (GUI)](Need011.md)
+* Need 018: [Provide means for streaming and visualisation of semantic and hierarchical information of city objects](Need018.md)
+
  
 ### Beneficiary role: 
 City knowledgeable person, general audience
