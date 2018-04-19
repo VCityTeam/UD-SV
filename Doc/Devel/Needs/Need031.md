@@ -6,6 +6,10 @@
 
 As a [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) I want to be able to add a document stored in my computer and give relative metadata.
 
+Aggregator super need :
+* Need 004: [enhancing city models with documents](Need004.md)
+
+
 ### Beneficiary role: 
 [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
 
