@@ -5,13 +5,14 @@
 
 As an historian, I want to be able to enhance city models with documents. I want to be able to manage, visualise (in the 3D scene as billboard display[1] AND in the document browser) and interact with the documents. I also want to be able to associate them to city object(s) and/or other document(s) [2].
 
-Sub Needs:
+Sub Needs (in information stream order):
+  * Need 035: [conceptual and physical model of Extended Documents](Need035.md)
   * Need 013: [Visualization of documents within a 3D representation of the city](Need013.md)
   * Need 014: [Provide a user friendly interface to manage extended documents](Need014.md)
   * Need 015: [Oriented camera mode for documents](Need015.md)
   * Need 020: [manage (CRUD) extended documents](Need020.md)
   * Need 028: [A CRUD API for extended documents](Need028.md)
-  * Need 035: [conceptual and physical model of Extended Documents](Need035.md)
+
 
 ### Beneficiary role:
 [Researchers (historians, geographers, urbanists)](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) and [general audience](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#general-audience)
