@@ -1,8 +1,8 @@
 
-# Need 014: Provide a user friendly interface to add one document
+# Need 014: provide a user friendly interface to add one document
 
 Related information
- - [Aggregator super need](Need004.md)
+ - [Aggregator super need 004](Need004.md)
  - [Issue 14](https://github.com/MEPP-team/RICT/issues/44)
 
 ### User story
@@ -29,6 +29,4 @@ ongoing
 A user-friendly interface that allows the user to upload one file (picture, drawing...) at a time along with specifying the metadata.
  
 ### Notes:
-This need differs from [Need 028](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md). Need 028 is a process (e.g. script) allowing to import extended documents in the database from e.g. an excel file and a set of files. This need is a user friendly interface above this process.
-
-The metadatas requirements have not been defined yet.
+This need differs from [Need 028](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md): need 028 is a process (e.g. script) allowing the importation of a set of extended documents whereas this need focuses on submitting a single document through an web based interface.
