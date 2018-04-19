@@ -1,4 +1,4 @@
-# Need 020: manage ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) [extended documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) 
+# Need 020: manage ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) [extended documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) (backend side)
 
 Associated issue: [issue 35](https://github.com/MEPP-team/RICT/issues/35)
 
