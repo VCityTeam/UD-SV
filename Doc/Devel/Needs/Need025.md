@@ -1,6 +1,6 @@
 # Need 025 : Provide means for storing and accessing 'guided tours' data
 
-Related need:
+Agregator super need:
 * Need 007: ['guided tour' : step by step tour to describe a historical process](Need007.md)
 
 ### User story
