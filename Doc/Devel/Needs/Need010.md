@@ -3,6 +3,9 @@
 ### User story
 As a database maintainer I want to provide a database model derived from the existing conceptual model so that I can CRUD city models with an additional temporal dimension. 
 
+Related needs :
+* Need 005: [adding a temporal dimension to city models](Need005.md)
+
 ### Beneficiary role: 
 Developper, City knowledgeable person, general audience
 
