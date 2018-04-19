@@ -19,7 +19,7 @@ Eventually this structured description can
  * influence/structure the main architecture of components
 
 ## Developers
- * [https://github.com/MEPP-team/RICT/blob/master/Doc/DevelopersCentral.md](Gateway for RICT developers).
+ * [Gateway for RICT developers](https://github.com/MEPP-team/RICT/blob/master/Doc/DevelopersCentral.md).
  * [Meeting minutes, technology surveys...](https://github.com/MEPP-team/RICT/wiki)
 
 ## Seeked backend/frontend features
