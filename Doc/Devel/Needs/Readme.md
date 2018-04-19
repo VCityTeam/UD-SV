@@ -29,7 +29,7 @@
  * [Need 028](Need028.md): CRUD API for extended documents
  * [Need 029](Need029.md): web API for extended documents
  * [Need 030](Need030.md): UI browser for extended documents
- * [Need 031](Need031.md): user friendly interface to add extended documents
+ * [Need 031](Need031.md): Provide a user friendly interface to bulk load documents
  * [Need 032](Need032.md): tool to place and orient extended document in the scene.
  * [Need 033](Need033.md): provide a user friendly interface to modify and delete documents
  * [Need 034](Need034.md): improved temporal navigation slider
