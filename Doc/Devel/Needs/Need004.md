@@ -5,6 +5,9 @@
 
 As an historian, I want to be able to enhance city models with documents. I want to be able to manage, visualise (in the 3D scene as billboard display[1] AND in the document browser) and interact with the documents. I also want to be able to associate them to city object(s) and/or other document(s) [2].
 
+Related needs :
+* Need 003: [document-enhanced 4d representation of the city to detail historical processes](Need003.md)
+
 Sub Needs (in information stream order):
   * Need 035: [conceptual and physical model of Extended Documents](Need035.md)
   * Upload:
