@@ -8,6 +8,9 @@ As a historian I wish to
   - selected an extended document
   - require the camera to autamtically positionate and orient itself in space (and time) so that the extended document appears in overlay to the city objects (building, region...) constituting the scene.
 
+Aggregator super need :
+* Need 004: [enhancing city models with documents](Need004.md)
+
 ### Beneficiary role: 
 
 ### Impact: 
