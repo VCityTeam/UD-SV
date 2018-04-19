@@ -8,6 +8,9 @@ TODO: split this need in smaller sub-needs (billboard vs set of documents)
 ### User story
 As a historian I want to visualize and locate documents (images, videos, text...) in the 3d representation of the city. I need a preview of what the document is, and a visual indication of its position in the scene.
 
+Aggregator super need :
+* Need 004: [enhancing city models with documents](Need004.md)
+
 ### Beneficiary role: 
 
 ### Impact: 
