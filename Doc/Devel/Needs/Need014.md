@@ -7,7 +7,7 @@ Related information
 
 ### User story
 
-As an historian I want to be able to share an [Extended Document](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) (as defined by [need 35](Need035.md)) through a web based site.
+As a [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) I want to be able to share an [Extended Document](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) (as defined by [need 35](Need035.md)) through a web based site.
 
 ### Beneficiary role: 
 [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
