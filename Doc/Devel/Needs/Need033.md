@@ -5,7 +5,7 @@
 
 ### User story
 
-As an historian I want to be able to modify/remove a document that I uploaded before.
+As a [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)  I want to be able to modify/remove a document that I uploaded before.
 
 ### Beneficiary role: 
 [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
