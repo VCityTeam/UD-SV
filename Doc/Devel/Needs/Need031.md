@@ -4,7 +4,7 @@
 
 ### User story
 
-As a [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) I want to be able to add a document stored in my computer and give relative metadata.
+As a [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) I want to be able to share multiple [Extended Documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) (as defined by [need 35](Need035.md)) through a web based site, at once. 
 
 Aggregator super need :
 * Need 004: [enhancing city models with documents](Need004.md)
