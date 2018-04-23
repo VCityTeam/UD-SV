@@ -10,7 +10,7 @@
  * [Need 009](Need009.md): ability to use texture in the 3d scene
  * [Need 010](Need010.md): database modeling of temporal dimension of city models
  * [Need 011](Need011.md): a graphical user interface (GUI)
- * [Need 012] : free slot
+ * Need 012 : free slot
  * [Need 013](Need013.md): visualization of documents within a 3D representation of the city
  * [Need 014](Need014.md): provide a user friendly interface to add one document
  * [Need 015](Need015.md): Oriented camera mode for documents
@@ -22,7 +22,7 @@
  * [Need 021](Need021.md): ability to 3D display the city for a given date
  * [Need 022](Need022.md): game controller support
  * [Need 023](Need023.md): VR support
- * [Need 024]: free slot
+ * Need 024: free slot
  * [Need 025](Need025.md): Provide means for storing and accessing 'guided tours' data
  * [Need 026](Need026.md): Workspaces to manage concurrent points of view of historians
  * [Need 027](Need027.md): Explicit and justify architecture and software component choices
