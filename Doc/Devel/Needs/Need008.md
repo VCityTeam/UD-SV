@@ -4,7 +4,7 @@ Related needs: [Aggregator super need](Need004.md)
 
 ### User story
 As a [City Knowledgeable Person](Roles.md#city-knowledgeable-person) I want to create an account to have access to the web based site.
-I want to logg in and be able to add/update/delete one or multiple [Extended Documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document).
+I want to log in and be able to add/update/delete one or multiple [Extended Documents](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document).
 
 ### Beneficiary role: 
 City knowledgeable person
