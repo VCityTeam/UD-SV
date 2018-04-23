@@ -2,8 +2,7 @@
 ## Need 004: Enhancing city models with documents
 
 Links:
-* Related needs :
- * Need 003: [document-enhanced 4d representation of the city to detail historical processes](Need003.md)
+* Super need: [Need 003: document-enhanced 4D representation of the city to detail historical processes](Need003.md)
 
 * Sub Needs (in information stream order):
      * Need 035: [conceptual and physical model of Extended Documents](Need035.md)
