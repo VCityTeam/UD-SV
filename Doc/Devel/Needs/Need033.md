@@ -5,13 +5,12 @@
 
 ### User story
 
-As a [content contributor] Roles.md#content-contributor I want to be able to update/remove a document that I shared through the web based site.
+As a [content contributor](Roles.md#content-contributor) I want to be able to update/remove a document that I shared through the web based site.
 
 ### Beneficiary role: 
-[City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
+[content contributor](Roles.md#content-contributor)
 
 ### Impact: 
-
 
 ### Maturity: 
 immature
