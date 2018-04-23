@@ -1,26 +1,27 @@
 
 ## Need 004: Enhancing city models with documents
 
+Links:
+* Related needs :
+ * Need 003: [document-enhanced 4d representation of the city to detail historical processes](Need003.md)
+
+* Sub Needs (in information stream order):
+     * Need 035: [conceptual and physical model of Extended Documents](Need035.md)
+   * Upload:
+     * Need 008: [account for Content Contributor](Need008.md)
+     * Need 014: [provide a user friendly interface to add one document](Need014.md)
+     * Need 031: [Provide a user friendly interface to bulk load documents](Need031.md)
+     * Need 032: [tool to place and orient a document in the scene](Need032.md)
+   * Updating  
+     * Need 020: [manage (CRUD) extended documents](Need020.md)
+     * Need 028: [A CRUD API for extended documents](Need028.md)
+   * Visualization/Usage   
+     * Need 015: [Oriented camera mode for documents](Need015.md)
+     * Need 013: [visualization of documents within a 3D representation of the city](Need013.md)
+
 ### User story:
 
-As an historian, I want to be able to enhance city models with documents. I want to be able to manage, visualise (in the 3D scene as billboard display[1] AND in the document browser) and interact with the documents. I also want to be able to associate them to city object(s) and/or other document(s) [2].
-
-Related need :
-* Need 003: [document-enhanced 4d representation of the city to detail historical processes](Need003.md)
-
-Sub Needs (in information stream order):
-  * Need 035: [conceptual and physical model of Extended Documents](Need035.md)
-  * Upload:
-    * Need 008: [account for Content Contributor](Need008.md)
-    * Need 014: [provide a user friendly interface to add one document](Need014.md)
-    * Need 031: [Provide a user friendly interface to bulk load documents](Need031.md)
-    * Need 032: [tool to place and orient a document in the scene](Need032.md)
-  * Updating  
-    * Need 020: [manage (CRUD) extended documents](Need020.md)
-    * Need 028: [A CRUD API for extended documents](Need028.md)
-  * Visualization/Usage   
-    * Need 015: [Oriented camera mode for documents](Need015.md)
-    * Need 013: [visualization of documents within a 3D representation of the city](Need013.md)
+As an [content contributor](Roles.md#content-contributor), I want to be able to enhance city models with documents. I want to be able to manage, visualise (in the 3D scene as billboard display[1] AND in the document browser) and interact with the documents. I also want to be able to associate them to city object(s) and/or other document(s) [2].
 
 ### Beneficiary role:
 [Researchers (historians, geographers, urbanists)](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) and [general audience](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#general-audience)
