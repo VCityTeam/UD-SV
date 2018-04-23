@@ -1,13 +1,15 @@
 
 # Need 032: Provide a tool to place and orient a document in the scene.
 
-[Issue](https://github.com/MEPP-team/RICT/issues/45)
+Links:
+ * [Issue](https://github.com/MEPP-team/RICT/issues/45)
+ * Super need: [Need 004: enhancing city models with documents](Need004.md)
+
 
 ### User story
 
 As a [Content Contributor](Roles.md#content-contributor), I want to be able to place documents in the 3D scene.
 
-Super need : [Need 004: enhancing city models with documents](Need004.md)
 
 ### Beneficiary role: 
 
