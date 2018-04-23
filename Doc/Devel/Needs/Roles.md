@@ -8,3 +8,6 @@ Definition: Urbanist, historians (researchers), human scientist and practitionne
 ### Developer
 
 ### General audience
+
+### Content Contributor
+Definition: any person contributing information to the platform e.g. a City knowledgeable person, or General Audience Member (when crowd sourcing)
