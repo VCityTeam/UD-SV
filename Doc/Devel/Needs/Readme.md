@@ -6,7 +6,7 @@
  * [Need 005](Need005.md): adding a temporal dimension to city models
  * [Need 006](Need006.md): ergonomic user exploration of space : camera movement
  * [Need 007](Need007.md): 'guided tour' : step by step tour to describe a historical process
- * [Need 008](Need008.md): accounts for cityknowledgeable persons
+ * [Need 008](Need008.md): accounts for Content Contributor
  * [Need 009](Need009.md): ability to use texture in the 3d scene
  * [Need 010](Need010.md): database modeling of temporal dimension of city models
  * [Need 011](Need011.md): a graphical user interface (GUI)
