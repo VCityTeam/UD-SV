@@ -1,4 +1,4 @@
-# Need 026 : Workspaces to manage concurrent points of view of historians
+# Need 026 : Workspaces to manage concurrent points of view of historians (backend)
 
 ### User story
 Historians want to manage different points of view of urban evolution
