@@ -6,6 +6,7 @@ Associated issue: [issue 35](https://github.com/MEPP-team/RICT/issues/35)
  - [Need 03](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need003.md): aggregation need
  - [Need 28](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md): corresponding API
  - [Need 19](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need029.md): web based API
+ - [Need 33](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need033.md): user interface
 
 ## User story:
 As a database maintainer I want to offer a placeholder (database) for extended documents.
