@@ -28,5 +28,4 @@ The user wants to navigate (select a particular alternative) between the availab
  * [Related need 026](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need026.md)
  
 ### References
-John Samuel, Clémentine Périnaud, Sylvie Servigne, Georges Gay, Gilles Gesquière [Representation and Visualization of Urban Fabric through Historical Documents]
- (https://hal.archives-ouvertes.fr/hal-01381763/document)
+John Samuel, Clémentine Périnaud, Sylvie Servigne, Georges Gay, Gilles Gesquière [Representation and Visualization of Urban Fabric through Historical Documents](https://hal.archives-ouvertes.fr/hal-01381763/document)
