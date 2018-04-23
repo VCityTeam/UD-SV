@@ -5,7 +5,7 @@
 
 ### User story
 
-As a [content contributor](Roles.md#content-contributor) I want to be able to update/remove a document that I shared through the web based site.
+As a [content contributor](Roles.md#content-contributor), I want to be able to update/remove a document that I previously uploaded on the web site.
 
 ### Beneficiary role: 
 [content contributor](Roles.md#content-contributor)
