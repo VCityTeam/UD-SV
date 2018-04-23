@@ -14,7 +14,7 @@ Sub Needs (in information stream order):
     * Need 008: [account for Content Contributor](Need008.md)
     * Need 014: [provide a user friendly interface to add one document](Need014.md)
     * Need 031: [Provide a user friendly interface to bulk load documents](Need031.md)
-    * Need 032: [tool to place and orient extended document in the scene](Need032.md)
+    * Need 032: [tool to place and orient a document in the scene](Need032.md)
   * Updating  
     * Need 020: [manage (CRUD) extended documents](Need020.md)
     * Need 028: [A CRUD API for extended documents](Need028.md)
