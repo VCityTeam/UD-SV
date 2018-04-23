@@ -1,10 +1,8 @@
-# Need 003: A document-enhanced 4d representation of the city to detail historical processes
+# Need 003: A document-enhanced 4D representation of the city to detail historical processes
 
-### User story
-As an historian, I want a document-enhanced 4d representation of the city in which historical processes can be detailed.
+Links:
 
 Sub Needs :
-
 * [Need004](Need004.md) : Enhancing city models with documents
 * [Need005](Need005.md) : Adding a temporal dimension to city models
 * [Need006](Need006.md) : ergonomic user exploration of space (advanced camera control, shortcut to point of interest...)
@@ -13,6 +11,9 @@ Sub Needs :
 * [Need011](Need011.md) : user interface (document, temporal slider, map...)
 * [Need028](Need028.md) : CRUD API
 * [Need029](Need029.md) : web API
+
+### User story
+As an historian, I want a document-enhanced 4D representation of the city in which historical processes can be detailed.
 
 ### Beneficiary role: 
  - Experts in various fields, ranging from information technology to human sciences. Tools must be easy to use for non-technicians (focus needed on ergonomy).
