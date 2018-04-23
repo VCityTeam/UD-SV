@@ -1,6 +1,7 @@
 # Need 008: accounts for Content Contributors
 
-Related needs: [Aggregator super need](Need004.md)
+Links:
+ * Super need: [Need 004: enhancing city models with documents](Need004.md)
 
 ### User story
 As a [Content Contributor](Roles.md#content-contributor) I want to create an account to have access to the web based site.
