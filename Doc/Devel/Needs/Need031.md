@@ -28,8 +28,8 @@ ongoing
 
 ### Description
 While working with historians, one major observation that has been made is their use of excel files (or csv files). Therefore in order to extend city model with documents, we need an interface that allows the user to bulk load documents along with an excel files (csv files) that specifies key metadata of all documents along with document references to city objects (or even other city documents). Thus this interface has two important parameters:
-     * Link to excel file containing metadata
-     * Link to folder containing documents     
+     *  Link to excel file containing metadata
+     *  Link to folder containing documents     
  
 ### Notes:
 The metadatas requirements have not been defined yet.
