@@ -19,7 +19,7 @@ City knowledgeable person
 
 
 ### Description
-Each city knowledgeable person can logg into their account once it's created, can visualize their previously imported extended documents (if any), can choose to delete or update the documents.
+Each city knowledgeable person can log into their account once it's created, can visualize their previously imported extended documents (if any), can choose to delete or update the documents.
 
 ### Notes:
 
