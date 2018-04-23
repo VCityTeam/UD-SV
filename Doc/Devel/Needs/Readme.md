@@ -3,13 +3,14 @@
  * [Need 002](Need002.md): means for modular information models
  * [Need 003](Need003.md): document-enhanced 4d representation of the city to detail historical processes
  * [Need 004](Need004.md): enhancing city models with documents
- * [Need 005](Need005.md): ergonomic user exploration of time : temporal slider
- * [Need 006](Need006.md): ergonomic user exploration of space (advanced camera control, shortcut to point of interest...)
- * [Need 007](Need007.md): guided tour, between spatiotemporal points of interest, which the user can enter/leave/return to at will
- * [Need 008](Need008.md): ability to display the historical uncertainty of the 3d reconstruction
+ * [Need 005](Need005.md): adding a temporal dimension to city models
+ * [Need 006](Need006.md): ergonomic user exploration of space : camera movement
+ * [Need 007](Need007.md):  'guided tour' : step by step tour to describe a historical process
+ * [Need 008]: free slot
  * [Need 009](Need009.md): ability to use texture in the 3d scene
  * [Need 010](Need010.md): database modeling of temporal dimension of city models
  * [Need 011](Need011.md): a graphical user interface (GUI)
+ * [Need 012] : free slot
  * [Need 013](Need013.md): visualization of documents within a 3D representation of the city
  * [Need 014](Need014.md): provide a user friendly interface to add one document
  * [Need 015](Need015.md): Oriented camera mode for documents
@@ -21,7 +22,7 @@
  * [Need 021](Need021.md): ability to 3D display the city for a given date
  * [Need 022](Need022.md): game controller support
  * [Need 023](Need023.md): VR support
- * [Need 024](Need024.md): Provide means for storing and accessing quality information extending the geometric information of a city
+ * [Need 024]: free slot
  * [Need 025](Need025.md): Provide means for storing and accessing 'guided tours' data
  * [Need 026](Need026.md): Workspaces to manage concurrent points of view of historians
  * [Need 027](Need027.md): Explicit and justify architecture and software component choices
