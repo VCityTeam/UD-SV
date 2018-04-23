@@ -5,8 +5,10 @@ As a GUI user, I want to retrieve the semantic information attached
 to some geometry displayed in the interface so that I can then explore
 and navigate that semantic information within the interface.
 
-Sub Needs :
+Super Need:
 * Need 011: [a graphical user interface (GUI)](Need011.md)
+
+Sub Needs :
 * Need 018: [Provide means for streaming and visualisation of semantic and hierarchical information of city objects](Need018.md)
 
  
