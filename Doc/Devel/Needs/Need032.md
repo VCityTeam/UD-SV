@@ -5,10 +5,9 @@
 
 ### User story
 
-As a [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person), I want to be able to place documents in the 3D scene.
+As a [Content Contributor](Roles.md#content-contributor), I want to be able to place documents in the 3D scene.
 
-Aggregator super need :
-* Need 004: [enhancing city models with documents](Need004.md)
+Super need : [Need 004: enhancing city models with documents](Need004.md)
 
 ### Beneficiary role: 
 
