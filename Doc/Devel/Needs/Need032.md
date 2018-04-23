@@ -1,5 +1,5 @@
 
-# Need 032: Provide a tool to place and orient a document in the scene.
+# Need 032: Provide tools to place and orient a document in the scene
 
 Links:
  * [Issue](https://github.com/MEPP-team/RICT/issues/45)
