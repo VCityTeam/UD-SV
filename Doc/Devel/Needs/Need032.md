@@ -23,3 +23,4 @@ immature
 ### Component
 
 ### Description
+[Immature notes](https://github.com/MEPP-team/VCity/wiki/Need032)
