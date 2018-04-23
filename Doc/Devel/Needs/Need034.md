@@ -19,7 +19,8 @@ viewpoints, visualization
 
 ### Description
 Based on the observation of different points of view or sources to explain one particular event,the need rose to provide a way to visualize multiple versions of the city. 
-For example, one historian has a scenario (sequence of chronological events supported by extended documents) that explains the events that led to the construction of one particular building. However, another historian has a different scenario/explanation that leads to the construction of the same building. We want to allow different scenarisations and navigate between them.
+For example, one historian has a scenario (sequence of chronological events supported by extended documents) that explains the events that led to the construction of one particular building. However, another historian has a different scenario/explanation that leads to the construction of the same building. 
+The user wants to see those different scenarisations and navigate between them.
 
 ### Notes:
 [Related need 026](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need026.md)
