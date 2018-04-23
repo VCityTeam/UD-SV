@@ -1,6 +1,6 @@
 # Need 026 : Workspaces to manage concurrent points of view of historians (backend)
 
-Links: [Need034](improved temporal navigation slider) (frontend part)
+Links: [Need034: improved temporal navigation slider](Need034.md) (frontend part)
 
 ### User story
 Historians want to manage different points of view of urban evolution
