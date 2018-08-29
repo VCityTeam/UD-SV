@@ -41,19 +41,6 @@ GROUP BY root_id
 Once we have all this information, we just need to put it in a batch table using py3dtiles.
 
 
-## Notes on the 22/03/18
-
-To answer this need, one needs to:
-  * Change the [ExtractCityData script](https://github.com/MEPP-team/UDV-server/tree/master/ExtractCityData) of UDV server to extract semantic and hierarchy between city objects informations from the database into the view
-  * Modify [Py3DTiles](https://github.com/MEPP-team/py3dtiles) to include these semantic and hierarchy information into 3D Tiles, following the method proposed by (Schilling et al, 2016)
-  * Modify iTowns/UDV to 
-     * Read these information from Py3DTiles
-     * Provides GUI means to select city objects (e.g. building, wall, roof) and see their attributes 
-     
-## Work during iTowns code sprint (27/03/2018)
-
-Client side modifications to read a hierarchical batch table and display hierarchy and properties: https://github.com/iTowns/itowns/tree/batch_table_hierarchy . Not tested yet; waiting for a test tileset.
-
 ## Earlier Notes
 
 ## General informations
@@ -144,7 +131,20 @@ Another remaining question is how to transfer the hierarchical information to th
     * Create a table containing semantic information for each type of city object
     * Add a column `semantic` containing an array or a list encoded in a string
 More problem will come when we will want to add the hierarchical information of city objects. In addition, 3DCityDB allows to store all these information quite well so we don't need to do it again... I think a better way would be to get back to the "on the fly" calculation of the 3d-tiles tileset or to interface py3dtiles with 3DCityDB.
-  
+
+### Notes on the 22/03/18
+
+To answer this need, one needs to:
+  * Change the [ExtractCityData script](https://github.com/MEPP-team/UDV-server/tree/master/ExtractCityData) of UDV server to extract semantic and hierarchy between city objects informations from the database into the view
+  * Modify [Py3DTiles](https://github.com/MEPP-team/py3dtiles) to include these semantic and hierarchy information into 3D Tiles, following the method proposed by (Schilling et al, 2016)
+  * Modify iTowns/UDV to 
+     * Read these information from Py3DTiles
+     * Provides GUI means to select city objects (e.g. building, wall, roof) and see their attributes 
+     
+### Work during iTowns code sprint (27/03/2018)
+
+Client side modifications to read a hierarchical batch table and display hierarchy and properties: https://github.com/iTowns/itowns/tree/batch_table_hierarchy . Not tested yet; waiting for a test tileset.
+
 ## References
 
 [Schi16] Schilling, A., Bolling, J., & Nagel, C. (2016, July). Using glTF for streaming CityGML 3D city models. In Proceedings of the 21st International Conference on Web3D Technology (pp. 109-116). ACM.
