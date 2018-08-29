@@ -1,8 +1,8 @@
 # Design note of [need 18](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need018.md)
 
 ## References
- * Original (Oslandia) [py3dtiles](https://github.com/Oslandia/py3dtiles)
- * VCity [py3dtiles fork](https://github.com/MEPP-team/py3dtiles)
+ * Py3dtiles: [Oslandia reference repository](https://github.com/Oslandia/py3dtiles), [VCity's fork](https://github.com/MEPP-team/py3dtiles)
+ * [Batch table hierarchy specification](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/BatchTable/README.md#hierarchy) (by Analytical Graphics)
  * [Schi16] Schilling, A., Bolling, J., & Nagel, C. (2016, July). Using glTF for streaming CityGML 3D city models. In Proceedings of the 21st International Conference on Web3D Technology (pp. 109-116). ACM.
  * [Early deprecated design notes](DesignNote018-Early_notes.md)
 
