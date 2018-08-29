@@ -10,8 +10,14 @@
 
 ## Assumption
 We suppose that 3DTiles temporal extension and the batchtable hierarchy extension are completely disjoint.
-A consequence is that Py3DTiles corresponding implementations are also completely disjoint.
 
+A consequence is the respective implementations of the extension support in Py3DTiles are also completely disjoint.
+
+**Warning**: they are two distinguished processes for producing 3DTiles tilesets of a given city database
+ * Extract_city_data.py together with export_tileset.py that produce a temporal tileset 
+ * Extract_city_semantic.py (JGA) that produce a hierarchical tileset
+Because we need hierarchical temporal tileset, the two processes cannot remain disjoint ! We need a single process for producing a hierarchical temporal tileset. Because the two processes have different architectures (one uses a 3DCityView view and not the other) we have to merge/fuse/blend the code of those two processes. 
+ 
 ## What needs to be developed to obtain a prototype
 The high level view of the work can be summarized as: implement the [batch table hierarchy specification](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/BatchTable/README.md#hierarchy) support in the concerned components.
 
