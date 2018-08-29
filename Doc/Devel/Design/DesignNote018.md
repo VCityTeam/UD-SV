@@ -4,7 +4,7 @@
  * [Batch table hierarchy specification](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/BatchTable/README.md#hierarchy) (by Analytical Graphics)
  * Py3dtiles: [Oslandia reference repository](https://github.com/Oslandia/py3dtiles)
     * [VCity's fork](https://github.com/MEPP-team/py3dtiles): the [3dtiles-temporal-v2 branch](https://github.com/MEPP-team/py3dtiles/tree/3dtiles-temporal-v2) is the reference for working on temporal data
-    * [Jeremy Gaillard's fork](https://github.com/Jeremy-Gaillard/py3dtiles): [JGA's fork](https://github.com/Jeremy-Gaillard/py3dtiles) holds some [WIP](https://en.wikipedia.org/wiki/Work_in_process) support for batch table hierarchy
+    * [Jeremy Gaillard's fork](https://github.com/Jeremy-Gaillard/py3dtiles): [JGA's fork](https://github.com/Jeremy-Gaillard/py3dtiles) holds some [WIP](https://en.wikipedia.org/wiki/Work_in_process) support for batch table hierarchy on the [batchtable_hierarchy branch](https://github.com/iTowns/itowns/tree/batchtable_hierarchy)
  * Schilling, A., Bolling, J., & Nagel, C. (2016, July). Using glTF for streaming CityGML 3D city models. In Proceedings of the 21st International Conference on Web3D Technology (pp. 109-116). ACM.
  * [Early design notes](DesignNote018-Early_notes.md) (now deprecated)
 
