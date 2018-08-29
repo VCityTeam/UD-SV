@@ -8,6 +8,10 @@
  * Schilling, A., Bolling, J., & Nagel, C. (2016, July). Using glTF for streaming CityGML 3D city models. In Proceedings of the 21st International Conference on Web3D Technology (pp. 109-116). ACM.
  * [Early design notes](DesignNote018-Early_notes.md) (now deprecated)
 
+## Assumption
+We suppose that 3DTiles temporal extension and the batchtable hierarchy extension are completely disjoint.
+A consequence is that Py3DTiles corresponding implementations are also completely disjoint.
+
 ## What needs to be developed to obtain a prototype
 The high level view of the work can be summarized as: implement the [batch table hierarchy specification](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/BatchTable/README.md#hierarchy) support in the concerned components.
 
