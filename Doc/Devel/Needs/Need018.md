@@ -1,5 +1,7 @@
 # Need 018 : Provide means for streaming and visualisation of semantic and hierarchical information of city objects 
 
+### [Associated design notes](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote018.md)
+
 ### User story
 As a city knowledgeable person, I want to access semantic information attached to the geometry of city objects (e.g. select a building and see its attached semantic information or select a wall and see its attached semantic information)
 As a computational model person, I want to access semantic information attached to the geometry so that I can run a view composition analysis.
