@@ -15,7 +15,7 @@ A consequence is the respective implementations of the extension support in Py3D
 
 **Warning**: they are two distinguished processes for producing 3DTiles tilesets of a given city database
  * Extract_city_data.py together with export_tileset.py that produce a temporal tileset 
- * Extract_city_semantic.py (JGA) that produce a hierarchical tileset
+ * Extract_city_semantic.py (JGA) that produces a hierarchical tileset
 Because we need hierarchical temporal tileset, the two processes cannot remain disjoint ! We need a single process for producing a hierarchical temporal tileset. Because the two processes have different architectures (one uses a 3DCityView view and not the other) we have to merge/fuse/blend the code of those two processes. 
  
 ## What needs to be developed to obtain a prototype
