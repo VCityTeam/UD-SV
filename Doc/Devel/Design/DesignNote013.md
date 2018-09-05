@@ -46,7 +46,7 @@ function updateBillboardOrientation(){
 
 //The function should be called at every frame:
 
-this.documentController.controls.view.addFrameRequester( MAIN_LOOP_EVENTS.AFTER_CAMERA_UPDATE,this.updateBillboardOrientation.bind(this) );
+view.addFrameRequester( MAIN_LOOP_EVENTS.AFTER_CAMERA_UPDATE,this.updateBillboardOrientation.bind(this) );
 ```
 
 ### References:
