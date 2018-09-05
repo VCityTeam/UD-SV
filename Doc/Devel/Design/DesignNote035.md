@@ -11,7 +11,7 @@ All the documents object belong to this class and are composed of two objects : 
 
 *The class diagram below can show how a document is defined:*
 
-![](Pictures/DocumentTypeObjectClassDiagram.png)
+![](images/DocumentTypeObjectClassDiagram.png)
 
 ## Repercussions
  
@@ -46,7 +46,7 @@ For each attribute of the class we have to precise:
 * an **optional** value : the attribute can be unspecified
 * an **enum** value : the object attribute can only have certain values 
 
-![](Pictures/DocumentTypeModelClassDiagram.png)
+![](images/DocumentTypeModelClassDiagram.png)
 
 ### First: document types have the same structure (generic attributes)
 
@@ -91,7 +91,7 @@ We do not need to put the attributes already defined in the parent class, only i
 
 *The class diagram below can show how a **document** is defined:*
 
-![](Pictures/DocumentTypeObjectInheritanceClassDiagram.png)
+![](images/DocumentTypeObjectInheritanceClassDiagram.png)
 
 *The JSON file below can show an example of a document type (a **Photograph**):*
 
