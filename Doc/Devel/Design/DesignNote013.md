@@ -1,8 +1,11 @@
+# Basic work to represent billboards in UDV
+
 We present here a first proposition to modelize a billboard in UDV using JS-library Three.js:
 A billboard is a plane geometry supporting an image that we want to represent. A billboard is placed above the point of the city that it represents. It is linked to it by a so called "anchor line", representing the depency of the document to the geographic coordinates.
 
-//Billboard modelization
+
 ```
+//Billboard modelization
 var objGeometry = new THREE.PlaneGeometry(12,10); //creation of a planar geometry
 var texture = new THREE.TextureLoader().load( //link to the image   ); 
 var material = new THREE.MeshBasicMaterial( { map: texture, side: THREE.DoubleSide } );
@@ -45,3 +48,6 @@ function updateBillboardOrientation(){
 
 this.documentController.controls.view.addFrameRequester( MAIN_LOOP_EVENTS.AFTER_CAMERA_UPDATE,this.updateBillboardOrientation.bind(this) );
 ```
+
+### References:
+1. Visualization of Documented 3D Cities, Clément Chagnaud, John Samuel, Sylvie Servigne, Gilles Gesquière, Eurographics Workshop on Urban Data Modelling and Visualisation, UDMV 2016, Liège, Belgium, Decembre 8, 2016
