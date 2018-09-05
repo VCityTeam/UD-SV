@@ -13,4 +13,5 @@ Definition: Urbanist, historians (researchers), human scientist and practitionne
 Definition: any person contributing information to the platform e.g. a City knowledgeable person, or General Audience Member (when crowd sourcing)
 
 ## List of possible roles
- ### Deployment responsible person : in charge of installing an service integrated server 
+ ### Deployment responsible person
+ Definition: in charge of installing an service integrated server 
