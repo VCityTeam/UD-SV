@@ -1,5 +1,10 @@
 # Need 024 : Street Adress Geolocation 
 
+## References
+
+* [Issue]()
+* [Design Notes]()
+
 ### User story
 
 As a [Content Contributor](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#content-contributor) I want to be able to navigate in the city virtual representation using geolocation based on street adresses. 
