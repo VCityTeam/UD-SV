@@ -2,8 +2,8 @@
 
 ## References
 
-* [Issue]()
-* [Design Notes]()
+* [Issue](https://github.com/MEPP-team/RICT/issues/49)
+* [Design Notes](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote024.md)
 
 ### User story
 
