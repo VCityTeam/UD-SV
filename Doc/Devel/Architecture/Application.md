@@ -2,12 +2,6 @@
 
 Architecture and related diagrams regarding the whole application.
 
-## Applicative architecture
-
-### Applicative architecture (27/10/2017)
-
-![](Diagrams/ApplicativeArchitecture.png)
-
 ## Software architecture
 
 ### Software Architecture diagram (09/10/2018)
@@ -20,6 +14,12 @@ The following diagram present the current software architecture of our applicati
 ### Technical architecture diagram of Oslandia's developping context with iTowns (10/2017):
 
 ![Sketchy iTowns usage/developing  context](Diagrams/OslandiaiTown2Context.png)
+
+## Applicative architecture
+
+### Applicative architecture (27/10/2017)
+
+![](Diagrams/ApplicativeArchitecture.png)
 
 ## Sequence diagrams
 
