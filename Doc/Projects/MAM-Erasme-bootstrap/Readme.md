@@ -20,15 +20,15 @@ The 3D numerical model will be based on the [iTowns](http://www.itowns-project.o
 Once the above described models are available, some use case scenarios must be produced in order to elaborate on the ergonomy of interaction.
 
 ## Partners
-* [IMU Labex](http://imu.universite-lyon.fr/) (part of [Université de Lyon](https://www.universite-lyon.fr/)
+* [IMU Labex](http://imu.universite-lyon.fr/), [Université de Lyon](https://www.universite-lyon.fr/)
    - [Laboratoire Liris](https://liris.cnrs.fr/en)
    - [ELICO](http://www.elico-recherche.eu/?lang=en)
    - [EVS](http://umr5600.cnrs.fr/en/homepage/)
 * [Lyon Métropole](https://www.grandlyon.com/)
    - [Erasme Living Lab](http://www.polepixel.fr/residents/erasme/)
-   - DINSI, Data Grand Lyon
-* SPL Lyon Confluence
+   - DINSI (Direction Innovation Numérique et Systèmes d'information), Data Grand Lyon
+* [SPL Lyon Confluence](http://www.lyon-confluence.fr/en/urban-project/project-manager.html)
 * Formations
-   - Gamagora (formations jeux vidéo), Université de Lyon
-   - Master MUSE (Médiations urbaines, savoirs et expertises), Université de Lyon
-   - Master Geonum (Géographie Numérique), Université de Lyon
+   - [Gamagora](https://gamagora.univ-lyon2.fr/) (formations jeux vidéo), [Université de Lyon](https://www.universite-lyon.fr/)
+   - [MUSE master](http://offreformation.univ-lyon2.fr/cdm/fr/fiche/objectifs/FRUAI0691775EPRME236/FRUAI0691775EPRPR889) (Médiations urbaines, savoirs et expertises), [Université de Lyon](https://www.universite-lyon.fr/)
+   - Master Geonum (Géographie Numérique), [Université de Lyon](https://www.universite-lyon.fr/)
