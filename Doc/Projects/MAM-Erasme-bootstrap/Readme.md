@@ -36,7 +36,7 @@ Once the above described models are available, some use case scenarios must be p
  ## State of the art projects
  
  ### CityScope
- [CityScope]https://www.media.mit.edu/projects/cityscope/overview/) projects (dedicated to solving spatial design and urban planning challenges) usually follow a dual city representation framework that uses a 
+ [CityScope](https://www.media.mit.edu/projects/cityscope/overview/) projects (dedicated to solving spatial design and urban planning challenges) usually follow a dual city representation framework that uses a 
    * a physical model of the city map, based on a regular grid decomposition, enabling the detection of various modules (representing building units possibly made in Lego blocks) that users can freely move around the city map
    * a digital (simulation) model that recieves the current layout of the city modules  and that computes various indicators that are in turn projected (through LED projectors) back on the physical model.
    
