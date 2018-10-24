@@ -32,3 +32,18 @@ Once the above described models are available, some use case scenarios must be p
    - [Gamagora](https://gamagora.univ-lyon2.fr/) (formations jeux vidéo), [Université de Lyon](https://www.universite-lyon.fr/)
    - [MUSE master](http://offreformation.univ-lyon2.fr/cdm/fr/fiche/objectifs/FRUAI0691775EPRME236/FRUAI0691775EPRPR889) (Médiations urbaines, savoirs et expertises), [Université de Lyon](https://www.universite-lyon.fr/)
    - Master Geonum (Géographie Numérique), [Université de Lyon](https://www.universite-lyon.fr/)
+   
+ ## State of the art projects
+ 
+ ### CityScope
+ [CityScope]https://www.media.mit.edu/projects/cityscope/overview/) projects (dedicated to solving spatial design and urban planning challenges) usually follow a dual city representation framework that uses a 
+   * a physical model of the city map, based on a regular grid decomposition, enabling the detection of various modules (representing building units possibly made in Lego blocks) that users can freely move around the city map
+   * a digital (simulation) model that recieves the current layout of the city modules  and that computes various indicators that are in turn projected (through LED projectors) back on the physical model.
+   
+The technical constraints are as follows
+  - an interactive map model where the removable city modules (blocks) must be identifiable through optical capture (e.g. a webcam analyzing bar-codes or QR-codes)
+  - a software is required for scanning the resulting capture (e.g. [Rhinoceros 3D](https://en.wikipedia.org/wiki/Rhinoceros_3D)) and producing its input to the simulation engine
+  - a simulation engine (base e.g. on [Unity (game Engine)](https://en.wikipedia.org/wiki/Unity_(game_engine) or [Gama platform](https://github.com/gama-platform)) 
+   
+###   
+[CityMatrix]https://www.media.mit.edu/publications/citymatrix/)
