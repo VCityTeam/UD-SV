@@ -43,7 +43,7 @@ Once the above described models are available, some use case scenarios must be p
 The technical constraints are as follows
   - an interactive map model where the removable city modules (blocks) must be identifiable through optical capture (e.g. a webcam analyzing bar-codes or QR-codes)
   - a software is required for scanning the resulting capture (e.g. [Rhinoceros 3D](https://en.wikipedia.org/wiki/Rhinoceros_3D)) and producing its input to the simulation engine
-  - a simulation engine (base e.g. on [Unity (game Engine)](https://en.wikipedia.org/wiki/Unity_(game_engine) or [Gama platform](https://github.com/gama-platform)) 
+  - a simulation engine using e.g. [Unity (game Engine)](https://en.wikipedia.org/wiki/Unity_(game_engine)) or the [Gama platform](https://github.com/gama-platform)) or possibly [Grasshopper](https://www.grasshopper3d.com/) (together with Rhino) 
    
 ###   
 [CityMatrix]https://www.media.mit.edu/publications/citymatrix/)
