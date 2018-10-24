@@ -7,7 +7,14 @@ The objective of the RICT (Representation Information CiTy) project is to design
      - a simple interactive visualizer of the backend data
      - a computational model treatment handler (configure, trigger, explore results of a treatment)
 
-We believe that in order to succeed with data usage one must not separate data concerns (information models, database infrastructure) from the offered tools, treatment process and the associated methodology. Questions like how to migrate a database when the information model changes (e.g. from CityGML version 2 to version 3), how to deal with information model modularity and extensions, what are the interactions between data and their treatment or how does one hangle data storage and computation scale up, must be dealt at first. RICT will try to propose good practices for doing so.  
+We believe that in order to succeed with data usage one must not separate data concerns (information models, database infrastructure) from the offered tools, treatment process and the associated methodology. Questions like how to migrate a database when the information model changes (e.g. from CityGML version 2 to version 3), how to deal with information model modularity and extensions, what are the interactions between data and their treatment or how does one hangle data storage and computation scale up, must be dealt at first. RICT will try to propose good practices for doing so.
+
+## Ongoing projects
+ * [MAM and games](MAM-and-games-(Project)): a joint project with the [Gamagora](https://gamagora.univ-lyon2.fr/) internship program focusing on the Model AugMented (MAM) approach
+ * [MAM as a mediation tool](MAM-as-mediation-tool-(Project)): Model AugMented Model (MAM) approach with the [Erasme team](http://www.polepixel.fr/residents/erasme/)  
+
+## Closed projects
+ * 2018 [MAM-Erasme-bootstrap](MAM-Erasme-bootstrap-(Project)): early Proof Of Concept on the Model AugMented Model (MAM)
 
 ## Description of the needs
 We collect [use case oriented early descriptions of the needs](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/EarlyNeeds.md). 
