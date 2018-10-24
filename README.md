@@ -14,7 +14,9 @@ We believe that in order to succeed with data usage one must not separate data c
  * [MAM as a mediation tool](https://github.com/MEPP-team/RICT/wiki/MAM-as-mediation-tool-(Project)): Model AugMented Model (MAM) approach with the [Erasme team](http://www.polepixel.fr/residents/erasme/)  
 
 ## Closed projects
- * 2018 [MAM-Erasme-bootstrap](Doc/Projects/MAM-Erasme-bootstrap/Readme.md): early Proof Of Concept on the Model AugMented Model (MAM)
+ * 2018 MAM Erasme Proof of Concept:
+    - [project description](Doc/Projects/MAM-Erasme-bootstrap/Readme.md): early Proof Of Concept on the Model AugMented Model (MAM)
+    - [development gateway](https://github.com/MEPP-team/RICT/projects/3
 
 ## Description of the needs
 We collect [use case oriented early descriptions of the needs](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/EarlyNeeds.md). 
