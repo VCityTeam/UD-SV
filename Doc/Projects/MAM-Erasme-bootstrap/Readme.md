@@ -29,6 +29,6 @@ Once the above described models are available, some use case scenarios must be p
    - DINSI, Data Grand Lyon
 * SPL Lyon Confluence
 * Formations
-            ▪ Gamagora (formations jeux vidéo), Université de Lyon
-            ▪ Master MUSE (Médiations urbaines, savoirs et expertises), Université de Lyon
-            ▪ Master Geonum (Géographie Numérique), Université de Lyon
+   - Gamagora (formations jeux vidéo), Université de Lyon
+   - Master MUSE (Médiations urbaines, savoirs et expertises), Université de Lyon
+   - Master Geonum (Géographie Numérique), Université de Lyon
