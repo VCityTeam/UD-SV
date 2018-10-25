@@ -23,7 +23,7 @@ The goal of the MAM project is to build an AugMented Model (MAM) of a neighborho
 
 The 3D numerical model will be based on the [iTowns](http://www.itowns-project.org/) technology together with the [UDV](https://github.com/MEPP-team/UDV) add-on.
 
-<img src="Pictures/LyonConfluence_Physical_Model.jpg" alt="Lyon Confluence physical model" width="600" align="middle"/>
+<center><img src="Pictures/LyonConfluence_Physical_Model.jpg" alt="Lyon Confluence physical model" width="600"/></center>
 
 Once the above described models are available, some use case scenarios must be produced in order to elaborate on the ergonomy of interaction.
 
