@@ -16,7 +16,8 @@ The goal of the MAM project is to build an AugMented Model (MAM) of a neighborho
 
 The 3D numerical model will be based on the [iTowns](http://www.itowns-project.org/) technology together with the [UDV](https://github.com/MEPP-team/UDV) add-on.
 
-![Lyon Confluence physical model](Pictures/LyonConfluence_Physical_Model.jpg)
+<img src="Pictures/LyonConfluence_Physical_Model.jpg" alt="Lyon Confluence physical model" width="600"/>
+
 Once the above described models are available, some use case scenarios must be produced in order to elaborate on the ergonomy of interaction.
 
 ## Partners
@@ -47,4 +48,5 @@ The technical constraints are as follows
    
 ### CityMatrix  
 [CityMatrix](https://www.media.mit.edu/publications/citymatrix/) is an interactive model designed to facilitate decision making for urban planing at the neighborhood scale. The goal is to allow a non urban specialist to gain knowledge on a given neighborhood situation and to build solutions improving such a situation. CityMatrix offers an interactive physical model together with a screen presenting indicators summarizing and evaluation of the current situation.
-<img src="Pictures/CityMatrix.jpg" alt="CityMatrix" width="400"/>
+
+<img src="Pictures/CityMatrix.jpg" alt="CityMatrix" width="600"/>
