@@ -79,12 +79,13 @@ The Andorra model should be used as the principal target for the MAM-Erasme proj
 CityIO can be used as a reference for the MAM-Erasme project when an AR enhancement would come to be considered.
 
 ### Interactive model with projection
+FIXME: provide a reference for this project !
 This "interactive-model" project requires an equipement similar to one used by CityScope projects that is a projector, a kinect captor (instead of camera) and a physical model. The physical model displayed in the following picture features a terrain with some buildings (and other types of construction). An interface allows the user to switch between different interaction modes respectively allowing:
   - to associate a color to a type of surface, 
   - to associate a custom color to a chosen surface
   - to realize some (virtual) drawings on the surface
   - to display a simulated shadow parametrized by user input
 <p style="text-align:center;">
-<img src="Pictures/InteractiveModel.png.jpg" alt="Interactive model" width="600"/>
+<img src="Pictures/InteractiveModel.png" alt="Interactive model" width="600"/>
 </p>
-FIXME: provide a reference for this project !
+
