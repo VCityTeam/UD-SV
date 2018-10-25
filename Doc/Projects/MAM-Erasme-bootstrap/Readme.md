@@ -44,7 +44,7 @@ Once the above described models are available, some use case scenarios must be p
  ## State of the art projects
  
  ### CityScope
-The projects of [CityScope MIT lab](https://www.media.mit.edu/projects/cityscope/overview/) (dedicated to solving spatial design and urban planning challenges) usually follow a dual city representation framework that uses both 
+The projects of [CityScope (MIT lab)](https://www.media.mit.edu/projects/cityscope/overview/) (dedicated to solving spatial design and urban planning challenges) usually follow a dual city representation framework that uses both 
    * a physical model of the city map, based on a regular grid decomposition, enabling the detection of various modules (representing building units possibly made in Lego blocks) that users can freely move around the city map
    * a digital (simulation) model that recieves the current layout of the city modules  and that computes various indicators that are in turn projected (through LED projectors) back on the physical model.
    
@@ -68,3 +68,7 @@ The central advantage of CityMatrix lies in its interactivity and the associated
 The [Andorra](https://en.wikipedia.org/wiki/Andorra) city model was designed as the representational base allowing to study how citizens use their territory/environment. The numerical side of the model distinguished different profiles of city users (native inhabitant, worker, tourrist and their respective behaviors) that were integrated in a simulation engine. This framework allowed the understanding of various behavioral schemas as well as their impact on shaping the city. The simulation calibration was based on telecommunication data (provided by the local telecommunication company) coupled with geolocalisation on the city map. This allowed to understand some mobility patterns analyzed through the respective user profiles. Simulation could then be used in order to look for possible optimizations and/or possible city enhancement propositions.
 
 Although the Andorra (physical) model is less interactive than the one of CityMatrix, its richness comes from the understanding of mobility patterns that it provides (out of raw data) as well as the possibilites offered by "what if" simulation scenarios.
+The Andorra model should be used as the principal target for the MAM-Erasme project to aim at.
+
+### CityIO (CityScope)
+[CityIO](https://www.media.mit.edu/projects/cityio/overview/) is another [CityScope](https://www.media.mit.edu/projects/cityscope/overview/) experimental framework that stores its city data on a cloud computer and offers to access it through [AR (Augmented Reality)](https://en.wikipedia.org/wiki/Augmented_reality) mapped on top of a city physical model.
