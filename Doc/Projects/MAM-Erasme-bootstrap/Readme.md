@@ -85,6 +85,7 @@ CityIO can be used as a reference for the MAM-Erasme project when an AR enhancem
 
 ### Interactive model with projection
 FIXME: provide a reference for this project !
+
 This "interactive-model" project requires an equipement similar to one used by CityScope projects that is a projector, a kinect captor (instead of camera) and a physical model. The physical model displayed in the following picture features a terrain with some buildings (and other types of construction). An interface allows the user to switch between different interaction modes respectively allowing:
   - to associate a color to a type of surface, 
   - to associate a custom color to a chosen surface
@@ -93,4 +94,4 @@ This "interactive-model" project requires an equipement similar to one used by C
 <p style="text-align:center;">
 <img src="Pictures/InteractiveModel.png" alt="Interactive model" width="600"/>
 </p>
-
+This type of project can only work with physical models of limited size. Nevetheless the ability to draw on the surface and/or to take geometrical measures can be a valuable type of input to some numerical models...
