@@ -102,3 +102,5 @@ The prototype realized for the MAM-Erasme project uses a 3D numerical model base
 <img src="../../Devel/Architecture/Diagrams/SoftwareArchitecture.png" alt="Interactive model" width="600"/>
 
 The installation of such a component context is described within the [UDV install documentation](https://github.com/MEPP-team/UDV/blob/master/install.md). The steps required to learn about such tools is [documented in this tutorial](../../iTowns/Tutorial.md) (sorry but french only).
+
+The code for the [realized prototype](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/examples/MAM) is [quite limited in scope](https://github.com/MEPP-team/UDV/blob/master/UDV-Core/examples/MAM/MAM.js) (around 300 lines of JavaScript) 
