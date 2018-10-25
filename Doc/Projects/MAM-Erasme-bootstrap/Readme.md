@@ -1,8 +1,8 @@
-Index
- - [General description of the project]()
- - [Introduction](Introduction)
- - [Partners](Partners)
- - [State of the art](s)
+# MAM Erasme project description
+ - [General description of the project](#general-description-of-the-project)
+ - [Introduction](#Introduction)
+ - [Partners](#Partners)
+ - [State of the art projects](#state-of-the-art-projects)
 
 
 ## General description of the project
