@@ -56,4 +56,6 @@ The technical constraints are as follows
 ### CityMatrix  
 [CityMatrix](https://www.media.mit.edu/publications/citymatrix/) is an interactive model designed to facilitate decision making for urban planing at the neighborhood scale. The goal is to allow a non urban specialist to gain knowledge on a given neighborhood situation and to build solutions improving such a situation. CityMatrix offers an interactive physical model together with a screen presenting indicators summarizing and evaluation of the current situation.
 
-<img src="Pictures/CityMatrix.jpg" alt="CityMatrix" width="600" align="center"/>
+<p style="text-align:center;">
+<img src="Pictures/CityMatrix.jpg" alt="CityMatrix" width="600"/>
+</p>
