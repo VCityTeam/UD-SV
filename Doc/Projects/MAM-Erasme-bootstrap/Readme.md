@@ -96,6 +96,9 @@ This "interactive-model" project requires an equipement similar to one used by C
 </p>
 This type of project can only work with physical models of limited size. Nevetheless the ability to draw on the surface and/or to take geometrical measures can be a valuable type of input to some numerical models...
 
+### Paperzoom
+The [Paperzoom](https://www.erasme.org/paper-zoom) project ([open sources](https://github.com/urbanlab/paperzoom)).
+
 ## Realisation of a Proof Of Concept
 The prototype realized for the MAM-Erasme project uses a 3D numerical model based on the [iTowns](http://www.itowns-project.org/) component together with the [UDV](https://github.com/MEPP-team/UDV) add-on. The high level achicteture component diagram is similar to the following one
 
