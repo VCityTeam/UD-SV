@@ -36,7 +36,7 @@ Once the above described models are available, some use case scenarios must be p
  ## State of the art projects
  
  ### CityScope
- [CityScope](https://www.media.mit.edu/projects/cityscope/overview/) projects (dedicated to solving spatial design and urban planning challenges) usually follow a dual city representation framework that uses a 
+The projects of [CityScope MIT lab](https://www.media.mit.edu/projects/cityscope/overview/) (dedicated to solving spatial design and urban planning challenges) usually follow a dual city representation framework that uses both 
    * a physical model of the city map, based on a regular grid decomposition, enabling the detection of various modules (representing building units possibly made in Lego blocks) that users can freely move around the city map
    * a digital (simulation) model that recieves the current layout of the city modules  and that computes various indicators that are in turn projected (through LED projectors) back on the physical model.
    
@@ -45,5 +45,5 @@ The technical constraints are as follows
   - a software is required for scanning the resulting capture (e.g. [Rhinoceros 3D](https://en.wikipedia.org/wiki/Rhinoceros_3D)) and producing its input to the simulation engine
   - a simulation engine using e.g. [Unity (game Engine)](https://en.wikipedia.org/wiki/Unity_(game_engine)) or the [Gama platform](https://github.com/gama-platform)) or possibly [Grasshopper](https://www.grasshopper3d.com/) (together with Rhino) 
    
-###   
-[CityMatrix]https://www.media.mit.edu/publications/citymatrix/)
+### CityMatrix  
+[CityMatrix](https://www.media.mit.edu/publications/citymatrix/) is an interactive model designed to facilitate decision making for urban planing at the neighborhood scale. The goal is to allow a non urban specialist to gain knowledge on a given neighborhood situation and to build solutions improving such a situation. CityMatrix offers an interactive physical model together with a screen presenting indicators summarizing and evaluation of the current situation.   
