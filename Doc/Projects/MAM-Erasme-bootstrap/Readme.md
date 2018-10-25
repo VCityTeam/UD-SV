@@ -95,3 +95,10 @@ This "interactive-model" project requires an equipement similar to one used by C
 <img src="Pictures/InteractiveModel.png" alt="Interactive model" width="600"/>
 </p>
 This type of project can only work with physical models of limited size. Nevetheless the ability to draw on the surface and/or to take geometrical measures can be a valuable type of input to some numerical models...
+
+## Realisation of a Proof Of Concept
+The prototype realized for the MAM-Erasme project uses a 3D numerical model based on the [iTowns](http://www.itowns-project.org/) component together with the [UDV](https://github.com/MEPP-team/UDV) add-on. The high level achicteture component diagram is similar to the following one
+
+<img src="../../Devel/Architecture/Diagrams/SoftwareArchitecture.png" alt="Interactive model" width="600"/>
+
+The installation of such a component context is described within the [UDV install documentation](https://github.com/MEPP-team/UDV/blob/master/install.md). The steps required to learn about such tools is [documented in this tutorial](../../iTowns/Tutorial.md) (sorry but french only).
