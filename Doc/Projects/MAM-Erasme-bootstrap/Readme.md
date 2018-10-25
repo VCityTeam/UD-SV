@@ -72,3 +72,8 @@ The Andorra model should be used as the principal target for the MAM-Erasme proj
 
 ### CityIO (CityScope)
 [CityIO](https://www.media.mit.edu/projects/cityio/overview/) is another [CityScope](https://www.media.mit.edu/projects/cityscope/overview/) experimental framework that stores its city data on a cloud computer and offers to access it through [AR (Augmented Reality)](https://en.wikipedia.org/wiki/Augmented_reality) mapped on top of a city physical model.
+
+<p style="text-align:center;">
+<img src="Pictures/CityIO.jpg" alt="CityMatrix" width="600"/>
+</p>
+CityIO can be used as a reference for the MAM-Erasme project when an AR enhancement would come to be considered.
