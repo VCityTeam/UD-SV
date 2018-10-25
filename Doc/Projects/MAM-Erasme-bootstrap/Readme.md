@@ -54,8 +54,14 @@ The technical constraints are as follows
   - a simulation engine using e.g. [Unity (game Engine)](https://en.wikipedia.org/wiki/Unity_(game_engine)) or the [Gama platform](https://github.com/gama-platform)) or possibly [Grasshopper](https://www.grasshopper3d.com/) (together with Rhino) 
    
 ### CityMatrix  
-[CityMatrix](https://www.media.mit.edu/publications/citymatrix/) is an interactive model designed to facilitate decision making for urban planing at the neighborhood scale. The goal is to allow a non urban specialist to gain knowledge on a given neighborhood situation and to build solutions improving such a situation. CityMatrix offers an interactive physical model together with a screen presenting indicators summarizing and evaluation of the current situation.
+[CityMatrix](https://www.media.mit.edu/publications/citymatrix/) is an interactive model designed to facilitate decision making for urban planing at the neighborhood scale. The goal is to allow a non urban specialist to gain knowledge on a given neighborhood situation and to build solutions improving such a situation. CityMatrix offers an interactive physical model together with a vertical display presenting indicators summarizing and evaluation of the current situation.
 
 <p style="text-align:center;">
 <img src="Pictures/CityMatrix.jpg" alt="CityMatrix" width="600"/>
 </p>
+
+When physical model is interactively modified by a CityMatrix user the display will reflect in real time the new value of indicators enabling an immmediate evalution of the new situation. In some cases a CityMatrix provided AI can assist the user in discovering a more optimal solution.
+
+The central advantage of CityMatrix lies in its interactivity and the associated display feedback that provides a more deeper  undestanding of the neighborhood situation than classic city representations. Additionaly CityMatrix can be easily customized to provide a range of problem driven abstractions through the adaptation of the displayed indicators. The display that can also display raw data or a virtual representation of the city lightens the information carried by the physical model allowing a user to focus on its problem.
+
+### Andora 
