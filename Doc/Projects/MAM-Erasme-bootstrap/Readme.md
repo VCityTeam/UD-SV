@@ -5,7 +5,9 @@
  - [State of the art projects](#state-of-the-art-projects)
     - [CityScope](#cityscope)
     - [CityMatrix](#citymatrix-cityscope)
+    - [CityIO](#cityio-cityscope)
     - [Andorra model](#andorra-model-cityscope)
+    - [Interactive model with projection](#interactive-model-with-projection)
 
 
 ## General description of the project
