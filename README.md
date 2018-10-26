@@ -1,5 +1,6 @@
 ## Objective of the RICT project
-The objective of the RICT (Representation Information CiTy) project is to **experiment, exchange and share both knowledge and tools dedicated to the concrete handling of urban/city data**. RICT focuses on practilities and technical specificities of the full city data flow starting from database integration of raw data and ending in advanced visualizations of their downstream numerical treatments. RICT adopts an open approach and favors 
+
+The objective of the RICT (Representation Information CiTy) project is to **experiment, exchange and share both knowledge and tools dedicated to the concrete handling of urban/city data**. RICT focuses on practilities and technical specificities of the full city data flow starting from database integration of raw data and ending in advanced visualizations of their downstream numerical treatments. RICT adopts an open approach and favors:
   * the adoption of mainstream standards of the urban modeling field
   * the re-use (and possible improvement/evolution) of existing open source software components
 
