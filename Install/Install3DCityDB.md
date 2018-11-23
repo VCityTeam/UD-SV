@@ -112,6 +112,18 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
     - When asked for `Please enter the corresponding SRSName to be used in GML exports (e.g., urn:ogc:def:crs, crs:EPSG::3068, crs:EPSG::5783):` , enter : `crs:EPSG::3946`
 
 * Import some CityGML file content:
+
+**Distant server Warning**: First assert that X11 forwarding is allowed. If not:
+  - open a new terminal and run:
+     - ssh <server_ip_address>
+     - sudo su - <user_to_authorize_forwarding>
+     - pwd
+  - Open a new terminal and run:
+     - ssh -X <server_ip_address> (authorize X11 forwarding for the connection user)
+     - sudo cp .Xauthority <pwd_output_from_above>
+     
+**Back to CityGML import**
+
    - Start 3DCityDB:
      ````
      (citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
