@@ -98,16 +98,6 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
         * on **debian** when getting the `Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit` error message then ([cross fingers](https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit) and) try `apt-get install libxtst6`.
         * **Distant server Warning**: first assert that X11 forwarding is allowed In case you get the `X11 connection rejected because of wrong authentication` error message and you are using ssh to log on the server you are configuring then make sure ssh is configured to allow for "X11 forwarding")
 
-**Distant server Warning**: First assert that X11 forwarding is allowed. If not:
-  - open a new terminal and run:
-     - ssh <server_ip_address>
-     - sudo su - <user_to_authorize_forwarding>
-     - pwd
-  - Open a new terminal and run:
-     - ssh -X <server_ip_address> (authorize X11 forwarding for the connection user)
-     - sudo cp .Xauthority <pwd_output_from_above>
-
-
  * Configure 3DCityDB to match your postgresql configuration:
 
     * Edit the shell variables of the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/CREATE_DB.sh` script. After edition this section should look like:
