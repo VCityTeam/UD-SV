@@ -84,11 +84,29 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      - `(citydb_user)$ wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
 
  * Install 3DCityDB and follow installer steps:
-     - Because the installer user a GUI interface, allow ssh login as `citydb_user` user and configure ssh for "X11 forwarding"
-     - `(citydb_user)$ java -jar 3DCityDB-Importer-Exporter-3.3.1-Setup.jar`
+     - **Distant server warning**: because 3DCityDB-Importer-Exporter uses a GUI interface based on X11, and when using ssh to login on the installation server, you should first assert that X11 forwarding is allowed (try to launch e.g. `xclock` and assert that a clock indeeds pops up on your terminal. When this fails:
+         - allow ssh login as `citydb_user` user and configure ssh for "X11 forwarding"
+         - open a new terminal and run:
+            - `ssh <server_ip_address>
+            - `sudo su - <user_to_authorize_forwarding>``
+            - `pwd` and note the result
+        - open a new terminal and run:
+            - `ssh -X <server_ip_address>` (authorize X11 forwarding for the connection user)
+            - `sudo cp .Xauthority <pwd_output_from_above>
+     - **Launch the `3DCityDB-Importer-Exporter`**: `(citydb_user)$ java -jar 3DCityDB-Importer-Exporter-3.3.1-Setup.jar`
      - Trouble shooting:
         * on **debian** when getting the `Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit` error message then ([cross fingers](https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit) and) try `apt-get install libxtst6`.
-        * In case you get the `X11 connection rejected because of wrong authentication` error message and you are using ssh to log on the server you are configuring then make sure ssh is configured to allow for "X11 forwarding")
+        * **Distant server Warning**: first assert that X11 forwarding is allowed In case you get the `X11 connection rejected because of wrong authentication` error message and you are using ssh to log on the server you are configuring then make sure ssh is configured to allow for "X11 forwarding")
+
+**Distant server Warning**: First assert that X11 forwarding is allowed. If not:
+  - open a new terminal and run:
+     - ssh <server_ip_address>
+     - sudo su - <user_to_authorize_forwarding>
+     - pwd
+  - Open a new terminal and run:
+     - ssh -X <server_ip_address> (authorize X11 forwarding for the connection user)
+     - sudo cp .Xauthority <pwd_output_from_above>
+
 
  * Configure 3DCityDB to match your postgresql configuration:
 
@@ -112,15 +130,6 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
     - When asked for `Please enter the corresponding SRSName to be used in GML exports (e.g., urn:ogc:def:crs, crs:EPSG::3068, crs:EPSG::5783):` , enter : `crs:EPSG::3946`
 
 * Import some CityGML file content:
-
-**Distant server Warning**: First assert that X11 forwarding is allowed. If not:
-  - open a new terminal and run:
-     - ssh <server_ip_address>
-     - sudo su - <user_to_authorize_forwarding>
-     - pwd
-  - Open a new terminal and run:
-     - ssh -X <server_ip_address> (authorize X11 forwarding for the connection user)
-     - sudo cp .Xauthority <pwd_output_from_above>
      
 **Back to CityGML import**
 
