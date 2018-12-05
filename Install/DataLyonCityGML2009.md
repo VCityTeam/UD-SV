@@ -35,6 +35,11 @@ For the impatient this goes:
    cd 3dcitydb/postgresql
    psql -h 127.0.0.1 -p 5432 -d citydb_lyon_2009_full -U citydb_user -f CREATE_DB.sql
    ````
+   When asked for enter 
+    - the database password
+    - `3946` as valid SRID (this corresponds to the standard coordinate system for Lyon)
+    - `crs:EPSG::3946` as corresponding SRSName to be used in GML exports
+    
  * Run the interface with `./3DCityDB-Importer-Exporter.sh`and for each burough import:
    - `<burough_name>BATI<year>.gml`
    - `<burough_name>BATI_REMARQUABLE/*.gml  (this is a subdirectory)`
