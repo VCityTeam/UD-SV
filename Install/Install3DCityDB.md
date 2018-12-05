@@ -9,7 +9,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
    (bash)$ sudo apt-get install postgresql-9.4-postgis-2.1
    ````   
  * Chapter 3.3.2 P. 100, Step 1: **create an empty PostgreSQL database**
-   We follow [debian PostgreSql tutorial](https://wiki.debian.org/PostgreSql) (with some help of [: 
+   We follow [debian PostgreSql tutorial](https://wiki.debian.org/PostgreSql) that goes: 
    ````
    (root)$ sudo adduser citydb_user               # that is at OS level
            ...
@@ -18,6 +18,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
    (postgres)$ createdb -O citydb_user citydb_v3                 # creates a new citydb_v3 database
    (postgres)$ exit
    ````
+   Note: in order to suppress the existing database say citydb_v3 the command is `psql  -d <some-existing-base> -c 'DROP DATABASE IF EXISTS citydb_v3 '`
+   
    Test that the server is accessible with
    ````
    (postgres)$ psql -d citydb_v3 -U citydb_user
@@ -59,9 +61,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
    - Add the postgis extension to the citydb_v3 database
      ````
      (root)$ su - citydb_user
-     (citydb_user)$ psql -d citydb_v3
-        citydb_v3=# create extension postgis;
-        citydb_v3=# \q
+     (citydb_user)$ psql -d citydb_v3 -c 'create extension postgis;'
      ````
  * Install Java Runtime Environment (version 8 or higher) (as [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/). We follow the ["Manual install" section of Ask Ubuntu](https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (refer also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/)):
      - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (because of Oracle's acceptance policy uses a cookie validation you might not be able to use wget directly in which case rebounce e.g. on your desktop) 
