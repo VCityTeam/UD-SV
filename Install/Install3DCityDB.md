@@ -1,4 +1,5 @@
-## On debian
+# Debian 3DCityDB installation walkthrough
+
 Tested on:
  - Debian (GNU/Linux) 8.8 (jessie)
  - Ubuntu 14.04.3 (`lsb_release -a` yields `Ubuntu 14.04.3 LTS, Release 14.04, Codename trusty`)
@@ -111,6 +112,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
           export PGBIN=/usr/bin/
 
       ````
+      
+## Import some CityGML file content
  * Chapter 3.3.2 P. 100, Step 3: **Execute the CREATE_DB script**
    - ````
      cd <path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/
@@ -119,9 +122,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
     - When asked for `Please enter a valid SRID (e.g., 3068 for DHDN/Soldner Berlin):` , enter : `3946` (which is the standard coordinate system for Lyon)
     - When asked for `Please enter the corresponding SRSName to be used in GML exports (e.g., urn:ogc:def:crs, crs:EPSG::3068, crs:EPSG::5783):` , enter : `crs:EPSG::3946`
 
-* Import some CityGML file content:
      
-**Back to CityGML import**
+We can now proceed with the CityGML imporation per se
 
    - Start 3DCityDB:
      ````
@@ -149,7 +151,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      * Hit browse and choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
      * Hit Import 
 
-
+## Importation examples
+ - [Open Data](https://data.grandlyon.com/search/?Q=citygml+lyon) of Lyon Métropole for [year 2012: a walkthrough](Data) 
  
 ## References
  * The following install notes are a derivation of [those previous notes](https://github.com/MEPP-team/VCity/wiki/3DCityDB_2017_03_07.md).
