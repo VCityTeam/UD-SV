@@ -1,10 +1,7 @@
-https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_6EME_2009.zip
-
-
 Create a target directory and connect into it. Then
 ````
 mkdir Lyon_2009
-cd 
+cd Lyon_2009
 wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2009.zip
 unzip LYON_1ER_2009.zip
 wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_2EME_2009.zip
