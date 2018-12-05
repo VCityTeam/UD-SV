@@ -1,0 +1,42 @@
+Download and unpack the raw data:
+````
+mkdir Lyon_2015
+cd Lyon_2015/
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip
+unzip LYON_1ER_2015.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_2EME_2015.zip
+unzip LYON_2EME_2015.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_3EME_2015.zip
+unzip LYON_3EME_2015.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_4EME_2015.zip
+unzip LYON_4EME_2015.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_5EME_2015.zip
+unzip LYON_5EME_2015.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_6EME_2015.zip
+unzip LYON_6EME_2015.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_7EME_2015.zip
+unzip LYON_7EME_2015.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_8EME_2015.zip
+unzip LYON_8EME_2015.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_9EME_2015.zip
+unzip LYON_9EME_2015.zip
+````
+
+Proceed with the [importation within your 3DCityDB database](Install3DCityDB.md#import-some-citygml-file-content). 
+For the impatient this goes:
+ * Create the database
+   ````
+   (citydb_user)$ psql -d citydb_v3 -c 'DROP DATABASE IF EXISTS citydb_lyon_2015_full'
+   (citydb_user)$ createdb -O citydb_user citydb_lyon_2015_full
+   (citydb_user)$ psql  -d citydb_lyon_2015_full -c'create extension postgis;'
+   ```` 
+ * Edit 3dcitydb/postgresql/CREATE_DB.sh
+ * Run that database table creation script:
+   ````
+   cd 3dcitydb/postgresql
+   psql -h 127.0.0.1 -p 5432 -d citydb_lyon_2015_full -U citydb_user -f CREATE_DB.sql
+   ````
+ * Run the interface with `./3DCityDB-Importer-Exporter.sh`and for each burough import:
+   - `<burough_name>BATI<year>.gml`
+   - `<burough_name>BATI_REMARQUABLE/*.gml  (this is a subdirectory)`
+
