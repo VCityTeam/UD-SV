@@ -28,4 +28,20 @@ unzip LYON_9EME_2012.zip
 
  * Edit file `LYON_7EME_2012/LYON_7EME_BATI_2012.gml` and remove the full `<cityObjectMember>` block describing the `<bldg:Building gml:id="LYON_7EME_00215">` building (starting on line `2752390` and ending at line `2752416`). This is because the `<gml:MultiSurface srsDimension="3">` entries, that supposedly decribe the geomtry of the respective parts of this building, are empty (which might confuse any geometrical post-treatment). 
  
-* Proceed with the [importation within your 3DCityDB database](Install3DCityDB.md#import-some-citygml-file-content)
+Proceed with the [importation within your 3DCityDB database](Install3DCityDB.md#import-some-citygml-file-content)
+For the impatient this goes:
+ * Create the database
+   ````
+   (citydb_user)$ psql -d citydb_v3 -c 'DROP DATABASE IF EXISTS citydb_lyon_2012_full'
+   (citydb_user)$ createdb -O citydb_user citydb_lyon_2012_full
+   (citydb_user)$ psql  -d citydb_lyon_2012_full -c'create extension postgis;'
+   ```` 
+ * Edit 3dcitydb/postgresql/CREATE_DB.sh
+ * Run that database table creation script:
+   ````
+   cd 3dcitydb/postgresql
+   psql -h 127.0.0.1 -p 5432 -d citydb_lyon_2012_full -U citydb_user -f CREATE_DB.sql
+   ````
+ * Run the interface with `./3DCityDB-Importer-Exporter.sh`and for each burough import:
+   - `<burough_name>BATI<year>.gml`
+   - `<burough_name>BATI_REMARQUABLE/*.gml  (this is a subdirectory)`
