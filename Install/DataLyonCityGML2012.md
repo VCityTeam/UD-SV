@@ -28,4 +28,4 @@ unzip LYON_9EME_2012.zip
 
  * Edit file at and remove the full `<cityObjectMember>` block describing `<bldg:Building gml:id="LYON_7EME_00215">` (starting on line `2752390` and ending at line `2752416`) 
  
-* Proceed with the [importation within your 3DCityDB database](Install3DCityDB.md)
+* Proceed with the [importation within your 3DCityDB database](Install3DCityDB.md#import-some-citygml-file-content)
