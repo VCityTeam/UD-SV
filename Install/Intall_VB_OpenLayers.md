@@ -6,6 +6,13 @@
 
 
 Using OpenLayers
- * go to opelayers.org
  * http://openlayers.org/workshop/en/ 
+ * Everything is expalined, but make sure to take the last version for the workshop https://github.com/openlayers/workshop/releases : openlayers-workshop-en.zip (take the english version; the french one is not up to date)
+ * you just have to install and start...
+   * http://localhost:3000/
+   * you can find the documentation here : http://localhost:3000/doc/ 
+
+
+ 
+ 
  
