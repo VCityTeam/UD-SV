@@ -6,4 +6,6 @@
 
 
 Using OpenLayers
- * 
+ * go to opelayers.org
+ * http://openlayers.org/workshop/en/ 
+ 
