@@ -11,6 +11,9 @@ Using OpenLayers
  * you just have to install and start...
    * http://localhost:3000/
    * you can find the documentation here : http://localhost:3000/doc/ 
+ * The virtual machine is available (in my usb key)
+   * the openlayers-workshop is in $HOME (be sure that you are in this directory when you make the npm install and npm start
+   
 
 
  
