@@ -255,7 +255,7 @@ _Note: Si vous ne comprenez pas tout le paramétrage de ce layer pour le moment 
 
 Vous devriez observer un globe de ce type :
 
-![](TutorialImages/textured_globe2.png)
+![](TutorialImages/textured_globe1.png)
 
 Pour la suite du tutoriel, revenez au layer de la partie précédente (partie 2.1.3).
 
