@@ -232,30 +232,25 @@ Il est possible d’accéder à d’autres types de cartes à appliquer sur notr
 Commentez les lignes permettant d’ajouter le layer précédent et ajoutez ces lignes dans globe.js :
 
 ```
-    var layer2 = {    update: itowns.updateLayeredMaterialNodeImagery,
-        type: 'color',
-        protocol: "wmtsc",
-        id: "DARK",
-        customUrl: "http://a.basemaps.cartocdn.com/light_all/%TILEMATRIX/%COL/%ROW.png",
-        networkOptions: { crossOrigin: 'anonymous' },
-        options: {
-            attribution: {
-                "name":"CARTO",
-                "url": "https://carto.com/"
-            },
-            tileMatrixSet: "PM",
-            mimetype: "image/png"
-        },
-    }
+    var layer2 = new itowns.WMTSSource({
+                url: 'http://a.basemaps.cartocdn.com/light_all/%TILEMATRIX/%COL/%ROW.png',
+                name: 'CARTO',
+                tileMatrixSet: 'PM',
+                format: 'image/jpeg',
+            });
+              var monLayer = new itowns.ColorLayer('Scan', {
+                source: layer2,
+            });
 
-    globeView.addLayer(layer2);
+
+            view.addLayer(monLayer);
 ```
 
 _Note: Si vous ne comprenez pas tout le paramétrage de ce layer pour le moment ce n’est pas grave, nous reviendrons dessus plus tard dans le tutoriel. L’important est de voir qu’on peut utiliser différents layers d’imageries._
 
 Vous devriez observer un globe de ce type :
 
-![](TutorialImages/textured_globe1.png)
+![](TutorialImages/textured_globe2.png)
 
 Pour la suite du tutoriel, revenez au layer de la partie précédente (partie 2.1.3).
 
