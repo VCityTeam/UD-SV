@@ -203,20 +203,24 @@ Vous devriez obtenir un globe non texturé :
 
 #### Ajout d'un layer d'imagerie
 
-Pour ajouter un layer d’imagerie (une carte), nous allons utiliser un fichier JSON fournit par iTowns. Ce fichier contient la description d’un layer permettant l’accès à une carte obtenue par le protocole WMTS et fournie par l’IGN (Institut National Géographique). Ce fichier est situé dans ‘examples/layers/JSONLayers/’ et s’appelle ‘Ortho.json’.
-
-Le code suivant permet de charger ce fichier JSON et de l’ajouter comme layer à notre vue :
+Pour ajouter un layer d’imagerie (une carte), nous allons utiliser une couche WMTS fournie par iTowns. 
+Le code suivant permet de charger cette couche JSON et de l’ajouter comme layer à notre vue :
 
 ```
     //****************** Add Imagery Layer
-    itowns.Fetcher.json("../examples/layers/JSONLayers/Ortho.json").then(
-        function (layer) {
-            return globeView.addLayer(layer);
-        });
-```
+   var orthoSource = new itowns.WMTSSource({
+                url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
+                name: 'ORTHOIMAGERY.ORTHOPHOTOS',
+                tileMatrixSet: 'PM',
+                format: 'image/jpeg',
+            });
 
-_Note : Ici nous utilisons les ‘Promise’ du langage JavaScript : si le fichier JSON est correctement chargé par le Fetcher json d’iTowns, alors on exécute (et seulement dans ce cas) la fonction qui est dans le then et qui permet d’ajouter un layer à notre vue. Le layer est ici appelé ‘layer’ (correpond au fichier json chargé)._
-[Pour en savoir plus sur les ‘Promise’ en JavaScript]( https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+            var orthoLayer = new itowns.ColorLayer('Ortho', {
+                source: orthoSource,
+            });
+
+            view.addLayer(orthoLayer);
+```
 
 A ce stade-là du tutoriel vous devez avoir ce globe :
 
