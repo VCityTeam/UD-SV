@@ -185,20 +185,16 @@ Ici nous spécifions que la partie html prendra 100% de la hauteur de la page ;
 
 #### Création du globe
 
-Nous allons maintenant pouvoir commencer à coder en JavaScript pour ajouter un globe à notre scène. La première étape consiste à créer un objet JavaScript globeView qui contiendra les éléments de la vue (globe, layers). Vous pouvez trouver de la documentation sur globeView [ici](http://www.itowns-project.org/itowns/API_Doc/GlobeView.html)
+Nous allons maintenant pouvoir commencer à coder en JavaScript pour ajouter un globe à notre scène. La première étape consiste à créer un objet JavaScript globeView qui contiendra les éléments de la vue (globe, layers). Vous pouvez trouver de la documentation sur globeView [ici](http://www.itowns-project.org/itowns/docs/#api/View/GlobeView)
 
 Le constructeur de globeView prend en argument le conteneur <div> dans lequel il doit être placé et les coordonnées du point vers lequel la caméra sera dirigée. Je vous propose de centrer la caméra sur Lyon. Vous pouvez donc créer un globeView avec le code suivant :
 
 ```
     //************ Create globeView
     // Define the coordinates on wich the globe will be centered at the initialization
-    var positionOnGlobe = { longitude: 2.351323, latitude: 48.856712, altitude: 25000000 };
-
-    // `viewerDiv` will contain iTowns' rendering area (`<canvas>`)
-    var viewerDiv = document.getElementById('viewerDiv');
-
-    // Instanciate iTowns GlobeView*
-    var globeView = new itowns.GlobeView(viewerDiv, positionOnGlobe);
+     var viewerDiv = document.getElementById('viewerDiv');
+     var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+     var view = new itowns.GlobeView(viewerDiv, position);  
 ```
 
 Vous devriez obtenir un globe non texturé :
