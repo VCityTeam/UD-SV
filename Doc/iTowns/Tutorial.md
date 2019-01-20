@@ -8,7 +8,7 @@ Le but de ce tutoriel est d'apprendre à mettre en place une application utilisa
 
 ### iTowns
 
-[iTowns](https://github.com/iTowns/itowns) est un framework de visualisation de données géospatiales 3D sur le web. Des exemples d’utilisation sont disponibles [ici](http://www.itowns-project.org/itowns/examples/index.html). Il est écrit en JavaScript / WebGL et est basé sur la librairie JavaScript de référence pour la 3D: [Three.js](https://threejs.org/). La documentation d'iTowns est disponible [ici](http://www.itowns-project.org/itowns/API_Doc/index.html).
+[iTowns](https://github.com/iTowns/itowns) est un framework de visualisation de données géospatiales 3D sur le web. Des exemples d’utilisation sont disponibles [ici](http://www.itowns-project.org/itowns/examples/index.html). Il est écrit en JavaScript / WebGL et est basé sur la librairie JavaScript de référence pour la 3D: [Three.js](https://threejs.org/). La documentation d'iTowns est disponible [ici](http://www.itowns-project.org/itowns/docs/#home).
 
 iTowns est composé de vues et de layers. Une vue peut être « planaire » ou « globe » :
 
