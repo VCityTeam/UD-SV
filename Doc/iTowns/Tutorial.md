@@ -59,7 +59,7 @@ Si cet exemple ne fonctionne pas, voici quelques pistes :
 
 ### Installation d'iTowns
 
-Télécharger la dernière version de iTowns: https://github.com/iTowns/itowns/releases
+Télécharger la dernière version de iTownssur le github: https://github.com/iTowns/itowns 
 (choisir le fichier « Source code (zip) »).
 Extraire l’archive. Si vous êtes sous Windows, placez le dossier extrait dans le répertoire Système (C:). Nous appellerons ce dossier extrait le répertoire racine d’iTowns.
 
