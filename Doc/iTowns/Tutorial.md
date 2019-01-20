@@ -224,7 +224,7 @@ Le code suivant permet de charger cette couche JSON et de l’ajouter comme laye
 
 A ce stade-là du tutoriel vous devez avoir ce globe :
 
-![](TutorialImages/textured_globe.png)
+![](TutorialImages/textured_globe1.png)
 
 #### Modification du layer d'imagerie
 
