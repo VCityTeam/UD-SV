@@ -258,29 +258,23 @@ Pour la suite du tutoriel, revenez au layer de la partie précédente (partie 2.
 
 Si vous zoomez sur une chaine de montagne et que vous utilisez ctrl+click gauche pour incliner la vue, vous remarquerez que le terrain est plat. Pour remédier à ça, nous allons ajouter deux layers d’élévations de la même manière que nous avons ajouté le premier layer d’imagerie.
 
-Pour éviter de répéter la fonction permettant d’ajouter un layer au globe (la fonction que nous avions placé dans le then), nous proposons de créer une fonction addLayerToGlobe(layer).
-
-Les deux layers que nous allons ajouter sont décrits dans les fichiers ‘WORLD_DTM.json’ et ‘IGN_MNT_HIGHRES.json’ et sont également fournis par iTowns.
-
 Notre partie du code permettant d’ajouter des layers devient ainsi:
 
 ```
     //*********** Add Imagery layer
-    function addLayerToGlobe(layer) {
-        return globeView.addLayer(layer);
-    }
+  var elevationSource = new itowns.WMTSSource({
+                url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
+                name: 'ELEVATION.ELEVATIONGRIDCOVERAGE',
+                tileMatrixSet: 'WGS84G',
+                format: 'image/x-bil;bits=32'
+            });
 
-    itowns.Fetcher.json('../examples/layers/JSONLayers/Ortho.json').then(addLayerToGlobe);
+   var elevationLayer = new itowns.ElevationLayer('MNT_WORLD', {
+                source: elevationSource,
+            });
 
-    // Add two elevation layers.
-    // These will deform iTowns globe geometry to represent terrain elevation.
-    itowns.Fetcher.json('../examples/layers/JSONLayers/WORLD_DTM.json').then(addLayerToGlobe);
-    itowns.Fetcher.json('../examples/layers/JSONLayers/IGN_MNT_HIGHRES.json').then(addLayerToGlobe);
+            view.addLayer(elevationLayer);
 ```
-
-Ces deux layers sont complémentaires : le deuxième permet d’avoir des informations d’élévation plus précises que le premier et est paramétré pour n’être affiché qu’à partir d’un certain niveau de zoom.
-
-Le mieux et de vous en persuader par vous-même en comparant des vues sans aucun des deux layers, avec un des deux layers et avec les deux layers en même temps.
 
 ### Ajout de données vecteur
 
