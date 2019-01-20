@@ -24,7 +24,7 @@ Click-droit: Translation du globe (pan)
 Ctrl + Click-Gauche: Rotation de la camera (orbit)
 Molette de la souris : zoom avant / arrière
 
-### Les Web Services
+### Les Web Services 
 
 Afin de récupérer des données à ajouter à notre vue, nous allons parfois communiquer avec des services web. Un service web est une brique logicielle dotée d'une interface permettant l'interaction avec des composants situés sur d'autres machines connectées au web. L'interaction se fait généralement à l'aide d'URLs normalisées (REST, WMS, WFS, etc.).
 Dans ce tutoriel, nous allons communiquer avec des services web qui vont nous fournir des cartes ou des informations géographiques (exemple : les bâtiments en 3D de la ville de Lyon). Cette communication se fera via certains des standards de l’Open GeoSpatial Consortium1 (OGC) pour la communication de données géospatiales sur le web (WMS, WFS, KML, etc.).
