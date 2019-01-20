@@ -40,7 +40,7 @@ __WFS__ :
  * Permet une plus grande flexibilité que le WMTS car le client peut choisir le style et la façon d'afficher les données
  * Le WFS transactionnel permet à l'utilisateur d'ajouter et de modifier les données sur le serveur
 
-## Installation
+## Installation 
 
 ### Vérification du fonctionnement de WebGL
 
