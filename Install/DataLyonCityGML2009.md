@@ -1,3 +1,9 @@
+This document describes how to concretly import some specific [Lyon Métropole Open Data](https://data.grandlyon.com/) within a [3DCity Database](https://github.com/3dcitydb/3dcitydb).
+
+## Prerequisite
+Prior to importing the data (describe at next chapter) you first need to [install a 3DCityDB database](Install3DCityDB.md). 
+
+## Importing the Data
 Create a target directory and connect into it. Then
 ````
 mkdir Lyon_2009
