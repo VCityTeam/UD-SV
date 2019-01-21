@@ -5,9 +5,10 @@ This document describes how to obtained some Tiling data out of some specific
 ## Prerequisite
  Prior to Tiling the data (describe at next chapter) you first need to
   - [Import the orginal data in a 3DCityDB database](DataLyonCityGML2009.md). 
-  - Install Py3dTiles tiling software refer below
+  - Install (refer below) [Py3dTiles](https://github.com/Oslandia/py3dtiles) that includes some tiling utilities 
 
 ### Install Py3DTiles
+This is a temporary (until the ad-hoc PR gets accepted) specialization of [Py3DTiles installation process](https://github.com/Oslandia/py3dtiles/blob/master/docs/install.rst):
 ```
 git clone https://github.com/MEPP-team/py3dtiles.git
 mv py3dtiles/ py3dtiles.git
@@ -59,3 +60,6 @@ python3 Tilers/CityTiler/CityTiler.py --with_BTH \
         Tilers/CityTiler/CityTilerDBConfig_2009_full.yml 
 mv junk ../../DataStore/TileSet_Lyon_2009_full_BTH
 ````
+
+## Publishing the resulting Tile Sets
+A simple way of "publishing" your data (through http) is to use the lightweight [server](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples/blob/master/server.js) offered by the [AGI's 3D-tiles-samples utility](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples.git) and provided with their Data samples.
