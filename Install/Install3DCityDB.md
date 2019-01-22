@@ -85,7 +85,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      - `(citydb_user)$ wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
 
  * Install 3DCityDB and follow installer steps:
-     - **Distant server warning**: because 3DCityDB-Importer-Exporter uses a GUI interface based on X11, and when using ssh to login on the installation server, you should first assert that X11 forwarding is allowed (try to launch e.g. `xclock` and assert that a clock indeeds pops up on your terminal. When this fails:
+     - **Distant server warning**: because 3DCityDB-Importer-Exporter uses a GUI interface based on X11, and when using ssh to login on the installation server, you should first assert that X11 forwarding is allowed. For example try to launch some X client e.g. `xclock` and assert that a clock indeeds pops up on your terminal. When this fails:
          - allow ssh login as `citydb_user` user and configure ssh for "X11 forwarding"
          - open a new terminal and run:
             - `ssh <server_ip_address>
