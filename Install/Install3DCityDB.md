@@ -64,7 +64,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      (root)$ su - citydb_user
      (citydb_user)$ psql -d citydb_v3 -c 'create extension postgis;'
      ````
- * Install Java Runtime Environment (version 8 or higher) (as [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/). We follow the ["Manual install" section of Ask Ubuntu](https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (refer also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/)):
+ * Install Java Runtime Environment (version 8 or higher as specified in the [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/)). We here follow the ["Manual install" section of Ask-Ubuntu](https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (refer also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/)):
      - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (because of Oracle's acceptance policy uses a cookie validation you might not be able to use wget directly in which case rebounce e.g. on your desktop) 
      - ````
        (root)$ cd /tmp       # in case the tarball is not clean
