@@ -8,7 +8,7 @@ Le but de ce tutoriel est d'apprendre à mettre en place une application utilisa
 
 ### iTowns
 
-[iTowns](https://github.com/iTowns/itowns) est un framework de visualisation de données géospatiales 3D sur le web. Des exemples d’utilisation sont disponibles [ici](http://www.itowns-project.org/itowns/examples/index.html). Il est écrit en JavaScript / WebGL et est basé sur la librairie JavaScript de référence pour la 3D: [Three.js](https://threejs.org/). La documentation d'iTowns est disponible [ici](http://www.itowns-project.org/itowns/API_Doc/index.html).
+[iTowns](https://github.com/iTowns/itowns) est un framework de visualisation de données géospatiales 3D sur le web. Des exemples d’utilisation sont disponibles [ici](http://www.itowns-project.org/itowns/examples/index.html). Il est écrit en JavaScript / WebGL et est basé sur la librairie JavaScript de référence pour la 3D: [Three.js](https://threejs.org/). La documentation d'iTowns est disponible [ici](http://www.itowns-project.org/itowns/docs/#home).
 
 iTowns est composé de vues et de layers. Une vue peut être « planaire » ou « globe » :
 
@@ -24,7 +24,7 @@ Click-droit: Translation du globe (pan)
 Ctrl + Click-Gauche: Rotation de la camera (orbit)
 Molette de la souris : zoom avant / arrière
 
-### Les Web Services
+### Les Web Services 
 
 Afin de récupérer des données à ajouter à notre vue, nous allons parfois communiquer avec des services web. Un service web est une brique logicielle dotée d'une interface permettant l'interaction avec des composants situés sur d'autres machines connectées au web. L'interaction se fait généralement à l'aide d'URLs normalisées (REST, WMS, WFS, etc.).
 Dans ce tutoriel, nous allons communiquer avec des services web qui vont nous fournir des cartes ou des informations géographiques (exemple : les bâtiments en 3D de la ville de Lyon). Cette communication se fera via certains des standards de l’Open GeoSpatial Consortium1 (OGC) pour la communication de données géospatiales sur le web (WMS, WFS, KML, etc.).
@@ -40,7 +40,7 @@ __WFS__ :
  * Permet une plus grande flexibilité que le WMTS car le client peut choisir le style et la façon d'afficher les données
  * Le WFS transactionnel permet à l'utilisateur d'ajouter et de modifier les données sur le serveur
 
-## Installation
+## Installation 
 
 ### Vérification du fonctionnement de WebGL
 
@@ -59,7 +59,7 @@ Si cet exemple ne fonctionne pas, voici quelques pistes :
 
 ### Installation d'iTowns
 
-Télécharger la dernière version de iTowns: https://github.com/iTowns/itowns/releases
+Télécharger la dernière version de iTownssur le github: https://github.com/iTowns/itowns 
 (choisir le fichier « Source code (zip) »).
 Extraire l’archive. Si vous êtes sous Windows, placez le dossier extrait dans le répertoire Système (C:). Nous appellerons ce dossier extrait le répertoire racine d’iTowns.
 
@@ -185,24 +185,16 @@ Ici nous spécifions que la partie html prendra 100% de la hauteur de la page ;
 
 #### Création du globe
 
-Nous allons maintenant créer un fichier JavaScript `globe.js` qui va contenir le code permettant d’utiliser iTowns pour afficher un globe. Placez ce fichier à côté du fichier index.html.
-
-Dans le fichier index.html, ajoutez une balise script permettant d’invoquer ce code JavaScript (de la même manière que nous avons invoqué iTowns).
-
-Nous allons maintenant pouvoir commencer à coder en JavaScript pour ajouter un globe à notre scène. La première étape consiste à créer un objet JavaScript globeView qui contiendra les éléments de la vue (globe, layers). Vous pouvez trouver de la documentation sur globeView [ici](http://www.itowns-project.org/itowns/API_Doc/GlobeView.html)
+Nous allons maintenant pouvoir commencer à coder en JavaScript pour ajouter un globe à notre scène. La première étape consiste à créer un objet JavaScript globeView qui contiendra les éléments de la vue (globe, layers). Vous pouvez trouver de la documentation sur globeView [ici](http://www.itowns-project.org/itowns/docs/#api/View/GlobeView)
 
 Le constructeur de globeView prend en argument le conteneur <div> dans lequel il doit être placé et les coordonnées du point vers lequel la caméra sera dirigée. Je vous propose de centrer la caméra sur Lyon. Vous pouvez donc créer un globeView avec le code suivant :
 
 ```
     //************ Create globeView
     // Define the coordinates on wich the globe will be centered at the initialization
-    var positionOnGlobe = { longitude: 2.351323, latitude: 48.856712, altitude: 25000000 };
-
-    // `viewerDiv` will contain iTowns' rendering area (`<canvas>`)
-    var viewerDiv = document.getElementById('viewerDiv');
-
-    // Instanciate iTowns GlobeView*
-    var globeView = new itowns.GlobeView(viewerDiv, positionOnGlobe);
+     var viewerDiv = document.getElementById('viewerDiv');
+     var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+     var view = new itowns.GlobeView(viewerDiv, position);  
 ```
 
 Vous devriez obtenir un globe non texturé :
@@ -211,24 +203,28 @@ Vous devriez obtenir un globe non texturé :
 
 #### Ajout d'un layer d'imagerie
 
-Pour ajouter un layer d’imagerie (une carte), nous allons utiliser un fichier JSON fournit par iTowns. Ce fichier contient la description d’un layer permettant l’accès à une carte obtenue par le protocole WMTS et fournie par l’IGN (Institut National Géographique). Ce fichier est situé dans ‘examples/layers/JSONLayers/’ et s’appelle ‘Ortho.json’.
-
-Le code suivant permet de charger ce fichier JSON et de l’ajouter comme layer à notre vue :
+Pour ajouter un layer d’imagerie (une carte), nous allons utiliser une couche WMTS fournie par iTowns. 
+Le code suivant permet de charger cette couche JSON et de l’ajouter comme layer à notre vue :
 
 ```
     //****************** Add Imagery Layer
-    itowns.Fetcher.json("../examples/layers/JSONLayers/Ortho.json").then(
-        function (layer) {
-            return globeView.addLayer(layer);
-        });
-```
+   var orthoSource = new itowns.WMTSSource({
+                url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
+                name: 'ORTHOIMAGERY.ORTHOPHOTOS',
+                tileMatrixSet: 'PM',
+                format: 'image/jpeg',
+            });
 
-_Note : Ici nous utilisons les ‘Promise’ du langage JavaScript : si le fichier JSON est correctement chargé par le Fetcher json d’iTowns, alors on exécute (et seulement dans ce cas) la fonction qui est dans le then et qui permet d’ajouter un layer à notre vue. Le layer est ici appelé ‘layer’ (correpond au fichier json chargé)._
-[Pour en savoir plus sur les ‘Promise’ en JavaScript]( https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+            var orthoLayer = new itowns.ColorLayer('Ortho', {
+                source: orthoSource,
+            });
+
+            view.addLayer(orthoLayer);
+```
 
 A ce stade-là du tutoriel vous devez avoir ce globe :
 
-![](TutorialImages/textured_globe.png)
+![](TutorialImages/textured_globe1.png)
 
 #### Modification du layer d'imagerie
 
@@ -236,23 +232,18 @@ Il est possible d’accéder à d’autres types de cartes à appliquer sur notr
 Commentez les lignes permettant d’ajouter le layer précédent et ajoutez ces lignes dans globe.js :
 
 ```
-    var layer2 = {    update: itowns.updateLayeredMaterialNodeImagery,
-        type: 'color',
-        protocol: "wmtsc",
-        id: "DARK",
-        customUrl: "http://a.basemaps.cartocdn.com/light_all/%TILEMATRIX/%COL/%ROW.png",
-        networkOptions: { crossOrigin: 'anonymous' },
-        options: {
-            attribution: {
-                "name":"CARTO",
-                "url": "https://carto.com/"
-            },
-            tileMatrixSet: "PM",
-            mimetype: "image/png"
-        },
-    }
+    var layer2 = new itowns.WMTSSource({
+                url: 'http://a.basemaps.cartocdn.com/light_all/%TILEMATRIX/%COL/%ROW.png',
+                name: 'CARTO',
+                tileMatrixSet: 'PM',
+                format: 'image/jpeg',
+            });
+              var monLayer = new itowns.ColorLayer('Scan', {
+                source: layer2,
+            });
 
-    globeView.addLayer(layer2);
+
+            view.addLayer(monLayer);
 ```
 
 _Note: Si vous ne comprenez pas tout le paramétrage de ce layer pour le moment ce n’est pas grave, nous reviendrons dessus plus tard dans le tutoriel. L’important est de voir qu’on peut utiliser différents layers d’imageries._
@@ -267,29 +258,23 @@ Pour la suite du tutoriel, revenez au layer de la partie précédente (partie 2.
 
 Si vous zoomez sur une chaine de montagne et que vous utilisez ctrl+click gauche pour incliner la vue, vous remarquerez que le terrain est plat. Pour remédier à ça, nous allons ajouter deux layers d’élévations de la même manière que nous avons ajouté le premier layer d’imagerie.
 
-Pour éviter de répéter la fonction permettant d’ajouter un layer au globe (la fonction que nous avions placé dans le then), nous proposons de créer une fonction addLayerToGlobe(layer).
-
-Les deux layers que nous allons ajouter sont décrits dans les fichiers ‘WORLD_DTM.json’ et ‘IGN_MNT_HIGHRES.json’ et sont également fournis par iTowns.
-
 Notre partie du code permettant d’ajouter des layers devient ainsi:
 
 ```
     //*********** Add Imagery layer
-    function addLayerToGlobe(layer) {
-        return globeView.addLayer(layer);
-    }
+  var elevationSource = new itowns.WMTSSource({
+                url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
+                name: 'ELEVATION.ELEVATIONGRIDCOVERAGE',
+                tileMatrixSet: 'WGS84G',
+                format: 'image/x-bil;bits=32'
+            });
 
-    itowns.Fetcher.json('../examples/layers/JSONLayers/Ortho.json').then(addLayerToGlobe);
+   var elevationLayer = new itowns.ElevationLayer('MNT_WORLD', {
+                source: elevationSource,
+            });
 
-    // Add two elevation layers.
-    // These will deform iTowns globe geometry to represent terrain elevation.
-    itowns.Fetcher.json('../examples/layers/JSONLayers/WORLD_DTM.json').then(addLayerToGlobe);
-    itowns.Fetcher.json('../examples/layers/JSONLayers/IGN_MNT_HIGHRES.json').then(addLayerToGlobe);
+            view.addLayer(elevationLayer);
 ```
-
-Ces deux layers sont complémentaires : le deuxième permet d’avoir des informations d’élévation plus précises que le premier et est paramétré pour n’être affiché qu’à partir d’un certain niveau de zoom.
-
-Le mieux et de vous en persuader par vous-même en comparant des vues sans aucun des deux layers, avec un des deux layers et avec les deux layers en même temps.
 
 ### Ajout de données vecteur
 
