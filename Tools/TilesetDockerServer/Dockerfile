@@ -3,7 +3,7 @@
 #
 # In order to build and run:
 #   docker build -t lyon-tileset-server .
-#   docker run -p8080:80 -t lyon-tileset-server
+#   docker run -p 8080:80 -t lyon-tileset-server
 # and then open http://localhost:8080 with your browser
 
 FROM ubuntu:16.04
