@@ -93,7 +93,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
             - `pwd` and note the result
         - open a new terminal and run:
             - `ssh -X <server_ip_address>` (authorize X11 forwarding for the connection user)
-            - `sudo cp .Xauthority <pwd_output_from_above>
+            - `sudo cp .Xauthority <pwd_output_from_above>`
      - **Launch the `3DCityDB-Importer-Exporter`**: `(citydb_user)$ java -jar 3DCityDB-Importer-Exporter-3.3.1-Setup.jar`
      - Trouble shooting:
         * on **debian** when getting the `Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit` error message then ([cross fingers](https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit) and) try `apt-get install libxtst6`.
