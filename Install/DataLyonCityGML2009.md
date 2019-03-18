@@ -34,7 +34,7 @@ unzip LYON_9EME_2009.zip
 
 * Edit file `LYON_7EME_2009/LYON_7EME_BATI_2009.gml` and remove the full <cityObjectMember> block describing the <bldg:Building gml:id="LYON_7EME_00110"> building (starting on line 3065366 and ending at line 3065392).
 
-* Note: the above buildings had to be removed because their <gml:MultiSurface srsDimension="3"> entries, that supposedly decribe the geomtry of the respective parts of this building, are empty (which might confuse any geometrical post-treatment).
+* Note: the above buildings had to be removed because their <gml:MultiSurface srsDimension="3"> entries, that supposedly decribe the geometry of the respective parts of this building, are empty (which might confuse any geometrical post-treatment).
 
 Proceed with the [importation within your 3DCityDB database](Install3DCityDB.md#import-some-citygml-file-content)
 For the impatient this goes:
