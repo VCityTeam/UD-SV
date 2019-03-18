@@ -1,10 +1,13 @@
 # !/bin/sh
 
-# WARNING: This script must be placed in <path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ to work. 
-
 # This script drops a 3DCityDB database and creates a new one with the same
 # name. It waits for the following  parameters: $1: database name and
-# $2: database owner.  
+# $2: database owner.
+
+# DISCLAIMER: 
+#  * This script must be placed in 
+#  <path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ 
+#  * Only works for a emptying a local database
 
 # This script only works when invocated where it stands...
 cd "$(dirname "$0")" || exit
