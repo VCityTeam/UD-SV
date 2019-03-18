@@ -88,8 +88,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      - **Distant server warning**: because 3DCityDB-Importer-Exporter uses a GUI interface based on X11, and when using ssh to login on the installation server, you should first assert that X11 forwarding is allowed. For example try to launch some X client e.g. `xclock` and assert that a clock indeeds pops up on your terminal. When this fails:
          - allow ssh login as `citydb_user` user and configure ssh for "X11 forwarding"
          - open a new terminal and run:
-            - `ssh <server_ip_address>
-            - `sudo su - <user_to_authorize_forwarding>``
+            - `ssh <server_ip_address>`
+            - `sudo su - <user_to_authorize_forwarding>`
             - `pwd` and note the result
         - open a new terminal and run:
             - `ssh -X <server_ip_address>` (authorize X11 forwarding for the connection user)
