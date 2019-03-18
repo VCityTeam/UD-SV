@@ -1,5 +1,3 @@
-# Useful information about scripts placed in this folde
-
 __empty_3DCityDB.sh__
 
 * The purpose of this script is to empty a 3DCityDB database. To do so, it drops
