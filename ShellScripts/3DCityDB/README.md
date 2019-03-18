@@ -1,4 +1,8 @@
-__empty_3DCityDB.sh__
+# 3DCityDB shell scripts
+
+This folder contains shell scripts relative to 3DCityDB. They are listed consequently with a description and usage information.
+
+### empty_3DCityDB.sh
 
 * The purpose of this script is to empty a 3DCityDB database. To do so, it drops
 the 3DCityDB database and creates a new one with the same name.
