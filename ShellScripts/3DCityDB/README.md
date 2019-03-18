@@ -1,6 +1,6 @@
-## Useful information about scripts placed in this folder
+# Useful information about scripts placed in this folde
 
-### empty_3DCityDB.sh
+__empty_3DCityDB.sh__
 
 * The purpose of this script is to empty a 3DCityDB database. To do so, it drops
 the 3DCityDB database and creates a new one with the same name.
