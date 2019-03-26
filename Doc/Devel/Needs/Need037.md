@@ -4,7 +4,7 @@ Super Need: [Need 005: Adding a temporal dimension to city models](Need005.md)
 
 ### User story
 
-As a developper, I want to be able to compute the evolution of the city and of its components in time. This allows to: 
+As a developper, I want to be able to compute the evolution of the city and of its components in time, allowing to: 
   * feed a database of with city models having a temporal dimension
   * to visualize city models having a temporal dimension
 
