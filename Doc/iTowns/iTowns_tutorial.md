@@ -46,7 +46,8 @@
 ## Development advices
 
 * Don't forget to use the development tools and console of your browser to monitor your developement and track the possible bugs/errors. To use these tools, in Mozilla Firefox browser for example, go to the ***Parameters*** then ***Web development*** then ***Development tools*** (*see figure below*)
-<img src="./images/development_tools.png" width="70%">
+
+<img src="./images/development_tools.png" width="75%">
 
 * Remember that there is an ```examples``` directory in the ```itowns``` directory. You can study the examples to learn how to develop specific applications.
 
