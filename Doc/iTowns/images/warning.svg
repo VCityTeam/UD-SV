@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (unknown)"
+   sodipodi:docname="warning.svg"
+   inkscape:export-filename="/home/thomas/Documents/outils/3D_test/itowns/LIRIS_tutorials/images/warning.png"
+   inkscape:export-xdpi="600"
+   inkscape:export-ydpi="600">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="504.25957"
+     inkscape:cy="894.32779"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1853"
+     inkscape:window-height="1145"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:5.72492647;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 20.01539,94.082642 63.699701,24.38589 107.38401,94.082642 H 20.01539"
+       id="path819"
+       inkscape:connector-curvature="0" />
+    <g
+       aria-label="!"
+       transform="matrix(1.3962326,0,0,1.3962326,69.203382,-94.351796)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Bitstream Vera Serif';-inkscape-font-specification:'Bitstream Vera Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot821">
+      <path
+         d="m -6.9333514,127.66943 c 0,-0.83561 0.2835104,-1.54439 0.8505312,-2.12633 0.5670208,-0.58194 1.2757968,-0.87291 2.126328,-0.87291 0.820688,0 1.5220032,0.29097 2.1039456,0.87291 0.5819424,0.58194 0.87291352,1.29072 0.87291352,2.12633 0,0.8207 -0.29097112,1.522 -0.87291352,2.10394 -0.5819424,0.58194 -1.2832576,0.87291 -2.1039456,0.87291 -0.8505312,0 -1.5593072,-0.2835 -2.126328,-0.85052 -0.5670208,-0.58194 -0.8505312,-1.29071 -0.8505312,-2.12633 z m 0.08953,-31.089155 h 5.7746591 c -1.5220032,24.016315 0,0 -1.5220032,24.016315 h -2.7530351 c -1.4996208,-24.016315 0,0 -1.4996208,-24.016315 z"
+         id="path829"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ssssscscsccccc"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.14597881" />
+    </g>
+  </g>
+</svg>
