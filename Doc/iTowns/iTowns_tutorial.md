@@ -91,7 +91,7 @@ In this tutorial, we are going to use some of these services to get spatial data
   * [WMTS](https://fr.wikipedia.org/wiki/Web_Map_Tile_Service):
     * Spatial tiles (*images*)
     * Tiles are generated on a server. It is fast to get and render these tiles because these are images. This means that modifications are very limited on client side.
-  * [WFS]((https://en.wikipedia.org/wiki/Web_Feature_Service)):
+  * [WFS](https://en.wikipedia.org/wiki/Web_Feature_Service):
     * Spatial data to web client
     * Modifications are possible (*more flexible than WMTS*)
     * Transactional WFS allows user to add and modify data on the server
@@ -100,7 +100,9 @@ In this tutorial, we are going to use some of these services to get spatial data
 
 > First of all, you need to check if your browser does support WebGL. Click on the folowing link: http://www.itowns-project.org/itowns/examples/globe.html
 > Below is the expected result you should get on your browser:
+
 > <img src="./images/iTowns_Webgl_test.png" width="60%">
+
 > If not, try to update your browser and update your graphics board. If there is still a problem, see http://get.webgl.org/
 
 ### Installation
@@ -123,11 +125,11 @@ In this tutorial, we are going to use some of these services to get spatial data
 
 ##### Windows
 
-* Download and install the [latest LTS version](https://nodejs.org/en/download/)
+* Download and install the [latest LTS NodeJS version](https://nodejs.org/en/download/)(*npm is included*)
 
 ##### Mac OS
 
-* Download and install the [latest LTS version](https://nodejs.org/en/download/)
+* Download and install the [latest LTS NodeJS version](https://nodejs.org/en/download/)(*npm is included*)
 
 #### iTowns
 
@@ -327,7 +329,9 @@ Here we are going to develop a short app and get it running quickly. Our explana
 9. You should see something like this (*if not, remember you can see errors and warnings using the web development tools of your browser*)
 <img src="./images/iTowns_blue_globe.png" width="60%">
 10. Now we will add a basic layer composed of aerial photo as *iTowns ColorLayer*:
+
   * we choose images from a WMTS server, so we need to use *[WMTSSource](http://www.itowns-project.org/itowns/docs/#api/Source/WMTSSource)* and set three elements:
+
     * ```url```: describes the path to the WMTS service
     * ```name``` and ```tileMatrixSet```: build the URL for each image
 
@@ -946,8 +950,9 @@ We can now add a ```ColorLayer``` as vector layer from GeoJSON data.
         <script src="./functions.js"></script>
         <script src="./config.js"></script>
     </body>
-</html>
+  </html>
   ```
+
 * Create a ```function.js``` javascript file. In order to get readable code, we are going to put the functions in this file and not in ```config.js```. That's why we imported it before ```config.js``` in the ```HTML body``` with:
 
   ```javascript
