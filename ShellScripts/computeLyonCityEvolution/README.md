@@ -14,7 +14,7 @@ Expected output:
 ## Prerequisites
 
  * Install the
-[EBO's working branch of 3DUSE](https://github.com/EricBoix/3DUSE/tree/ChangeDetection)
+[EBO's ChangeDetection branch of 3DUSE](https://github.com/EricBoix/3DUSE/tree/ChangeDetection)
  in this directory by following this
 [3DUSE install guide](https://github.com/EricBoix/3DUSE/blob/ChangeDetection/Install.md)
 
