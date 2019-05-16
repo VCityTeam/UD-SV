@@ -70,8 +70,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
        (root)$ cd /tmp       # in case the tarball is not clean
        (root)$ tar zxvf jre-8u131-linux-x64.tar.gz
        (root)$ mkdir /usr/lib/jvm
-       (root)$ sudo mv jre1.8.0_131 /usr/lib/jvm/oracle_jre1.8.0_131
-       (root)$ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/oracle_jre1.8.0_131/bin/java 2000
+       (root)$ mv jre1.8.0_131 /usr/lib/jvm/oracle_jre1.8.0_131
+       (root)$ update-alternatives --install /usr/bin/java java /usr/lib/jvm/oracle_jre1.8.0_131/bin/java 2000
        (root)$ rm -f jre-8u131-linux-x64.tar.gz
        ````
      - Create a `/etc/profile.d/oraclejdk.sh` with ad-hoc content e.g.
@@ -94,6 +94,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
         - open a new terminal and run:
             - `ssh -X <server_ip_address>` (authorize X11 forwarding for the connection user)
             - `sudo cp .Xauthority <pwd_output_from_above>`
+        - Make sure that the user for which we want to authorize forwarding has reading rights on the resulting copy of `.Xauthority` located in its home directory (when not, use e.g. `chown` or `chmod`) 
      - **Launch the `3DCityDB-Importer-Exporter`**: `(citydb_user)$ java -jar 3DCityDB-Importer-Exporter-3.3.1-Setup.jar`
      - Trouble shooting:
         * on **debian** when getting the `Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit` error message then ([cross fingers](https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit) and) try `apt-get install libxtst6`.
