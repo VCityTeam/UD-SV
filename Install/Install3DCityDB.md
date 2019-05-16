@@ -147,6 +147,7 @@ We can now proceed with the CityGML imporation per se
       Database: citydb_v3
    ````
   - Hit `Connect button`
+    Note: when this fails and depending on your postgresql setup, you might need to provide the IP number of the server in place of the localhost string when configuring the Server entry.
   - Import a CityGML file: 
      * Go back to import tab. 
      * Hit browse and choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
