@@ -39,8 +39,6 @@ Optionnal entries that you can add (nice to have):
  - [ ] Design notes provided (as Doxygen module page?)
  - [ ] New entry in the ChangeLog.md added.
 
-Note: links to [Coding Style](https://github.com/MEPP-team/VCity/wiki/Coding-Style), [Changes.md](https://github.com/MEPP-team/VCity/blob/master/Changes.md)...
-
 ### Pull Request (PR) acceptance policy
 A given Pull Request (PR) is handled over to a PR validator that will evaluate the submission which the following criteria:
  * all the items (**refer above**) of the PR submission template must be checked
@@ -49,40 +47,3 @@ A given Pull Request (PR) is handled over to a PR validator that will evaluate t
 The PR submitter/validator exchanges will be written on github's PR submission interface. It is nevertheless always encouraged, whenever if possible, to first exchange through informal conversations/discussions prior to leaving some written traces of the work to be done (in the form of short concrete items).
 
 In order to avoid any [possible conflict of interest](https://en.wikipedia.org/wiki/Conflict_of_interest), and for a given PR, the submitter and the validator shall not be the same person.
-
-### Versioning process
-Version number incrementation and the associated tagging process (described below) happens in the following conditions
- - every **couple of weeks** (the classic duration of a [sprint](https://en.wikipedia.org/wiki/Scrum_(software_development)#Workflow) the version **sub-minor is incremented**,
- - every **couple of months** (e.g. each semester) the version **minor is incremented**.
-
-Notes: 
- - for the time being the major will be kept to be zero (the code is not yet _perfectly_ mature).
- - the version number can be obtained on the command line 
-   - after software installation: launch `3DUSE-config` binary 
-   - when in the building tree: `ctest -R TEST_PRINT_CONFIG -V`
-
-
-Evaluation of the pertinence for making a new version/release is evaluated during the weekly meeting and this task is attributed to the **versioning-person** in charge of following the **versioning process**
- * [As recommended](https://github.com/MEPP-team/VCity/wiki/Coding-Github_Cycle#refrain-from-cloning-the-master-fork-it-instead), place yourself in your forked working repository.
- * Upgrade the version numbers (for the sake of simplicity/clarity of the versioning process you should limit yourself to the two following changes) within:
-     - the [main CMakeLists.txt](https://github.com/MEPP-team/VCity/blob/master/CMakeLists.txt#L77) by changing the values of the `PRJ_VERSION_MAJOR`, `PRJ_VERSION_MINOR` and `PRJ_VERSION_PATCH`variables, 
-     - [dialogAbout.ui](https://github.com/MEPP-team/VCity/blob/master/ui/dialogAbout.ui#L20) (part of the QT interface, look for string `3D-Use version`).
- * `Commit` and `push` those changes to your origin repository (i.e. your forked repository on github as opposed to your local repository on your desktop computer). Take note of the SHA1 for this push (e.g. d5304fb5c8e for version 0.4.0). In the following we will call VERSION_SHA1 this SHA1. 
- * Submit an associated PR (e.g. the [PR for version 0.4.0](https://github.com/MEPP-team/VCity/pull/184)). Have this [PR accepted and merged](https://github.com/MEPP-team/VCity/wiki/Coding-Github_Cycle#pull-request-pr-acceptance-policy). Once your PR was accepted you should be able to view your VERSION_SHA1 within the lists of commits of the master. For example for version 0.4.0 [here is the VERSION_SHA1 (d5304fb5c8e)](https://github.com/MEPP-team/VCity/commit/d5304fb5c8e847486a798085fc755563d69bd110) that you should distinguish from the [SHA1 of the merge of your commit](https://github.com/MEPP-team/VCity/commit/debce55798ac3c998f681e44b800a0b7d403426c).  
- * From your local repository (the one on your desktop), proceed with the [tagging process at the git level](https://git-scm.com/book/en/v2/Git-Basics-Tagging) 
-     - `git remote -v` command describes the situation in which you should now be, which should be similar to
-     ```
-       origin        https://github.com/<yourGithubLogin>/VCity.git (fetch)
-       origin        https://github.com/<yourGithubLogin>/VCity.git (push)
-       upstream https://github.com/MEPP-team/VCity.git (fetch)
-       upstream	https://github.com/MEPP-team/VCity.git (push)
-     ```  
-    -  `git log` command will enable you to make sure that your VERSION_SHA1 is indeed present in the log list (it should be the top entry if you didn't do push other commits in between)
-   - `git tag -a <version_number> VERSION_SHA1` command tags the version on your local repository (in our example case this gives `git tag -a v0.4.0 d5304fb5c8e`): provide some message when asked (for example use the version number as message).
-   -  `git push origin --tags` command pushes the new tag to your forked repository. Note that tags don't get "pushed" with other commits and you do need to push tags separately. You should now see this new tag:
-      * with the `git ls-remote --tags` on the command line or
-      * on the release entry on your forked repository on github (`releases` appears on the right side of the `commit` button). For example [here it is for version 0.4.0](https://github.com/EricBoix/VCity/releases).
-   - `git push upstream --tags`eventually pushes the tag on the master repository which you should be able to assert:
-       * `git ls-remote --tags https://github.com/MEPP-team/VCity.git` on the command line
-       * on the releases page of the original project on github (e.g. [for version 0.4.0](https://github.com/MEPP-team/VCity/releases))
- * Don't forget to celebrate and to keep the hotline open ;-)    
