@@ -15,7 +15,7 @@ If you inadvertently forgot to fork and started with cloning the master (e.g. [M
  * still realize the above described forking procedure
  * back port the changes you operated on your original master clone to your newly created fork
 
-When not respecting the above workflow, the [[benevolent|https://en.wikipedia.org/wiki/Benevolent_dictator_for_life]] [["integration czar"|http://www.kdgregory.com/index.php?page=scm.git]] will escalate the enforcement process: frowning upon, chastising, punishment, severe punishment, [cyanide](http://www.ctrl-c.liu.se/~ingvar/asr/lusers.html), banning (only for survivors of previous stage :-)
+When not respecting the above workflow, the [benevolent](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life) ["integration czar"](http://www.kdgregory.com/index.php?page=scm.git) will escalate the enforcement process: frowning upon, chastising, punishment, severe punishment, [cyanide](http://www.ctrl-c.liu.se/~ingvar/asr/lusers.html), banning (only for survivors of previous stage :-)
 
 ### Limit the [CI](https://en.wikipedia.org/wiki/Continuous_integration) rebuilds to _really_ useful repository updates
 Because the git repository is hooked up with a [CI (Continuous Integration)](https://en.wikipedia.org/wiki/Continuous_integration) tool ([Travis](https://travis-ci.org/)) each commit triggers a rebuild. In order to avoid useless rebuilds (which will delay the useful ones), it is key to **inhibit Travis rebuilds when committing non functionnal changes** (e.g. doxygen or [mardown](https://en.wikipedia.org/wiki/Markdown) based documentation). This is even more important when commiting often...
