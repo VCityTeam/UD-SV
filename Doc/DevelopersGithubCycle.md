@@ -1,11 +1,11 @@
 ### Refrain from cloning the master: fork it instead
-If you intend to contribute to any of the (Github) git repositories of the MUTS project (e.g. MEPP V2) it is **strongly advised to refrain from cloning the master**. [[Master is for integration, not development|http://www.kdgregory.com/index.php?page=scm.git]]. Instead, the recommended workflow goes like:
+If you intend to contribute to any of the (Github) git repositories of the MUTS project (e.g. MEPP V2) it is **strongly advised to refrain from cloning the master**. [Master is for integration, not development](http://www.kdgregory.com/index.php?page=scm.git). Instead, the recommended workflow goes like:
  1. start with a [`fork` of the concerned repository](https://help.github.com/articles/fork-a-repo/)
  1. work on your fork (by first cloning it and then pushing to it)
  1. [create a Pull Request](https://help.github.com/articles/creating-a-pull-request/) (PR)
  1. improve your branch until the associated [Travis CI](https://travis-ci.org/) tests (Linux gcc and clang) is OK (within the Pull Request tab,  assert that the colored dot on the right of your PR is green)
  1. ask the ["well known"](https://github.com/MEPP-team/MEPP2/wiki/Contributors) Windows (currently Vincent Vidal and Martial Tola) and Mac OSX (currently Martial Tola) testing persons to manually test your branch,
- 1. kindly request a [[benevolent|https://en.wikipedia.org/wiki/Benevolent_dictator_for_life]] [["integration czar"|http://www.kdgregory.com/index.php?page=scm.git]] to realize the merge with the master or request for changes
+ 1. kindly request a [benevolent](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life) ["integration czar"](http://www.kdgregory.com/index.php?page=scm.git) to realize the merge with the master or request for changes
 
 Note that the Windows test if often much more changeling than the OSX test but [your mileage may vary](https://en.wiktionary.org/wiki/your_mileage_may_vary).
 Also note that volunteers for becoming a Windoze/OSX testing person are welcomed.
