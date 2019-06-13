@@ -12,13 +12,9 @@ Expected output:
 *Disclaimer: Remarkable buildings are not considered*
 
 ## Prerequisites
-
- * Install the
-[EBO's ChangeDetection branch of 3DUSE](https://github.com/EricBoix/3DUSE/tree/ChangeDetection)
- in this directory by following this
+Install [EBO's ChangeDetection branch of 3DUSE](https://github.com/EricBoix/3DUSE/tree/ChangeDetection)
+in this directory by following this
 [3DUSE install guide](https://github.com/EricBoix/3DUSE/blob/ChangeDetection/Install.md)
-
-  * [Install 3DCityDB](https://github.com/MEPP-team/RICT/blob/master/Install/Install3DCityDB.md)
 
 ## Usage:
 
