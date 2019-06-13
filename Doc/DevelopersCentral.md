@@ -5,7 +5,7 @@
 1. **Pre-requisites** 
    Languages:
      - Frontend: [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UDV](https://github.com/MEPP-team/UDV) (proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript))
-     - Backend: [Python3](https://en.wikipedia.org/wiki/Python_(programming_language) for [UDV-server](https://github.com/MEPP-team/UDV-server) as well as some [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some geography/geometry [3DUSE treatments](https://github.com/MEPP-team/3DUSE/tree/master/src/filters)
+     - Backend: [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for [UDV-server](https://github.com/MEPP-team/UDV-server) as well as some [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some geography/geometry [3DUSE treatments](https://github.com/MEPP-team/3DUSE/tree/master/src/filters)
 1. **Access rights** 
    * Provide your github login to the admin in order to ask for a Github access (if you are reading this you probably already did :-)
 1. **Documentation** 
