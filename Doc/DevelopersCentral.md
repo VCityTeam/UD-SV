@@ -16,5 +16,5 @@
    * Clone [UDV](https://github.com/MEPP-team/UDV/tree/master/), install it and  [run the demos](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/examples)
 1. **Contributing code**
    * Respect (when available) the coding styles
-   * [Submit a pull request (PR)](DevelopersGithubCycle#submitting-a-pull-request-pr): don't forget to provide a template. Keep in mind that it is much better to often submit small yet effective and mature PR than jumbo/bulk PR once in a while...
-   * Place and maintain some gentle pressure when [asking for your pull request (PR) acceptation](DevelopersGithubCycle#pull-request-pr-acceptance-policy)
+   * [Submit a pull request (PR)](DevelopersGithubCycle.md#submitting-a-pull-request-pr): don't forget to provide a template. Keep in mind that it is much better to often submit small yet effective and mature PR than jumbo/bulk PR once in a while...
+   * Place and maintain some gentle pressure when [asking for your pull request (PR) acceptation](DevelopersGithubCycle.md#pull-request-pr-acceptance-policy)
