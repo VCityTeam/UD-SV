@@ -18,3 +18,6 @@
    * Respect (when available) the coding styles
    * [Submit a pull request (PR)](DevelopersGithubCycle.md#submitting-a-pull-request-pr): don't forget to provide a template. Keep in mind that it is much better to often submit small yet effective and mature PR than jumbo/bulk PR once in a while...
    * Place and maintain some gentle pressure when [asking for your pull request (PR) acceptation](DevelopersGithubCycle.md#pull-request-pr-acceptance-policy)
+
+-----
+ * Créer une page projet
