@@ -11,7 +11,7 @@
 1. **Documentation** 
    * Browse the [Doc/Devel subdirectory](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel)
 1. **Accessing the project sources** 
-     Read on the proposed [Github's good practices](DevelopersGithubCycle.md).
+   Read on the proposed [Github's good practices](DevelopersGithubCycle.md).
 1. **Installation**:
    * Clone [UDV](https://github.com/MEPP-team/UDV/tree/master/), install it and  [run the demos](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/examples)
 1. **Contributing code**
