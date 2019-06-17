@@ -1,6 +1,6 @@
 ## Strategic context
 What VCity can currently do and that we **don't necessarily need to maintain/upgrade** (on condition to find other means to achieve the offered functionality)
- * libCityGML i.e. the C++ parsing library allowing the xml bindings to CityGML V2 doesn't need to be maintained nor does it need to be upgraded to CityGML V3. The strategy is here to use [3DCityDB importer/exporter](https://github.com/3dcitydb/importer-exporter) to be used as ETL into the database.
+ * libCityGML i.e. the C++ parsing library allowing the xml bindings to CityGML V2 doesn't need to be maintained nor does it need to be upgraded to CityGML V3. The strategy is here to use [3DCityDB importer/exporter](https://github.com/3dcitydb/importer-exporter) to be used as [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load) into the database.
   * QT can be dropped since we migrate to a web based client version
  
 What VCity can currently do and that we might wish to keep (for a midterm on long term)  
