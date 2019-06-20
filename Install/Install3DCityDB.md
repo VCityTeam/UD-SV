@@ -73,7 +73,23 @@ services:
       - "CITYDB_CONNECTION_USER=postgres"
       - "CITYDB_CONNECTION_PASSWORD=postgres"
 ```
-
+* Troubleshooting
+  * Port already allocated
+  
+    If you get the following error when running `sudo docker compose up`:
+    ```
+    ERROR: for citydb  Cannot start service citydb: driver failed programming external connectivity on endpoint v4xx_citydb_1 (ef8b3de53a730cab2acd26a041d180f19dc448c5e346138e2a5e2a38dee71b72): Bind for 0.0.0.0:5432 failed: port is already allocated
+    ```
+   You may need to free the 5432 port. Please find below a way to do that:
+   
+      * Print the list of running containers with the command `sudo docker container ls`.
+      
+      * Find the container named <name> using the 5432 port.
+      
+      * Run the command `sudo docker container stop <name>`.
+      
+      * Then, try again `sudo docker compose up`.
+ 
 ## Manual installation of 3DCityDB+PostGIS
 Tested on:
  - Debian (GNU/Linux) 8.8 (jessie)
