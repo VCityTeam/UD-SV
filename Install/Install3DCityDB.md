@@ -1,10 +1,80 @@
 # Debian 3DCityDB installation walkthrough
 
-## Installing 3DCityDB v4.0.2 using docker
+## Installation of Java Runtime Environment
+ Installing such an environment is required in order to run [3DCityDB Importer/Exporter](https://github.com/3dcitydb/importer-exporter).
+ 
+ * Install Java Runtime Environment (version 8 or higher as specified in the [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/)). We here follow the ["Manual install" section of Ask-Ubuntu](https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (refer also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/)):
+     - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (because of Oracle's acceptance policy uses a cookie validation you might not be able to use wget directly in which case rebounce e.g. on your desktop) 
+     - ````
+       (root)$ cd /tmp       # in case the tarball is not clean
+       (root)$ tar zxvf jre-8u131-linux-x64.tar.gz
+       (root)$ mkdir /usr/lib/jvm
+       (root)$ mv jre1.8.0_131 /usr/lib/jvm/oracle_jre1.8.0_131
+       (root)$ update-alternatives --install /usr/bin/java java /usr/lib/jvm/oracle_jre1.8.0_131/bin/java 2000
+       (root)$ rm -f jre-8u131-linux-x64.tar.gz
+       ````
+     - Create a `/etc/profile.d/oraclejdk.sh` with ad-hoc content e.g.
+       ````
+       export J2REDIR=/usr/lib/jvm/oracle_jre1.8.0_131
+       export PATH=$PATH:/usr/lib/jvm/oracle_jre1.8.0_131/bin:
+       export JAVA_HOME=/usr/lib/jvm/oracle_jre1.8.0_131
+       ````
 
-TODO
+## Installation 3DCityDB+PostGIS using docker
 
-## Manual installation
+[Here](https://docs.docker.com/install/) is a page where you can learn about, download and install docker on your computer, if you have not done it yet.
+
+  * Run the full 3DCityDB service stack with a single command, on [this page](https://github.com/tum-gis/3dcitydb-docker-compose/tree/master/3dcitydb+wfs).
+
+_PS: It is absolutely not necessary to run the command below to be able to work on this project:_
+
+```
+docker pull tumgis/3dcitydb-wfs
+```
+
+  * When you will have done [this step](https://github.com/tum-gis/3dcitydb-docker-compose/tree/master/3dcitydb+wfs#adapt-the-service-configuration-file), your docker-compose.yml file should contain:
+
+```
+# Compose 3DCityDB, 3DCityDB WFS  #############################################
+###############################################################################
+#   Note: 
+#   Watch out to change the database credentials of the 3DCityDB and the WFS
+#		synchronously. Otherwise, you might break the container linking.
+###############################################################################
+version: "2.0"
+services:
+# 3DCityDB ####################################################################
+  citydb:
+    image: tumgis/3dcitydb-postgis
+    ports:
+      - 5432:5432
+    environment:
+      - "CITYDBNAME=citydb"
+      - "SRID=3946"
+      - "SRSNAME=espg:3946"
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgres"
+      
+# 3DCityDB WFS ################################################################
+  citydb-wfs:
+    image: tumgis/3dcitydb-wfs
+    ports:
+      - 8080:8080
+    links: 
+      # <3DCityDB-container-name>:<3DCityDB-container-hostname>
+      - citydb:my-citydb
+    depends_on:
+      - citydb
+    environment:
+      - "CITYDB_CONNECTION_SERVER=my-citydb"
+      - "CITYDB_CONNECTION_PORT=5432"
+      # Use the <3DCityDB-container-hostname> here!
+      - "CITYDB_CONNECTION_SID=citydb"
+      - "CITYDB_CONNECTION_USER=postgres"
+      - "CITYDB_CONNECTION_PASSWORD=postgres"
+```
+
+## Manual installation of 3DCityDB+PostGIS
 Tested on:
  - Debian (GNU/Linux) 8.8 (jessie)
  - Ubuntu 14.04.3 (`lsb_release -a` yields `Ubuntu 14.04.3 LTS, Release 14.04, Codename trusty`)
@@ -69,23 +139,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      (root)$ su - citydb_user
      (citydb_user)$ psql -d citydb_v3 -c 'create extension postgis;'
      ````
- * Install Java Runtime Environment (version 8 or higher as specified in the [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/)). We here follow the ["Manual install" section of Ask-Ubuntu](https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (refer also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/)):
-     - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (because of Oracle's acceptance policy uses a cookie validation you might not be able to use wget directly in which case rebounce e.g. on your desktop) 
-     - ````
-       (root)$ cd /tmp       # in case the tarball is not clean
-       (root)$ tar zxvf jre-8u131-linux-x64.tar.gz
-       (root)$ mkdir /usr/lib/jvm
-       (root)$ mv jre1.8.0_131 /usr/lib/jvm/oracle_jre1.8.0_131
-       (root)$ update-alternatives --install /usr/bin/java java /usr/lib/jvm/oracle_jre1.8.0_131/bin/java 2000
-       (root)$ rm -f jre-8u131-linux-x64.tar.gz
-       ````
-     - Create a `/etc/profile.d/oraclejdk.sh` with ad-hoc content e.g.
-       ````
-       export J2REDIR=/usr/lib/jvm/oracle_jre1.8.0_131
-       export PATH=$PATH:/usr/lib/jvm/oracle_jre1.8.0_131/bin:
-       export JAVA_HOME=/usr/lib/jvm/oracle_jre1.8.0_131
-       ````
-
+ 
  * Download 3DCityDB latest stable version software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/).
  
    Here is the command to run for the version 3.3.1:
@@ -110,7 +164,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
 
  * Configure 3DCityDB to match your postgresql configuration
  
-    * in version 3.3.1:
+    * in version 3.3.1 of 3DCityDB Importer/Exporter:
 
      Edit the shell variables of the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/CREATE_DB.sh` script. After edition this section should look like:
     
@@ -123,11 +177,11 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
           export PGBIN=/usr/bin/
 
       ```
-   * If you are using 3DCityDB v4.2.0:
+   * In version 4.2.0 of 3DCityDB Importer/Exporter:
  
     In this version, you do not have to modify the file `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CREATE_DB.sh`, because the shell variables to change are in the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CONNECTION_DETAILS.sh` script.
 
-     After edition this section should look like:
+     After edition this section should look like (if you followed our docker tutorial above):
 
      ```
      # Provide your database details here ------------------------------------------
@@ -151,6 +205,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      
 We can now proceed with the CityGML imporation per se
 
+_First, please make sure that you have an existing and working database PostGreSQL named_ <citydb>. 
    - Start 3DCityDB:
      ````
      (citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
@@ -171,6 +226,23 @@ We can now proceed with the CityGML imporation per se
       Port:5432
       Database: citydb_v3
    ````
+   
+   **except if you followed the docker installation of 3DCityDB+PostGIS on the top of this page** in which case you may instead fill the boxes as described below:
+   
+    ````
+    Connection: New connection
+    ...
+    Connection Details
+      Description: New connection
+      Username: postgres
+      Password: postgres
+      Type: PostgreSQL/PostGIS
+      Server: localhost
+      Port:5432
+      Database: citydb
+      schema: citydb
+    ````
+
   - Hit `Connect button`
     Note: when this fails and depending on your postgresql setup, you might need to provide the IP number of the server in place of the localhost string when configuring the Server entry.
   - Import a CityGML file: 
