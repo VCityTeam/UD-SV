@@ -1,5 +1,10 @@
 # Debian 3DCityDB installation walkthrough
 
+## Installing 3DCityDB v4.0.2 using docker
+
+TODO
+
+## Manual installation
 Tested on:
  - Debian (GNU/Linux) 8.8 (jessie)
  - Ubuntu 14.04.3 (`lsb_release -a` yields `Ubuntu 14.04.3 LTS, Release 14.04, Codename trusty`)
@@ -81,8 +86,11 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
        export JAVA_HOME=/usr/lib/jvm/oracle_jre1.8.0_131
        ````
 
- * Download 3DCityDB software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/) 
-     - `(citydb_user)$ wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
+ * Download 3DCityDB latest stable version software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/).
+ 
+   Here is the command to run for the version 3.3.1:
+ 
+   `(citydb_user)$ wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
 
  * Install 3DCityDB and follow installer steps:
      - **Distant server warning**: because 3DCityDB-Importer-Exporter uses a GUI interface based on X11, and when using ssh to login on the installation server, you should first assert that X11 forwarding is allowed. For example try to launch some X client e.g. `xclock` and assert that a clock indeeds pops up on your terminal. When this fails:
@@ -100,11 +108,13 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
         * on **debian** when getting the `Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit` error message then ([cross fingers](https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit) and) try `apt-get install libxtst6`.
         * **Distant server Warning**: first assert that X11 forwarding is allowed In case you get the `X11 connection rejected because of wrong authentication` error message and you are using ssh to log on the server you are configuring then make sure ssh is configured to allow for "X11 forwarding")
 
- * Configure 3DCityDB to match your postgresql configuration:
+ * Configure 3DCityDB to match your postgresql configuration
+ 
+    * in version 3.3.1:
 
-    * Edit the shell variables of the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/CREATE_DB.sh` script. After edition this section should look like:
-
-      ````
+     Edit the shell variables of the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/CREATE_DB.sh` script. After edition this section should look like:
+    
+      ```
           # Provide your database details here
           export PGPORT=5432
           export PGHOST=localhost
@@ -112,8 +122,23 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
           export CITYDB=citydb_v3
           export PGBIN=/usr/bin/
 
-      ````
-      
+      ```
+   * If you are using 3DCityDB v4.2.0:
+ 
+    In this version, you do not have to modify the file `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CREATE_DB.sh`, because the shell variables to change are in the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CONNECTION_DETAILS.sh` script.
+
+     After edition this section should look like:
+
+     ```
+     # Provide your database details here ------------------------------------------
+     export PGBIN=/usr/bin/
+     export PGHOST=localhost
+     export PGPORT=5432
+     export CITYDB=citydb
+     export PGUSER=postgres
+     #------------------------------------------------------------------------------
+     ```
+
 ## Import some CityGML file content
  * Chapter 3.3.2 P. 100, Step 3: **Execute the CREATE_DB script**
    - ````
