@@ -80,10 +80,6 @@ If you want to run a remote server for streaming a 3d-tiles tileset, you can use
 
  Follow the install notes described in https://github.com/MEPP-team/UDV/blob/master/install.md
 
-This will install UDV and pull the right version of itowns (with temporal extension).
-
-After this installation, if you need to work on itowns you can do it in `UDV/UDV-Core/dist/itowns`. If you do so, beware that the git remote is currently a fork (https://github.com/jailln/itowns) as opposed to the official repository (located at https://github.com/iTowns/itowns).
-
 ## Using the above installed client/server
 
 Now that you are done with all necessary installation, you can use these components with 3D or 3D+time data.
