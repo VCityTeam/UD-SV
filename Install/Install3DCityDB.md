@@ -82,13 +82,13 @@ services:
     ```
    You may need to free the 5432 port. Please find below a way to do that:
    
-      * Print the list of running containers with the command `sudo docker container ls`.
+     * Print the list of running containers with the command `sudo docker container ls`.
       
-      * Find the container named <name> using the 5432 port.
+     * Find the container named <name> using the 5432 port.
       
-      * Run the command `sudo docker container stop <name>`.
+     * Run the command `sudo docker container stop <name>`.
       
-      * Then, try again `sudo docker compose up`.
+     * Then, try again `sudo docker compose up`.
  
 ## Manual installation of 3DCityDB+PostGIS
 Tested on:
@@ -155,8 +155,9 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      (root)$ su - citydb_user
      (citydb_user)$ psql -d citydb_v3 -c 'create extension postgis;'
      ````
+ ## Download and configure 3DCityDB Importer/Exporter
  
- * Download 3DCityDB latest stable version software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/).
+ * Download 3DCityDB Importer/Exporter latest stable version software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/).
  
    Here is the command to run for the version 3.3.1:
  
@@ -178,7 +179,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
         * on **debian** when getting the `Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit` error message then ([cross fingers](https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit) and) try `apt-get install libxtst6`.
         * **Distant server Warning**: first assert that X11 forwarding is allowed In case you get the `X11 connection rejected because of wrong authentication` error message and you are using ssh to log on the server you are configuring then make sure ssh is configured to allow for "X11 forwarding")
 
- * Configure 3DCityDB to match your postgresql configuration
+ * Configure 3DCityDB Importer/Exporter to match your postgresql configuration
  
     * in version 3.3.1 of 3DCityDB Importer/Exporter:
 
@@ -219,9 +220,9 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
     - When asked for `Please enter the corresponding SRSName to be used in GML exports (e.g., urn:ogc:def:crs, crs:EPSG::3068, crs:EPSG::5783):` , enter : `crs:EPSG::3946`
 
      
-We can now proceed with the CityGML imporation per se
+We can now proceed with the CityGML imporation per se.
 
-_First, please make sure that you have an existing and working database PostGreSQL named_ <citydb>. 
+_First, please make sure that you have an existing and working database PostGreSQL named_ `<citydb>`. 
    - Start 3DCityDB:
      ````
      (citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
