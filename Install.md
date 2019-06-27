@@ -41,8 +41,8 @@ Open a terminal and run:
 
 Deploy a virtual environment (this step is not mandatory; it is useful for having local dependencies to the packages installed next.)
 ````
-    virtualenv -p /usr/bin/python3 venv
-    . venv/bin/activate
+    virtualenv -p python3 venv
+    source venv/bin/activate
 ````
 
 Install python dependencies:
@@ -58,6 +58,21 @@ Install python dependencies:
 
 *Dev note: If you modify the core of py3dtiles (`py3dtiles/py3dtiles/` subdirectory), you will need to run `pip install -e` before running a script (e.g. export_tileset) for changes to be considered.*
 
+Install the tiler specific dependency:
+
+````
+    pip install pyyaml
+````
+
+Configure `Tilers/CityTiler/CityTilerDBConfig.yml` (out of `Tilers/CityTiler/CityTilerDBConfigReference.yml`)
+
+From the home directory of the git
+    * in order to run the CityTiler
+      ```
+      python Tilers/CityTiler/CityTiler.py --with_BTH Tilers/CityTiler/CityTilerDBConfig.yml 
+      ```
+      that (by default) will create a `junk` ouput directory holding both the resulting tile set (with the .json extension) and a folder called `tiles` with `.b3dm` files in it.
+      
 #### Install a server for streaming 3dtiles tilesets to the client
 
 If you want to run a local server for streaming a 3d-tiles tileset, you can use the node.js based server provided by 3d-tiles: [3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples)
