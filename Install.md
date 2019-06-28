@@ -17,7 +17,7 @@ If you need to install a 3DCityDB database, follow the instructions described [h
 
 #### Install UDV-server
 
-[UDV-server](https://github.com/MEPP-team/UDV-server) is a collection of tools useful for our application. For more information, refer to the README.md of UDV-server.
+[UDV-server](https://github.com/MEPP-team/UDV-server) is a collection of tools useful for our application. follow the instructions described [here](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md).
 
 #### Install py3dtiles
 
