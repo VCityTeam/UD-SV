@@ -34,7 +34,11 @@ VintagesIDRenumbering
 Understanding the changes requires, or is greatly complicated by a lack
 of, identifiers that remain valid accross vintages.
 
-    
+Because buildings are regrouped we need to split
+
+Weird split
+
+Tiny changes in the geometry    
     
  - PB: changes in the building (city object) identifiers (labeling) for
      a singular city object (across vintages)
