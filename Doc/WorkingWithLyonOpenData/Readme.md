@@ -22,14 +22,28 @@ Some information (provided in the form a genenric attribute) is not always
    - Monster leaning tower
  - 2015: limite Vcity de split-building entre 2012 CityGML1 et 2015 CityGML2
 
-### Inter vintage hindrances
+### Multiple enveloppe: what is the semantic behind building regroupment
+MultipleEnveloppeExample_1 3D
+![MultipleEnveloppeExample_1 3D](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-3D.png)
+MultipleEnveloppeExample_1 2D
+![MultipleEnveloppeExample_1 2D](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-2D.png)
+The corresponding [CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml)
+extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)
+
+MultipleEnveloppeExample_1 3D Huge set of buldings
+![MultipleEnveloppeExample_1 Huge](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1_Huge-3D.png)
+
+## Inter vintage hindrances
 A difficulty, in understanding the dynamic evolution of the geometry
 of city, can arise when the identifier (labeling) of a singular city
 object changes across vintages.
 For example consider the changes in the labeling of the same physical
 buildings (more generaly any city object) between year 2012 and 2015:
 
-VintagesIDRenumbering
+VintagesIDRenumbering 2012
+![Vintages ID Renumbering 2012](VintagesIDRenumbering/VintagesIDRenumbering-2012-3D.png)
+VintagesIDRenumbering 2015
+![Vintages ID Renumbering 2015](VintagesIDRenumbering/VintagesIDRenumbering-2015-3D.png)
 
 Understanding the changes requires, or is greatly complicated by a lack
 of, identifiers that remain valid accross vintages.
