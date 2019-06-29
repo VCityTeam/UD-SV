@@ -23,6 +23,19 @@ Some information (provided in the form a genenric attribute) is not always
  - 2015: limite Vcity de split-building entre 2012 CityGML1 et 2015 CityGML2
 
 ### Inter vintage hindrances
+A difficulty, in understanding the dynamic evolution of the geometry
+of city, can arise when the identifier (labeling) of a singular city
+object changes across vintages.
+For example consider the changes in the labeling of the same physical
+buildings (more generaly any city object) between year 2012 and 2015:
+
+VintagesIDRenumbering
+
+Understanding the changes requires, or is greatly complicated by a lack
+of, identifiers that remain valid accross vintages.
+
+    
+    
  - PB: changes in the building (city object) identifiers (labeling) for
      a singular city object (across vintages)
  - PB: changes in the data semantic structuration (il faudrait une cohérence
@@ -42,3 +55,5 @@ Some information (provided in the form a genenric attribute) is not always
 ## Demandes
  - Dispose t'on the acquisition process in order to evaluate the induced
    acquisition error ?
+
+
