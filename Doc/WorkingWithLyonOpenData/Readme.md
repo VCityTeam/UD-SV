@@ -151,6 +151,17 @@ vintages. A drawback is here that one cannot make a `BATI` to `BATI` (or
 needed (be it burough or special types of buildings), then provide such
 criteria and keep them across vintages.
 
+### Numerical imprecisions across vintages
+As observed above, the building regroupement can change across vintages. The following two pictures
+illustrate the situation for 2009 and 2012 vintages:
+![VintagesTinyDifference 2009](VintagesTinyDifference/VintagesTinyGeometricDifference-2009-3D.png)
+![VintagesTinyDifference 2012](VintagesTinyDifference/VintagesTinyGeometricDifference-2012-3D.png)
+
+But if we compare the respective footprints (projection on the natural terrain) we can observe
+a slight difference:
+![VintagesTinyDifference 2D comparison](VintagesTinyDifference/VintagesTinyGeometricDifference-2D_comparison.png)
+
+
 ## Open questions
  * Would there be some technical means to provide some evaluation of the
    induced acquisition error (for a given data) ?
