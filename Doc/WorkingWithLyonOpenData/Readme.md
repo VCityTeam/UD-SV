@@ -55,6 +55,10 @@ The geometrical difficulty seems to arise in some overlay appearing between the 
 
 ![MultipleEnveloppeExample_5](MultipleEnveloppeExample_5_pathologic_leaning_tower/MultipleEnveloppeExample_5_pathologic_leaning_tower_2015-2D.png)
 
+Note that such geometrical imprecission has an impact on the interpretation one makes of the building spliting. 
+Should one consider that such a situation is a "numerical" approximation or did the total surface of the (two) buildings
+changed across time (because there geometry of the building changed).
+
 ### Multiple enveloppe (sub-buildings): what is the semantic behind building regroupment ?
 It is hard to understand what is the logic that governs the regroupement of the geometries
 of independent physical buildings (that is buildings that are geometrically distinct i.e.
@@ -132,17 +136,20 @@ to adopt a different strategy.
 Accross years the CityGML changed and different vintages use different file formats.
 A single algorithm trying to establish comparisons across vintages require to know
 about all searche formats.
+
 **Possible improvement of the data**: rewrite previous vintages with the "current"
 CityGML file format (?). 
 
 ### Changes in the file spliting
+The so called remarkable buildings (or landmark builds) are not the same
+across the 2019, 2012 and 2015 vintages. Hence the buildings encountered
+in the respective `BATI` and `BATI_REMARQUABLE` files do change across the
+vintages. A drawback is here that one cannot make a `BATI` to `BATI` (or
+`BATI_REMARQUABLE` to `BATI_REMARQUABLE`) comparison across vintages.
 
- - PB: changes in the logic used to separate BATI from BATI_REMARQUABLE
-   across vintages: the remarquble buildings are not the same in 2019, 2012
-   and 2015. Solution: if a separation is needed, keep the same criteria
-   (and provide it). Otherwise place this information inside the CiotyGML file
-   (use Generic Attribute)
-
+**Possible improvement of the data**: when a file separation criteria is 
+needed (be it burough or special types of buildings), then provide such
+criteria and keep them across vintages.
 
 ## Open questions
  * Would there be some technical means to provide some evaluation of the
