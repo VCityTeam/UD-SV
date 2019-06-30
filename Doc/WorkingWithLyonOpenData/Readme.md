@@ -19,10 +19,12 @@ The following glitches might block your algorithms at parsing time
 Some information, provided in the form a generic attribute (`<gen:stringAttribute ... >`, `<gen:intAttribute ...>`,
 `<gen:doubleAttribute ...>`) i.e. extending the CityGML model, is not always documented. For example [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml) (extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) presents the 
 following tags:
+
 "BUILDINGID", "MILLESIME", "ZMIN", "ADRESSE", "NOMCOMMUNE", "NOMOFFICIE", "CODE_INSEE","CODE_DGI",
 "SURFTOIT, "ADMINISTRA", "CULTE", "DEPLACEMEN", "ENSEIGNEME", "SANTE", "SPORT","URGENCE", "NBMAIS", "NIVMAIS",
 "MAISDATMIN", "NBAPP", "NIVAPP", "APPDATMIN", "APPDATMAX", "NBCOMIN", "NIVCOMIN", "COMIDATMIN", "COMIDATMAX",
 "NBDEP", "NIVDEP", "DEPDATMIN", "DEPDATMAX", "ZMINTOIT", "ZMAXTOIT" and "ZMOYTOIT". 
+
 Additionnaly quite a few of those attributes have no associated value (or have a dummy one).
 
 The drawback of such generic attributes is that is cannot be used (because we don't know the semantics) and yet
