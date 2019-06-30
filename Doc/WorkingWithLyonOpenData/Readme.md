@@ -29,12 +29,26 @@ The geometry of the following building (refer to [this CityGML file](MultipleEnv
 [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) 
 
 <img src="MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-3D.png" alt="drawing" width="500"/>
-is hard to interpret (probably due to the the description of the rooftops) when one whishes to observe its
-footprint with QGIS as illustrated by the following picture:
+is hard to interpret (probably due to the complexity of the description of the rooftops ?).
+Indeed if we try to observe its footprint (with QGIS) by projecting its ``</bldg:RoofSurface>` on the natural
+terrain then we get the following picture:
 
 <img src="MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-2D.png" alt="drawing" width="500"/>
 
-   - Monster leaning tower
+### Some geometrical imprecision ? (2)
+In the 2012 data set, the following building (refer to [this CityGML file](MultipleEnveloppeExample_5_pathologic_leaning_tower/Splited_ChangeDetection_multiple_enveloppe-2_LYON_1ER_BATI_2012_Splited.gml) (extracted from [LYON_1ER_2012.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2012.zip)) is provided in a single "block"
+
+<img src="MultipleEnveloppeExample_5_pathologic_leaning_tower/MultipleEnveloppeExample_5_pathologic_leaning_tower_2015-3D.png" alt="drawing" width="500"/>
+
+and has the following footprint (which is fine)
+
+<img src="MultipleEnveloppeExample_5_pathologic_leaning_tower/MultipleEnveloppeExample_5_pathologic_leaning_tower_2012-2D.png" alt="drawing" width="500"/>.
+
+In the 2015 data set this "block" is splitted in two buildings (which is still fine) (refer to [this CityGML file](MultipleEnveloppeExample_5_pathologic_leaning_tower/Splited_ChangeDetection_multiple_enveloppe-2__LYON_1ER_BATI_2015.gml) as extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)).
+The geometrical difficulty seems to arise in some overlay appearing between the two respective footprints (look at the north east facade) as illustated by the following picture:
+
+![MultipleEnveloppeExample_5](MultipleEnveloppeExample_5_pathologic_leaning_tower/MultipleEnveloppeExample_5_pathologic_leaning_tower_2015-2D.png)
+
  - 2015: limite Vcity de split-building entre 2012 CityGML1 et 2015 CityGML2
 
 ### Multiple enveloppe: what is the semantic behind building regroupment ?
