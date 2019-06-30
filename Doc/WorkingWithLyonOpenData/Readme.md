@@ -42,11 +42,11 @@ terrain then we get the following picture:
 ### Some geometrical imprecision ? (2)
 In the 2012 data set, the following building (refer to [this CityGML file](MultipleEnveloppeExample_5_pathologic_leaning_tower/Splited_ChangeDetection_multiple_enveloppe-2_LYON_1ER_BATI_2012_Splited.gml) (extracted from [LYON_1ER_2012.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2012.zip)) is provided in a single "block"
 
-<img src="MultipleEnveloppeExample_5_pathologic_leaning_tower/MultipleEnveloppeExample_5_pathologic_leaning_tower_2015-3D.png" alt="drawing" width="500"/>
+<img src="MultipleEnveloppeExample_5_pathologic_leaning_tower/MultipleEnveloppeExample_5_pathologic_leaning_tower_2015-3D.png" alt="drawing" width="600"/>
 
 and has the following footprint (which is fine)
 
-<img src="MultipleEnveloppeExample_5_pathologic_leaning_tower/MultipleEnveloppeExample_5_pathologic_leaning_tower_2012-2D.png" alt="drawing" width="500"/>.
+<img src="MultipleEnveloppeExample_5_pathologic_leaning_tower/MultipleEnveloppeExample_5_pathologic_leaning_tower_2012-2D.png" alt="drawing" width="600"/>.
 
 In the 2015 data set this "block" is splitted in two buildings (which is still fine) (refer to [this CityGML file](MultipleEnveloppeExample_5_pathologic_leaning_tower/Splited_ChangeDetection_multiple_enveloppe-2__LYON_1ER_BATI_2015.gml) as extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)).
 The geometrical difficulty seems to arise in some overlay appearing between the two respective footprints (look at the north east facade) as illustated by the following picture:
@@ -76,7 +76,7 @@ what about the following case where a single CityGML logical buildings gathers c
 
 **Possible improvement of the data**: **choose a single regroupement logic** (while providing the associated semantics) and **apply that logic homogeneously across the city data**.
 
-### Trying to degroup buildings: the limit of the split building strategy
+### Trying to degroup buildings: the limit of the split building strategy (1)
 In order to separate the "artificial" building regroupment one can try to split them. The following cases illustrate
 the current geometrical numerical limits of this strategy.
 
@@ -85,6 +85,7 @@ the top of the lift of the building (that get detected as separated buildings):
 
 ![MultipleEnveloppeExample_4](MultipleEnveloppeExample_4_split_problem/MultipleEnveloppeExample_4_split_problem.png)
 
+### Trying to degroup buildings: the limit of the split building strategy (2)
 The following picture illustates the result of applying the split algorithm on a 2012 building 
 ![MultipleEnveloppeExample_3](MultipleEnveloppeExample_3_split_problem/MultipleEnveloppeExample_3_split_problem-2012_splitted-3D.png)
 The same building comes splitted within the 2015 data. Let us consider the building (defined by [this CityGLM file](MultipleEnveloppeExample_3_split_problem/LYON_1ER_BATI_2015_extracted_problem_multiple_envelopes_2_69381AT59.gml) extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) illustrated by the following picture
@@ -95,51 +96,54 @@ Alas this logical building should/might be described as two buildings. Indeed al
 unique 
 ![MultipleEnveloppeExample_3](MultipleEnveloppeExample_3_split_problem/MultipleEnveloppeExample_3_split_problem-2015-2D.png)
 the following close up reveals that they are separated
-![MultipleEnveloppeExample_3](MultipleEnveloppeExample_3_split_problem/MultipleEnveloppeExample_3_split_problem-2015-2D_close_up.png).
+![MultipleEnveloppeExample_3](MultipleEnveloppeExample_3_split_problem/MultipleEnveloppeExample_3_split_problem-2015-2D_close_up.png)
 
- * as illustrated below (refer to the inter-vintages comparison difficulties) probably that the best practice would be to have
-   a single CityGML building for a single geometrical building.
+Note: we failed to apply the split algorithm on 2015 files because of a change in the format (from 2012).
 
+**Possible improvement of the data**: as illustrated below (refer to the inter-vintages comparison difficulties) probably that the best practice would be to provide CityGML data where a single CityGML building correponds to a single geometrical building.
 
 ## Inter vintage hindrances
 A difficulty, in understanding the dynamic evolution of the geometry
 of city, can arise when the identifier (labeling) of a singular city
 object changes across vintages.
+
+### Changes in the building (city object) identifiers (labeling)
 For example consider the changes in the labeling of the same physical
 buildings (more generaly any city object) between year 2012 and 2015:
 
-VintagesIDRenumbering 2012
 ![Vintages ID Renumbering 2012](VintagesIDRenumbering/VintagesIDRenumbering-2012-3D.png)
-VintagesIDRenumbering 2015
+
 ![Vintages ID Renumbering 2015](VintagesIDRenumbering/VintagesIDRenumbering-2015-3D.png)
 
-Understanding the changes requires, or is greatly complicated by a lack
-of, identifiers that remain valid accross vintages.
+**Possible improvement of the data**: understanding the city changes would be greatly simplified
+if the **identifiers remained valid accross vintages**.
+ 
+### Changes in the data semantic structuration 
+As illustrated in the above "Single vintage difficulties", buildings come logically regrouped
+(with some undocummented strategy). An additional difficulty comes from the fact that this
+regrouping strategy changes accross vintages: for the 2015 vintage data buildings seem to
+be decomposed against land registry. In opposition the previous 2009 and 2012 vintages seem
+to adopt a different strategy.
+**Possible improvement of the data**: avoid structural changes in the description of the data.
 
-Because buildings are regrouped we need to split
+### Changes in data formats
+Accross years the CityGML changed and different vintages use different file formats.
+A single algorithm trying to establish comparisons across vintages require to know
+about all searche formats.
+**Possible improvement of the data**: rewrite previous vintages with the "current"
+CityGML file format (?). 
 
-Weird split
+### Changes in the file spliting
 
-Tiny changes in the geometry    
-    
- - PB: changes in the building (city object) identifiers (labeling) for
-     a singular city object (across vintages)
- - PB: changes in the data semantic structuration (il faudrait une cohérence
-    de structuraiton)
-     2015 decoupe selon le cadastre
-     2019-2012: criteres indetermines (mais differents)
-   - Monster: multiple envelopes (leaning tower)
- - PB: les formats sont differents (chaque année il faudrait les reconvertir
-   les années précédentes)
  - PB: changes in the logic used to separate BATI from BATI_REMARQUABLE
    across vintages: the remarquble buildings are not the same in 2019, 2012
    and 2015. Solution: if a separation is needed, keep the same criteria
    (and provide it). Otherwise place this information inside the CiotyGML file
    (use Generic Attribute)
- - leaning tower: multiple envelope sans plan B car imprecision geometrique
 
-## Demandes
- - Dispose t'on the acquisition process in order to evaluate the induced
-   acquisition error ?
+
+## Open questions
+ * Would there be some technical means to provide some evaluation of the
+   induced acquisition error (for a given data) ?
 
 
