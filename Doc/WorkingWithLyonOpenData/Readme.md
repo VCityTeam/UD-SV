@@ -161,6 +161,19 @@ But if we compare the respective footprints (projection on the natural terrain) 
 a slight difference:
 ![VintagesTinyDifference 2D comparison](VintagesTinyDifference/VintagesTinyGeometricDifference-2D_comparison.png)
 
+### Switch of regroupment strategy
+Consider the following building of the 2012 vintage:
+![VintagesFusionAndSubdivision 2012](VintagesFusionAndSubdivision/VintagesFusionAndSubdivision-2012_3D_part_1.png)
+
+The central part of the this building becomes the following building (notice that a piece located at the extreme west of the building is missing): 
+![VintagesFusionAndSubdivision 2015 1](VintagesFusionAndSubdivision/VintagesFusionAndSubdivision-2015_3D_part_1.png)
+
+The "missing" sub-building gets regrouped with another building as illustrated here (2015 vintage):
+![VintagesFusionAndSubdivision 2015 1](VintagesFusionAndSubdivision/VintagesFusionAndSubdivision-2015_3D_part_2.png)
+
+Such a reaffectation of sub-building makes it complicated to interpret the city changes.
+
+**Possible improvement of the data** (already mentionned above): provide CityGML data where each CityGML building correponds to a single geometrical building.
 
 ## Open questions
  * Would there be some technical means to provide some evaluation of the
