@@ -53,9 +53,7 @@ The geometrical difficulty seems to arise in some overlay appearing between the 
 
 ![MultipleEnveloppeExample_5](MultipleEnveloppeExample_5_pathologic_leaning_tower/MultipleEnveloppeExample_5_pathologic_leaning_tower_2015-2D.png)
 
- - 2015: limite Vcity de split-building entre 2012 CityGML1 et 2015 CityGML2
-
-### Multiple enveloppe: what is the semantic behind building regroupment ?
+### Multiple enveloppe (sub-buildings): what is the semantic behind building regroupment ?
 It is hard to understand what is the logic that governs the regroupement of the geometries
 of independent physical buildings (that is buildings that are geometrically distinct i.e.
 separated by a spatial gap) within a single CityGML "logical" building. Note that this is made
@@ -78,6 +76,26 @@ what about the following case where a single CityGML logical buildings gathers c
 
 **Possible improvement of the data**: **choose a single regroupement logic** (while providing the associated semantics) and **apply that logic homogeneously across the city data**.
 
+### Trying to degroup buildings: the limit of the split building strategy
+In order to separate the "artificial" building regroupment one can try to split them. The following cases illustrate
+the current geometrical numerical limits of this strategy.
+
+The following picture illustates that the spliting algorithms cannot deal adequatly with some of technical rooms located at 
+the top of the lift of the building (that get detected as separated buildings):
+
+![MultipleEnveloppeExample_4](MultipleEnveloppeExample_4_split_problem/MultipleEnveloppeExample_4_split_problem.png)
+
+The following picture illustates the result of applying the split algorithm on a 2012 building 
+![MultipleEnveloppeExample_3](MultipleEnveloppeExample_3_split_problem/MultipleEnveloppeExample_3_split_problem-2012_splitted-3D.png)
+The same building comes splitted within the 2015 data. Let us consider the building (defined by [this CityGLM file](MultipleEnveloppeExample_3_split_problem/LYON_1ER_BATI_2015_extracted_problem_multiple_envelopes_2_69381AT59.gml) extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) illustrated by the following picture
+
+![MultipleEnveloppeExample_3](MultipleEnveloppeExample_3_split_problem/MultipleEnveloppeExample_3_split_problem-2015-3D.png)
+
+Alas this logical building should/might be described as two buildings. Indeed although seen from far this building seems
+unique 
+![MultipleEnveloppeExample_3](MultipleEnveloppeExample_3_split_problem/MultipleEnveloppeExample_3_split_problem-2015-2D.png)
+the following close up reveals that they are separated
+![MultipleEnveloppeExample_3](MultipleEnveloppeExample_3_split_problem/MultipleEnveloppeExample_3_split_problem-2015-2D_close_up.png).
 
  * as illustrated below (refer to the inter-vintages comparison difficulties) probably that the best practice would be to have
    a single CityGML building for a single geometrical building.
