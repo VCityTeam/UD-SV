@@ -2,7 +2,7 @@
 
 ## Single vintage difficulties
 
-### Compromised (?) data
+### Data with some format error
 The following glitches might block your algorithms at parsing time
 (which is fine) but might also confuse any geometrical post-treatment
 (which might be harder to detect) :
@@ -13,7 +13,7 @@ The following glitches might block your algorithms at parsing time
       starting on line 1202791 and ending at line 1202817) within the file `LYON_8EME_2009/LYON_8EME_BATI_2009.gml` of
       [LYON_1ER_2009.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2009.zip)
     - 2012 intall: autre type
- * Linear ring not closed on import of 3DCityDB
+ * Also note that when importing similar CityGML data with the [3DCityDB importer](https://github.com/3dcitydb/importer-exporter) into a database, the importer complains with quite a few `Linear ring not closed` warning messages.
 
 ### Undocummented additional data (?)
 Some information, provided in the form a generic attribute (`<gen:stringAttribute ... >`, `<gen:intAttribute ...>`,
