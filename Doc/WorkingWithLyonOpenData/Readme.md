@@ -22,16 +22,32 @@ Some information (provided in the form a genenric attribute) is not always
    - Monster leaning tower
  - 2015: limite Vcity de split-building entre 2012 CityGML1 et 2015 CityGML2
 
-### Multiple enveloppe: what is the semantic behind building regroupment
-MultipleEnveloppeExample_1 3D
-![MultipleEnveloppeExample_1 3D](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-3D.png)
-MultipleEnveloppeExample_1 2D
-![MultipleEnveloppeExample_1 2D](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-2D.png)
-The corresponding [CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml)
-extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)
+### Multiple enveloppe: what is the semantic behind building regroupment ?
+It is hard to understand what is the logic that governs the regroupement of the geometries
+of independent physical buildings (that buildings geometrically distinct and separated by
+a spatial gap) within a single CityGML "logical" building. 
+For example the following CityGML building (with a single gml identifier) is constituted
+by many different sub-buildings (refer to [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml)
+extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)):
 
-MultipleEnveloppeExample_1 3D Huge set of buldings
-![MultipleEnveloppeExample_1 Huge](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1_Huge-3D.png)
+<div id="banner">
+  <div class="inline-block">
+     <img src="MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-3D.png" alt="drawing" width="420"/>
+  </div>
+  <div class="inline-block">
+     <img src="MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-2D.png" alt="drawing" width="420"/>
+  </div>
+</div>
+
+Although in the above case, the regroupement of sub-buildings (that all belong to the so
+called ["subsistances"](https://en.wikipedia.org/wiki/Les_Subsistances) probably follows to administrative logic,
+what about the following case where a single CityGML logical buildings gathers close to 50 independent buildings
+![MultipleEnveloppeExample_1 Huge](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1_Huge-3D.png).
+
+**Chosing a single regroupement logic** (while providing the associated semantics) and **keeping
+a coherent logic across the city** would ease its usage.
+
+
 
 ## Inter vintage hindrances
 A difficulty, in understanding the dynamic evolution of the geometry
