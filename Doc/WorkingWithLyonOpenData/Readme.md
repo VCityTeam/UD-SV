@@ -18,11 +18,15 @@ The following glitches might block your algorithms at parsing time
 ### Undocummented additional data (?)
 Some information, provided in the form a generic attribute (`<gen:stringAttribute ... >`, `<gen:intAttribute ...>`,
 `<gen:doubleAttribute ...>`) i.e. extending the CityGML model, is not always documented. For example [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml) (extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) presents the 
-following tags: "BUILDINGID", "MILLESIME", "ZMIN", "ADRESSE", "NOMCOMMUNE", "NOMOFFICIE", "CODE_INSEE","CODE_DGI",
+following tags:
+"BUILDINGID", "MILLESIME", "ZMIN", "ADRESSE", "NOMCOMMUNE", "NOMOFFICIE", "CODE_INSEE","CODE_DGI",
 "SURFTOIT, "ADMINISTRA", "CULTE", "DEPLACEMEN", "ENSEIGNEME", "SANTE", "SPORT","URGENCE", "NBMAIS", "NIVMAIS",
 "MAISDATMIN", "NBAPP", "NIVAPP", "APPDATMIN", "APPDATMAX", "NBCOMIN", "NIVCOMIN", "COMIDATMIN", "COMIDATMAX",
-"NBDEP", "NIVDEP", "DEPDATMIN", "DEPDATMAX", "ZMINTOIT", "ZMAXTOIT" and "ZMOYTOIT". Additionnaly quite a few of those 
-attributes have no associated value (or have a dummy one). 
+"NBDEP", "NIVDEP", "DEPDATMIN", "DEPDATMAX", "ZMINTOIT", "ZMAXTOIT" and "ZMOYTOIT". 
+Additionnaly quite a few of those attributes have no associated value (or have a dummy one).
+
+The drawback of such generic attributes is that is cannot be used (because we don't know the semantics) and yet
+it makes the CityGML files bigger (and some of them are already too heavy to be edited).
 
 ### Some geometrical imprecision ? (1)
 The geometry of the following building (refer to [this CityGML file](MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-LYON_1ER_BATI_2015.gml) as extracted from
@@ -30,7 +34,7 @@ The geometry of the following building (refer to [this CityGML file](MultipleEnv
 
 <img src="MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-3D.png" alt="drawing" width="500"/>
 is hard to interpret (probably due to the complexity of the description of the rooftops ?).
-Indeed if we try to observe its footprint (with QGIS) by projecting its ``</bldg:RoofSurface>` on the natural
+Indeed if we try to observe its footprint (with QGIS) by projecting its `</bldg:RoofSurface>` on the natural
 terrain then we get the following picture:
 
 <img src="MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-2D.png" alt="drawing" width="500"/>
