@@ -15,19 +15,36 @@ The following glitches might block your algorithms at parsing time
     - 2012 intall: autre type
  * Linear ring not closed on import of 3DCityDB
 
-### Unfound metadata
-Some information (provided in the form a genenric attribute) is not always
-   document: grep <gen:*Attribute> and n'importe quel fichier 2015
- - Geometrical imprecision
+### Undocummented additional data (?)
+Some information, provided in the form a generic attribute (`<gen:stringAttribute ... >`, `<gen:intAttribute ...>`,
+`<gen:doubleAttribute ...>`) i.e. extending the CityGML model, is not always documented. For example [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml) (extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) presents the 
+following tags: "BUILDINGID", "MILLESIME", "ZMIN", "ADRESSE", "NOMCOMMUNE", "NOMOFFICIE", "CODE_INSEE","CODE_DGI",
+"SURFTOIT, "ADMINISTRA", "CULTE", "DEPLACEMEN", "ENSEIGNEME", "SANTE", "SPORT","URGENCE", "NBMAIS", "NIVMAIS",
+"MAISDATMIN", "NBAPP", "NIVAPP", "APPDATMIN", "APPDATMAX", "NBCOMIN", "NIVCOMIN", "COMIDATMIN", "COMIDATMAX",
+"NBDEP", "NIVDEP", "DEPDATMIN", "DEPDATMAX", "ZMINTOIT", "ZMAXTOIT" and "ZMOYTOIT". Additionnaly quite a few of those 
+attributes have no associated value (or have a dummy one). 
+
+### Some geometrical imprecision ? (1)
+The geometry of the following building (refer to [this CityGML file](MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-LYON_1ER_BATI_2015.gml) as extracted from
+[LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) 
+
+<img src="MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-3D.png" alt="drawing" width="500"/>
+is hard to interpret (probably due to the the description of the rooftops) when one whishes to observe its
+footprint with QGIS as illustrated by the following picture:
+
+<img src="MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-2D.png" alt="drawing" width="500"/>
+
    - Monster leaning tower
  - 2015: limite Vcity de split-building entre 2012 CityGML1 et 2015 CityGML2
 
 ### Multiple enveloppe: what is the semantic behind building regroupment ?
 It is hard to understand what is the logic that governs the regroupement of the geometries
-of independent physical buildings (that buildings geometrically distinct and separated by
-a spatial gap) within a single CityGML "logical" building. 
+of independent physical buildings (that is buildings that are geometrically distinct i.e.
+separated by a spatial gap) within a single CityGML "logical" building. Note that this is made
+possible by the CityGML model that offers to provide e.g. as many `</bldg:WallSurface>` and/or
+`</bldg:RoofSurface>` (possibly defined as `<gml:MultiSurface>`) are desired.
 For example the following CityGML building (with a single gml identifier) is constituted
-by many different sub-buildings (refer to [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml)
+of many different sub-buildings (refer to [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml)
 extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)):
 
 <img src="MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-3D.png" alt="drawing" width="500"/>
@@ -39,10 +56,13 @@ called ["subsistances"](https://en.wikipedia.org/wiki/Les_Subsistances) probably
 what about the following case where a single CityGML logical buildings gathers close to 50 independent buildings
 (highlighted in red):
 
-![MultipleEnveloppeExample_1 Huge](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1_Huge-3D.png).
+![MultipleEnveloppeExample_1 Huge](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1_Huge-3D.png)
 
-**Chosing a single regroupement logic** (while providing the associated semantics) and **keeping
-a coherent logic across the city** would ease its usage.
+**Possible improvement of the data**: **choose a single regroupement logic** (while providing the associated semantics) and **apply that logic homogeneously across the city data**.
+
+
+ * as illustrated below (refer to the inter-vintages comparison difficulties) probably that the best practice would be to have
+   a single CityGML building for a single geometrical building.
 
 
 ## Inter vintage hindrances
