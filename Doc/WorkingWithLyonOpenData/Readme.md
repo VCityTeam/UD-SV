@@ -30,23 +30,19 @@ For example the following CityGML building (with a single gml identifier) is con
 by many different sub-buildings (refer to [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml)
 extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)):
 
-<div id="banner">
-  <div class="inline-block">
-     <img src="MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-3D.png" alt="drawing" width="420"/>
-  </div>
-  <div class="inline-block">
-     <img src="MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-2D.png" alt="drawing" width="420"/>
-  </div>
-</div>
+<img src="MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-3D.png" alt="drawing" width="500"/>
+
+<img src="MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-2D.png" alt="drawing" width="500"/>
 
 Although in the above case, the regroupement of sub-buildings (that all belong to the so
 called ["subsistances"](https://en.wikipedia.org/wiki/Les_Subsistances) probably follows to administrative logic,
 what about the following case where a single CityGML logical buildings gathers close to 50 independent buildings
+(highlighted in red):
+
 ![MultipleEnveloppeExample_1 Huge](MultipleEnveloppeExample_1/MultipleEnveloppeExample_1_Huge-3D.png).
 
 **Chosing a single regroupement logic** (while providing the associated semantics) and **keeping
 a coherent logic across the city** would ease its usage.
-
 
 
 ## Inter vintage hindrances
