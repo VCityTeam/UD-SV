@@ -55,6 +55,12 @@ rm LYON_8EME_${1}.zip
 wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_9EME_${1}.zip
 unzip LYON_9EME_${1}.zip
 rm LYON_9EME_${1}.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/BRON_2015_${1}.zip
+unzip BRON_2015_${1}.zip
+rm BRON_2015_${1}.zip
+wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/VILLEURBANNE_2015_${1}.zip
+unzip VILLEURBANNE_2015_${1}.zip
+rm VILLEURBANNE_2015_${1}.zip
 
 # Patch the files to remove inconsistencies, allowing to avoir problems to any
 # geometric post-treatments. Patches include removal of buildings having an
