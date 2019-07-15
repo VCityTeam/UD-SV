@@ -1,26 +1,7 @@
-# Debian 3DCityDB installation walkthrough
+# 3DCityDB installation walkthrough (on debian like platforms)
 
-## Installation of Java Runtime Environment
- Installing such an environment is required in order to run [3DCityDB Importer/Exporter](https://github.com/3dcitydb/importer-exporter).
- 
- * Install Java Runtime Environment (version 8 or higher as specified in the [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/)). We here follow the ["Manual install" section of Ask-Ubuntu](https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (refer also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/)):
-     - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (because of Oracle's acceptance policy uses a cookie validation you might not be able to use wget directly in which case rebounce e.g. on your desktop) 
-     - ````
-       (root)$ cd /tmp       # in case the tarball is not clean
-       (root)$ tar zxvf jre-8u131-linux-x64.tar.gz
-       (root)$ mkdir /usr/lib/jvm
-       (root)$ mv jre1.8.0_131 /usr/lib/jvm/oracle_jre1.8.0_131
-       (root)$ update-alternatives --install /usr/bin/java java /usr/lib/jvm/oracle_jre1.8.0_131/bin/java 2000
-       (root)$ rm -f jre-8u131-linux-x64.tar.gz
-       ````
-     - Create a `/etc/profile.d/oraclejdk.sh` with ad-hoc content e.g.
-       ````
-       export J2REDIR=/usr/lib/jvm/oracle_jre1.8.0_131
-       export PATH=$PATH:/usr/lib/jvm/oracle_jre1.8.0_131/bin:
-       export JAVA_HOME=/usr/lib/jvm/oracle_jre1.8.0_131
-       ````
-
-## Installation 3DCityDB+PostGIS using docker
+## 1/ Installing a 3DCityDB+PostGIS server
+### 1.A/ Installing a 3DCityDB+PostGIS server with docker
 
 [Here](https://docs.docker.com/install/) is a page where you can learn about, download and install docker on your computer, if you have not done it yet.
 
@@ -90,7 +71,7 @@ services:
       
      * Then, try again `sudo docker compose up`.
  
-## Manual installation of 3DCityDB+PostGIS
+### 1.B/ Installing a 3DCityDB+PostGIS server with a package manager (apt)
 Tested on:
  - Debian (GNU/Linux) 8.8 (jessie)
  - Ubuntu 14.04.3 (`lsb_release -a` yields `Ubuntu 14.04.3 LTS, Release 14.04, Codename trusty`)
@@ -155,8 +136,29 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      (root)$ su - citydb_user
      (citydb_user)$ psql -d citydb_v3 -c 'create extension postgis;'
      ````
- ## Download and configure 3DCityDB Importer/Exporter
+     
+## 2/ Feeding data to the 3DCity Data Base
+### 2.1/ Installation of Java Runtime Environment
+Installing such an environment is required in order to run [3DCityDB Importer/Exporter](https://github.com/3dcitydb/importer-exporter).
  
+ * Install Java Runtime Environment (version 8 or higher as specified in the [3DCityDB requirement](http://www.3dcitydb.org/3dcitydb/downloads/)). We here follow the ["Manual install" section of Ask-Ubuntu](https://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)] (refer also [here](https://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/)):
+     - assert your architecture (32 or 64 bits) with `arch` and download the [latest version of JRE-8 from Oracle](http://www.oracle.com/technology/software/index.html) (`jre-8u131-linux-x64.tar.gz` as of April 2017) (because of Oracle's acceptance policy uses a cookie validation you might not be able to use wget directly in which case rebounce e.g. on your desktop) 
+     - ````
+       (root)$ cd /tmp       # in case the tarball is not clean
+       (root)$ tar zxvf jre-8u131-linux-x64.tar.gz
+       (root)$ mkdir /usr/lib/jvm
+       (root)$ mv jre1.8.0_131 /usr/lib/jvm/oracle_jre1.8.0_131
+       (root)$ update-alternatives --install /usr/bin/java java /usr/lib/jvm/oracle_jre1.8.0_131/bin/java 2000
+       (root)$ rm -f jre-8u131-linux-x64.tar.gz
+       ````
+     - Create a `/etc/profile.d/oraclejdk.sh` with ad-hoc content e.g.
+       ````
+       export J2REDIR=/usr/lib/jvm/oracle_jre1.8.0_131
+       export PATH=$PATH:/usr/lib/jvm/oracle_jre1.8.0_131/bin:
+       export JAVA_HOME=/usr/lib/jvm/oracle_jre1.8.0_131
+       ````
+     
+## 2.2/ Download and configure 3DCityDB Importer/Exporter 
  * Download 3DCityDB Importer/Exporter latest stable version software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/).
  
    Here is the command to run for the version 3.3.1:
@@ -210,7 +212,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      #------------------------------------------------------------------------------
      ```
 
-## Import some CityGML file content
+## 2.3/ Import some CityGML file content
  * Chapter 3.3.2 P. 100, Step 3: **Execute the CREATE_DB script**
    - ````
      cd <path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/
@@ -267,7 +269,7 @@ _First, please make sure that you have an existing and working database PostGreS
      * Hit browse and choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
      * Hit Import 
 
-## Importation examples
+### 2.4/ Some importation examples
  - [Open Data](https://data.grandlyon.com/search/?Q=citygml+lyon) of Lyon Métropole for [year 2012: a walkthrough](DataLyonCityGML2012.md) 
  - [Open Data](https://data.grandlyon.com/search/?Q=citygml+lyon) of Lyon Métropole for [year 2015: a walkthrough](DataLyonCityGML2015.md)
 
