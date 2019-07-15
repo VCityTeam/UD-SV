@@ -25,6 +25,16 @@ This chapter describes two different methods for installing a [3DCity Data Base]
     -e "POSTGRES_PASSWORD=postgres" \
       tumgis/3dcitydb-postgis
     ```
+ * Troubleshooting: if you get the following error message (when invocating your do`docker run`)
+    ```
+    ERROR: for citydb  Cannot start service citydb: driver failed programming external connectivity on endpoint v4xx_citydb_1 (ef8b3de53a730cab2acd26a041d180f19dc448c5e346138e2a5e2a38dee71b72): Bind for 0.0.0.0:5432 failed: port is already allocated
+    ```
+    you probably need to free the 5432 port. This port might be pre-empted by a (previously run) dandling container that you might retrieve an kill with the following method
+      - print the list of running containers with the command `sudo docker container ls`,
+      - find the container named <name> using the 5432 port,
+      - run the command `sudo docker container stop <name>`,
+      - eventually try again your `docker run ...` command.
+    Note that the 5432 port might also be allocated by some other services that you might retrieve with at command of the from `lsof -i :5432`.
       
 #### FIXME Old version to clean up
  * Run the full 3DCityDB service stack with a single command, on [this page](https://github.com/tum-gis/3dcitydb-docker-compose/tree/master/3dcitydb+wfs).
