@@ -1,8 +1,17 @@
-# 3DCityDB installation walkthrough (on debian like platforms)
+# 3DCityDB installation walkthrough
+
+Table of Content
+ - [Installing a 3DCityDB+PostGIS server](#1-installing-a-3dcitydbpostgis-server)
+   * [3DCityDB **docker install**](#1a-installing-a-3dcitydbpostgis-server-with-docker)
+   * [Native package (apt) level installation](#1b-installing-a-3dcitydbpostgis-server-with-a-package-manager-apt)
+ - [Feeding data to the 3DCity Data Base](#2-feeding-data-to-the-3dcity-data-base)
 
 ## 1/ Installing a 3DCityDB+PostGIS server
+This chapter describes two different methods for installing a [3DCity Data Base](https://www.3dcitydb.org/3dcitydb/) server :
+ - a quick an easy [3DCityDB **docker install**](#1a-installing-a-3dcitydbpostgis-server-with-docker)
+ - a customizable [native package (apt) level installation](#1b-installing-a-3dcitydbpostgis-server-with-a-package-manager-apt)
+ 
 ### 1.A/ Installing a 3DCityDB+PostGIS server with docker
-
 [Here](https://docs.docker.com/install/) is a page where you can learn about, download and install docker on your computer, if you have not done it yet.
 
   * Run the full 3DCityDB service stack with a single command, on [this page](https://github.com/tum-gis/3dcitydb-docker-compose/tree/master/3dcitydb+wfs).
