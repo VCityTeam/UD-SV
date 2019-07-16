@@ -1,47 +1,32 @@
-  - [Install notes](#install-notes)
-    - [Server-side components install](#server-side-components-install)
-      - [Install 3DCityDB](#install-3dcitydb)
-      - [Install UDV-server](#install-udv-server)
-      - [Install py3dtiles](#install-py3dtiles)
-      - [Install a 3dtiles web server](#install-a-3dtiles-web-server)
-    - [Client install](#client-install)
-      - [Install UDV web client and iTowns framework](#install-udv-web-client-and-itowns-framework)
-  - [Using the above installed client/server](#using-the-above-installed-clientserver)
-    - [Usecase with 3D data](#usecase-with-3d-data)
-        - [Populate the database](#populate-the-database)
-        - [Create a materialized view of your data](#create-a-materialized-view-of-your-data)
-        - [Generate a 3d-tiles tileset](#generate-a-3d-tiles-tileset)
-        - [Launch a 3d-tiles-samples server for accessing your 3d-tiles tileset](#launch-a-3d-tiles-samples-server-for-accessing-your-3d-tiles-tileset)
-        - [Launch UDV client](#launch-udv-client)
-    - [Usecase with 3D+time data](#usecase-with-3dtime-data)
-        - [Populate database](#populate-database)
-        - [Create a materialized view of your data](#create-a-materialized-view-of-your-data-1)
-        - [Generate a 3d-tiles tileset](#generate-a-3d-tiles-tileset-1)
-        - [Launch a 3d-tiles-samples server for accessing your 3d-tiles tileset](#launch-a-3d-tiles-samples-server-for-accessing-your-3d-tiles-tileset-1)
-        - [Launch UDV client](#launch-udv-client-1)
+
 
 # Install and utilization notes for Unix users
-RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/index.html) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the free and open available software components (front or backend sides).
+RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/index.html) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the free and open available software components (front or backend sides). The general architectural diagram goes (refer to the [architecture section](Doc/Devel/Architecture) for further details)
 
-In order to install the [web based online demos](http://rict.liris.cnrs.fr/index.html) you will need to install two (or more) of the following software components
+![](Doc/Devel/Architecture/Diagrams/SoftwareArchitecture.png)
+
+In order to install the [web based online demos](http://rict.liris.cnrs.fr/index.html) you will need to install some of the following software components
   - [Web client (install)](#client-install): a WebGL/[iTowns](http://www.itowns-project.org/) based javascript web framework for 3D geospatial data visualision
   - [Backend-side components](#backend-side-components-install)
-    - [3DCityDB](#install-3dcitydb): a CityGML based geographical database
-    - [UDV-server](#install-udv-server): a set of city data treatments 
-    - [py3dtiles](#install-py3dtiles): a tiled interchange format for city geometrical data 
-    - [a 3dtiles web server](#install-a-3dtiles-web-server): a web server of city data
+    - [3DCityDB (install)](#install-3dcitydb): a CityGML based geographical database
+    - [UDV-server (install)](#install-udv-server): a set of city data treatments 
+    - [py3dtiles (install)](#install-py3dtiles): a tiled interchange format for city geometrical data 
+    - [a 3dtiles web server (install)](#install-a-3dtiles-web-server): a web server of city data
 
 The following documentation explains how to install and configure each of the respective components (or points to existing documentation). It also indicates how to assemble/integrate them in order to obtain the demos.
-Depending on the demo you are trying to replicate (that you can then extend and customize to suit your needs) you shall only need a subset of such components.
+Depending on the demo you are trying to replicate (that you can then extend and customize to suit your needs) **you shall only need a subset of such components**.
 
-VCity's web application and then how to use them with two use-cases:
-    * 3D urban data web exchange and visualisation
-    * 3D+time urban data web exchange and visualisation
+The following demo specific docs illustrate how to install the required components corresponding to two use use-cases:
+    * [3D urban data visualisation](#usecase-with-3d-data) use case
+    * [3D + time urban data visualisation](#usecase-with-3dtime-data) use case
 
-The application is composed of server-side components and of a web client based on [iTowns](http://www.itowns-project.org/) (javascript web framework for visualisation 3D geospatial data). You can find more information about these components and about the software architecture of the application [here](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel/Architecture).
+## Component install notes
+### Client install
 
-## Install notes
+#### Install UDV web client and iTowns framework
 
+ Follow the install notes described in https://github.com/MEPP-team/UDV/blob/master/install.md
+ 
 ### Backend-side components install
 
 #### Install 3DCityDB
@@ -122,11 +107,7 @@ The examples tilesets will then appear as hosted at `http://localhost:8003/tiles
 
 If you want to run a remote server for streaming a 3d-tiles tileset, you can use an Apache server see Step (6) of Install/InstallVilo3D for more informations on how to setup one).
 
-### Client install
 
-#### Install UDV web client and iTowns framework
-
- Follow the install notes described in https://github.com/MEPP-team/UDV/blob/master/install.md
 
 ## Using the above installed client/server
 
