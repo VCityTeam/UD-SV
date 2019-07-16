@@ -37,7 +37,7 @@ Eventually you will then need to:
      * the resulting tile set file (with the .json extension) and 
      * a `tiles` folder containing the `.b3dm` files
      
-### Developer's not
+### Developer's note
 If you happen to modify the core of py3dtiles (that is any file in the `py3dtiles/py3dtiles/` subdirectory) then prior to running any script using Py3DTiles (e.g. a Tiler or export_tileset) you will need to re-install Py3DTiles for changes to be considered. The commands are then
 ```
 pip uninstall py3dtiles     # Just to avoid pycache trouble
