@@ -18,7 +18,7 @@ This chapter describes two different methods for installing a [3DCity Data Base]
     docker run -dit \
     --name citydb-container \
     -p 5432:5432 \
-    -e "CITYDBNAME=citydb"
+    -e "CITYDBNAME=citydb" \
     -e "SRID=3946" \
     -e "SRSNAME=espg:3946" \
     -e "POSTGRES_USER=postgres" \
