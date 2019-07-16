@@ -3,7 +3,7 @@
 ## Table of content
   * [Introduction](#introduction)
   * [Component install notes](#component-install-notes)
-    - [(Frontend) UDV web client install notes ](#frontend-udv-web-client-install-notes-)
+    - [(Frontend) UDV web client install notes ](#frontend-udv-web-client-install-notes)
     - [(Backend) 3DCityDB install notes](#backend-3dcitydb-install-notes)
     - [(Backend) UDV-server/API_Enhanced_City install notes](#backend-udv-serverapi_enhanced_city-install-notes)
     - [(Backend) py3dtiles install notes](#backend-py3dtiles-install-notes)
