@@ -19,23 +19,23 @@ The following documentation explains how to install and configure each of the re
 Depending on the demo you are trying to replicate (that you can then extend and customize to suit your needs) **you shall only need a subset of such components**.
 
 The following demo specific docs illustrate how to install the required components corresponding to two use use-cases:
- * [3D urban data visualisation](#usecase-with-3d-data) use case
- * [3D + time urban data visualisation](#usecase-with-3dtime-data) use case
+ * [3D urban data visualisation](#usecase-with-3d-data) use case,
+ * [3D + time urban data visualisation](#usecase-with-3dtime-data) use case.
 
 ## Component install notes
 
 ### (Frontend) UDV web client install notes 
-The installation of the [UDV web client](https://github.com/MEPP-team/UDV) and its associated demos (using the [iTowns](http://www.itowns-project.org/) is [fully described within the UDV repository](https://github.com/MEPP-team/UDV/blob/master/install.md)
+The installation of the [UDV web client](https://github.com/MEPP-team/UDV) and its associated demos (using the [iTowns](http://www.itowns-project.org/) is [fully described within the UDV repository](https://github.com/MEPP-team/UDV/blob/master/install.md).
 
 ### (Backend) 3DCityDB install notes
 The installation notes of a 3DCityDB database are [provided here](Install/Install3DCityDB.md).
 
 ### (Backend) UDV-server/API_Enhanced_City install notes
-[API_Enhanced_City](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md) is an [UDV-server](https://github.com/MEPP-team/UDV-server) sub-componennt that offers backend support to attach arbitrary types of documents to urban data. When needed proceed with [these API_Enhanced_City install notes](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md)
+[API_Enhanced_City](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md) is an [UDV-server](https://github.com/MEPP-team/UDV-server) sub-componennt that offers backend support to attach arbitrary types of documents to urban data. When needed proceed with [these API_Enhanced_City install notes](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md).
 
 ### (Backend) py3dtiles install notes
 [Oslandia's Py3Dtiles](https://github.com/Oslandia/py3dtiles)) are the Python wrappings of [3DTiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for city geometrical data. You should use [RICT's fork of py3dtiles](https://github.com/MEPP-team/py3dtiles) and its [3dtiles-temporal-v2](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2) that offers alternative/additionnal "Tilers" (treatments that build [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) out of CityGML files or a 3DCityDB database.
-The general [install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst) should make it but you can also follow [these detailed install note version](InstallPy3dTiles-MeppTeamFork-Tilers.md)
+The general [install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst) should make it but you can also follow [these detailed install note version](InstallPy3dTiles-MeppTeamFork-Tilers.md).
       
 ### (Backend) 3dtiles DESKTOP web server install notes
 In the context of development and if you need to handle over [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) for your client to display then you can deploy a local (on your desktop computer) web (http) server. A quick and easy way to do so (on your desktop) consists in installing a (node.js based) [3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples) server.
@@ -52,7 +52,7 @@ The examples tilesets will then appear as hosted at the `http://localhost:8003/t
 ### (Backend) 3dtiles web server install notes
 In case you want to run a remote and stable web server (as opposed to the above described desktop deployment option) in order to handle over your [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) you can use an [Apache](https://en.wikipedia.org/wiki/Apache_HTTP_Server) or an [Nginx](https://nginx.org/en/) http server.
 
-In the [RICT](..) you can [quickly deploy an Apache web server on Debian](InstallDebianApacheServer.md)
+In the [RICT](..) context, you can [quickly deploy an Apache web server on Debian](InstallDebianApacheServer.md).
 
 ## Using the above installed client/server
 
