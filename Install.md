@@ -1,16 +1,18 @@
+## Installation notes for Unix users
 
+## Table of content
 
-# Install and utilization notes for Unix users
+## Introduction
 RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/index.html) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the [free and open available software components](Doc/Devel/Architecture#components-names) (front or backend sides). The general architectural diagram goes (refer to the [architecture section](Doc/Devel/Architecture) for further details)
 
 ![](Doc/Devel/Architecture/Diagrams/SoftwareArchitecture.png)
 
 In order to install the [web based online demos](http://rict.liris.cnrs.fr/index.html) you will need to install some of the following software components
-  - [Web client (install)](#client-install): a WebGL/[iTowns](http://www.itowns-project.org/) based javascript web framework for 3D geospatial data visualision
-  - [Backend-side components](#backend-side-components-install)
+  - [Web client (install)](#client-install): a WebGL/[iTowns](http://www.itowns-project.org/) based javascript web framework for 3D geospatial data visualisation
+  - Backend-side components
     - [3DCityDB (install)](#install-3dcitydb): a CityGML based geographical database
     - [UDV-server (install)](#install-udv-server): a set of city data treatments 
-    - [py3dtiles (install)](#install-py3dtiles): a tiled interchange format for city geometrical data 
+    - [py3dtiles (install)](#install-py3dtiles): the python wrapping of [3DTiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for geographical data 
     - [a 3dtiles web server (install)](#install-a-3dtiles-web-server): a web server of city data
 
 The following documentation explains how to install and configure each of the respective components (or points to existing documentation). It also indicates how to assemble/integrate them in order to obtain the demos.
@@ -21,93 +23,36 @@ The following demo specific docs illustrate how to install the required componen
  * [3D + time urban data visualisation](#usecase-with-3dtime-data) use case
 
 ## Component install notes
-### Client install
 
-#### Install UDV web client and iTowns framework
+### (Frontend) UDV web client install notes 
+The installation of the [UDV web client](https://github.com/MEPP-team/UDV) and its associated demos (using the [iTowns](http://www.itowns-project.org/) is [fully described within the UDV repository](https://github.com/MEPP-team/UDV/blob/master/install.md)
 
- Follow the install notes described in https://github.com/MEPP-team/UDV/blob/master/install.md
- 
-### Backend-side components install
+#### (Backend) 3DCityDB install notes
+The installation notes of a 3DCityDB database are [provided here](Install/Install3DCityDB.md).
 
-#### Install 3DCityDB
+#### (Backend) UDV-server/API_Enhanced_City install notes
+[API_Enhanced_City](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md) is an [UDV-server](https://github.com/MEPP-team/UDV-server) sub-componennt that offers backend support to attach arbitrary types of documents to urban data. When needed proceed with [these API_Enhanced_City install notes](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md)
 
-If you need to install a 3DCityDB database, follow the instructions described [here](Install/Install3DCityDB.md).
-
-#### Install UDV-server
-
-[UDV-server](https://github.com/MEPP-team/UDV-server) is a collection of tools useful for our application. If you want to install them, follow the instructions described [here](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md).
-
-#### Install py3dtiles
-
-[py3dtiles](https://github.com/MEPP-team/py3dtiles) ([forked from Oslandia](https://github.com/Oslandia/py3dtiles)) is a component allowing to compute a 3dtiles tileset from a directory or a database. More info [here](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst).
-
-Install pre-requisite tools:
-````
-    sudo apt-get install python3
-    sudo apt-get install python3-pip
-    sudo pip3 install virtualenv      # Mind the sudos or the install will
-                                      # happen in `$(HOME)/.local/...`
-````
-
-Open a terminal and run:
-
-````
-    git clone https://github.com/MEPP-team/py3dtiles.git
-    cd py3dtiles
-    git checkout 3dtiles-temporal-v2
-````
-
-Deploy a virtual environment (this step is not mandatory; it is useful for having local dependencies to the packages installed next.)
-````
-    virtualenv -p python3 venv
-    source venv/bin/activate
-````
-
-Install python dependencies:
-
-````
-    pip install -e .
-    python setup.py install
-````
-
-[Setuptools](https://pypi.python.org/pypi/setuptools) allows to "Easily download, build, install, upgrade, and uninstall Python packages".
-
-`pip install -e .` gets the requirements from setup.py and install them automatically.
-
-*Dev note: If you modify the core of py3dtiles (`py3dtiles/py3dtiles/` subdirectory), you will need to run `pip install -e` before running a script (e.g. export_tileset) for changes to be considered.*
-
-Install the tiler specific dependency:
-
-````
-    pip install pyyaml
-````
-
-Configure `Tilers/CityTiler/CityTilerDBConfig.yml` (out of `Tilers/CityTiler/CityTilerDBConfigReference.yml`)
-
-From the home directory of the git
-    * in order to run the CityTiler
-      ```
-      python Tilers/CityTiler/CityTiler.py --with_BTH Tilers/CityTiler/CityTilerDBConfig.yml 
-      ```
-      that (by default) will create a `junk` ouput directory holding both the resulting tile set (with the .json extension) and a folder called `tiles` with `.b3dm` files in it.
+#### (Backend) py3dtiles install notes
+[Oslandia's Py3Dtiles](https://github.com/Oslandia/py3dtiles)) are the Python wrappings of [3DTiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for city geometrical data. You should use [RICT's fork of py3dtiles](https://github.com/MEPP-team/py3dtiles) and its [3dtiles-temporal-v2](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2) that offers alternative/additionnal "Tilers" (treatments that build [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) out of CityGML files or a 3DCityDB database.
+The general [install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst) should make it but you can also follow [these detailed install note version)(InstallPy3dTiles-MeppTeamFork-Tilers.md)
       
-#### Install a 3dtiles web server
+#### (Backend) 3dtiles DESKTOP web server install notes
+In the context of development and if you need to handle over [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) for your client to display then you can deploy a local (on your desktop computer) web (http) server. A quick and easy way to do so (on your desktop) consists in installing a (node.js based) [3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples) server.
 
-If you want to run a local server for streaming a 3d-tiles tileset, you can use the node.js based server provided by 3d-tiles: [3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples)
-
-Install:
+The quick installation goes
 ````
     git clone https://github.com/AnalyticalGraphicsInc/3d-tiles-samples
     cd 3d-tiles-samples
     npm install
     npm start
 ````
+The examples tilesets will then appear as hosted at the `http://localhost:8003/tilesets/` address.
 
-The examples tilesets will then appear as hosted at `http://localhost:8003/tilesets/`
+#### (Backend) 3dtiles web server install notes
+In case you want to run a remote and stable web server (as opposed to the above described desktop deployment option) in order to handle over your [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) you can use an [Apache](https://en.wikipedia.org/wiki/Apache_HTTP_Server) or an [Nginx](https://nginx.org/en/) http server.
 
-If you want to run a remote server for streaming a 3d-tiles tileset, you can use an Apache server see Step (6) of Install/InstallVilo3D for more informations on how to setup one).
-
-
+In the [RICT](..) you can [quickly deploy an Apache web server on Debian](InstallDebianApacheServer.md)
 
 ## Using the above installed client/server
 
