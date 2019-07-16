@@ -25,83 +25,19 @@ This chapter describes two different methods for installing a [3DCity Data Base]
     -e "POSTGRES_PASSWORD=postgres" \
       tumgis/3dcitydb-postgis
     ```
- * Troubleshooting: if you get the following error message (when invocating your do`docker run`)
-    ```
-    ERROR: for citydb  Cannot start service citydb: driver failed programming external connectivity on endpoint v4xx_citydb_1 (ef8b3de53a730cab2acd26a041d180f19dc448c5e346138e2a5e2a38dee71b72): Bind for 0.0.0.0:5432 failed: port is already allocated
-    ```
-    you probably need to free the 5432 port. This port might be pre-empted by a (previously run) dandling container that you might retrieve an kill with the following method
-      - print the list of running containers with the command `sudo docker container ls`,
-      - find the container named <name> using the 5432 port,
-      - run the command `sudo docker container stop <name>`,
-      - eventually try again your `docker run ...` command.
-    Note that the 5432 port might also be allocated by some other services that you might retrieve with at command of the from `lsof -i :5432`.
-      
-#### FIXME Old version to clean up
- * Run the full 3DCityDB service stack with a single command, on [this page](https://github.com/tum-gis/3dcitydb-docker-compose/tree/master/3dcitydb+wfs).
-
-_PS: It is absolutely not necessary to run the command below to be able to work on this project:_
-
-```
-docker pull tumgis/3dcitydb-wfs
-```
-
-  * When you will have done [this step](https://github.com/tum-gis/3dcitydb-docker-compose/tree/master/3dcitydb+wfs#adapt-the-service-configuration-file), your docker-compose.yml file should contain:
-
-```
-# Compose 3DCityDB, 3DCityDB WFS  #############################################
-###############################################################################
-#   Note: 
-#   Watch out to change the database credentials of the 3DCityDB and the WFS
-#		synchronously. Otherwise, you might break the container linking.
-###############################################################################
-version: "2.0"
-services:
-# 3DCityDB ####################################################################
-  citydb:
-    image: tumgis/3dcitydb-postgis
-    ports:
-      - 5432:5432
-    environment:
-      - "CITYDBNAME=citydb"
-      - "SRID=3946"
-      - "SRSNAME=espg:3946"
-      - "POSTGRES_USER=postgres"
-      - "POSTGRES_PASSWORD=postgres"
-      
-# 3DCityDB WFS ################################################################
-  citydb-wfs:
-    image: tumgis/3dcitydb-wfs
-    ports:
-      - 8080:8080
-    links: 
-      # <3DCityDB-container-name>:<3DCityDB-container-hostname>
-      - citydb:my-citydb
-    depends_on:
-      - citydb
-    environment:
-      - "CITYDB_CONNECTION_SERVER=my-citydb"
-      - "CITYDB_CONNECTION_PORT=5432"
-      # Use the <3DCityDB-container-hostname> here!
-      - "CITYDB_CONNECTION_SID=citydb"
-      - "CITYDB_CONNECTION_USER=postgres"
-      - "CITYDB_CONNECTION_PASSWORD=postgres"
-```
-* Troubleshooting
-  * Port already allocated
-  
-    If you get the following error when running `sudo docker compose up`:
-    ```
-    ERROR: for citydb  Cannot start service citydb: driver failed programming external connectivity on endpoint v4xx_citydb_1 (ef8b3de53a730cab2acd26a041d180f19dc448c5e346138e2a5e2a38dee71b72): Bind for 0.0.0.0:5432 failed: port is already allocated
-    ```
-   You may need to free the 5432 port. Please find below a way to do that:
-   
-     * Print the list of running containers with the command `sudo docker container ls`.
-      
-     * Find the container named <name> using the 5432 port.
-      
-     * Run the command `sudo docker container stop <name>`.
-      
-     * Then, try again `sudo docker compose up`.
+ * Troubleshooting:
+    - if you get the following error message (when invocating your do`docker run`)
+      ```
+      ERROR: for citydb  Cannot start service citydb: driver failed programming external connectivity
+             on endpoint v4xx_citydb_1 (...): Bind for 0.0.0.0:5432 failed: port is already allocated
+      ```
+      you probably need to free the 5432 port. This port might be pre-empted by a (previously run) dandling container that you might retrieve an kill with the following method
+        * print the list of running containers with the command `sudo docker container ls`,
+        * find the container named <name> using the 5432 port,
+        * run the command `sudo docker container stop <name>`,
+        * eventually try again your `docker run ...` command.
+      Note that the 5432 port might also be allocated by some other services that you might retrieve with at command of the from `lsof -i :5432`. 
+ 
  
 ### 1.B/ Installing a 3DCityDB+PostGIS server with a package manager (apt)
 Tested on:
@@ -168,7 +104,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      (root)$ su - citydb_user
      (citydb_user)$ psql -d citydb_v3 -c 'create extension postgis;'
      ````
-     
+
 ## 2/ Feeding data to the 3DCity Data Base
 ### 2.1/ Installation of Java Runtime Environment
 Installing such an environment is required in order to run [3DCityDB Importer/Exporter](https://github.com/3dcitydb/importer-exporter).
