@@ -17,8 +17,8 @@ The following documentation explains how to install and configure each of the re
 Depending on the demo you are trying to replicate (that you can then extend and customize to suit your needs) **you shall only need a subset of such components**.
 
 The following demo specific docs illustrate how to install the required components corresponding to two use use-cases:
-    * [3D urban data visualisation](#usecase-with-3d-data) use case
-    * [3D + time urban data visualisation](#usecase-with-3dtime-data) use case
+ * [3D urban data visualisation](#usecase-with-3d-data) use case
+ * [3D + time urban data visualisation](#usecase-with-3dtime-data) use case
 
 ## Component install notes
 ### Client install
