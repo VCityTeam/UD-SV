@@ -27,14 +27,6 @@ python setup.py install
 pip install pyyaml
 ````
 
-**Developer warning note**:
-
-&nbsp;&nbsp;&nbsp if you happen to modify the core of py3dtiles (that is any file in the `py3dtiles/py3dtiles/` subdirectory) then prior to running any script using Py3DTiles (e.g. a Tiler or export_tileset) you will need to re-install Py3DTiles for changes to be considered. The commands are then
-```
-pip uninstall py3dtiles     # Just to avoid pycache trouble
-pin install ./py3dtiles     # Equivalent of `pip install -e .`
-``` 
-
 Eventually you will then need to:
  * configure a `Tilers/CityTiler/CityTilerDBConfig.yml` (out of `Tilers/CityTiler/CityTilerDBConfigReference.yml`)
  * invoke the CityTiler with something similar too
@@ -44,3 +36,11 @@ Eventually you will then need to:
    By default this command will create a `junk` ouput directory holding both 
      * the resulting tile set file (with the .json extension) and 
      * a `tiles` folder containing the `.b3dm` files
+     
+### Developer's not
+If you happen to modify the core of py3dtiles (that is any file in the `py3dtiles/py3dtiles/` subdirectory) then prior to running any script using Py3DTiles (e.g. a Tiler or export_tileset) you will need to re-install Py3DTiles for changes to be considered. The commands are then
+```
+pip uninstall py3dtiles     # Just to avoid pycache trouble
+pin install ./py3dtiles     # Equivalent of `pip install -e .`
+``` 
+
