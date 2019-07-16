@@ -35,7 +35,7 @@ The installation notes of a 3DCityDB database are [provided here](Install/Instal
 
 ### (Backend) py3dtiles install notes
 [Oslandia's Py3Dtiles](https://github.com/Oslandia/py3dtiles)) are the Python wrappings of [3DTiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for city geometrical data. You should use [RICT's fork of py3dtiles](https://github.com/MEPP-team/py3dtiles) and its [3dtiles-temporal-v2](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2) that offers alternative/additionnal "Tilers" (treatments that build [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) out of CityGML files or a 3DCityDB database.
-The general [install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst) should make it but you can also follow [these detailed install note version)(InstallPy3dTiles-MeppTeamFork-Tilers.md)
+The general [install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst) should make it but you can also follow [these detailed install note version](InstallPy3dTiles-MeppTeamFork-Tilers.md)
       
 ### (Backend) 3dtiles DESKTOP web server install notes
 In the context of development and if you need to handle over [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) for your client to display then you can deploy a local (on your desktop computer) web (http) server. A quick and easy way to do so (on your desktop) consists in installing a (node.js based) [3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples) server.
