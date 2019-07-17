@@ -31,7 +31,7 @@ The following demo specific docs illustrate how to install the required componen
 ## Component quick description
 
 ### (Frontend) UDV web client install notes 
-The installation of the [UDV web client](https://github.com/MEPP-team/UDV) and its associated demos (using the [iTowns](http://www.itowns-project.org/) is [fully described within the UDV repository](https://github.com/MEPP-team/UDV/blob/master/install.md).
+The installation of the [UDV web client](https://github.com/MEPP-team/UDV) (based on [iTowns](http://www.itowns-project.org/))  and its associated demos are [fully described within the UDV repository](https://github.com/MEPP-team/UDV/blob/master/install.md).
 
 ### (Backend) 3DCityDB install notes
 The installation notes of a 3DCityDB database are [provided here](Install/Install3DCityDB.md).
