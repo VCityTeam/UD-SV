@@ -5,7 +5,7 @@
 # changes as graphML-JSON files.
 
 # Awaited parameters:
-# * output folder for the intermdiate data and for the final result.
+# * output folder for the intermediate data and for the final result.
 # * path to 3DUSE Build folder
 
 # This script only works when invocated where it stands...
@@ -46,6 +46,10 @@ cp ${1}/Lyon_2015/LYON_7EME_2015/LYON_7_BATI_2015.gml ${1}/Lyon_2015_Splitted/LY
 cp ${1}/Lyon_2015/LYON_8EME_2015/LYON_8EME_BATI_2015.gml ${1}/Lyon_2015_Splitted
 cp ${1}/Lyon_2015/LYON_9EME_2015/LYON_9EME_BATI_2015.gml ${1}/Lyon_2015_Splitted
 
+# Blend splitted buildings with remarkable buildings (which are normally already
+# splitted)
+./buildingBlender.sh ${1}
+
 # extractBuildingDates: detect changes between two vintages of the city
-./extractBuildingDates.sh 2009 ${1}/Lyon_2009_Splitted 2012 ${1}/Lyon_2012_Splitted ${1}/final_output ${2}
-./extractBuildingDates.sh 2012 ${1}/Lyon_2012_Splitted 2015 ${1}/Lyon_2015_Splitted ${1}/final_output ${2}
+./extractBuildingDates.sh 2009 ${1}/Lyon_2009_Splitted_With_Remarkable 2012 ${1}/Lyon_2012_Splitted_With_Remarkable ${1}/final_output ${2}
+./extractBuildingDates.sh 2012 ${1}/Lyon_2012_Splitted_With_Remarkable 2015 ${1}/Lyon_2015_Splitted_With_Remarkable ${1}/final_output ${2}
