@@ -15,6 +15,11 @@ The following glitches might block your algorithms at parsing time
     - 2012 intall: autre type
  * Also note that when importing similar CityGML data with the [3DCityDB importer](https://github.com/3dcitydb/importer-exporter) into a database, the importer complains with quite a few `Linear ring not closed` warning messages.
 
+### Heterogeneous CityGML version encoding (and ill-specified schema?)
+Consider [LYON_5EME_2009.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_5EME_2009.zip). Most of the encountered files have a default namespace of corresponding to CityGML version 1.0 (that is the root element starts with `<CityModel xmlns="http://www.opengis.net/citygml/1.0" ...`). Yet some of the files of that same 5th borough for the same 2009 vintage have a default namespace of corresponding to CityGML version 1.0 (that is the roor element starts with `<CityModel xmlns="http://www.opengis.net/citygml/2.0" ...`). Although each file is strictly correct, the set of files encodings is heterogeneous which might confuse your treatments (parsers).
+
+Additionnaly note that the indicated namespace URI for version 2 i.e. [http://www.opengis.net/citygml/2.0](http://www.opengis.net/citygml/2.0) is a dangling URI. There indeed exists [http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd](http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd) but no redirection from [http://www.opengis.net/citygml/2.0](http://www.opengis.net/citygml/2.0) to it (this redirection seems to be done only for the version 1).
+
 ### Undocummented additional data (?)
 Some information, provided in the form a generic attribute (`<gen:stringAttribute ... >`, `<gen:intAttribute ...>`,
 `<gen:doubleAttribute ...>`) i.e. extending the CityGML model, is not always documented. For example [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml) (extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) presents the 
