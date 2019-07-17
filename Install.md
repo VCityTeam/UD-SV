@@ -1,14 +1,12 @@
 ## Installation notes for Unix users
 
-## Table of content
-  * [Introduction](#introduction)
-  * [Component install notes](#component-install-notes)
-    - [(Frontend) UDV web client install notes ](#frontend-udv-web-client-install-notes)
-    - [(Backend) 3DCityDB install notes](#backend-3dcitydb-install-notes)
-    - [(Backend) UDV-server/API_Enhanced_City install notes](#backend-udv-serverapi_enhanced_city-install-notes)
-    - [(Backend) py3dtiles install notes](#backend-py3dtiles-install-notes)
-    - [(Backend) 3dtiles DESKTOP web server install notes](#backend-3dtiles-desktop-web-server-install-notes)
-    - [(Backend) 3dtiles web server install notes](#backend-3dtiles-web-server-install-notes)
+## Links to components installation notes
+ * [(Frontend) UDV web client install notes ](#frontend-udv-web-client-install-notes)
+ * [(Backend) 3DCityDB install notes](#backend-3dcitydb-install-notes)
+ * [(Backend) UDV-server/API_Enhanced_City install notes](#backend-udv-serverapi_enhanced_city-install-notes)
+ * [(Backend) py3dtiles install notes](#backend-py3dtiles-install-notes)
+ * [(Backend) 3dtiles DESKTOP web server install notes](#backend-3dtiles-desktop-web-server-install-notes)
+ * [(Backend) 3dtiles web server install notes](#backend-3dtiles-web-server-install-notes)
   
 ## Introduction
 RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/index.html) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the [free and open available software components](Doc/Devel/Architecture#components-names) (front or backend sides). The general architectural diagram goes (refer to the [architecture section](Doc/Devel/Architecture) for further details)
