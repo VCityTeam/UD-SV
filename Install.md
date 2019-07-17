@@ -5,7 +5,7 @@
  * [(Backend) 3DCityDB install notes](#backend-3dcitydb-install-notes)
  * [(Backend) UDV-server/API_Enhanced_City install notes](#backend-udv-serverapi_enhanced_city-install-notes)
  * [(Backend) py3dtiles install notes](#backend-py3dtiles-install-notes)
- * [(Backend) 3dtiles DESKTOP web server install notes](Install3dTilesNodeBasedWebServer.md)
+ * [(Backend) 3dtiles DESKTOP web server install notes](Install/Install3dTilesNodeBasedWebServer.md)
  * [(Backend) 3dtiles web server install notes](#backend-3dtiles-web-server-install-notes)
   
 ## Introduction
@@ -44,7 +44,7 @@ The installation notes of a 3DCityDB database are [provided here](Install/Instal
 The general [install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst) should make it but you can also follow [these detailed install note version](InstallPy3dTiles-MeppTeamFork-Tilers.md).
       
 ### (Backend) 3dtiles DESKTOP web server
-In the context of development and if you need to handle over [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) for your client to display then you can deploy a local (on your desktop computer) web server (the ([node.js](https://nodejs.org/en/) based) [3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples)): follow [these install notes](Install3dTilesNodeBasedWebServer.md).
+In the context of development and if you need to handle over [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) for your client to display then you can deploy a local (on your desktop computer) web server (the ([node.js](https://nodejs.org/en/) based) [3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples)): follow [these install notes](Install/Install3dTilesNodeBasedWebServer.md).
 
 ### (Backend) 3dtiles web server install notes
 In case you want to run a remote and stable web server (as opposed to the above described desktop deployment option) in order to handle over your [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) you can use an [Apache](https://en.wikipedia.org/wiki/Apache_HTTP_Server) or an [Nginx](https://nginx.org/en/) http server.
