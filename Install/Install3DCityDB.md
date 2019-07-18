@@ -36,7 +36,9 @@ This chapter describes two different methods for installing a [3DCity Data Base]
         * find the container named <name> using the 5432 port,
         * run the command `sudo docker container stop <name>`,
         * eventually try again your `docker run ...` command.
-      Note that the 5432 port might also be allocated by some other services that you might retrieve with at command of the from `lsof -i :5432`. 
+      Note that the 5432 port might also be allocated by some other services that you might retrieve with at command of the from `lsof -i :5432`.
+ 
+ * **Use of the container**: After running the `docker run` command when installing the database, you can use the container immediately without any other command. However, each time you restart your computer, you should run the following command `sudo docker start citydb-container` in order to launch your database.
  
  
 ### 1.B/ Installing a 3DCityDB+PostGIS server with a package manager (apt)
