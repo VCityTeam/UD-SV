@@ -1,9 +1,9 @@
 # Demo install guide : how to compute 3DTiles tileset and web visualize it
 
 ![3dTiles Lyon Demo](Images/Demo3dTilesLyon.png)
-FIXME: fix above image
+FIXME: provide a more recent image
 
-The goal of this demo is to set up [this visualization FIXME FIXME FIXME]() i.e. to be able to navigate in 3D and ACROSS TIME among the buildings of a City (at the city scale)
+The goal of this demo is to set up [this visualization](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html) (FIXME provide an update of the online demo) i.e. to be able to navigate in 3D and ACROSS TIME among the buildings of a City (at the city scale)
 
 Proceed with the following install guides
  - [Install a 3DCityDB database and populate it with data](Install/Install3DCityDB.md) (follow the full install doc)
