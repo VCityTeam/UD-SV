@@ -6,7 +6,7 @@
  * [(Backend) UDV-server/API_Enhanced_City install notes](#backend-udv-serverapi_enhanced_city-install-notes)
  * [(Backend) CityTiler install notes](#backend-py3dtiles-install-notes)
  * [(Backend) 3dtiles web server: DESKTOP developing context](#backend-3dtiles-web-server-desktop-developing-context)
- * [(Backend) 3dtiles web server install notes](#backend-3dtiles-web-server-operational-stable-server-context
+ * [(Backend) 3dtiles web server install notes](#backend-3dtiles-web-server-operational-stable-server-context)
   
 ## Introduction
 RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/index.html) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the [free and open available software components](Doc/Devel/Architecture#components-names) (front or backend sides). The general architectural diagram goes (refer to the [architecture section](Doc/Devel/Architecture) for further details)
