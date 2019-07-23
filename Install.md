@@ -9,7 +9,7 @@ Links to components installation notes
  * [(Backend) 3dtiles web server: DESKTOP developing context](#backend-3dtiles-web-server-desktop-developing-context)
  * [(Backend) 3dtiles web server: OPERATIONS (stable server) context](#backend-3dtiles-web-server-operations-stable-server-context)
  
-Links to Demos (using the above components)
+Links to demo install guides (using the above components)
  * [How to compute 3DTiles tileset and web visualize it](#how-to-compute-3dtiles-tileset-and-web-visualize-it)
  * [How to compute 3DTiles TEMPORAL tileset and web visualize it](#how-to-compute-3dtiles-temporal-tileset-and-web-visualize-it)
   
@@ -18,18 +18,11 @@ RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/UDVDemo-
 
 ![](Install/Images/FourTierArchitectureRICT.png)
 
-In order to install the [web based online demos](http://rict.liris.cnrs.fr/index.html) you will need to install some of the following software components
+The [RICT web based online demos](http://rict.liris.cnrs.fr/index.html) regroup a set of specific demos each of which being based on a subset of shared components. The following documentation explains how to install each specific demo that is **how to install the respective required components** and **how to assemble/integrate such components** in order to obtain a fully functionnal demo
+ * [How to compute 3DTiles tileset and web visualize it](#how-to-compute-3dtiles-tileset-and-web-visualize-it)
+ * [How to compute 3DTiles TEMPORAL tileset and web visualize it](#how-to-compute-3dtiles-temporal-tileset-and-web-visualize-it)
 
-    - [UDV-server (install)](#install-udv-server): a set of city data treatments 
-    - [py3dtiles (install)](#install-py3dtiles): the python wrapping of [3DTiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for geographical data 
-    - [a 3dtiles web server (install)](#install-a-3dtiles-web-server): a web server of city data
-
-The following documentation explains how to install and configure each of the respective components (or points to existing documentation). It also indicates how to assemble/integrate them in order to obtain the demos.
-Depending on the demo you are trying to replicate (that you can then extend and customize to suit your needs) **you shall only need a subset of such components**.
-
-The following demo specific docs illustrate how to install the required components corresponding to two use use-cases:
- * [3D urban data visualisation](#usecase-with-3d-data) use case,
- * [3D + time urban data visualisation](#usecase-with-3dtime-data) use case.
+Warning: please notice that each demo you are trying to replicate (that you can then extend and customize to suit your needs) **only requires a SUBSET of [all components](#component-quick-description)**.
 
 ## Component quick description
 
@@ -43,7 +36,7 @@ Urban Data Viewer (UDV) is a [WebGL](https://en.wikipedia.org/wiki/WebGL)/[iTown
 [API_Enhanced_City](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md) is an [UDV-server](https://github.com/MEPP-team/UDV-server) sub-componennt that offers backend support to attach arbitrary types of documents to urban data. When needed proceed with [these API_Enhanced_City install notes](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md).
 
 ### (Backend) CityTiler install notes
-[Oslandia's Py3Dtiles](https://github.com/Oslandia/py3dtiles) component is a [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) implementation of the [3DTiles data model](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for city geometrical data. You should use [RICT's fork of py3dtiles](https://github.com/MEPP-team/py3dtiles) and its [3dtiles-temporal-v2](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2) that offers alternative/additionnal "Tilers" (treatments that build [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) out of CityGML files or a 3DCityDB database.
+[Oslandia's Py3Dtiles](https://github.com/Oslandia/py3dtiles) component is a [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) implementation of the [3DTiles data model](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for city geometrical data. You should use [RICT's fork of py3dtiles](https://github.com/MEPP-team/py3dtiles) and its [3dtiles-temporal-v2 branch](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2) that offers alternative/additionnal "Tilers" (treatments that build [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) out of CityGML files or a 3DCityDB database.
 The general [install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst) should make it but you can also follow 
 **Install**: make sure to follow [these detailed install note version](https://github.com/MEPP-team/py3dtiles/blob/Tiler/Tilers/CityTiler/Install.md) as opposed to the [default install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst).
       
