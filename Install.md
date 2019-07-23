@@ -16,7 +16,7 @@ Links to Demos (using the above components)
 ## General description
 RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/index.html) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the [free and open available software components](Doc/Devel/Architecture#components-names) (front or backend sides). The general architectural diagram goes (refer to the [architecture section](Doc/Devel/Architecture) for further details)
 
-![](Images/FourTierArchitectureRICT.png)
+![](Install/Images/FourTierArchitectureRICT.png)
 
 In order to install the [web based online demos](http://rict.liris.cnrs.fr/index.html) you will need to install some of the following software components
   - [Web client (install)](#client-install): a WebGL/[iTowns](http://www.itowns-project.org/) based javascript web framework for 3D geospatial data visualisation
