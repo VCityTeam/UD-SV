@@ -1,5 +1,8 @@
 # RICT developer's central
 
+### How to improve this page
+Because a (coding) inception guide must be simple and easy to understand, if you happen to encounter something that is still confusing or awkwardly described then don't hesitate to submit possible enhancements/clarifications (through [an issue](https://github.com/MEPP-team/RICT/issues) or a [PR (Pull Request)](https://help.github.com/en/articles/about-pull-requests#about-pull-requests)).
+
 ## Step by step inception guide
 
 1. **Get aquainted with RICT's project big picture**
