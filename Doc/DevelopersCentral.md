@@ -5,10 +5,9 @@ Because a (coding) inception guide must be simple and easy to understand, if you
 
 ## Step by step inception guide
 
-1. **Get aquainted with RICT's project big picture**
+1. **Get aquainted with RICT's project big picture** 
    Read about the [whys and wherefores of the RICT project](../README.md) (since the general framework it provides will be supporting/constraining your work).
    As a general notice, and although RICT tries to follow mainstream practices (to reduce your surprises and associated loss of time) keep in mind that some practices used within RICT are specific to the project. As such they cannot be guessed or infered. This type of specific information is most often documented in [Readme.md](https://github.com/MEPP-team/UDV/README.md) and/or [Install.md](https://github.com/MEPP-team/UDV/blob/master/install.md) files scattered across the repositories you will traverse.
-
 1. **Pre-requisites** 
    Languages:
      - Frontend: [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UDV](https://github.com/MEPP-team/UDV) (proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript))
