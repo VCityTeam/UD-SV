@@ -14,14 +14,12 @@ Links to Demos (using the above components)
  * [How to compute 3DTiles TEMPORAL tileset and web visualize it](#how-to-compute-3dtiles-temporal-tileset-and-web-visualize-it)
   
 ## General description
-RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/index.html) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the [free and open available software components](Doc/Devel/Architecture#components-names) (front or backend sides). The general architectural diagram goes (refer to the [architecture section](Doc/Devel/Architecture) for further details)
+RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the [free and open available software components](Doc/Devel/Architecture#components-names) (front or backend sides). The general architectural diagram goes (refer to the [architecture section](Doc/Devel/Architecture) for further details)
 
 ![](Install/Images/FourTierArchitectureRICT.png)
 
 In order to install the [web based online demos](http://rict.liris.cnrs.fr/index.html) you will need to install some of the following software components
-  - [Web client (install)](#client-install): a WebGL/[iTowns](http://www.itowns-project.org/) based javascript web framework for 3D geospatial data visualisation
-  - Backend-side components
-    - [3DCityDB (install)](#install-3dcitydb): a CityGML based geographical database
+
     - [UDV-server (install)](#install-udv-server): a set of city data treatments 
     - [py3dtiles (install)](#install-py3dtiles): the python wrapping of [3DTiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for geographical data 
     - [a 3dtiles web server (install)](#install-a-3dtiles-web-server): a web server of city data
@@ -36,10 +34,10 @@ The following demo specific docs illustrate how to install the required componen
 ## Component quick description
 
 ### (Frontend) UDV web client install notes 
-The installation of the [UDV web client](https://github.com/MEPP-team/UDV) (based on [iTowns](http://www.itowns-project.org/))  and its associated demos are [fully described within the UDV repository](https://github.com/MEPP-team/UDV/blob/master/install.md).
+Urban Data Viewer (UDV) is a [WebGL](https://en.wikipedia.org/wiki/WebGL)/[iTowns](http://www.itowns-project.org/) based javascript web framework specialized for Uban Data (with a 3D geospatial description) visualisation. The installation of the [UDV web client](https://github.com/MEPP-team/UDV) and [its associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/) are [fully described UDV repository level](https://github.com/MEPP-team/UDV/blob/master/install.md).
 
 ### (Backend) 3DCityDB install notes
-The installation notes of a 3DCityDB database are [provided here](Install/Install3DCityDB.md).
+[3DCityDB](https://www.3dcitydb.org/3dcitydb/) (provided by [TUM](https://www.gis.bgu.tum.de/)) is a geographical database based on the CityGML conceptual model. The quick installation notes of a 3DCityDB database are [provided here](Install/Install3DCityDB.md).
 
 ### (Backend) UDV-server/API_Enhanced_City install notes
 [API_Enhanced_City](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md) is an [UDV-server](https://github.com/MEPP-team/UDV-server) sub-componennt that offers backend support to attach arbitrary types of documents to urban data. When needed proceed with [these API_Enhanced_City install notes](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md).
