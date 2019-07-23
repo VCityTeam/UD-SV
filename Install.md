@@ -5,8 +5,8 @@
  * [(Backend) 3DCityDB install notes](#backend-3dcitydb-install-notes)
  * [(Backend) UDV-server/API_Enhanced_City install notes](#backend-udv-serverapi_enhanced_city-install-notes)
  * [(Backend) CityTiler install notes](#backend-py3dtiles-install-notes)
- * [(Backend) 3dtiles DESKTOP web server install notes](Install/Install3dTilesNodeBasedWebServer.md)
- * [(Backend) 3dtiles web server install notes](#backend-3dtiles-web-server-install-notes)
+ * [(Backend) 3dtiles web server: DESKTOP developing context](#backend-3dtiles-web-server-desktop-developing-context)
+ * [(Backend) 3dtiles web server install notes](#backend-3dtiles-web-server-operational-stable-server-context
   
 ## Introduction
 RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/index.html) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the [free and open available software components](Doc/Devel/Architecture#components-names) (front or backend sides). The general architectural diagram goes (refer to the [architecture section](Doc/Devel/Architecture) for further details)
@@ -44,7 +44,7 @@ The installation notes of a 3DCityDB database are [provided here](Install/Instal
 The general [install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst) should make it but you can also follow 
 **Install**: make sure to follow [these detailed install note version](https://github.com/MEPP-team/py3dtiles/blob/Tiler/Tilers/CityTiler/Install.md) as opposed to the [default install notes](https://github.com/MEPP-team/py3dtiles/blob/3dtiles-temporal-v2/README.rst).
       
-### (Backend) 3dtiles web server: DESKTOP developping context 
+### (Backend) 3dtiles web server: DESKTOP developing context
 In the context of development and if you need to handle over [3DTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) for your client to display then you can deploy a local (on your desktop computer) web server (the [node.js](https://nodejs.org/en/) based [3d-tiles-samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples)): follow [these install notes](Install/Install3dTilesNodeBasedWebServer.md).
 
 ### (Backend) 3dtiles web server: OPERATIONAL (stable server) context
