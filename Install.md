@@ -1,17 +1,21 @@
 ## Installation notes for Unix users
 
-## Links to components installation notes (for the impatient)
+## For the impatient
+Links to components installation notes
  * [(Frontend) UDV web client install notes ](#frontend-udv-web-client-install-notes)
  * [(Backend) 3DCityDB install notes](#backend-3dcitydb-install-notes)
  * [(Backend) UDV-server/API_Enhanced_City install notes](#backend-udv-serverapi_enhanced_city-install-notes)
  * [(Backend) CityTiler install notes](#backend-py3dtiles-install-notes)
  * [(Backend) 3dtiles web server: DESKTOP developing context](#backend-3dtiles-web-server-desktop-developing-context)
  * [(Backend) 3dtiles web server: OPERATIONS (stable server) context](#backend-3dtiles-web-server-operations-stable-server-context)
+Links to Demos (using the above components)
+ * [How to compute 3DTiles tileset and web visualize it](#how-to-compute-3dtiles-tileset-and-web-visualize-it)
+ * [How to compute 3DTiles TEMPORAL tileset and web visualize it](#how-to-compute-3dtiles-temporal-tileset-and-web-visualize-it)
   
-## Introduction
+## General description
 RICT offers a [set of web based online demos](http://rict.liris.cnrs.fr/index.html) that illustrate various visualizations/applications on top city related data. Each such demo is achieved by quickly integrating some of the [free and open available software components](Doc/Devel/Architecture#components-names) (front or backend sides). The general architectural diagram goes (refer to the [architecture section](Doc/Devel/Architecture) for further details)
 
-![](Doc/Devel/Architecture/Diagrams/SoftwareArchitecture.png)
+![](Images/FourTierArchitectureRICT.png)
 
 In order to install the [web based online demos](http://rict.liris.cnrs.fr/index.html) you will need to install some of the following software components
   - [Web client (install)](#client-install): a WebGL/[iTowns](http://www.itowns-project.org/) based javascript web framework for 3D geospatial data visualisation
@@ -54,5 +58,8 @@ In the [RICT](..) context, you can [quickly deploy an Apache web server on Debia
 
 ## Demos based on above components
 
- - [How to compute 3DTiles tileset and web visualize it](Install/InstallDemo3dTilesLyonViewer.md)
- - [How to compute 3DTiles TEMPORAL tileset and web visualize it](Install/InstallDemo3dTilesTemporalLyonViewer.md) 
+### How to compute 3DTiles tileset and web visualize it
+Refer to the [installation notes](Install/InstallDemo3dTilesLyonViewer.md)
+
+### How to compute 3DTiles TEMPORAL tileset and web visualize it
+Refer to the [installation notes](Install/InstallDemo3dTilesTemporalLyonViewer.md) 
