@@ -6,6 +6,7 @@ pip3 install cwltool
 pip3 install cwlref-runner
 ```
 
+## Run a single step of collecting data
 Build the ad-hoc images manually (refer below on why cwltool can't do it for us)
 ```bash
 docker build -t liris:collect_lyon_data DockerContext
@@ -15,19 +16,37 @@ Run of a single step collect
 (venv) cwl-runner collect.cwl collect-inputs.yml
 ```
 
-## Note cwltool fails with dockerFile 
+### Note cwltool fails with dockerFile
 Note that running
 ```
 (venv) cwl-runner collect-DockerFile_issue_failure.cwl collect-inputs.yml
 ```
 that uses CWL's dockerFile instructions fails because of [this issue](https://github.com/common-workflow-language/cwltool/issues/312)...
 
+## Run the full collection of Lyon Metropole data
+Simply run
+```
+(venv) cwl-runner foreach_collect.cwl foreach_collect-inputs.yml
+```
+and the output files get placed in the output directory specified in the input file.
+
+Note that if you wish to fool-around/learn-about-cwl you can:
+ - run the foreach_collect on a reduced set of data sets
+   ```
+   cwl-runner --js-console foreach_collect.cwl foreach_collect-inputs.yml-debug_short.yml
+   ```
+ - run the foreach_collect with a [`--js-console`](https://www.biostars.org/p/303401/) argument (place some `console.log()` calls in the organize/expression javascript code)
+ - understand how the CWL `scatter` works by looking at the `foreach_collect_list_output_directories.cwl` workflow and running it with e.g.
+   ```
+   cwl-runner foreach_collect_list_output_directories.cwl foreach_collect-inputs.yml-debug_short.yml
+   ```    
+
 ## Note on the time efficiency impact of cwl-runner
 Cwl-runner mounts the container `/home` and `/tmp` directories to ad-hoc temporary directories that it handles. Notice that this can have a significant performance impact on the execution time.
 For example let us assume that the `liris:collect_lyon_data` container image is already build (refer to [DockerContext/Readme.md](DockerContext/Readme.md). Now running a collect job from the command line with
 ```bash
 (venv) docker run -t liris:collect_lyon_data LYON_7EME_2009.zip junk-collect-output
-``` 
+```
 will take roughly and in average (on an idle Power book...) 1'25'.
 Yet running the same command through a cwl-runner invocation
 ```

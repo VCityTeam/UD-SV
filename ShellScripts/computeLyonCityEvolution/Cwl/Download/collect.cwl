@@ -19,8 +19,9 @@ inputs:
     type: string
     inputBinding:
       position: 2
+
 outputs:
-  outputDir:
+  resultsDir:
     type: Directory
     outputBinding:
       glob: $(inputs.outputDir)

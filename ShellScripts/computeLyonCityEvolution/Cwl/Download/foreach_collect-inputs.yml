@@ -1,4 +1,4 @@
-outputDir: junk-collect-output
+outputDir: junk-output-of_foreach_collect
 
 zipFileName_array:
  - LYON_1ER_2009.zip
