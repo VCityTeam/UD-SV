@@ -26,20 +26,41 @@ that uses CWL's dockerFile instructions fails because of [this issue](https://gi
 ## Run the full collection of Lyon Metropole data
 Simply run
 ```
-(venv) cwl-runner foreach_collect.cwl foreach_collect-inputs.yml
+(venv) cwl-runner --eval-timeout 1000 foreach_collect.cwl foreach_collect-inputs.yml
 ```
 and the output files get placed in the output directory specified in the input file.
+Note: refer below on why the `--eval-timeout` option is here required.
 
+### Debugging
 Note that if you wish to fool-around/learn-about-cwl you can:
- - run the foreach_collect on a reduced set of data sets
+ - run the `foreach_collect` on a reduced set of data sets
    ```
    cwl-runner --js-console foreach_collect.cwl foreach_collect-inputs.yml-debug_short.yml
    ```
- - run the foreach_collect with a [`--js-console`](https://www.biostars.org/p/303401/) argument (place some `console.log()` calls in the organize/expression javascript code)
+ - run the `foreach_collect` with a [`--js-console`](https://www.biostars.org/p/303401/) argument (place some `console.log()` calls in the organize/expression javascript code)
  - understand how the CWL `scatter` works by looking at the `foreach_collect_list_output_directories.cwl` workflow and running it with e.g.
    ```
    cwl-runner foreach_collect_list_output_directories.cwl foreach_collect-inputs.yml-debug_short.yml
    ```    
+
+### Note concerning the eval-timeout option
+Note that providing `foreach_collect-inputs.yml` as argument will produce quite a large directory tree of output. This will trigger the following cwltool warning
+```bash
+WARNING foreach_collect.cwl:39:10: Recursive directory listing has resulted in a large number of File
+       objects (56461) passed to the input parameter 'directories'.
+       [...]
+```
+suggesting to limit this hindrance by using a 'cwltool:LoadListingRequirement' hint (with `shallow_listing` or `no_listing`) to change the directory listing behavior.
+
+In turn this will trigger this warning
+```
+WARNING Failed to evaluate expression:
+Expression evaluation error:
+Long-running script killed after 20 seconds: Javascript expression was:
+```
+followed by a quote of the `Expression` section `foreach_collect.cwl`.
+Because we do need those files as output we [either need to install  Nodejs or suse the `--eval-timeout` cli option](https://github.com/common-workflow-language/cwltool/blob/master/windowsdoc.md#workflows-with-javascript-expressions-occasionally-give-timeout-errors)  
+
 
 ## Note on the time efficiency impact of cwl-runner
 Cwl-runner mounts the container `/home` and `/tmp` directories to ad-hoc temporary directories that it handles. Notice that this can have a significant performance impact on the execution time.
