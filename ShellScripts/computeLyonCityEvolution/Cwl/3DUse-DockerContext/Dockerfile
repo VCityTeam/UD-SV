@@ -38,13 +38,22 @@ RUN apt-get -y install libxml2-dev
 # and e.g. OGRPolygon::IsValid() will always return false.
 # Prior to the "manual" install we thus need to pull the mandatory GDAL
 # dependencies.
+#
+# Note: In the following configuration of laslib and because this is
+# a Docker build, we do accept to install things in /usr/local.
+# But if you were to adapt this Dockerfile in order to realize
+# an installation on your host/machine and you did NOT wished
+# to break/impact on your system installation, you might need
+# to add the following parameters to the configuration command
+#     mkdir $HOME/local/                                            && \
+#     ./configure --prefix=$HOME/local/gdal-1.11.4 --enable-shared  && \
 RUN sudo apt-get -y install libgeos-dev
 RUN cd /tmp                                                       && \
     wget http://download.osgeo.org/gdal/1.11.4/gdal-1.11.4.tar.gz && \
     tar zxf gdal-1.11.4.tar.gz                                    && \
     cd gdal-1.11.4                                                && \
     mkdir $HOME/local/                                            && \
-    ./configure --prefix=$HOME/local/gdal-1.11.4 --enable-shared  && \
+    ./configure                                                   && \
     make                                                          && \
     make install
 
@@ -58,7 +67,7 @@ RUN apt-get -y install git
 RUN apt-get -y install cmake
 RUN apt-get -y install wget
 
-# PCL
+# ############################ No luck with PCL support
 # TRY TO FIX PCL INSTALL WITH https://larrylisky.com/2016/11/03/point-cloud-library-on-ubuntu-16-04-lts/
 # No luck with PCL support on Ubuntu 18.04 because of the following error
 # at compile time:
@@ -82,6 +91,16 @@ RUN apt-get -y install wget
 #    cd pcl-pcl-1.7.2/buildR &&                 \
 #    make &&                                    \
 #    make install  # Must be root
+# ############################ end of PCL support
+
+# Note: In the following configuration of laslib and because this is
+# a Docker build, we do accept to install things in /usr/local.
+# But if you were to adapt this Dockerfile in order to realize
+# an installation on your host/machine and you did NOT wished
+# to break/impact on your system installation, you might need
+# to add to modify the cmake configuration command to become
+#    cmake .. -DCMAKE_BUILD_TYPE=Release                   \
+#             -DCMAKE_INSTALL_PREFIX=$HOME/local/laslib && \
 
 # Eventually install 3DUSE internal (embarked) dependencies
 RUN cd                                                 && \
@@ -91,28 +110,34 @@ RUN cd                                                 && \
     cd externals/laslib                                && \
     mkdir Build                                        && \
     cd Build                                           && \
-    cmake .. -DCMAKE_BUILD_TYPE=Release                   \
-             -DCMAKE_INSTALL_PREFIX=$HOME/local/laslib && \
+    cmake .. -DCMAKE_BUILD_TYPE=Release                && \
     make                                               && \
     make install
+
+# Note: still concerning the context of an installation on your
+# host (as opposed to building a Docker image), and depending
+# on your above choices you might need to add some of the
+# following liens to the cmake configuration stage:
+#   -DLASLIB_INCLUDE_DIR=~/local/laslib/include        \
+#   -DLASLIB_LIBRARY=~/local/laslib/lib/liblaslib.a    \
+#   -DGDAL_LIBRARY=~/local/gdal-1.11.4/lib/libgdal.so  \
+#   -DGDAL_INCLUDE_DIR=~/local/gdal-1.11.4/include     \
+#
 # And terminate the install by building 3DUSE itself
 RUN cd ~/3DUSE                                      && \
     mkdir Build                                     && \
     cd Build                                        && \
     cmake --verbose                                    \
     -DBUILD_GUI_QT4=ON                                 \
-    -DLASLIB_INCLUDE_DIR=~/local/laslib/include        \
-    -DLASLIB_LIBRARY=~/local/laslib/lib/liblaslib.a    \
-    -DGDAL_LIBRARY=~/local/gdal-1.11.4/lib/libgdal.so  \
-    -DGDAL_INCLUDE_DIR=~/local/gdal-1.11.4/include     \
     ..                                              && \
-    make
-    # Make install is brain damaged (and has been for quite
-    # a long time)
-    # make install
+    make                                            && \
+    make install
+
+RUN ldconfig
 
 ### Notes
 # When running the container in interactive mode (-it) you might need
 # some developement tools
-#  - ccmake: sudo apt install cmake-curses-gui
-#  - cgdb:   sudo apt install cgdb
+#  - ccmake: sudo apt-get install cmake-curses-gui
+#  - vim:    sudo apt-get install cmake-curses-gui
+#  - cgdb:   sudo apt-get install vim

@@ -4,31 +4,31 @@ cwlVersion: v1.0
 
 hints:
   DockerRequirement:
-    dockerImageId: vcity/3duse
+    dockerImageId: liris:3DUse
     dockerFile:
-        $include: 3DUse-DockerContext/Dockerfile
+        $include: ../3DUse-DockerContext/Dockerfile
 
 class: CommandLineTool
-baseCommand: 3DUSE/Build/src/utils/splitCityGMLBuildings
+baseCommand: splitCityGMLBuildings
 inputs:
-  input_file:
+  inputFile:
     type: File
     inputBinding:
       position: 1
-      prefix: --input_file
-  output_file:
-    type: File
+      prefix: --input-file
+  outputFileName:
+    type: string
     inputBinding:
       position: 2
-      prefix: --output_file
-  output_dir:
+      prefix: --output-file
+  outputDirName:
     type: string
     inputBinding:
       position: 3
       prefix: --output-dir
 
 outputs:
-  output_file:
+  outputJUNKfile:
     type: File
     outputBinding:
-      glob: $(inputs.output_file)
+      glob: $(inputs.outputFileName)
