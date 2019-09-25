@@ -1,0 +1,3 @@
+inputDir:
+  class: Directory
+  path: input_dir
