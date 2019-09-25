@@ -65,7 +65,6 @@ RUN apt-get -y install qt4-default libqt4-opengl-dev libqt4-dev
 RUN apt-get -y install build-essential g++ # Pulls gcc, make...
 RUN apt-get -y install git
 RUN apt-get -y install cmake
-RUN apt-get -y install wget
 
 # ############################ No luck with PCL support
 # TRY TO FIX PCL INSTALL WITH https://larrylisky.com/2016/11/03/point-cloud-library-on-ubuntu-16-04-lts/
@@ -79,6 +78,7 @@ RUN apt-get -y install wget
 # 3DUSE without PCL support.
 #
 # PCL is optionnal: when selected it has its own sub-dependencies
+# RUN apt-get -y install wget
 # RUN apt-get -y install libeigen3-dev
 # RUN apt-get -y install libflann-dev
 # RUN apt-get -y install libqhull-dev

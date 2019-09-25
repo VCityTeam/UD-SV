@@ -7,7 +7,7 @@ pip3 install cwlref-runner
 ```
 
 ## Run a single step of split
-The followin must be run from this current Split directory (that is the directory where this Readme.md is located):
+The following must be run from this current Split directory (that is the directory where this Readme.md is located):
  1. Run Download workflow first (refer to ../Download/Readme.md)
  2. Build the ad-hoc images manually (refer below on why cwltool can't do it for us)
     ```bash
@@ -15,6 +15,10 @@ The followin must be run from this current Split directory (that is the director
     ```
  3. Run of a single step collect
     ```
-    (venv) cwl-runner collect.cwl collect-inputs.yml
+    (venv) cwl-runner split-single.cwl split-single-inputs.yml
+    ```
+ 4. Loop on a set of inputs a single step collect
+    ```
+    (venv) cwl-runner foreach-split.cwl foreach-split.yml
     ```
 

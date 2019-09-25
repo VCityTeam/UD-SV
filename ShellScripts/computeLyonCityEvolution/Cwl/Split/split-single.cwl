@@ -28,7 +28,7 @@ inputs:
       prefix: --output-dir
 
 outputs:
-  outputJUNKfile:
-    type: File
+  resultsDir:
+    type: Directory
     outputBinding:
-      glob: $(inputs.outputFileName)
+      glob: $(inputs.outputDirName)
