@@ -29,7 +29,9 @@ Simply run
 (venv) cwl-runner --eval-timeout 1000 foreach_collect.cwl foreach_collect-inputs.yml
 ```
 and the output files get placed in the output directory specified in the input file.
-Note: refer below on why the `--eval-timeout` option is here required.
+Notes:
+ - if cwl-runner stops with a warning of the form `WARNING foreach_collect.cwl:39:10: Recursive directory listing has resulted in a large number of File` then refer below to the section concerning the eval-timeout option (in short use `cwl-runner --eval-timeout 1000` in place of `cwl-runner`)
+ - Performance: this script runs in 1H20' on a idle MacBookPro (2.6 GHz Intel Core i7, 32GB)
 
 ### Debugging
 Note that if you wish to fool-around/learn-about-cwl you can:
