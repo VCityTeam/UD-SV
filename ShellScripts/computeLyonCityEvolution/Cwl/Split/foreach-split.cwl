@@ -26,7 +26,7 @@ steps:
         valueFrom: "$(inputs.outputDirName)"
     out: [resultsDir]
   gather:
-    run: gather_scatter_directories_contents.cwl
+    run: ../Utils/gather_scatter_directories_contents.cwl
     in: 
       directories: [loop/resultsDir]
     out: [resultDir]

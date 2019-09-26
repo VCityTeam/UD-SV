@@ -2,6 +2,7 @@
 
 cwlVersion: v1.0
 class: ExpressionTool
+
 id: "gather_scatter_directories_contents"
 # Assume you have a command tool that
 #  - creates an output directory named e.g. tool_output_dir and
@@ -20,6 +21,9 @@ id: "gather_scatter_directories_contents"
 # directory produced by the respective scatter steps) and returns a new
 # Directory structure (still named tool_output_dir) holding (refering to)
 # those files.
+# References/inspiration:
+#  - https://www.biostars.org/p/240726/
+#  - https://github.com/common-workflow-language/cwltool/issues/279
 
 inputs:
   directories: Directory[]
