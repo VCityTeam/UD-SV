@@ -66,7 +66,7 @@ Because we do need those files as output we [either need to install  Nodejs or s
 Cwl-runner mounts the container `/home` and `/tmp` directories to ad-hoc temporary directories that it handles. Notice that this can have a significant performance impact on the execution time.
 For example let us assume that the `liris:collect_lyon_data` container image is already build (refer to [DockerContext/Readme.md](DockerContext/Readme.md). Now running a collect job from the command line with
 ```bash
-(venv) docker run -t liris:collect_lyon_data LYON_7EME_2009.zip junk-collect-output
+(venv) docker run -t liris:collect_lyon_data LYON_7EME_2009.zip junk-output-collect
 ```
 will take roughly and in average (on an idle Power book...) 1'25'.
 Yet running the same command through a cwl-runner invocation
@@ -82,6 +82,6 @@ docker run -i <some docker options>
                                  --env=HOME=/exyQWS    \
    --volume=/private/tmp/docker_tmpeh23ihqm:/tmp:rw    \
                                --env=TMPDIR=/tmp       \
-   liris:collect_lyon_data LYON_7EME_2009.zip junk-collect-output
+   liris:collect_lyon_data LYON_7EME_2009.zip junk-output-collect
 ```
 and the `collect_data.sh` that is executed applies a `sed` to a 198M CityGML data file (`LYON_7EME_2009/LYON_7EME_BATI_2009.gml`)...
