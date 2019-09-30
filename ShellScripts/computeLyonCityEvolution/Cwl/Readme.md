@@ -1,4 +1,9 @@
 
+## Runnable things
+```
+cwl-runner foreach_collect_and_split.cwl foreach_collect_and_split-reduced-input.yml
+```
+
 ## Forget about using cwltool --print-dot to compute workflow diagram
 Alas as explained [here](https://www.biostars.org/p/366246/) (but also in [this issue](https://github.com/common-workflow-language/cwlviewer/issues/203) or [that issue](https://github.com/common-workflow-language/cwlviewer/issues/202) or suggested [here](https://github.com/common-workflow-language/cwltool/issues/7)) the output of [`cwltool --print-dot'](https://pypi.org/project/cwltool/) is **NOT nearly as nice** as the ones of [cwlviewer](https://github.com/common-workflow-language/cwlviewer) (refer below). For example it misses input and output boxes...
 
