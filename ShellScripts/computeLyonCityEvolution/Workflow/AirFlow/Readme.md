@@ -3,12 +3,13 @@
 virtualenv -p python3 venv
 source venv/bin/activate
 pip3 install apache-airflow
+pip3 install docker         # Required for DockerOperator examples
 ```
 
 ### Setting up airflow
 Point Airflow to use the dags directory located in the current working directoryby overwriting your `$AIRFLOW_HOME` directory (that defaults to `~/airflow`).
 ```
-AIRFLOW_HOME=`pwd`
+export AIRFLOW_HOME=`pwd`
 airflow initdb     # https://airflow.apache.org/howto/initialize-database.html
 ```
 Make sure (refer [here](https://airflow.apache.org/tutorial.html)) that the proper dags are parsed:
@@ -64,7 +65,17 @@ For example assume that you dag includes a DockerOperator wrapping some treatmen
  * [Fileflow](https://fileflow.readthedocs.io/en/latest/) ?:
    - Fileflow is a collection of modules that support data transfer between Airflow tasks via file targets and dependencies with either a local file system or S3 backed storage mechanism.
    - Caveat emptor: [last commit](https://github.com/industrydive/fileflow/commits/master) dates back to 2017
-   - Caveat emport: Fileflow has been tested on Python 2.7 and Airflow version 1.7.0.
+   - Caveat emport: Fileflow has been tested on **Python 2.7** and Airflow version 1.7.0. (as of October 2019 aiflow version is 1.10.x and examples fails on install)
+   - They are only a couple hundred lines of code...
+   - As many examples manipulating files this flow write some files and then read them as opposed to reading files from the local filesystem...
  * [sftpOperator](https://airflow.apache.org/_api/airflow/contrib/operators/sftp_operator/index.html) ?
 
 Note: they are many S3 related operators e.g. [s3_copy_object_operator](https://airflow.apache.org/_api/airflow/contrib/operators/s3_copy_object_operator/index.html) or [s3_to_sftp_operator](https://airflow.apache.org/_api/airflow/contrib/operators/s3_to_sftp_operator/index.html)
+
+## Sftp and lists of files
+ * [Multiple files sftp](https://precocityllc.com/blog/airflow-and-xcom-inter-task-communication-use-cases/)
+
+## Airflow technical notes
+ * [Testing and debugging airflow](https://blog.godatadriven.com/testing-and-debugging-apache-airflow) is tedious
+ * `airflow run -sd SUBDIR` or `airflow test -sd SUBDIR` : file location or directory from which to look for the dag
+ * Many `airflow upgradedb` after a single `airflow initdb`

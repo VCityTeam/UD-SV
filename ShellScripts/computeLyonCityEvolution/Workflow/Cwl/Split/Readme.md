@@ -8,7 +8,7 @@ pip3 install cwlref-runner
 
 ## Run a single step of split
 The following must be run from this current Split directory (that is the directory where this Readme.md is located):
- 1. Run Download workflow first (refer to ../Download/Readme.md)
+ 1. Run Collect workflow first (refer to ../Collect/Readme.md)
  2. Build the ad-hoc images manually (refer below on why cwltool can't do it for us)
     ```bash
     docker build -t liris:3DUse ../3DUse-DockerContext
