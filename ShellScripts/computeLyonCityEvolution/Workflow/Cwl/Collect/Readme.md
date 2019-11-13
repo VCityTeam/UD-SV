@@ -1,16 +1,18 @@
 ## Installing the requirements:
-```bash
-virtualenv -p python3 venv
-source venv/bin/activate
-pip3 install cwltool
-pip3 install cwlref-runner
-```
+1. Build the ad-hoc docker image<br>
+   Refer to [this installation section of the Docker/Readme.md](../../Docker/Readme.md#Installation)<br>
+   Note: refer below on why cwltool can't do it for us !
+2. Build the python environment
+   ```bash
+   virtualenv -p python3 venv
+   source venv/bin/activate
+   pip3 install cwltool
+   pip3 install cwlref-runner
+   ```
+
 
 ## Run a single step of collecting data
-Build the ad-hoc images manually (refer below on why cwltool can't do it for us)
-```bash
-docker build -t liris:collect_lyon_data DockerContext
-```
+
 Run of a single step collect
 ```
 (venv) cwl-runner collect.cwl collect-inputs.yml
@@ -66,7 +68,7 @@ Because we do need those files as output we [either need to install  Nodejs or s
 
 ## Note on the time efficiency impact of cwl-runner
 Cwl-runner mounts the container `/home` and `/tmp` directories to ad-hoc temporary directories that it handles. Notice that this can have a significant performance impact on the execution time.
-For example let us assume that the `liris:collect_lyon_data` container image is already build (refer to [DockerContext/Readme.md](DockerContext/Readme.md). Now running a collect job from the command line with
+For example let us assume that the `liris:collect_lyon_data` container image is already build (refer to [Docker/Readme.md](../Docker/Readme.md). Now running a collect job from the command line with
 ```bash
 (venv) docker run -t liris:collect_lyon_data LYON_7EME_2009.zip junk-output-collect
 ```

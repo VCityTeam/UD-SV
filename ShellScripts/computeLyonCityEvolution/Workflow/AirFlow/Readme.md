@@ -1,4 +1,10 @@
 ## Installing the requirements:
+
+### Build the ad-hoc docker images
+Refer to [this installation section of the Docker/Readme.md](../Docker/Readme.md#Installation)
+
+Note: too bad AirFlow won't do it for us
+### 
 ```bash
 virtualenv -p python3 venv
 source venv/bin/activate
@@ -11,17 +17,13 @@ pip3 install kuberntes      # Required for KubernetesOperator examples
 Point Airflow to use the dags directory located in the current working directoryby overwriting your `$AIRFLOW_HOME` directory (that defaults to `~/airflow`).
 ```
 export AIRFLOW_HOME=`pwd`
-airflow initdb     # https://airflow.apache.org/howto/initialize-database.html
+airflow initdb     # Initialize the dags database
 ```
-Make sure (refer [here](https://airflow.apache.org/tutorial.html)) that the proper dags are parsed:
+Make sure that the proper dags were parsed:
 ```
 airflow list_dags
-airflow list_dags --report          # Full report: usefull to assert pathes
+airflow list_dags --report   # Full report: usefull to assert pathes
 ```
-
-References:
- * [First Airflow setup and run](https://medium.com/@moyukh_51433/outlier-detection-using-airflow-workflow-6424c209ceff)
- * [How to use several dag_folders](https://medium.com/@xnuinside/how-to-load-use-several-dag-folders-airflow-dagbags-b93e4ef4663c)
 
 ### Running Airflow's sequential tutorial example
 Get going by running Airflow tutorial example (renamed here to SequentialTutorial just to make sure we are indeed loading the local copy):
@@ -34,20 +36,27 @@ airflow test SequentialTutorial templated 2015-06-01
 ```
 
 ## DockerOperator
+
 ### Running Airflow's Docker tutorial example
 ```
-airflow test DockerTutorial print_current_date 2015-06-01
+(venv) airflow test DockerTutorial print_current_date 2015-06-01
 ```
 References: 
  - [Marc Lamberti's how to use dockeroperator apache airflow](https://marclamberti.com/blog/how-to-use-dockeroperator-apache-airflow/)
  - [API](https://airflow.apache.org/_api/airflow/operators/docker_operator/index.html?highlight=docker#module-airflow.operators.docker_operator)
+ 
+### Running the hand made Collect example
+```
+(venv) airflow test Collect docker_command 2015-06-01
+(venv) airflow test Collect print_current_date
+```
 
-## Open problem 1: data/files transfer between components/operators
+### DockerOperator Open Problem 1 (DOP1): data/files transfer between components/operators
 In order to transfer data between operators ([ref1](https://stackoverflow.com/questions/42762087/airflow-and-data-transfer-between-operators), [ref2](https://stackoverflow.com/questions/55531774/transmitting-data-between-components-in-airflow)) Airflow uses the [Xcoms cross-communication mechanism](https://airflow.apache.org/concepts.html#xcoms).
 Xcoms requires the transmitted data to be ["pickable"](https://docs.python.org/3/library/pickle.html) which might a be a too big constraint in some contexts.
 For example assume that you dag includes a DockerOperator wrapping some treatment that uses simple file for its I/O (think e.g. of some arbitrary binary file format used in application domain like medical imaging...). Then Xcoms would require you to write the ad-hoc deserialization/serialization of such a format.
 
-### Constraints and recommendations
+#### DOP1 Constraints and recommendations
  * [ETL best practices with Airflow](https://gtoonstra.github.io/etl-with-airflow/)
     - recommends to **Rest data between tasks** (refer to [the eponymous section on that page](https://gtoonstra.github.io/etl-with-airflow/principles.html))
     - warns that **you should not and even cannot do is depend on temporary data (files, etc.) that is created by one task in other tasks downstream**.
@@ -62,7 +71,7 @@ For example assume that you dag includes a DockerOperator wrapping some treatmen
       - an [`FileToPredictableLocationOperator`](https://github.com/gtoonstra/etl-with-airflow/blob/master/examples/file-ingest/acme/operators/file_operators.py#L30) in charge of "Picking up a file from somewhere and lands this in a predictable location elsewhere"
       - an [`PredictableLocationToFinalLocationOperator`](https://github.com/gtoonstra/etl-with-airflow/blob/master/examples/file-ingest/acme/operators/file_operators.py#L81) that "Picks up a file from predictable location storage and loads/transfers the results to a target system (in this case another directory, but it could be anywhere)."
 
-### What are the Xcom alternatives ?
+#### DOP1 What are the Xcom alternatives ?
   * [Fileflow](https://fileflow.readthedocs.io/en/latest/) ?:
     - Fileflow is a collection of modules that support data transfer between Airflow tasks via file targets and dependencies with either a local file system or S3 backed storage mechanism.
     - Caveat emptor: [last commit](https://github.com/industrydive/fileflow/commits/master) dates back to 2017
@@ -75,7 +84,7 @@ For example assume that you dag includes a DockerOperator wrapping some treatmen
     - [s3_copy_object_operator](https://airflow.apache.org/_api/airflow/contrib/operators/s3_copy_object_operator/index.html) or 
     - [s3_to_sftp_operator](https://airflow.apache.org/_api/airflow/contrib/operators/s3_to_sftp_operator/index.html)
 
-### Open problem 2: how to deal with DockerOperator I/O on files ?
+### DockerOperator open problem 2: how to deal with DockerOperator I/O on files ?
 Independently from the interoperator communication (file handling) difficulty, using Docker for computations introduces the technical burden of having to deal with forth (copying input files from invocation directory to docker workdir) and back (copying chosen resulting files from docker workdir to invocation directory).
 An interesting feature of CWL is precisely to hide away such details.
 Just to illustrate how tedious this task can be, the following command is a CWL generated docker run command that deals with the I/O business (look at the many `--volume` arguments as well as the `--input-file` one):
@@ -106,13 +115,27 @@ Note that
     - it is sample that provides a [`docker_copy_data` script](https://github.com/apache/airflow/blob/master/airflow/example_dags/docker_copy_data.py)
     - [here is the usage of volumes](https://github.com/apache/airflow/blob/master/airflow/example_dags/docker_copy_data.py#L81)
 
-### Open problem 3: provide a file server WITHIN the airflow script
+### DockerOperator Open problem 3: provide a file server WITHIN the airflow script
 We have the freedom to choose some file server technology. For example we could consider a [dockerized sftp server](https://github.com/atmoz/sftp). Yet there is the additional difficulty that such a file server must exist across the execution of all the operators of the pipeline (requiring some file input/output). In other terms this file server (DockerOperator) should be a parallel task to the rest of the pipeline and we must guarantee that it starts before all the other ones and ends after them.
 Yet there doesn't seem to exist an Airflow way to express such a constraint. If this is were indeed impossible, the Airflow script would require some "outside" ressoure whose allocation/tear-down would have to be described elsewhere (which would obfuscate things).
 
 ## KubernetesOperator
 
-References:
+### Running KubernetesPodOperator Airflow's tutorial example
+WARNING: the Permanent Volume Claim must be done manually !!!
+```
+$ kubectl apply -f kubernetes_airflow_documentation_sample-storage-class.yaml
+(venv) airflow test kubernetes_airflow_documentation_sample start 2015-06-01
+```
+
+### FAILING FOR NOW: Running some other KubernetesPodOperator example
+```
+(venv) airflow test kubernetes_sample passing-task 2015-06-01 2015-06-01
+(venv) airflow test kubernetes_sample failing-task 2015-06-01 2015-06-01
+```
+
+### References:
+ * Must read: Marc Lamberti's [Airflow Kubernetes EXECUTOR](https://marclamberti.com/blog/airflow-kubernetes-executor/)
  * Airflow documentation
     * [KubernetsOperator gateway](https://airflow.apache.org/kubernetes.html)
     * [API reference](https://airflow.apache.org/_api/airflow/contrib/operators/kubernetes_pod_operator/index.html?highlight=kubernetes#module-airflow.contrib.operators.kubernetes_pod_operator)
@@ -120,16 +143,98 @@ References:
 
 
 ## Airflow technical notes
- * [Testing and debugging airflow](https://blog.godatadriven.com/testing-and-debugging-apache-airflow) is tedious
+
+ * Initialization<br>
+   Point Airflow to use the dags to the directory where they are located (e.g. in the current working directory) by overwriting your `$AIRFLOW_HOME` directory (that defaults to `~/airflow`) :
+   ```
+   export AIRFLOW_HOME=`pwd`
+   airflow initdb     # initialize the database
+   ```
+   References:
+    * [Initialize the database](https://airflow.apache.org/howto/initialize-database.html))
+    * [First Airflow setup and run](https://medium.com/@moyukh_51433/outlier-detection-using-airflow-workflow-6424c209ceff)
+
+ * Update the database `airflow upgradedb` (many times after a single `airflow initdb`)
+
  * `airflow run -sd SUBDIR` or `airflow test -sd SUBDIR` : file location or directory from which to look for the dag
- * Many `airflow upgradedb` after a single `airflow initdb`
+    Reference: [how to use several dag_folders](https://medium.com/@xnuinside/how-to-load-use-several-dag-folders-airflow-dagbags-b93e4ef4663c)
+
+
+ * Assert (refer [here](https://airflow.apache.org/tutorial.html)) that the proper dags are parsed:
+   ```
+   airflow list_dags
+   airflow list_dags --report   # Full report: usefull to assert pathes
+   ```
+
+ * List the tasks of a dag:
+   ```
+   airflow list_tasks <dag_name>
+   airflow list_tasks <dag_name> --tree
+   ```
+
+ * Executing a single taks
+   ```
+   airflow test SequentialTutorial print_date 2015-06-01
+   airflow test SequentialTutorial sleep 2015-06-01
+   airflow test SequentialTutorial templated 2015-06-01
+   ```
+
+ * Running a [full dag from the CLI](https://bcb.github.io/airflow/run-dag-and-watch-logs): 
+   ```
+   export AIRFLOW__CORE__LOG_FILENAME_TEMPLATE="{{ ti.dag_id }}.log"
+   airflow scheduler   # start the scheduler
+   airflow trigger_dag <my_dag_name>
+   tail -f $AIRFLOW_HOME/logs/...     # Watch the logs
+   ``` 
+ 
  * Using the UI
    ```
    # start the web server, default port is 8080
    airflow webserver -p 8080
-
-   # start the scheduler
-   airflow scheduler
-
+   airflow scheduler    # start the scheduler (when not already done)
    # visit localhost:8080 in the browser 
    ```
+
+ * Various references:
+   - [Testing and debugging airflow](https://blog.godatadriven.com/testing-and-debugging-apache-airflow) is tedious
+
+## Kubernetes technical notes
+```
+kubectl version                    # Assert kubectl is installed
+kubectl cluster-info  # Display addresses of the master and services
+kubectl get nodes                  # List all nodes
+kubectl get --watch pods           # Dynamic (never ending) listing
+kubectl get deployments --all-namespaces # List deployments
+kubectl get pods --all-namespaces  # List all pods in all namespaces
+kubectl describe pods --all-namespaces
+kubectl describe pod <pod-name>
+kubectl exec <pod-name> -c <container-name> <command>
+kubectl exec -ti $POD_NAME bash    # Execute bash on the first container
+```
+```
+export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+$ echo NODE_PORT=$NODE_PORT
+```
+
+Questions:
+ - There are [auditing features](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/) and [monitoring features (heapster)](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/cluster-monitoring/README.md). But how to trail pod deployment requests from the cli ?
+
+References:
+ - [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+ - [Kubernetes basics tutorial](https://kubernetes.io/docs/tutorials/kubernetes-basics)
+ - This [Google's KubernetesPodOperator tutorial](https://cloud.google.com/composer/docs/how-to/using/using-kubernetes-pod-operator) alas requires [Google's cloud composer](https://cloud.google.com/composer/)
+
+## WIP
+A PermanentVolume can map to a file on the host. Use `kubectl describe pv` and look at the `Source/Path` entry.
+
+```
+$ cd RICT.MEPP-team/ShellScripts/computeLyonCityEvolution/Workflow/AirFlow
+$ airflow test kubernetes_airflow_documentation_sample start 2015-06-01 &
+kubectl get pods   # Yields: test-e38ed9c0  status = Pending
+kubectl get events # Yields: pod/test-e38ed9c0   persistentvolumeclaim "test-volume" not found
+kubectl get all --all-namespaces # Yummy
+kubectl describe pods/test-4bc9e3d6
+kubectl describe pv
+watch kubectl get pv,pvc,events --sort-by='.metadata.creationTimestamp'
+```
+Reference: [pending status issue](https://github.com/kubernetes/kubernetes/issues/14023)
