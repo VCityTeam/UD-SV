@@ -2,6 +2,8 @@ from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
 from airflow.operators.docker_operator import DockerOperator
+import sys # required for host_tmp_dir fix on OSX. Refer to 
+           # Collect_DockerOperator.py for the details
 
 default_args = {
         'owner'                 : 'airflow',
@@ -14,7 +16,10 @@ default_args = {
         'retry_delay'           : timedelta(minutes=5)
 }
 
-with DAG('DockerTutorial', default_args=default_args, schedule_interval="5 * * * *", catchup=False) as dag:
+with DAG('DockerTutorial', 
+         default_args=default_args, 
+         schedule_interval="5 * * * *", 
+         catchup=False) as dag:
         t1 = BashOperator(
                 task_id='print_current_date',
                 bash_command='date'
@@ -27,7 +32,8 @@ with DAG('DockerTutorial', default_args=default_args, schedule_interval="5 * * *
                 auto_remove=True,
                 command="/bin/sleep 30",
                 docker_url="unix://var/run/docker.sock",
-                network_mode="bridge"
+                network_mode="bridge",
+                host_tmp_dir=None if not sys.platform == "darwin" else "/tmp/"
         )
 
         t3 = BashOperator(

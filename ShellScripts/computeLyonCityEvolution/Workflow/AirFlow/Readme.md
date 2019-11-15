@@ -38,17 +38,19 @@ airflow test SequentialTutorial templated 2015-06-01
 ## DockerOperator
 
 ### Running Airflow's Docker tutorial example
+The execution of the tutorial example goes
 ```
-(venv) airflow test DockerTutorial print_current_date 2015-06-01
+(venv) airflow test DockerTutorial docker_command 2015-06-01
 ```
+Note that by default **FAILS** on OSX. 
 References: 
  - [Marc Lamberti's how to use dockeroperator apache airflow](https://marclamberti.com/blog/how-to-use-dockeroperator-apache-airflow/)
  - [API](https://airflow.apache.org/_api/airflow/operators/docker_operator/index.html?highlight=docker#module-airflow.operators.docker_operator)
  
 ### Running the hand made Collect example
 ```
+(venv) airflow test Collect print_current_date 2015-06-01
 (venv) airflow test Collect docker_command 2015-06-01
-(venv) airflow test Collect print_current_date
 ```
 
 ### DockerOperator Open Problem 1 (DOP1): data/files transfer between components/operators
@@ -142,6 +144,7 @@ $ kubectl apply -f kubernetes_airflow_documentation_sample-storage-class.yaml
  * [Kubernetes's DockerOperator tutorial](https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/)
 
 
+# Technical notes
 ## Airflow technical notes
 
  * Initialization<br>

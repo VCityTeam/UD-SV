@@ -21,8 +21,9 @@ default_args = {
     'retry_delay': timedelta(minutes=5)
 }
 
-dag = DAG(
-    'kubernetes_airflow_documentation_sample', default_args=default_args, schedule_interval=timedelta(minutes=10))
+dag = DAG('kubernetes_airflow_documentation_sample',
+          default_args=default_args, 
+          schedule_interval=timedelta(minutes=10))
 
 
 #####################################
