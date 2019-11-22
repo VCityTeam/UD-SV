@@ -12,9 +12,9 @@ Expected output:
 *Disclaimer: Remarkable buildings are not considered*
 
 ## Prerequisites
-Install [EBO's ChangeDetection branch of 3DUSE](https://github.com/EricBoix/3DUSE/tree/ChangeDetection)
-in this directory by following this
-[3DUSE install guide](https://github.com/EricBoix/3DUSE/blob/ChangeDetection/Install.md)
+Install [3DUSE](https://github.com/MEPP-team/3DUSE/blob/master/Install.md).
+
+Note: if you fail on installing 3DUSE on your desktop, [building the docker image](https://github.com/MEPP-team/3DUSE/blob/master/Docker/Readme.md) might be a plan B.
 
 ## Usage:
 
