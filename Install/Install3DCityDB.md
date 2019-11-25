@@ -13,8 +13,9 @@ This chapter describes two different methods for installing a [3DCity Data Base]
  
 ### 1.A/ Installing a 3DCityDB+PostGIS server with docker
  * Pre-requisite: [install Docker](https://docs.docker.com/install/).
- * Follow the [3DCityDB docker install steps](https://github.com/tum-gis/3dcitydb-docker-postgis#how-to-use-this-image) that boil down to ([mutatis mutandis](https://en.wikipedia.org/wiki/Mutatis_mutandis) and specially the password) 
+ * Follow the [3DCityDB docker install steps](https://github.com/tum-gis/3dcitydb-docker-postgis#how-to-use-this-image) that boils down to ([mutatis mutandis](https://en.wikipedia.org/wiki/Mutatis_mutandis) and specially the password) 
     ```
+    docker pull tumgis/3dcitydb-postgis:latest
     docker run -dit \
     --name citydb-container \
     -p 5432:5432 \
