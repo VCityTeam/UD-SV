@@ -6,12 +6,16 @@ Table of Content
    * [Native package (apt) level installation](#1b-installing-a-3dcitydbpostgis-server-with-a-package-manager-apt)
  - [Feeding data to the 3DCity Data Base](#2-feeding-data-to-the-3dcity-data-base)
 
-## 1/ Installing a 3DCityDB+PostGIS server
+In the following we distinguish two deployment use cases:
+ - the **docker use case** where the 3dCity datastore is obtained by running a container
+ - the **(linux) server configuration case** where a (linux) server is (intrusingly) configured by installing (with a package manager) a database server (and then configured).
+
+## 1/ Installing a 3DCityDB+PostGIS (database) server
 This chapter describes two different methods for installing a [3DCity Data Base](https://www.3dcitydb.org/3dcitydb/) server :
  - a quick an easy [3DCityDB **docker install**](#1a-installing-a-3dcitydbpostgis-server-with-docker)
  - a customizable [native package (apt) level installation](#1b-installing-a-3dcitydbpostgis-server-with-a-package-manager-apt)
  
-### 1.A/ Installing a 3DCityDB+PostGIS server with docker
+### 1.A/ Installing a 3DCityDB+PostGIS server: the docker deployment case
  * Pre-requisite: [install Docker](https://docs.docker.com/install/).
  * Follow the [3DCityDB docker install steps](https://github.com/tum-gis/3dcitydb-docker-postgis#how-to-use-this-image) that boils down to ([mutatis mutandis](https://en.wikipedia.org/wiki/Mutatis_mutandis) and specially the password) 
     ```
@@ -50,7 +54,7 @@ This chapter describes two different methods for installing a [3DCity Data Base]
  * **Use of the container**: After running the `docker run` command when installing the database, you can use the container immediately without any other command. However, each time you restart your computer, you should run the following command `sudo docker start citydb-container` in order to launch your database.
  
  
-### 1.B/ Installing a 3DCityDB+PostGIS server with a package manager (apt)
+### 1.B/ Installing a 3DCityDB+PostGIS server: the (linux) server configuration case
 Tested on:
  - Debian (GNU/Linux) 8.8 (jessie)
  - Ubuntu 14.04.3 (`lsb_release -a` yields `Ubuntu 14.04.3 LTS, Release 14.04, Codename trusty`)
@@ -139,9 +143,9 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
      
 ## 2.2/ Download and configure 3DCityDB Importer/Exporter 
  * Download 3DCityDB Importer/Exporter latest stable version software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/).
- 
+   <br>
    Here is the command to run for the version 3.3.1:
- 
+   <br>
    `(citydb_user)$ wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
 
  * Install 3DCityDB and follow installer steps:
@@ -166,6 +170,12 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
              * `sudo cp .Xauthority <pwd_output_from_above>`
            - Make sure that the user for which we want to authorize forwarding has reading rights on the resulting copy of `.Xauthority` located in its home directory (when not, use e.g. `chown` or `chmod`) 
 
+## 2.3/ Creating the 3DCityDB database structure
+
+### 2.3.1 Creating the 3DCityDB database structure: the docker deployment case
+The pre-build docker container comes with this task already integrated. You thus have nothing to do and can skip this step.
+
+### 2.3.1 Creating the 3DCityDB database structure: the (linux) server configuration case
  * Configure 3DCityDB Importer/Exporter to match your postgresql configuration
    * in version 3.3.1 of 3DCityDB Importer/Exporter:
      <br>
@@ -192,17 +202,15 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
      export PGUSER=postgres
      #------------------------------------------------------------------------------
      ```
-
-## 2.3/ Import some CityGML file content
- * Chapter 3.3.2 P. 100, Step 3: **Execute the CREATE_DB script**
+ * Apply [chapter 3.3.2 p. 100, Step 3](http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB_Documentation_v3.3.pdf): **Execute the CREATE_DB script**
    - ````
      cd <path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/
      psql -h <your_host_address> -p 5432 -d citydb_v3 -U citydb_user -f CREATE_DB.sql
      ````
     - When asked for `Please enter a valid SRID (e.g., 3068 for DHDN/Soldner Berlin):` , enter : `3946` (which is the standard coordinate system for Lyon)
     - When asked for `Please enter the corresponding SRSName to be used in GML exports (e.g., urn:ogc:def:crs, crs:EPSG::3068, crs:EPSG::5783):` , enter : `crs:EPSG::3946`
-
-     
+    
+## 2.4/ Import some CityGML file content
 We can now proceed with the CityGML imporation per se.
 
 _First, please make sure that you have an existing and working database PostGreSQL named_ `<citydb>`. 
@@ -250,7 +258,7 @@ _First, please make sure that you have an existing and working database PostGreS
      * Hit browse and choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
      * Hit Import 
 
-### 2.4/ Some importation examples
+### 2.5/ Some importation examples
  - [Open Data](https://data.grandlyon.com/search/?Q=citygml+lyon) of Lyon Métropole for [year 2012: a walkthrough](DataLyonCityGML2012.md) 
  - [Open Data](https://data.grandlyon.com/search/?Q=citygml+lyon) of Lyon Métropole for [year 2015: a walkthrough](DataLyonCityGML2015.md)
 
