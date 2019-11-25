@@ -164,22 +164,19 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
    * in version 3.3.1 of 3DCityDB Importer/Exporter:
      <br>
      Edit the shell variables of the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/CREATE_DB.sh` script. After edition this section should look like:
-    
       ```
-          # Provide your database details here
-          export PGPORT=5432
-          export PGHOST=localhost
-          export PGUSER=citydb_user
-          export CITYDB=citydb_v3
-          export PGBIN=/usr/bin/
-
+      # Provide your database details here
+      export PGPORT=5432
+      export PGHOST=localhost
+      export PGUSER=citydb_user
+      export CITYDB=citydb_v3
+      export PGBIN=/usr/bin/
       ```
    * In version 4.2.0 of 3DCityDB Importer/Exporter:
      <br>
      In this version, you do not have to modify the file `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CREATE_DB.sh`, because the shell variables to change are in the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CONNECTION_DETAILS.sh` script.
      <br>
      After edition this section should look like (if you followed our docker tutorial above):
-
      ```
      # Provide your database details here ------------------------------------------
      export PGBIN=/usr/bin/
