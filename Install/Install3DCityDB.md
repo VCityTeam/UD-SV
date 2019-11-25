@@ -141,7 +141,7 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
        export JAVA_HOME=/usr/lib/jvm/oracle_jre1.8.0_131
        ````
      
-## 2.2/ Download and configure 3DCityDB Importer/Exporter 
+### 2.2/ Download and configure 3DCityDB Importer/Exporter 
  * Download 3DCityDB Importer/Exporter latest stable version software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/).
    <br>
    Here is the command to run for the version 3.3.1:
@@ -170,13 +170,13 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
              * `sudo cp .Xauthority <pwd_output_from_above>`
            - Make sure that the user for which we want to authorize forwarding has reading rights on the resulting copy of `.Xauthority` located in its home directory (when not, use e.g. `chown` or `chmod`) 
 
-## 2.3/ Creating the 3DCityDB database structure
+### 2.3/ Creating the 3DCityDB database structure
 
-### 2.3.1 Creating the 3DCityDB database structure: the docker deployment case
+#### 2.3.A/ Creating the 3DCityDB database structure: the docker deployment case
 The pre-build docker container comes with this task already integrated. You thus have nothing to do and can skip this step.
 
-### 2.3.1 Creating the 3DCityDB database structure: the (linux) server configuration case
- * Configure 3DCityDB Importer/Exporter to match your postgresql configuration
+#### 2.3.B/ Creating the 3DCityDB database structure: the (linux) server configuration case
+ * Configure 3DCityDB-Importer-Exporter to match your postgresql configuration
    * in version 3.3.1 of 3DCityDB Importer/Exporter:
      <br>
      Edit the shell variables of the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/CREATE_DB.sh` script. After edition this section should look like:
@@ -210,55 +210,61 @@ The pre-build docker container comes with this task already integrated. You thus
     - When asked for `Please enter a valid SRID (e.g., 3068 for DHDN/Soldner Berlin):` , enter : `3946` (which is the standard coordinate system for Lyon)
     - When asked for `Please enter the corresponding SRSName to be used in GML exports (e.g., urn:ogc:def:crs, crs:EPSG::3068, crs:EPSG::5783):` , enter : `crs:EPSG::3946`
     
-## 2.4/ Import some CityGML file content
-We can now proceed with the CityGML imporation per se.
-
-_First, please make sure that you have an existing and working database PostGreSQL named_ `<citydb>`. 
-   - Start 3DCityDB:
-     ````
-     (citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
-     (citydb_user)$ ./3DCityDB-Importer-Exporter.sh&
-     ````
-     **Note**: there is a console on the right side of the graphical interface.
-   - Go to database tab and change database connection to the following:
-
-   ````
-    Connection: new connection
-    ...
-    Connection Details
-      Description: citydb_v3
-      Username: citydb_user
-      Password: 
-      Type: PostgreSQL/PostGIS
-      Server: localhost
-      Port:5432
-      Database: citydb_v3
-   ````
+### 2.4/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore
+Before realising this step, please make independtly sure (with e.g. [pgAdmin4](https://www.pgadmin.org/download/)) that the preivous stages were successfull and that your 3DCityDB PostGreSQL database server is running, the considered port is accessible and that the database name you exists. 
    
-   **except if you followed the docker installation of 3DCityDB+PostGIS on the top of this page** in which case you may instead fill the boxes as described below:
-   
-    ````
-    Connection: New connection
-    ...
-    Connection Details
-      Description: New connection
-      Username: postgres
-      Password: postgres
-      Type: PostgreSQL/PostGIS
-      Server: localhost
-      Port:5432
-      Database: citydb
-      schema: citydb
-    ````
+Start 3DCityDB-Importer-Exporter GUI:
+````
+(citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
+(citydb_user)$ ./3DCityDB-Importer-Exporter.sh&
+````
+and notice that there is a console on the right side of the graphical interface.
 
-  - Hit `Connect button`
-    Note: when this fails and depending on your postgresql setup, you might need to provide the IP number of the server in place of the localhost string when configuring the Server entry.
-  - Import a CityGML file: 
-     * Go back to import tab. 
-     * Hit browse and choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
-     * Hit Import 
+#### 2.3.A/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore: the (linux) server configuration case
+Go to 3DCityDB-Importer-Exporter's "database configuration" tab and change the database connection configuration with the following configuration:
+````
+Connection: new connection
+ ...
+ Connection Details
+    Description: citydb_v3
+    Username: citydb_user
+    Password: 
+    Type: PostgreSQL/PostGIS
+    Server: localhost
+    Port:5432
+    Database: citydb_v3
+````
+Hit the `Connect button`
 
-### 2.5/ Some importation examples
+Troubleshooting: when this fails and depending on your postgresql setup, you might need to provide the IP number of the server in place of the localhost string when configuring the Server entry.
+
+#### 2.3.A/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore: the docker deployment case
+Go to 3DCityDB-Importer-Exporter's "database configuration" tab and change the database connection configuration with the following configuration that matches the one of the underlying Dockerfile:
+````
+Connection: New connection
+ ...
+ Connection Details
+    Description: New connection
+    Username: postgres
+    Password: postgres
+    Type: PostgreSQL/PostGIS
+    Server: localhost
+    Port:5432
+    Database: citydb
+    schema: citydb
+````
+Hit the `Connect button`
+
+Troubleshooting: when this fails and depending on your postgresql setup, you might need to provide the IP number of the server in place of the localhost string when configuring the Server entry.
+
+### 2.5/ CityGML file imporation per se.
+In order to import a CityGML file from the 3DCityDB-Importer-Exporter GUI 
+  * Go to to the "import" tab 
+     - hit `browse`
+     - choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
+     - hit `Import` 
+
+### 2.6/ Some toher examples of CityGML files that you can import 
  - [Open Data](https://data.grandlyon.com/search/?Q=citygml+lyon) of Lyon Métropole for [year 2012: a walkthrough](DataLyonCityGML2012.md) 
  - [Open Data](https://data.grandlyon.com/search/?Q=citygml+lyon) of Lyon Métropole for [year 2015: a walkthrough](DataLyonCityGML2015.md)
 
