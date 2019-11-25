@@ -26,26 +26,26 @@ This chapter describes two different methods for installing a [3DCity Data Base]
     -e "POSTGRES_PASSWORD=postgres" \
       tumgis/3dcitydb-postgis
     ```
- * Troubleshooting:
-    - if you get the following error message (when invocating your do`docker run`)
-      ```
-      ERROR: for citydb  Cannot start service citydb: driver failed programming external connectivity
-             on endpoint v4xx_citydb_1 (...): Bind for 0.0.0.0:5432 failed: port is already allocated
-      ```
-      then some other service is already using port 5432. You now have three cases concerning the 5432 port:
-        1. it was pre-empted by a (previously run) dandling container
-        2. it was pre-empted by another service/container that you don't need anymore
-        3. it was pre-empted by another service/container that you _do_ need (for example the [default API_Enhanced_City configuration](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md#install-using-docker), that you [might have installed](https://github.com/MEPP-team/RICT/blob/master/Install.md#backend-udv-serverapi_enhanced_city-install-notes) for your UDV demo, uses that port)
-      <br>
-      In the first two cases, you can free that port e.g. by retrieving the container culprit and killing with the following method<br>
+ * Troubleshooting:<br>
+   if you get the following error message (when invocating your do`docker run`)
+   ```
+   ERROR: for citydb  Cannot start service citydb: driver failed programming external connectivity
+          on endpoint v4xx_citydb_1 (...): Bind for 0.0.0.0:5432 failed: port is already allocated
+   ```
+   then some other service is already using port 5432. You now have three cases concerning the 5432 port:
+     1. it was pre-empted by a (previously run) dandling container
+     1. it was pre-empted by another service/container that you don't need anymore
+     1. it was pre-empted by another service/container that you _do_ need (for example the [default API_Enhanced_City configuration](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md#install-using-docker), that you [might have installed](https://github.com/MEPP-team/RICT/blob/master/Install.md#backend-udv-serverapi_enhanced_city-install-notes) for your UDV demo, uses that port)<br>
+   In the **first two cases**, you can free that port e.g. by retrieving the container culprit and killing with the following method<br>
       * print the list of running containers with the command `sudo docker container ls`,
       * find the `<name>` of container using port 5432,
       * run the command `sudo docker container stop <name>`,
       * eventually try again your `docker run ...` command.
       <br>
-      Note that the 5432 port might also be allocated by some other services that you might retrieve with at command of the from `lsof -i :5432`.
-      <br>
-      In the third case (that is you don't have the freedom to kill the services/container) you can alter the `-p 5432:5432 ` argument of the above docker run by exposing another port of your choice.
+   <br>
+   Note that the 5432 port might also be allocated by some other services that you might retrieve with at command of the from `lsof -i :5432`.
+   <br>
+   In the **third case** (that is you don't have the freedom to kill the services/container) you can alter the `-p 5432:5432 ` argument of the above docker run by exposing another port of your choice.
  
  * **Use of the container**: After running the `docker run` command when installing the database, you can use the container immediately without any other command. However, each time you restart your computer, you should run the following command `sudo docker start citydb-container` in order to launch your database.
  
