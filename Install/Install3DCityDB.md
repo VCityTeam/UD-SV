@@ -161,9 +161,8 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
         * **Distant server Warning**: first assert that X11 forwarding is allowed In case you get the `X11 connection rejected because of wrong authentication` error message and you are using ssh to log on the server you are configuring then make sure ssh is configured to allow for "X11 forwarding")
 
  * Configure 3DCityDB Importer/Exporter to match your postgresql configuration
- 
-    * in version 3.3.1 of 3DCityDB Importer/Exporter:
-
+   * in version 3.3.1 of 3DCityDB Importer/Exporter:
+     <br>
      Edit the shell variables of the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/CREATE_DB.sh` script. After edition this section should look like:
     
       ```
@@ -176,9 +175,9 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
 
       ```
    * In version 4.2.0 of 3DCityDB Importer/Exporter:
- 
-    In this version, you do not have to modify the file `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CREATE_DB.sh`, because the shell variables to change are in the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CONNECTION_DETAILS.sh` script.
-
+     <br>
+     In this version, you do not have to modify the file `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CREATE_DB.sh`, because the shell variables to change are in the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CONNECTION_DETAILS.sh` script.
+     <br>
      After edition this section should look like (if you followed our docker tutorial above):
 
      ```
