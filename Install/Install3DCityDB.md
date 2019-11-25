@@ -153,7 +153,7 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
           <br>
           Note: distant server here means that e.g. you installed the 3DCityDB-Importer-Exporter on the remote server (using e.g. ssh to connect) where you previously installed the 3DCityDatabase.
           <br>
-          If you are getting an error message of the form `X11 connection rejected because of wrong authentication` it is probably because 3DCityDB-Importer-Exporter, that uses a GUI interface based on the X11 windowing protocol, cannot reach does not have the permissions to access the X11 server (running/emulated on you desktop). Thus you should first assert that so called ssh X11 forwarding is allowed. In order to do so, try to launch some X client e.g. `xclock` and assert that a clock indeeds pops up on your terminal.
+          If you are getting an error message of the form `X11 connection rejected because of wrong authentication` it is probably because 3DCityDB-Importer-Exporter, that uses a GUI interface based on the X11 windowing protocol, does not have the ad-hoc permissions to access the X11 server (running/emulated on you desktop). Thus you should first assert that so called ssh X11 forwarding is allowed. In order to do so, try to launch some X client e.g. `xclock` and assert that a clock indeeds pops up on your terminal.
           <br> 
           When this fails:
            - allow ssh login as `citydb_user` user and configure ssh for "X11 forwarding"
