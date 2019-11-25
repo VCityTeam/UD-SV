@@ -220,7 +220,7 @@ Start 3DCityDB-Importer-Exporter GUI:
 ````
 and notice that there is a console on the right side of the graphical interface.
 
-#### 2.3.A/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore: the (linux) server configuration case
+#### 2.4.A/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore: the (linux) server configuration case
 Go to 3DCityDB-Importer-Exporter's "database configuration" tab and change the database connection configuration with the following configuration:
 ````
 Connection: new connection
@@ -238,7 +238,7 @@ Hit the `Connect button`
 
 Troubleshooting: when this fails and depending on your postgresql setup, you might need to provide the IP number of the server in place of the localhost string when configuring the Server entry.
 
-#### 2.3.A/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore: the docker deployment case
+#### 2.4.B/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore: the docker deployment case
 Go to 3DCityDB-Importer-Exporter's "database configuration" tab and change the database connection configuration with the following configuration that matches the one of the underlying Dockerfile:
 ````
 Connection: New connection
