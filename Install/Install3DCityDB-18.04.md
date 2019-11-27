@@ -13,11 +13,10 @@ sudo su postgres
 (postgres)$ createuser --password citydb_user
             ...
 (postgres)$ createdb -O citydb_user citydb_v3 
-ifconfig -a
 ```
-Edit `/etc/postgresql/10/main/pg_hba.conf` and add the line
-   ???
-Edit `/etc/postgresql/10/main/postgresql.conf`
+Edit `/etc/postgresql/10/main/pg_hba.conf` and add the line ???
+
+Edit `/etc/postgresql/10/main/postgresql.conf` and ???
 
 ```
 (root)$ service postgresql restart
@@ -26,8 +25,7 @@ Edit `/etc/postgresql/10/main/postgresql.conf`
 (root)$ su - citydb_user
 (citydb_user)$ psql -d citydb_v3 -c 'create extension postgis;'
 ```
-
-## Download JRE from https://www.java.com/en/download/manual.jsp
+Download JRE from https://www.java.com/en/download/manual.jsp
 ```
 (root)$ cd tmp
 (root)$ tar zxvf jre-8u211-linux-x64.tar.gz 
