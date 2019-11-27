@@ -1,11 +1,13 @@
-## Environment variables to set
+**Objective**: the following is a tentative adaptation of [3DCityDB installation notes](Install3DCityDB.md) for
+the linux server case running Ubuntu 18.04.
+
+Set the following environment variables
 ```
 export POSTGRES_USER=citydb_user
 export POSTGRES_PASSWORD= <...>
 export POSTGRES_DB='citydb_v3'
 ```
 
-## Use ansible for the rest
 ```
 sudo apt-get install postgresql-10-postgis-2.4
 sudo useradd --password ${POSTGRES_PASSWORD} ${POSTGRES_USER}
@@ -14,6 +16,7 @@ sudo su postgres
             ...
 (postgres)$ createdb -O citydb_user citydb_v3 
 ```
+Note: someday :) we could use ansible in order to script the following editions
 Edit `/etc/postgresql/10/main/pg_hba.conf` and add the line ???
 
 Edit `/etc/postgresql/10/main/postgresql.conf` and ???
@@ -42,11 +45,3 @@ Download JRE from https://www.java.com/en/download/manual.jsp
   ... point the installer to install in e.g. ~/local/3DCityDB-Importer-Exporter
 (citydb_user)$ rm -f 3DCityDB-Importer-Exporter-3.3.1-Setup.jar
 ```
-
-#######
-changer le script suivant our merge bati et remarquable
- 	computeLyonCityEvolution.sh
-utiliser le script createdabase pour les trois splits
-pousser le tout a la main dans la base 
-
-wget https://github.com/MEPP-team/RICT.git/ShellScripts/computeLyonCityEvolution/computeLyonCityEvolution.sh
