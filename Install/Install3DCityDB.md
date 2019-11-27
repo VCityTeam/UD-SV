@@ -1,20 +1,18 @@
 # 3DCityDB installation walkthrough
+In the following we distinguish two deployment use cases:
+ - the **docker use case** where the 3dCity datastore is obtained by running a container
+ - the **(linux) server configuration case** where a (linux) server is (intrusingly) configured by installing (with a package manager) a database server (and then configured).
 
-Table of Content
- - [Installing a 3DCityDB+PostGIS server](#1-installing-a-3dcitydbpostgis-server)
-   * [3DCityDB **docker install**](#1a-installing-a-3dcitydbpostgis-server-with-docker)
-   * [Native package (apt) level installation](#1b-installing-a-3dcitydbpostgis-server-with-a-package-manager-apt)
- - [Feeding data to the 3DCity Data Base](#2-feeding-data-to-the-3dcity-data-base)
-
-## 1/ Installing a 3DCityDB+PostGIS server
+## 1/ Installing a 3DCityDB+PostGIS (database) server
 This chapter describes two different methods for installing a [3DCity Data Base](https://www.3dcitydb.org/3dcitydb/) server :
  - a quick an easy [3DCityDB **docker install**](#1a-installing-a-3dcitydbpostgis-server-with-docker)
  - a customizable [native package (apt) level installation](#1b-installing-a-3dcitydbpostgis-server-with-a-package-manager-apt)
  
-### 1.A/ Installing a 3DCityDB+PostGIS server with docker
+### 1.A/ Installing a 3DCityDB+PostGIS server: the docker deployment case
  * Pre-requisite: [install Docker](https://docs.docker.com/install/).
- * Follow the [3DCityDB docker install steps](https://github.com/tum-gis/3dcitydb-docker-postgis#how-to-use-this-image) that boil down to ([mutatis mutandis](https://en.wikipedia.org/wiki/Mutatis_mutandis) and specially the password) 
+ * Follow the [3DCityDB docker install steps](https://github.com/tum-gis/3dcitydb-docker-postgis#how-to-use-this-image) that boils down to ([mutatis mutandis](https://en.wikipedia.org/wiki/Mutatis_mutandis) and specially the password) 
     ```
+    docker pull tumgis/3dcitydb-postgis:latest
     docker run -dit \
     --name citydb-container \
     -p 5432:5432 \
@@ -26,22 +24,30 @@ This chapter describes two different methods for installing a [3DCity Data Base]
       tumgis/3dcitydb-postgis
     ```
  * Troubleshooting:
-    - if you get the following error message (when invocating your do`docker run`)
-      ```
-      ERROR: for citydb  Cannot start service citydb: driver failed programming external connectivity
-             on endpoint v4xx_citydb_1 (...): Bind for 0.0.0.0:5432 failed: port is already allocated
-      ```
-      you probably need to free the 5432 port. This port might be pre-empted by a (previously run) dandling container that you might retrieve an kill with the following method
-        * print the list of running containers with the command `sudo docker container ls`,
-        * find the container named <name> using the 5432 port,
-        * run the command `sudo docker container stop <name>`,
-        * eventually try again your `docker run ...` command.
-      Note that the 5432 port might also be allocated by some other services that you might retrieve with at command of the from `lsof -i :5432`.
+   <br>
+   if you get the following error message (when invocating your do`docker run`)
+   ```
+   ERROR: for citydb  Cannot start service citydb: driver failed programming external connectivity
+          on endpoint v4xx_citydb_1 (...): Bind for 0.0.0.0:5432 failed: port is already allocated
+   ```
+   then some other service is already using port 5432. You now have three cases concerning the 5432 port:
+     1. it was pre-empted by a (previously run) dandling container
+     1. it was pre-empted by another service/container that you don't need anymore
+     1. it was pre-empted by another service/container that you _do_ need (for example the [default API_Enhanced_City configuration](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md#install-using-docker), that you [might have installed](https://github.com/MEPP-team/RICT/blob/master/Install.md#backend-udv-serverapi_enhanced_city-install-notes) for your UDV demo, uses that port)<br>
+   In the first two cases, you can free that port e.g. by retrieving the container culprit and killing with the following method<br>
+      * print the list of running containers with the command `sudo docker container ls`,
+      * find the `<name>` of container using port 5432,
+      * run the command `sudo docker container stop <name>`,
+      * eventually try again your `docker run ...` command.
+   <br>
+   Note that the 5432 port might also be allocated by some other services that you might retrieve with at command of the from `lsof -i :5432`.
+   <br>
+   In the third case (that is you don't have the freedom to kill the services/container) you can alter the `-p 5432:5432 ` argument of the above docker run by exposing another port of your choice.
  
  * **Use of the container**: After running the `docker run` command when installing the database, you can use the container immediately without any other command. However, each time you restart your computer, you should run the following command `sudo docker start citydb-container` in order to launch your database.
  
  
-### 1.B/ Installing a 3DCityDB+PostGIS server with a package manager (apt)
+### 1.B/ Installing a 3DCityDB+PostGIS server: the (linux) server configuration case
 Tested on:
  - Debian (GNU/Linux) 8.8 (jessie)
  - Ubuntu 14.04.3 (`lsb_release -a` yields `Ubuntu 14.04.3 LTS, Release 14.04, Codename trusty`)
@@ -128,50 +134,58 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
        export JAVA_HOME=/usr/lib/jvm/oracle_jre1.8.0_131
        ````
      
-## 2.2/ Download and configure 3DCityDB Importer/Exporter 
+### 2.2/ Download and configure 3DCityDB Importer/Exporter 
  * Download 3DCityDB Importer/Exporter latest stable version software from [3DCityDB.org download site](http://www.3dcitydb.org/3dcitydb/downloads/).
- 
+   <br>
    Here is the command to run for the version 3.3.1:
- 
+   <br>
    `(citydb_user)$ wget http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB-Importer-Exporter-3.3.1-Setup.jar` 
 
  * Install 3DCityDB and follow installer steps:
-     - **Distant server warning**: because 3DCityDB-Importer-Exporter uses a GUI interface based on X11, and when using ssh to login on the installation server, you should first assert that X11 forwarding is allowed. For example try to launch some X client e.g. `xclock` and assert that a clock indeeds pops up on your terminal. When this fails:
-         - allow ssh login as `citydb_user` user and configure ssh for "X11 forwarding"
-         - open a new terminal and run:
-            - `ssh <server_ip_address>`
-            - `sudo su - <user_to_authorize_forwarding>`
-            - `pwd` and note the result
-        - open a new terminal and run:
-            - `ssh -X <server_ip_address>` (authorize X11 forwarding for the connection user)
-            - `sudo cp .Xauthority <pwd_output_from_above>`
-        - Make sure that the user for which we want to authorize forwarding has reading rights on the resulting copy of `.Xauthority` located in its home directory (when not, use e.g. `chown` or `chmod`) 
      - **Launch the `3DCityDB-Importer-Exporter`**: `(citydb_user)$ java -jar 3DCityDB-Importer-Exporter-3.3.1-Setup.jar`
      - Trouble shooting:
+       <br>
         * on **debian** when getting the `Exception in thread "main" java.lang.NoClassDefFoundError: Could not initialize class java.awt.Toolkit` error message then ([cross fingers](https://stackoverflow.com/questions/18099614/java-lang-noclassdeffounderror-could-not-initialize-class-java-awt-toolkit) and) try `apt-get install libxtst6`.
-        * **Distant server Warning**: first assert that X11 forwarding is allowed In case you get the `X11 connection rejected because of wrong authentication` error message and you are using ssh to log on the server you are configuring then make sure ssh is configured to allow for "X11 forwarding")
+        * **Distant server Warning**:
+          <br>
+          Note: distant server here means that e.g. you installed the 3DCityDB-Importer-Exporter on the remote server (using e.g. ssh to connect) where you previously installed the 3DCityDatabase.
+          <br>
+          If you are getting an error message of the form `X11 connection rejected because of wrong authentication` it is probably because 3DCityDB-Importer-Exporter, that uses a GUI interface based on the X11 windowing protocol, does not have the ad-hoc permissions to access the X11 server (running/emulated on you desktop). Thus you should first assert that so called ssh X11 forwarding is allowed. In order to do so, try to launch some X client e.g. `xclock` and assert that a clock indeeds pops up on your terminal.
+          <br> 
+          When this fails:
+           - allow ssh login as `citydb_user` user and configure ssh for "X11 forwarding"
+           - open a new terminal and run:
+             * `ssh <server_ip_address>`
+             * `sudo su - <user_to_authorize_forwarding>`
+             * `pwd` and note the result
+           - open a new terminal and run:
+             * `ssh -X <server_ip_address>` (authorize X11 forwarding for the connection user)
+             * `sudo cp .Xauthority <pwd_output_from_above>`
+           - Make sure that the user for which we want to authorize forwarding has reading rights on the resulting copy of `.Xauthority` located in its home directory (when not, use e.g. `chown` or `chmod`) 
 
- * Configure 3DCityDB Importer/Exporter to match your postgresql configuration
- 
-    * in version 3.3.1 of 3DCityDB Importer/Exporter:
+### 2.3/ Creating the 3DCityDB database structure
 
+#### 2.3.A/ Creating the 3DCityDB database structure: the docker deployment case
+The pre-build docker container comes with this task already integrated. You thus have nothing to do and can skip this step.
+
+#### 2.3.B/ Creating the 3DCityDB database structure: the (linux) server configuration case
+ * Configure 3DCityDB-Importer-Exporter to match your postgresql configuration
+   * in version 3.3.1 of 3DCityDB Importer/Exporter:
+     <br>
      Edit the shell variables of the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/CREATE_DB.sh` script. After edition this section should look like:
-    
       ```
-          # Provide your database details here
-          export PGPORT=5432
-          export PGHOST=localhost
-          export PGUSER=citydb_user
-          export CITYDB=citydb_v3
-          export PGBIN=/usr/bin/
-
+      # Provide your database details here
+      export PGPORT=5432
+      export PGHOST=localhost
+      export PGUSER=citydb_user
+      export CITYDB=citydb_v3
+      export PGBIN=/usr/bin/
       ```
    * In version 4.2.0 of 3DCityDB Importer/Exporter:
- 
-    In this version, you do not have to modify the file `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CREATE_DB.sh`, because the shell variables to change are in the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CONNECTION_DETAILS.sh` script.
-
+     <br>
+     In this version, you do not have to modify the file `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CREATE_DB.sh`, because the shell variables to change are in the "Provide your database details here" section of the `<path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/ShellScripts/Unix/CONNECTION_DETAILS.sh` script.
+     <br>
      After edition this section should look like (if you followed our docker tutorial above):
-
      ```
      # Provide your database details here ------------------------------------------
      export PGBIN=/usr/bin/
@@ -181,65 +195,69 @@ Installing such an environment is required in order to run [3DCityDB Importer/Ex
      export PGUSER=postgres
      #------------------------------------------------------------------------------
      ```
-
-## 2.3/ Import some CityGML file content
- * Chapter 3.3.2 P. 100, Step 3: **Execute the CREATE_DB script**
+ * Apply [chapter 3.3.2 p. 100, Step 3](http://www.3dcitydb.org/3dcitydb/fileadmin/downloaddata/3DCityDB_Documentation_v3.3.pdf): **Execute the CREATE_DB script**
    - ````
      cd <path_to_3DCityDB-Importer-Exporter>/3dcitydb/postgresql/
      psql -h <your_host_address> -p 5432 -d citydb_v3 -U citydb_user -f CREATE_DB.sql
      ````
     - When asked for `Please enter a valid SRID (e.g., 3068 for DHDN/Soldner Berlin):` , enter : `3946` (which is the standard coordinate system for Lyon)
     - When asked for `Please enter the corresponding SRSName to be used in GML exports (e.g., urn:ogc:def:crs, crs:EPSG::3068, crs:EPSG::5783):` , enter : `crs:EPSG::3946`
-
-     
-We can now proceed with the CityGML imporation per se.
-
-_First, please make sure that you have an existing and working database PostGreSQL named_ `<citydb>`. 
-   - Start 3DCityDB:
-     ````
-     (citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
-     (citydb_user)$ ./3DCityDB-Importer-Exporter.sh&
-     ````
-     **Note**: there is a console on the right side of the graphical interface.
-   - Go to database tab and change database connection to the following:
-
-   ````
-    Connection: new connection
-    ...
-    Connection Details
-      Description: citydb_v3
-      Username: citydb_user
-      Password: 
-      Type: PostgreSQL/PostGIS
-      Server: localhost
-      Port:5432
-      Database: citydb_v3
-   ````
+    
+### 2.4/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore
+Before realising this step, please make independtly sure (with e.g. [pgAdmin4](https://www.pgadmin.org/download/)) that the preivous stages were successfull and that your 3DCityDB PostGreSQL database server is running, the considered port is accessible and that the database name you exists. 
    
-   **except if you followed the docker installation of 3DCityDB+PostGIS on the top of this page** in which case you may instead fill the boxes as described below:
-   
-    ````
-    Connection: New connection
-    ...
-    Connection Details
-      Description: New connection
-      Username: postgres
-      Password: postgres
-      Type: PostgreSQL/PostGIS
-      Server: localhost
-      Port:5432
-      Database: citydb
-      schema: citydb
-    ````
+Start 3DCityDB-Importer-Exporter GUI:
+````
+(citydb_user)$ chmod u+x 3DCityDB-Importer-Exporter.sh
+(citydb_user)$ ./3DCityDB-Importer-Exporter.sh&
+````
+and notice that there is a console on the right side of the graphical interface.
 
-  - Hit `Connect button`
-    Note: when this fails and depending on your postgresql setup, you might need to provide the IP number of the server in place of the localhost string when configuring the Server entry.
-  - Import a CityGML file: 
-     * Go back to import tab. 
-     * Hit browse and choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
-     * Hit Import 
+#### 2.4.A/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore: the (linux) server configuration case
+Go to 3DCityDB-Importer-Exporter's "database configuration" tab and change the database connection configuration with the following configuration:
+````
+Connection: new connection
+ ...
+ Connection Details
+    Description: citydb_v3
+    Username: citydb_user
+    Password: 
+    Type: PostgreSQL/PostGIS
+    Server: localhost
+    Port:5432
+    Database: citydb_v3
+````
+Hit the `Connect button`
 
-### 2.4/ Some importation examples
+Troubleshooting: when this fails and depending on your postgresql setup, you might need to provide the IP number of the server in place of the localhost string when configuring the Server entry.
+
+#### 2.4.B/ Configure 3DCityDB-Importer-Exporter with your chosen 3dCityDB datastore: the docker deployment case
+Go to 3DCityDB-Importer-Exporter's "database configuration" tab and change the database connection configuration with the following configuration that matches the one of the underlying Dockerfile:
+````
+Connection: New connection
+ ...
+ Connection Details
+    Description: New connection
+    Username: postgres
+    Password: postgres
+    Type: PostgreSQL/PostGIS
+    Server: localhost
+    Port:5432
+    Database: citydb
+    schema: citydb
+````
+Hit the `Connect button`
+
+Troubleshooting: when this fails and depending on your postgresql setup, you might need to provide the IP number of the server in place of the localhost string when configuring the Server entry.
+
+### 2.5/ CityGML file imporation per se.
+In order to import a CityGML file from the 3DCityDB-Importer-Exporter GUI 
+  * Go to to the "import" tab 
+     - hit `browse`
+     - choose a CityGML file (e.g. [Lyon data](https://data.grandlyon.com/localisation/maquette-3d-texturfe-de-larrondissement-de-lyon-1er-la-mftropole-de-lyon/))
+     - hit `Import` 
+
+### 2.6/ Some toher examples of CityGML files that you can import 
  - [Open Data](https://data.grandlyon.com/search/?Q=citygml+lyon) of Lyon Métropole for [year 2012: a walkthrough](DataLyonCityGML2012.md) 
  - [Open Data](https://data.grandlyon.com/search/?Q=citygml+lyon) of Lyon Métropole for [year 2015: a walkthrough](DataLyonCityGML2015.md)
 
