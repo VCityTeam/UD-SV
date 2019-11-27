@@ -16,8 +16,9 @@ pip3 install kuberntes      # Required for KubernetesOperator examples
 ### Setting up airflow
 Point Airflow to use the dags directory located in the current working directoryby overwriting your `$AIRFLOW_HOME` directory (that defaults to `~/airflow`).
 ```
+cd <this-repository>/ShellScripts/computeLyonCityEvolution/Workflow/AirFlow
 export AIRFLOW_HOME=`pwd`
-airflow initdb     # Initialize the dags database
+airflow initdb             # Initialize the dags database
 ```
 Make sure that the proper dags were parsed:
 ```
@@ -122,6 +123,30 @@ We have the freedom to choose some file server technology. For example we could 
 Yet there doesn't seem to exist an Airflow way to express such a constraint. If this is were indeed impossible, the Airflow script would require some "outside" ressoure whose allocation/tear-down would have to be described elsewhere (which would obfuscate things).
 
 ## KubernetesOperator
+### Installation
+The KubernetesExecutor requires another (database) backend than default database SQLite and one has to use either `MySQL` or `PostgreSQL` ([stackoverflow reference](https://stackoverflow.com/questions/36822515/configuring-airflow-to-work-with-celeryexecutor) and see also [executors explained](https://www.astronomer.io/guides/airflow-executors-explained/)).
+
+We here follow the [phase 2 section of Tianlong Song's blog](https://stlong0521.github.io/20161023%20-%20Airflow.html) (entitled "A Guide On How To Build An Airflow Server/Cluster"):
+```
+brew install postgresql # For Mac
+brew services start postgresql
+createdb airflow_meta   # Create an ad-hoc PostgreSQL database
+```
+Deal with the newly created [database ownership/password](https://stackoverflow.com/questions/12720967/how-to-change-postgresql-user-password). 
+```
+# Install necessary sub-packages
+(venv)pip install apache-airflow[crypto] # For connection credentials protection
+(venv) pip install apache-airflow[postgres] # For PostgreSQL DBs
+```
+Modify the configuration in `$AIRFLOW_HOME/airflow.cfg`
+```
+# Change the executor to Local Executor
+executor = LocalExecutor
+
+# Change the meta db configuration
+sql_alchemy_conn = postgresql+psycopg2://<your_postgres_user_name>:<your_postgres_password>@host_name/database_name
+```
+Test the db access with the [profiling interface](https://airflow.apache.org/profiling.html) with e.g. the request `select * from dag limit 100`
 
 ### Running KubernetesPodOperator Airflow's tutorial example
 WARNING: the Permanent Volume Claim must be done manually !!!
@@ -130,14 +155,17 @@ $ kubectl apply -f kubernetes_airflow_documentation_sample-storage-class.yaml
 (venv) airflow test kubernetes_airflow_documentation_sample start 2015-06-01
 ```
 
-### FAILING FOR NOW: Running some other KubernetesPodOperator example
+### Running some other KubernetesPodOperator examples
 ```
-(venv) airflow test kubernetes_sample passing-task 2015-06-01 2015-06-01
-(venv) airflow test kubernetes_sample failing-task 2015-06-01 2015-06-01
+(venv) airflow test kubernetes_sample passing-task 2015-06-01
+(venv) airflow test kubernetes_sample failing-task 2015-06-01
 ```
+
+### FAILING FOR NOW ?
 
 ### References:
  * Must read: Marc Lamberti's [Airflow Kubernetes EXECUTOR](https://marclamberti.com/blog/airflow-kubernetes-executor/)
+ * [Airflow on Kubernetes tutorial](https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/)  (Part 1: A Different Kind of Operator)
  * Airflow documentation
     * [KubernetsOperator gateway](https://airflow.apache.org/kubernetes.html)
     * [API reference](https://airflow.apache.org/_api/airflow/contrib/operators/kubernetes_pod_operator/index.html?highlight=kubernetes#module-airflow.contrib.operators.kubernetes_pod_operator)
