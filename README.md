@@ -1,3 +1,7 @@
+## Quick links
+ * [Developers' gateway](https://github.com/MEPP-team/RICT/blob/master/Doc/DevelopersCentral.md).
+ * [Developers's minutes, surveys...](https://github.com/MEPP-team/RICT/wiki)
+
 ## Objective of the RICT project
 
 The objective of the RICT (Representation Information CiTy) project is to **experiment, exchange and share both knowledge and tools dedicated to the concrete handling of urban/city data**. RICT focuses on practilities and technical specificities of the full city data flow starting from database integration of raw data and ending in advanced visualizations of their downstream numerical treatments. RICT adopts an open approach and favors:
@@ -30,13 +34,10 @@ We collect [use case oriented early descriptions of the needs](https://github.co
 Prior to any particular technical choice, this description of needs can help to
  * structure/organise the various involved roles
  * decompose the processes in atomic tasks and describe assembled processes
+ 
 Eventually this structured description can 
  * lead to/orient good practices 
  * influence/structure the main architecture of components
-
-## Developers
- * [Gateway for RICT developers](https://github.com/MEPP-team/RICT/blob/master/Doc/DevelopersCentral.md).
- * [Meeting minutes, technology surveys...](https://github.com/MEPP-team/RICT/wiki)
 
 ## Seeked backend/frontend features
 ### Aimed backend features
