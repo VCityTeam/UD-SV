@@ -1,11 +1,4 @@
 # 3DCityDB installation walkthrough
-
-Table of Content
- - [Installing a 3DCityDB+PostGIS server](#1-installing-a-3dcitydbpostgis-server)
-   * [3DCityDB **docker install**](#1a-installing-a-3dcitydbpostgis-server-with-docker)
-   * [Native package (apt) level installation](#1b-installing-a-3dcitydbpostgis-server-with-a-package-manager-apt)
- - [Feeding data to the 3DCity Data Base](#2-feeding-data-to-the-3dcity-data-base)
-
 In the following we distinguish two deployment use cases:
  - the **docker use case** where the 3dCity datastore is obtained by running a container
  - the **(linux) server configuration case** where a (linux) server is (intrusingly) configured by installing (with a package manager) a database server (and then configured).
