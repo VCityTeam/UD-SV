@@ -1,5 +1,7 @@
 **Quick links**
- * [Developers' gateway](https://github.com/MEPP-team/RICT/blob/master/Doc/DevelopersCentral.md).
+ * [Developers' gateway](https://github.com/MEPP-team/RICT/blob/master/Doc/DevelopersCentral.md)
+ * [Projects](#projects)
+ * [Needs](Doc/Devel/Needs/EarlyNeeds.md)
  * [Developers's minutes, surveys...](https://github.com/MEPP-team/RICT/wiki)
 
 ## Objective of the RICT project
