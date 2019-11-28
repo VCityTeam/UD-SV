@@ -68,7 +68,7 @@ Because we do need those files as output we [either need to install  Nodejs or s
 
 ## Note on the time efficiency impact of cwl-runner
 Cwl-runner mounts the container `/home` and `/tmp` directories to ad-hoc temporary directories that it handles. Notice that this can have a significant performance impact on the execution time.
-For example let us assume that the `liris:collect_lyon_data` container image is already build (refer to [Docker/Readme.md](../Docker/Readme.md). Now running a collect job from the command line with
+For example let us assume that the `liris:collect_lyon_data` container image is already build (refer to [Docker/Readme.md](../../Docker/Readme.md). Now running a collect job from the command line with
 ```bash
 (venv) docker run -t liris:collect_lyon_data LYON_7EME_2009.zip junk-output-collect
 ```
