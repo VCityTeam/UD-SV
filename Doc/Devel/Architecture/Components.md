@@ -1,15 +1,29 @@
-## Components names
+
+  <img src="Diagrams/ComponentDiagram-macro-components-with-notes.png"
+       align=center
+       alt="ComponentDiagram-macro-components-with-notes.png" 
+       width="400"
+       border="0">
+
+## Components (quick) description
  * **Client side**:<br>
    [Urban Data Viewer (UDV)](https://github.com/MEPP-team/UDV) is a repository gathering [WebGL](https://en.wikipedia.org/wiki/WebGL), [iTowns](https://github.com/iTowns/itowns), javascript components dedicated to Uban Data (with a 3D geospatial description) visualisation. The UDV sub-components are regrouped in [UDV/UDV-Core](https://github.com/MEPP-team/UDV/tree/master/UDV-Core) and include
-     - 
-      
-   Third party components:
-     -[iTowns](https://github.com/iTowns/itowns)
+     - aaa
+     
+   Third party components:<br>
+     - [iTowns](https://github.com/iTowns/itowns)
       
  * **Backend**      
    - [py3dtiles](https://github.com/MEPP-Team/py3dtiles/) : a fork of [Oslandia's py3dtiles](https://github.com/Oslandia/py3dtiles/)
    - LibCityProcess: a library [repackaging 3DUse filters](https://github.com/MEPP-team/3DUSE/issues/39) as a separate component.
-   
+
+
+<img src="Diagrams/ComponentDiagram-macro-components-and-subcomponents.png"
+     align=center
+     alt="ComponentDiagram-macro-components-and-subcomponents.png"
+     width="400"
+     border="0">
+       
 ## Historical notes
 Here is a list of aging/deprecated components
  * **Client side**:
