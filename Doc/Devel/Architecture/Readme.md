@@ -1,11 +1,11 @@
 ## Architecture
 
 Architecture information is organized as follow:
-  * [Components](Components description)
-  * [Application.md](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Architecture/Application.md) containing the architecture and related diagrams regarding the whole application.
-  * [Itowns.md](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Architecture/Itowns.md) for ressources regarding iTowns inner architecture.
-  * [Server.md](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Architecture/Server.md) for ressources about server components (currently for py3dtiles and building-server).
-  * [3DCityDB.md](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Architecture/3DCityDB.md) for ressources regarding 3DCityDB and its enhancement.
+  * [Components description](Components.md)
+  * [Application.md](Application.md) containing the architecture and related diagrams regarding the whole application.
+  * [Itowns.md](Itowns.md) for ressources regarding iTowns inner architecture.
+  * [Server.md](Server.md) for ressources about server components (currently for py3dtiles and building-server).
+  * [3DCityDB.md](3DCityDB.md) for ressources regarding 3DCityDB and its enhancement.
 
 ## Other
 
