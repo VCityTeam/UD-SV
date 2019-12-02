@@ -12,7 +12,7 @@ The objective of the RICT (Representation Information CiTy) project is to **expe
   * the adoption of mainstream standards of the urban modeling field
   * the re-use (and possible improvement/evolution) of existing open source software components
 
-In particular RICT focues on the design and realization of
+In particular RICT focuses on the design and realization of
   * a [backend](#aimed-backend-features): 
      - an infrastructure enabling the storage of city related data,
      - an infrastructure for hosting and executing computational models (using the local backend data as well as online open data).  
