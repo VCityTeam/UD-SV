@@ -1,9 +1,8 @@
-
-  <img src="Diagrams/ComponentDiagram-macro-components-with-notes.png"
-       align=center
-       alt="ComponentDiagram-macro-components-with-notes.png" 
-       width="400"
-       border="0">
+<img src="Diagrams/ComponentDiagram-macro-components-with-notes.png"
+     align=center
+     alt="ComponentDiagram-macro-components-with-notes.png" 
+     width="600"
+     border="0">
 
 ## Components (quick) description
  * **Client side**:<br>
@@ -21,7 +20,9 @@
       
  * **Backend**      
    - [py3dtiles](https://github.com/MEPP-Team/py3dtiles/) : a fork of [Oslandia's py3dtiles](https://github.com/Oslandia/py3dtiles/)
-   - LibCityProcess: a library [repackaging 3DUse filters](https://github.com/MEPP-team/3DUSE/issues/39) as a separate component.
+   - LibCityProcess: a library [repackaging 3DUse filters](https://github.com/MEPP-team/3DUSE/issues/39) as a separate component
+      * [SplitBUilding](https://github.com/EricBoix/3DUSE/blob/master/src/utils/cmdline/splitCityGMLBuildings.cxx)
+      * [ChangeDetection](https://github.com/EricBoix/3DUSE/blob/master/src/utils/cmdline/extractBuildingsConstructionDemolitionDates.cxx)
 
 <img src="Diagrams/ComponentDiagram-macro-components-and-subcomponents.png"
      align=center
