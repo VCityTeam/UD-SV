@@ -1,10 +1,10 @@
-<div style="text-align:center" markdown="1">
+<center>
   <img src="Diagrams/ComponentDiagram-macro-components-with-notes.png"
      align=center
      alt="ComponentDiagram-macro-components-with-notes.png" 
      width="600"
      border="0">
-</div>
+</center>
 
 ## Components (quick) description
  * **Client side**:<br>
