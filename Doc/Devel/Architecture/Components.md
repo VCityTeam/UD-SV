@@ -1,3 +1,4 @@
+<a name="top"></a>
 <img src="Diagrams/ComponentDiagram-macro-components-with-notes.png"
      align=center
      alt="ComponentDiagram-macro-components-with-notes.png" 
