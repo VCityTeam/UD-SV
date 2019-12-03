@@ -36,7 +36,7 @@ Refer to the [installation notes](Install/InstallDemo3dTilesTemporalLyonViewer.m
 ## Component quick description
 
 ### (Frontend) UDV web client install notes 
-Urban Data Viewer (UDV) is a [WebGL](https://en.wikipedia.org/wiki/WebGL)/[iTowns](http://www.itowns-project.org/) based javascript web framework specialized for Uban Data (with a 3D geospatial description) visualisation. The installation of the [UDV web client](https://github.com/MEPP-team/UDV) and [its associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/) are [fully described UDV repository level](https://github.com/MEPP-team/UDV/blob/master/install.md).
+[UDV](../Component#ComponentUDV") web client: [install notes](https://github.com/MEPP-team/UDV/blob/master/install.md)([associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/))
 
 ### (Backend) 3DCityDB install notes
 [3DCityDB](https://www.3dcitydb.org/3dcitydb/) (provided by [TUM](https://www.gis.bgu.tum.de/)) is a geographical database based on the CityGML conceptual model. The quick installation notes of a 3DCityDB database are [provided here](Install/Install3DCityDB.md).
