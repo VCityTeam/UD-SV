@@ -8,18 +8,26 @@ Because a (coding) inception guide must be simple and easy to understand, if you
 1. **Get aquainted with RICT's project big picture**
    * Read about the [whys and wherefores of the RICT project](../README.md): the general methodological framework RICT provides, as well as the [chosen software components](Devel/Architecture/Components.md#top) will both support and constrain your work.
    * As a general notice, and although RICT tries to follow mainstream practices (to reduce your surprises and associated loss of time), keep in mind that some practices used within RICT are specific to the project. As such they cannot be guessed or infered. This type of specific information is most often documented in the various [Readme.md](https://github.com/MEPP-team/UDV/README.md) and/or [Install.md](https://github.com/MEPP-team/UDV/blob/master/install.md) markdown files scattered across the repositories you will traverse.
-1. **Pre-requisites** 
+   
+1. **Pre-requisites**
+   <br>
    Languages:
-     - Frontend: [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UDV](https://github.com/MEPP-team/UDV) (proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript))
-     - Backend: [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for [UDV-server](https://github.com/MEPP-team/UDV-server) as well as some [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some geography/geometry [3DUSE treatments](https://github.com/MEPP-team/3DUSE/tree/master/src/filters)
-1. **Access rights** 
-   * Provide your github login to the admin in order to ask for a Github access (if you are reading this you probably already did :-)
+     - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UDV](Devel/Architecture/Components.md#ComponentUDV) frontend: JavaScript proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript))
+     - [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UDS](evel/Architecture/Components.md#ComponentUDS) back end
+     - [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](Devel/Architecture/Components.md#ComponentUDSSplitBuilding) requiring geography/geometry manipulations
+     
+1. **Access rights**<br>
+   Optionnaly provide your github login to the project admin in order to get Github write access to the various repositories
+   
 1. **Documentation** 
    * Browse the [Doc/Devel subdirectory](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel)
+   
 1. **Accessing the project sources** 
    Read on the proposed [Github's good practices](DevelopersGithubCycle.md).
+
 1. **Installation**:
    * Clone [UDV](https://github.com/MEPP-team/UDV/tree/master/), install it and  [run the demos](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/examples)
+
 1. **Contributing code**
    * Respect (when available) the coding styles
    * [Submit a pull request (PR)](DevelopersGithubCycle.md#submitting-a-pull-request-pr): don't forget to provide a template. Keep in mind that it is much better to often submit small yet effective and mature PR than jumbo/bulk PR once in a while...
