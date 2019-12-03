@@ -36,7 +36,7 @@ Refer to the [installation notes](Install/InstallDemo3dTilesTemporalLyonViewer.m
 ## Component quick description
 
 ### (Frontend) UDV web client install notes 
-[UDV](../Component#ComponentUDV") web client: [install notes](https://github.com/MEPP-team/UDV/blob/master/install.md)([associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/))
+[UDV](../Doc/Devel/Architecture/Components.md#ComponentUDV") web client: [install notes](https://github.com/MEPP-team/UDV/blob/master/install.md)([associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/))
 
 ### (Backend) 3DCityDB install notes
 [3DCityDB](https://www.3dcitydb.org/3dcitydb/) (provided by [TUM](https://www.gis.bgu.tum.de/)) is a geographical database based on the CityGML conceptual model. The quick installation notes of a 3DCityDB database are [provided here](Install/Install3DCityDB.md).
