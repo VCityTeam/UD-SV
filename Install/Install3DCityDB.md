@@ -1,4 +1,4 @@
-# 3DCityDB installation walkthrough
+# 3DCityDB installation walkthrough<a name="top"></a>
 In the following we distinguish two deployment use cases:
  - the **docker use case** where the 3dCity datastore is obtained by running a container
  - the **(linux) server configuration case** where a (linux) server is (intrusingly) configured by installing (with a package manager) a database server (and then configured).
