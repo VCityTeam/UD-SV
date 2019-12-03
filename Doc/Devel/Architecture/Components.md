@@ -19,7 +19,7 @@ Third party components:<br>
  - [iTowns](https://github.com/iTowns/itowns)
       
 ### Backend     
- - [UDV-Server/API_Enhanced_City](https://github.com/MEPP-team/UDV-server/tree/master/API_Enhanced_City): a server handling building attached "Documents" (file and metadata), Guided tours (sequences of documents with additional texts), User accounts and associated rights, "Links" (between documents and some city objects)
+ - <a name="ComponentUDSAPIEnhancedCity"></a>[UDV-Server/API_Enhanced_City](https://github.com/MEPP-team/UDV-server/tree/master/API_Enhanced_City): a server handling building attached "Documents" (file and metadata), Guided tours (sequences of documents with additional texts), User accounts and associated rights, "Links" (between documents and some city objects)
  - <a name="ComponentUDSCityTilers"></a>[City Tilers](https://github.com/MEPP-team/py3dtiles/tree/Tiler/Tilers/CityTiler): various algorithms computing [3dTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) (e.g. [City Temporal Tiler](https://github.com/MEPP-team/py3dtiles/blob/Tiler/Tilers/CityTiler/CityTemporalTiler.py))
  - LibCityProcess: a library [repackaging 3DUse filters](https://github.com/MEPP-team/3DUSE/issues/39) as a separate component
    * <a name="ComponentUDSSplitBuilding"></a>[SplitBuilding](https://github.com/EricBoix/3DUSE/blob/master/src/utils/cmdline/splitCityGMLBuildings.cxx)
