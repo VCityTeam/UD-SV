@@ -35,11 +35,11 @@ Refer to the [installation notes](Install/InstallDemo3dTilesTemporalLyonViewer.m
 
 ## Component quick description
 
-### (Frontend) UDV web client install notes 
+### Frontend 
 [UDV](../Doc/Devel/Architecture/Components.md#ComponentUDV) web client: [install notes](https://github.com/MEPP-team/UDV/blob/master/install.md)([associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/))
 
-### (Backend) 3DCityDB install notes
-[3DCityDB](../Doc/Devel/Architecture/Components.md#Component3DCityDB): [install notes](Install/Install3DCityDB.md).
+### Backend
+ * [3DCityDB](../Doc/Devel/Architecture/Components.md#ComponentUDS3DCityDB): [install notes](Install/Install3DCityDB.md).
 
 ### (Backend) UDV-server/API_Enhanced_City install notes
 [API_Enhanced_City](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md) is an [UDV-server](https://github.com/MEPP-team/UDV-server) sub-componennt that offers backend support to attach arbitrary types of documents to urban data. When needed proceed with [these API_Enhanced_City install notes](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/INSTALL.md).
