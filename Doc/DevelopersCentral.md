@@ -9,8 +9,7 @@ Because a (coding) inception guide must be simple and easy to understand, if you
    * Read about the [whys and wherefores of the RICT project](../README.md): the general methodological framework RICT provides, as well as the [chosen software components](Devel/Architecture/Components.md#top) will both support and constrain your work.
    * As a general notice, and although RICT tries to follow mainstream practices (to reduce your surprises and associated loss of time), keep in mind that some practices used within RICT are specific to the project. As such they cannot be guessed or infered. This type of specific information is most often documented in the various [Readme.md](https://github.com/MEPP-team/UDV/README.md) and/or [Install.md](https://github.com/MEPP-team/UDV/blob/master/install.md) markdown files scattered across the repositories you will traverse.
    
-1. **Pre-requisites**
-   <br>
+1. **Pre-requisites**<br>
    Languages:
      - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UDV](Devel/Architecture/Components.md#ComponentUDV) frontend: JavaScript proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript)
      - [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UDS](evel/Architecture/Components.md#ComponentUDS) back end
@@ -24,7 +23,7 @@ Because a (coding) inception guide must be simple and easy to understand, if you
 1. **Documentation** 
    * Browse the [Doc/Devel subdirectory](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel)
    
-1. **Accessing the project sources** 
+1. **Accessing the project sources**<br>
    Read on the proposed [Github's good practices](DevelopersGithubCycle.md).
 
 1. **Installation**:
