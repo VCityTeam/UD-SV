@@ -15,7 +15,9 @@ Because a (coding) inception guide must be simple and easy to understand, if you
      - [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UDS](evel/Architecture/Components.md#ComponentUDS) back end
      - [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](Devel/Architecture/Components.md#ComponentUDSSplitBuilding)) requiring geography/geometry manipulations
    <br>
-   Tooling: ...
+   Tooling:
+     - [git](ToolGit.md)
+     - [git development cylce](https://github.com/MEPP-team/RICT/blob/master/Doc/DevelopersGithubCycle.md)
    
 1. **Access rights**<br>
    Optionnaly provide your github login to the project admin in order to get Github write access to the various repositories
