@@ -9,8 +9,8 @@ The following documentation considers each specific demo and for each one explai
 Once your chosen demo is installed feel free to experiment with it, extend it and/or customize it to suit your needs.
 
 ## Installing demos
- * Just the from end:<br>
-   _Please note that you will **not** be able to run the full demo stack (as [offered on the online demo site](http://rict.liris.cnrs.fr/index.html)) but only the ones that do not require the installation of a server-side component (mostly the demos that are document management related/oriented)._
+ * [UDV front end](../Doc/Devel/Architecture/Components.md#ComponentUDV):
+   - What you get: something similar to [this demo of the UDV front end](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html) that illustrates enables you to discover the front end featues. But because you are not (yet) installing any of server-side component you will **not** be able to use the some feature that require some document management. 
 
  * Computing 3DTiles tilesets and web visualize them: [installation notes](Install/InstallDemo3dTilesLyonViewer.md)
  * Computing 3DTiles **temporal** tilesets and web visualize them: [installation notes](Install/InstallDemo3dTilesTemporalLyonViewer.md)
