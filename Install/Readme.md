@@ -2,13 +2,16 @@
 The [RICT web based online demos](http://rict.liris.cnrs.fr/index.html) regroup a set of specific demos that illustrate various visualizations/applications on top city related data. Each such demo is achieved by integrating some ad-hoc subset of [free and open available software components](../Doc/Devel/Architecture/Components.md) (refer to the [architecture](../Doc/Devel/Architecture/Readme.md)).
 
 The following documentation considers each specific demo and for each one explains
-  - **which required components** should be installed: **don't install all the components** but stick to the _SUBSET_ required for the demo you are trying to replicate (taken among [all the available components](../Doc/Devel/Architecture/Components.d)
+  - **which required components** should be installed: **don't install all the components** but stick to the _SUBSET_ required for the demo you are trying to replicate (taken among [all the available components](../Doc/Devel/Architecture/Components.md))
   - **how to install such components** and
   - **how to assemble/integrate such components** in order to obtain a fully functionnal demo
 
-Once your chosen demo is installed feel free to experiment with it, extend it and/or customize it to suit your needs. 
+Once your chosen demo is installed feel free to experiment with it, extend it and/or customize it to suit your needs.
 
 ## Installing demos
+ * Just the from end:<br>
+   _Please note that you will **not** be able to run the full demo stack (as [offered on the online demo site](http://rict.liris.cnrs.fr/index.html)) but only the ones that do not require the installation of a server-side component (mostly the demos that are document management related/oriented)._
+
  * Computing 3DTiles tilesets and web visualize them: [installation notes](Install/InstallDemo3dTilesLyonViewer.md)
  * Computing 3DTiles **temporal** tilesets and web visualize them: [installation notes](Install/InstallDemo3dTilesTemporalLyonViewer.md)
  * [TBD](https://en.wikipedia.org/wiki/TBD_(disambiguation)) How to install (document) Enhanced City demo
