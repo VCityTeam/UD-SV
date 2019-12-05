@@ -23,7 +23,8 @@ Tooling:
 Browse the [Doc/Devel subdirectory](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel)
 
 ### Install/Deploy the demos
-The various [RICT online demos](http://rict.liris.cnrs.fr/index.html) illustrate the kind of web application you can achieve with RICT. A simple way to discover the [software components](Devel/Architecture/Components.md#top), how to [integrate them](Devel/Architecture/Readme.md#top) and how to [deploy them](../Install/Readme.md#top) features offered by the UDV front-end by running some of its demos on your desktop computer. 
+The various [RICT online demos](http://rict.liris.cnrs.fr/index.html) illustrate the kind of web application you can achieve with RICT. A simple way to discover the [software components](Devel/Architecture/Components.md#top) and the features they offer, how to [integrate them](Devel/Architecture/Readme.md#top) and how to [deploy them](../Install/Readme.md#top) consists in installing and running some of such demos on your desktop computer.
+
 By experiencing with the demos you will also come up with possible improvements, or possibly missing functionalities your personal project might require, that you might wish to realize.
 Moreover (if you follow the documentation) this step requires neither an advanced expertise nor many software engineering tools to be installed.
 
