@@ -14,16 +14,15 @@ Once your chosen demo is installed feel free to experiment with it, extend it an
   * [Installation notes](https://github.com/MEPP-team/UDV/blob/master/install.md)
   
 ### UDV (front end) together with [UDS/API_Enhanced_City](../Doc/Devel/Architecture/Components.md#ComponentUDSAPIEnhancedCity) (back-end)
- * What you get: you can [run demo this demo](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html) on your desktop
- * Installation: first [install UDV front end](#install-demo-udv-front-end") and then 
+ * What you get: 
+   - you can [run demo this demo](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html) on your desktop i.e. you will be able to run **both client-side and server-side locally** (on your desktop) as opposed to the [UDV front end previous install demo](#install-demo-udv-front-end) where only the client-side was deployed locally (and the server side was running online on RICT's demo server)
+   - note that the server-side component uses a [PostGreSQL database](https://en.wikipedia.org/wiki/PostgreSQL) used to power components like Consult documentation, Guided Tour, Authentification, Documents to validate and Document Links_.
+ * Installation: 
+    - first follow [UDV front end install notes](#install-demo-udv-front-end)
+    - then [UDS/API_Enhanced_City install notes](https://github.com/MEPP-team/RICT/blob/master/Install.md#backend-udv-serverapi_enhanced_city-install-notes) that enable you to install some of the server-side components on your computer. 
 
-Once you have run the UDV demos, you can now follow [the UDV-server/API_Enhanced_City install notes](https://github.com/MEPP-team/RICT/blob/master/Install.md#backend-udv-serverapi_enhanced_city-install-notes) that enable you to install one of the server-side components on your computer. 
-You will then be able to run the full client-side/server-side demo locally (on your computer) as opposed to the previous stage where only the client-side was deployed locally (and the the server side was running on the laboratory remote server).
 
-The server-side component contains a [PostGreSQL](https://en.wikipedia.org/wiki/PostgreSQL) and is only required if you want to be able to access to _all_ the features of the app and then run the full demo of UDV.
-Indeed, the features provided by this component are _Consult documentation, Guided Tour, Authentification, Documents to validate and Document Links._ [This file](https://github.com/MEPP-team/UDV-server/blob/master/API_Enhanced_City/doc/OpenAPI2/swagger.yaml) provides the technical specification of the API following the standard [Open API 2](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md).
 
-The server-side component contains a [PostGreSQL](https://en.wikipedia.org/wiki/PostgreSQL)  database used for some functionalities of the web app.
 
 ### Computing 3DTiles tilesets and web visualize them: 
 [installation notes](Install/InstallDemo3dTilesLyonViewer.md)
