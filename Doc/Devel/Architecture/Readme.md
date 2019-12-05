@@ -1,4 +1,4 @@
-## Architecture
+## Architecture<a name="top"></a>
 
 Architecture information is organized as follow:
   * [Components description](Components.md)
