@@ -23,6 +23,13 @@ Tooling:
 Browse the [Doc/Devel subdirectory](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel)
 
 ### Install/Deploy the demos
+The various [RICT online demos](http://rict.liris.cnrs.fr/index.html) illustrate the kind of web application you can achieve with RICT. A simple way to discover the [software components](../Devel/Architecture/Components.md), how to [integrate them](../Devel/Architecture/Readme.md#top) and how to [deploy them](../../Install/Readme.md#top) features offered by the UDV front-end by running some of its demos on your desktop computer. 
+By experiencing with the demos you will also come up with possible improvements, or possibly missing functionalities your personal project might require, that you might wish to realize.
+Moreover (if you follow the documentation) this step requires neither an advanced expertise nor many software engineering tools to be installed.
+
+_Please note that you will **not** be able to run the full demo stack (as [offered on the online demo site](http://rict.liris.cnrs.fr/index.html)) but only the ones that do not require the installation of a server-side component (mostly the demos that are document management related/oriented)._
+
+[Urban Data Viewer](https://github.com/MEPP-team/UDV)(UDV) is a [web application](https://simple.wikipedia.org/wiki/Web_application) which enables to visualize 3D data (respecting the city specific [_CityGML_](http://www.citygml.org/) data model) through a browser. You can start with the [install notes and running instructions](https://github.com/MEPP-team/UDV/blob/master/install.md).
  * Clone [UDV](https://github.com/MEPP-team/UDV/tree/master/), install it and  [run the demos](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/examples)
 
 ### Contributing code/info
