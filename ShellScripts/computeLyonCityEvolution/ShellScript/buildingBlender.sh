@@ -21,7 +21,7 @@ if [ $# != 1 ]
 fi
 
 # Clone UDV-server
-# git clone https://github.com/MEPP-team/UDV-server.git
+git clone https://github.com/MEPP-team/UDV-server.git
 pushd UDV-server/Utils/CityGMLBuildingBlender
 
 # Install CityGMLBuildingBlender in a virtualenv
