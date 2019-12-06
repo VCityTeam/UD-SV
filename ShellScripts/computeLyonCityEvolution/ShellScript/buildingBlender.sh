@@ -57,3 +57,6 @@ python CityGMLBuildingBlender.py --input ${1}/Lyon_2012_Splitted/LYON_9EME_BATI_
 
 deactivate
 popd
+
+# Clean installed software component
+rm -fr UDV-server
