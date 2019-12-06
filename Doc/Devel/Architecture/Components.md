@@ -20,7 +20,7 @@ Third party components:<br>
  - [iTowns](https://github.com/iTowns/itowns)
       
 ### Backend 
- - <a name="ComponentUDS"></a>[Urban Data Server (UDS)](https://github.com/MEPP-team/UDV-server)(aka UDV-Server) is a repository gathering backend support features and utilities
+ - <a name="ComponentUDS"></a>[Urban Data Service (UD-Serv)](https://github.com/MEPP-team/UDV-server)(aka UDV-Server) is a repository gathering backend support features and utilities
    * <a name="ComponentUDSAPIEnhancedCity"></a>[UDS/API_Enhanced_City](https://github.com/MEPP-team/UDV-server/tree/master/API_Enhanced_City): enables to attach/serve various types of documents to urban data e.g.
      - "Documents" (file and metadata), 
      - Guided tours (sequences of documents with additional texts),
