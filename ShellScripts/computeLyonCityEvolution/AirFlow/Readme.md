@@ -8,9 +8,9 @@ Note: too bad AirFlow won't do it for us
 ```bash
 virtualenv -p python3 venv
 source venv/bin/activate
-pip3 install apache-airflow
-pip3 install docker         # Required for DockerOperator examples
-pip3 install kuberntes      # Required for KubernetesOperator examples
+(venv) pip3 install apache-airflow
+(venv) pip3 install docker         # Required for DockerOperator examples
+(venv) pip3 install kuberntes      # Required for KubernetesOperator examples
 ```
 
 ### Setting up airflow
@@ -18,7 +18,7 @@ Point Airflow to use the dags directory located in the current working directory
 ```
 cd <this-repository>/ShellScripts/computeLyonCityEvolution/Workflow/AirFlow
 export AIRFLOW_HOME=`pwd`
-airflow initdb             # Initialize the dags database
+airflow initdb     # Initialize the dags database
 ```
 Make sure that the proper dags were parsed:
 ```
@@ -123,19 +123,26 @@ We have the freedom to choose some file server technology. For example we could 
 Yet there doesn't seem to exist an Airflow way to express such a constraint. If this is were indeed impossible, the Airflow script would require some "outside" ressoure whose allocation/tear-down would have to be described elsewhere (which would obfuscate things).
 
 ## KubernetesOperator
-### Installation
-The KubernetesExecutor requires another (database) backend than default database SQLite and one has to use either `MySQL` or `PostgreSQL` ([stackoverflow reference](https://stackoverflow.com/questions/36822515/configuring-airflow-to-work-with-celeryexecutor) and see also [executors explained](https://www.astronomer.io/guides/airflow-executors-explained/)).
+### Airflow configuration
+Running airflow dags with KubernetesPodOperators requires the executor to support the KubernetesExecutor (refer to the `executor` entry in your `$AIRFLOW_HOME/airflow.cfg` configuration file). In turn the KubernetesExecutor requires other backend than default database SQLite (and you'll get the error message `airflow.exceptions.AirflowConfigException: error: cannot use sqlite with the KubernetesExecutor` when not doing so).
+Yet the default configuration, refer to the `sql_alchemy_conn` entry of your `$AIRFLOW_HOME/airflow.cfg` configuration file and you'll have to use MySQL or PostgreSQL, for example ([refer here](https://stackoverflow.com/questions/36822515/configuring-airflow-to-work-with-celeryexecutor)).
 
-We here follow the [phase 2 section of Tianlong Song's blog](https://stlong0521.github.io/20161023%20-%20Airflow.html) (entitled "A Guide On How To Build An Airflow Server/Cluster"):
+Configuring Airflow with a PostgreSQL metadata database server is nicely described [in the phase 2 section of this blog](https://stlong0521.github.io/20161023%20-%20Airflow.html).
+
 ```
-brew install postgresql # For Mac
+brew install postgresql
+# To have launchd start postgresql now and restart at login:
 brew services start postgresql
-createdb airflow_meta   # Create an ad-hoc PostgreSQL database
+# Or, if you don't want/need a background service you can just run:
+pg_ctl -D /usr/local/var/postgres start
+```
+```
+createdb airflow_meta      # For example
 ```
 Deal with the newly created [database ownership/password](https://stackoverflow.com/questions/12720967/how-to-change-postgresql-user-password). 
 ```
 # Install necessary sub-packages
-(venv)pip install apache-airflow[crypto] # For connection credentials protection
+(venv) pip install apache-airflow[crypto] # For connection credentials protection
 (venv) pip install apache-airflow[postgres] # For PostgreSQL DBs
 ```
 Modify the configuration in `$AIRFLOW_HOME/airflow.cfg`
@@ -155,7 +162,9 @@ $ kubectl apply -f kubernetes_airflow_documentation_sample-storage-class.yaml
 (venv) airflow test kubernetes_airflow_documentation_sample start 2015-06-01
 ```
 
-### Running some other KubernetesPodOperator examples
+### Running some other KubernetesPodOperator example
+Running this [KubernetesPodOperator tutorial](https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/
+)
 ```
 (venv) airflow test kubernetes_sample passing-task 2015-06-01
 (venv) airflow test kubernetes_sample failing-task 2015-06-01
