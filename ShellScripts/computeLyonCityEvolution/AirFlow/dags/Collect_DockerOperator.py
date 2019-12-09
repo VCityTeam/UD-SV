@@ -68,28 +68,46 @@ if sys.platform == "darwin":
   # suffices to fix things:
   host_tmp_dir="/tmp/"
 
-t1 = BashOperator(
+start = BashOperator(
         task_id='print_current_date',
         bash_command=temp_comd_variable_values,
         dag=dag
      )
 
-t2 = DockerOperator(
-        task_id='docker_command',
-        image='liris:collect_lyon_data',
-        api_version='auto',
-        auto_remove=True,
-        command="LYON_1ER_2009.zip .",
-        host_tmp_dir=host_tmp_dir,  # Refer to above variable definition comment
-        docker_url="unix://var/run/docker.sock",
-        network_mode="bridge",
-        dag=dag
-     )
+# With inspsiration from chapter 8 (Generating Dynamic Airflow Tasks) of
+# https://medium.com/datareply/airflow-lesser-known-tips-tricks-and-best-practises-cf4d4a90f8f
 
-t3 = BashOperator(
+sample_list = ["LYON_1ER_${1}.zip",
+               "LYON_2EME_${1}.zip",
+	       "LYON_3EME_${1}.zip",
+               "LYON_4EME_${1}.zip",
+               "LYON_5EME_${1}.zip",
+               "LYON_6EME_${1}.zip",
+               "LYON_7EME_${1}.zip",
+               "LYON_8EME_${1}.zip",
+               "LYON_9EME_${1}.zip",
+               "BRON_${1}.zip",
+               "VILLEURBANNE_.zip"]
+tasks_list = []
+for index, value in enumerate(sample_list):
+  tasks_list.append(
+    DockerOperator(
+      task_id='docker_command'+str(index), # FIXME: name it better
+      image='liris:collect_lyon_data',
+      api_version='auto',
+      auto_remove=True,
+      command="LYON_1ER_2009.zip .",
+      host_tmp_dir=host_tmp_dir,  # Refer to above variable definition comment
+      docker_url="unix://var/run/docker.sock",
+      network_mode="bridge",
+      dag=dag))
+  start >> tasks_list[index]
+
+end = BashOperator(
         task_id='print_done',
         bash_command='echo "Done"',
-        dag=dag
-     )
+        dag=dag)
 
-t1 >> t2 >> t3
+for task in tasks_list:
+  task >> end
+
