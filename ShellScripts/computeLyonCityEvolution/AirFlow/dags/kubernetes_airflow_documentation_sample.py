@@ -1,6 +1,8 @@
 # references:
-# - https://airflow.apache.org/kubernetes.html#kubernetes-operator
 # - https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/
+# The following code is a striped/fixed version of the original AirFlow
+# official documentation as encountered at
+#    https://airflow.apache.org/kubernetes.html#kubernetes-operator
 from airflow.contrib.operators.kubernetes_pod_operator import KubernetesPodOperator
 from airflow.contrib.kubernetes.secret import Secret
 from airflow.contrib.kubernetes.volume import Volume
