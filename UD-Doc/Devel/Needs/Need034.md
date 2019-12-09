@@ -3,7 +3,7 @@
 [Issue 47](https://github.com/MEPP-team/RICT/issues/47)
 
 ### User story
-As a [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person), I want to navigate in time and in multiple scenarios.
+As a [City Knowledgeable Person](Roles.md#city-knowledgeable-person), I want to navigate in time and in multiple scenarios.
 
 ### Beneficiary role: 
 City knowledgeable person
@@ -25,7 +25,7 @@ For example, one historian has a scenario (sequence of chronological events supp
 The user wants to navigate (select a particular alternative) between the available scenarios and then visualize the selected one.
 
 ### Notes:
- * [Related need 026](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need026.md)
+ * [Related need 026](Need026.md)
  
 ### References
 John Samuel, Clémentine Périnaud, Sylvie Servigne, Georges Gay, Gilles Gesquière [Representation and Visualization of Urban Fabric through Historical Documents](https://hal.archives-ouvertes.fr/hal-01381763/document)

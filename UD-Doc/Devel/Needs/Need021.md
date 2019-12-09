@@ -26,5 +26,5 @@ The state of city is the geometry of the city for the considered date.
 FIXME-ESC
 
 ### Notes:
-[Sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) for displaying a city can be found [here](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Architecture/Application.md#sequence-diagram-describing-the-workflow-when-displaying-a-city-using-our-application-without-temporality)
+[Sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) for displaying a city can be found [here](../Architecture/Application.md#sequence-diagram-describing-the-workflow-when-displaying-a-city-using-our-application-without-temporality)
  

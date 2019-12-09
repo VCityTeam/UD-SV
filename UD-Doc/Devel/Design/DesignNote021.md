@@ -1,7 +1,7 @@
-## Design note of [need 21](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need021.md)
+## Design note of [need 21](../Needs/Need021.md)
 
 
-This is the client side design corresponding to [this server side design](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md).
+This is the client side design corresponding to [this server side design](DesignNote017.md).
 
 ![](images/PartieClient2.png)
 
@@ -11,11 +11,11 @@ To answer this need, we will contribute to [iTowns](https://github.com/iTowns/it
 
 #### Modify the reader of tilesets
 
-After [modifying](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md#modify-the-api-of-building-server-to-retrieve-this-temporal-information-from-the-database) the tileset creation server-side to add a temporal interval of existence of each tile, we have to modify the reader of tilesets in iTowns to manage this temporal information. Once we have retrieved this temporal information, we have to modify the process that allows to display only the tiles in the frustrum of the camera. Indeed, we must also check if the display date is in the temporal interval of exstence of the tile or not.
+After [modifying](DesignNote017.md#modify-the-api-of-building-server-to-retrieve-this-temporal-information-from-the-database) the tileset creation server-side to add a temporal interval of existence of each tile, we have to modify the reader of tilesets in iTowns to manage this temporal information. Once we have retrieved this temporal information, we have to modify the process that allows to display only the tiles in the frustrum of the camera. Indeed, we must also check if the display date is in the temporal interval of exstence of the tile or not.
 
 #### Modify the parsing of the [the b3dm files](https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/TileFormats/Batched3DModel)
 
-The server [modifies](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md#add-the-temporal-information-into-the-tiles) the b3dm files by adding the temporal interval of existence of each city object in the attributes of the tiles. We thus need to parse  and store these temporal information in the client.
+The server [modifies](DesignNote017.md#add-the-temporal-information-into-the-tiles) the b3dm files by adding the temporal interval of existence of each city object in the attributes of the tiles. We thus need to parse  and store these temporal information in the client.
 
 #### Modify [the pixel shader](https://en.wikipedia.org/wiki/Shader) 
 

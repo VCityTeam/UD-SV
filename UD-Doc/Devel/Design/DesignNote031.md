@@ -1,4 +1,4 @@
-# Design note of [need 31](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need031.md)
+# Design note of [need 31](../Needs/Need031.md)
 
 To anwser this need, we give the user the possibility of browsing their files to choose a document to upload and to give information about it.
 

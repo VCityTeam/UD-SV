@@ -1,4 +1,4 @@
-The following are early (2017 and beginning of 2018) design notes for [need 18](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need018.md).
+The following are early (2017 and beginning of 2018) design notes for [need 18](../Needs/Need018.md).
 These notes should be considered deprecated since the context evolved and they are no longer relevant.
 
 ## General informations
@@ -77,7 +77,7 @@ Note:
 In order to do that, in each tile, every building has a batch_id. This is done on the server when building the tiles. Client-side, three.js propose a gltf loader function. However, it does not implement the functionnality to retrieve the batch_id from a gltf file. This functionnality has been added by NSA in iTowns and JGA asked three.js to add it to their gltf loader. After parsing the gltf file, a three.js object containing the b3dm + batch_ids + gltf information is created (and this object is potentially linked to the tile of the tileset stored client side). Then, when the user picks something in the scene, the batch_ids are transmistted to the shaders next to the geometries and a test allow to know all the triangles having the same batch_id as the one selected.
   * Look if other people had the same problem and justified their choices
 
-In conclusion, the choice between the two solutions is linked to [this discussion](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote027.md#thick---thin-client---server-strategy). What we need to do next is to clearly define the use of the semantic information client-side. This will allow to choose if we need to send all the information to the client or if we should leave it in the database.
+In conclusion, the choice between the two solutions is linked to [this discussion](DesignNote027.md#thick---thin-client---server-strategy). What we need to do next is to clearly define the use of the semantic information client-side. This will allow to choose if we need to send all the information to the client or if we should leave it in the database.
 
 Another remaining question is how to transfer the hierarchical information to the client. This is currently difficult using 3d-tiles as explained in [Schi16]. Indeed, the semantic information can easily transfered using the attributes of b3dm but there is nothing yet that is implemented to efficiently transfer the hierarchy of city objects. [Schi16] make a proposition but what are the feedbacks from the 3d-tiles comunity and how is it done in other applications ?
 

@@ -19,7 +19,7 @@ Once your chosen demo is installed feel free to experiment with it, extend it an
    - note that the server-side component uses a [PostGreSQL database](https://en.wikipedia.org/wiki/PostgreSQL) used to power components like Consult documentation, Guided Tour, Authentification, Documents to validate and Document Links_.
  * Installation: 
     - first follow [UDV front end install notes](#install-demo-udv-front-end)
-    - then [UDS/API_Enhanced_City install notes](https://github.com/MEPP-team/RICT/blob/master/Install.md#backend-udv-serverapi_enhanced_city-install-notes) that enable you to install some of the server-side components on your computer. 
+    - then [UDS/API_Enhanced_City install notes](Readme.md#backend-udv-serverapi_enhanced_city-install-notes) that enable you to install some of the server-side components on your computer. 
 
 ---- FIXME
 This step can be considered as a prerequisite for the next one.
@@ -29,7 +29,7 @@ However, you cannot visualize your own 3D objects yet.
 
 To do so, you must begin with installing on your server, a specific database for 3D objects using the [PostGIS technology](https://postgis.net/). This database will enable you to store 3D data respecting the [_CityGML_](http://www.citygml.org/) format.
 
-[Here](https://github.com/MEPP-team/RICT/blob/master/Install/Install3DCityDB.md) is where you can find instructions for setting up the database and importing CityGML data into it. 
+[Here](Install3DCityDB.md) is where you can find instructions for setting up the database and importing CityGML data into it. 
 
 During your database setup, you may need docker. [Here](Slides.transmises.par.Gilles.à.héberger.publiquement.et.à.pointer.ici) is a little course giving tips about this specific docker image.
 

@@ -17,10 +17,10 @@ Languages:
 
 Tooling:
  * [git](ToolGit.md)
- * [git development cylce](https://github.com/MEPP-team/RICT/blob/master/Doc/DevelopersGithubCycle.md)
+ * [git development cylce](DevelopersGithubCycle.md)
    
 ### Documentation 
-Browse the [Doc/Devel subdirectory](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel)
+Browse the [UD-Doc/Devel subdirectory](Devel)
 
 ### Install/Deploy the demos
 The various [RICT online demos](http://rict.liris.cnrs.fr/index.html) illustrate the kind of web application you can achieve with RICT. A simple way to discover the [software components](Devel/Architecture/Components.md#top) and the features they offer, how to [integrate them](Devel/Architecture/Readme.md#top) and how to [deploy them](../Install/Readme.md#top) consists in installing and running some of such demos on your desktop computer.

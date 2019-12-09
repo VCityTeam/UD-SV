@@ -1,4 +1,4 @@
-# Design note of [need 18](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need018.md)
+# Design note of [need 18](../Needs/Need018.md)
 
 ## References
  * [Batch table hierarchy specification](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/BatchTable/README.md#hierarchy) (by Analytical Graphics)

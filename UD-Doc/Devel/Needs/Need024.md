@@ -3,11 +3,11 @@
 ## References
 
 * [Issue](https://github.com/MEPP-team/RICT/issues/49)
-* [Design Notes](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote024.md)
+* [Design Notes](../Design/DesignNote024.md)
 
 ### User story
 
-As a [Content Contributor](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#content-contributor) I want to be able to navigate in the city virtual representation using geolocation based on street adresses. 
+As a [Content Contributor](Roles.md#content-contributor) I want to be able to navigate in the city virtual representation using geolocation based on street adresses. 
 
 ### Beneficiary role: 
 

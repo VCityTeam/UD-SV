@@ -7,10 +7,10 @@ Related information
 
 ### User story
 
-As a [City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) I want to be able to share an [Extended Document](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Definitions.md#extended-document) (as defined by [need 35](Need035.md)) through a web based site.
+As a [City Knowledgeable Person](Roles.md#city-knowledgeable-person) I want to be able to share an [Extended Document](Definitions.md#extended-document) (as defined by [need 35](Need035.md)) through a web based site.
 
 ### Beneficiary role: 
-[City Knowledgeable Person](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person)
+[City Knowledgeable Person](Roles.md#city-knowledgeable-person)
 
 ### Impact: 
 minor
@@ -29,4 +29,4 @@ ongoing
 A user-friendly interface that allows the user to upload one file (picture, drawing...) at a time along with specifying the metadata.
  
 ### Notes:
-This need differs from [Need 028](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md): need 028 is a process (e.g. script) allowing the importation of a set of extended documents whereas this need focuses on submitting a single document through an web based interface.
+This need differs from [Need 028](Need028.md): need 028 is a process (e.g. script) allowing the importation of a set of extended documents whereas this need focuses on submitting a single document through an web based interface.

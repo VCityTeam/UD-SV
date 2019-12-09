@@ -40,5 +40,5 @@ In addition to the above two, we could consider other parameters like the number
 1. Visualization of Documented 3D Cities, Clément Chagnaud, John Samuel, Sylvie Servigne, Gilles Gesquière, Eurographics Workshop on Urban Data Modelling and Visualisation, UDMV 2016, Liège, Belgium, Decembre 8, 2016
 
 ### Associated Design Note
-[Design Note 13](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote013.md)
+[Design Note 13](../Design/DesignNote013.md)
 

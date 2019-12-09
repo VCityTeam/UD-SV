@@ -23,7 +23,7 @@ Links:
 As an [content contributor](Roles.md#content-contributor), I want to be able to enhance city models with documents. I want to be able to manage, visualise (in the 3D scene as billboard display[1] AND in the document browser) and interact with the documents. I also want to be able to associate them to city object(s) and/or other document(s) [2].
 
 ### Beneficiary role:
-[Researchers (historians, geographers, urbanists)](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#city-knowledgeable-person) and [general audience](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Roles.md#general-audience)
+[Researchers (historians, geographers, urbanists)](Roles.md#city-knowledgeable-person) and [general audience](Roles.md#general-audience)
 
 ### Impact: 
 Major

@@ -4,7 +4,7 @@
     * Bounding volume implementation for regions and sphere
     * The option [Viewer request Volume](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status): done
     * Add early support for 3Dtiles [point cloud](https://github.com/AnalyticalGraphicsInc/3d-tiles#spec-status) format.
-    * [RTC manage](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/iTowns3Dtiles.md) for b3dm and pnts
+    * [RTC manage](../Process/iTowns3Dtiles.md) for b3dm and pnts
     * Manage the Batch ID in iTowns and GLTF
     * Manage the [Batch table](https://github.com/AnalyticalGraphicsInc/3d-tiles) and the picking (when you selection a building you have the information about them)    
     
@@ -13,11 +13,11 @@
     * UI for example 3DTiles
  
   * **Temporel** 
-    * Creation of [Need](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel/Needs)
-    * Creation of [designNote](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote017.md) and [this](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Design/DesignNote021.md) for implementation.  
+    * Creation of [Need](../Needs)
+    * Creation of [designNote](../Design/DesignNote017.md) and [this](../Design/DesignNote021.md) for implementation.  
     * Early implementation both side (server and client)
   
-  * **Data from [UAV](https://en.wikipedia.org/wiki/Unmanned_aerial_vehicle)** ( Unmanned_aerial_vehicle ): Find a solution for read [the heterogeneous data](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/TutorialOpenDataInItowns.md)
+  * **Data from [UAV](https://en.wikipedia.org/wiki/Unmanned_aerial_vehicle)** ( Unmanned_aerial_vehicle ): Find a solution for read [the heterogeneous data](../Process/TutorialOpenDataInItowns.md)
     * Read the points cloud from drone data in iTowns
     * Read the orthophoto from drone data in iTowns
     * Read the elevation from drone data in iTowns
@@ -26,9 +26,9 @@
 ## Global
 
   * Documentation 
-    * [3DTiles](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/iTowns3Dtiles.md): pnts in iTowns and other feature.
-    * [Lopocs](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/TutorialFileLasInItown.md): tutorial for how the server Lopocs works in iTowns
-    * [Data From drone](https://github.com/MEPP-team/RICT/blob/master/Doc/Process/TutorialOpenDataInItowns.md) in iTowns
+    * [3DTiles](../Process/iTowns3Dtiles.md): pnts in iTowns and other feature.
+    * [Lopocs](../Process/TutorialFileLasInItown.md): tutorial for how the server Lopocs works in iTowns
+    * [Data From drone](../Process/TutorialOpenDataInItowns.md) in iTowns
 
   * [Needs](https://github.com/MEPP-team/RICT/tree/master/Doc/Devel/Needs)
 

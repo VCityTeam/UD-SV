@@ -1,4 +1,4 @@
-# Design note of [Need 024](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need024.md) : Street Adress Geolocation 
+# Design note of [Need 024](../Needs/Need024.md) : Street Adress Geolocation 
 
 ## References
 

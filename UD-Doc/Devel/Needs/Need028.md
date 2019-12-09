@@ -24,8 +24,8 @@ We require a mechanism allowing users to CRUD from:
   * a set of documents
   * a set of description files (e.g. excel files) giving infomation about such documents, e.g. links/references to other city objects, dates, origin, etc.
 
-The data model must be consistent with the one of [Need 20](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need020.md)
+The data model must be consistent with the one of [Need 20](Need020.md)
 
 ### Notes
 
-This need differs from [Need 014](https://github.com/MEPP-team/RICT/blob/master/Doc/Devel/Needs/Need028.md). Need 028 is a process (e.g. script) allowing to import extended documents in the database from e.g. an excel file and a set of files. Need 014 is a user friendly interface above this process.
+This need differs from [Need 014](Need028.md). Need 028 is a process (e.g. script) allowing to import extended documents in the database from e.g. an excel file and a set of files. Need 014 is a user friendly interface above this process.
