@@ -134,7 +134,7 @@ which should return 511 buildings.
 ### (5) Manual edit of database
 Then we need to delete two buildings from the 'lyon 6ème' database (in psql) in order to make room for our handmade models (of so called "Îlot du Lac").
 
-Identifying the gid (`173` and `503`) of the buildings to be removed is achieved [through those geographical requests](FindBuildingGID.md).
+Identifying the gid (`173` and `503`) of the buildings to be removed is achieved through geography based requests.
 
 Delete those two buildings from the DB:
 ```

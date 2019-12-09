@@ -34,7 +34,7 @@
  * [Need 033](Need033.md): provide a user friendly interface to update and delete documents
  * [Need 034](Need034.md): improved temporal navigation slider
  * [Need 035](Need035.md): conceptual and physical model of Extended Documents
- * [Need 036](Need036.md): Slot already used.
+ * Need036.md: Slot previously used (do not recycle)
  * [Need 037](Need037.md): Provide means for computing city evolution in time
  
  

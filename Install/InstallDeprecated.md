@@ -1,7 +1,6 @@
-**Note that this install is now deprecated. Current version is
-[here](../Install.md)**
+**Note: this installation process is now deprecated : please refer to the [up to date version](Readme.md)**
 
-![Sketchy iTowns usage/developing  context](../Doc/Devel/Architecture/Diagrams/OslandiaiTown2Context.png)
+![Sketchy iTowns usage/developing  context](../UD-Doc/Devel/Architecture/Diagrams/OslandiaiTown2Context.png)
 
 # Install notes for Unix users
 

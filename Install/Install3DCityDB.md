@@ -58,7 +58,7 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
    (bash)$ sudo apt-get install postgresql-9.4-postgis-2.1
    ````   
  * Chapter 3.3.2 P. 100, Step 1: **create an empty PostgreSQL database**
-   We follow [debian PostgreSql tutorial](https://wiki.debian.org/PostgreSql) that goes: 
+   We follow [debian PostgreSql tutorial](https://wiki.debian.org/PostgreSql) that goes:
    ````
    (root)$ sudo adduser citydb_user               # that is at OS level
            ...
@@ -113,7 +113,8 @@ We follow the [install documentation of 3DCityDB](http://www.3dcitydb.org/3dcity
      (citydb_user)$ psql -d citydb_v3 -c 'create extension postgis;'
      ````
 
-## 2/ Feeding data to the 3DCity Data Base
+## 2/ Feeding data to the 3DCity Data Base <a name="import-some-citygml-file-content"></a>
+
 ### 2.1/ Installation of Java Runtime Environment
 Installing such an environment is required in order to run [3DCityDB Importer/Exporter](https://github.com/3dcitydb/importer-exporter).
  

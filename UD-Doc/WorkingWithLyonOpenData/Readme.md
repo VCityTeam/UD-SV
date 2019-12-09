@@ -22,7 +22,7 @@ Additionnaly note that the indicated namespace URI for version 2 i.e. [http://ww
 
 ### Undocummented additional data (?)
 Some information, provided in the form a generic attribute (`<gen:stringAttribute ... >`, `<gen:intAttribute ...>`,
-`<gen:doubleAttribute ...>`) i.e. extending the CityGML model, is not always documented. For example [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml) (extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) presents the 
+`<gen:doubleAttribute ...>`) i.e. extending the CityGML model, is not always documented. For example the `MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml` CityGML file (extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)) presents the 
 following tags:
 
 "BUILDINGID", "MILLESIME", "ZMIN", "ADRESSE", "NOMCOMMUNE", "NOMOFFICIE", "CODE_INSEE","CODE_DGI",
@@ -71,8 +71,7 @@ separated by a spatial gap) within a single CityGML "logical" building. Note tha
 possible by the CityGML model that offers to provide e.g. as many `</bldg:WallSurface>` and/or
 `</bldg:RoofSurface>` (possibly defined as `<gml:MultiSurface>`) are desired.
 For example the following CityGML building (with a single gml identifier) is constituted
-of many different sub-buildings (refer to [this CityGML file](MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml)
-extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)):
+of many different sub-buildings (refer to the `MultipleEnveloppeExample_1-LYON_1ER_BATI_2015.gml` CityGML file extracted from [LYON_1ER_2015.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2015.zip)):
 
 <img src="MultipleEnveloppeExample_1/MultipleEnveloppeExample_1-3D.png" alt="drawing" width="500"/>
 

@@ -9,7 +9,6 @@ not: ```` npm start ```` == but ==> ```` npm start -- --port 7070````
 ## How to import data in iTowns
 
 We take an example the island of Zanzibar, data from a drone.
-you can download this [here](www.google.com) (this link it's not available) 
 
 Thanks to the ZMI project (Zanzibar Mapping Initiative) 
 

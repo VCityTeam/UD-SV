@@ -12,7 +12,7 @@ Because a (coding) inception guide must be simple and easy to understand, if you
 ### Check the pre-requisites
 Languages:
  * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UDV](Devel/Architecture/Components.md#ComponentUDV) frontend: JavaScript proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript)
- * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UDS](evel/Architecture/Components.md#ComponentUDS) back end: proposed [tutorial](https://developer.mozilla.org/en-US/docs/Glossary/Python)
+ * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UDS](Devel/Architecture/Components.md#ComponentUDS) back end: proposed [tutorial](https://developer.mozilla.org/en-US/docs/Glossary/Python)
  * [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](Devel/Architecture/Components.md#ComponentUDSSplitBuilding)) requiring geography/geometry manipulations<br>
 
 Tooling:
@@ -33,6 +33,7 @@ Proceed with [installing/running the demos](../Install/Readme.md#how-to-install-
 ### Contributing code/info
  * Access rights: provide your github login to the project admin in order to **get git write access** to the various project repositories
  * Respect (when available) the **coding styles**
+ * When working on [Mardown](https://en.wikipedia.org/wiki/Markdown) based documentation [validate the links and references](DevelopersValidatingMardownLinks.md)
  * Read about the proposed [Git good practices](DevelopersGithubCycle.md).
  * **Submit often**: it is much better to often submit small yet effective and mature PR than jumbo/bulk code once in a while...
  * [Submit trough pull request (PR)](DevelopersGithubCycle.md#submitting-a-pull-request-pr): don't forget to provide a template.

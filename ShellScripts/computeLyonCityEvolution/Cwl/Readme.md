@@ -1,6 +1,6 @@
 ## Installing the requirements:
 1. Build the ad-hoc docker image<br>
-   Refer to [this installation section of the Docker/Readme.md](../../Docker/Readme.md#Installation)<br>
+   Refer to [this installation section of the Docker/Readme.md](../Docker/Readme.md#Installation)<br>
    Note: refer below on why cwltool can't do it for us !
 2. Build the python environment 
    ```bash

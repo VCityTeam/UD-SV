@@ -41,4 +41,4 @@ First, we select all the city objects of the tile to create in the database. Eac
 
 Afterwards, we use py3dtiles to generate the tile files. py3dtiles offers functions to convert data from a geospatial database to a 3D Tiles formats.
 
-Additional details on our implementation of this step, especially what we do to retain the original semantic structure, is available [here](Devel/Design/DesignNote018.md).
+Additional details on our implementation of this step, especially what we do to retain the original semantic structure, is available [here](../Devel/Design/DesignNote018.md).

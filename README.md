@@ -1,9 +1,9 @@
 **Quick links**
  * Demos: [UDV](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/), [temporal City](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html)
- * [Developers' gateway](Doc/DevelopersCentral.md)
+ * [Developers' gateway](UD-Doc/DevelopersCentral.md)
  * [Projects](#projects)
- * [Components](Doc/Devel/Architecture/Components.md)
- * [Needs](Doc/Devel/Needs/EarlyNeeds.md)
+ * [Components](UD-Doc/Devel/Architecture/Components.md)
+ * [Needs](UD-Doc/Devel/Needs/EarlyNeeds.md)
  * [Developers's minutes, surveys...](https://github.com/MEPP-team/RICT/wiki)
 
 ## Objective of the RICT project
@@ -30,11 +30,11 @@ We believe that in order to succeed with data usage one must not separate data c
 
 ### Closed
  * Model AugMented: MAM 2018 Erasme (proof of concep)t:
-    - [project description](Doc/Projects/MAM-Erasme-bootstrap/Readme.md)
+    - [project description](UD-Doc/Projects/MAM-Erasme-bootstrap/Readme.md)
     - [development gateway](https://github.com/MEPP-team/RICT/projects/3)
 
 ## Description of the needs
-We collect [use case oriented early descriptions of the needs](Doc/Devel/Needs/EarlyNeeds.md). 
+We collect [use case oriented early descriptions of the needs](UD-Doc/Devel/Needs/EarlyNeeds.md). 
 Prior to any particular technical choice, this description of needs can help to
  * structure/organise the various involved roles
  * decompose the processes in atomic tasks and describe assembled processes
