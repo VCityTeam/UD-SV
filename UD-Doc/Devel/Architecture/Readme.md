@@ -1,7 +1,7 @@
 ## Architecture<a name="top"></a>
 
 Architecture information is organized as follow:
-  * [Components description](Components.md)
+  * [Components description](../../../Tools/Readme.md)
   * [Application.md](Application.md) containing the architecture and related diagrams regarding the whole application.
   * [Itowns.md](Itowns.md) for ressources regarding iTowns inner architecture.
   * [Server.md](Server.md) for ressources about server components (currently for py3dtiles and building-server).

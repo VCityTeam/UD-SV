@@ -3,7 +3,7 @@
  * [UD-Doc](UD-Doc): UD-SV documentation
  * [Developers' gateway](UD-Doc/DevelopersCentral.md)
  * [Projects](#projects)
- * [Components](UD-Doc/Devel/Architecture/Components.md)
+ * [Components](Tools/Readme.md)
  * [Needs](UD-Doc/Devel/Needs/EarlyNeeds.md)
  * [Developers's minutes, surveys...](https://github.com/MEPP-team/RICT/wiki)
 

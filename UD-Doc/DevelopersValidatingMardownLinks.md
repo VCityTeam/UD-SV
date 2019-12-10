@@ -5,6 +5,7 @@ The [remark-validate-links](https://github.com/remarkjs/remark-validate-links) m
 For the impatient:
 ```
 cd <your_git_repo>
+npm install remark-validate-links
 npm install --global remark-cli remark-validate-links
 remark -u validate-links .
 ```

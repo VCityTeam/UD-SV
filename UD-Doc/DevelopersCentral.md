@@ -6,14 +6,14 @@ Because a (coding) inception guide must be simple and easy to understand, if you
 ## Step by step inception guide
 
 ### Get aquainted with RICT's project big picture
- * Read about the [whys and wherefores of the RICT project](../README.md): the general methodological framework RICT provides, as well as the [chosen software components](Devel/Architecture/Components.md#top) will both support and constrain your work.
+ * Read about the [whys and wherefores of the RICT project](../README.md): the general methodological framework RICT provides, as well as the [chosen software components](../Tools/Readme.md#top) will both support and constrain your work.
  * As a general notice, and although RICT tries to follow mainstream practices (to reduce your surprises and associated loss of time), keep in mind that some practices used within RICT are specific to the project. As such they cannot be guessed or infered. This type of specific information is most often documented in the various [Readme.md](https://github.com/MEPP-team/UDV/README.md) and/or [Install.md](https://github.com/MEPP-team/UDV/blob/master/install.md) markdown files scattered across the repositories you will traverse.
    
 ### Check the pre-requisites
 Languages:
- * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UDV](Devel/Architecture/Components.md#ComponentUDV) frontend: JavaScript proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript)
- * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UDS](Devel/Architecture/Components.md#ComponentUDS) back end: proposed [tutorial](https://developer.mozilla.org/en-US/docs/Glossary/Python)
- * [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](Devel/Architecture/Components.md#ComponentUDSSplitBuilding)) requiring geography/geometry manipulations<br>
+ * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UDV](../Tools/Readme.md#ComponentUDV) frontend: JavaScript proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+ * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UDS](../Tools/Readme.md#ComponentUDS) back end: proposed [tutorial](https://developer.mozilla.org/en-US/docs/Glossary/Python)
+ * [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](../Tools/Readme.md#ComponentUDSSplitBuilding)) requiring geography/geometry manipulations<br>
 
 Tooling:
  * [git](ToolGit.md)
@@ -23,7 +23,7 @@ Tooling:
 Browse the [UD-Doc/Devel subdirectory](Devel)
 
 ### Install/Deploy the demos
-The various [RICT online demos](http://rict.liris.cnrs.fr/index.html) illustrate the kind of web application you can achieve with RICT. A simple way to discover the [software components](Devel/Architecture/Components.md#top) and the features they offer, how to [integrate them](Devel/Architecture/Readme.md#top) and how to [deploy them](../Install/Readme.md#top) consists in installing and running some of such demos on your desktop computer.
+The various [RICT online demos](http://rict.liris.cnrs.fr/index.html) illustrate the kind of web application you can achieve with RICT. A simple way to discover the [software components](../Tools/Readme.md#top) and the features they offer, how to [integrate them](Devel/Architecture/Readme.md#top) and how to [deploy them](../Install/Readme.md#top) consists in installing and running some of such demos on your desktop computer.
 
 By experiencing with the progessive demos, you will also come up with possible improvements, or possibly missing functionalities your personal project might require and that you might wish to realize.
 Moreover (if you follow the documentation) this step requires neither an advanced expertise nor many software engineering tools to be installed.
