@@ -11,4 +11,4 @@ Proceed with the following install guides
  - Install a 3DTiles web server: depending on your context use
    * [3dtiles web server: DESKTOP developing context](Readme.md#backend-3dtiles-web-server-desktop-developing-context)
    * [3dtiles web server: OPERATIONS (stable server) context](Readme.md#backend-3dtiles-web-server-operations-stable-server-context)
- -  Intall and run the [UDV web client](Readme.md#frontend-udv-web-client-install-notes)
+ -  Intall and run the [UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes)

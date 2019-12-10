@@ -23,17 +23,17 @@ The high level view of the work can be summarized as: implement the [batch table
 
 On the back-end side:
  * Finish the [py3dtiles support for batch table hierarchy](https://github.com/Jeremy-Gaillard/py3dtiles/tree/bt_hierarchy)
- * Use the resulting py3dtiles to realise an UDV-server script utility to extract data from a 3D City DB database and convert it to a B3dm tile while retaining the data's semantic hierarchy
+ * Use the resulting py3dtiles to realise an UD-Serv script utility to extract data from a 3D City DB database and convert it to a B3dm tile while retaining the data's semantic hierarchy
 
 On the front-end side  
 * Finish the [iTowns support for batch table hierarchy](https://github.com/iTowns/itowns/tree/batchtable_hierarchy)
 
 ### Back end side work
 
-**Important note**: elements for a prototype of an "UDV-server script" can be extracted from 
-[extract_city_semantic.py](https://github.com/MEPP-team/UDV-server/blob/semantic_hierarchy/ExtractCityData/extract_city_semantic.py)
+**Important note**: elements for a prototype of an "UD-Serv script" can be extracted from 
+[extract_city_semantic.py](https://github.com/MEPP-team/UD-Serv/blob/semantic_hierarchy/ExtractCityData/extract_city_semantic.py)
 
-Realizing the UDV-server script requires some understanding of the 3D City DB data model. In my partial implementation, I only extract the surface data for LoD2 buildings (disclaimer: my method may not work for every CityGML file, since there seems to be multiple way of storing the same information). The data is organised in the following way:
+Realizing the UD-Serv script requires some understanding of the 3D City DB data model. In my partial implementation, I only extract the surface data for LoD2 buildings (disclaimer: my method may not work for every CityGML file, since there seems to be multiple way of storing the same information). The data is organised in the following way:
 * The building table contains the "abstract" building subdivisions (building, building part)
 * The thematic_surface table contains all the surface objects (wall, roof, floor), with links to the building object it belongs to and the geometric data in the surface_geometry table
 * The surface_geometry table contains the geometry of the surface (and volumic for some reason) objects

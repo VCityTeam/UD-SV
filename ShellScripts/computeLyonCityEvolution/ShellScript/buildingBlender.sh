@@ -1,6 +1,6 @@
 # !/bin/sh
 
-# This script uses UDV-server util named "CityGMLBuildingBlender" to integrate
+# This script uses UD-Serv util named "CityGMLBuildingBlender" to integrate
 # the buildings and remarkable buildings of each borrough of Lyon in 2009, 2012
 # and 2015.
 
@@ -20,9 +20,9 @@ if [ $# != 1 ]
     exit 1
 fi
 
-# Clone UDV-server
-git clone https://github.com/MEPP-team/UDV-server.git
-pushd UDV-server/Utils/CityGMLBuildingBlender
+# Clone UD-Serv
+git clone https://github.com/MEPP-team/UD-Serv.git
+pushd UD-Serv/Utils/CityGMLBuildingBlender
 
 # Install CityGMLBuildingBlender in a virtualenv
 virtualenv -p python3 venv
@@ -59,4 +59,4 @@ deactivate
 popd
 
 # Clean installed software component
-rm -fr UDV-server
+rm -fr UD-Serv

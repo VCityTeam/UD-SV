@@ -10,7 +10,7 @@
  * [Need 009](Need009.md): ability to use texture in the 3d scene
  * [Need 010](Need010.md): database modeling of temporal dimension of city models
  * [Need 011](Need011.md): a graphical user interface (GUI)
- * [Need 012](Need012.md): configuration for UDV document-related views
+ * [Need 012](Need012.md): configuration for UD-Viz document-related views
  * [Need 013](Need013.md): visualization of documents within a 3D representation of the city
  * [Need 014](Need014.md): provide a user friendly interface to add one document
  * [Need 015](Need015.md): Oriented camera mode for documents

@@ -20,8 +20,8 @@
   mkdir Vilo3D    # Not really needed but cleaner with a
                   # containment directory
   cd Vilo3d
-  git clone https://github.com/MEPP-team/UDV.git
-  pushd UDV
+  git clone https://github.com/MEPP-team/UD-Viz.git
+  pushd UD-Viz
   git checkout Vilo3D-Demo-1.0
   popd
   git clone https://github.com/itowns/itowns.git
@@ -316,4 +316,4 @@ This http server is for serving the data of the database
 
 
 ### (6) Usage
- * When on the http server, open `UDV/Vilo3D/index.html` in Firefox (Chrome not supported)
+ * When on the http server, open `UD-Viz/Vilo3D/index.html` in Firefox (Chrome not supported)

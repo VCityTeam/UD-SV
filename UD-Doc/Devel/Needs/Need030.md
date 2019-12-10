@@ -19,7 +19,7 @@ immature
 ### Tags or keywords
 
 ### Description
-There is a prototype for this need in : https://github.com/MEPP-team/UDV/tree/master/Vilo3D . 
+There is a prototype for this need in : https://github.com/MEPP-team/UD-Viz/tree/master/Vilo3D . 
 This prototype uses a 2D screen overlay to display the documents.
 
 ### Notes:

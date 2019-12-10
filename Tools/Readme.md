@@ -7,27 +7,27 @@
 
 ## Tools (software components) brief description
 ### Client side
-<a name="ComponentUDV"></a>[Urban Data Viewer (UDV)](https://github.com/MEPP-team/UDV) is a repository gathering [WebGL](https://en.wikipedia.org/wiki/WebGL), [iTowns](https://github.com/iTowns/itowns), javascript components dedicated to Uban Data (respecting the city specific [_CityGML_](http://www.citygml.org/) data model and as such with a 3D geospatial description) visualisation. The UDV sub-components are regrouped in [UDV/UDV-Core](https://github.com/MEPP-team/UDV/tree/master/UDV-Core) and include
- - <a name="ComponentUDVGuidedTour"></a>[UDV/Guided Tour](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Modules/GuidedTour)
- - <a name="ComponentUDVTemporal"></a>[UDV/Temporal](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Modules/Temporal)
- - <a name="ComponentUDVDocuments"></a>[UDV/Documents](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Modules/Documents), [UDV/DocumentComments](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Extensions/DocumentComments), [UDV/DocumentValidation](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Extensions/DocumentValidation)
- - <a name="ComponentUDVContribute"></a>[UDV/Crontibute](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Extensions/Contribute)
- - <a name="ComponentUDVAuthentication"></a>[UDV/Authentication](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Extensions/Authentication)
- - <a name="ComponentUDVLinks"></a>[UDV/Links](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Modules/Links)
- - <a name="ComponentUDVGeocoding"></a>[UDV/Geocoding](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Extensions/Geocoding)
+<a name="ComponentUD-Viz"></a>[Urban Data Viewer (UD-Viz)](https://github.com/MEPP-team/UD-Viz) is a repository gathering [WebGL](https://en.wikipedia.org/wiki/WebGL), [iTowns](https://github.com/iTowns/itowns), javascript components dedicated to Uban Data (respecting the city specific [_CityGML_](http://www.citygml.org/) data model and as such with a 3D geospatial description) visualisation. The UD-Viz sub-components are regrouped in [UD-Viz/UD-Viz-Core](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core) and include
+ - <a name="ComponentUD-VizGuidedTour"></a>[UD-Viz/Guided Tour](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Modules/GuidedTour)
+ - <a name="ComponentUD-VizTemporal"></a>[UD-Viz/Temporal](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Modules/Temporal)
+ - <a name="ComponentUD-VizDocuments"></a>[UD-Viz/Documents](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Modules/Documents), [UD-Viz/DocumentComments](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/DocumentComments), [UD-Viz/DocumentValidation](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/DocumentValidation)
+ - <a name="ComponentUD-VizContribute"></a>[UD-Viz/Crontibute](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/Contribute)
+ - <a name="ComponentUD-VizAuthentication"></a>[UD-Viz/Authentication](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/Authentication)
+ - <a name="ComponentUD-VizLinks"></a>[UD-Viz/Links](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Modules/Links)
+ - <a name="ComponentUD-VizGeocoding"></a>[UD-Viz/Geocoding](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/Geocoding)
 
 Third party components:<br>
  - [iTowns](https://github.com/iTowns/itowns)
       
 ### Backend 
- - <a name="ComponentUDS"></a>[Urban Data Service (UD-Serv)](https://github.com/MEPP-team/UDV-server)(aka UDV-Server) is a repository gathering backend support features and utilities
-   * <a name="ComponentUDSAPIEnhancedCity"></a>[UDS/API_Enhanced_City](https://github.com/MEPP-team/UDV-server/tree/master/API_Enhanced_City): enables to attach/serve various types of documents to urban data e.g.
+ - <a name="ComponentUDS"></a>[Urban Data Service (UD-Serv)](https://github.com/MEPP-team/UD-Serv)(aka UD-Serv) is a repository gathering backend support features and utilities
+   * <a name="ComponentUDSAPIEnhancedCity"></a>[UDS/API_Enhanced_City](https://github.com/MEPP-team/UD-Serv/tree/master/API_Enhanced_City): enables to attach/serve various types of documents to urban data e.g.
      - "Documents" (file and metadata), 
      - Guided tours (sequences of documents with additional texts),
      - User accounts and associated rights,
      - "Links" (between documents and some city objects)
-   * [UDS/CityGML2Stripper](https://github.com/MEPP-team/UDV-server/tree/master/Utils/CityGML2Stripper): a utility that strips a CityGML 2.0 (XML) file from its appearences and generic attributes features
-   * [UDS/CityGMLBuildingBlender](https://github.com/MEPP-team/UDV-server/tree/master/Utils/CityGMLBuildingBlender): a utility that merges a set of CityGML into a single CityGML resulting file
+   * [UDS/CityGML2Stripper](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGML2Stripper): a utility that strips a CityGML 2.0 (XML) file from its appearences and generic attributes features
+   * [UDS/CityGMLBuildingBlender](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGMLBuildingBlender): a utility that merges a set of CityGML into a single CityGML resulting file
  - <a name="ComponentUDSCityTilers"></a>[City Tilers](https://github.com/MEPP-team/py3dtiles/tree/Tiler/Tilers/CityTiler): various algorithms computing [3dTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) (e.g. [City Temporal Tiler](https://github.com/MEPP-team/py3dtiles/blob/Tiler/Tilers/CityTiler/CityTemporalTiler.py))
  - LibCityProcess: a library [repackaging 3DUse filters](https://github.com/MEPP-team/3DUSE/issues/39) as a separate component
    * <a name="ComponentUDSSplitBuilding"></a>[SplitBuilding](https://github.com/EricBoix/3DUSE/blob/master/src/utils/cmdline/splitCityGMLBuildings.cxx)
@@ -54,7 +54,7 @@ Third party components:<br>
 ## Historical notes
 Here is a list of aging/deprecated components
 ### Client side
- - [UDV/EarlyPrototype](https://github.com/MEPP-team/UDV/tree/master/EarlyPrototype) holds the first prototype version
- - Vilo3D: refers to an ancient [UDV release tag](https://github.com/MEPP-team/UDV/releases/tag/Vilo3D-Demo-1.0) used in the context of [Vilo3D project](http://imu.universite-lyon.fr/projet/vilo-3d-la-fabrique-urbaine-des-processus-a-leurs-representations-3d/) )
+ - [UD-Viz/EarlyPrototype](https://github.com/MEPP-team/UD-Viz/tree/master/EarlyPrototype) holds the first prototype version
+ - Vilo3D: refers to an ancient [UD-Viz release tag](https://github.com/MEPP-team/UD-Viz/releases/tag/Vilo3D-Demo-1.0) used in the context of [Vilo3D project](http://imu.universite-lyon.fr/projet/vilo-3d-la-fabrique-urbaine-des-processus-a-leurs-representations-3d/) )
 ### Backend      
  - [building-server](https://github.com/MEPP-team/building-server/): a fork of [Oslandia's building-server](https://github.com/Oslandia/building-server/) that can be seen as API delivering 3DTiles (build with [py3dtiles](https://github.com/MEPP-Team/py3dtiles/)) and using a pre-computed index.

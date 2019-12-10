@@ -16,7 +16,7 @@ Install [3DUSE](https://github.com/MEPP-team/3DUSE/blob/master/Install.md).
 Note: if you fail on installing 3DUSE on your desktop,
 [building the docker image](https://github.com/MEPP-team/3DUSE/blob/master/Docker/Readme.md) might be a plan B.
 
-Note that the `buildingBlender` script installs [UDV-server](https://github.com/MEPP-team/UDV-server/)
+Note that the `buildingBlender` script installs [UD-Serv](https://github.com/MEPP-team/UD-Serv/)
 and uses its `CityGMLBuildingBlender` util to integrate the remarkable buildings (see section usage).
 
 ## Usage:

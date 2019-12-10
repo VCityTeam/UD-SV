@@ -2,7 +2,7 @@
 
 In the context of [UD-SV](..), a [web server](https://en.wikipedia.org/wiki/Web_server) is needed e.g. to handle over
  * 3DTiles tilesets
- * UDV-core and its associated demos
+ * UD-Viz-core and its associated demos
  * ...
 
 A quick installation of an [Apache http server](https://en.wikipedia.org/wiki/Apache_HTTP_Server) goes
@@ -36,7 +36,7 @@ Remove the default server (to avoid collisions):
   sudo a2ensite rict.liris.cnrs.fr.conf   ## To enable the virtual site
   sudo service apache2 restart            ## Relaunch the service
 ```
-Use Firefox to pop some requests on `http://rict.liris.cnrs.fr/UDV/Vilo3D/index.html`.
+Use Firefox to pop some requests on `http://rict.liris.cnrs.fr/UD-Viz/Vilo3D/index.html`.
 
 Trouble shoot by looking at server's error and log files:
   - `tail -f /var/log/apache2/error.log`

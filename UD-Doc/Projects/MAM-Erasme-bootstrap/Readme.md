@@ -26,7 +26,7 @@ The goal of the MAM project is to build an AugMented Model (MAM) of a neighborho
  - a 3D numerical model, with various different types of data, that will be projected on the physical model
  - a virtual 3D model that can be visualized through [augmented reality](https://en.wikipedia.org/wiki/Augmented_reality)
 
-The 3D numerical model will be based on the [iTowns](http://www.itowns-project.org/) technology together with the [UDV](https://github.com/MEPP-team/UDV) add-on.
+The 3D numerical model will be based on the [iTowns](http://www.itowns-project.org/) technology together with the [UD-Viz](https://github.com/MEPP-team/UD-Viz) add-on.
 
 <center><img src="Pictures/LyonConfluence_Physical_Model.jpg" alt="Lyon Confluence physical model" width="600"/></center>
 
@@ -100,10 +100,10 @@ This type of project can only work with physical models of limited size. Nevethe
 The [Paperzoom](https://www.erasme.org/paper-zoom) project ([open sources](https://github.com/urbanlab/paperzoom)).
 
 ## Realisation of a Proof Of Concept
-The prototype realized for the MAM-Erasme project uses a 3D numerical model based on the [iTowns](http://www.itowns-project.org/) component together with the [UDV](https://github.com/MEPP-team/UDV) add-on. The high level achicteture component diagram is similar to the following one
+The prototype realized for the MAM-Erasme project uses a 3D numerical model based on the [iTowns](http://www.itowns-project.org/) component together with the [UD-Viz](https://github.com/MEPP-team/UD-Viz) add-on. The high level achicteture component diagram is similar to the following one
 
 <img src="../../Devel/Architecture/Diagrams/SoftwareArchitecture.png" alt="Interactive model" width="600"/>
 
-The installation of such a component context is described within the [UDV install documentation](https://github.com/MEPP-team/UDV/blob/master/install.md). The steps required to learn about such tools is [documented in this tutorial](../../iTowns/Tutorial.md) (sorry but french only).
+The installation of such a component context is described within the [UD-Viz install documentation](https://github.com/MEPP-team/UD-Viz/blob/master/install.md). The steps required to learn about such tools is [documented in this tutorial](../../iTowns/Tutorial.md) (sorry but french only).
 
-The code for the [realized prototype](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/examples/MAM) is [quite limited in scope](https://github.com/MEPP-team/UDV/blob/master/UDV-Core/examples/MAM/MAM.js) (around 300 lines of JavaScript).
+The code for the [realized prototype](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/examples/MAM) is [quite limited in scope](https://github.com/MEPP-team/UD-Viz/blob/master/UD-Viz-Core/examples/MAM/MAM.js) (around 300 lines of JavaScript).

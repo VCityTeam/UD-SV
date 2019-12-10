@@ -1,6 +1,6 @@
-# Proposition to represent billboards in UDV
+# Proposition to represent billboards in UD-Viz
 
-We present here a first proposition to modelize a billboard in UDV using JS-library Three.js:
+We present here a first proposition to modelize a billboard in UD-Viz using JS-library Three.js:
 A billboard is a plane geometry supporting an image that we want to represent. A billboard is placed above the point of the city that it represents. It is linked to it by a so called "anchor line", representing the depency of the document to the geographic coordinates.
 
 

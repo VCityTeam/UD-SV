@@ -1,7 +1,7 @@
-# Need 012: Process of configuration for UDV document-related functionalities 
+# Need 012: Process of configuration for UD-Viz document-related functionalities 
 
 ### User story
-As a developper, I want to easily configure UDV document-related functionalities. 
+As a developper, I want to easily configure UD-Viz document-related functionalities. 
 
 ### Beneficiary role: developper
 
