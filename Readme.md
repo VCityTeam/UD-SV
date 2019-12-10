@@ -1,7 +1,7 @@
 **Quick links**
  * Demos: [UD-Viz](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/), [temporal City](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html)
  * [UD-Doc](UD-Doc): UD-SV global/integration documentation
- * [Tools](Tools/Readme.md); software components e.g. 
+ * [Tools](Tools/Readme.md): software components e.g. [UD-Viz](https://github.com/MEPP-team/UD-Viz), [UD-Serv](https://github.com/MEPP-team/UD-Serv) 
  * [Developers' gateway](UD-Doc/DevelopersCentral.md)
  * [Developers's minutes, surveys...](https://github.com/MEPP-team/UD-SV/wiki)
  * [Projects](#projects)
@@ -20,6 +20,8 @@ In particular UD-SV focuses on the design and realization of
   * a [frontend](#aimed-frontend-features): 
      - a simple interactive visualizer of the backend data
      - a computational model treatment handler (configure, trigger, explore results of a treatment)
+     
+A list of available/used components is [described in the Tools section](Tools/Readme.md).
 
 ### Technical manifesto
 We believe that in order to succeed with data usage one must not separate data concerns (information models, database infrastructure) from the offered tools, treatment process and the associated methodology. Questions like how to migrate a database when the information model changes (e.g. from CityGML version 2 to version 3), how to deal with information model modularity and extensions, what are the interactions between data and their treatment or how does one handle data storage and computation scale up, must be dealt at first. UD-SV will try to propose good practices for doing so.
