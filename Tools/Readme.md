@@ -5,7 +5,7 @@
      width="600"
      border="0">
 
-## Components (quick) description
+## Tools (software components) brief description
 ### Client side
 <a name="ComponentUDV"></a>[Urban Data Viewer (UDV)](https://github.com/MEPP-team/UDV) is a repository gathering [WebGL](https://en.wikipedia.org/wiki/WebGL), [iTowns](https://github.com/iTowns/itowns), javascript components dedicated to Uban Data (respecting the city specific [_CityGML_](http://www.citygml.org/) data model and as such with a 3D geospatial description) visualisation. The UDV sub-components are regrouped in [UDV/UDV-Core](https://github.com/MEPP-team/UDV/tree/master/UDV-Core) and include
  - <a name="ComponentUDVGuidedTour"></a>[UDV/Guided Tour](https://github.com/MEPP-team/UDV/tree/master/UDV-Core/src/Modules/GuidedTour)
