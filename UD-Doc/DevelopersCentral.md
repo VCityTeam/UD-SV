@@ -12,8 +12,8 @@ Because a (coding) inception guide must be simple and easy to understand, if you
 ### Check the pre-requisites
 Languages:
  * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UD-Viz](../Tools/Readme.md#ComponentUD-Viz) frontend: JavaScript proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript)
- * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UDS](../Tools/Readme.md#ComponentUDS) back end: proposed [tutorial](https://developer.mozilla.org/en-US/docs/Glossary/Python)
- * [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](../Tools/Readme.md#ComponentUDSSplitBuilding)) requiring geography/geometry manipulations<br>
+ * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UD-Serv](../Tools/Readme.md#ComponentUD-Serv) back end: proposed [tutorial](https://developer.mozilla.org/en-US/docs/Glossary/Python)
+ * [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](../Tools/Readme.md#ComponentUD-ServSplitBuilding)) requiring geography/geometry manipulations<br>
 
 Tooling:
  * [git](ToolGit.md)
