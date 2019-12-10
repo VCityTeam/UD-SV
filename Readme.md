@@ -1,11 +1,11 @@
 **Quick links**
- * Demos: [UDV](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/), [temporal City](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html)
- * [UD-Doc](UD-Doc): UD-SV documentation
+ * Demos: [UD-Viz](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/), [temporal City](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html)
+ * [UD-Doc](UD-Doc): UD-SV global/integration documentation
+ * [Tools](Tools/Readme.md); software components e.g. 
  * [Developers' gateway](UD-Doc/DevelopersCentral.md)
+ * [Developers's minutes, surveys...](https://github.com/MEPP-team/UD-SV/wiki)
  * [Projects](#projects)
- * [Components](Tools/Readme.md)
  * [Needs](UD-Doc/Devel/Needs/EarlyNeeds.md)
- * [Developers's minutes, surveys...](https://github.com/MEPP-team/RICT/wiki)
 
 ## Objective of the RICT project
 
