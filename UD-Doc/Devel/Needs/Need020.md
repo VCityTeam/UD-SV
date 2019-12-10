@@ -1,6 +1,6 @@
 # Need 020: manage ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) [extended documents](Definitions.md#extended-document) (backend side)
 
-Associated issue: [issue 35](https://github.com/MEPP-team/RICT/issues/35)
+Associated issue: [issue 35](https://github.com/MEPP-team/UD-SV/issues/35)
 
 ## Related needs
  - [Need 03](Need003.md): aggregation need

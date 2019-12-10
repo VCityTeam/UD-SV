@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL vendor="RICT project"
+LABEL vendor="UD-SV project"
 
 # Core dependencies
 # rm, mkdir, mv

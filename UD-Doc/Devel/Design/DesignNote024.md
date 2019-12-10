@@ -2,7 +2,7 @@
 
 ## References
 
-[Associated issue](https://github.com/MEPP-team/RICT/issues/49)
+[Associated issue](https://github.com/MEPP-team/UD-SV/issues/49)
 
 ## What need to be developed to obtain a prototype
 

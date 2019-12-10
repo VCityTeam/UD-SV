@@ -3,7 +3,7 @@ TODO: split this need in smaller sub-needs (billboard vs set of documents)
 
 # Need 013: Visualization of documents within a 3D representation of the city
 
-[Associated issue](https://github.com/MEPP-team/RICT/issues/4)
+[Associated issue](https://github.com/MEPP-team/UD-SV/issues/4)
 
 ### User story
 As a historian I want to visualize and locate documents (images, videos, text...) in the 3d representation of the city. I need a preview of what the document is, and a visual indication of its position in the scene.

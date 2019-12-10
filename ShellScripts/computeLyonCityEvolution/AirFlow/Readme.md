@@ -95,7 +95,7 @@ Just to illustrate how tedious this task can be, the following command is a CWL 
 docker run -i \
     --volume=/private/tmp/docker_tmp6rbchhl7:/FNUixl:rw \
     --volume=/private/tmp/docker_tmps7a_v8hv:/tmp:rw \
-    --volume=/<user_HOME_DIR>/UNSAVED/tmp/RICT.MEPP-team/ShellScripts/computeLyonCityEvolution/Cwl/Collect/junk-output-of_foreach_collect/LYON_1ER_2009/LYON_1ER_BATI_2009.gml:/var/lib/cwl/stg9c05f462-4e7d-4d93-9ad4-7d92162da6ce/LYON_1ER_BATI_2009.gml:ro \
+    --volume=/<user_HOME_DIR>/UNSAVED/tmp/UD-SV.MEPP-team/ShellScripts/computeLyonCityEvolution/Cwl/Collect/junk-output-of_foreach_collect/LYON_1ER_2009/LYON_1ER_BATI_2009.gml:/var/lib/cwl/stg9c05f462-4e7d-4d93-9ad4-7d92162da6ce/LYON_1ER_BATI_2009.gml:ro \
     --workdir=/FNUixl \
     --read-only=true \
     --user=501:20 \
@@ -268,7 +268,7 @@ References:
 A PermanentVolume can map to a file on the host. Use `kubectl describe pv` and look at the `Source/Path` entry.
 
 ```
-$ cd RICT.MEPP-team/ShellScripts/computeLyonCityEvolution/Workflow/AirFlow
+$ cd UD-SV.MEPP-team/ShellScripts/computeLyonCityEvolution/Workflow/AirFlow
 $ airflow test kubernetes_airflow_documentation_sample start 2015-06-01 &
 kubectl get pods   # Yields: test-e38ed9c0  status = Pending
 kubectl get events # Yields: pod/test-e38ed9c0   persistentvolumeclaim "test-volume" not found

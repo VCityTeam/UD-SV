@@ -4,7 +4,7 @@
 # The changes mainly concern using the ChangeDetection branch that
 # offers some command line utilities (like SplitCityGMLBUildings)
 FROM ubuntu:18.04
-LABEL vendor="RICT project"
+LABEL vendor="UD-SV project"
 
 # Supposedly in order to avoid pesky messages of the form
 #   "debconf: unable to initialize frontend: <...>"

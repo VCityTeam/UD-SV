@@ -3,7 +3,7 @@
 
 Related information
  - [Aggregator super need 004](Need004.md)
- - [Issue 14](https://github.com/MEPP-team/RICT/issues/44)
+ - [Issue 14](https://github.com/MEPP-team/UD-SV/issues/44)
 
 ### User story
 

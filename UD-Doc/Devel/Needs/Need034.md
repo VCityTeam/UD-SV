@@ -1,6 +1,6 @@
 # Need 034: Improved temporal navigation slider
 
-[Issue 47](https://github.com/MEPP-team/RICT/issues/47)
+[Issue 47](https://github.com/MEPP-team/UD-SV/issues/47)
 
 ### User story
 As a [City Knowledgeable Person](Roles.md#city-knowledgeable-person), I want to navigate in time and in multiple scenarios.

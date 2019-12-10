@@ -1,6 +1,6 @@
 # Apache web server quick install notes
 
-In the context of [RICT](..), a [web server](https://en.wikipedia.org/wiki/Web_server) is needed e.g. to handle over
+In the context of [UD-SV](..), a [web server](https://en.wikipedia.org/wiki/Web_server) is needed e.g. to handle over
  * 3DTiles tilesets
  * UDV-core and its associated demos
  * ...

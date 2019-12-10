@@ -2,7 +2,7 @@
 # Need 032: Provide tools to place and orient a document in the scene
 
 Links:
- * [Issue](https://github.com/MEPP-team/RICT/issues/45)
+ * [Issue](https://github.com/MEPP-team/UD-SV/issues/45)
  * Super need: [Need 004: enhancing city models with documents](Need004.md)
 
 ### User story

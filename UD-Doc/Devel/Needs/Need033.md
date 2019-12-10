@@ -1,7 +1,7 @@
   
 # Need 033: Provide a user friendly interface to update and delete one document.
 
-[Issue](https://github.com/MEPP-team/RICT/issues/46)
+[Issue](https://github.com/MEPP-team/UD-SV/issues/46)
 
 ### User story
 

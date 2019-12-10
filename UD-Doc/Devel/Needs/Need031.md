@@ -1,6 +1,6 @@
 
 # Need 031: Provide a user friendly interface to bulk load documents
-[Issue](https://github.com/MEPP-team/RICT/issues/44)
+[Issue](https://github.com/MEPP-team/UD-SV/issues/44)
 
 ### User story
 

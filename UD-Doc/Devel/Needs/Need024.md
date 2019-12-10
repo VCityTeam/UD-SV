@@ -2,7 +2,7 @@
 
 ## References
 
-* [Issue](https://github.com/MEPP-team/RICT/issues/49)
+* [Issue](https://github.com/MEPP-team/UD-SV/issues/49)
 * [Design Notes](../Design/DesignNote024.md)
 
 ### User story

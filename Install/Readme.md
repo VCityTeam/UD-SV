@@ -1,5 +1,5 @@
 ## How to install demos out of their integrated components<a name="top"></a>
-The [RICT web based online demos](http://rict.liris.cnrs.fr/index.html) regroup a set of specific demos that illustrate various visualizations/applications on top city related data. Each such demo is achieved by integrating some ad-hoc subset of [free and open available software components](../Tools/Readme.md) (refer to the [architecture](../UD-Doc/Devel/Architecture/Readme.md)).
+The [UD-SV web based online demos](http://rict.liris.cnrs.fr/index.html) regroup a set of specific demos that illustrate various visualizations/applications on top city related data. Each such demo is achieved by integrating some ad-hoc subset of [free and open available software components](../Tools/Readme.md) (refer to the [architecture](../UD-Doc/Devel/Architecture/Readme.md)).
 
 The following documentation considers each specific demo and for each one explains
   - **which required components** should be installed: **don't install all the components** but stick to the _SUBSET_ required for the demo you are trying to replicate (taken among [all the available components](../Tools/Readme.md))
@@ -15,7 +15,7 @@ Once your chosen demo is installed feel free to experiment with it, extend it an
   
 ### UDV (front end) together with [UDS/API_Enhanced_City](../Tools/Readme.md#ComponentUDSAPIEnhancedCity) (back-end)
  * What you get: 
-   - you can [run demo this demo](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html) on your desktop i.e. you will be able to run **both client-side and server-side locally** (on your desktop) as opposed to the [UDV front end previous install demo](#install-demo-udv-front-end) where only the client-side was deployed locally (and the server side was running online on RICT's demo server)
+   - you can [run demo this demo](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html) on your desktop i.e. you will be able to run **both client-side and server-side locally** (on your desktop) as opposed to the [UDV front end previous install demo](#install-demo-udv-front-end) where only the client-side was deployed locally (and the server side was running online on UD-SV's demo server)
    - note that the server-side component uses a [PostGreSQL database](https://en.wikipedia.org/wiki/PostgreSQL) used to power components like Consult documentation, Guided Tour, Authentification, Documents to validate and Document Links_.
  * Installation: 
     - first follow [UDV front end install notes](#install-demo-udv-front-end)
