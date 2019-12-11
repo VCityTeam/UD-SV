@@ -29,5 +29,5 @@ psql -d $1 -c 'create extension postgis;'
 # Edit the database configuration
 sed -e "s/PGUSER=.*$/PGUSER=${2}/" -e "s/CITYDB=.*$/CITYDB=${1}/" -i CREATE_DB.sh
 
-# Run 3DCityDB CREATE_DB.sql script
+# Run the CREATE_DB.sql helper script
 psql -d ${1} -U ${2} -f CREATE_DB.sql
