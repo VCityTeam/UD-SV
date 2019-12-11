@@ -1,6 +1,6 @@
 <a name="top"></a>
 **Quick links**
- * Demos: [UD-Viz](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/), [temporal City](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html)
+ * [Online demos](UD-Doc/OnlineDemos.md)
  * [UD-Doc](UD-Doc): UD-SV global/integration documentation
  * [Tools](Tools/Readme.md): software components e.g. [UD-Viz](https://github.com/MEPP-team/UD-Viz), [UD-Serv](https://github.com/MEPP-team/UD-Serv) 
  * [Developers' gateway](UD-Doc/Devel/DevelopersCentral.md)
