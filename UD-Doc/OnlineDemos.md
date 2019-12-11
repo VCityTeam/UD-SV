@@ -1,4 +1,4 @@
-Online WebGL demos of the [UD-SV project](..)
+Online WebGL demos of the [UD-SV project](../Readme.md)
   * [UD-Viz demos gateway](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/index.html)
      - [UD-Viz full modules](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html)<a name="demo-online-UD-Viz-full-modules"></a>: demonstrates all the UD-Viz available modules including modules used for client/server debugging
      - [UD-Viz stable](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoStable/Demo.html)
