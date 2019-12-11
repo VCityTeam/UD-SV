@@ -21,22 +21,7 @@ Once your chosen demo is installed feel free to experiment with it, extend it an
     - first follow [UD-Viz front end install notes](#install-demo-udv-front-end)
     - then [UD-Serv/API_Enhanced_City install notes](Readme.md#backend-udv-serverapi_enhanced_city-install-notes) that enable you to install some of the server-side components on your computer. 
 
----- FIXME
-This step can be considered as a prerequisite for the next one.
-Indeed, at this point, you have on your computer an infrastructure enabling you to run UD-Viz full demo, with the possibility to have a 3D view with documents (which should be added to your local database of course) etc.
-
-However, you cannot visualize your own 3D objects yet.
-
-To do so, you must begin with installing on your server, a specific database for 3D objects using the [PostGIS technology](https://postgis.net/). This database will enable you to store 3D data respecting the [_CityGML_](http://www.citygml.org/) format.
-
-[Here](Install3DCityDB.md) is where you can find instructions for setting up the database and importing CityGML data into it. 
-
-During your database setup, you might choose to use docker. 
-
-For more information about [Docker](https://en.wikipedia.org/wiki/Docker_(software)) concepts, you can either have a look at the official website [here](https://www.docker.com/resources/what-container), or watch [this](https://www.youtube.com/watch?v=JSLpG_spOBM&t=328s) short youtube video.
----- FIXME
-
-### Computing 3DTiles tilesets and web visualize them: 
+### Computing and visualizing 3DTiles tilesets 
 [installation notes](InstallDemo3dTilesLyonViewer.md)
 ### Computing 3DTiles **temporal** tilesets and web visualize them:
 [installation notes](InstallDemo3dTilesTemporalLyonViewer.md)
