@@ -3,11 +3,11 @@
 
   This diagram shows how the communication between iTowns and lopocs works:
   
-  <img src="../Image/diapo2Sevimg26.png" width="900" height="175" />
+  <img src="../Devel/Image/diapo2Sevimg26.png" width="900" height="175" />
 
   In a first step we put our file (.las here) on the lopocs's server, then lopocs gives us a tileset, the tileset is used by iTowns's server, and both servers communicate when iTowns needs files.
 
-  <img src="../Image/Lopocs Schema1.png" width="900" height="175" />
+  <img src="../Devel/Image/Lopocs Schema1.png" width="900" height="175" />
   
 ### [Lopocs](https://github.com/Oslandia/lopocs#installation)
 
@@ -15,7 +15,7 @@
 
   You should have this when you write ````lopocs check````
   
-  <img src="../Image/LopocsValidation.png" width="643" height="180" /> 
+  <img src="../Devel/Image/LopocsValidation.png" width="643" height="180" /> 
     
 ### file .las in tileset
 
@@ -25,7 +25,7 @@
   
   ````lopocs load --work-dir . nameFile.las --table lopocs````
   
-  <img src="../Image/tutolopocs.png" width="1007" height="257" /> 
+  <img src="../Devel/Image/tutolopocs.png" width="1007" height="257" /> 
   
  
 
@@ -33,7 +33,7 @@
 
   Now you have 3 files: your .las, the .json pipeline and the .json:
   
-  <img src="../Image/tutolopocs2.png" width="443" height="118" /> 
+  <img src="../Devel/Image/tutolopocs2.png" width="443" height="118" /> 
   
   Put the tileset-public.lopocs.points.json on your server of iTowns, for me the path 3d-tiles-samples/tilesets ... 
   

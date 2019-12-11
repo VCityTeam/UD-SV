@@ -2,10 +2,10 @@
  * Demos: [UD-Viz](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/), [temporal City](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html)
  * [UD-Doc](UD-Doc): UD-SV global/integration documentation
  * [Tools](Tools/Readme.md): software components e.g. [UD-Viz](https://github.com/MEPP-team/UD-Viz), [UD-Serv](https://github.com/MEPP-team/UD-Serv) 
- * [Developers' gateway](UD-Doc/DevelopersCentral.md)
+ * [Developers' gateway](UD-Doc/Devel/DevelopersCentral.md)
  * [Developers's minutes, surveys...](https://github.com/MEPP-team/UD-SV/wiki)
  * [Projects](#projects)
- * [Needs](UD-Doc/Devel/Needs/EarlyNeeds.md)
+ * [Needs](UD-Doc/Needs/EarlyNeeds.md)
 
 ## Objective of the UD-SV project
 
@@ -37,7 +37,7 @@ We believe that in order to succeed with data usage one must not separate data c
     - [development gateway](https://github.com/MEPP-team/UD-SV/projects/3)
 
 ## Description of the needs
-We collect [use case oriented early descriptions of the needs](UD-Doc/Devel/Needs/EarlyNeeds.md). 
+We collect [use case oriented early descriptions of the needs](UD-Doc/Needs/EarlyNeeds.md). 
 Prior to any particular technical choice, this description of needs can help to
  * structure/organise the various involved roles
  * decompose the processes in atomic tasks and describe assembled processes

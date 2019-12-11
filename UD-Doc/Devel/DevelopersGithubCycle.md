@@ -1,4 +1,4 @@
-<img src="./Image/DevelopersGithubCycleProcess.png" width="100%">
+<img src="Image/DevelopersGithubCycleProcess.png" width="100%">
 
 Note: [Schema svg source file SVG file](Image/DevelopersGithubCycleProcess.svg)
 

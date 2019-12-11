@@ -1,5 +1,5 @@
 ## How to install demos out of their integrated components<a name="top"></a>
-The [UD-SV web based online demos](http://rict.liris.cnrs.fr/index.html) regroup a set of specific demos that illustrate various visualizations/applications on top city related data. Each such demo is achieved by integrating some ad-hoc subset of [free and open available software components](../Tools/Readme.md) (refer to the [architecture](../UD-Doc/Devel/Architecture/Readme.md)).
+The [UD-SV web based online demos](http://rict.liris.cnrs.fr/index.html) regroup a set of specific demos that illustrate various visualizations/applications on top city related data. Each such demo is achieved by integrating some ad-hoc subset of [free and open available software components](../Tools/Readme.md) (refer to the [architecture](../UD-Doc/Architecture/Readme.md)).
 
 The following documentation considers each specific demo and for each one explains
   - **which required components** should be installed: **don't install all the components** but stick to the _SUBSET_ required for the demo you are trying to replicate (taken among [all the available components](../Tools/Readme.md))

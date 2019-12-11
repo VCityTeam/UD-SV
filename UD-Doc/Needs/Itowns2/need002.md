@@ -21,7 +21,7 @@ Pour faire ce need nous avons eu besoin d'analyser la structure des [pnts](https
 Après cela nous avons fait un programme qui parcourt ces fichiers. Nous avons ensuite placé les différentes données dans les structures de iTowns.
 Voici un exemple de résultat: 
 
- ![](./Schemes/pointCloud.png)
+ ![](Schemes/pointCloud.png)
 
 ### Notes:
 

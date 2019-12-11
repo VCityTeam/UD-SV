@@ -102,7 +102,7 @@ The [Paperzoom](https://www.erasme.org/paper-zoom) project ([open sources](https
 ## Realisation of a Proof Of Concept
 The prototype realized for the MAM-Erasme project uses a 3D numerical model based on the [iTowns](http://www.itowns-project.org/) component together with the [UD-Viz](https://github.com/MEPP-team/UD-Viz) add-on. The high level achicteture component diagram is similar to the following one
 
-<img src="../../Devel/Architecture/Diagrams/SoftwareArchitecture.png" alt="Interactive model" width="600"/>
+<img src="../../Architecture/Diagrams/SoftwareArchitecture.png" alt="Interactive model" width="600"/>
 
 The installation of such a component context is described within the [UD-Viz install documentation](https://github.com/MEPP-team/UD-Viz/blob/master/install.md). The steps required to learn about such tools is [documented in this tutorial](../../iTowns/Tutorial.md) (sorry but french only).
 

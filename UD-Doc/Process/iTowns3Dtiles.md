@@ -6,7 +6,7 @@ The <i>tree</i> has spatial coherence; the content for child tiles are completel
 To allow flexibility, the <i>tree</i> can be any spatial data structure with spatial coherence,
 including k-d trees, quadtrees, octrees, and grids.
 
-<img src="../Image/tree.png" width="645" height="611" />
+<img src="../Devel/Image/tree.png" width="645" height="611" />
 
 Here is an example of tileset: 
 
@@ -44,7 +44,7 @@ We have 3 types of bounding volume:
 
 Box, region and sphere. Box are already read and show but the region and Sphere not yet. 
 
-<img src="../Image/tile.png" width="483" height="600" />
+<img src="../Devel/Image/tile.png" width="483" height="600" />
 
 ````
    "region": [
@@ -122,7 +122,7 @@ This work about this issue [Itown2 - 185](https://github.com/iTowns/itowns2/issu
   * We check if the frustum of camera is intersect by the object (box, region or sphere). We use the program intersect of [Three.js](https://threejs.org/docs/index.html#api/math/Frustum).
   * For the regions we transform this form into box to simplify intersection calculations, [In getBox function](https://github.com/iTowns/itowns2/blob/master/src/Core/Scheduler/Providers/3dTiles_Provider.js).
   
-  <img src="../Image/regionBox.png" width="450" height="100" />
+  <img src="../Devel/Image/regionBox.png" width="450" height="100" />
   
   #### [Geometric error](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples/tree/master/tilesets/TilesetWithDiscreteLOD)
   * We calcul the distance between the frustum of the camera and the center of the object in world location, and we compare this with the geometrieError.
@@ -131,7 +131,7 @@ This work about this issue [Itown2 - 185](https://github.com/iTowns/itowns2/issu
   #### [Viewer request volume](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples/tree/master/tilesets/TilesetWithRequestVolume) for sphere 
   * For Sphere, we test if the radius is smaller than the distance between the camera and the object if yes: we display the object else no.[In $3dtilesCulling function](https://github.com/iTowns/itowns2/blob/master/src/Process/3dTilesProcessing.js).
   
-  <img src="../Image/schemaViewer1.jpg" width="512" height="384" /> <img src="../Image/schemaViewer2.jpg" width="512" height="384" />
+  <img src="../Devel/Image/schemaViewer1.jpg" width="512" height="384" /> <img src="../Devel/Image/schemaViewer2.jpg" width="512" height="384" />
   
 ### The file .Pnts [PointsCloud](https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/TileFormats/PointCloud/README.md)
 

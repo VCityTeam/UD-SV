@@ -30,7 +30,7 @@ In your console go on the new folder and:
 
 Now in your folder you should have that: (the format potree) 
 
-<img src="../Image/tutoOpenData_folder.png" width="645" height="100" />
+<img src="../Devel/Image/tutoOpenData_folder.png" width="645" height="100" />
 
 Copy the folder **data temp cloud.js and sources.json** in 3d-tiles-sample/tileset/Zanzibar/
 
@@ -45,7 +45,7 @@ with
 
 Now you should have that: 
 
-<img src="../Image/ZanzibarPointCloud.png"/>
+<img src="../Devel/Image/ZanzibarPointCloud.png"/>
 
 ### Orthophoto
 
@@ -86,38 +86,38 @@ mdp: geoserver
 
 Check the [documentation](http://docs.geoserver.org/) if you want to understand each menu.
 
-<img src="../Image/data.png" width="200" height="150" />
+<img src="../Devel/Image/data.png" width="200" height="150" />
 
 To begin, add a new workspace
 
-<img src="../Image/workspace.png" width="514" height="216" />
+<img src="../Devel/Image/workspace.png" width="514" height="216" />
 
 And submit... then click on Zanzibar and check the boxes for WMS and WMTS
 
 Go on Disk Quota on your left and complet like that:
 
-<img src="../Image/diskquota.png" width="500" height="300" />
+<img src="../Devel/Image/diskquota.png" width="500" height="300" />
 
 And go on Gridsets just above Disk quota,
 Create a new gridset...
 
-<img src="../Image/gridset2.0.png" width="627" height="437" />
+<img src="../Devel/Image/gridset2.0.png" width="627" height="437" />
 
 Then click on Caching Defaults just above gridsets,
 like this: 
 
-<img src="../Image/cachingDefaults.png" width="750" height="450" />
+<img src="../Devel/Image/cachingDefaults.png" width="750" height="450" />
 
 Don't forget to add the gridset EPSG:32737 on the bottom.
 
 Click on BlobStores and add new.
 
-<img src="../Image/blob.png" width="500" height="400" />
+<img src="../Devel/Image/blob.png" width="500" height="400" />
 
 Now add new Store, 
 take the imageMosaic, and do this:
 
-<img src="../Image/stores.png" width="500" height="400" />
+<img src="../Devel/Image/stores.png" width="500" height="400" />
 
 And save.
 
@@ -134,11 +134,11 @@ The EPSG: and the [values](https://github.com/NikoSaul/itowns2/blob/dataZanzibar
 Click on Publishing on the top.
 Add Raster like that : 
 
-<img src="../Image/raster.png" width="650" height="200" />
+<img src="../Devel/Image/raster.png" width="650" height="200" />
 
 Then click on the top **Tile Caching**:
 
-<img src="../Image/blobLayer.png" width="522" height="701" />
+<img src="../Devel/Image/blobLayer.png" width="522" height="701" />
 
 and add your grid subset on the bottom of this page
 - - - - - - -
@@ -146,7 +146,7 @@ You should have in the **Tile Layers**, Zanzibar:Zanzibar_Layer.
 
 Click on seed/Truncate: 
 
-<img src="../Image/taskgwc.png" width="501" height="366" />
+<img src="../Devel/Image/taskgwc.png" width="501" height="366" />
 
 and submit.
 
@@ -154,7 +154,7 @@ It can take quite some time... like 5 minute.
 
 and you have this result: 
 
-<img src="../Image/pointcloudOrtho.png" width="1213" height="914" />
+<img src="../Devel/Image/pointcloudOrtho.png" width="1213" height="914" />
 
 ### Elevation
 
@@ -174,7 +174,7 @@ But you should resize the .tif with [gdalwarp](http://www.gdal.org/gdalwarp.html
 Like you see in this video, they have some lag, i think it's because the wmts are not managed. 
 We have probleme with the elevation because when you remove the pointcloud you see this: 
 
-<img src="../Image/problemEleve.png" width="1213" height="600" />
+<img src="../Devel/Image/problemEleve.png" width="1213" height="600" />
 
 This is a problem of interpolation but i don't why.
 
