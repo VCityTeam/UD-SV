@@ -15,6 +15,10 @@ The following glitches might block your algorithms at parsing time
     - 2012 intall: autre type
  * Also note that when importing similar CityGML data with the [3DCityDB importer](https://github.com/3dcitydb/importer-exporter) into a database, the importer complains with quite a few `Linear ring not closed` warning messages.
 
+Consider [LIMONEST_2009.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LIMONEST_2009.zip) . This file doest not the validate the XML Schema, it ends at line 881588 without closing tags (</cityModel> ...). In ends up at the middle of 
+<gml:LinearRing gml:id="UUID_0a6405ad-babe-4d4c-9033-d91ea9132237">
+
+
 ### Heterogeneous CityGML version encoding (and ill-specified schema?)
 Consider [LYON_5EME_2009.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_5EME_2009.zip). Most of the encountered files have a default namespace corresponding to CityGML **version 1.0** (that is the root element starts with `<CityModel xmlns="http://www.opengis.net/citygml/1.0" ...`). Yet some of the files of that same 5th borough for the same 2009 vintage have a default namespace corresponding to CityGML **version 2.0** (that is the roor element starts with `<CityModel xmlns="http://www.opengis.net/citygml/2.0" ...`). Although each file is strictly correct, the set of files encodings is heterogeneous which might confuse your treatments (parsers).
 
