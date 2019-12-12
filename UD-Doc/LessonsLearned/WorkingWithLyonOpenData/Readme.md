@@ -13,11 +13,8 @@ The following glitches might block your algorithms at parsing time
       starting on line 1202791 and ending at line 1202817) within the file `LYON_8EME_2009/LYON_8EME_BATI_2009.gml` of
       [LYON_1ER_2009.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2009.zip)
     - 2012 intall: autre type
+ * Consider the `LIMONEST_BATI_2009.gml` as extracted from the [LIMONEST_2009.zip file](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LIMONEST_2009.zip). `LIMONEST_BATI_2009.gml` doest is not a valid XML file: it ends at line `881 588` leaving a stack of unclosed tags (including the main `</cityModel>` tag). It looks like the production tool used for that file called it quits right in the middle of the `<gml:LinearRing gml:id="UUID_0a6405ad-babe-4d4c-9033-d91ea9132237">` tag...
  * Also note that when importing similar CityGML data with the [3DCityDB importer](https://github.com/3dcitydb/importer-exporter) into a database, the importer complains with quite a few `Linear ring not closed` warning messages.
-
-Consider [LIMONEST_2009.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LIMONEST_2009.zip) . This file doest not the validate the XML Schema, it ends at line 881588 without closing tags (</cityModel> ...). In ends up at the middle of 
-<gml:LinearRing gml:id="UUID_0a6405ad-babe-4d4c-9033-d91ea9132237">
-
 
 ### Heterogeneous CityGML version encoding (and ill-specified schema?)
 Consider [LYON_5EME_2009.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_5EME_2009.zip). Most of the encountered files have a default namespace corresponding to CityGML **version 1.0** (that is the root element starts with `<CityModel xmlns="http://www.opengis.net/citygml/1.0" ...`). Yet some of the files of that same 5th borough for the same 2009 vintage have a default namespace corresponding to CityGML **version 2.0** (that is the roor element starts with `<CityModel xmlns="http://www.opengis.net/citygml/2.0" ...`). Although each file is strictly correct, the set of files encodings is heterogeneous which might confuse your treatments (parsers).
