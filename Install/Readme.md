@@ -19,7 +19,7 @@ Once your chosen demo is installed feel free to experiment with it, extend it an
    - note that the server-side component uses a [PostGreSQL database](https://en.wikipedia.org/wiki/PostgreSQL) used to power components like Consult documentation, Guided Tour, Authentification, Documents to validate and Document Links_.
  * Installation: 
     - first follow [UD-Viz front end install notes](#install-demo-udv-front-end)
-    - then [UD-Serv/API_Enhanced_City install notes](Readme.md#backend-udv-serverapi_enhanced_city-install-notes) that enable you to install some of the server-side components on your computer. 
+    - then [UD-Serv/API_Enhanced_City install notes](https://github.com/MEPP-team/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md) that enable you to install some of the server-side components on your computer. 
 
 ### Computing and visualizing 3DTiles tilesets 
 [installation notes](InstallDemo3dTilesLyonViewer.md)
