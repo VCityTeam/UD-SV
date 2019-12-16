@@ -32,9 +32,9 @@ How to install (document) Enhanced City demo
  * Frontend 
    - [UD-Viz](../Tools/Readme.md#ComponentUD-Viz) web client: [install notes](https://github.com/MEPP-team/UD-Viz/blob/master/install.md) ([associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/))
  * Backend
-   - [3DCityDB](../Tools/Readme.md#ComponentUD-Serv3DCityDB): [install notes](Install3DCityDB.md#top).
-   - [CityTiler](../Tools/Readme.md#ComponentUD-ServCityTiler): [install notes](https://github.com/MEPP-team/py3dtiles/blob/Tiler/Tilers/CityTiler/Install.md) 
-   - [UD-Serv/API_Enhanced_City](../Tools/Readme.md#ComponentUD-ServAPIEnhancedCity): [install notes](https://github.com/MEPP-team/UD-Viz-server/blob/master/API_Enhanced_City/INSTALL.md) 
+   - [3DCityDB](../Tools/Readme.md#ComponentUD-Serv3DCityDB): refer to the [install notes](Install3DCityDB.md#top).
+   - [CityTiler](../Tools/Readme.md#ComponentUD-ServCityTiler): refer to the [install notes](https://github.com/MEPP-team/py3dtiles/blob/Tiler/Tilers/CityTiler/Install.md) 
+   - [UD-Serv/API_Enhanced_City](../Tools/Readme.md#ComponentUD-ServAPIEnhancedCity): refer to the [install notes](https://github.com/MEPP-team/UD-Viz-server/blob/master/API_Enhanced_City/INSTALL.md) 
    - [3DTiles Samples](../Tools/Readme.md#Component3DTilesSamples)(server):
      * <a name="backend-3dtiles-web-server-desktop-developing-context"></a>[DESKTOP developing context install notes](Install3dTilesNodeBasedWebServer.md) or 
      * <a name="backend-3dtiles-web-server-operations-stable-server-context"></a>[OPERATIONS (stable server) context install notes](InstallDebianApacheServer.md) ([Apache](https://en.wikipedia.org/wiki/Apache_HTTP_Server) http server based install notes).
