@@ -6,17 +6,18 @@ Refer to [this installation section of the Docker/Readme.md](../Docker/Readme.md
 Note: too bad AirFlow won't do it for us
 ### 
 ```bash
+cd <this-repository>/Tools/computeLyonCityEvolution/Workflow/AirFlow
 virtualenv -p python3 venv
 source venv/bin/activate
 (venv) pip3 install apache-airflow
 (venv) pip3 install docker         # Required for DockerOperator examples
-(venv) pip3 install kuberntes      # Required for KubernetesOperator examples
+(venv) pip3 install kubernetes     # Required for KubernetesOperator examples
 ```
 
 ### Setting up airflow
 Point Airflow to use the dags directory located in the current working directoryby overwriting your `$AIRFLOW_HOME` directory (that defaults to `~/airflow`).
 ```
-cd <this-repository>/ShellScripts/computeLyonCityEvolution/Workflow/AirFlow
+cd <this-repository>/Tools/computeLyonCityEvolution/Workflow/AirFlow
 export AIRFLOW_HOME=`pwd`
 airflow initdb     # Initialize the dags database
 ```
