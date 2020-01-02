@@ -1,4 +1,0 @@
-cwltool
-cwlref-runner     # for cwl-runner
-cwltool[deps]
-pyyaml

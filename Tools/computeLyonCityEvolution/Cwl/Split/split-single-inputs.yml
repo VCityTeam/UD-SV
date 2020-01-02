@@ -1,5 +1,0 @@
-inputFile:
-  class: File
-  path: ../Collect/junk-output-of_foreach_collect/LYON_1ER_2009/LYON_1ER_BATI_2009.gml
-outputFileName: junk-split.gml
-outputDirName: junk-dir

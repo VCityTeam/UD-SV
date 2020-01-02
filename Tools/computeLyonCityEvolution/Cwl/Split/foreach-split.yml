@@ -1,6 +1,0 @@
-inputFiles:
- - class: File 
-   path: ../Collect/junk-output-of_foreach_collect/LYON_1ER_2009/LYON_1ER_BATI_2009.gml 
- - class: File 
-   path: ../Collect/junk-output-of_foreach_collect/LYON_2EME_2009/LYON_2EME_BATI_2009.gml 
-outputDirName: junk-foreach-split
