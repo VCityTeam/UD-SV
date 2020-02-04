@@ -38,6 +38,7 @@
 		- [Add Tiles layers](#add-tiles-layers)
 		- [Add vector Color layer from GeoJSON](#add-vector-colorlayer-from-geojson)
 		- [Add vector layers from GPX and KML](#add-vector-layers-from-GPX-and-KML)
+		- [Add 3D meshes](#add-3d-meshes)
 		- [Add 3D layer from WFS](#add-3d-layer-from-wfs)
 		- [Cool stuffs (split example)](#cool-stuffs-split-example)
 
@@ -962,7 +963,7 @@ root_of_your_app
            |--- OSM_stamen_terrain.json
 ```
 
-To get GPX data on screen, you have to set your JS ```config.js``` file like this:
+To get ***GPX*** data on screen, you have to set your JS ```config.js``` file like this:
 * iTowns view and some variables
 ```javascript
 // Globe view
@@ -1060,6 +1061,7 @@ itowns.Fetcher.json('../examples/layers/JSONLayers/IGN_MNT_HIGHRES.json').then(a
 // Listen for globe full initialisation event
 view.addEventListener(itowns.VIEW_EVENTS.LAYERS_INITIALIZED, function _() {
       Promise.all(promises)
+      .then(Promise.all(promises2))
       .then(new ToolTip(view,
         document.getElementById('viewerDiv'),
         document.getElementById('tooltipDiv')))
@@ -1067,11 +1069,42 @@ view.addEventListener(itowns.VIEW_EVENTS.LAYERS_INITIALIZED, function _() {
 ```
 
 You should see something like this:
-![GPX](./Tutorialimages/gpx.png)
+![GPX](./TutorialImages/gpx.png)
 
+To get ***KML*** data in iTowns, you can use the ```config.js``` from GPX case. 
+
+You have to replace:
+* the second line to enter a new camera position: 
+```javascript
+var position = new itowns.Coordinates('WGS84', 6.8, 45.9, 50000);
+```
+* delete the definition => ```var promise2==[];```
+* the GPX layer part by a KML layer:
+```javascript
+// Fetch, Parse and Convert KML by iTowns
+var kmlSource = new itowns.FileSource({
+    url: 'https://raw.githubusercontent.com/iTowns/iTowns2-sample-data/master/croquis.kml',
+    projection: 'EPSG:4326',
+    fetcher: itowns.Fetcher.xml,
+    parser: itowns.KMLParser.parse,
+});
+
+var kmlLayer = new itowns.ColorLayer('Kml', {
+    name: 'kml',
+    transparent: true,
+    source: kmlSource,
+});
+```
+* finally delete this line at the end:
+```javascript
+.then(Promise.all(promises2))
+```
 
 You should see something like this:
-![KML](./Tutorialimages/kml.png)
+![KML](./TutorialImages/kml.png)
+
+### Add 3D meshes
+
 
 ### Add 3D layer from WFS
 
