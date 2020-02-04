@@ -1,6 +1,6 @@
 # iTowns tutorial
 
-> **<img src="./images/warning.png" width="10%"> Tutorial UNDER CONSTRUCTION with *iTowns v2.9.0***
+> **<img src="./images/warning.png" width="10%"> Tutorial with *iTowns v2.9.0***
 
 <figure>
   <img src="./images/iTowns_presentation.png" width="75%">
