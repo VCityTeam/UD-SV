@@ -59,6 +59,10 @@
 
 [iTowns](http://www.itowns-project.org/) is a [Three.JS](https://threejs.org/)-Based JS/WWEBGL framework for 3D GeoSpatial data visualization.
 
+iTowns works with views (*globe or plan, see figure below*) and layers. 
+
+<img src="./images/planar_globe_view.png" width="100%">
+
 #### Layers
 
 iTowns *layers* are data layers that can be added to a *view*.
