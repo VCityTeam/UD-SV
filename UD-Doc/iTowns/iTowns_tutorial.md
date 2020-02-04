@@ -32,10 +32,12 @@
 		- [Separated files for a better management](#separated-files-for-a-better-management)
 			- [HTML](#html)
 			- [CSS](#css)
+			- [Layers menu explanation](#layers-menu-explanation)
 			- [JS](#js)
 			- [JSON](#json)
 		- [Add Tiles layers](#add-tiles-layers)
 		- [Add vector Color layer from GeoJSON](#add-vector-colorlayer-from-geojson)
+		- [Add vector layers from GPX and KML](#add-vector-layers-from-GPX-and-KML)
 		- [Add 3D layer from WFS](#add-3d-layer-from-wfs)
 		- [Cool stuffs (split example)](#cool-stuffs-split-example)
 
@@ -548,6 +550,25 @@ In order to manage, change and update your code, it is simpler and better for yo
 
 * This CSS code is based on [iTowns globe example](http://www.itowns-project.org/itowns/examples/globe_vector.html) and completes the iTowns CSS to get tooltips working and make edition easier.
 
+#### Layers menu explanation
+With iTowns you can add a menu (*using the [dat.gui](https://workshop.chromeexperiments.com/examples/gui/) library*) to manage layers. 
+
+In the ```index.html```, we find 2 lines used to set dat.gui library usage: 
+```javascript
+<script src="../examples/js/GUI/dat.gui/dat.gui.min.js"></script>
+```
+```javascript
+ <script src="../examples/js/GUI/GuiTools.js"></script>
+ ```
+
+Within the ```config.js``` file, we have initialized this menu:
+```javascript
+var view = new itowns.GlobeView(viewerDiv, position);
+var menuGlobe = new GuiTools('menuDiv', view);
+```
+
+In order to add a layer, it must be fully initialized. We use ```promises``` to avoid problems regarding globe initialization and layers creations due to the asynchronicity of JavaScript. 
+
 #### JS
 
 * Now we can do the same for JS files. On the root of your directory, create a directory named ```JS```
@@ -555,7 +576,7 @@ In order to manage, change and update your code, it is simpler and better for yo
 * We want to be able to:
   * set variables (*some of them need to be global*)
   * put some layers (*Tiles, GeoJSON; ...*) in list and wait until globe view is initialized to get chosen layers on top. This is required because Javascript is asynchronous.  
-* So first, init globe and menu and some variables in the ```config.js``` file (*creation of 2 lists for promises - we will explain that later - and layers variables*).
+* So first, init globe and menu and some variables in the ```config.js``` file (*creation of 2 lists for promises and layers variables*).
 
 ```javascript
 // Globe view
@@ -921,6 +942,136 @@ We can now add a ```ColorLayer``` as vector layer from GeoJSON data.
   ```
 * Refresh http://localhost:8080/my_app/index.html, zoom to the *Ariege* departement and you should see something like this (*with a popup when hovering*):
 <img src="./images/itowns_all_layers.png" width="70%">
+
+### Add vector layers from GPX and KML
+> [access to GPX files](./tutorial/GPX)
+> [access to KML files](./tutorial/KML)
+
+Here are short examples of GPX and KML in iTowns. 
+
+You can keep the following folders hierarchy and existing ```HTML```, ```CSS``` and ```JSON``` files:
+```
+root_of_your_app
+     |--- index.html
+     |--- CSS
+     |     |--- custom.css
+     |--- JS
+     |     |--- config.js
+     |--- JSON_layers
+           |--- OSM_cartodb_dark.json
+           |--- OSM_stamen_terrain.json
+```
+
+To get GPX data on screen, you have to set your JS ```config.js``` file like this:
+* iTowns view and some variables
+```javascript
+// Globe view
+var viewerDiv = document.getElementById('viewerDiv');
+var position = new itowns.Coordinates('WGS84', 0.089, 42.8989, 80000);
+var view = new itowns.GlobeView(viewerDiv, position);
+var menuGlobe = new GuiTools('menuDiv', view);
+
+var promises = [];
+var promises2 = [];
+var tileLayer1;
+var tileLayer2;
+var moreThanOne = 0
+```
+* function to add color layer 
+```javascript
+function addColorLayerFromConfig(config) {
+    var layer = new itowns.ColorLayer(config.id, config)
+    if (moreThanOne > 0){layer.visible = false;}
+    else {layer.visible = true;};
+    moreThanOne++;
+
+    return view.addLayer(layer).then(function _() {
+                    menuGlobe.addLayerGUI.bind(menuGlobe);
+                    itowns.ColorLayersOrdering.moveLayerToIndex(view, config.id, 0);
+                });
+};
+```
+* add background OSM layer (*with Stamen and CartoDB styles*)
+```javascript 
+promises.push(itowns.Fetcher.json('./JSON_layers/OSM_stamen_terrain.json')
+    .then(function _(c) {
+        c.source = new itowns.TMSSource(c.source);
+        return c;
+    })
+    .then(addColorLayerFromConfig)
+    .then(function _(l) { tileLayer1 = l; }));
+
+promises.push(itowns.Fetcher.json('./JSON_layers/OSM_cartodb_dark.json')
+    .then(function _(c) {
+        c.source = new itowns.TMSSource(c.source);
+        return c;
+    })
+    .then(addColorLayerFromConfig)
+    .then(function _(l) { tileLayer2 = l; }));
+```
+* add the GPX layer
+```javascript
+promises2.push(itowns.Fetcher.xml('https://raw.githubusercontent.com/iTowns/iTowns2-sample-data/master/ULTRA2009.gpx')
+            .then(function _(gpx) {
+                var gpxSource = new itowns.FileSource({
+                    fetchedData: gpx,
+                    projection: 'EPSG:4326',
+                    parser: itowns.GpxParser.parse,
+                });
+
+                var gpxLayer = new itowns.ColorLayer('Gpx', {
+                    name: 'Ultra 2009',
+                    transparent: true,
+                    source: gpxSource,
+                    style: {
+                        stroke: {
+                            color: 'red',
+                        },
+                        point: {
+                            color: 'white',
+                            line: 'red',
+                        }
+                    },
+                });
+
+                return view.addLayer(gpxLayer)
+                  .then(function _() {
+                      menuGlobe.addLayerGUI.bind(menuGlobe);
+                      itowns.ColorLayersOrdering.moveLayerToIndex(view, gpxLayer.id, 2);
+                  })
+                  .then(function _(l) { gpxLayer = l; });
+      })
+    );
+```
+* add elevation layers
+```javascript
+// Add two elevation layers.
+// These will deform iTowns globe geometry to represent terrain elevation.
+function addElevationLayerFromConfig(config) {
+    config.source = new itowns.WMTSSource(config.source);
+    var layer = new itowns.ElevationLayer(config.id, config);
+    view.addLayer(layer).then(menuGlobe.addLayerGUI.bind(menuGlobe));
+}
+itowns.Fetcher.json('../examples/layers/JSONLayers/WORLD_DTM.json').then(addElevationLayerFromConfig);
+itowns.Fetcher.json('../examples/layers/JSONLayers/IGN_MNT_HIGHRES.json').then(addElevationLayerFromConfig);
+```
+* listen for full initialisation
+```javascript
+// Listen for globe full initialisation event
+view.addEventListener(itowns.VIEW_EVENTS.LAYERS_INITIALIZED, function _() {
+      Promise.all(promises)
+      .then(new ToolTip(view,
+        document.getElementById('viewerDiv'),
+        document.getElementById('tooltipDiv')))
+});
+```
+
+You should see something like this:
+![GPX](./Tutorialimages/gpx.png)
+
+
+You should see something like this:
+![KML](./Tutorialimages/kml.png)
 
 ### Add 3D layer from WFS
 
