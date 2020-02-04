@@ -233,6 +233,7 @@ In this tutorial, we are going to use some of these services to get spatial data
 </table>
 
 ### Hello world
+> [files here](./tutorial_files/globe_viewer)
 
 Here we are going to develop a short app and get it running quickly. Our explanations are based on this [iTowns tutorial](http://www.itowns-project.org/itowns/docs/#tutorials/Create-a-simple-globe).
 
@@ -447,6 +448,7 @@ So you have a local server running a simple iTowns globe with ortho photos and e
 It was simple and everything was on a unique HTML file. But if you need to develop your own application, you will probably need a lot if layers and functions, so it is time to learn how to add others data sources but also how to get a cleaner organisation and code.
 
 ## Develop your own application
+> [files here](./tutorial_files/my_app)
 
 We will learn here how to:
 * get a clean development environment
@@ -945,8 +947,8 @@ We can now add a ```ColorLayer``` as vector layer from GeoJSON data.
 <img src="./images/itowns_all_layers.png" width="70%">
 
 ### Add vector layers from GPX and KML
-> [access to GPX files](./tutorial/GPX)
-> [access to KML files](./tutorial/KML)
+> [access to GPX files](./tutorial_files/GPX)
+> [access to KML files](./tutorial_files/KML)
 
 Here are short examples of GPX and KML in iTowns. 
 
@@ -1107,6 +1109,7 @@ You should see something like this:
 
 
 ### Add 3D layer from WFS
+> [files here](./tutorial_files/3D_WFS)
 
 > Our example is based on [iTowns example](http://www.itowns-project.org/itowns/examples/globe_wfs_color.html) (*you can find the ```html``` file in the ```examples``` directory within the ```itowns``` directory on your computer*)
 
