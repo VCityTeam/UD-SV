@@ -1114,6 +1114,133 @@ iTowns allows to use 3D meshes. We will place a mesh on the top of the Gerbier-d
 
 ![geoportail](./images/geoportail.png)
 
+> Gerbier-le-Jonc coordinates:
+> * longitude: 4.22,  
+> * latitude: 44.844,
+> * altitude: 3000
+
+In order to create a 3D object, we will use the [THREE.js](https://threejs.org/) library on which iTowns is based and that is embedded in iTowns. 
+
+As we have done it previously, we set some vars and the scene and especially the position (*coordinates of the mount*):
+```javascript
+// Globe view
+var viewerDiv = document.getElementById('viewerDiv');
+var position = new itowns.Coordinates('WGS84', 4.22, 44.844, 1500);
+var view = new itowns.GlobeView(viewerDiv, position);
+var menuGlobe = new GuiTools('menuDiv', view);
+
+var promises = [];
+var tileLayer1;
+var moreThanOne = 0
+
+// Add two imagery layers to the scene
+// This layer is defined in a json file but it could be defined as a plain js
+// object. See Layer* for more info.
+function addColorLayerFromConfig(config) {
+    var layer = new itowns.ColorLayer(config.id, config)
+    if (moreThanOne > 0){layer.visible = false;}
+    else {layer.visible = true;};
+    moreThanOne++;
+
+    return view.addLayer(layer).then(function _() {
+                    menuGlobe.addLayerGUI.bind(menuGlobe);
+                    itowns.ColorLayersOrdering.moveLayerToIndex(view, config.id, 0);
+                });
+};
+promises.push(itowns.Fetcher.json('./JSON_layers/OSM_stamen_terrain.json')
+    .then(function _(c) {
+        c.source = new itowns.TMSSource(c.source);
+        return c;
+    })
+    .then(addColorLayerFromConfig)
+    .then(function _(l) { tileLayer1 = l; }));
+```
+
+We are going to create some kind of cylinder via a specific function (*if you want to learn more about THREE.js, take a look at the [documentation](https://threejs.org/docs/index.html#manual/introduction/Creating-a-scene)*). 
+
+Let's create a function:
+```javascript
+function addMeshToScene() {
+
+    }
+```
+
+JS code that we will present must be include in this function. 
+
+Inside this fonction, we create the 3D mesh:
+```javascript
+// creation of the new mesh (a cylinder)
+var THREE = itowns.THREE;
+var geometry = new THREE.CylinderGeometry(0, 10, 60, 8);
+var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+var mesh = new THREE.Mesh(geometry, material);
+```
+
+Once created, we have to place this mesh on the scene. In order to do that, we are going to use the camera position we have defined:
+```javascript
+// get the position on the globe, from the camera
+var cameraTargetPosition = view.controls.getLookAtCoordinate();
+
+// position of the mesh
+var meshCoord = cameraTargetPosition;
+meshCoord.setAltitude(cameraTargetPosition.altitude() + 30);
+```
+
+Then, we add this coordinates to the mesh object according to our coordinates system:
+```javascript
+// position of the mesh
+mesh.position.copy(meshCoord.as(view.referenceCrs).xyz());
+```
+
+Then, we can orientate the mesh object to the top of the mount:
+```javascript
+// orientation of the mesh
+mesh.lookAt(new THREE.Vector3(0, 0, 0));
+mesh.rotateX(Math.PI / 2);
+```
+
+We update coordinates and add mesh to the scene:
+```javascript
+// update coordinate of the mesh
+mesh.updateMatrixWorld();
+
+// add the mesh to the scene
+view.scene.add(mesh);
+
+// make the object usable from outside of the function
+view.mesh = mesh;
+view.notifyChange();
+```
+
+Eventually we add elevation layers ...
+```javascript
+// Add two elevation layers.
+// These will deform iTowns globe geometry to represent terrain elevation.
+function addElevationLayerFromConfig(config) {
+    config.source = new itowns.WMTSSource(config.source);
+    var layer = new itowns.ElevationLayer(config.id, config);
+    view.addLayer(layer).then(menuGlobe.addLayerGUI.bind(menuGlobe));
+}
+itowns.Fetcher.json('../examples/layers/JSONLayers/WORLD_DTM.json').then(addElevationLayerFromConfig);
+itowns.Fetcher.json('../examples/layers/JSONLayers/IGN_MNT_HIGHRES.json').then(addElevationLayerFromConfig);
+```
+
+... and the full initialization listener as well as an automatic tilt angle for the camera:
+```javascript
+// Listen for globe full initialisation event
+view.addEventListener(itowns.VIEW_EVENTS.LAYERS_INITIALIZED, function _() {
+      Promise.all(promises)
+      .then(addMeshToScene())
+      .then(view.controls.setTilt(20, true))
+      .then(new ToolTip(view,
+        document.getElementById('viewerDiv'),
+        document.getElementById('tooltipDiv')))
+});
+```
+
+You should see something like this:
+![mesh](./images/mesh.png)
+
 ### Add 3D layer from WFS
 > [files here](./tutorial_files/3D_WFS)
 
