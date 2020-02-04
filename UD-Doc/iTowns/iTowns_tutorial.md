@@ -1106,7 +1106,13 @@ You should see something like this:
 ![KML](./TutorialImages/kml.png)
 
 ### Add 3D meshes
+> [files here](./tutorial_files/3D_mesh)
 
+As previously, you can keep same files hierarchy and reuse all files. We will only modify the ```config.js```. 
+
+iTowns allows to use 3D meshes. We will place a mesh on the top of the Gerbier-de-Jonc mount (*you can find coordinates of some POIs on Geoportail website: https://www.geoportail.gouv.fr/carte. and follow the steps shown in the figure below*)
+
+![geoportail](./images/geoportail.png)
 
 ### Add 3D layer from WFS
 > [files here](./tutorial_files/3D_WFS)
