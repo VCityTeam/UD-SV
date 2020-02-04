@@ -1,0 +1,60 @@
+<!doctype html>
+    <html>
+    <head>
+        <title>Urban Viewer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            html {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                overflow: hidden;
+                height: 100%;
+            }
+
+            div {
+                margin : auto auto;
+                width: 100%;
+                padding: 0;
+                height: 100%
+            }
+    </style>
+    </head>
+    <body>
+        <script src="../dist/itowns.js"></script>
+        <div id="viewerDiv"></div>
+        <script type="text/javascript">
+          var viewerDiv = document.getElementById('viewerDiv');
+           var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+           var view = new itowns.GlobeView(viewerDiv, position);
+           var orthoSource = new itowns.WMTSSource({
+                  url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
+                  name: 'ORTHOIMAGERY.ORTHOPHOTOS',
+                  tileMatrixSet: 'PM',
+                  format: 'image/jpeg',
+              });
+
+            var orthoLayer = new itowns.ColorLayer('Ortho', {
+                source: orthoSource,
+            });
+
+            view.addLayer(orthoLayer);
+
+            var elevationSource = new itowns.WMTSSource({
+                  url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
+                  name: 'ELEVATION.ELEVATIONGRIDCOVERAGE',
+                  tileMatrixSet: 'WGS84G',
+                  format: 'image/x-bil;bits=32'
+              });
+
+            var elevationLayer = new itowns.ElevationLayer('MNT_WORLD', {
+                  source: elevationSource,
+            });
+
+  view.addLayer(elevationLayer);
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,12 @@
+{
+  "id":"STAMEN TERRAIN",
+  "source":{
+    "format": "image/jpg",
+    "url": "https://stamen-tiles.a.ssl.fastly.net/terrain/${z}/${x}/${y}.jpg",
+    "attribution": {
+      "name": "OpenStreetMap",
+      "url": "http://www.openstreetmap.org/"
+    },
+    "tileMatrixSet": "PM"
+  }
+}  

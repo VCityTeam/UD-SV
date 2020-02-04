@@ -1,0 +1,13 @@
+{
+  "id":"CARTODB DARK",
+  "source":{
+    "isInverted": true,
+    "format": "image/png",
+    "url": "https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/${z}/${x}/${y}.png",
+    "attribution": {
+        "name": "Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.",
+        "url": "http://carto.com/basemaps"
+    },
+    "tileMatrixSet": "PM"
+  }
+}
