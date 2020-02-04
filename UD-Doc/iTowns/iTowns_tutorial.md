@@ -35,8 +35,8 @@
 			- [JS](#js)
 			- [JSON](#json)
 		- [Add Tiles layers](#add-tiles-layers)
-		- [Add vector Color layer from GeoJSON](#add-vector-color-layer-from-geojson)
-		- [Add 3D layer (*WMTS*)](#add-3d-layer-wmts)
+		- [Add vector Color layer from GeoJSON](#add-vector-colorlayer-from-geojson)
+		- [Add 3D layer from WFS](#add-3d-layer-from-wfs)
 		- [Cool stuffs (split example)](#cool-stuffs-split-example)
 
 <!-- /TOC -->
@@ -922,7 +922,7 @@ We can now add a ```ColorLayer``` as vector layer from GeoJSON data.
 * Refresh http://localhost:8080/my_app/index.html, zoom to the *Ariege* departement and you should see something like this (*with a popup when hovering*):
 <img src="./images/itowns_all_layers.png" width="70%">
 
-### Add 3D layer (*WMS*)
+### Add 3D layer from WFS
 
 > Our example is based on [iTowns example](http://www.itowns-project.org/itowns/examples/globe_wfs_color.html) (*you can find the ```html``` file in the ```examples``` directory within the ```itowns``` directory on your computer*)
 
