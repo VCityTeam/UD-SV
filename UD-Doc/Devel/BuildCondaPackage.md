@@ -79,7 +79,7 @@ Regarding these warnings and for **purposes of stability and multi-platform inst
 | conda environment with package | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
 | package sdist | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
 | wheel | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: / :x: |
-| conda package | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: |:heavy_check_mark: |
+| conda package | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |:heavy_check_mark: |
 
 
 ## The cookiecutter way
