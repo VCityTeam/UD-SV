@@ -40,7 +40,7 @@ Regarding these warnings and for **purposes of stability and multi-platform inst
 
 ## A quick look on different states
 | state | usable | importable | distribution package pip | distribution package conda | environment required | manage dependencies |
-|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 | standalone module | :heavy_check_mark: | :x: | :x: |:x: |:x: |:x:|
 | simple package (*init Python files and hierarchy*)| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: |
 | conda environment with package | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
