@@ -5,6 +5,39 @@
 > * have to be built from scratch
 > * require conda to manage base C libraries
 
+## Table of contents
+- [How to build a conda package ?](#how-to-build-a-conda-package)
+  - [Table of contents](#table-of-contents)
+  - [Why build a distribution package with conda ?](#why-build-a-distribution-package-with-conda-?)
+    - [Notes on spatial libraries](#notes-on-spatial-libraries)
+  - [Get and install Conda](#get-and-install-conda)
+  - [Definitions](#definitions)
+  - [A quick look on different states](#a-quick-look-on-different-states)
+  - [The cookiecutter way](#the-cookiecutter-way)
+    - [About Cookiecutter (*create a distribution package*)](#about-cookiecutter-create-a-distribution-package)
+    - [Quick and easy way](#quick-and-easy-way)
+  - [Set the conda recipe](#set-the-conda-recipe)
+    - [The meta YAML file](#the-meta-yaml-file)
+      - [Example](#example)
+      - [Explanations](#explanations)
+    - [Setup.py](#setuppy)
+      - [Example](#example-1)
+  - [Conda build](#conda-build)
+    - [Install conda-build](#install-conda-build)
+    - [Build the package](#build-the-package)
+    - [Convert the package](#convert-the-package)
+  - [Conda install](#conda-install)
+    - [Install from local sources](#install-from-local-sources)
+      - [Directly from tarball](#directly-from-tarball)
+      - [By creating a conda channel](#by-creating-a-conda-channel)
+  - [Developer's notes](#developers-notes)
+    - [Create an conda virtual environment](#create-an-conda-virtual-environment)
+      - [From scratch](#from-scratch)
+    - [Activate this environment](#activate-this-environment)
+    - [Install the package (*symbolik link*)](#install-the-package-symbolik-link)
+    - [Build after changes](#build-after-changes)
+    - [Useful resources](#useful-resources)
+
 ## Why build a distribution package with conda ?
 ### Notes on spatial libraries
 When a package requires libraries with **spatial functionality** such as [GeoPandas](https://geopandas.org), it will be easier to work with [Conda](https://docs.conda.io/projects/conda/en/latest/). Such libraries depends on on open source libraries ([GEOS](https://geos.osgeo.org/), [GDAL](https://www.gdal.org/), [PROJ](https://proj.org/)). As written in GeoPandas "*Those **base C libraries can sometimes be a challenge to install**. [...] So depending on your platform, you might need to compile and install their C dependencies manually. [...]. Using conda [...] avoids the need to compile the dependencies yourself.*".
@@ -22,7 +55,7 @@ When a package requires libraries with **spatial functionality** such as [GeoPan
 
 Regarding these warnings and for **purposes of stability and multi-platform installations**, Conda seems to be the best option and Conda is used massively now and especially in the **data science**, machine learning and AI domains (*it includes most of useful packages such as NumPy, Pandas, ...*) and for **visualization**.
 
-## Get & install Conda (*Miniconda*) or Anaconda:
+## Get and install Conda:
 * [Miniconda](https://docs.conda.io/en/latest/miniconda.html) *=> minimal package*
 * [Anaconda](https://www.anaconda.com/distribution/) *=> includes graphical interface and other tools*
 
@@ -62,7 +95,7 @@ Regarding these warnings and for **purposes of stability and multi-platform inst
 
 > *To make license choice easier, check [choosealicense](http://choosealicense.com/)*
 
-### Quick & easy way
+### Quick and easy way
 * Use [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and one of their templates like [cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) or [py_cookiecutter](https://github.com/DerThorsten/py_cookiecutter) or [cookiecutter-conda-python](https://github.com/conda/cookiecutter-conda-python)
 * Examples:
     ```bash
