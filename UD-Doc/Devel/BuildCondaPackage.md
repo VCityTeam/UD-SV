@@ -40,7 +40,7 @@
 
 ## Why build a distribution package with conda ?
 ### Notes on spatial libraries
-When a package requires libraries with **spatial functionality** such as [GeoPandas](https://geopandas.org), it will be easier to work with [Conda](https://docs.conda.io/projects/conda/en/latest/). Such libraries depends on on open source libraries ([GEOS](https://geos.osgeo.org/), [GDAL](https://www.gdal.org/), [PROJ](https://proj.org/)). As written in GeoPandas "*Those **base C libraries can sometimes be a challenge to install**. [...] So depending on your platform, you might need to compile and install their C dependencies manually. [...]. Using conda [...] avoids the need to compile the dependencies yourself.*".
+When a package requires libraries with **spatial functionality** such as [GeoPandas](https://geopandas.org), it will be easier to work with [Conda](https://docs.conda.io/projects/conda/en/latest/). Such libraries depends on an open source libraries ([GEOS](https://geos.osgeo.org/), [GDAL](https://www.gdal.org/), [PROJ](https://proj.org/)). As written in GeoPandas "*Those **base C libraries can sometimes be a challenge to install**. [...] So depending on your platform, you might need to compile and install their C dependencies manually. [...]. Using conda [...] avoids the need to compile the dependencies yourself.*".
 
 > *If you want to read more about it, you may want to read the [GeoPandas installation warnings](https://geopandas.org/install.html#installation) and the [blog article on differences between conda and pip](https://www.anaconda.com/understanding-conda-and-pip/). You can also have a look on the table below (from the just quoted blog article)*
 
