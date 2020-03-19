@@ -364,7 +364,7 @@ conda install --use-local [path/to/file.tar.bz2]
 ## Developer's notes
 > *This method could be compared to the creation of a virtual environment and ```pip install -e``` command*.
 
-### Create an conda virtual environment
+### Create a conda virtual environment
 #### From scratch
 ```bash
 conda create --name [your_env]
