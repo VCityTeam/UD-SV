@@ -323,7 +323,7 @@ conda install --use-local [path/to/file.tar.bz2]
 > ***Installation via this way allows to use local build package but resolve dependencies.** See the [Stackoverflow answer](https://stackoverflow.com/a/35605508)*
 
 1. **Create a directory channel**:
-> *Recommanded to use a tmp directory and respect the location of this directory*
+> *Recommended to use a tmp directory and respect the location of this directory*
 
 * *command*:
     ```bash
