@@ -99,15 +99,15 @@ Regarding these warnings and for **purposes of stability and multi-platform inst
 * Use [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and one of their templates like [cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) or [py_cookiecutter](https://github.com/DerThorsten/py_cookiecutter) or [cookiecutter-conda-python](https://github.com/conda/cookiecutter-conda-python)
 * Examples:
     ```bash
-    pip install -U cookiecutter
+    conda install -c conda-forge cookiecutter
     cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
     ```
     ```bash
-    pip install -U cookiecutter
+    conda install -c conda-forge cookiecutter
     cookiecutter https://github.com/DerThorsten/py_cookiecutter.git
     ```
     ```bash
-    pip install -U cookiecutter
+    conda install -c conda-forge cookiecutter
     cookiecutter https://github.com/conda/cookiecutter-conda-python.git
     ```
 * Once done, you have to adapt/set the conda recipe to your needs (*see next section*).
