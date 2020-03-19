@@ -312,7 +312,7 @@ You can convert your package in order to set it for the other platforms and OS:
 
 ## Conda install
 ### Install from local sources
-#### Directly from tarball
+#### Directly from tarball [***not recommended***]
 > ***/!\ WARNING: "Installing packages directly from the file does not resolve dependencies. If your installed package does not work, it may have missing dependencies that need to be resolved manually." ([Anaconda User Guide](https://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/#installing-packages-on-a-non-networked-air-gapped-computer))***
 
 ```bash
