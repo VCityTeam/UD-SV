@@ -278,6 +278,18 @@ In terminal window:
 conda install conda-build
 ```
 
+### Add required conda channels
+Add the channels required for your package:
+
+```bash
+conda config --append channels [newchannel]
+```
+
+Example: 
+  ```bash
+  conda config --append channels conda-forge
+  ```
+
 ### Build the package
 Once the recipe is done, you can build the package (*this process could take a few seconds to a few minutes regarding your package*):
 * *command*:
