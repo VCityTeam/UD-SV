@@ -24,6 +24,7 @@
       - [Example](#example-1)
   - [Conda build](#conda-build)
     - [Install conda-build](#install-conda-build)
+    - [Add required conda channels](#add-required-conda-channels)
     - [Build the package](#build-the-package)
     - [Convert the package](#convert-the-package)
   - [Conda install](#conda-install)
