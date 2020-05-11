@@ -29,11 +29,9 @@ We believe that in order to succeed with data usage one must not separate data c
 
 ## Projects
 ### Ongoing
- * [MAM and games](https://github.com/MEPP-team/UD-SV/wiki/MAM-and-games-(Project)): a joint project with the [Gamagora](https://gamagora.univ-lyon2.fr/) internship program focusing on the Model AugMented (MAM) approach
- * [MAM as a mediation tool](https://github.com/MEPP-team/UD-SV/wiki/MAM-as-mediation-tool-(Project)): Model AugMented Model (MAM) approach with the [Erasme team](http://www.polepixel.fr/residents/erasme/)  
 
 ### Closed
- * Model AugMented: MAM 2018 Erasme (proof of concep)t:
+ * Model AugMented: MAM-Erasme-2018<a name="Project-MAM-Erasme-2018"></a> (proof of concept):
     - [project description](UD-Doc/Projects/MAM-Erasme-bootstrap/Readme.md)
     - [development gateway](https://github.com/MEPP-team/UD-SV/projects/3)
 
