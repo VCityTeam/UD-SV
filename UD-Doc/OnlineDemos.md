@@ -8,4 +8,4 @@ Online WebGL demos of the [UD-SV project](../Readme.md#top)
   * [City wide 3dTiles tileset visualization](http://rict.liris.cnrs.fr/Demo_LyonFull_Villeurbanne_Bron_2015/UDV/UDV-Core/examples/DemoFull/Demo.html)<a name="demo-online-3dtiles-lyon-villeurbanne"></a>
   
   
-WIP:  whqt about [temporal City](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html) ?
+WIP:  what about [temporal City](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html) ?
