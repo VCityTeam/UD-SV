@@ -9,7 +9,7 @@ Because a (coding) inception guide must be simple and easy to understand, if you
  * Read about the [whys and wherefores of the UD-SV project](../../Readme.md): the general methodological framework UD-SV provides, as well as the [chosen software components](../../Tools/Readme.md#top) will both support and constrain your work.
  * As a general notice, and although UD-SV tries to follow mainstream practices (to reduce your surprises and associated loss of time), keep in mind that some practices used within UD-SV are specific to the project. As such they cannot be guessed or infered. This type of specific information is most often documented in the various [Readme.md](https://github.com/MEPP-team/UD-Viz/README.md) and/or [Install.md](https://github.com/MEPP-team/UD-Viz/blob/master/install.md) markdown files scattered across the repositories you will traverse.
    
-### Check the pre-requisites
+### Tooling: check your knowledge of the pre-requisites
 Languages:
  * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the [UD-Viz](../../Tools/Readme.md#ComponentUD-Viz) frontend: JavaScript proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript)
  * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UD-Serv](../../Tools/Readme.md#ComponentUD-Serv) back end: proposed [tutorial](https://developer.mozilla.org/en-US/docs/Glossary/Python)
