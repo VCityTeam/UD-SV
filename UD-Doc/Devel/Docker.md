@@ -27,8 +27,9 @@ Context examples:
  - Docker building context of [3DUse](https://github.com/EricBoix/3DUSE/tree/master/Docker) (provided within 3DUse sources hierarchy)
  - Docker building context of [Tum's 3dCityDB containerized version](https://github.com/tum-gis/3dcitydb-docker-postgis/tree/master/v4.0.2): and its [dockerfile](https://github.com/tum-gis/3dcitydb-docker-postgis/blob/master/v4.0.2/Dockerfile) (provided outside of [3DCityDB source hierarchy](https://github.com/3dcitydb/3dcitydb): hint, follow the [git clone](https://github.com/tum-gis/3dcitydb-docker-postgis/blob/master/v4.0.2/Dockerfile#L37))
  - Docker building context of [UD-geodecision](https://github.com/VCityTeam/UD-geodecision-docker/tree/master/FormatAndAnalyseRoofs/DockerContext) (and the associated [UD-geodecision)](https://github.com/VCityTeam/UD-geodecision) source)
+  - [UD-Reproducitibility examples](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Computations/3DTiles/LyonTemporal/Docker)
  
- Entrypoint: a place to "normalize"/document your API
+ **Dockerfile's Entrypoint**: a place to "normalize"/document your API
  ![entrypoint](Docker/ud-geodecision-docker_organisation.png)
  - An example of [entrypoint](https://github.com/VCityTeam/UD-geodecision-docker/blob/master/FormatAndAnalyseRoofs/DockerContext/Dockerfile#L44)
  - [entrypoint.py](https://github.com/VCityTeam/UD-geodecision-docker/blob/master/FormatAndAnalyseRoofs/DockerContext/entrypoint.py)
