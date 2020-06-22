@@ -1,3 +1,4 @@
+## Introduction
 According to the 
 [wikipedia introduction of Docker](https://en.wikipedia.org/wiki/Docker_(software))
 ```
@@ -9,7 +10,8 @@ through well-defined channels.
    All containers are run by a single operating system kernel and therefore
 use fewer resources than virtual machines.
 ```
+Note: Docker native OS is linux (on OSX you need a virtualization layer):
+![Container vs Virtualization](Docker/Container_VM_Implementation.png)
 
-Notes: 
- on OSX you need a virtualization layer  
-![docker components](Docker/High-level-overview-of-Docker-architecture.png
+## Docker components 
+![docker components](Docker/High-level-overview-of-Docker-architecture.png)
