@@ -23,7 +23,7 @@ The docker build command builds Docker images from a Dockerfile and a “context
 A build’s context is the set of files located in the specified PATH or URL.
 The build process can refer to any of the files in the context.
 ```
-Note: first thing to sport is the [Dockerfile](https://docs.docker.com/engine/reference/builder/)
+Note: first thing to spot is the [Dockerfile](https://docs.docker.com/engine/reference/builder/)
 
 Context examples:
  - Docker building context of [3DUse](https://github.com/EricBoix/3DUSE/tree/master/Docker) (provided within 3DUse sources hierarchy)
