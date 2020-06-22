@@ -15,3 +15,43 @@ Note: Docker native OS is linux (on OSX you need a virtualization layer):
 
 ## Docker components 
 ![docker components](Docker/High-level-overview-of-Docker-architecture.png)
+
+## Building images
+As stated in [Docker build command documentation](https://docs.docker.com/engine/reference/commandline/build/#extended-description):
+```
+The docker build command builds Docker images from a Dockerfile and a “context”. A build’s context is the set of files located in the specified PATH or URL. The build process can refer to any of the files in the context.
+```
+Note: first thing to sport is the [Dockerfile](https://docs.docker.com/engine/reference/builder/)
+
+Context examples:
+ - Docker building context of [3DUse](https://github.com/EricBoix/3DUSE/tree/master/Docker) (provided within 3DUse sources hierarchy)
+ - Docker building context of [Tum's 3dCityDB containerized version](https://github.com/tum-gis/3dcitydb-docker-postgis/tree/master/v4.0.2): and its [dockerfile](https://github.com/tum-gis/3dcitydb-docker-postgis/blob/master/v4.0.2/Dockerfile) (provided outside of [3DCityDB source hierarchy](https://github.com/3dcitydb/3dcitydb): hint, follow the [git clone](https://github.com/tum-gis/3dcitydb-docker-postgis/blob/master/v4.0.2/Dockerfile#L37))
+ - Docker building context of [UD-geodecision](https://github.com/VCityTeam/UD-geodecision-docker) (and the associated [UD-geodecision)](https://github.com/VCityTeam/UD-geodecision) source)
+
+
+## A command based walkthrough
+* List images (in local repository): `docker images`
+  - Delete all images: `docker rmi $(docker images -q)`
+* List containers: `docker ps -a`
+  - Stop all (running) containers: `docker stop $(docker ps -a -q)`
+  - Remove all containers: `docker rm $(docker ps -a -q)`
+
+**Run an interactive shell**
+  - without entrypoint: `docker run -it <image> bash`
+  - with entrypoint: `docker run -it --entrypoint /bin/bash <image>`
+    [Watch out](https://medium.com/@oprearocks/how-to-properly-override-the-entrypoint-using-docker-run-2e081e5feb9d): the arguments get rejected at the end of the command `docker run --entrypoint "/bin/ls" debian -al /root`
+
+**Space consumption**
+ * `docker system df` : displays disk space used by docker 
+ * `docker system prune`: removes dangling images, containers...
+ * `docker images -f dangling=true` to list dangling images
+    - `docker images purge` to remove dangling images
+ * `docker volume ls -f dangling=true`: list dangling volumes
+    - `docker volume prune`
+ * `docker system prune && `
+ 
+ ## Missing things:
+ Docker compose
+   * Even when there is a single service, use a docker compose in order
+     to save how you launch docker (that is leave traces for your docker
+   run arguments)
