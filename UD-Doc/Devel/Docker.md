@@ -44,7 +44,9 @@ Context examples:
  **Dockerfile's Entrypoint**: a place to "normalize"/document your API
  - An example of [entrypoint](https://github.com/VCityTeam/UD-geodecision-docker/blob/master/FormatAndAnalyseRoofs/DockerContext/Dockerfile#L44)
  - [entrypoint.py](https://github.com/VCityTeam/UD-geodecision-docker/blob/master/FormatAndAnalyseRoofs/DockerContext/entrypoint.py)
-<img src="Docker/ud-geodecision-docker_organisation.png" alt="docker entry point" height="200" /> 
+The following diagram tries to illustate the /Input, /Output good practice 
+(don't forget the commands at the bottom)
+<img src="Docker/ud-geodecision-docker_organisation.png" alt="docker entry point" width="500" > 
 
 ## A command based walkthrough
 * List images (in local repository): `docker images`
