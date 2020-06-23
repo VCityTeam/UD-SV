@@ -37,10 +37,14 @@ Context examples:
  - Docker building context of [UD-geodecision](https://github.com/VCityTeam/UD-geodecision-docker/tree/master/FormatAndAnalyseRoofs/DockerContext) (and the associated [UD-geodecision)](https://github.com/VCityTeam/UD-geodecision) source)
   - [UD-Reproducitibility examples](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Computations/3DTiles/LyonTemporal/Docker)
  
+ **Docker volumes**:
+ 
+ ![docker components](Docker/docker-types-of-mounts-volume.png)
+ 
  **Dockerfile's Entrypoint**: a place to "normalize"/document your API
- ![entrypoint](Docker/ud-geodecision-docker_organisation.png)
  - An example of [entrypoint](https://github.com/VCityTeam/UD-geodecision-docker/blob/master/FormatAndAnalyseRoofs/DockerContext/Dockerfile#L44)
  - [entrypoint.py](https://github.com/VCityTeam/UD-geodecision-docker/blob/master/FormatAndAnalyseRoofs/DockerContext/entrypoint.py)
+<img src="Docker/ud-geodecision-docker_organisation.png" alt="docker entry point" height="200" /> 
 
 ## A command based walkthrough
 * List images (in local repository): `docker images`
