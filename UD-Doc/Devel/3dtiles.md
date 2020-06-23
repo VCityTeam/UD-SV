@@ -40,7 +40,7 @@ first focus on the following salient 3DTiles notions:
        . venv/bin/activate
        pip install -e .
        pip install pytest pytest-benchmark
-       pytest -k"cube"
+       pytest -k "cube"
        ls junk/
        ```
 
