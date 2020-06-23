@@ -16,6 +16,12 @@ Note: Docker native OS is linux (on OSX you need a virtualization layer):
 ## Docker components 
 ![docker components](Docker/High-level-overview-of-Docker-architecture.png)
 
+* A Docker image is a file, comprised of multiple layers, that is used to execute code in a Docker container. An image is essentially built from the instructions for a complete and executable version of an application, which relies on the host OS kernel. When the Docker user runs an image, it can become one or multiple instances of that container. [Source](https://searchitoperations.techtarget.com/definition/Docker-image)
+
+* Registries are images already created and available online (e.g. an image with python 3.6). We can get these images with the docker daemon.
+
+* Containers are executions of images.
+
 ## Building images
 As stated in [Docker build command documentation](https://docs.docker.com/engine/reference/commandline/build/#extended-description):
 ```
@@ -56,6 +62,8 @@ Context examples:
  * `docker volume ls -f dangling=true`: list dangling volumes
     - `docker volume prune`
  * `docker system prune && `
+ 
+* Note: [Docker documentation](https://docs.docker.com/) is a good resource for more information.
  
  ## Missing things:
  Docker compose
