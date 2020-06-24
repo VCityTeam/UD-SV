@@ -1,12 +1,13 @@
 # iTowns tutorial
 
-> **<img src="./images/warning.png" width="10%"> Tutorial with *iTowns v2.9.0***
-
 <figure>
   <img src="./images/iTowns_presentation.png" width="75%">
   <figcaption><i>iTowns examples. Source: <a href="http://www.itowns-project.org/">iTowns website</a> </i></figcaption>
 </figure>
 
+Disclaimer: This tutorial should work with iTowns v2.22.0. Don't hesitate to
+ open an issue on this repository if it doesn't.
+ 
 ## Table of content
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
@@ -132,19 +133,47 @@ In this tutorial, we are going to use some of these services to get spatial data
 
 ##### Windows
 
-* Download and install the [latest LTS NodeJS version](https://nodejs.org/en/download/)(*npm is included*)
+* Verify that Windows Powershell 3 is installed. If not do it. 
+
+* Install scoop which is a windows package mamanger:
+
+`iex (new-object net.webclient).downloadstring('https://get.scoop.sh')`
+
+*Note : You may be asked to execute a command to be able to install scoop, if
+ it is the case, execute it.*
+
+* Install nodejs: `scoop install nodejs`
+
+* Go into itowns repository and run: `npm install`
+
+* Execute `npm start` check that it works by openning: `http://localhost:8080/examples/globe.html`
+in your web browser (Firefox or Chrome).
+
+* You can stop the server with ctrl+c
 
 ##### Mac OS
 
-* Download and install the [latest LTS NodeJS version](https://nodejs.org/en/download/)(*npm is included*)
+* Open a terminal and install the homebrew package manager:
+
+`/usr/bin/ruby -e "$(curl –fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+* Install nodejs (that will pull npm): `brew install node`
+
+* Go into itowns repository and run: `npm install`
+
+* Execute `npm start` check that it works by openning: `http://localhost:8080/examples/globe.html`
+in your web browser (Firefox or Chrome).
+
+* You can stop the server with ctrl+c
 
 #### iTowns
 
 * Open a terminal and go to the directory where you want to install iTowns
 * Git clone the iTowns repository: ```git clone https://github.com/iTowns/itowns.git```
-* Check [here](https://github.com/iTowns/itowns/releases/latest) the latest release to get the right tag: *example: v2.9.0*
+* Check [here](https://github.com/iTowns/itowns/releases/latest) the latest
+ release to get the right tag: *example: v2.22.0*
 * Go to your iTowns local repository, *ex*: ```cd ./documents/itowns```
-* Checkout the right tag, *ex*: ```git checkout tags/v2.9.0```
+* Checkout the right tag, *ex*: ```git checkout tags/v2.22.0```
 * Then do an installation: ```npm install```
 * You will have something like this in your terminal:
 
@@ -155,7 +184,7 @@ In this tutorial, we are going to use some of these services to get spatial data
   Downloading Chromium r624492 - 107.6 Mb [====================] 100% 0.0s
   Chromium downloaded to /home/thomas/Documents/outils/3D_test/itowns/node_modules/puppeteer/.local-chromium/linux-624492
 
-  > itowns@2.9.0 prepare /home/thomas/Documents/outils/3D_test/itowns
+  > itowns@2.22.0 prepare /home/thomas/Documents/outils/3D_test/itowns
   > node ./config/prepare.js && node ./config/replace.config.js
 
   Warning PUPPETEER_SKIP_CHROMIUM_DOWNLOAD is undefined,
@@ -169,7 +198,7 @@ In this tutorial, we are going to use some of these services to get spatial data
 * You should have something like this in your terminal:
 
   ```bash
-  > itowns@2.9.0 start /home/thomas/Documents/outils/3D_test/itowns
+  > itowns@2.22.0 start /home/thomas/Documents/outils/3D_test/itowns
   > cross-env NODE_ENV=development webpack-dev-server -d --inline --hot
 
   ℹ ｢wds｣: Project is running at http://localhost:8080/
@@ -289,7 +318,7 @@ Here we are going to develop a short app and get it running quickly. Our explana
 
     ```javascript
     var viewerDiv = document.getElementById('viewerDiv');
-    var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+    var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
     var view = new itowns.GlobeView(viewerDiv, position);
     ```
 6. You should obtain this:
@@ -325,7 +354,8 @@ Here we are going to develop a short app and get it running quickly. Our explana
           <div id="viewerDiv"></div>
           <script type="text/javascript">
               var viewerDiv = document.getElementById('viewerDiv');
-              var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+              var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8
+, 25e6);
               var view = new itowns.GlobeView(viewerDiv, position);  
           </script>
       </body>
@@ -344,7 +374,8 @@ Here we are going to develop a short app and get it running quickly. Our explana
     * ```name``` and ```tileMatrixSet```: build the URL for each image
 
   ```javascript
-    var orthoSource = new itowns.WMTSSource({
+    var orthoSource = new itowns.WMTSSource({ 
+      projection: 'EPSG:3857',
       url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
       name: 'ORTHOIMAGERY.ORTHOPHOTOS',
       tileMatrixSet: 'PM',
@@ -364,6 +395,7 @@ Here we are going to develop a short app and get it running quickly. Our explana
 
   ```javascript
     var elevationSource = new itowns.WMTSSource({
+        projection: 'EPSG:4326',
         url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
         name: 'ELEVATION.ELEVATIONGRIDCOVERAGE',
         tileMatrixSet: 'WGS84G',
@@ -413,7 +445,7 @@ So you have a local server running a simple iTowns globe with ortho photos and e
           <div id="viewerDiv"></div>
           <script type="text/javascript">
             var viewerDiv = document.getElementById('viewerDiv');
-             var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+             var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
              var view = new itowns.GlobeView(viewerDiv, position);
              var orthoSource = new itowns.WMTSSource({
                     url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
@@ -584,7 +616,7 @@ In order to add a layer, it must be fully initialized. We use ```promises``` to 
 ```javascript
 // Globe view
 var viewerDiv = document.getElementById('viewerDiv');
-var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
 var view = new itowns.GlobeView(viewerDiv, position);
 var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -680,7 +712,7 @@ The 2 JSON files you have just created will be used to add layer on the ```view`
   ```javascript
   // Globe view
   var viewerDiv = document.getElementById('viewerDiv');
-  var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+  var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
   var view = new itowns.GlobeView(viewerDiv, position);
   var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -848,7 +880,7 @@ We can now add a ```ColorLayer``` as vector layer from GeoJSON data.
   ```javascript
   // Globe view
   var viewerDiv = document.getElementById('viewerDiv');
-  var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+  var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
   var view = new itowns.GlobeView(viewerDiv, position);
   var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -970,7 +1002,7 @@ To get ***GPX*** data on screen, you have to set your JS ```config.js``` file li
 ```javascript
 // Globe view
 var viewerDiv = document.getElementById('viewerDiv');
-var position = new itowns.Coordinates('WGS84', 0.089, 42.8989, 80000);
+var position = new itowns.Coordinates('EPSG:4326', 0.089, 42.8989, 80000);
 var view = new itowns.GlobeView(viewerDiv, position);
 var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -1078,7 +1110,7 @@ To get ***KML*** data in iTowns, you can use the ```config.js``` from GPX case.
 You have to replace:
 * the second line to enter a new camera position: 
 ```javascript
-var position = new itowns.Coordinates('WGS84', 6.8, 45.9, 50000);
+var position = new itowns.Coordinates('EPSG:4326', 6.8, 45.9, 50000);
 ```
 * delete the definition => ```var promise2==[];```
 * the GPX layer part by a KML layer:
@@ -1125,7 +1157,7 @@ As we have done it previously, we set some vars and the scene and especially the
 ```javascript
 // Globe view
 var viewerDiv = document.getElementById('viewerDiv');
-var position = new itowns.Coordinates('WGS84', 4.22, 44.844, 1500);
+var position = new itowns.Coordinates('EPSG:4326', 4.22, 44.844, 1500);
 var view = new itowns.GlobeView(viewerDiv, position);
 var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -1350,7 +1382,7 @@ You should see something like this:
           }
           tile = [result.tile];
           if (result) {
-              z = result.z;
+              z = result.coord.z;
           }
           return z + 5;
       }
@@ -1624,7 +1656,7 @@ You will find below all the required codes.
 ```javascript
 // Globe view
 var viewerDiv = document.getElementById('viewerDiv');
-var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
 var view = new itowns.GlobeView(viewerDiv, position);
 var menuGlobe = new GuiTools('menuDiv', view);
 
