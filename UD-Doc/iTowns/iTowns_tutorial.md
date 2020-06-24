@@ -133,11 +133,38 @@ In this tutorial, we are going to use some of these services to get spatial data
 
 ##### Windows
 
-* Download and install the [latest LTS NodeJS version](https://nodejs.org/en/download/)(*npm is included*)
+* Verify that Windows Powershell 3 is installed. If not do it. 
+
+* Install scoop which is a windows package mamanger:
+
+`iex (new-object net.webclient).downloadstring('https://get.scoop.sh')`
+
+*Note : You may be asked to execute a command to be able to install scoop, if
+ it is the case, execute it.*
+
+* Install nodejs: `scoop install nodejs`
+
+* Go into itowns repository and run: `npm install`
+
+* Execute `npm start` check that it works by openning: `http://localhost:8080/examples/globe.html`
+in your web browser (Firefox or Chrome).
+
+* You can stop the server with ctrl+c
 
 ##### Mac OS
 
-* Download and install the [latest LTS NodeJS version](https://nodejs.org/en/download/)(*npm is included*)
+* Open a terminal and install the homebrew package manager:
+
+`/usr/bin/ruby -e "$(curl –fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+* Install nodejs (that will pull npm): `brew install node`
+
+* Go into itowns repository and run: `npm install`
+
+* Execute `npm start` check that it works by openning: `http://localhost:8080/examples/globe.html`
+in your web browser (Firefox or Chrome).
+
+* You can stop the server with ctrl+c
 
 #### iTowns
 
