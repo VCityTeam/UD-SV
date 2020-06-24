@@ -289,7 +289,7 @@ Here we are going to develop a short app and get it running quickly. Our explana
 
     ```javascript
     var viewerDiv = document.getElementById('viewerDiv');
-    var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+    var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
     var view = new itowns.GlobeView(viewerDiv, position);
     ```
 6. You should obtain this:
@@ -325,7 +325,8 @@ Here we are going to develop a short app and get it running quickly. Our explana
           <div id="viewerDiv"></div>
           <script type="text/javascript">
               var viewerDiv = document.getElementById('viewerDiv');
-              var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+              var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8
+, 25e6);
               var view = new itowns.GlobeView(viewerDiv, position);  
           </script>
       </body>
@@ -344,7 +345,8 @@ Here we are going to develop a short app and get it running quickly. Our explana
     * ```name``` and ```tileMatrixSet```: build the URL for each image
 
   ```javascript
-    var orthoSource = new itowns.WMTSSource({
+    var orthoSource = new itowns.WMTSSource({ 
+      projection: 'EPSG:3857',
       url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
       name: 'ORTHOIMAGERY.ORTHOPHOTOS',
       tileMatrixSet: 'PM',
@@ -364,6 +366,7 @@ Here we are going to develop a short app and get it running quickly. Our explana
 
   ```javascript
     var elevationSource = new itowns.WMTSSource({
+        projection: 'EPSG:4326',
         url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
         name: 'ELEVATION.ELEVATIONGRIDCOVERAGE',
         tileMatrixSet: 'WGS84G',
@@ -413,7 +416,7 @@ So you have a local server running a simple iTowns globe with ortho photos and e
           <div id="viewerDiv"></div>
           <script type="text/javascript">
             var viewerDiv = document.getElementById('viewerDiv');
-             var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+             var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
              var view = new itowns.GlobeView(viewerDiv, position);
              var orthoSource = new itowns.WMTSSource({
                     url: 'http://wxs.ign.fr/3ht7xcw6f7nciopo16etuqp2/geoportail/wmts',
@@ -584,7 +587,7 @@ In order to add a layer, it must be fully initialized. We use ```promises``` to 
 ```javascript
 // Globe view
 var viewerDiv = document.getElementById('viewerDiv');
-var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
 var view = new itowns.GlobeView(viewerDiv, position);
 var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -680,7 +683,7 @@ The 2 JSON files you have just created will be used to add layer on the ```view`
   ```javascript
   // Globe view
   var viewerDiv = document.getElementById('viewerDiv');
-  var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+  var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
   var view = new itowns.GlobeView(viewerDiv, position);
   var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -848,7 +851,7 @@ We can now add a ```ColorLayer``` as vector layer from GeoJSON data.
   ```javascript
   // Globe view
   var viewerDiv = document.getElementById('viewerDiv');
-  var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+  var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
   var view = new itowns.GlobeView(viewerDiv, position);
   var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -970,7 +973,7 @@ To get ***GPX*** data on screen, you have to set your JS ```config.js``` file li
 ```javascript
 // Globe view
 var viewerDiv = document.getElementById('viewerDiv');
-var position = new itowns.Coordinates('WGS84', 0.089, 42.8989, 80000);
+var position = new itowns.Coordinates('EPSG:4326', 0.089, 42.8989, 80000);
 var view = new itowns.GlobeView(viewerDiv, position);
 var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -1078,7 +1081,7 @@ To get ***KML*** data in iTowns, you can use the ```config.js``` from GPX case.
 You have to replace:
 * the second line to enter a new camera position: 
 ```javascript
-var position = new itowns.Coordinates('WGS84', 6.8, 45.9, 50000);
+var position = new itowns.Coordinates('EPSG:4326', 6.8, 45.9, 50000);
 ```
 * delete the definition => ```var promise2==[];```
 * the GPX layer part by a KML layer:
@@ -1125,7 +1128,7 @@ As we have done it previously, we set some vars and the scene and especially the
 ```javascript
 // Globe view
 var viewerDiv = document.getElementById('viewerDiv');
-var position = new itowns.Coordinates('WGS84', 4.22, 44.844, 1500);
+var position = new itowns.Coordinates('EPSG:4326', 4.22, 44.844, 1500);
 var view = new itowns.GlobeView(viewerDiv, position);
 var menuGlobe = new GuiTools('menuDiv', view);
 
@@ -1624,7 +1627,7 @@ You will find below all the required codes.
 ```javascript
 // Globe view
 var viewerDiv = document.getElementById('viewerDiv');
-var position = new itowns.Coordinates('WGS84', 2.35, 48.8, 25e6);
+var position = new itowns.Coordinates('EPSG:4326', 2.35, 48.8, 25e6);
 var view = new itowns.GlobeView(viewerDiv, position);
 var menuGlobe = new GuiTools('menuDiv', view);
 
