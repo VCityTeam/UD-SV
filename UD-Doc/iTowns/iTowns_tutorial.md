@@ -1,12 +1,13 @@
 # iTowns tutorial
 
-> **<img src="./images/warning.png" width="10%"> Tutorial with *iTowns v2.9.0***
-
 <figure>
   <img src="./images/iTowns_presentation.png" width="75%">
   <figcaption><i>iTowns examples. Source: <a href="http://www.itowns-project.org/">iTowns website</a> </i></figcaption>
 </figure>
 
+Disclaimer: This tutorial should work with iTowns v2.22.0. Don't hesitate to
+ open an issue on this repository if it doesn't.
+ 
 ## Table of content
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
@@ -142,9 +143,10 @@ In this tutorial, we are going to use some of these services to get spatial data
 
 * Open a terminal and go to the directory where you want to install iTowns
 * Git clone the iTowns repository: ```git clone https://github.com/iTowns/itowns.git```
-* Check [here](https://github.com/iTowns/itowns/releases/latest) the latest release to get the right tag: *example: v2.9.0*
+* Check [here](https://github.com/iTowns/itowns/releases/latest) the latest
+ release to get the right tag: *example: v2.22.0*
 * Go to your iTowns local repository, *ex*: ```cd ./documents/itowns```
-* Checkout the right tag, *ex*: ```git checkout tags/v2.9.0```
+* Checkout the right tag, *ex*: ```git checkout tags/v2.22.0```
 * Then do an installation: ```npm install```
 * You will have something like this in your terminal:
 
@@ -155,7 +157,7 @@ In this tutorial, we are going to use some of these services to get spatial data
   Downloading Chromium r624492 - 107.6 Mb [====================] 100% 0.0s
   Chromium downloaded to /home/thomas/Documents/outils/3D_test/itowns/node_modules/puppeteer/.local-chromium/linux-624492
 
-  > itowns@2.9.0 prepare /home/thomas/Documents/outils/3D_test/itowns
+  > itowns@2.22.0 prepare /home/thomas/Documents/outils/3D_test/itowns
   > node ./config/prepare.js && node ./config/replace.config.js
 
   Warning PUPPETEER_SKIP_CHROMIUM_DOWNLOAD is undefined,
@@ -169,7 +171,7 @@ In this tutorial, we are going to use some of these services to get spatial data
 * You should have something like this in your terminal:
 
   ```bash
-  > itowns@2.9.0 start /home/thomas/Documents/outils/3D_test/itowns
+  > itowns@2.22.0 start /home/thomas/Documents/outils/3D_test/itowns
   > cross-env NODE_ENV=development webpack-dev-server -d --inline --hot
 
   ℹ ｢wds｣: Project is running at http://localhost:8080/
@@ -1353,7 +1355,7 @@ You should see something like this:
           }
           tile = [result.tile];
           if (result) {
-              z = result.z;
+              z = result.coord.z;
           }
           return z + 5;
       }
