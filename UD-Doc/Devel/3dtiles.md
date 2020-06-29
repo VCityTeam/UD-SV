@@ -32,7 +32,7 @@ first focus on the following salient 3DTiles notions:
   * [3Dtiles samples](https://github.com/CesiumGS/3d-tiles/tree/master/examples)
   * [Cesium sample data](https://github.com/CesiumGS/cesium/tree/master/Apps/SampleData/Cesium3DTiles)
   * [3d-tiles-validator examples](https://github.com/CesiumGS/3d-tiles-validator/tree/master/samples-generator)
-  * Checkout [VCity's sample data](https://github.com/VCityTeam/UD-Sample-data/3DTiles)
+  * Checkout [VCity's sample data](https://github.com/VCityTeam/UD-Sample-data/tree/master/3DTiles)
 
 ### Tools to authoring/analysing B3dm:
   * Please let us know !
