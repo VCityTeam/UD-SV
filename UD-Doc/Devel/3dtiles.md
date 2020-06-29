@@ -32,17 +32,7 @@ first focus on the following salient 3DTiles notions:
   * [3Dtiles samples](https://github.com/CesiumGS/3d-tiles/tree/master/examples)
   * [Cesium sample data](https://github.com/CesiumGS/cesium/tree/master/Apps/SampleData/Cesium3DTiles)
   * [3d-tiles-validator examples](https://github.com/CesiumGS/3d-tiles-validator/tree/master/samples-generator)
-  * Generating a trivial tile set with two cuboids by using 3dTiles (caveat emptor: requires the Tiler branch)
-       ```
-       git clone -b Tiler git@github.com:VCityTeam/py3dtiles.git
-       cd py3dtiles/
-       virtualenv -p python3 venv
-       . venv/bin/activate
-       pip install -e .
-       pip install pytest pytest-benchmark
-       pytest -k "cube"
-       ls junk/
-       ```
+  * Checkout [VCity's sample data](https://github.com/VCityTeam/UD-Sample-data.git/3DTiles)
 
 ### Tools to authoring/analysing B3dm:
   * Please let us know !
