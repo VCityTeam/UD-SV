@@ -38,6 +38,7 @@ first focus on the following salient 3DTiles notions:
   * Please let us know !
   * py3dTiles: that is able to read 3Dtile-sets using glTF version1, yet
    writes 3DTile-sets using glTF version2
+  * Extract a GLTF from B3DM using [tools](https://github.com/CesiumGS/3d-tiles-validator/tree/master/tools#b3dmtoglb) from 3d-tiles-validator 
      
 ### glTF
 Because 3DTiles uses/embeds [flTF](https://en.wikipedia.org/wiki/GlTF), 
@@ -49,7 +50,8 @@ Here are some recommandable readinds/docs
  
 Tools for authoring/analysing glTF data
  * Check out [GLTF](https://github.com/KhronosGroup/glTF#for-developers)
- * Evaluate [Gestaltor](https://gestaltor.io/)
+ * [Gestaltor](https://gestaltor.io/) is a GLTF viewer and editor 
+ * [glTF Tools](https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode) for Visual Studio Code allows to validate a gltf, create a glb and binary data file, visualize the geometry and look at the buffers 
  
 
 
