@@ -174,7 +174,8 @@ a slight difference:
 Consider the following building of the 2012 vintage:
 ![VintagesFusionAndSubdivision 2012](VintagesFusionAndSubdivision/VintagesFusionAndSubdivision-2012_3D_part_1.png)
 
-The central part of the this building becomes the following building (notice that a piece located at the extreme west of the building is missing): 
+The central part of the this building becomes the following building of the 2015 vintage (notice
+that a piece located at the extreme west of the building is missing): 
 ![VintagesFusionAndSubdivision 2015 1](VintagesFusionAndSubdivision/VintagesFusionAndSubdivision-2015_3D_part_1.png)
 
 The "missing" sub-building gets regrouped with another building as illustrated here (2015 vintage):
