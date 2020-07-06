@@ -9,7 +9,7 @@ The following glitches might block your algorithms at parsing time
  * A few `<gml:MultiSurface srsDimension="3">` entries, used to decribe the geometry
    of the respective parts of a building, are empty. This is the case for 
     - building `<bldg:Building gml:id="LYON_8_00166">` (starting on line 1202763 and ending at line 1202789) and
-      and building `<bldg:Building gml:id="LYON_8_00177">` (that prior to the above previous block deletion, is
+      building `<bldg:Building gml:id="LYON_8_00177">` (that prior to the above previous block deletion, is
       starting on line 1202791 and ending at line 1202817) within the file `LYON_8EME_2009/LYON_8EME_BATI_2009.gml` of
       [LYON_1ER_2009.zip](https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYON_1ER_2009.zip)
     - 2012 intall: autre type
