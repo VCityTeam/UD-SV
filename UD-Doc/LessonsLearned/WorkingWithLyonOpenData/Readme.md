@@ -46,7 +46,7 @@ The geometry of the following building (refer to [this CityGML file](MultipleEnv
 
 <img src="MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-3D.png" alt="drawing" width="500"/>
 is hard to interpret (probably due to the complexity of the description of the rooftops ?).
-Indeed if we try to observe its footprint (with QGIS) by projecting its `</bldg:RoofSurface>` on the natural
+Indeed if we try to observe its footprint (with QGIS) by projecting its "</bldg:RoofSurface>" on the natural
 terrain then we get the following picture:
 
 <img src="MultipleEnveloppeExample_2_pathologic/MultipleEnveloppeExample_2_pathologic-2D.png" alt="drawing" width="500"/>
