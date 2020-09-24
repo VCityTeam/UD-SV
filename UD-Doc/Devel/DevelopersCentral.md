@@ -8,7 +8,7 @@
 
 ### Install/Deploy the demos
 
-  * [UD-SV online demos](http://rict.liris.cnrs.fr/index.html) 
+  * [UD-SV online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html) 
   * how to [integrate them](../Architecture/Readme.md#top)
   * how to [deploy them](../../Install/Readme.md#top) 
 
