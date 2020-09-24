@@ -6,16 +6,11 @@
  * The [whys and wherefores of the UD-SV project](../../Readme.md)
  * [Architecture and software components](../../Tools/Readme.md#top)
 
-### Install/Deploy the demos
+### Install the demos
 
   * [UD-SV online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html) 
   * how to [integrate them](../Architecture/Readme.md#top)
-  * how to [deploy them](../../Install/Readme.md#top) 
-
-By experiencing with the progessive demos, you will also come up with possible improvements, or possibly missing functionalities your personal project might require and that you might wish to realize.
-Moreover (if you follow the documentation) this step requires neither an advanced expertise nor many software engineering tools to be installed.
-
-Proceed with [installing/running the demos](../../Install/Readme.md#how-to-install-demos-out-of-their-integrated-components).
+  * [Install](../../Install/Readme.md#top)
 
 ### Tooling: check your knowledge of the pre-requisites
 Languages:
