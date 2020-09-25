@@ -10,7 +10,7 @@
 
   * [UD-SV online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html) 
   * how to [integrate them](../Architecture/Readme.md#top)
-  * [Install](../../Install/Readme.md#top)
+  * how to [Install them](../../Install/Readme.md#top)
 
 ### Tooling: check your knowledge of the pre-requisites
 Languages:
@@ -25,7 +25,7 @@ Tooling:
 ### Contributing code/info
  * Access rights: provide your github login to the project admin in order to **get git write access** to the various project repositories
  * Respect (when available) the **coding styles**
- * When working on [Mardown](https://en.wikipedia.org/wiki/Markdown) based documentation [validate the links and references](DevelopersValidatingMardownLinks.md)
+ * When working on [Markdown](https://en.wikipedia.org/wiki/Markdown) based documentation [validate the links and references](DevelopersValidatingMardownLinks.md)
  * Read about the proposed [Git good practices](DevelopersGithubCycle.md).
  * **Submit often**: it is much better to often submit small yet effective and mature PR than jumbo/bulk code once in a while...
  * [Submit trough pull request (PR)](DevelopersGithubCycle.md#submitting-a-pull-request-pr): don't forget to provide a template.
