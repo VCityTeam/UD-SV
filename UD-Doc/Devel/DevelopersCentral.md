@@ -24,7 +24,7 @@ Tooling:
 
 ### Contributing code/info
  * Access rights: provide your github login to the project admin in order to **get git write access** to the various project repositories
- * Respect (when available) the **coding styles**
+ * Respect (when available) the **[coding styles](https://github.com/VCityTeam/VCity/wiki/Coding-Style)**
  * When working on [Markdown](https://en.wikipedia.org/wiki/Markdown) based documentation [validate the links and references](DevelopersValidatingMardownLinks.md)
  * Read about the proposed [Git good practices](DevelopersGithubCycle.md).
  * **Submit often**: it is much better to often submit small yet effective and mature PR than jumbo/bulk code once in a while...
