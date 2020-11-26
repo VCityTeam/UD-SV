@@ -7,10 +7,8 @@
  * [Architecture and software components](../../Tools/Readme.md#top)
 
 ### Install the demos
-
-  * [UD-SV online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html) 
-  * how to [integrate them](../Architecture/Readme.md#top)
-  * how to [Install them](../../Install/Readme.md#top)
+UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
+Try to [install them](../../Install/Readme.md#top) on your local desktop.
 
 ### Tooling: check your knowledge of the pre-requisites
 Languages:
