@@ -15,9 +15,9 @@ Proceed with the following install guides
    - [3dtiles web server: DESKTOP developing context](https://github.com/VCityTeam/UD-Reproducibility/blob/master/ExternalComponents/3DTilesSamples/Install3dTilesNodeBasedWebServer.md)
    - [3dtiles web server: OPERATIONS (stable server) context](https://github.com/VCityTeam/UD-Reproducibility/blob/master/ExternalComponents/ApacheServer/InstallDebianApacheServer.md)
  
- * Place the 3dTiles tileset you wish to visualize within the directory
-   that is exposed by the `3DTilesSamples` server (or use a symbolic link to
-   point to it).
+ * Place the 3dTiles tileset you wish to visualize within the `tilesets` sub-directory
+   that is exposed by the `3DTilesSamples` server. Alternatively use a symbolic link to
+   point to it (`cd tilesets && ln -s <path-to-py3dtiles>/junk/ .` ).
    Assert that the `junk` tileset is properly served by browsing the
    `http://localhost:8003/tilesets/` URL (you should see a `junk` entry).
 
