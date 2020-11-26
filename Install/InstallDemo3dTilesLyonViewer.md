@@ -8,7 +8,7 @@ Proceed with the following install guides
  - Compute 
    [a 3DTiles tile set](https://github.com/VCityTeam/UD-Reproducibility/blob/master/Computations/3DTiles/LyonTemporal/PythonCallingDocker/Readme.md#running-the-static-tiler-workflow) suiting your needs
  - Install a 3DTiles web server: depending on your context use
-   * [3dtiles web server: DESKTOP developing context](Readme.md#backend-3dtiles-web-server-desktop-developing-context)
+   * [3dtiles web server: DESKTOP developing context](https://github.com/VCityTeam/UD-Reproducibility/blob/master/ExternalComponents/3DTilesSamples/Install3dTilesNodeBasedWebServer.md)
    * [3dtiles web server: OPERATIONS (stable server) context](Readme.md#backend-3dtiles-web-server-operations-stable-server-context)
  - [Intall UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes)
  - [Configue the UD-Viz web client]() to access your 3dTiles web server
