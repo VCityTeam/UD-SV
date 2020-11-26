@@ -19,7 +19,7 @@ Proceed with the following install guides
    that is exposed by the `3DTilesSamples` server. Alternatively use a symbolic link to
    point to it (`cd tilesets && ln -s <path-to-py3dtiles>/junk/ .` ).
    Assert that the `junk` tileset is properly served by browsing the
-   `http://localhost:8003/tilesets/` URL (you should see a `junk` entry).
+   `http://localhost:8003/tilesets/junk/tileset.json`.
 
  * [Intall UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes).
    Let us assume that `<path-to-UDV>` designates the directory holding the
@@ -27,9 +27,9 @@ Proceed with the following install guides
  
  * Configue UD-Viz to access your 3dTilesSamples web server. For this
    edit the `<path-to-UDV>/UDV-Core/examples/data/config/generalDemoConfig.json`
-   configuration file and define/overload the following entries
-     - `"url":"localhost:8080"` (_tip: look for the first occurence of "url"_)
-     - `"3DTilesLayerURL":"http://localhost:8003/tilesets/junk/tileset.json"`
+   configuration file and define/overload the 
+   [`3DTilesLayer:building:url'](https://github.com/VCityTeam/UD-Viz/blob/master/UD-Viz-Core/examples/data/config/generalDemoConfig.json#L137)
+   entry to be `"http://localhost:8003/tilesets/junk/tileset.json"`
      
  * [Run the UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes)
    ```
