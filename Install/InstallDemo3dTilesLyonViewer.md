@@ -10,7 +10,9 @@ Proceed with the following install guides
  - Install a 3DTiles web server: depending on your context use
    * [3dtiles web server: DESKTOP developing context](Readme.md#backend-3dtiles-web-server-desktop-developing-context)
    * [3dtiles web server: OPERATIONS (stable server) context](Readme.md#backend-3dtiles-web-server-operations-stable-server-context)
- -  Intall and run the [UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes)
+ - [Intall UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes)
+ - [Configue the UD-Viz web client]() to access your 3dTiles web server
+ - [Run the UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes)
  
  Note: for the (historical) record computing the tilesets used (circa 2018) to require to
   - [Install a 3DCityDB database and populate it with data](Install3DCityDB.md) (follow the full install doc)
