@@ -28,7 +28,7 @@ Proceed with the following install guides
  * Configue UD-Viz to access your 3dTilesSamples web server. For this
    edit the `<path-to-UDV>/UDV-Core/examples/data/config/generalDemoConfig.json`
    configuration file and define/overload the 
-   [`3DTilesLayer:building:url'](https://github.com/VCityTeam/UD-Viz/blob/master/UD-Viz-Core/examples/data/config/generalDemoConfig.json#L137)
+   [`3DTilesLayer:building:url`](https://github.com/VCityTeam/UD-Viz/blob/master/UD-Viz-Core/examples/data/config/generalDemoConfig.json#L137)
    entry to be `"http://localhost:8003/tilesets/junk/tileset.json"`
      
  * [Run the UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes)
