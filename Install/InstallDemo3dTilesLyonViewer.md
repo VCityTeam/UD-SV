@@ -12,7 +12,7 @@ Proceed with the following install guides
     as another sub-directory named `tiles` and containing files with `.b3dm` extensions.
  
  * Install a 3DTiles web server: depending on your context use
-   - [3dtiles web server: DESKTOP developing context](https://github.com/VCityTeam/UD-Reproducibility/blob/master/ExternalComponents/3DTilesSamples/Install3dTilesNodeBasedWebServer.md)
+   - [3dtiles web server: DESKTOP developing context](https://github.com/VCityTeam/UD-Reproducibility/tree/master/ExternalComponents/3DTilesSamples/Readme.md)
    - [3dtiles web server: OPERATIONS (stable server) context](https://github.com/VCityTeam/UD-Reproducibility/blob/master/ExternalComponents/ApacheServer/InstallDebianApacheServer.md)
  
  * Place the 3dTiles tileset you wish to visualize within the `tilesets` sub-directory
