@@ -19,12 +19,9 @@
   Si Docker reste installé sur le sous-système Linux, désinstaller la version Ubuntu correspondante via le store et le réinstaller.
 
 2. Installer Docker :
-
-- Installer le Docker Hub [ici](https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
-
-- Une fois installé, vérifier dans "Paramètres > Général" que la case "Use the WSL 2 based Engine" est bien cochée.
-
-- Vérifier dans la partie "Resources > WSL Integration" que la distribution Linux installée est bien affichée.
+  - Install [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows/
+  - Une fois installé, vérifier dans "Paramètres > Général" que la case "Use the WSL 2 based Engine" est bien cochée.
+  - Vérifier dans la partie "Resources > WSL Integration" que la distribution Linux installée est bien affichée.
 
 3. Recommandation pour l'utilisation de docker : 
 
