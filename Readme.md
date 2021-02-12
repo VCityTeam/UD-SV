@@ -2,8 +2,8 @@
 **Quick links**
  * [Online demos](UD-Doc/OnlineDemos.md)
  * [UD-Doc](UD-Doc): UD-SV global/integration documentation
- * [Tools](Tools/Readme.md): software components e.g. [UD-Viz](https://github.com/MEPP-team/UD-Viz), [UD-Serv](https://github.com/MEPP-team/UD-Serv) 
- * [Developers' gateway](UD-Doc/Devel/DevelopersCentral.md)
+ * [Software components](SoftwareComponents) descriptions e.g. [UD-Viz](https://github.com/MEPP-team/UD-Viz), [UD-Serv](https://github.com/MEPP-team/UD-Serv) 
+ * [Developers' gateway](UD-Doc/Devel/DevelopersCentral.md): [software tools](UD-Doc/Devel)
  * [Developers's minutes, surveys...](https://github.com/MEPP-team/UD-SV/wiki)
  * [Projects](#projects)
  * [Needs](UD-Doc/Needs/EarlyNeeds.md)
