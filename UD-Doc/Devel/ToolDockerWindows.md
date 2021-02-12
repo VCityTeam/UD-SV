@@ -1,6 +1,6 @@
 ### How to install docker on windows (windows 10 only) : 
 
-1. Installer le sous-système linux :
+### 1. Install the linux sub-system:
   - Aller dans : Paramètres > Applications et fonctionnalités > Fonctionnalités facultatives > Plus de fonctionnalités Windows.
   - Cocher la case **Sous-système Windows pour Linux** et faire 'Ok'
   - Redémarrer le pc 
@@ -12,12 +12,12 @@
     `sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli`
     Si Docker reste installé sur le sous-système Linux, désinstaller la version Ubuntu correspondante via le store et le réinstaller.
 
-2. Install Docker :
+### 2. Install Docker :
   - Install [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows/
   - Une fois installé, vérifier dans "Paramètres > Général" que la case "Use the WSL 2 based Engine" est bien cochée.
   - Vérifier dans la partie "Resources > WSL Integration" que la distribution Linux installée est bien affichée.
 
-3. Recommandation pour l'utilisation de docker : 
+### 3. Docker usage recommandations: 
 
 - Installer et utiliser [Windows PowerShell](https://docs.microsoft.com/fr-fr/windows/wsl/install-win10) de façon à pouvoir ouvrir le terminal Linux à la demande.
 
