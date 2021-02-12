@@ -13,12 +13,10 @@
 - Dans le "Microsoft Store", rechercher Ubuntu et télécharger la version souhaité, par défaut 20.04
 
 - Lancer l'application Ubuntu et faire l'installation. 
-
-Si le sous-système Linux est déjà installé, vérifier que Docker n'est pas installé sur la distribution. Sinon, le désinstaller en utilisant la commande :
- 
-`sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli`
-
-Si Docker reste installé sur le sous-système Linux, désinstaller la version Ubuntu correspondante via le store et le réinstaller.
+  <br>
+  Si le sous-système Linux est déjà installé, vérifier que Docker n'est pas installé sur la distribution. Sinon, le désinstaller en utilisant la commande 
+  `sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli`
+  Si Docker reste installé sur le sous-système Linux, désinstaller la version Ubuntu correspondante via le store et le réinstaller.
 
 2. Installer Docker :
 
