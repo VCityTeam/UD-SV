@@ -18,7 +18,7 @@ Languages:
 
 Tooling:
  * [git](ToolGit.md)
- * [git development cylce](DevelopersGithubCycle.md)
+ * [git development cycle](DevelopersGithubCycle.md)
 
 ### Contributing code/info
  * Access rights: provide your github login to the project admin in order to **get git write access** to the various project repositories
