@@ -7,7 +7,7 @@ The associated serial is `MRX3F-47B9T-2487J-KWKMF-RPWBY`.
 `sudo apt update sudo apt install virtualbox virtualbox-ext-pack`
 
 ## A word about Secure Boot
-If you have EFI Secure Boot enabled, be aware that VirtualBox needs some specific kernel modules that will have to be signed for your machine : Machine Owner Key` (MOK).
+If you have EFI Secure Boot enabled, be aware that VirtualBox needs some specific kernel modules that will have to be signed for your machine : `Machine Owner Key` (MOK).
 It adds an extra step to reboot and accept (`enrolling`) the MOK in a specialized pre-boot menu.
 If you don't recall enrolling the MOK, you might get some error when trying to start a Virtual Machine (VM):
 ```
