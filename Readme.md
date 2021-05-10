@@ -43,16 +43,6 @@ We believe that in order to succeed with data usage one must not separate data c
     - [project description](UD-Doc/Projects/MAM-Erasme-bootstrap/Readme.md)
     - [development gateway](https://github.com/MEPP-team/UD-SV/projects/3)
 
-## Description of the needs
-We collect [use case oriented early descriptions of the needs](UD-Doc/Needs/EarlyNeeds.md). 
-Prior to any particular technical choice, this description of needs can help to
- * structure/organise the various involved roles
- * decompose the processes in atomic tasks and describe assembled processes
- 
-Eventually this structured description can 
- * lead to/orient good practices 
- * influence/structure the main architecture of components
-
 ## Seeked backend/frontend features
 ### Aimed backend features
 The aimed backend features could be:
