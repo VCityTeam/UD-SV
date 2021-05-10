@@ -9,7 +9,7 @@ Architecture information is organized as follow:
 
 Notes:
  * We recommend watching the half-hour [C4-Model short presentation](https://c4model.com/)
- * Here are some [example diagriams](https://github.com/VCityTeam/UD-SV/blob/master/UD-Doc/Architecture/Application.md)
+ * Here are some [example diagrams](https://github.com/VCityTeam/UD-SV/blob/master/UD-Doc/Architecture/Application.md)
 
 ## Other
 
