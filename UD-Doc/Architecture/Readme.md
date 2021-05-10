@@ -7,6 +7,8 @@ Architecture information is organized as follow:
   * [Server.md](Server.md) for ressources about server components (currently for py3dtiles and building-server).
   * [3DCityDB.md](3DCityDB.md) for ressources regarding 3DCityDB and its enhancement.
 
+We recommend watching the half-hour [C4-Model short presentation](https://c4model.com/)
+
 ## Other
 
 ### People
