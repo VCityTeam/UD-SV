@@ -9,9 +9,9 @@ The following documentation considers each specific demo and for each one explai
 Once your chosen demo is installed feel free to experiment with it, extend it and/or customize it to suit your needs.
 
 ## Installing demos
-### <a name="install-demo-udv-front-end"></a>[UD-Viz front end](../Tools/Readme.md#ComponentUD-Viz) (and no back end component)
+### <a name="install-demo-udv-front-end"></a>[UD-Viz-demo](https://github.com/VCityTeam/UD-Viz-demo) (just the front end)
  * What you get: something similar to [this demo of the UD-Viz front end](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html) that illustrates enables you to discover the front end features (e.g. [UD-Viz/Geocoding](../Tools/Readme.md#ComponentUD-VizGeocoding)). However, because you are not (yet) installing any of server-side components, you will **not** be able to use the features requiring some server-side document management (e.g. [Guided Tour](../Tools/Readme.md#ComponentUD-VizGuidedTour) or [Authentication](../Tools/Readme.md#ComponentUD-VizAuthentication)).
-  * [Installation notes](https://github.com/MEPP-team/UD-Viz/blob/master/install.md)
+  * [Installation notes](https://github.com/VCityTeam/UD-Viz-demo/blob/master/README.md)
 
 ### UD-Viz-demo (front end) together with [UD-Serv/API_Enhanced_City](../Tools/Readme.md#ComponentUD-ServAPIEnhancedCity) (back-end)
  * What you get:
