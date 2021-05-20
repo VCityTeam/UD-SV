@@ -5,13 +5,9 @@
  ```
 
 ### 3DTiles documentation
-A recommended 3DTiles entry point is 
-[the 3DTiles overview (made by Cesium)](https://github.com/CesiumGS/3d-tiles/blob/master/3d-tiles-overview.pdf) 
-Note that this documentation assumes that some general notions of geometry/visualization are already known.
+A recommended 3DTiles entry point is the [3DTiles overview](https://github.com/CesiumGS/3d-tiles/blob/master/3d-tiles-overview.pdf) (made by Cesium). Note that this documentation assumes that some general notions of geometry/visualization are already known.
 
-When browsing 
-[this 3DTiles overview](https://github.com/CesiumGS/3d-tiles/blob/master/3d-tiles-overview.pdf) 
-first focus on the following salient 3DTiles notions:
+When browsing this document first focus on the following salient 3DTiles notions:
   * Bounding volume
   * Geometric error (utile pour les tuiles enfants qui sont des LOD d'une tuile parent)
   * Refinement of a Tile: either replacement or (detail) addition
@@ -27,6 +23,9 @@ first focus on the following salient 3DTiles notions:
   * The relationship between 3DTiles and GLTF (presented as the jpeg for 3D):
      - 3DTiles adds the hierarchy, the combination and the geographic coordinates
      - B3DM tiles usually
+
+#### For more in depth documentation
+Refer to the [3DTiles Specifications](https://github.com/CesiumGS/3d-tiles/tree/master/specification) on github, which also contains the official OGC [3D Tiles Specification 1.0](https://github.com/CesiumGS/3d-tiles/blob/master/specification/specification.pdf) document
 
 ### 3DTiles samples/example files
   * [3Dtiles samples](https://github.com/CesiumGS/3d-tiles/tree/master/examples)
