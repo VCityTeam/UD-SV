@@ -35,14 +35,6 @@ A list of available/used components is [described in the Tools section](Tools/Re
 ### Technical manifesto
 We believe that in order to succeed with data usage one must not separate data concerns (information models, database infrastructure) from the offered tools, treatment process and the associated methodology. Questions like how to migrate a database when the information model changes (e.g. from CityGML version 2 to version 3), how to deal with information model modularity and extensions, what are the interactions between data and their treatment or how does one handle data storage and computation scale up, must be dealt at first. UD-SV will try to propose good practices for doing so.
 
-## Projects
-### Ongoing
-
-### Closed
- * Model AugMented: MAM-Erasme-2018<a name="Project-MAM-Erasme-2018"></a> (proof of concept):
-    - [project description](UD-Doc/Projects/MAM-Erasme-bootstrap/Readme.md)
-    - [development gateway](https://github.com/MEPP-team/UD-SV/projects/3)
-
 ## Seeked backend/frontend features
 ### Aimed backend features
 The aimed backend features could be:
