@@ -14,7 +14,8 @@ for git repositories):
   - Misses diagram manual layout control
   - Quite some limitations concerning some UML views
 
-### [diagrams.net](https://app.diagrams.net/) (previously draw.io)
+### [diagrams.net](https://app.diagrams.net/)
+  - Previously named draw.io
   - [Online tool](https://app.diagrams.net/)  
   - [Dockerized version](https://github.com/jgraph/docker-drawio) for offline usage
   - Available on [github](https://github.com/jgraph/drawio) with Apache license
