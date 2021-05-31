@@ -36,12 +36,6 @@ Nodejs permet donc de réaliser des applications bureau en javascript. Du coup p
 Le process classique consiste donc à installer nodejs qui permet à son tour d’installer npm (node package manager) qui lui va gérer l’importation/installation/publication de tous les paquets javascripts !
 
 
-4 - et donc voila ud-viz
-
-
-Ud-viz c’est un paquet npm, mais plus précisément c’est une bibliothèque. C’est à dire que quand elle est publiée sous les repos npm ce sont les fichiers des sources qui sont publiés/exportés alors que l’on pourrait publier/exporter un bundle par exemple (utilisé dans une app web en gros). On choisit d’exposer les sources aux utilisateurs du paquet. D’ou coup ya pas d’application dans ud-viz c’est du code qui sert à en fabriquer !
-
-
 5 - Le cycle de travail: usages de npm
 
 
