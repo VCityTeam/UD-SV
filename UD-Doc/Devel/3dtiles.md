@@ -25,7 +25,9 @@ When browsing this document first focus on the following salient 3DTiles notions
      - B3DM tiles usually
 
 #### For more in depth documentation
-Refer to the [3DTiles Specifications](https://github.com/CesiumGS/3d-tiles/tree/master/specification) on github, which also contains the official OGC [3D Tiles Specification 1.0](https://github.com/CesiumGS/3d-tiles/blob/master/specification/specification.pdf) document
+Refer to the [3DTiles Specifications](https://github.com/CesiumGS/3d-tiles/tree/master/specification) on github, which also contains the official OGC [3D Tiles Specification 1.0](https://github.com/CesiumGS/3d-tiles/blob/master/specification/specification.pdf) document.
+
+You can also walk [Cesium's 3dTiles landing page](https://github.com/CesiumGS/3d-tiles).
 
 ### 3DTiles samples/example files
   * [3Dtiles samples](https://github.com/CesiumGS/3d-tiles/tree/master/examples)
