@@ -4,7 +4,7 @@
 
 ### Getting started
  * The [whys and wherefores of the UD-SV project](../../Readme.md)
- * [Architecture and software components](../../Tools/Readme.md#top)
+ * [Architecture](/UD-Doc/Architecture) and [software components](/SoftwareComponents)
 
 ### Install the demos
 UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
