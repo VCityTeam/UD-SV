@@ -1,3 +1,5 @@
+Main [component diagram](https://www.uml-diagrams.org/component-diagrams.html)
+
 <a name="top"></a>
 <img src="Diagrams/ComponentDiagram-macro-components-with-notes.png"
      align=center
