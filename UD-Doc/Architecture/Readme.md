@@ -10,12 +10,6 @@ Notes:
  * Here are some [example diagrams](https://github.com/VCityTeam/UD-SV/blob/master/UD-Doc/Architecture/Application.md)
 
 ## Other
-
-### People
- * [Tatjana Kutzner (from TUM)](https://www.gis.bgu.tum.de/unser-team/lehrstuhlangehoerige/dr-tatjana-kutzner/)
-    - Defines [ADE (network among others)](https://github.com/TatjanaKutzner/CityGML-UtilityNetwork-ADE) 
-    - [Tatjana Kutzner's thesis (chapter 4.1 p63)](https://mediatum.ub.tum.de/doc/1341432/1341432.pdf) states that the key point is the ATL (Transformation Language) availability. In chapter 4.3.2 three tools are mentions FME (proprietary), Go Publisher (proprietary) and HALE (open-source).
- * [Kanishk Chaturvedi](https://github.com/kanishk-chaturvedi/CityGML-3.0) from [TUM](https://www.gis.bgu.tum.de/unser-team/lehrstuhlangehoerige/kanishk-chaturvedi/)
  
 ### Tools
  * [Enterprise Architect](http://www.sparxsystems.com/products/index.html#ult)
