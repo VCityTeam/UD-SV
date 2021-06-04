@@ -4,6 +4,13 @@
  * [Software components](SoftwareComponents) descriptions e.g. [UD-Viz](https://github.com/MEPP-team/UD-Viz), [UD-Serv](https://github.com/MEPP-team/UD-Serv)... 
  * [Developers' gateway](UD-Doc/Devel/DevelopersCentral.md) like [software tools](UD-Doc/Devel)...
 
+<a name="top"></a>
+<img src="SoftwareComponents/Diagrams/ComponentDiagram-macro-components-with-notes.png"
+     align=center
+     alt="ComponentDiagram-macro-components-with-notes.png" 
+     width="600"
+     border="0">
+
 
 ## Objective of the UD-SV project
 
