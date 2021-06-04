@@ -3,7 +3,6 @@
 Architecture information is organized as follow:
   * [Components description](https://github.com/VCityTeam/UD-SV/tree/master/SoftwareComponents)
   * [Application.md](Application.md) containing the architecture and related diagrams regarding the whole application.
-  * [Server.md](Server.md) for ressources about server components (currently for py3dtiles and building-server).
   * [3DCityDB.md](3DCityDB.md) for ressources regarding 3DCityDB and its enhancement.
 
 Notes:
