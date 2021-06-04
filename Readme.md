@@ -4,7 +4,7 @@
  * [UD-Doc](UD-Doc): UD-SV global/integration documentation
  * [Software components](SoftwareComponents) descriptions e.g. [UD-Viz](https://github.com/MEPP-team/UD-Viz), [UD-Serv](https://github.com/MEPP-team/UD-Serv)... 
  * [Developers' gateway](UD-Doc/Devel/DevelopersCentral.md) like [software tools](UD-Doc/Devel)...
- * [Projects](#projects)
+
 
 ## Objective of the UD-SV project
 
