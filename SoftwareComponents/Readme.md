@@ -1,4 +1,6 @@
-Main [component diagram](https://www.uml-diagrams.org/component-diagrams.html)
+This directory holds
+ - a general description of the software components used in the UD-SV context
+ - documentation concerning external components
 
 <a name="top"></a>
 <img src="Diagrams/ComponentDiagram-macro-components-with-notes.png"
@@ -6,6 +8,8 @@ Main [component diagram](https://www.uml-diagrams.org/component-diagrams.html)
      alt="ComponentDiagram-macro-components-with-notes.png" 
      width="600"
      border="0">
+     
+Main [component diagram](https://www.uml-diagrams.org/component-diagrams.html)
 
 ## Tools (software components) brief description
 ### Client side
