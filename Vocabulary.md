@@ -2,6 +2,8 @@
  * [Need](#anchor-vocabulary-need)
  * [Requirement](#anchor-vocabulary-requirement)
 
+---
+
 ### Need<a name="anchor-vocabulary-need"></a> 
 **Definition**: a **need** or [feature](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/) is a set of related requirements that allows the user to satisfy a "business" objective or need.
 
@@ -27,6 +29,7 @@ The description of a need should have the following items:
  * **Tags or keywords**: be them known (client, server, database) or not already mentioned (user experience...).
  * Once realization of the need started add **a link to the possibly ongoing issues** realizing part of/the whole concerned need. Within the concerned issue don't forget to **cross link the realization issue to the upstream need**.
 
+---
 
 ### Requirement<a name="anchor-vocabulary-requirement"></a>
 **Definition**: a **[requirement](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/)** is a capability that a product must possess or something a product must do in order to ultimately satisfy a customer need.
