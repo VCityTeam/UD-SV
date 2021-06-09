@@ -1,21 +1,35 @@
 # Organizational logic of git repositories
-
-The [VCityTeam organisation](https://github.com/VCityTeam)
+The [VCityTeam organisation](https://github.com/VCityTeam) together with its partners
  * manages [list of projects](https://github.com/VCityTeam/VCity/wiki/Projects) which 
    requires the handling of information
  * produces [software components](https://github.com/VCityTeam/UD-SV/tree/master/SoftwareComponents)
  * handles all the above information (project artifacts and software) with git
 
-## Repositories break down
-The good practices applied for the break down of the orgnisation information into git repositories is as follows
- * [separate concerns](https://en.wikipedia.org/wiki/Separation_of_concerns): keep project (managerial) information
-   separated from software
- * Create a repository for every project e.g. [this UD-SV project](/Readme.md) 
- * [Reusability](https://en.wikipedia.org/wiki/Reusability) (among which [modularity](https://en.wikipedia.org/wiki/Modular_programming)) drives the break down of the software components:
+## Driving organizational principles
+The good practices applied for the break down of the organisation information into git repositories is as follows
+ * [separate concerns](https://en.wikipedia.org/wiki/Separation_of_concerns): 
+    - keep project (managerial) information separated from software
+    - keep confidential information (private) separated from public information
+    - keep partners respective [IP](https://en.wikipedia.org/wiki/Intellectual_property) ownerships separated
+ * Specifically for software components, 
+    - promote [reusability](https://en.wikipedia.org/wiki/Reusability) 
+      (among which [modularity](https://en.wikipedia.org/wiki/Modular_programming))
+    - ownership (in terms of [IP](https://en.wikipedia.org/wiki/Intellectual_property) concerns 
+      has precedence over modularity concerns. In other terms no matter what the modularity 
+      concerns might be, each repository should have a single owner. And yes this might prove
+      to have a heavy impact on software engineering costs...
+
+## Breaking down into repositories
+Independently from public/private seraparation concerns, the application of the above driving 
+principles yields the following good practices applied for the break down of the
+information of the organisation into git repositories goes
+ * Create a repository for every project (managerial) information e.g. [this UD-SV project](/Readme.md)
+   (in application of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) managerial vs software)
+ * **For every owner** (precedence of ownership over software engineering)
    - create a repository for every [(software) library](https://en.wikipedia.org/wiki/Library_(computing)) (e.g. [py3dtiles](https://github.com/VCityTeam/py3dtiles) which is a python library) or [(software) package] (e.g. [UD-Viz](https://github.com/VCityTeam/UD-Viz) is a JS package)...
    - create a repository for every [(software) application](https://en.wikipedia.org/wiki/Application_software) e.g. [UD-Viz-demo](https://github.com/VCityTeam/UD-Viz-demo) is an application demo based on UD-Viz
    - create a repository for every docker component e.g. [UD-Viz-demo-docker](https://github.com/VCityTeam/UD-Viz-demo-docker)
-   - but a demo can be a **directory** (within a repository) usually holding a docker-compose (located e.g. in [UD-Reproducibility/Demos](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Demos)
+   - but a demo can be a **directory** (within a repository) usually holding a [docker-compose ](https://docs.docker.com/compose/) or an [helm chart](https://github.com/helm/helm)(located e.g. in [UD-Reproducibility/Demos](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Demos) 
 
 The above practices are summarized by the following illustration
 
