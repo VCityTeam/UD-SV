@@ -46,6 +46,12 @@ This [many-to-many](https://en.wikipedia.org/wiki/Cardinality_(data_modeling)#Ap
 <img src="Diagrams/UD-SV-Repository_organizational_logic_shared_development.png"
      alt="Organizational logic : shared development" width="800"/>
 
+**Note**: in the above diagram software component `B` is co-developped by two projects that 
+both share the same (legal) owner (respect precedence of ownership criteria of software 
+modularity). Co-development here means single owner multiple project repository sharing (
+co-developement). Shared ownership is hellish to handle (specially in the context of french
+academia) and must be banned (at all costs).  
+
 ## Separation of public from private information
 The organisation also applies the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) to the public vs private criteria.
 This directly translates to the fact that private information (be it project or component) is held in private (git) repositories when public information (project or component) is kept in ...  public (git) repositories. For example
