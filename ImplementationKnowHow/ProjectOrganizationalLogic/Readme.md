@@ -15,7 +15,7 @@ The good practices applied for the break down of the organisation information in
     - promote [reusability](https://en.wikipedia.org/wiki/Reusability) 
       (among which [modularity](https://en.wikipedia.org/wiki/Modular_programming))
     - ownership (as [IP](https://en.wikipedia.org/wiki/Intellectual_property) notion) concerns 
-      has precedence over modularity concerns. In other terms no matter what the modularity 
+      have precedence over modularity concerns. In other terms no matter what the modularity 
       concerns might be, each repository should have a single owner. And yes this might prove
       to have a heavy impact on software engineering costs...
 
