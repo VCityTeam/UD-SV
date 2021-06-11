@@ -8,7 +8,7 @@
 
 ### Install the demos
 UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
-Try to [install them](../../Install/Readme.md#top) on your local desktop.
+Try to [install them](../Install/Readme.md#top) on your local desktop.
 
 ### Tooling: check your knowledge of the pre-requisites
 Languages:
