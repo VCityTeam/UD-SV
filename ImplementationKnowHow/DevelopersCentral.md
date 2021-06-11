@@ -5,10 +5,6 @@
 ### Getting started
  * The [whys and wherefores of the UD-SV project](../Readme.md)
  * [Architecture](/Architecture/Application.md)
- 
-### Install the demos
-UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
-Try to [install them](../Install/Readme.md#top) on your local desktop.
 
 ### Tooling: check your knowledge of the pre-requisites
 The main languages used in UD-SV are:
@@ -30,4 +26,8 @@ Adopt the best practices
  * **Submit often**: it is much better to often submit small yet effective and mature PR than jumbo/bulk code once in a while...
  * [Submit trough pull request (PR)](DevelopersGithubCycle.md#submitting-a-pull-request-pr): don't forget to provide a template.
  * Place and maintain some gentle pressure on the guilty parties when [asking for your pull request (PR) acceptation](DevelopersGithubCycle.md#pull-request-pr-acceptance-policy)
+
+### Install the demos
+UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
+Try to [install them](../Install/Readme.md#top) on your local desktop.
 
