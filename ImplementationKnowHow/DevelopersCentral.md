@@ -19,10 +19,13 @@ The main languages used in UD-SV are:
 Development tools:
  * [git](/Tools/ToolGit.md)
  * [git development cycle](/ImplementationKnowHow/GitWorflow/DevelopersGithubCycle.md)
+ * adopt some **Editor/IDE** e.g. [VisualStudioCode](https://code.visualstudio.com/), [VisualStudio](https://visualstudio.microsoft.com/vs/community/) (for C/C++, Windows only), [PyCharm](https://www.jetbrains.com/pycharm/) (for Python), [sublime](https://www.sublimetext.com/)...
+ * learn how to use a **[debugger](https://en.wikipedia.org/wiki/Debugger)** (depends on the language and the considered IDE)
+ * [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) e.g. [Travis](https://github.com/VCityTeam/py3dtilers/blob/master/.travis.yml)
+ * Containers, mainly [docker](/Tools/ToolDocker.md)
 
 ### Contributing code/info
- * Access rights: provide your github login to the project admin in order to **get git write access** to the various project repositories
- * Respect (when available) the **[coding styles](https://github.com/VCityTeam/VCity/wiki/Coding-Style)**
+ * Respect (when available) the **coding styles** e.g. [eslint.rc](https://github.com/VCityTeam/UD-Viz-demo/blob/master/DemoFull/.eslintrc.json), for [C++](https://github.com/VCityTeam/VCity/wiki/Coding-Style) or [flake8](https://github.com/VCityTeam/py3dtilers/blob/master/.flake8)
  * When working on [Markdown](https://en.wikipedia.org/wiki/Markdown) based documentation [validate the links and references](DevelopersValidatingMardownLinks.md)
  * Read about the proposed [Git good practices](DevelopersGithubCycle.md).
  * **Submit often**: it is much better to often submit small yet effective and mature PR than jumbo/bulk code once in a while...
