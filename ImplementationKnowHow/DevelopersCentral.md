@@ -13,10 +13,10 @@ Try to [install them](../Install/Readme.md#top) on your local desktop.
 ### Tooling: check your knowledge of the pre-requisites
 The main languages used in UD-SV are:
  * [JavaScript](https://en.wikipedia.org/wiki/JavaScript), used for frontend, e.g. for [UD-Viz](https://github.com/VCityTeam/UD-Viz), [UD-Viz-demo](https://github.com/VCityTeam/UD-Viz-demo): proposed [tutorial](https://developer.mozilla.org/fr/docs/Web/JavaScript)
- * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) for the [UD-Serv](/Tools/Readme.md#ComponentUD-Serv) back end: proposed [tutorial](https://developer.mozilla.org/en-US/docs/Glossary/Python)
+ * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)), e.g for the [UD-Serv](/Tools/Readme.md#ComponentUD-Serv) back end: proposed [tutorial](https://developer.mozilla.org/en-US/docs/Glossary/Python)
  * [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](/Tools/Readme.md#ComponentUD-ServSplitBuilding)) requiring geography/geometry manipulations<br>
 
-Tooling:
+Development tools:
  * [git](ToolGit.md)
  * [git development cycle](DevelopersGithubCycle.md)
 
