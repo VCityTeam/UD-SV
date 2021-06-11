@@ -1,6 +1,7 @@
 
 Below a list of a few [git](https://en.wikipedia.org/wiki/Git) commands/concepts that you should be familiar with when contributing to this project.
-If you happen to discover such commands then we highly recommend you to brose the suggested documentation resources
+You can learn about them through e.g. [this tutorial](https://www.atlassian.com/git/tutorials) or [that tutorial](https://git-scm.com/docs/gittutorial). 
+If you happen to discover such commands then we highly recommend you to browse the suggested documentation resources
  * `git [commit](https://git-scm.com/docs/git-commit)`
  * `git [log](https://git-scm.com/docs/git-log)` 
  * `git [status](https://git-scm.com/docs/git-status)`
