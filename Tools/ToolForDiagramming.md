@@ -1,6 +1,7 @@
 When working the design or the documentation, diagrams and
-mostly UML diagrams are a must have. Here are some recommandable
-portable (accross OSes) tools with text based formats (mandatory
+mostly [UML diagrams](https://www.uml-diagrams.org/) (e.g. [Class](https://www.uml-diagrams.org/class-diagrams-overview.html), [Component](https://www.uml-diagrams.org/component-diagrams.html), [Activity](https://www.uml-diagrams.org/activity-diagrams.html)..) are a must have. 
+
+Here are some recommandable portable (accross OSes) tools with text based formats (mandatory
 for git repositories):
 
 ### [Plantuml](https://plantuml.com/) 
