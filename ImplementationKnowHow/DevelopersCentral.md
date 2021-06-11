@@ -17,8 +17,8 @@ The main languages used in UD-SV are:
  * [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](/Tools/Readme.md#ComponentUD-ServSplitBuilding)) requiring geography/geometry manipulations<br>
 
 Development tools:
- * [git](ToolGit.md)
- * [git development cycle](DevelopersGithubCycle.md)
+ * [git](/Tools/ToolGit.md)
+ * [git development cycle](/ImplementationKnowHow/GitWorflow/DevelopersGithubCycle.md)
 
 ### Contributing code/info
  * Access rights: provide your github login to the project admin in order to **get git write access** to the various project repositories
