@@ -5,7 +5,7 @@
 ### Getting started
  * The [whys and wherefores of the UD-SV project](../Readme.md)
  * [Architecture](/Architecture/Application.md)
- * 
+ 
 ### Install the demos
 UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
 Try to [install them](../Install/Readme.md#top) on your local desktop.
