@@ -22,7 +22,7 @@ Development tools:
  * adopt some **Editor/IDE** e.g. [VisualStudioCode](https://code.visualstudio.com/), [VisualStudio](https://visualstudio.microsoft.com/vs/community/) (for C/C++, Windows only), [PyCharm](https://www.jetbrains.com/pycharm/) (for Python), [sublime](https://www.sublimetext.com/)...
  * learn how to use a **[debugger](https://en.wikipedia.org/wiki/Debugger)** (depends on the language and the considered IDE)
  * [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) e.g. [Travis](https://github.com/VCityTeam/py3dtilers/blob/master/.travis.yml)
- * Containers, mainly [docker](/Tools/ToolDocker.md)
+ * Containers, mainly [docker](/Tools/ToolDocker)
 
 ### Contributing code/info
  * Respect (when available) the **coding styles** e.g. [eslint.rc](https://github.com/VCityTeam/UD-Viz-demo/blob/master/DemoFull/.eslintrc.json), for [C++](https://github.com/VCityTeam/VCity/wiki/Coding-Style) or [flake8](https://github.com/VCityTeam/py3dtilers/blob/master/.flake8)
