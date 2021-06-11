@@ -1,13 +1,11 @@
 # UD-SV developer's central <a name="top"></a>
 
-## Under-construction: content
-
 ## Step by step inception guide
 
 ### Getting started
  * The [whys and wherefores of the UD-SV project](../Readme.md)
- * [Architecture](/Architecture) and [software components](/SoftwareComponents)
-
+ * [Architecture](/Architecture/Application.md)
+ * 
 ### Install the demos
 UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
 Try to [install them](../Install/Readme.md#top) on your local desktop.
