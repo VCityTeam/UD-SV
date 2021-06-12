@@ -1,8 +1,8 @@
 <a name="top"></a>
 **Quick links**
  * [Online demos](UD-Doc/OnlineDemos.md)
- * [Software components](SoftwareComponents) descriptions e.g. [UD-Viz](https://github.com/MEPP-team/UD-Viz), [UD-Serv](https://github.com/MEPP-team/UD-Serv)... 
- * [Developers' gateway](UD-Doc/Devel/DevelopersCentral.md) like [software tools](UD-Doc/Devel)...
+ * [Architecture](Architecture/Readme.md)
+ * [Developers' gateway](/ImplementationKnowHow/DevelopersCentral.md)
 
 <a name="top"></a>
 <img src="SoftwareComponents/Diagrams/ComponentDiagram-macro-components-with-notes.png"
