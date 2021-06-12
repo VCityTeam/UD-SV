@@ -1,8 +1,9 @@
-When working the design or the documentation, diagrams and
-mostly [UML diagrams](https://www.uml-diagrams.org/) (e.g. [Class](https://www.uml-diagrams.org/class-diagrams-overview.html), [Component](https://www.uml-diagrams.org/component-diagrams.html), [Activity](https://www.uml-diagrams.org/activity-diagrams.html)..) are a must have. 
+Diagrams are a powerfull notation when working on the design, the architecture or the documentation.
+For this purpose the de-facto standard is UML and its [UML diagrams](https://www.uml-diagrams.org/) (e.g. [Class](https://www.uml-diagrams.org/class-diagrams-overview.html), [Component](https://www.uml-diagrams.org/component-diagrams.html), [Activity](https://www.uml-diagrams.org/activity-diagrams.html)..).
+Yet, on a first approach, looser diagramming notations like the one of [the "C4-Model"](https://c4model.com/) (for which you might consider watching [this 35' presentation](https://www.youtube.com/watch?v=x2-rSnhpw0g)) might prove useful.
 
-Here are some recommandable portable (accross OSes) tools with text based formats (mandatory
-for git repositories):
+Here are some recommandable portable (accross OSes) tools, free, open format and with text 
+based formats (which is mandatory for git repositories), recommended for the project:
 
 ### [Plantuml](https://plantuml.com/) 
   - Integrated within Gitlab/github (images generated on the fly)
