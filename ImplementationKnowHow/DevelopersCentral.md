@@ -13,7 +13,7 @@ The main languages used in UD-SV are:
  * [C++](https://en.wikipedia.org/wiki/C%2B%2B) for some backend treatments (e.g. [SplitBuilding](/Tools/Readme.md#ComponentUD-ServSplitBuilding)) requiring geography/geometry manipulations
  * Markdown
 
-In order to contributing code/info
+In order to contribute code/info
  * [git](/Tools/ToolGit.md) and [git development cycle](/ImplementationKnowHow/GitWorflow/DevelopersGithubCycle.md)
  * adopt some **Editor/IDE** e.g. [VisualStudioCode](https://code.visualstudio.com/), [VisualStudio](https://visualstudio.microsoft.com/vs/community/) (for C/C++, Windows only), [PyCharm](https://www.jetbrains.com/pycharm/) (for Python), [sublime](https://www.sublimetext.com/)...
  * learn how to use a **[debugger](https://en.wikipedia.org/wiki/Debugger)** (depends on the language and the considered IDE)
