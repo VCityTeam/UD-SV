@@ -9,3 +9,4 @@ npm install remark-validate-links
 npm install --global remark-cli remark-validate-links
 remark -u validate-links .
 ```
+Note that running the CLI commands requires git to be installed and in Windows PowerShell may require [running scripts to be enabled](https://thecodemon.com/resolved-npmng-ps1-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system/).
