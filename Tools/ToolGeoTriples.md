@@ -4,14 +4,8 @@
 
 [Wiki documentation](https://github.com/LinkedEOData/GeoTriples/wiki)
 
-### Local Installation
-GeoTriples is available on [Github](https://github.com/LinkedEOData/GeoTriples)
-
-To build using git and maven:
-```
-git clone https://github.com/LinkedEOData/GeoTriples.git
-mvn package
-```
+### Local CLI Installation
+Check out the GeoTriples [local installation instructions](https://github.com/LinkedEOData/GeoTriples#quickstart) on Github
 
 ### Docker Installation
 GeoTriples 1.1.6 is available as a docker container on DockerHub as a part of the KR-Suite
@@ -20,14 +14,15 @@ To start a container named _geotriples1_ using the current directory as a input/
 ```
 docker run --name geotriples1 -v $(pwd)/.:/inout gioargyr/krra-geotriples:tool
 ``` 
-
-### Docker Usage
 Once the container is running use the following commands to enter a shell inside the docker container
 ```
 docker exec -it geotriples1 /bin/bash
 ```
-From here use the geotriples script to execute commands
+
+### CLI Usage
+From the geotriples folder use the following command to use the CLI interface 
 ```
+cd bin
 ./geotriples-cmd [mode] [options] <source>|[mapping]
 ```
 
