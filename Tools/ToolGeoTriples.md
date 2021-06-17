@@ -4,6 +4,8 @@
 
 [Wiki documentation](https://github.com/LinkedEOData/GeoTriples/wiki)
 
+*WARNING* thus far testing with XML files is prone to `java.lang.OutOfMemoryError: Java heap space` exceptions.
+
 ### Local CLI Installation
 Check out the GeoTriples [local installation instructions](https://github.com/LinkedEOData/GeoTriples#quickstart) on Github
 
@@ -25,9 +27,6 @@ From the geotriples folder use the following command to use the CLI interface
 cd bin
 ./geotriples-cmd [mode] [options] <source>|[mapping]
 ```
-
-*WARNING* the script withing a docker container is prone to `java.lang.OutOfMemoryError: Java heap space` exceptions.
-
 #### generate_mapping command
 Used to generate mapping files for geospatial data sources
 
