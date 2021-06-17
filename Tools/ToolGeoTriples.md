@@ -18,7 +18,6 @@ docker exec -it geotriples1 /bin/bash
 ```
 From here navigate to the geotriples script to execute commands
 ```
-cd geotriples-1.1.6-bin/bin
 ./geotriples-cmd [mode] [options] <source>|[mapping]
 ```
 #### generate_mapping command
