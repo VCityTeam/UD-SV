@@ -4,22 +4,35 @@
 
 [Wiki documentation](https://github.com/LinkedEOData/GeoTriples/wiki)
 
+### Local Installation
+GeoTriples is available on [Github](https://github.com/LinkedEOData/GeoTriples)
+
+To build using git and maven:
+```
+git clone https://github.com/LinkedEOData/GeoTriples.git
+mvn package
+```
+
 ### Docker Installation
 GeoTriples 1.1.6 is available as a docker container on DockerHub as a part of the KR-Suite
 
 To start a container named _geotriples1_ using the current directory as a input/output volume (a different directory can be specified but one must be mounted to use the tool)
 ```
 docker run --name geotriples1 -v $(pwd)/.:/inout gioargyr/krra-geotriples:tool
-```
+``` 
+
 ### Docker Usage
 Once the container is running use the following commands to enter a shell inside the docker container
 ```
 docker exec -it geotriples1 /bin/bash
 ```
-From here navigate to the geotriples script to execute commands
+From here use the geotriples script to execute commands
 ```
 ./geotriples-cmd [mode] [options] <source>|[mapping]
 ```
+
+*WARNING* the script withing a docker container is prone to `java.lang.OutOfMemoryError: Java heap space` exceptions.
+
 #### generate_mapping command
 Used to generate mapping files for geospatial data sources
 
