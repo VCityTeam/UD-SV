@@ -32,6 +32,7 @@ When built from the source:
 cd geotriples-core/target
 java -cp "./dependency-jars/*:geotriples-core-<version>-SNAPSHOT.jar" eu.linkedeodata.geotriples.GeoTriplesCMD [Options] [Argument]
 ```
+If memory errors occur, consider using the `-Xms[size]m` flag to declare the initial Java heao size.
 When installed from the binary: 
 ```
 cd bin
