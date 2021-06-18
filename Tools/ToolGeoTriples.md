@@ -4,10 +4,15 @@
 
 [Wiki documentation](https://github.com/LinkedEOData/GeoTriples/wiki)
 
-**WARNING** thus far testing with XML files is prone to `java.lang.OutOfMemoryError: Java heap space` exceptions.
+**WARNING** thus far testing with XML files is prone to `java.lang.OutOfMemoryError: Java heap space` exceptions. It is recommended to build GeoTriples from the source in order to have control over the memory usage of java.
 
 ### Local CLI Installation
-Check out the GeoTriples [local installation instructions](https://github.com/LinkedEOData/GeoTriples#quickstart) on Github
+Check out the GeoTriples [local installation instructions](https://github.com/LinkedEOData/GeoTriples#quickstart) on Github for more details
+```
+git clone https://github.com/LinkedEOData/GeoTriples.git
+cd GeoTriples
+mvn clean package
+```
 
 ### Docker Installation
 GeoTriples 1.1.6 is available as a docker container on DockerHub as a part of the KR-Suite
@@ -22,7 +27,12 @@ docker exec -it geotriples1 /bin/bash
 ```
 
 ### CLI Usage
-From the geotriples folder use the following command to use the CLI interface 
+When built from the source:
+```
+cd geotriples-core/target
+java -cp "./dependency-jars/*:geotriples-core-<version>-SNAPSHOT.jar" eu.linkedeodata.geotriples.GeoTriplesCMD [Options] [Argument]
+```
+When installed from the binary: 
 ```
 cd bin
 ./geotriples-cmd [mode] [options] <source>|[mapping]
