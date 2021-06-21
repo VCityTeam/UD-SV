@@ -1,6 +1,6 @@
 <a name="top"></a>
 **Quick links**
- * [Online demos](UD-Doc/OnlineDemos.md)
+ * [Online demos](https://projet.liris.cnrs.fr/vcity/demos/)
  * [Architecture](Architecture/Readme.md)
  * [Developers' gateway](/ImplementationKnowHow/DevelopersCentral.md)
 
