@@ -6,6 +6,10 @@
 
 **WARNING** thus far testing with XML files is prone to `java.lang.OutOfMemoryError: Java heap space` exceptions. It is recommended to build GeoTriples from the source in order to have control over the memory usage of java.
 
+### Download the binary
+Requires Java Version >= 7
+Download [here](http://geotriples.di.uoa.gr/downloads/geotriples-1.1.6-bin.zip)
+
 ### Local CLI Installation
 Check out the GeoTriples [local installation instructions](https://github.com/LinkedEOData/GeoTriples#quickstart) on Github for more details
 ```
