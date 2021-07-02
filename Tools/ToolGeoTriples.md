@@ -34,7 +34,7 @@ This command is used to generate mapping files for geospatial data sources
 
 The basic command for creating a mapping file called `mapping.ttl` is as follows:
 ```
-./geotriples-cmd generate_mapping -o /inout/mapping.ttl -b [optional base URI or namespace] /inout/[shapefile]
+./geotriples-cmd generate_mapping -o /inout/mapping.ttl -b [base URI or namespace] /inout/[shapefile]
 ```
 
 #### dump_rdf-command
