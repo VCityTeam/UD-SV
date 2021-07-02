@@ -30,11 +30,10 @@ How to install (document) Enhanced City demo
 
 ## Installing [components](../Tools/)
  * Frontend
-   - [UD-Viz](../Tools/Readme.md#ComponentUD-Viz) web client: [install notes](https://github.com/MEPP-team/UD-Viz/blob/master/install.md) ([associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/))
+   - [UD-Viz](../Tools/) web client: [install notes](https://github.com/MEPP-team/UD-Viz/blob/master/install.md) ([associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/))
  * Backend
    - [3DCityDB](../Tools/): refer to the [install notes](Install3DCityDB.md#top).
-   - [CityTiler](../Tools/): refer to the [install notes](https://github.com/MEPP-team/py3dtiles/blob/Tiler/Tilers/CityTiler/Install.md)
-   - [UD-Serv/API_Enhanced_City](../Tools/): refer to the [install notes](https://github.com/MEPP-team/UD-Viz-server/blob/master/API_Enhanced_City/INSTALL.md)
+   - [CityTiler](../Tools/): refer to the [install notes](https://github.com/VCityTeam/py3dtiles/tree/Tiler)
+   - [UD-Serv/API_Enhanced_City](../Tools/): refer to the [install notes](https://github.com/VCityTeam/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md)
    - [3DTiles Samples](../Tools/)(server):
-     * <a name="backend-3dtiles-web-server-desktop-developing-context"></a>[DESKTOP developing context install notes](https://github.com/VCityTeam/UD-Reproducibility/blob/master/ExternalComponents/3DTilesSamples/Readme.md) or
-     * <a name="backend-3dtiles-web-server-operations-stable-server-context"></a>[OPERATIONS (stable server) context install notes](https://github.com/VCityTeam/UD-Reproducibility/blob/master/ExternalComponents/ApacheServer/InstallDebianApacheServer.md) ([Apache](https://en.wikipedia.org/wiki/Apache_HTTP_Server) http server based install notes).
+     * <a name="backend-3dtiles-web-server-desktop-developing-context"></a>[DESKTOP developing context install notes](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Computations/3DTiles/LyonTemporal/PythonCallingDocker#readme) or
