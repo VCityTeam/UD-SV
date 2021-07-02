@@ -41,7 +41,7 @@ Disclaimer: This tutorial should work with iTowns v2.22.0. Don't hesitate to
 		- [Add vector layers from GPX and KML](#add-vector-layers-from-GPX-and-KML)
 		- [Add 3D meshes](#add-3d-meshes)
 		- [Add 3D layer from WFS](#add-3d-layer-from-wfs)
-		- [Cool stuffs (split example)](#cool-stuffs-split-example)
+		- [Cool stuffs (split example)](#Cool-examples)
 
 <!-- /TOC -->
 
