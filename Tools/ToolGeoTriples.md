@@ -42,6 +42,6 @@ This command is used to transform a geospatial data source into RDF based on a m
 
 The basic command for transforming the shapefile is as follows:
 ```
-./geotriples-cmd dump_rdf -o /inout/out.ttl -b [base URI or namespace] -sh /inout/[shapefile] /inout/mapping.ttl
+./geotriples-cmd dump_rdf -o /inout/out.ttl -f TURTLE -b [base URI or namespace] -sh /inout/[shapefile] /inout/mapping.ttl
 ```
 The output will be written to `out.ttl`
