@@ -11,10 +11,10 @@ through well-defined channels.
 use fewer resources than virtual machines.
 ```
 Note: Docker native OS is linux (on OSX you need a virtualization layer):
-![Container vs Virtualization](Docker/Container_VM_Implementation.png)
+![Container vs Virtualization](Images/Container_VM_Implementation.png)
 
 ## Docker components 
-![docker components](Docker/High-level-overview-of-Docker-architecture.png)
+![docker components](Images/High-level-overview-of-Docker-architecture.png)
 
 * A **Docker image** is a file, comprised of multiple layers, that is used to execute code in a Docker container. An image is essentially built from the instructions for a complete and executable version of an application, which relies on the host OS kernel. When the Docker user runs an image, it can become one or multiple instances of that container. [Source](https://searchitoperations.techtarget.com/definition/Docker-image)
 
@@ -40,14 +40,14 @@ Context examples:
  
  **Docker volumes**:
  
- ![docker components](Docker/docker-types-of-mounts-volume.png)
+ ![docker components](Images/docker-types-of-mounts-volume.png)
  
  **Dockerfile's Entrypoint**: a place to "normalize"/document your API
  - An example of [entrypoint](https://github.com/VCityTeam/UD-geodecision-docker/blob/master/FormatAndAnalyseRoofs/DockerContext/Dockerfile#L44)
  - [entrypoint.py](https://github.com/VCityTeam/UD-geodecision-docker/blob/master/FormatAndAnalyseRoofs/DockerContext/entrypoint.py)
 The following diagram tries to illustate the /Input, /Output good practice 
 (don't forget the commands at the bottom)
-<img src="Docker/ud-geodecision-docker_organisation.png" alt="docker entry point" width="500" > 
+<img src="Images/ud-geodecision-docker_organisation.png" alt="docker entry point" width="500" > 
 
 ## A command based walkthrough
 * List images (in local repository): `docker images`
