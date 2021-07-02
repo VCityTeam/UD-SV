@@ -11,7 +11,7 @@ GeoTriples 1.1.6 is available as a docker container on DockerHub as a part of th
 
 To start a container named _geotriples1_ using the current directory as a input/output volume (a different directory can be specified but one must be mounted to use the tool)
 ```
-docker run --name geotriples1 -v $(pwd):/inout gioargyr/krra-geotriples:tool
+docker run --name geotriples1 -d -v $(pwd):/inout gioargyr/krra-geotriples:tool
 ``` 
 Once the container is running use the following commands to enter a shell inside the docker container
 ```
