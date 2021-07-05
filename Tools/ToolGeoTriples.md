@@ -4,7 +4,9 @@
 
 [Wiki documentation](https://github.com/LinkedEOData/GeoTriples/wiki)
 
-**WARNING** thus far testing with XML files is prone to `java.lang.OutOfMemoryError: Java heap space` exceptions. It is recommended to transform shapefiles instead as this appear to be less buggy after testing (as of 29/06/2021).
+**WARNING** thus far testing with XML files is prone to `java.lang.OutOfMemoryError: Java heap space` exceptions. GeoTriples appears to work better with GML 2 which has a much smaller data model (XML Schema) than GML 3. Tests with CityGML 2.0 (which uses GML 3.1) have been unsuccessful due to this size limitation, even when testing with 32 GBs of RAM and the -Xmx java flag.
+
+For this reason it is recommended to transform shapefiles instead as this appear to be less buggy after testing (as of 29/06/2021).
 
 Also note that when building GeoTriples from the source, JDK 11 is unsupported. Use at most JDK 10.
 
