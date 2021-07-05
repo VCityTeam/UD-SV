@@ -6,6 +6,8 @@
 
 **WARNING** thus far testing with XML files is prone to `java.lang.OutOfMemoryError: Java heap space` exceptions. It is recommended to transform shapefiles instead as this appear to be less buggy after testing (as of 29/06/2021).
 
+Also note that when building GeoTriples from the source, JDK 11 is unsupported. Use at most JDK 10.
+
 ### Docker Installation
 GeoTriples 1.1.6 is available as a docker container on DockerHub as a part of the KR-Suite
 
