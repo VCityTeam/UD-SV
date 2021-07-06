@@ -20,9 +20,8 @@ install:
 jobs:
   include:
     - script:
-        - git clone https://github.com/VCityTeam/UD-SV.git
-        - remark -u validate-links UD-SV
-        - export warnings=`remark -u validate-links UD-SV 2>&1 | grep warning | grep "Link to unknown" | wc -l` &&
+        - remark -u validate-links .
+        - export warnings=`remark -u validate-links . 2>&1 | grep warning | grep "Link to unknown" | wc -l` &&
           if [ $warnings -gt $FAILURE_THRESHOLD ]; then
             exit 1;
           fi
