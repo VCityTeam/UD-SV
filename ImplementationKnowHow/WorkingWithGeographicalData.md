@@ -6,7 +6,7 @@ Converting from one system to another: proj4 library (exists in python, JS ?, C+
 
 **Content to be included**:
 
-[Find the projection system out of the coordinates](https://cad.kerlom.fr/topographie_coordonnees.php#)
+Find the projection system out of the coordinates [here](https://geofree.fr/gf/projguess.asp) or [here](https://cad.kerlom.fr/topographie_coordonnees.php#)
 
 ---
 ### Extent
