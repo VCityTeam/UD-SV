@@ -1,10 +1,10 @@
 ## Index
- * [Need](#anchor-vocabulary-need)
- * [Requirement](#anchor-vocabulary-requirement)
+ * [Need](#Need)
+ * [Requirement](#Requirement)
 
 ---
 
-### Need<a name="anchor-vocabulary-need"></a> 
+### Need
 **Definition**: a **need** or [feature](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/) is a set of related requirements that allows the user to satisfy a "business" objective or need.
 
 Needs are thus high level requirements that **target general audience like management or project leader** and abstracts the technical details. For example
@@ -31,7 +31,7 @@ The description of a need should have the following items:
 
 ---
 
-### Requirement<a name="anchor-vocabulary-requirement"></a>
+### Requirement
 **Definition**: a **[requirement](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/)** is a capability that a product must possess or something a product must do in order to ultimately satisfy a customer need.
 
 A requirement **targets a technical audience** as its readers, like engineers, developers, project manager and testers. Requirements might be described with a bias of a particular implementation and must outline and detail exactly **what needs to be delivered** (as a componennt of the product). For example:
