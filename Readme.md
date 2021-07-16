@@ -34,7 +34,7 @@ In particular UD-SV focuses on the design and realization of
      - a simple interactive visualizer of the backend data
      - a computational model treatment handler (configure, trigger, explore results of a treatment)
      
-A list of available/used components is [described in the Tools section](Tools/Readme.md).
+A list of available/used components is [described in the Component section](https://github.com/VCityTeam/UD-SV/blob/master/SoftwareComponents/Readme.md).
 
 ### Technical manifesto
 We believe that in order to succeed with data usage one must not separate data concerns (information models, database infrastructure) from the offered tools, treatment process and the associated methodology. Questions like how to migrate a database when the information model changes (e.g. from CityGML version 2 to version 3), how to deal with information model modularity and extensions, what are the interactions between data and their treatment or how does one handle data storage and computation scale up, must be dealt at first. UD-SV will try to propose good practices for doing so.
