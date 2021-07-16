@@ -30,7 +30,7 @@
 
 Software architecture schema:
 
-![](Pictures/iTownsInternalArchitecture.jpg)
+![](https://github.com/VCityTeam/UD-SV/blob/master/Architecture/Pictures/iTownsInternalArchitecture.jpg)
 
 ## Services
 
