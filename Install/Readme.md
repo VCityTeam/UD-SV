@@ -15,10 +15,10 @@ Once your chosen demo is installed feel free to experiment with it, extend it an
 
 ### UD-Viz-demo (front end) together with [UD-Serv/API_Enhanced_City](../Tools/) (back-end)
  * What you get:
-   - you can [run demo this demo](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html) on your desktop i.e. you will be able to run **both client-side and server-side locally** (on your desktop) as opposed to the [UD-Viz front end previous install demo](#install-demo-udv-front-end) where only the client-side was deployed locally (and the server side was running online on UD-SV's demo server)
+   - you can [run demo this demo](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html) on your desktop i.e. you will be able to run **both client-side and server-side locally** (on your desktop) as opposed to the [UD-Viz front end previous install demo](#installing-components) where only the client-side was deployed locally (and the server side was running online on UD-SV's demo server)
    - note that the server-side component uses a [PostGreSQL database](https://en.wikipedia.org/wiki/PostgreSQL) used to power components like Consult documentation, Guided Tour, Authentification, Documents to validate and Document Links_.
  * Installation:
-    - first follow [UD-Viz front end install notes](#install-demo-udv-front-end)
+    - first follow [UD-Viz front end install notes](#installing-components)
     - then [UD-Serv/API_Enhanced_City install notes](https://github.com/MEPP-team/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md) that enable you to install some of the server-side components on your computer.
 
 ### Computing and visualizing 3DTiles tilesets
@@ -30,9 +30,9 @@ How to install (document) Enhanced City demo
 
 ## Installing [components](../Tools/)
  * Frontend
-   - [UD-Viz](../Tools/) web client: [install notes](https://github.com/MEPP-team/UD-Viz/blob/master/install.md) ([associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/))
+   - [UD-Viz](../Tools/) web client: [install notes](https://github.com/VCityTeam/UD-Viz/blob/master/Readme.md) ([associated demos](http://rict.liris.cnrs.fr/UDVDemo-2/UDV/UDV-Core/))
  * Backend
-   - [3DCityDB](../Tools/): refer to the [install notes](Install3DCityDB.md#top).
+   - [3DCityDB](../Tools/): refer to the [install notes](Install3DCityDB.md).
    - [CityTiler](../Tools/): refer to the [install notes](https://github.com/VCityTeam/py3dtiles/tree/Tiler)
    - [UD-Serv/API_Enhanced_City](../Tools/): refer to the [install notes](https://github.com/VCityTeam/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md)
    - [3DTiles Samples](../Tools/)(server):
