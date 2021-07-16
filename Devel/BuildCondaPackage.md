@@ -8,7 +8,7 @@
 ## Table of contents
 - [How to build a conda package ?](#how-to-build-a-conda-package-)
   - [Table of contents](#table-of-contents)
-  - [Why build a distribution package with conda ?](#why-build-a-distribution-package-with-conda-?)
+  - [Why build a distribution package with conda ?](#why-build-a-distribution-package-with-conda-)
     - [Notes on spatial libraries](#notes-on-spatial-libraries)
   - [Get and install Conda](#get-and-install-conda)
   - [Definitions](#definitions)
@@ -32,7 +32,7 @@
       - [Directly from tarball](#directly-from-tarball)
       - [By creating a conda channel](#by-creating-a-conda-channel)
   - [Developer's notes](#developers-notes)
-    - [Create an conda virtual environment](#create-an-conda-virtual-environment)
+    - [Create a conda virtual environment](#create-a-conda-virtual-environment)
       - [From scratch](#from-scratch)
     - [Activate this environment](#activate-this-environment)
     - [Install the package (*symbolik link*)](#install-the-package-symbolik-link)
@@ -325,7 +325,8 @@ You can convert your package in order to set it for the other platforms and OS:
 
 ## Conda install
 ### Install from local sources
-#### Directly from tarball [***not recommended***]
+#### Directly from tarball
+[***not recommended***]
 > ***/!\ WARNING: "Installing packages directly from the file does not resolve dependencies. If your installed package does not work, it may have missing dependencies that need to be resolved manually." ([Anaconda User Guide](https://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/#installing-packages-on-a-non-networked-air-gapped-computer))***
 
 ```bash
@@ -398,7 +399,7 @@ conda develop [path_to_package]
 ```
 
 ### Build after changes
-> *[Follow the process described in this documentation](#set_the_conda_recipe) and make the necessary changes/adaptations*
+> *[Follow the process described in this documentation](#set-the-conda-recipe) and make the necessary changes/adaptations*
 
 
 ### Useful resources
