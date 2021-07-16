@@ -36,7 +36,7 @@ unzip LYON_9EME_2009.zip
 
 * Note: the above buildings had to be removed because their <gml:MultiSurface srsDimension="3"> entries, that supposedly decribe the geometry of the respective parts of this building, are empty (which might confuse any geometrical post-treatment).
 
-Proceed with the [importation within your 3DCityDB database](Install3DCityDB.md#import-some-citygml-file-content)
+Proceed with the [importation within your 3DCityDB database](https://github.com/VCityTeam/UD-SV/blob/master/Install/Install3DCityDB.md)
 For the impatient this goes:
  * Create the database
    ````
