@@ -5,8 +5,8 @@ In the following we distinguish two deployment use cases:
 
 ## 1/ Installing a 3DCityDB+PostGIS (database) server
 This chapter describes two different methods for installing a [3DCity Data Base](https://www.3dcitydb.org/3dcitydb/) server :
- - a quick an easy [3DCityDB **docker install**](#1a-installing-a-3dcitydbpostgis-server-with-docker)
- - a customizable [native package (apt) level installation](#1b-installing-a-3dcitydbpostgis-server-with-a-package-manager-apt)
+ - a quick an easy [3DCityDB **docker install**](#1a-installing-a-3dcitydbpostgis-server-the-docker-deployment-case)
+ - a customizable [native package (apt) level installation](#1b-installing-a-3dcitydbpostgis-server-the-linux-server-configuration-case)
  
 ### 1.A/ Installing a 3DCityDB+PostGIS server: the docker deployment case
  * Pre-requisite: [install Docker](https://docs.docker.com/install/).
@@ -33,7 +33,7 @@ This chapter describes two different methods for installing a [3DCity Data Base]
    then some other service is already using port 5432. You now have three cases concerning the 5432 port:
      1. it was pre-empted by a (previously run) dandling container
      1. it was pre-empted by another service/container that you don't need anymore
-     1. it was pre-empted by another service/container that you _do_ need (for example the [default API_Enhanced_City configuration](https://github.com/MEPP-team/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md#install-using-docker), that you [might have installed](Readme.md#backend-udv-serverapi_enhanced_city-install-notes) for your UD-Viz demo, uses that port)<br>
+     1. it was pre-empted by another service/container that you _do_ need (for example the [default API_Enhanced_City configuration](https://github.com/MEPP-team/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md#install-using-docker), that you might have installed for your UD-Viz demo, uses that port)<br>
    In the first two cases, you can free that port e.g. by retrieving the container culprit and killing with the following method<br>
       * print the list of running containers with the command `sudo docker container ls`,
       * find the `<name>` of container using port 5432,
