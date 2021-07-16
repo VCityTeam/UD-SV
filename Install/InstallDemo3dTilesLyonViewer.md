@@ -21,7 +21,7 @@ Proceed with the following install guides
    Assert that the `junk` tileset is properly served by browsing the
    `http://localhost:8003/tilesets/junk/tileset.json`.
 
- * [Intall UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes).
+ * [Intall UD-Viz web client](https://github.com/VCityTeam/UD-Viz/blob/master/Readme.md).
    Let us assume that `<path-to-UDV>` designates the directory holding the
    UD-Viz installation.
  
@@ -31,7 +31,7 @@ Proceed with the following install guides
    [`3DTilesLayer:building:url`](https://github.com/VCityTeam/UD-Viz/blob/master/UD-Viz-Core/examples/data/config/generalDemoConfig.json#L137)
    entry to be `"http://localhost:8003/tilesets/junk/tileset.json"`
      
- * [Run the UD-Viz web client](Readme.md#frontend-udv-web-client-install-notes)
+ * [Run the UD-Viz web client](https://github.com/VCityTeam/UD-Viz/blob/master/Readme.md)
    ```
     cd <path-to-UDV>/UDV-Core/
     npm start
