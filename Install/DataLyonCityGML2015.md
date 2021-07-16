@@ -28,7 +28,7 @@ wget https://download.data.grandlyon.com/files/grandlyon/localisation/bati3d/LYO
 unzip LYON_9EME_2015.zip
 ````
 
-Proceed with the [importation within your 3DCityDB database](Install3DCityDB.md#import-some-citygml-file-content). 
+Proceed with the [importation within your 3DCityDB database](https://github.com/VCityTeam/UD-SV/blob/master/Install/Install3DCityDB.md). 
 For the impatient this goes:
  * Create the database
    ````
