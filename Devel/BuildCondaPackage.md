@@ -6,7 +6,7 @@
 > * require conda to manage base C libraries
 
 ## Table of contents
-- [How to build a conda package ?](#how-to-build-a-conda-package)
+- [How to build a conda package ?](#how-to-build-a-conda-package-)
   - [Table of contents](#table-of-contents)
   - [Why build a distribution package with conda ?](#why-build-a-distribution-package-with-conda-?)
     - [Notes on spatial libraries](#notes-on-spatial-libraries)
