@@ -24,10 +24,10 @@ In order to contribute code/info
 
 Adopt the best practices
  * **Submit often**: it is much better to often submit small yet effective and mature PR than jumbo/bulk code once in a while...
- * [Submit trough pull request (PR)](DevelopersGithubCycle.md#submitting-a-pull-request-pr): don't forget to provide a template.
- * Place and maintain some gentle pressure on the guilty parties when [asking for your pull request (PR) acceptation](DevelopersGithubCycle.md#pull-request-pr-acceptance-policy)
+ * [Submit trough pull request (PR)](https://github.com/VCityTeam/UD-SV/blob/master/ImplementationKnowHow/GitWorflow/DevelopersGithubCycle.md#submitting-a-pull-request-pr): don't forget to provide a template.
+ * Place and maintain some gentle pressure on the guilty parties when [asking for your pull request (PR) acceptation](https://github.com/VCityTeam/UD-SV/blob/master/ImplementationKnowHow/GitWorflow/DevelopersGithubCycle.md#pull-request-pr-acceptance-policy)
 
 ### Install the demos
 UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
-Try to [install them](../Install/Readme.md#top) on your local desktop.
+Try to [install them](https://github.com/VCityTeam/UD-SV/tree/master/Install) on your local desktop.
 
