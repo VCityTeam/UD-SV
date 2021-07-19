@@ -1,7 +1,32 @@
 ## Index
  * [Need](#Need)
  * [Requirement](#Requirement)
-
+ * [Triple](#Triple)
+ * [Ontology](#Ontology)
+   * [Conceptualization](#Conceptualization)
+   * [Formalization](#Formalization)
+   * [Upper Ontology](#Upper-Ontology)
+   * [Domain Ontology](#Domain-Ontology)
+   * [Network of Ontologies](#Network-of-Ontologies)
+   * [Ontology Matching](#Ontology-Matching)
+     * [Alignment](#Alignment)
+     * [Correspondence](#Correspondence)
+ * [The Semantic Web](#Semantic-Web)
+   * [Linked Data](#Linked-Data)
+   * [Semantic Web Stack](#Semantic-Web-Stack)
+     * [Resource Description Framework (RDF)](#Resource-Description-Framework)
+     * [Web Ontology Language (OWL)](#Web-Ontology-Language)
+     * [SPARQL Queries](#SPARQL)
+     * [SPARQL Endpoint](#SPARQL-Endpoint)
+     * [Triple Store](#Triple-Store)
+ * [Description Logic](#Description-Logic)
+   * [Axiom](#Axiom)
+   * [ABox](#ABox)
+   * [TBox](#TBox)
+   * [Individual](#Individual)
+   * [Decidability](#Decidability)
+   * [Expressivity](#Expressivity)
+   * [Reasoning](#Reasoning)
 ---
 
 ### Need
@@ -37,3 +62,248 @@ The description of a need should have the following items:
 A requirement **targets a technical audience** as its readers, like engineers, developers, project manager and testers. Requirements might be described with a bias of a particular implementation and must outline and detail exactly **what needs to be delivered** (as a componennt of the product). For example:
  * Requirement 1: "The system (i.e. delivered system or product) shall be able to register a customer item through the specification of the following attributes: an textual ID (20 characters long), comments (2000 characters long) and its retail price (currency)."
  * Requirement 2: "The system shall be able to visualize up to 1024 building (for the 3D mode)." 
+
+
+## Triple
+A basic [RDF](#Resource-Description-Framework) data structure composed of three parts:
+1. Subject - the subject of the triple which can be anything (e.g. a concept, an idea, a real-world object, etc)
+2. Predicate - a relationship between the subject and the object
+3. Object - another subject or a data value
+
+![Triple example](Pictures/UD-Graph/triple_structure.png)
+
+For example:
+| Subject | Predicate | Object |
+|---|---|---|
+| Mary | is a | Person |
+| Mary | has age | 25 |
+
+## Ontology
+According to [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0), ontologies (precisely **computational** ontologies) can be considered a :
+> [formal](#formalization), explicit specification of a shared [conceptualization](#conceptualization).
+
+Also,
+
+> ..., the degree to which an ontology specifies a [conceptualization](#conceptualization) depends 
+> (1) on the richness of the domain of discourse;
+> (2) on the richness of the vocabulary chosen;
+> (3) on the axiomatization. In turn, the axiomatization depends on language expressiveness issues 
+
+![Ontology Example](Pictures/UD-Graph/ontology_example.png)
+
+There are generally two main types of ontologies:
+* [Upper Ontology](#Upper-Ontology)
+* [Domain Ontology](#Domain-Ontology)
+
+One of the most widely used languages for expressing ontologies is [Web Ontology Language (OWL)](#web-ontology-language).
+
+### Conceptualization
+A conceptualization is an abstraction of a real-world concept, expressed by a vocabulary. [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0)
+
+### Formalization
+Formal under the context of ontologies refers to the "rigour" and "specificity" used to express [conceptualizations](#conceptualization)
+
+Different languages approach formalization differently. Ontologies use very formal descriptions (like [description logics](#Description-Logic))
+
+![formal/informal examples](Pictures/UD-Graph/formal-informal.png)
+
+Source: [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0)
+
+Formal languages are generally more [expressive](#expressivity) than informal languages.
+
+### Upper Ontology
+A general ontology which models concepts and relations applicable across a wide range of domain ontologies. One of the most common examples of this type of ontology is the [Friend of a Friend](http://xmlns.com/foaf/spec/) (FOAF) ontology for describing people and their relationships.
+
+### Domain Ontology
+An ontology that models concepts and relationships of a specific domain of knowledge (such as an area of research). One of the most popular geospatial ontologies is the [GeoSPARQL ontology](https://opengeospatial.github.io/ogc-geosparql/geosparql10/index.html).
+
+[Protégé](https://protege.stanford.edu/) is a powerful open-source tool for visualizing and editing ontologies.
+
+### Network of Ontologies
+Otherwise refered to as an _ontology network_. This is a collection of interlinked ontologies. This is often implemented in systems which require supporting knowledge from different domains of information.
+
+The creation of links between ontologies is the definition of relationships (properties) between concepts (or classes) in each ontology. [Ontology matching](#ontology-matching) approachs can be used for defining and verifying these links.
+
+There are 3 main types of ontology networks:
+1. Single ontology - A monolithic global ontology is created to describe several domains of knowledge
+2. Multiple ontology - Multiple local ontologies are created and linked to one another
+3. Hybrid ontology - Similar to the multiple ontology approach but a common vocabulary is defined to interlink each local ontology. An [upper ontology](#upper-ontology) can be used as a common vocabulary for this purpose
+
+![network of ontology types](Pictures/UD-Graph/ontology_network.png)
+
+Source: _Ontology-Based Integration of Information - A Survey of Existing Approaches_ by H. Wache, T. Vogele, U. Visser, H. Stuckenschmidt, G. Schuster, H. Neumann and S. Hubner
+
+### Ontology Matching
+The process of linking two ontologies by finding an [alignment](#alignment) between them. Read [J. Euzenat, Networks of ontologies and alignments](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.188.7281&rep=rep1&type=pdf) for a great introduction into ontology matching.
+
+#### Alignment
+A set of [correspondences](#Correspondence) between two ontologies.
+
+#### Correspondence
+A relationship (or property in OWL) between two entities (or classes in OWL) of two distinct ontologies. There are three main types of correspondences:
+1. Equivalence, often denoted by `=` or `owl:equivalentClass` in OWL
+2. Disjointness, often denoted by `⊥` or `owl:subClassOf` in OWL
+3. Less general, often denoted by `≤` or `owl:subClassOf` in OWL
+
+A correspondences can be described by [description logics](#description-logic) and [triples](#triple) in an ontology. 
+
+## Semantic Web
+A machine-processable web of data (or data web) built on the [semantic web stack](#semantic-web-stack) (or semantic web technologies) and [Linked Data](#linked-data). Coined by Tim Berners-Lee in 1999. Sometimes this is referred to as an extension of the World Wide Web.
+
+### Linked Data
+Interlinked, structured data that is available on the web (can be thought of as graph data). Sometimes referred to as Linked Open Data (LOD) in the case where this data is available publicly. The largest publicly available dataset of linked data is the [Linked Open Data Cloud](https://www.lod-cloud.net/). Other large LOD datasets include:
+* [DBPedia](https://www.dbpedia.org/about/)
+* [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) - Wikipedia as LOD
+* [GeoNames](https://www.geonames.org/) - Geographical data as LOD
+
+Based on 3 principles:
+1. All data should be identified by unique Uniform Resource Identifiers (URIs)
+2. Looking up an HTTP URI name should return useful data about a subject in a standard format
+3. Any other subject which has a relationship with this subject should also be given a HTTP URI which can also be looked up
+
+Achieving high LOD "quality" steps:
+1. open data in any format
+2. open data in a structured format (e.g. a Microsoft Excel file format .xsl)
+3. open data in a non-proprietary format (e.g. comma-separated values .csv)
+4. open data in [semantic web stack](#semantic-web-stack) formats 
+5. All other steps and data is linked with other LOD sources
+
+### Semantic Web Stack
+The architecture of the [Semantic Web](#semantic-web) and [Linked Data](#linked-data) based on the international standards of the World Wide Web Consortium (W3C). 
+
+![Semantic Web Stack](Pictures/UD-Graph/Semantic_Web_Stack.png)
+
+The stack layers:
+* Hypertext Web technologies:
+  * Internationalized Resource Identifier (IRI), generalization of Uniform Resource Identifiers (URI) for uniquely identifying semantic web resources
+  * Unicode - International standard for encoding text in many international languages
+  * XML - a markup language for creating documents composed of semi-structured data
+* Standard Semantic Web technologies:
+  * [Resource Description Framework (RDF)](#Resource-Description-Framework)
+  * RDF Schema (RDFS) provides a basic vocabulary for RDF. Using RDFS enables the creation of hierarchies of classes and properties
+  * [Web Ontology Language (OWL)](#Web-Ontology-Language) extends RDFS by adding [description logic](#description-logic) and more advanced constructs to describe the semantics of RDF statements (for example declaring constraints such as cardinality) in order to create [ontologies](#ontology)
+  * Rule Interchange Format (RIF) used for describing relations that cannot be directly described using OWL's description logic
+* [SPARQL Protocol and RDF Query Language (SPARQL)](#SPARQL)
+
+#### Resource-Description-Framework
+Resource Description Framework (RDF) is a framework for creating statements in the form of [triples](#triple) to represent information about resources in the form of graphs. 
+
+RDF triples can be written with a variety of different languages and formats:
+* [RDF/XML](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-rdfxml) (XML syntax for RDF)
+* Turtle family of RDF languages:
+  * [N-Triples](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-n-triples) - simple, line based format
+  * [Turtle](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-turtle) - easier to read but slightly harder to write
+  * [TriG](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-trig) - specify multiple graphs in one dataset
+  * [N-Quads](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-n-quads) - extension of N-Triples, adds a graph IRI to create a quad instead of a triple
+* [JSON-LD](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-json-ld) (JSON-based RDF syntax)
+* [RDFa](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-rdfa) (for HTML and XML embedding)
+
+Since RDF identifiers must be valid URIs (or even better IRIs), `PREFIX` statements can be used to create shortcuts for these identifiers. For example:
+```SQL
+<http://example.com/exampleOntology#exampleSubject> <http://example.com/exampleOntology#examplePredicate> <http://example.com/exampleOntology#exampleObject> .
+```
+can be re-written as:
+```
+PREFIX ex: <http://example.com/exampleOntology#>
+
+ex:exampleSubject ex:examplePredicate ex:exampleObject .
+```
+
+For more information on RDF refer to the W3.org [RDF Primer document](https://www.w3.org/TR/rdf-primer/)
+
+#### Web Ontology Language
+Web ontology language (OWL) is a language that can be used to:
+> "explicitly represent the meaning of terms in vocabularies and the relationships between those terms. This representation of terms and their interrelationships is called an [ontology](#ontology)."
+These ontologies are intepretable by computers and thus [reasoners](#reasoning) can be used to inference new relationships between these terms. - [OWL Web Ontology Language Overview](https://www.w3.org/TR/owl-features/)
+
+OWL uses the following structures to describe these concepts and relationships:
+* Classes - describes a concept, idea, object, etc.
+* properties - describes a relationship
+  * ObjectProperty - describes a relationship between two classes
+  * DatatypeProperty - describes a relationship between a class and a datatype
+* [individual](#individual) - a real-world class instance 
+* [description logics](#description-logic)
+
+Each specification variant has its own level of [expressivity](#expressivity) and [decidability](#decidability):
+* OWL Lite - least expressive, supports cardinality of 0 or 1. Useful for lightweight thesauri or taxonomies.
+* OWL DL - maximum expressiveness while retaining decidability.
+* OWL Full - designed to preserve more compatibility with RDFS at the cost of decidability. This provides the most expressivity but the lack of decidability means that [reasoners](#reasoning) cannot be used on OWL Full ontologies.
+
+Note that every legal OWL Lite ontology is a legal OWL DL ontology and every legal OWL DL ontology is a legal OWL Full ontology.
+
+For more information on OWL refer to the W3.org [OWL Web Ontology Language Overview](https://www.w3.org/TR/owl-features/)
+
+#### SPARQL
+SPARQL Protocol and RDF Query Language (SPARQL) is an RDF query language similar to SQL.
+
+4 basic types of SPARQL queries can be executed on RDF graphs using a [SPARQL endpoint](#sparql-endpoint):
+1. `SELECT` - return values from an endpoint in a table format
+2. `CONSTRUCT` - return values from an endpoint as an RDF graph
+3. `ASK` - return True or False based on if the query returns one or more triples or nothing
+4. `DESCRIBE` - return an RDF graph from the endpoint determined by the endpoint itself
+
+Each type of query also takes a `WHERE` statement (except for DESCRIBE where it is optional) composed of [triples](#triple) to restrict the query. Each triple statement must end with a `.`. Triples which share the same subject can use a `;` instead of a period for readability. Varables are prefixed by a `?`.
+
+Example query to find the creation date and termination date of all buildings (based on the CityGML 3.0 conceptual model):
+```SQL
+PREFIX core: <http://www.opengis.net/citygml/3.0/core#>
+PREFIX bldg: <http://www.opengis.net/citygml/building/3.0/building#>
+
+SELECT ?building ?creationDate ?terminationDate
+WHERE {
+    ?building a bldg:Building ;
+              core:creationDate    ?creationDate ;
+              core:terminationDate ?terminationDate .
+}
+```
+Note that in this query the first triple predicate `a` is a shortcut for `rdf:type`
+
+See the [SPARQL 1.1 Query Language Specification Document](https://www.w3.org/TR/sparql11-query/) for more details.
+
+#### SPARQL Endpoint
+A web service that accepts, computes, and returns results from [SPARQL queries](#SPARQL). These often work in conjunction with [Triple Stores](#triple-store).
+
+Example SPARQL Endpoints:
+* [GeoSPARQL (the website, not the SPARQL extention or the ontology)](http://www.geosparql.org/) based on the [Apache Jena Framework](https://jena.apache.org/)
+* [dbpedia](https://dbpedia.org/sparql)
+
+#### Triple Store
+A database for storing [triples](#triple). Sometimes called an RDF-Store. Data stored in triples stores are often accessed using [SPARQL Endpoints](#SPARQL-endpoint).
+
+Detailed triple store documentation can also be found [here](GeoTriples_Strabon_Parliament_Blazegraph)
+
+## Description Logic
+A family of knowledge representation languages used to model concepts (classes), roles (properties), and [individuals](#individual). In the case of [ontologies](#ontology), Description Logics (DLs) are used to model domains of knowledge (e.g. knowledge about an area of research, industry, etc). DLs use [axioms](#axiom) to model knowledge and often divide axioms into two groups: a [TBox](#tbox) and an [ABox](#abox).
+
+DLs have different [expressivity](#expressivity) which can affect their ability to express knowledge. This also changes their [decidability](#decidability) and complexity which are important factors when using [reasoners](#reasoning) to infer new axioms in a ontologies. 
+
+### Axiom
+A logical statement relating roles and/or concepts
+
+### ABox
+The ABox or Assertional Box of a DL model of knowledge is the group of [axioms](#axiom) that describe relationships between [individuals](#individual) and concepts 
+
+e.g. `Mary is a Mother`
+
+### TBox
+The TBox or Terminological Box of a DL model of knowledge is the group of [axioms](#axiom) that describe relationships between concepts and roles
+
+e.g. `Every Mother has a Daughter`
+
+### Individual
+An instance of a concept (class) or role (property)
+
+### Decidability
+In a logical system, such as a [Description Logic](#description-logic), the system is decidable if there exists an effective method for determining the answer to true/false or yes/no question. For example propositional logic is decidable because a truth table can answer any true/false question written with propositional logic.
+
+### Expressivity
+Expressivity or expressiveness is a characteristic of a language that describes its ability to specify [#conceptualizations](#conceptualization). Generally, more expressive languages are also less efficient to [reason](#reasoning) with. Some languages are so expressive that they are not [decidable](#Decidability) and cannot be reasoned upon.
+
+### Reasoning
+The process of infer new [axioms](#axiom) from a set of existing axioms. This is often performed with software called reasoners or semantic reasoners.
+
+For example:
+* If `Mary is a Mother`
+* And `All Mothers are Women`
+* We can infer that `Mary is a Woman`
+
