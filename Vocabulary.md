@@ -70,7 +70,7 @@ A basic [RDF](#Resource-Description-Framework) data structure composed of three 
 2. Predicate - a relationship between the subject and the object
 3. Object - another subject or a data value
 
-![Triple example](Pictures/UD-Graph/triple_structure.png)
+![Triple example](/Pictures/UD-Graph/triple_structure.png)
 
 For example:
 | Subject | Predicate | Object |
@@ -89,7 +89,7 @@ Also,
 > (2) on the richness of the vocabulary chosen;
 > (3) on the axiomatization. In turn, the axiomatization depends on language expressiveness issues 
 
-![Ontology Example](Pictures/UD-Graph/ontology_example.png)
+![Ontology Example](/Pictures/UD-Graph/ontology_example.png)
 
 There are generally two main types of ontologies:
 * [Upper Ontology](#Upper-Ontology)
@@ -105,7 +105,7 @@ Formal under the context of ontologies refers to the "rigour" and "specificity" 
 
 Different languages approach formalization differently. Ontologies use very formal descriptions (like [description logics](#Description-Logic))
 
-![formal/informal examples](Pictures/UD-Graph/formal-informal.png)
+![formal/informal examples](/Pictures/UD-Graph/formal-informal.png)
 
 Source: [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0)
 
@@ -129,7 +129,7 @@ There are 3 main types of ontology networks:
 2. Multiple ontology - Multiple local ontologies are created and linked to one another
 3. Hybrid ontology - Similar to the multiple ontology approach but a common vocabulary is defined to interlink each local ontology. An [upper ontology](#upper-ontology) can be used as a common vocabulary for this purpose
 
-![network of ontology types](Pictures/UD-Graph/ontology_network.png)
+![network of ontology types](/Pictures/UD-Graph/ontology_network.png)
 
 Source: _Ontology-Based Integration of Information - A Survey of Existing Approaches_ by H. Wache, T. Vogele, U. Visser, H. Stuckenschmidt, G. Schuster, H. Neumann and S. Hubner
 
@@ -171,7 +171,7 @@ Achieving high LOD "quality" steps:
 ### Semantic Web Stack
 The architecture of the [Semantic Web](#semantic-web) and [Linked Data](#linked-data) based on the international standards of the World Wide Web Consortium (W3C). 
 
-![Semantic Web Stack](Pictures/UD-Graph/Semantic_Web_Stack.png)
+![Semantic Web Stack](/Pictures/UD-Graph/Semantic_Web_Stack.png)
 
 The stack layers:
 * Hypertext Web technologies:
