@@ -29,6 +29,36 @@
    * [Reasoning](#Reasoning)
 ---
 
+- [CMMS](#cmms--computerized-maintenance-management-system-or-software)/ [EAM](#eam)
+    1. [Equipment](#equipment)
+    2. [Urban Object](#urban-object)
+    3. [Equipment park](#equipment-park--fleet--pool)  / pool / fleet 
+    4. [Site](#site)
+    5. [AEC](#aec)
+
+- [Process](#process): 
+    1. [BIM](#bim---building-information-modelling)
+    2. [CIM](#cim---city-information-modelling)
+
+- [Conceptual Framework](#conceptual-framework) :
+    1. [GIS](#gis---geographic-information-system)
+
+- [Standards](#standards) :
+    1. [WFS / WMS](#wfs--wms)
+    2. [3DTiles](#3dtiles)
+
+- Other : 
+   1. [Features](#features)
+   2. [Representation](#representation)
+   3. [Symbology](#symbology)
+   4. [Semiology](#semiology--semiotics)
+   5. [Context](#context)
+   6. [Environment](#environment)
+   7. [Symbole](#symbole)
+   8. [Contextual View](#contextual-view)
+   9. [Event](#event)
+---
+
 ### Need
 **Definition**: a **need** or [feature](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/) is a set of related requirements that allows the user to satisfy a "business" objective or need.
 
@@ -307,3 +337,205 @@ For example:
 * And `All Mothers are Women`
 * We can infer that `Mary is a Woman`
 
+## CMMS : Computerized Maintenance Management System (or Software)
+
+
+FR: **Gestion de Maintenance Assistée par Ordinateur**
+
+
+A Computerized Maintenance Management System (CMMS), also known as Computerized Maintenance Management Information System (CMMIS), is a software package that maintains a computer database of information about an organization's maintenance operations [1]. 
+A CMMS aims to achieve two goals : 
+- to help companies in managing their assets by storing information such as location, position, statistics, model and type ...
+- to help maintenance workers by storing information such as documentation and comprehension of all available information about an asset
+
+According to [2], a CMMS support the following capabilities :
+- Resource and labor management: Track available employees and equipment certifications. Assign specific tasks and assemble crews. Organize shifts and manage pay rates.
+
+- Asset registry: Store, access and share asset information
+
+- Work order management
+
+- Preventive maintenance
+
+- Materials and inventory management
+
+- Reporting, analysis and auditing : Analyze information to understand asset availability, performance trends, MRO inventory optimization and other information to support business decisions and gather and organize information for audits.
+
+
+---
+**Bib**: 
+- [1] Cato, William; Mobley, Keith (2002). Computer-managed Maintenance Systems: A Step-by-step Guide to Effective Management of Maintenance, Labor, and Inventory. Butterworth-Heinemann. p. 33. ISBN 0-7506-7473-3.
+- [2] https://www.ibm.com/topics/what-is-a-cmms
+---
+## EAM
+
+From [IBM](https://www.ibm.com/topics/enterprise-asset-management) :
+"Enterprise asset management (EAM) is a combination of software, systems and services used to maintain and control operational assets and equipment. The aim is to optimize the quality and utilization of assets throughout their lifecycle, increase productive uptime and reduce operational costs.
+
+Enterprise asset management involves work management, asset maintenance, planning and scheduling, supply chain management and environmental, health and safety (EHS) initiatives."
+
+## CMMS / EAM differences
+
+Those two types of system have a lot of in common and are often used together to describe softwares. An EAM will often include the CMMS needs and capabilities.
+The main notable difference between CMMS and EAM is that EAM offers a broader range of features. [Here](https://reliabilityweb.com/articles/entry/eam-and-cmms-know-the-difference#:~:text=A%20CMMS%20focuses%20on%20maintenance,starting%20with%20design%20and%20installation.) an interesting article on the difference between the two types. 
+
+For information: CarlSource is described by CarlSoftware as a CMMS - AEM software.
+
+### Equipment
+
+FR: **Equipement**
+
+Also known as Asset, equipment is a technical object belonging to a company and needs maintenance through time in order to efficiently work.
+
+
+---
+
+### Urban Object
+
+FR: **Objet urbain** ou **Mobilier urbain**
+
+According to [1], Urban Object can be defined as "All public or private objects or devices installed in the public space and related to a function or service offered by the community"
+
+In our project, the scope of this term is not enough to regroup all of the assets that a company can own.
+Also, through time, the term evolved and is usually used to refer to street furniture. In order to avoid any confusion, we will not use the term Urban Object in our project.
+
+---
+**bib**:
+- [1] Annie Boyer, Élisabeth Rojat-Lefebvre, Aménager les espaces publics. Le mobilier urbain, Paris, éd. du Moniteur, 1994, 327 p. (ISBN 978-2-281-19084-7 et 2-281-19084-6), p. 20
+---
+
+### Equipment park / fleet / pool
+
+FR: **Parc d'équipement**
+
+Proposed definitions: An equipment park is the set of equipment / asset that one company manages.
+
+---
+
+### Site
+
+Proposed definitions: A Site is a set of equipment / asset that one company manages. There are multiple sites in one equipment park 
+
+---
+
+### AEC
+
+This acronym stands for Architecture, Engineering, and Construction in our project.
+
+## Process
+
+### BIM - building information modelling
+
+ISO Description :  
+- ISO 19650:2018: Organization and digitization of information about buildings and civil engineering works, including building information modelling -- Information management using building information modelling: 
+  - Concepts and principles.
+  - Delivery phase of the assets.
+  - Operational phase of the assets.
+  - Security-minded approach to information management.
+
+- ISO 19650:2019 defines BIM as the use of a shared digital representation of a built asset to facilitate design, construction and operation processes to form a reliable basis for decisions.[31]
+
+Used in the AEC industry, BIM is a process of creation, production, exchange, integration, visualization and exploitation of data during all the life cycle of an AEC construction. A BIM tool will often allow the creation of a digital twin of the construction, containing the geometry, relation and attributes of the object.
+
+---
+### CIM - City Information Modelling
+
+CIM has no official definition to this day.
+It can be seen as an evolution from GIS, where the main difference will be that the object, at a city scale, will evolve from physical object to relationnal object (example : with raster, we only know the place and id of each object). The objective here is to have a similar process as the BIM but for City Object in order to obtain information and relation between object to facilitate analysis, decision making, communication around urbanism.
+ 
+---
+
+## Framework
+
+---
+**bib** : 
+---
+### GIS - geographic information system
+
+FR: **SIG** ou **système d'information géographique**
+
+Esri : 
+
+A geographic information system (GIS) is a framework for gathering, managing, and analyzing data. Rooted in the science of geography, GIS integrates many types of data. It analyzes spatial location and organizes layers of information into visualizations using maps and 3D scenes. ​With this unique capability, GIS reveals deeper insights into data, such as patterns, and situations—helping users make smarter decisions. 
+
+United States Geological Survey : 
+
+A Geographic Information System (GIS) is a computer system that analyzes and displays geographically referenced information. It uses data that is attached to a unique location.
+
+---
+
+## Standard 
+
+### WFS / WMS
+
+The  OGC  defined  several  Open  Web  Services  for  accessing  geographical  data.The  two  main  existing  servicing  are  the  Web  Feature  Services  (WFS)  and the  Web  Map  Services  (WMS).  Those  services  allows  to provide accesses to features.
+
+---
+### 3DTiles
+
+Cesium : 
+
+3D Tiles is an open specification for sharing, visu-alizing, fusing, and interacting with massive heterogenous 3Dgeospatial  content  across  desktop,  web,  and  mobile  applica-tions.
+
+Documentation on 3D Tiles [here](https://github.com/VCityTeam/GMAOBIM/wiki/3D-tiles)
+
+
+## Other : 
+
+### Features
+
+The starting point for modeling of geographic information. Abstraction of a real worldphenomenon [1]
+
+---
+**bib** : 
+- [1] The  OpenGIS®  Abstract  Specification  Topic  6:   The  Coverage  Type  and  its  Subtypes - OGC
+
+### Representation
+
+In database : Data Representation refers to the form in which data is stored, processed, and transmitted
+
+In Cumputers Graphic : Data visualization is an interdisciplinary field that deals with the graphic representation of data, where representation refers to an image, figure, symbol, sign, or geometry that represents a phenomenon, an idea, or a feature.
+
+In order to avoid any confusion in our project, we will use 3D representation for the second definition.
+
+--- 
+### Symbology 
+
+The use, study, or interpretation of symbols.
+
+--- 
+
+### Semiology / Semiotics
+[Semiotics](https://www.britannica.com/science/semiotics), also called semiology, the study of signs and sign-using behavior.
+
+The main difference between Symbology and Semiotics is that semiotics is the study of signs and symbols, especially as means of language or communication, where symbology is the study of symbols.
+
+--- 
+
+### Context 
+--- 
+[Definition](https://dictionary.cambridge.org/dictionary/english/context): the situation within which something exists or happens, and that can help explain it.
+
+This situation contains surrounding and linked objects
+
+### Environment
+--- 
+[Definition](https://www.dictionary.com/browse/environment): The aggregate of surrounding things, conditions, or influences; surroundings; milieu.
+
+The environment of an asset can help to describe its context
+
+### Symbole 
+---
+[Definition](https://www.larousse.fr/dictionnaires/francais/symbole/76051#Et4ePxSlt6MUO66Z.99): Signe figuratif, être animé ou chose, qui représente un concept, qui en est l'image, l'attribut, l'emblème.
+
+### Contextual view
+---
+Own definition: View of an object that uses its context to help in its definition and comprehension. 
+
+The view can be either from : 
+- database: Result sets of a stored query
+- graphic: visualization of 2D and 3D geometry representing objects
+
+### Event
+--- 
+Own definition in CMMS : An object without representations, such as work orders or disorders, that is linked to an asset. It can be associated with a documentation.
