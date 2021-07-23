@@ -59,6 +59,15 @@
    9. [Event](#event)
 ---
 
+Projet - Charlie Bessot
+[Tuile](#Tuile)
+[Texture](#Texture)
+[Mesh](#Mesh)
+[UVs](#UVs)
+[Vertex](#Vertex)
+[Atlas de texture](Atlas-de-texture)
+
+---
 ### Need
 **Definition**: a **need** or [feature](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/) is a set of related requirements that allows the user to satisfy a "business" objective or need.
 
@@ -539,3 +548,25 @@ The view can be either from :
 ### Event
 --- 
 Own definition in CMMS : An object without representations, such as work orders or disorders, that is linked to an asset. It can be associated with a documentation.
+
+---
+
+Ici se trouve les différentes notions que j'ai pu aborder lors de la réalisation de mon projet. Il m'est arrivé de nombreuses fois de ne pas comprendre exactement ce que je devais faire car un ou plusieurs mots m'étaient inconnus. Cette page doit servir à rensegner toutes les personnes recherchant du vocabulaire en rappport avec l'informatique graphique. 
+
+#### Tuile : 
+Une tuile c'est un ensemble d'éléments (ici bâtiments) regroupés et traités ensembles. Ainsi on s'occupe d'une tuile directement au lieu de s'occuper de chaque élément individuellement. Il permet notamment de regrouper les éléments proche et de mieux gérer le parcours d'objet dans l'espace (voir [BVH](https://en.wikipedia.org/wiki/Bounding_volume_hierarchy))
+
+#### Texture : 
+Dans le domaine de la synthèse d'image, une texture est une image en deux dimensions (2D) que l'on va appliquer sur une surface (2D) ou un volume en trois dimensions (3D) de manière à habiller cette surface ou ce volume.
+
+#### Mesh : 
+IL s'agit de la représentation graphique en 3D d'un objet. La surface de l'objet est divisé en pleins de petits triangles, c'est ce que l'on appelle le maillage. Chaque point de cette représentation est un sommet de l'objet. Ils sont définis à l'aide d'une position, d'une normale et d'une coordonnée de texture.
+
+#### UVs : 
+Les sommets d'un objet ont des coordonnées spatiales, ainsi que des UVs (coordonnées de texture) qui permettent le bon positionnement d'une texture sur une face. C'est une relation entre les sommets de l'objet et les pixels de l'image (texture). Ces coordonnées sont comprises entre (0,0), le coin en bas à gauche d'une texture et (1,1), le coin en haute à droite.
+
+#### Vertex : 
+C'est le nom que l'on donne aux sommets des triangles (souvent se sont des triangles mais rien n'y oblige) qui composent un mesh.
+
+#### Atlas de texture : 
+Un atlas de texture c'est le regroupement de plusieurs textures misent côte à côte dans le but de simplifier l'exploitation de celles-ci par la suite. Il faut faire attention car les UV des sommets ne correspondent plus aux bons pixels de la texture (qui est en fait composée maintenant de plusieurs textures), il faut adapter les proportions grâce à un calcul.
