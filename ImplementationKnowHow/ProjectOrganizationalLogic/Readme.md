@@ -1,9 +1,9 @@
 # Organizational logic of git repositories
 The [VCityTeam organisation](https://github.com/VCityTeam) together with its partners
- * manages [list of projects](https://github.com/VCityTeam/VCity/wiki/Projects) which 
-   requires the handling of information
- * produces [software components](https://github.com/VCityTeam/UD-SV/tree/master/SoftwareComponents)
- * handles all the above information (project artifacts and software) with git
+ * manages a [list of projects](https://github.com/VCityTeam/VCity/tree/master/Projects) which 
+   requires the handling of information,
+ * produces [software components](https://github.com/VCityTeam/UD-SV/tree/master/SoftwareComponents),
+ * and handles all the above information (project artifacts and software) with git.
 
 ## Driving organizational principles
 The good practices applied for the break down of the organisation information into git repositories is as follows
@@ -21,8 +21,7 @@ The good practices applied for the break down of the organisation information in
 
 ## Breaking down into repositories
 Independently from public/private seraparation concerns, the application of the above driving 
-principles yields the following good practices applied for the break down of the
-information of the organisation into git repositories goes
+principles yields the following good practices for git repositories:
  * Create a repository for every project (managerial) information e.g. [this UD-SV project](/Readme.md)
    (in application of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) managerial vs software)
  * **For every owner** (precedence of ownership over software engineering)
@@ -33,8 +32,7 @@ information of the organisation into git repositories goes
 
 The above practices are summarized by the following illustration
 
-<img src="Diagrams/UD-SV-Repository_organizational_logic_project_vs_component.png"
-     alt="Organizational logic : project vs component" width="800"/>
+![Organizational logic : project vs component](Diagrams/UD-SV-Repository_organizational_logic_project_vs_component.png)
 
 ## Relationships between project/software repositories
 Project repositories and software repositories are in a [many-to-many](https://en.wikipedia.org/wiki/Cardinality_(data_modeling)#Application_program_modeling_approaches) (cardinality) relationship i.e.
@@ -43,8 +41,7 @@ Project repositories and software repositories are in a [many-to-many](https://e
 
 This [many-to-many](https://en.wikipedia.org/wiki/Cardinality_(data_modeling)#Application_program_modeling_approaches) is illustrated by the following diagram
 
-<img src="Diagrams/UD-SV-Repository_organizational_logic_shared_development.png"
-     alt="Organizational logic : shared development" width="800"/>
+![Organizational logic : shared development](Diagrams/UD-SV-Repository_organizational_logic_shared_development.png)
 
 **Note**: in the above diagram software component `B` is co-developped by two projects that 
 both share the same (legal) owner (respect precedence of ownership criteria of software 
@@ -54,11 +51,10 @@ academia) and must be banned (at all costs).
 
 ## Separation of public from private information
 The organisation also applies the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) to the public vs private criteria.
-This directly translates to the fact that private information (be it project or component) is held in private (git) repositories when public information (project or component) is kept in ...  public (git) repositories. For example
- - the [VCity project repository](https://github.com/VCityTeam/VCity/wiki/Projects) is private when the [UD-SV project repository](https://github.com/VCityTeam/UD-SV) is its public counterpart
- - [GMAOBIM software](https://github.com/VCityTeam/GMAOBIM) is a private software repository when [py3dTilers software repository](https://github.com/VCityTeam/py3dtilers) is a public repository
+This directly translates to the fact that private information (be it project or component) is held in private (git) repositories whereas public information (project or component) is kept in ...  public (git) repositories. For example
+ - the [VCity project repository](https://github.com/VCityTeam/VCity/wiki/Projects) is private whereas the [UD-SV project repository](https://github.com/VCityTeam/UD-SV) is its public counterpart
+ - [GMAOBIM software](https://github.com/VCityTeam/GMAOBIM) is a private software repository whereas [py3dTilers software repository](https://github.com/VCityTeam/py3dtilers) is a public repository
 
 This can be summarized by the following illustration
 
-<img src="Diagrams/UD-SV-Repository_organizational_logic_private_vs_public.png"
-     alt="Organizational logic : shared development" width="800"/>
+![Organizational logic : shared development](Diagrams/UD-SV-Repository_organizational_logic_private_vs_public.png)
