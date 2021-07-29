@@ -21,8 +21,6 @@ Once your chosen demo is installed feel free to experiment with it, extend it an
     - first follow [UD-Viz front end install notes](#installing-components)
     - then [UD-Serv/API_Enhanced_City install notes](https://github.com/MEPP-team/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md) that enable you to install some of the server-side components on your computer.
 
-### Computing and visualizing 3DTiles tilesets
-[installation notes](InstallDemo3dTilesLyonViewer.md)
 ### Computing 3DTiles **temporal** tilesets and web visualize them:
 [installation notes](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Demos/Temporal-LyonMetropole)
 ### [TBD](https://en.wikipedia.org/wiki/TBD_(disambiguation))
