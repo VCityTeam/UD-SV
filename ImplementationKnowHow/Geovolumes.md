@@ -31,11 +31,11 @@ implémentation test (sans getview): https://gitlab.com/tomeof/node-3dps
 
 ### Geovolumes API (3D container API)
 
-https://docs.ogc.org/per/20-029.html
-requirement : https://docs.ogc.org/per/20-030.html
-https://docs.ogc.org/per/20-031.html
-
-https://web3d.siggraph.org/wp-content/uploads/2020/11/SCS_Workshop_3D_Standard.pdf
+Ressource :
+- https://docs.ogc.org/per/20-029.html
+- requirement : https://docs.ogc.org/per/20-030.html
+- https://docs.ogc.org/per/20-031.html
+- https://web3d.siggraph.org/wp-content/uploads/2020/11/SCS_Workshop_3D_Standard.pdf
 
 Décrit une API permettant à un serveur de servir des données 3D géospatial en utilisant un flux standardisé. Ces données sont organisées dans l'espace. 
 De plus, il est possible de créer en amont des process permettant la transformation et conversion de données à la volée sur le serveur afin de répondre à des query
@@ -48,19 +48,18 @@ containing at most one 3D model dataset. Chaque volume peut contenir d'autres vo
 ![3d_container](https://github.com/VCityTeam/UD-SV/blob/master/ImplementationKnowHow/images/3dcontainer.png)
 
 Il est décrit avec les éléments suivants : 
-    - id
-    - titre
-    - description
-    - extent spatial : interval, trs (par défaut, [gregorian](http://defs.opengis.net/vocprez/object?uri=http://www.opengis.net/def/uom/ISO-8601/0/Gregorian))
-    - extent temporel
-    - children
-    - content : Each link in the "content" array shall be to a specific distribution of that dataset. The "rel" property of each reference indicates its relation to the dataset, such as "original" (the distribution representing the most original version of the dataset, e.g. a CityGML model), or "alternate" (other dataset distributions in different encodings or for different platforms).
-    What a content reference links to is dependent on content type and TBD for some types:
-        - 3DTiles: tileset.json
-        - I3S: NodeIndexDocument
-        - CityGML: Collection document and/or logical space feature (CityModel)
-        - CDB: Root folder
-        - 2D features: link to collection information document
+- id 
+- titre
+- description
+- extent spatial : interval, trs (par défaut, [gregorian](http://defs.opengis.net/vocprez/object?uri=http://www.opengis.net/def/uom/ISO-8601/0/Gregorian))
+- extent temporel
+- children
+- content : Each link in the "content" array shall be to a specific distribution of that dataset. The "rel" property of each reference indicates its relation to the dataset, such as "original" (the distribution representing the most original version of the dataset, e.g. a CityGML model), or "alternate" (other dataset distributions in different encodings or for different platforms). What a content reference links to is dependent on content type and TBD for some types:
+    - 3DTiles: tileset.json
+    - I3S: NodeIndexDocument
+    - CityGML: Collection document and/or logical space feature (CityModel)
+    - CDB: Root folder
+    - 2D features: link to collection information document
 
 
 requête possible :
@@ -68,7 +67,7 @@ requête possible :
 
 - getCollections/{3D-Containe-id} : The HTTP /collections/{3DContainerID} GET response returns JSON representing the 3D-Container.
 
-`{
+```{
     "links": [
         {
             "href": "https://3d.hypotheticalhorse.com/collections/",
@@ -155,6 +154,6 @@ requête possible :
         }
     ]
 }
-`
+```
 
 ![activity_diagram](https://github.com/VCityTeam/UD-SV/blob/master/ImplementationKnowHow/images/activity_diagram.png)
