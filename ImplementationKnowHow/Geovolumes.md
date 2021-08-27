@@ -6,7 +6,7 @@ doc : http://docs.opengeospatial.org/is/15-001r4/15-001r4.html
 L'idée derrière 3DPS est d'oublier le format de donnée des géométries (comme pour jpeg, png ...)
 
 Il décrit un service de requête d'objet 3d avec un ensemble de requête :
--   getcapabilities : retourne les layers mis a disposition par le service
+-   GetCapabilities : retourne les layers mis a disposition par le service
     pour chaque layer : 
     - nom
     - description
@@ -17,7 +17,7 @@ Il décrit un service de requête d'objet 3d avec un ensemble de requête :
     - availableStyle
     - etc ..
 
-- getressourcebyID
+- GetRessourcebyID
 
 - deux types de ressources "portail" possible :
     - GetScene : The response to a valid GetScene request is a document of the MIME type as specified in the request Format parameter, except under error conditions. This document contains a 3D scene assembled from the features of the selected Layers (mainly) within the specified BoundingBox, represented in the specified CRS, Format, and Styles.
@@ -42,8 +42,8 @@ De plus, il est possible de créer en amont des process permettant la transforma
 
 ![geovolumes](https://github.com/VCityTeam/UD-SV/blob/master/ImplementationKnowHow/images/geovolumes.png)
 
-3D-Container (geovolume): Spatial information resource with a distinct bounding volume, a (required) enclosing bounding box (2D / 3D), 
-containing at most one 3D model dataset. Chaque volume peut contenir d'autres volumes (pouvant créer un kd-tree).
+3D-Container (geovolume): Ressource d'informations spatiales avec un volume de délimitation distinct, un cadre de délimitation (obligatoire) (2D / 3D), 
+contenant au maximum un ensemble de données de modèle 3D. Chaque volume peut contenir d'autres volumes (pouvant créer un kd-tree).
 
 ![3d_container](https://github.com/VCityTeam/UD-SV/blob/master/ImplementationKnowHow/images/3dcontainer.png)
 
@@ -54,18 +54,18 @@ Il est décrit avec les éléments suivants :
 - extent spatial : interval, trs (par défaut, [gregorian](http://defs.opengis.net/vocprez/object?uri=http://www.opengis.net/def/uom/ISO-8601/0/Gregorian))
 - extent temporel
 - children
-- content : Each link in the "content" array shall be to a specific distribution of that dataset. The "rel" property of each reference indicates its relation to the dataset, such as "original" (the distribution representing the most original version of the dataset, e.g. a CityGML model), or "alternate" (other dataset distributions in different encodings or for different platforms). What a content reference links to is dependent on content type and TBD for some types:
+- content : Chaque lien dans le tableau "content" renvoie à une distribution spécifique de ce jeu de données. La propriété "rel" de chaque référence indique sa relation avec le jeu de données, comme "original" (la distribution représentant la version la plus originale du jeu de données, par exemple un modèle CityGML), ou "alternate" (d'autres distributions du jeu de données dans des encodages différents ou pour des plateformes différentes). Le lien vers une référence de contenu dépend du type de contenu et est à définir pour certains types :
     - 3DTiles: tileset.json
     - I3S: NodeIndexDocument
-    - CityGML: Collection document and/or logical space feature (CityModel)
+    - CityGML: Collection de document et/ou des CityModels
     - CDB: Root folder
-    - 2D features: link to collection information document
+    - 2D features: lien vers une collection de document 
 
 
 requête possible :
-- getCollections : Collections provides the information and access to the collection of 3D containers. The collection resource accepts the 2D or 3D bounding box (bbox) and format parameter. The HTTP /collections GET response returns JSON containing two properties, links (link: URI, type, relationship) and 3D-Container.
+- getCollections : Collections fournit les informations et l'accès à la collection de 3D containers. La ressource collection accepte la bounding box 2D ou 3D (bbox) et le paramètre format. La réponse HTTP /collections GET renvoie JSON contenant deux propriétés, links (lien : URI, type, relation) et 3D-Container.
 
-- getCollections/{3D-Containe-id} : The HTTP /collections/{3DContainerID} GET response returns JSON representing the 3D-Container.
+- getCollections/{3D-Containe-id} : The HTTP /collections/{3DContainerID} GET  retourne un fichier JSON representant un 3D-Container.
 
 ```{
     "links": [
