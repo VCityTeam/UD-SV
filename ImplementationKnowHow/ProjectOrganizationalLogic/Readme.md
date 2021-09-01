@@ -58,3 +58,49 @@ This directly translates to the fact that private information (be it project or 
 This can be summarized by the following illustration
 
 ![Organizational logic : shared development](Diagrams/UD-SV-Repository_organizational_logic_private_vs_public.png)
+
+## Concerning demos
+**Definition**: A demo is an application dedicated to the illustration of a feature or a set of features. 
+In general a demo
+ - integrates one or many [software components](https://github.com/VCityTeam/UD-SV/tree/master/SoftwareComponents),
+ - can provide some specific (to the demo) components
+ - integrates demo specific data
+ - various configuration elements (a scene description, position of the camera, pre-selected objects...)
+ - uses external (to the project) services (e.g. accessing public data through well known web services)
+ - deployment material (at least some documentation on how to deploy)
+
+Each demo should have its own repository whose name is of the form 
+`UD-Demo-<project_name>[-<illustrated_feature_name>][-<territory_name>]`
+that should reflect the purpose and dependencies of that demo. 
+For example 
+ - the repository [UD-Demo-vcity-lods-lyon](https://github.com/VCityTeam/UD-Demo-vcity-lods-lyon) collects
+   all the elements required for a demo realised by the `vcity` project, illustrating
+   `lods` (Level Of Detail) related functionnality and using data related to the
+   city (territory) of Lyon
+ - a repository named `UD-Demo-DatAgora-PartDieu` (where the `<illustrated_feature_name>` was omitted) would
+   collects all the elements required for a demo realised within the `DatAgora` project, illustrating
+   some undocummented functionnality (since the `<illustrated_feature_name>` was omitted) and using data
+   related to the `PartDieu` disctrict (territory) of Lyon
+
+The general layout of a demo repository is of the form 
+```
+UD-Demo-MyProject-NiceFeature-SomeTerritory
+    ├── Component1            # E.g. UD-Viz
+    │   ├── DockerContext
+    │   │   ├── Dockerfile    # Pulling SHA1 designated versions of UD-Viz
+    │   │   ├── Patches
+    │   │   ├── SomeSpecificConfiguration.html
+    │   │   └── ...
+    │   ├── Docs
+    │   └── docker-build.sh   # Or ansible scripts...
+    ├── Component2
+    │   ├── DockerContext     # E.g. 3d-tiles-samples server
+    │   ├── Data
+    │   │   ├── pull-tileset-one.sh   # Pull from e.g. Zenodo
+    │   │   └── recompute-tileset-two.sh
+    │   └── docker-build.sh   # might call Data/pull-tileset-*.sh
+    ├── DockerCompose.yml
+    ├── HelmChart             # For a Kubernetes deployment
+    │   └───  ...
+    └── install.sh            # Might call Component[1|2]/docker-build.sh  
+```
