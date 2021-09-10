@@ -9,7 +9,7 @@ we lose both batch and feature table.
 Looking at the [KHR_draco_mesh_compression](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Khronos/KHR_draco_mesh_compression/README.md) extension for GLTF
 may resolve this problem.
 
-Look at those [advices]https://github.com/iTowns/itowns/wiki/3D-Tiles#advices-for-generating-small-gltf-files) from Itowns to generate small gltf file.
+Look at those [advices](https://github.com/iTowns/itowns/wiki/3D-Tiles#advices-for-generating-small-gltf-files) from Itowns to generate small gltf file.
 
 ### Texture compression
 
