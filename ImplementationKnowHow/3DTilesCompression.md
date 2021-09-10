@@ -30,3 +30,85 @@ As our solution aims to be working on the web, the priority must be to reduce th
 
 
 Texture can be also added on lower LOD of a dataset, in order to load them only when close to a building.
+
+## [gltf-pipeline](https://github.com/CesiumGS/gltf-pipeline)
+
+Compress `.gltf` or `.glb` files  
+Problem: not working with .b3dm files (used in 3D Tiles)
+
+To install:
+
+```bash
+npm install -g gltf-pipeline
+```
+
+## [gltf-transform](https://gltf-transform.donmccurdy.com/)
+
+Same, it seems it can't compress tilesets or .b3dm files
+
+## [3dTiles validator](https://github.com/CesiumGS/3d-tiles-validator)
+
+Allows to validate 3DTiles tilesets.  
+To install, clone the repo. Then:
+
+```bash
+cd <PATH>/3d-tiles-validator/validator
+npm install
+```
+
+From `validator` folder:
+
+Validates the input tileset.
+
+```bash
+node ./bin/3d-tiles-validator.js -i ./specs/data/Tileset/tileset.json
+```
+
+Validates a single tile.
+
+```bash
+node ./bin/3d-tiles-validator.js -i ./specs/data/Tileset/tile.b3dm
+```
+
+## [3dTiles tools](https://github.com/engineerhe/3d-tiles-tools)
+
+Various tools for 3DTiles. It can transform glb in b3dm and b3dm into glb.  
+To install, clone the repo. Then:
+
+```bash
+cd <PATH>/3d-tiles-tools/tools
+npm install
+```
+
+From `tools` subfolder:
+glb to b3dm:
+
+```bash
+node ./bin/3d-tiles-tools.js glbToB3dm -i ./model.glb -o ./model.b3dm
+```
+
+b3dm to glb:
+
+```bash
+node ./bin/3d-tiles-tools.js b3dmToGlb -i ./model.glb -o ./model.b3dm
+```
+
+## Compress 3DTiles
+
+[This comment](https://gitmemory.com/issue/Geodan/pg2b3dm/21/510384357) suggests to use 3DTiles tools to transform b3dm into gltf, compress gltf with gltf-pipeline, then transform gltf to b3dm.
+
+First, install gltf-pipeline and 3d-tiles-tools.
+
+Then, from `3d-tiles-tools\tools\`:
+
+```bash
+node ./bin/3d-tiles-tools.js b3dmToGlb -i ..\..\3DTiles\tiles\0.b3dm -o 0.glb
+
+gltf-pipeline -i .\0.glb -o .\compressed.glb -d -b
+
+node ./bin/3d-tiles-tools.js glbToB3dm .\compress.glb ..\..\3DTiles\tiles\1-compressed.b3dm
+```
+
+\+ : Compression is a factor of 10 (like 100kb -> 10kb).
+
+\- : Batch table data might get lost using this method.
