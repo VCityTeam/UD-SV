@@ -106,7 +106,7 @@ node ./bin/3d-tiles-tools.js b3dmToGlb -i ..\..\3DTiles\tiles\0.b3dm -o 0.glb
 
 gltf-pipeline -i .\0.glb -o .\compressed.glb -d -b
 
-node ./bin/3d-tiles-tools.js glbToB3dm .\compress.glb ..\..\3DTiles\tiles\1-compressed.b3dm
+node ./bin/3d-tiles-tools.js glbToB3dm .\compressed.glb ..\..\3DTiles\tiles\0-compressed.b3dm
 ```
 
 \+ : Compression is a factor of 10 (like 100kb -> 10kb).
