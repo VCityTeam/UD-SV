@@ -112,3 +112,14 @@ node ./bin/3d-tiles-tools.js glbToB3dm .\compressed.glb ..\..\3DTiles\tiles\0-co
 \+ : Compression is a factor of 10 (like 100kb -> 10kb).
 
 \- : Batch table data might get lost using this method.
+
+### Load in UD-Viz
+
+Problem: THREE needs a draco loader to load compressed files in UD-Viz.  
+--> copy the [draco folder](https://github.com/mrdoob/three.js/tree/dev/examples/js/libs/draco) in your `assets`
+
+You can enable the draco loader with:
+
+```
+itowns.enableDracoLoader('./assets/draco/');
+```
