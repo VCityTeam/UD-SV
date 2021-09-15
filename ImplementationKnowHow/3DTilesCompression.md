@@ -61,13 +61,13 @@ From `validator` folder:
 Validates the input tileset.
 
 ```bash
-node ./bin/3d-tiles-validator.js -i ./specs/data/Tileset/tileset.json
+node ./bin/3d-tiles-validator.js -i path/to/Tileset/tileset.json
 ```
 
 Validates a single tile.
 
 ```bash
-node ./bin/3d-tiles-validator.js -i ./specs/data/Tileset/tile.b3dm
+node ./bin/3d-tiles-validator.js -i path/to/Tiles/tile.b3dm
 ```
 
 ## [3dTiles tools](https://github.com/engineerhe/3d-tiles-tools)
