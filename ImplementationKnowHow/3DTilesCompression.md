@@ -123,3 +123,5 @@ You can enable the draco loader with:
 ```
 itowns.enableDracoLoader('./assets/draco/');
 ```
+
+--> An error occurs because the batch table content is missing
