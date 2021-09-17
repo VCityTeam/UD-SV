@@ -121,7 +121,7 @@ Also,
 > (2) on the richness of the vocabulary chosen;
 > (3) on the axiomatization. In turn, the axiomatization depends on language expressiveness issues 
 
-![Ontology Example](./Pictures/UD-Graph/ontology_example.png)
+![Ontology Example](./Pictures/ontology_example.png)
 
 One of the most widely used languages for expressing ontologies is [Web Ontology Language (OWL)](#web-ontology-language).
 [Protégé](https://protege.stanford.edu/) is a powerful open-source tool for visualizing and editing ontologies.
@@ -134,7 +134,7 @@ Formal under the context of ontologies refers to the "rigour" and "specificity" 
 
 Different languages approach formalization differently. Ontologies use very formal descriptions (like [description logics](#Description-Logic))
 
-![formal/informal examples](/Pictures/UD-Graph/formal-informal.png)
+![formal/informal examples](./Pictures/formal-informal.png)
 
 Source: [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0)
 
@@ -150,7 +150,7 @@ There are 3 main types of ontology networks:
 2. Multiple ontology - Multiple local ontologies are created and linked to one another
 3. Hybrid ontology - Similar to the multiple ontology approach but a common vocabulary is defined to interlink each local ontology. An [upper ontology](#upper-ontology) can be used as a common vocabulary for this purpose
 
-![network of ontology types](/Pictures/UD-Graph/ontology_network.png)
+![network of ontology types](./Pictures/ontology_network.png)
 
 Source: _Ontology-Based Integration of Information - A Survey of Existing Approaches_ by H. Wache, T. Vogele, U. Visser, H. Stuckenschmidt, G. Schuster, H. Neumann and S. Hubner
 
@@ -197,7 +197,7 @@ Achieving high LOD "quality" steps:
 ### Semantic Web Stack
 The architecture of the [Semantic Web](#semantic-web) and [Linked Data](#linked-data) based on the international standards of the World Wide Web Consortium (W3C). 
 
-![Semantic Web Stack](/Pictures/UD-Graph/Semantic_Web_Stack.png)
+![Semantic Web Stack](./Pictures/Semantic_Web_Stack.png)
 
 The stack layers:
 * Hypertext Web technologies:
@@ -256,7 +256,7 @@ A basic [RDF](#Resource-Description-Framework) data structure composed of three 
 2. the predicate, which is an IRI; the middle term (the linkage, or "verb") in an RDF statement. For example, in the statement "Alice knows Bob" then "knows" is the predicate which connects "Alice" (the subject of the statement) to "Bob" (the object of the statement).
 3. the object, which is an IRI, a literal or a blank node; the object is the final part of an RDF statement.
 
-![Triple example](/Pictures/UD-Graph/triple_structure.png)
+![Triple example](./Pictures/triple_structure.png)
 
 - [OGC: RDF 1.1 Concepts and Abstract Syntax](https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple)
 
