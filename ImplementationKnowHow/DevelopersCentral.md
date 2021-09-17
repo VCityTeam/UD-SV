@@ -30,10 +30,12 @@ Adopt the best practices
 ### Install the demos
  * If you need to compute a 3Dtiles tile-set
    - Understand what [py3dTilers](https://github.com/VCityTeam/py3dtilers) is made for
-   - Depending on the type of your input data, try try to run one of the tilers e.g. [CityTiler](https://github.com/VCityTeam/py3dtilers/tree/master/py3dtilers/CityTiler)
-   - Alternatively understand [what PythonCallingDocker is for](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Computations/3DTiles/LyonTemporal/PythonCallingDocker#readme): for example try to [compute this tile-set](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Demos/ValleeChimie#1-compute-correct-data-for-your-demo)
+   - Depending on the type of your input data, try to run one of the tilers e.g. [CityTiler](https://github.com/VCityTeam/py3dtilers/tree/master/py3dtilers/CityTiler)
+   - Alternatively understand is your work on Lyon métropole opendata [get acquainted with PythonCallingDocker](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Computations/3DTiles/LyonTemporal/PythonCallingDocker#readme): for example try to [compute this tile-set](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Demos/ValleeChimie#1-compute-correct-data-for-your-demo)
  * Clone, install and run the [UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template)
- * 
-UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
-Try to [install them](https://github.com/VCityTeam/UD-SV/tree/master/Install) on your local desktop.
+   - display your tileset (the one you computed) by configuring configuration file.  
+
+FIXME:
+ - UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
+ - Try to [install them](https://github.com/VCityTeam/UD-SV/tree/master/Install) on your local desktop.
 
