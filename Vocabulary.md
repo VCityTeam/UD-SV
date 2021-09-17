@@ -121,7 +121,7 @@ Also,
 > (2) on the richness of the vocabulary chosen;
 > (3) on the axiomatization. In turn, the axiomatization depends on language expressiveness issues 
 
-![Ontology Example](/Pictures/UD-Graph/ontology_example.png)
+![Ontology Example](./Pictures/UD-Graph/ontology_example.png)
 
 One of the most widely used languages for expressing ontologies is [Web Ontology Language (OWL)](#web-ontology-language).
 [Protégé](https://protege.stanford.edu/) is a powerful open-source tool for visualizing and editing ontologies.
