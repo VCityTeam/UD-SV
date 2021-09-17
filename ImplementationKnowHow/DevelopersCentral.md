@@ -4,7 +4,7 @@
 
 ### Getting started
  * The [whys and wherefores of the UD-SV project](../Readme.md)
- * [Architecture](/Architecture/Application.md)
+ * [Architecture](/Architecture/Readme.md)
 
 ### Tooling: check your knowledge of the pre-requisites
 The main languages used in UD-SV are:
