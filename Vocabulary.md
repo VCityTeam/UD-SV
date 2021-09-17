@@ -1,32 +1,35 @@
 ## Index
  * [Need](#Need)
  * [Requirement](#Requirement)
- * [Triple](#Triple)
- * [Ontology](#Ontology)
-   * [Conceptualization](#Conceptualization)
-   * [Formalization](#Formalization)
-   * [Upper Ontology](#Upper-Ontology)
-   * [Domain Ontology](#Domain-Ontology)
-   * [Network of Ontologies](#Network-of-Ontologies)
-   * [Ontology Matching](#Ontology-Matching)
-     * [Alignment](#Alignment)
-     * [Correspondence](#Correspondence)
- * [The Semantic Web](#Semantic-Web)
-   * [Linked Data](#Linked-Data)
-   * [Semantic Web Stack](#Semantic-Web-Stack)
-     * [Resource Description Framework (RDF)](#Resource-Description-Framework)
-     * [Web Ontology Language (OWL)](#Web-Ontology-Language)
-     * [SPARQL Queries](#SPARQL)
-     * [SPARQL Endpoint](#SPARQL-Endpoint)
-     * [Triple Store](#Triple-Store)
- * [Description Logic](#Description-Logic)
-   * [Axiom](#Axiom)
-   * [ABox](#ABox)
-   * [TBox](#TBox)
-   * [Individual](#Individual)
-   * [Decidability](#Decidability)
-   * [Expressivity](#Expressivity)
-   * [Reasoning](#Reasoning)
+ ---
+
+* [Ontology](#Ontology)
+  * [Conceptualization](#Conceptualization)
+  * [Formalization](#Formalization)
+  * [Network of Ontologies](#Network-of-Ontologies)
+  * [Ontology Matching](#Ontology-Matching)
+    * [Alignment](#Alignment)
+    * [Correspondence](#Correspondence)
+* [The Semantic Web](#Semantic-Web)
+  * [Linked Data](#Linked-Data)
+  * [Semantic Web Stack](#Semantic-Web-Stack)
+    * [Uniform Resource Identifier](#Uniform-Resource-Identifier)
+    * [Uniform Resource Locator](#Uniform-Resource-Locator)
+    * [Internationalized Resource Identifier](#Internationalized-Resource-Identifier)
+    * [Resource Description Framework (RDF)](#Resource-Description-Framework)
+    * [Triple](#Triple)
+    * [Web Ontology Language (OWL)](#Web-Ontology-Language)
+    * [SPARQL Queries](#SPARQL)
+    * [SPARQL Endpoint](#SPARQL-Endpoint)
+    * [Triple Store](#Triple-Store)
+* [Description Logic](#Description-Logic)
+  * [Axiom](#Axiom)
+  * [ABox](#ABox)
+  * [TBox](#TBox)
+  * [Individual](#Individual)
+  * [Decidability](#Decidability)
+  * [Expressivity](#Expressivity)
+  * [Reasoning](#Reasoning)
 ---
 
 - [CMMS](#cmms--computerized-maintenance-management-system-or-software)/ [EAM](#eam)
@@ -102,22 +105,12 @@ A requirement **targets a technical audience** as its readers, like engineers, d
  * Requirement 1: "The system (i.e. delivered system or product) shall be able to register a customer item through the specification of the following attributes: an textual ID (20 characters long), comments (2000 characters long) and its retail price (currency)."
  * Requirement 2: "The system shall be able to visualize up to 1024 building (for the 3D mode)." 
 
-
-## Triple
-A basic [RDF](#Resource-Description-Framework) data structure composed of three parts:
-1. Subject - the subject of the triple which can be anything (e.g. a concept, an idea, a real-world object, etc)
-2. Predicate - a relationship between the subject and the object
-3. Object - another subject or a data value
-
-![Triple example](/Pictures/UD-Graph/triple_structure.png)
-
-For example:
-| Subject | Predicate | Object |
-|---|---|---|
-| Mary | is a | Person |
-| Mary | has age | 25 |
+---
 
 ## Ontology
+"A formal model that allows knowledge to be represented for a specific domain. An ontology describes the types of things that exist (classes), the relationships between them (properties) and the logical ways those classes and properties can be used together ([axioms](#axiom))."
+- [OGC: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#ontology)
+
 According to [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0), ontologies (precisely **computational** ontologies) can be considered a :
 > [formal](#formalization), explicit specification of a shared [conceptualization](#conceptualization).
 
@@ -130,11 +123,8 @@ Also,
 
 ![Ontology Example](/Pictures/UD-Graph/ontology_example.png)
 
-There are generally two main types of ontologies:
-* [Upper Ontology](#Upper-Ontology)
-* [Domain Ontology](#Domain-Ontology)
-
 One of the most widely used languages for expressing ontologies is [Web Ontology Language (OWL)](#web-ontology-language).
+[Protégé](https://protege.stanford.edu/) is a powerful open-source tool for visualizing and editing ontologies.
 
 ### Conceptualization
 A conceptualization is an abstraction of a real-world concept, expressed by a vocabulary. [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0)
@@ -149,14 +139,6 @@ Different languages approach formalization differently. Ontologies use very form
 Source: [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0)
 
 Formal languages are generally more [expressive](#expressivity) than informal languages.
-
-### Upper Ontology
-A general ontology which models concepts and relations applicable across a wide range of domain ontologies. One of the most common examples of this type of ontology is the [Friend of a Friend](http://xmlns.com/foaf/spec/) (FOAF) ontology for describing people and their relationships.
-
-### Domain Ontology
-An ontology that models concepts and relationships of a specific domain of knowledge (such as an area of research). One of the most popular geospatial ontologies is the [GeoSPARQL ontology](https://opengeospatial.github.io/ogc-geosparql/geosparql10/index.html).
-
-[Protégé](https://protege.stanford.edu/) is a powerful open-source tool for visualizing and editing ontologies.
 
 ### Network of Ontologies
 Otherwise refered to as an _ontology network_. This is a collection of interlinked ontologies. This is often implemented in systems which require supporting knowledge from different domains of information.
@@ -190,15 +172,19 @@ A correspondences can be described by [description logics](#description-logic) a
 A machine-processable web of data (or data web) built on the [semantic web stack](#semantic-web-stack) (or semantic web technologies) and [Linked Data](#linked-data). Coined by Tim Berners-Lee in 1999. Sometimes this is referred to as an extension of the World Wide Web.
 
 ### Linked Data
-Interlinked, structured data that is available on the web (can be thought of as graph data). Sometimes referred to as Linked Open Data (LOD) in the case where this data is available publicly. The largest publicly available dataset of linked data is the [Linked Open Data Cloud](https://www.lod-cloud.net/). Other large LOD datasets include:
+"A pattern for hyperlinking machine-readable data sets to each other using Semantic Web techniques, especially via the use of RDF and URIs... Linked Data is intended for access by both humans and machines. Linked Data uses the RDF family of standards for data interchange (e.g., RDF/XML, RDFa, Turtle) and query (SPARQL). If Linked Data is published on the public Web, it is generally called Linked Open Data"
+- [OGC: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#linked-data)
+
+The largest publicly available dataset of linked data is the [Linked Open Data Cloud](https://www.lod-cloud.net/). Other large LOD datasets include:
 * [DBPedia](https://www.dbpedia.org/about/)
 * [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) - Wikipedia as LOD
 * [GeoNames](https://www.geonames.org/) - Geographical data as LOD
 
 Based on 3 principles:
-1. All data should be identified by unique Uniform Resource Identifiers (URIs)
-2. Looking up an HTTP URI name should return useful data about a subject in a standard format
-3. Any other subject which has a relationship with this subject should also be given a HTTP URI which can also be looked up
+1. All data should be identified by [Uniform Resource Identifiers (URIs)](#Uniform-Resource-Identifier)
+2. Use HTTP URIs so that people can look up those identifiers.
+3. Looking up an HTTP URI name should return useful data about a subject in a standard format
+4. Any other subject which has a relationship with this subject should also be given a HTTP URI which can also be looked up
 
 Achieving high LOD "quality" steps:
 1. open data in any format
@@ -206,6 +192,7 @@ Achieving high LOD "quality" steps:
 3. open data in a non-proprietary format (e.g. comma-separated values .csv)
 4. open data in [semantic web stack](#semantic-web-stack) formats 
 5. All other steps and data is linked with other LOD sources
+- [Tim Berners-Lee: Design Issues/Linked Data](https://www.w3.org/DesignIssues/LinkedData.html)
 
 ### Semantic Web Stack
 The architecture of the [Semantic Web](#semantic-web) and [Linked Data](#linked-data) based on the international standards of the World Wide Web Consortium (W3C). 
@@ -214,7 +201,7 @@ The architecture of the [Semantic Web](#semantic-web) and [Linked Data](#linked-
 
 The stack layers:
 * Hypertext Web technologies:
-  * Internationalized Resource Identifier (IRI), generalization of Uniform Resource Identifiers (URI) for uniquely identifying semantic web resources
+  * [Internationalized Resource Identifier (IRI)](#Internationalized-Resource-Identifier), generalization of [Uniform Resource Identifiers (URI)](#Uniform-Resource-Identifier) for uniquely identifying semantic web resources
   * Unicode - International standard for encoding text in many international languages
   * XML - a markup language for creating documents composed of semi-structured data
 * Standard Semantic Web technologies:
@@ -224,8 +211,21 @@ The stack layers:
   * Rule Interchange Format (RIF) used for describing relations that cannot be directly described using OWL's description logic
 * [SPARQL Protocol and RDF Query Language (SPARQL)](#SPARQL)
 
+#### Uniform-Resource-Identifier
+"A global identifier standardized by joint action of the World Wide Web Consortium and Internet Engineering Task Force. A Uniform Resource Identifier (URI) may or may not be resolvable on the Web. URIs play a key role in enabling Linked Data. URIs can be used to uniquely identify virtually anything including a physical building or more abstract concepts such as colors."
+- [W3C: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#uniform-resource-identifier)
+
+#### Uniform-Resource-Locator
+"A global identifier for Web resources standardized by joint action of the World Wide Web Consortium and Internet Engineering Task Force. A URL is resolvable on the Web and is commonly called a "Web address". All HTTP URLs are URIs however, not all URIs are URLs."
+- [W3C: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#uniform-resource-locator)
+
+#### Internationalized-Resource-Identifier
+"A global identifier standardized by joint action of the World Wide Web Consortium and Internet Engineering Task Force. An IRI may or may not be resolvable on the Web. A generalization of URIs that allow characters from the Universal Character Set (Unicode). Slowly replacing URIs."
+- [W3C: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#internationalized-resource-identifier)
+
 #### Resource-Description-Framework
-Resource Description Framework (RDF) is a framework for creating statements in the form of [triples](#triple) to represent information about resources in the form of graphs. 
+"The Resource Description Framework (RDF) is a framework for representing information in the Web. This document defines an abstract syntax (a data model) which serves to link all RDF-based languages and specifications. The abstract syntax has two key data structures: RDF graphs are sets of subject-predicate-object [triples](#triple), where the elements may be IRIs, blank nodes, or datatyped literals."
+- [W3C: RDF 1.1 Concepts and Abstract Syntax](https://www.w3.org/TR/rdf11-concepts/)
 
 RDF triples can be written with a variety of different languages and formats:
 * [RDF/XML](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-rdfxml) (XML syntax for RDF)
@@ -237,18 +237,34 @@ RDF triples can be written with a variety of different languages and formats:
 * [JSON-LD](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-json-ld) (JSON-based RDF syntax)
 * [RDFa](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-rdfa) (for HTML and XML embedding)
 
-Since RDF identifiers must be valid URIs (or even better IRIs), `PREFIX` statements can be used to create shortcuts for these identifiers. For example:
+A simple RDF [triple](#triple) (expressed in Turtle):
 ```SQL
 <http://example.com/exampleOntology#exampleSubject> <http://example.com/exampleOntology#examplePredicate> <http://example.com/exampleOntology#exampleObject> .
 ```
-can be re-written as:
+`PREFIX` statements can be used to create shortcuts for [URIs](#Uniform-Resource-Identifier). For example the previous RDF statement can be re-written as:
 ```
-PREFIX ex: <http://example.com/exampleOntology#>
+PREFIX ex: <http://example.com/exampleURI#>
 
 ex:exampleSubject ex:examplePredicate ex:exampleObject .
 ```
 
-For more information on RDF refer to the W3.org [RDF Primer document](https://www.w3.org/TR/rdf-primer/)
+For more information on RDF refer to the W3.org [RDF Primer document](https://www.w3.org/TR/rdf-primer/) and [RDF 1.1 Concepts and Abstract Syntax](https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple)
+
+#### Triple
+A basic [RDF](#Resource-Description-Framework) data structure composed of three parts:
+1. the subject, which is an IRI or a blank node; refers to who or what the RDF statement is about.
+2. the predicate, which is an IRI; the middle term (the linkage, or "verb") in an RDF statement. For example, in the statement "Alice knows Bob" then "knows" is the predicate which connects "Alice" (the subject of the statement) to "Bob" (the object of the statement).
+3. the object, which is an IRI, a literal or a blank node; the object is the final part of an RDF statement.
+
+![Triple example](/Pictures/UD-Graph/triple_structure.png)
+
+- [OGC: RDF 1.1 Concepts and Abstract Syntax](https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple)
+
+For example:
+| Subject | Predicate | Object |
+|---|---|---|
+| #Mary | #is-a | #Person |
+| #Mary | #has-age | 25 |
 
 #### Web Ontology Language
 Web ontology language (OWL) is a language that can be used to:
@@ -273,7 +289,8 @@ Note that every legal OWL Lite ontology is a legal OWL DL ontology and every leg
 For more information on OWL refer to the W3.org [OWL Web Ontology Language Overview](https://www.w3.org/TR/owl-features/)
 
 #### SPARQL
-SPARQL Protocol and RDF Query Language (SPARQL) is an RDF query language similar to SQL.
+SPARQL Protocol and RDF Query Language (SPARQL) 1.1 is a set of specifications that provide languages and protocols to query and manipulate RDF graph content on the Web or in an RDF store.
+- [OGC: SPARQL 1.1 Overview](https://www.w3.org/TR/sparql11-overview/)
 
 4 basic types of SPARQL queries can be executed on RDF graphs using a [SPARQL endpoint](#sparql-endpoint):
 1. `SELECT` - return values from an endpoint in a table format
@@ -297,7 +314,7 @@ WHERE {
 ```
 Note that in this query the first triple predicate `a` is a shortcut for `rdf:type`
 
-See the [SPARQL 1.1 Query Language Specification Document](https://www.w3.org/TR/sparql11-query/) for more details.
+See the [SPARQL 1.1 Query Language Specification Document](https://www.w3.org/TR/sparql11-query/) and [SPARQL 1.1 Overview](https://www.w3.org/TR/sparql11-overview/) for more details.
 
 #### SPARQL Endpoint
 A web service that accepts, computes, and returns results from [SPARQL queries](#SPARQL). These often work in conjunction with [Triple Stores](#triple-store).
@@ -307,14 +324,22 @@ Example SPARQL Endpoints:
 * [dbpedia](https://dbpedia.org/sparql)
 
 #### Triple Store
-A database for storing [triples](#triple). Sometimes called an RDF-Store. Data stored in triples stores are often accessed using [SPARQL Endpoints](#SPARQL-endpoint).
+"A colloquial phrase for an RDF database that stores RDF [triples](#triple)".
+- [OGC: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#triple-store)
+
+Sometimes called an RDF-Store. Data stored in triples stores are often accessed using [SPARQL Endpoints](#SPARQL-endpoint).
 
 Detailed triple store documentation can also be found [here](GeoTriples_Strabon_Parliament_Blazegraph)
 
 ## Description Logic
+Description Logic (DL) is a family of knowledge representation languages with varying and adjustable expressivity. DL is used in artificial intelligence for formal reasoning on the concepts of an application domain. The Web Ontology Language (OWL) provides a standards-based way to exchange ontologies and includes a Description Logic semantics as well as an RDF based semantics.
+
 A family of knowledge representation languages used to model concepts (classes), roles (properties), and [individuals](#individual). In the case of [ontologies](#ontology), Description Logics (DLs) are used to model domains of knowledge (e.g. knowledge about an area of research, industry, etc). DLs use [axioms](#axiom) to model knowledge and often divide axioms into two groups: a [TBox](#tbox) and an [ABox](#abox).
 
-DLs have different [expressivity](#expressivity) which can affect their ability to express knowledge. This also changes their [decidability](#decidability) and complexity which are important factors when using [reasoners](#reasoning) to infer new axioms in a ontologies. 
+DLs have different [expressivity](#expressivity) which can affect their ability to express knowledge. This also changes their [decidability](#decidability) and complexity which are important factors when using [reasoners](#reasoning) to infer new axioms in a ontologies.
+
+F. Baader, I. Horrocks, and U. Sattler, “Description Logics,” in Handbook on Ontologies, S. Staab and R. Studer, Eds. Berlin, Heidelberg: Springer, 2004, pp. 3–28. doi: 10.1007/978-3-540-24750-0_1.
+
 
 ### Axiom
 A logical statement relating roles and/or concepts
@@ -345,6 +370,8 @@ For example:
 * If `Mary is a Mother`
 * And `All Mothers are Women`
 * We can infer that `Mary is a Woman`
+
+---
 
 ## CMMS : Computerized Maintenance Management System (or Software)
 
