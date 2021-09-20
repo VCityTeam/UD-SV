@@ -148,7 +148,7 @@ The creation of links between ontologies is the definition of relationships (pro
 There are 3 main types of ontology networks:
 1. Single ontology - A monolithic global ontology is created to describe several domains of knowledge
 2. Multiple ontology - Multiple local ontologies are created and linked to one another
-3. Hybrid ontology - Similar to the multiple ontology approach but a common vocabulary is defined to interlink each local ontology. An [upper ontology](#upper-ontology) can be used as a common vocabulary for this purpose
+3. Hybrid ontology - Similar to the multiple ontology approach but a common vocabulary is defined to interlink each local ontology.
 
 ![network of ontology types](./Pictures/ontology_network.png)
 
@@ -329,7 +329,7 @@ Example SPARQL Endpoints:
 
 Sometimes called an RDF-Store. Data stored in triples stores are often accessed using [SPARQL Endpoints](#SPARQL-endpoint).
 
-Detailed triple store documentation can also be found [here](GeoTriples_Strabon_Parliament_Blazegraph)
+Detailed triple store documentation can also be found [here](../Tools/GeoTriples_Strabon_Parliament_Blazegraph)
 
 ## Description Logic
 Description Logic (DL) is a family of knowledge representation languages with varying and adjustable expressivity. DL is used in artificial intelligence for formal reasoning on the concepts of an application domain. The Web Ontology Language (OWL) provides a standards-based way to exchange ontologies and includes a Description Logic semantics as well as an RDF based semantics.
