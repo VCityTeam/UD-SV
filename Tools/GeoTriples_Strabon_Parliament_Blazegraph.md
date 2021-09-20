@@ -88,6 +88,3 @@ This page documents different triple stores and SPARQL endpoints and explores th
 
 # References
 * Immersing evolving geographic divisions in the semantic Web, PhD Thesis 2019, Camille Bernard
-
-# Other documentation
-* DVA internship notes: [SPARQL Query Tools](UD-Graph_SPARQ_Editors)GeoTriples_Strabon_Parliament_Blazegraph.md
