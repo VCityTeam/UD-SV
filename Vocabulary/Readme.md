@@ -329,7 +329,7 @@ Example SPARQL Endpoints:
 
 Sometimes called an RDF-Store. Data stored in triples stores are often accessed using [SPARQL Endpoints](#SPARQL-endpoint).
 
-Detailed triple store documentation can also be found [here](../Tools/GeoTriples_Strabon_Parliament_Blazegraph)
+Detailed triple store documentation can also be found [here](../Tools/GeoTriples_Strabon_Parliament_Blazegraph.md)
 
 ## Description Logic
 Description Logic (DL) is a family of knowledge representation languages with varying and adjustable expressivity. DL is used in artificial intelligence for formal reasoning on the concepts of an application domain. The Web Ontology Language (OWL) provides a standards-based way to exchange ontologies and includes a Description Logic semantics as well as an RDF based semantics.
