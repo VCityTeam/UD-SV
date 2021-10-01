@@ -1,0 +1,40 @@
+@startuml
+
+title Architecture IMUV Application
+
+[Three.js] as TJS
+note right
+3D-Engine
+end note
+
+[iTowns]
+note top
+Geospatial framework
+end note
+
+[ud-Viz] as udv
+note left
+Extension of itowns
+end note
+
+folder "Flying Campus / Imuv" {
+    [Client]
+    note bottom
+    Render
+    end note
+
+    [Server]
+    note bottom
+    Connections, computations,
+    node js
+    end note
+}
+
+
+TJS -left-> iTowns
+iTowns --> udv
+udv --> Client
+udv --> Server
+Client <..left..> Server : websocket (communication protocol)
+
+@enduml
