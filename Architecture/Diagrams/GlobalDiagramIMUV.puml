@@ -4,7 +4,7 @@ title Architecture IMUV Application
 
 [Three.js] as TJS
 note right
-3D-Engine
+    3D-Engine
 end note
 
 [iTowns]
@@ -28,13 +28,19 @@ folder "Flying Campus / Imuv" {
     Connections, computations,
     node js
     end note
+
+    interface websocket
+    note bottom  
+    Communication protocol
+    end note
 }
 
 
 TJS -left-> iTowns
-iTowns --> udv
-udv --> Client
-udv --> Server
-Client <..left..> Server : websocket (communication protocol)
+iTowns -down-> udv
+udv -down-> Client
+udv -down-> Server
+websocket .left. Server
+websocket .right. Client
 
 @enduml
