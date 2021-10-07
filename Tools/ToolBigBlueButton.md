@@ -1,4 +1,7 @@
 
+## Notes
+General [hardware/network requirements](https://github.com/VCityTeam/VCity/blob/master/Topic_Meetings/2021/2021_29_09_EBO_MLI_VMA_RCH.md)
+
 ## Concerning the native installation
 The native (as opposed to containerized) [installion of version2.3](https://docs.bigbluebutton.org/2.3/install.html#install) has some **important** [pre-install checks](https://docs.bigbluebutton.org/2.3/install.html#pre-installation-checks). They are important checks because if you miss one of them you might lose a lot of time down the road. Among those **important** checks
 
