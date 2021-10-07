@@ -27,12 +27,8 @@ The native (as opposed to containerized) [installion of version2.3](https://docs
 
 ### Possible things to check 
 * If you do not have IPV6 support (`ip addr | grep inet6` does NOT mention `inet6 ::1/128 scope host`) then you **might** need to
-  - suppress IPV6 support in the nginx configuration file `/etc/nginx/sites-enabled/default` (otherwise you will get an [](https://techglimpse.com/nginx-error-address-family-solution/)
-
-Because IVP6 is not supported (if you do not see the line inet6 ::1/128
- scope host) then after you install BigBlueButton you will need to modify the configuration for FreeSWITCH to 
-disable support for IPV6.
-
+  - suppress IPV6 support in the nginx configuration file `/etc/nginx/sites-enabled/default` (otherwise you will get an [`nginx: [emerg] socket() [::]:443 failed (97: Address family not supported by protocol)`](https://techglimpse.com/nginx-error-address-family-solution/)
+  - after you install BigBlueButton you will need to modify the configuration for [FreeSWITCH to disable support for IPV6](https://docs.bigbluebutton.org/support/troubleshooting.html#freeswitch-fails-to-bind-to-port-8021).
 
 ## Concerning the docker installation
 Refer to [this issue](https://github.com/bigbluebutton/greenlight/issues/2071)
