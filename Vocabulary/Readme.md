@@ -2,7 +2,8 @@
  * [Need](#Need)
  * [Requirement](#Requirement)
  ---
-
+* [Data Modelling](#Data-Modelling)
+  * [Data Model](#Data-model)
 * [Ontology](#Ontology)
   * [Conceptualization](#Conceptualization)
   * [Formalization](#Formalization)
@@ -13,11 +14,11 @@
 * [The Semantic Web](#Semantic-Web)
   * [Linked Data](#Linked-Data)
   * [Semantic Web Stack](#Semantic-Web-Stack)
+    * [Triple](#Triple)
+    * [Resource Description Framework (RDF)](#Resource-Description-Framework)
     * [Uniform Resource Identifier](#Uniform-Resource-Identifier)
     * [Uniform Resource Locator](#Uniform-Resource-Locator)
     * [Internationalized Resource Identifier](#Internationalized-Resource-Identifier)
-    * [Resource Description Framework (RDF)](#Resource-Description-Framework)
-    * [Triple](#Triple)
     * [Web Ontology Language (OWL)](#Web-Ontology-Language)
     * [SPARQL Queries](#SPARQL)
     * [SPARQL Endpoint](#SPARQL-Endpoint)
@@ -103,9 +104,36 @@ The description of a need should have the following items:
 
 A requirement **targets a technical audience** as its readers, like engineers, developers, project manager and testers. Requirements might be described with a bias of a particular implementation and must outline and detail exactly **what needs to be delivered** (as a componennt of the product). For example:
  * Requirement 1: "The system (i.e. delivered system or product) shall be able to register a customer item through the specification of the following attributes: an textual ID (20 characters long), comments (2000 characters long) and its retail price (currency)."
- * Requirement 2: "The system shall be able to visualize up to 1024 building (for the 3D mode)." 
+ * Requirement 2: "The system shall be able to visualize up to 1024 building (for the 3D model)." 
 
 ---
+
+## Data Modelling
+In *[Klein 1987] H. K. Klein and R. A. Hirschheim, “A Comparative Framework of Data Modelling Paradigms and Approaches,” The Computer Journal, vol. 30, no. 1, pp. 8–15, Jan. 1987, doi: 10.1093/comjnl/30.1.8.* data modelling is defined as:
+> the activity by which a [data model](#Data-Model) is applied to derive a logical organization that is documented in a (conceptual) schema.
+
+In this article 3 data modelling paradigms are identified:
+- *Objectivism* (entity-based approach): "Under this interpretation a [[data model]](#Data-Model) is like a mirror or picture of reality. Reality is a given, 'out there' and made up of discrete chuncks called entities. Entities have properties or attributes. Both entities and their properties have an objective existence..."
+- *Subjectivism* (rule-based approach): "[Rule-based approach] proponents see the main task of data modelling as a formalising the meaning of messages which are to be exchanged among a professional community... All computer data ulimately have to be interpreted in terms of their natural language meaning(s). Hence data can at best convey meaning from someone to someone, but they cannot 'have' any objective meaning."
+- *Eclecticism* (frame-based approach): "... A frame is a particular type of abstraction concept and it suggests how one might arrive at a particular categorisation of phenomena. Frame-based approaches can be used to implement either subjectivist or objectivist interpretations of data, but it is possible to conceive of them as predisposed towards subjectivism, because the difficulty with defining frame contents makes it obvious that there are no objective rules for this. Unlike entities, frames are not perceived to exist 'out there' as objective facts."
+
+Note that the UML models belong to the frame-based data modelling approach. *L. Brink, P. Janssen, W. Quak, and J. Stoter, “Linking spatial data: automated conversion of geo-information models and GML data to RDF,” International Journal of Spatial Data Infrastructures Research, vol. 9, pp. 59–85, Oct. 2014, doi: 10.2902/1725-0463.2014.09.art3.*
+
+### Data Model
+In *Herbert Stachowiak. Allgemeine Modelltheorie. Springer-Verlag, Wien and New York, 1973.* a model has 3 features:
+- Mapping feature: A model is based on an original.
+- Reduction feature: A model only refects a (relevant) selection of the original's properties.
+- Pragmatic feature: A model needs to usable in place of the original with respect to some purpose.
+
+In *[Kühne 2005] T. Kühne, “What is a Model?,” presented at the Language Engineering for Model-Driven Software Development, Dagstuhl, Germany, 2005.*, Kühne elaborates on this definition within the context of software engineering:
+> The first two features are covered simultaneously if one speaks of a model as a projection" as this implies both something that is projected (the original) and that some information is lost during the projection. Of course exactly what information is dropped - by an activity called "abstraction" - and what is retained depends on the ultimate purpose the model is going to be used for.
+
+In addition two types of models are defined by Kühne:
+- Token Model: "Elements of a token model capture singular aspects of the original's elements. When using UML, one would use an object diagram to create a token model as the original's elements one is interested in are captured in a one-to-one mapping and are shown with their individual attributes. In UML parlance such models are sometimes referred to as "snapshot models" since they capture a single confguration of a typically highly dynamic system. Other possible names are "representation model" (due to the direct representation character) or "instance model" (since the model elements are instances as opposed to types)."
+- Type Model: "The human mind exploits the power of type models by using object properties (e.g., "four legged, fury, sharp teeth, and stereovision") to classify objects (e.g., as "predator") and drawing conclusions... Most models used in model driven development are type models. In contrast to the singular aspects captured by token models, type models capture the universal aspects of an original's elements."
+
+**An example of a token model (below) and a type model (above)**
+![Khune 2005 Model Types](./Pictures/KhuneModelTypes.png)
 
 ## Ontology
 "A formal model that allows knowledge to be represented for a specific domain. An ontology describes the types of things that exist (classes), the relationships between them (properties) and the logical ways those classes and properties can be used together ([axioms](#axiom))."
@@ -122,6 +150,8 @@ Also,
 > (3) on the axiomatization. In turn, the axiomatization depends on language expressiveness issues 
 
 ![Ontology Example](./Pictures/ontology_example.png)
+
+Note that this definition of an ontology falls under the frame-based *Eclecticism* paradigm of [data modelling](#data-modelling) as an ontology can model either *objectivist* or *subjectivist* interpretations of reality. In addition, ontological [data models](#data-model) can be used to create both token and type models.
 
 One of the most widely used languages for expressing ontologies is [Web Ontology Language (OWL)](#web-ontology-language).
 [Protégé](https://protege.stanford.edu/) is a powerful open-source tool for visualizing and editing ontologies.
@@ -211,20 +241,24 @@ The stack layers:
   * Rule Interchange Format (RIF) used for describing relations that cannot be directly described using OWL's description logic
 * [SPARQL Protocol and RDF Query Language (SPARQL)](#SPARQL)
 
-#### Uniform-Resource-Identifier
-"A global identifier standardized by joint action of the World Wide Web Consortium and Internet Engineering Task Force. A Uniform Resource Identifier (URI) may or may not be resolvable on the Web. URIs play a key role in enabling Linked Data. URIs can be used to uniquely identify virtually anything including a physical building or more abstract concepts such as colors."
-- [W3C: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#uniform-resource-identifier)
+#### Triple
+A basic [RDF](#Resource-Description-Framework) data structure composed of three parts:
+1. the subject, which is an IRI or a blank node; refers to who or what the RDF statement is about.
+2. the predicate, which is an IRI; the middle term (the linkage, or "verb") in an RDF statement. For example, in the statement "Alice knows Bob" then "knows" is the predicate which connects "Alice" (the subject of the statement) to "Bob" (the object of the statement).
+3. the object, which is an IRI, a literal or a blank node; the object is the final part of an RDF statement.
 
-#### Uniform-Resource-Locator
-"A global identifier for Web resources standardized by joint action of the World Wide Web Consortium and Internet Engineering Task Force. A URL is resolvable on the Web and is commonly called a "Web address". All HTTP URLs are URIs however, not all URIs are URLs."
-- [W3C: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#uniform-resource-locator)
+![Triple example](./Pictures/triple_structure.png)
 
-#### Internationalized-Resource-Identifier
-"A global identifier standardized by joint action of the World Wide Web Consortium and Internet Engineering Task Force. An IRI may or may not be resolvable on the Web. A generalization of URIs that allow characters from the Universal Character Set (Unicode). Slowly replacing URIs."
-- [W3C: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#internationalized-resource-identifier)
+- [OGC: RDF 1.1 Concepts and Abstract Syntax](https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple)
+
+For example:
+| Subject | Predicate | Object |
+|---|---|---|
+| #Mary | #is-a | #Person |
+| #Mary | #has-age | 25 |
 
 #### Resource-Description-Framework
-"The Resource Description Framework (RDF) is a framework for representing information in the Web. This document defines an abstract syntax (a data model) which serves to link all RDF-based languages and specifications. The abstract syntax has two key data structures: RDF graphs are sets of subject-predicate-object [triples](#triple), where the elements may be IRIs, blank nodes, or datatyped literals."
+"The Resource Description Framework (RDF) is a framework for representing information in the Web. This document defines an abstract syntax (a [data model](#Data-Model)) which serves to link all RDF-based languages and specifications. The abstract syntax has two key data structures: RDF graphs are sets of subject-predicate-object [triples](#triple), where the elements may be IRIs, blank nodes, or datatyped literals."
 - [W3C: RDF 1.1 Concepts and Abstract Syntax](https://www.w3.org/TR/rdf11-concepts/)
 
 RDF triples can be written with a variety of different languages and formats:
@@ -250,21 +284,17 @@ ex:exampleSubject ex:examplePredicate ex:exampleObject .
 
 For more information on RDF refer to the W3.org [RDF Primer document](https://www.w3.org/TR/rdf-primer/) and [RDF 1.1 Concepts and Abstract Syntax](https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple)
 
-#### Triple
-A basic [RDF](#Resource-Description-Framework) data structure composed of three parts:
-1. the subject, which is an IRI or a blank node; refers to who or what the RDF statement is about.
-2. the predicate, which is an IRI; the middle term (the linkage, or "verb") in an RDF statement. For example, in the statement "Alice knows Bob" then "knows" is the predicate which connects "Alice" (the subject of the statement) to "Bob" (the object of the statement).
-3. the object, which is an IRI, a literal or a blank node; the object is the final part of an RDF statement.
+#### Uniform-Resource-Identifier
+"A global identifier standardized by joint action of the World Wide Web Consortium and Internet Engineering Task Force. A Uniform Resource Identifier (URI) may or may not be resolvable on the Web. URIs play a key role in enabling Linked Data. URIs can be used to uniquely identify virtually anything including a physical building or more abstract concepts such as colors."
+- [W3C: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#uniform-resource-identifier)
 
-![Triple example](./Pictures/triple_structure.png)
+#### Uniform-Resource-Locator
+"A global identifier for Web resources standardized by joint action of the World Wide Web Consortium and Internet Engineering Task Force. A URL is resolvable on the Web and is commonly called a "Web address". All HTTP URLs are URIs however, not all URIs are URLs."
+- [W3C: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#uniform-resource-locator)
 
-- [OGC: RDF 1.1 Concepts and Abstract Syntax](https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple)
-
-For example:
-| Subject | Predicate | Object |
-|---|---|---|
-| #Mary | #is-a | #Person |
-| #Mary | #has-age | 25 |
+#### Internationalized-Resource-Identifier
+"A global identifier standardized by joint action of the World Wide Web Consortium and Internet Engineering Task Force. An IRI may or may not be resolvable on the Web. A generalization of URIs that allow characters from the Universal Character Set (Unicode). Slowly replacing URIs."
+- [W3C: Linked Data Glossary](https://www.w3.org/TR/ld-glossary/#internationalized-resource-identifier)
 
 #### Web Ontology Language
 Web ontology language (OWL) is a language that can be used to:
