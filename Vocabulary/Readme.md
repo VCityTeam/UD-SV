@@ -2,6 +2,7 @@
  * [Need](#Need)
  * [Requirement](#Requirement)
  ---
+* [Feature](#feature)
 * [Data Modelling](#Data-Modelling)
   * [Data Model](#Data-model)
 * [Ontology](#Ontology)
@@ -107,6 +108,9 @@ A requirement **targets a technical audience** as its readers, like engineers, d
  * Requirement 2: "The system shall be able to visualize up to 1024 building (for the 3D model)." 
 
 ---
+
+## Feature
+"**abstraction of real world phenomena** NOTE: A feature may occur as a type or an instance. Feature type or feature instance should be used when only one is meant.[Victoria Terminology Harmonization Meeting]This class describes how a feature class shall be constructed in an Application Schema. In accordance with the conformance clause of the standard, instances of this class are instanciated as feature classes in an Application Schema" - ISO 19101
 
 ## Data Modelling
 In *[Klein 1987] H. K. Klein and R. A. Hirschheim, “A Comparative Framework of Data Modelling Paradigms and Approaches,” The Computer Journal, vol. 30, no. 1, pp. 8–15, Jan. 1987, doi: 10.1093/comjnl/30.1.8.* data modelling is defined as:
