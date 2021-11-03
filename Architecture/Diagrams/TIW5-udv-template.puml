@@ -1,0 +1,45 @@
+@startuml
+title UD-Viz-Template Architecture
+
+node "Node Server" {
+  frame UD-Viz {
+    [Three.js] as TJS
+    note left
+      3D-Engine
+    end note
+
+    [iTowns]
+    note left
+      Geospatial framework
+    end note
+
+    [View3D.js] as view
+    note left
+      Extension of itowns
+    end note
+
+    [Components]
+    [Game]
+    [Widgets]
+  }
+
+  artifact "DeckGL data" as dgl
+}
+
+database "3DTiles-Server" {
+  artifact "3DTiles data" as 3dt
+}
+
+database "RDF-Store" {
+  artifact "RDF data" as rdf
+}
+
+TJS --> iTowns
+iTowns --> view
+Components --> view
+Components --> Widgets
+Components --> Game
+view --> dgl
+view --> 3dt
+Widgets --> rdf
+@enduml
