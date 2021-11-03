@@ -13,7 +13,7 @@ node "Node Server" {
       Geospatial framework
     end note
 
-    [View3D.js] as view
+    [Views] as view
     note left
       Extension of itowns
     end note
@@ -21,25 +21,36 @@ node "Node Server" {
     [Components]
     [Game]
     [Widgets]
+    [DeckGL]
   }
-
-  artifact "DeckGL data" as dgl
 }
 
 database "3DTiles-Server" {
   artifact "3DTiles data" as 3dt
+  interface "REST API1" as api1
+}
+
+database "DeckGL Database" {
+  artifact "DeckGL data" as dgl
+  interface "REST API2" as api2
 }
 
 database "RDF-Store" {
   artifact "RDF data" as rdf
+  interface "REST API3" as api3
 }
 
-TJS --> iTowns
-iTowns --> view
-Components --> view
-Components --> Widgets
-Components --> Game
-view --> dgl
-view --> 3dt
-Widgets --> rdf
+TJS <-- iTowns : imports
+TJS <-- DeckGL : imports
+iTowns <-- view : imports
+Components <-- view : imports
+Components <-- Widgets : imports
+Components <-- Game : imports
+DeckGL <-- view : imports
+view --> api1
+view --> api2
+Widgets --> api3
+api1 -- 3dt
+api2 -- dgl
+api3 -- rdf
 @enduml
