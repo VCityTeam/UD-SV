@@ -2,6 +2,9 @@
 
 ## Single vintage difficulties
 
+### Data with buildingPart
+When running the splitCityGMLbuilding script with 3DUse, `<bldg:consistsOfBuildingPart/>` elements do not seem to be well parsed, see [issue 51](https://github.com/VCityTeam/3DUSE/issues/51)
+
 ### Data with some format error
 The following glitches might block your algorithms at parsing time
 (which is fine) but might also confuse any geometrical post-treatment
