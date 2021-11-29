@@ -1,6 +1,7 @@
 ## Index
 
 **Software project management**
+* [Demo](#Demo)
 * [Need](#Need)
 * [Requirement](#Requirement)
 
@@ -76,6 +77,11 @@
 
 ---
 ## Definitions
+
+### Demo
+Demo stands as a short for 
+[Technology Demonstration](https://en.wikipedia.org/wiki/Technology_demonstration) that [wikipedia](https://en.wikipedia.org/wiki/Technology_demonstration) 
+defines as "a prototype, rough example [...], put together as proof of concept with the primary purpose of showcasing the possible applications, feasibility, performance and method of an idea for a new technology". 
 
 ### Need
 **Definition**: a **need** or [feature](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/) is a set of related requirements that allows the user to satisfy a "business" objective or need.
