@@ -1,6 +1,6 @@
 ## Index
- * [Need](#Need)
- * [Requirement](#Requirement)
+* [Need](#Need)
+* [Requirement](#Requirement)
  ---
 * [Feature](#feature)
 * [Data Modelling](#Data-Modelling)
