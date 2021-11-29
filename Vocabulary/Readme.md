@@ -36,7 +36,7 @@
   * [Expressivity](#Expressivity)
   * [Reasoning](#Reasoning)
 
-### Computerized Maintenance Management System (CCMS),BIM ,CIM, GIS modeling
+**Computerized Maintenance Management System (CCMS),BIM ,CIM, GIS modeling*
 - [CMMS](#cmms--computerized-maintenance-management-system-or-software)/ [EAM](#eam)
     1. [Equipment](#equipment)
     2. [Urban Object](#urban-object)
@@ -65,9 +65,8 @@
    7. [Symbole](#symbole)
    8. [Contextual View](#contextual-view)
    9. [Event](#event)
----
 
-Projet - Charlie Bessot
+**Texture in a 3DTiles production context**
 [Tuile](#Tuile)
 [Texture](#Texture)
 [Mesh](#Mesh)
@@ -76,6 +75,8 @@ Projet - Charlie Bessot
 [Atlas de texture](Atlas-de-texture)
 
 ---
+## Definitions
+
 ### Need
 **Definition**: a **need** or [feature](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/) is a set of related requirements that allows the user to satisfy a "business" objective or need.
 
