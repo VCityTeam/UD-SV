@@ -1,11 +1,8 @@
-Online WebGL demos of the [UD-SV project](Readme.md)
-  * [UD-Viz demos gateway](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/index.html)
-     - [UD-Viz stable](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoStable/Demo.html)<a name="demo-online-UD-Viz-stable-end-user-modules"></a>: this demo shows only the end-user's operational modules
-     - [UD-Viz full modules](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoFull/Demo.html)<a name="demo-online-UD-Viz-full-modules"></a>: this demo targets the developers and illustrates **all** the available UD-Viz modules including modules used for client/server debugging or the modules under development (that might still be unstable) 
-     - [UD-Viz multilayer](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/examples/DemoMultiLayer/Demo.html)
-     - [UD-Viz individual modules](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/index.html): refer to the bottom part of [this page](http://rict.liris.cnrs.fr/UDVDemo/UDV/UDV-Core/index.html) for the respective demos of each module component.
-     
-  * [City wide 3dTiles tileset visualization](http://rict.liris.cnrs.fr/Demo_LyonFull_Villeurbanne_Bron_2015/UDV/UDV-Core/examples/DemoFull/Demo.html)<a name="demo-online-3dtiles-lyon-villeurbanne"></a>
-  
-  
-WIP:  what about [temporal City](http://rict.liris.cnrs.fr/iTownsPlanar3DTiles/itowns/examples/planar_3dtiles.html) ?
+[Demos]() of the [UD-SV project](Readme.md)
+ * List of [online demos](https://projet.liris.cnrs.fr/vcity/demos/)
+ * Repositories of demos (refer [here for latest entries](https://github.com/VCityTeam?q=demo)):
+   - [UD-Demo-vcity-lods-lyon](https://github.com/VCityTeam/UD-Demo-vcity-lods-lyon) and its [UD-Demo-vcity-lods-lyon-docker](https://github.com/VCityTeam/UD-Demo-vcity-lods-lyon-docker)
+   - [UD-Demo-DatAgora-Vegetalisation-PartDieu](https://github.com/VCityTeam/UD-Demo-DatAgora-Vegetalisation-PartDieu)
+   - [UD-Demo-TIGA-Webdoc-ChemistryValley](https://github.com/VCityTeam/UD-Demo-TIGA-Webdoc-ChemistryValley) and its [UD-Demo-TIGA-Webdoc-ChemistryValley-docker](https://github.com/VCityTeam/UD-Demo-TIGA-Webdoc-ChemistryValley-docker)
+   - [UD-Demo-DatAgora-Deambulation-Bron](https://github.com/VCityTeam/UD-Demo-DatAgora-Deambulation-Bron) and its [UD-Demo-DatAgora-Deambulation-Bron-docker](https://github.com/VCityTeam/UD-Demo-DatAgora-Deambulation-Bron-docker)
+   - ... 
