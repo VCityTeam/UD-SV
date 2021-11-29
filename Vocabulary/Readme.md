@@ -36,7 +36,7 @@
   * [Expressivity](#Expressivity)
   * [Reasoning](#Reasoning)
 
-**Computerized Maintenance Management System (CCMS),BIM ,CIM, GIS modeling*
+**Computerized Maintenance Management System (CCMS),BIM ,CIM, GIS modeling**
 - [CMMS](#cmms--computerized-maintenance-management-system-or-software)/ [EAM](#eam)
     1. [Equipment](#equipment)
     2. [Urban Object](#urban-object)
@@ -67,12 +67,12 @@
    9. [Event](#event)
 
 **Texture in a 3DTiles production context**
-[Tuile](#Tuile)
-[Texture](#Texture)
-[Mesh](#Mesh)
-[UVs](#UVs)
-[Vertex](#Vertex)
-[Atlas de texture](Atlas-de-texture)
+* [Tuile](#Tuile)
+* [Texture](#Texture)
+* [Mesh](#Mesh)
+* [UVs](#UVs)
+* [Vertex](#Vertex)
+* [Atlas de texture](Atlas-de-texture)
 
 ---
 ## Definitions
