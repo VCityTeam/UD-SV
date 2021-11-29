@@ -1,11 +1,19 @@
+# Tools for working on point clouds
 
-## LASzip
-LASzip is part of [LAStools](http://lastools.org/) (edited by [Rapidlasso](http://rapidlasso.de/) which has
-an exotic history (with his original developer 
-[deported from the US](https://gis.stackexchange.com/questions/306418/difference-between-lastools-liblas-and-pdal) and 
-[prematurly dead in 2021]([Rapidlasso](http://rapidlasso.de/))
+## Online tools
+
+## Softwares
+
+### [Entwine](https://entwine.io/)
+[Entwine](https://entwine.io/) is self defined as "a data organization library for massive point clouds".
+
+### LASzip
+LASzip is part of [LAStools](http://lastools.org/) edited by [Rapidlasso](http://rapidlasso.de/) 
+(Historical note: LAStools [original author Martin Isenbug](https://lidarmag.com/2021/10/30/in-memoriam-martin-isenburg-1972-2021/)
+had quite
+[an interesting history](https://gis.stackexchange.com/questions/306418/difference-between-lastools-liblas-and-pdal))
   
-Installation
+#### Installation
   - On [Un*x](https://laszip.org/)
   - on OSX: start from [LASTools](https://lastools.github.io/):
        ```bash
@@ -15,4 +23,10 @@ Installation
        make                               # Reported to work with clang version 11.0.0 on OSX 10.4.6 (Mojave)
        cp bin/laszip /usr/local/bin       # For example
        ```
-    2. the longer way with [pdal](http://pdal.io/): `brew install pdal`
+
+### [pdal](http://pdal.io/)
+
+#### Installation
+ - on OSX: alas `brew install pdal` is reported to fail on lang version 11.0.0 on OSX 10.4.6 (Mojave)
+
+
