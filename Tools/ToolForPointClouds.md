@@ -2,6 +2,12 @@
 
 ## Online tools
 
+### Plas
+[Plas.io](https://plas.io/)
+
+### Lidarview
+[Lidarview](http://lidarview.com/)
+
 ## Softwares
 
 ### [Entwine](https://entwine.io/)
