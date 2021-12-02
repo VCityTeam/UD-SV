@@ -174,15 +174,13 @@ One of the most widely used languages for expressing ontologies is [Web Ontology
 A conceptualization is an abstraction of a real-world concept, expressed by a vocabulary. [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0)
 
 ### Formalization
-Formal under the context of ontologies refers to the "rigour" and "specificity" used to express [conceptualizations](#conceptualization)
+A formal ontology is an ontology specified by a formal language such as a [description logic](#Description-Logic). 
 
-Different languages approach formalization differently. Ontologies use very formal descriptions (like [description logics](#Description-Logic))
+Different languages approach formalization differently. Formal under the context of language refers to the "rigour" and "specificity" used to express [conceptualizations](#conceptualization). More formal languages are generally more [expressive](#expressivity) than informal languages.
 
 ![formal/informal examples](./Pictures/formal-informal.png)
 
 Source: [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0)
-
-Formal languages are generally more [expressive](#expressivity) than informal languages.
 
 ### Network of Ontologies
 Otherwise refered to as an _ontology network_. This is a collection of interlinked ontologies. This is often implemented in systems which require supporting knowledge from different domains of information.
@@ -405,7 +403,7 @@ An instance of a concept (class) or role (property)
 In a logical system, such as a [Description Logic](#description-logic), the system is decidable if there exists an effective method for determining the answer to true/false or yes/no question. For example propositional logic is decidable because a truth table can answer any true/false question written with propositional logic.
 
 ### Expressivity
-Expressivity or expressiveness is a characteristic of a language that describes its ability to specify [#conceptualizations](#conceptualization). Generally, more expressive languages are also less efficient to [reason](#reasoning) with. Some languages are so expressive that they are not [decidable](#Decidability) and cannot be reasoned upon.
+Expressivity or expressiveness is a characteristic of a language that describes its ability to specify [conceptualizations](#conceptualization). Generally, more expressive languages are also less efficient to [reason](#reasoning) with. Some languages are so expressive that they are not [decidable](#Decidability) and cannot be reasoned upon.
 
 ### Reasoning
 The process of infer new [axioms](#axiom) from a set of existing axioms. This is often performed with software called reasoners or semantic reasoners.
