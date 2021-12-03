@@ -1,5 +1,9 @@
 # Tools for working on point clouds
 
+## External references
+
+ * [Lyon Métropole tutorial]( https://data.grandlyon.com/actualites/traitement-du-nuage-de-points-avec-des-outils-libres) (in french)
+
 ## Online tools
 
 ### Plas
