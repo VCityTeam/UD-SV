@@ -26,9 +26,16 @@ principles yields the following good practices for git repositories:
    (in application of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) managerial vs software)
  * **For every owner** (precedence of ownership over software engineering)
    - create a repository for every [(software) library](https://en.wikipedia.org/wiki/Library_(computing)) (e.g. [py3dtiles](https://github.com/VCityTeam/py3dtiles) which is a python library) or [(software) package] (e.g. [UD-Viz](https://github.com/VCityTeam/UD-Viz) is a JS package)...
-   - create a repository for every [(software) application](https://en.wikipedia.org/wiki/Application_software) e.g. [UD-Viz-demo](https://github.com/VCityTeam/UD-Viz-demo) is an application demo based on UD-Viz
-   - create a repository for every docker component e.g. [UD-Viz-demo-docker](https://github.com/VCityTeam/UD-Viz-demo-docker) (note that although `docker build` CAN use an URL of a git repository to designate a docker context but it can __NOT use the url of a sub-directory__ of git repository)
-   - but a demo can be a **directory** (within a repository) usually holding a [docker-compose ](https://docs.docker.com/compose/) or an [helm chart](https://github.com/helm/helm)(located e.g. in [UD-Reproducibility/Demos](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Demos) 
+   - create a repository for every [(software) application](https://en.wikipedia.org/wiki/Application_software) for example
+      - [UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template) is an application based on UD-Viz
+      - [UD-Demo-DatAgora-Vegetalisation-PartDieu](https://github.com/VCityTeam/UD-Demo-DatAgora-Vegetalisation-PartDieu)
+        is a demo application using 
+        [docker-compose](https://github.com/VCityTeam/UD-Demo-DatAgora-Vegetalisation-PartDieu/blob/master/docker-compose.yml)
+        technique
+      - we can envision software applications deployed with [helm charts](https://github.com/helm/helm).
+   - create a repository for every docker component e.g. 
+     [UD-Viz-Template-docker](https://github.com/VCityTeam/UD-Viz-Template-docker):
+     this good practice arises because `docker build` can __NOT__ use the url of a sub-directory to designate a docker context within git repository (although it CAN use an URL of a git repository)
 
 The above practices are summarized by the following illustration
 
@@ -104,3 +111,13 @@ UD-Demo-MyProject-NiceFeature-SomeTerritory
     │   └───  ...
     └── install.sh            # Might call Component[1|2]/docker-build.sh  
 ```
+
+## Concerning docker
+We already mentioned (refer above) that every docker component should have its own repository e.g. [UD-Viz-Template-docker](https://github.com/VCityTeam/UD-Viz-Template-docker).
+
+Additionnaly, the [docker image tags](https://docs.docker.com/engine/reference/commandline/build/#tag-an-image--t) should be prefixed with `vcity/` and named after the application repository name i.e. of the form `vcity/<application-name>:version` (where the version is of course optionnal). 
+This should facilitate the management of images and avoid possible collisions with other projects/organisations.
+Note that when the application name is prefixed by `UD-`, and because we already prefix the tag with `vicity/`, the `UD-` prefix should be dropped (as well as any trailing `-docker` figuring within the repository name).
+For example:
+- the container build with the [https://github.com/VCityTeam/UD-Demo-vcity-lods-lyon-docker](https://github.com/VCityTeam/UD-Demo-vcity-lods-lyon-docker) repository shoud be tagged `vcity/demo-lods-lyon`
+- the containers build with the [UD-Viz-Template-docker](https://github.com/VCityTeam/UD-Viz-Template-docker) repository shoud be tagged `vcity/viz-template/demofull-apache` and `vcity/viz-template/demofull-simpleserver`
