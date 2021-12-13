@@ -30,4 +30,9 @@ based formats (which is mandatory for git repositories), recommended for the pro
  
 ### [Pyton diagrams](https://pypi.org/project/diagrams/)
    - Mostly for deployment/control diagrams
+
+### [Enterprise Architect](https://www.sparxsystems.com/resources/tutorials/uml/part1.html)
+   - An industry level platform for UML modeling
+   - This powerful tool is great for creating complex, standardized diagrams but may be a bit heavy for simple diagrams
+   - A VM with EA installed can be found on [nextcloud](https://partage.liris.cnrs.fr/index.php/f/723424583)
    
