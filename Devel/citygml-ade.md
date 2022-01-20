@@ -1,6 +1,6 @@
 # CityGML ADEs (and the temporal extentions)
 
-This document will explain how the ADE mechanism works, and the temporal ADE proposed in [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) and [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf).
+This document will explain how the ADE mechanism works, and the temporal ADEs proposed in [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) and [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf).
 
 Some helpful knowledge you should be a little familiar with before reading:
 - [Wikipedia: Unified Modeling Lanugage](https://en.wikipedia.org/wiki/Unified_Modeling_Language)
@@ -20,6 +20,7 @@ In CityGML, ADEs must be formalized as an encoding (the most popular format bein
 One of the most well known ADE examples is the noise ADE which extends the existing Transportation, Building, and CityFurniture classes to allow for calculating noise pollution. Take a look at [[OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842) Annex H for more information, examples, and pretty pictures.
 
 ![image](https://user-images.githubusercontent.com/23373264/150370813-408c7c87-b3b8-47e1-bb82-d68f16443eae.png)
+credit: [[OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)
 
 In CityGML 2.0:
 > "an ADE XML schema can define various extensions to CityGML. However, all extensions shall belong to one of the two following categories:
@@ -28,10 +29,23 @@ In CityGML 2.0:
 
 In the case of the image above, \_AbstracBuilding is extended using method 2.
 
-With CityGML 3.0, it is not yet clear what the best practice for formalizing an ADE will be but using model transformation tools to automatically create an XML Schema from a UML model will likely be a good [model-driven-engineering](https://en.wikipedia.org/wiki/Model-driven_engineering) option. This is possible since the CityGML 3.0 Conceptual Model itself is formalized and publicly available as an [Enterprise Architect file](https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap) and can be transformed using tools such as [Shapechange](https://shapechange.net/)
+With CityGML 3.0, it is not yet clear what the best practice for formalizing an ADE will be but using model transformation tools to automatically create an XML Schema from a UML model will likely be a good [model-driven-engineering](https://en.wikipedia.org/wiki/Model-driven_engineering) option. This is possible since the CityGML 3.0 Conceptual Model itself is formalized and publicly available as an [Enterprise Architect file](https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap) to be exploited by model transformation tools such as [Shapechange](https://shapechange.net/).
 
-## CityGML 2.0 Versioning ADE doc
+## CityGML 2.0 Temporal ADEs doc
+The Versioning ADE was initially proposed in [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) in order to provide a framework for supporting multiple 'Versions' of a city model in a single CityGML document and storing the changes between features in the model.
 
+3 concepts were proposed and formalized in this paper:
+1. **Version**: a snapshot of a city model.
+2. **VersionTransition**: a composition of all of the changes between two versions. Proposed transition types include: planned, realized, historical succession, fork, and merge 
+3. **Transaction**: an replacement, addition, or deletion of a feature between two versions. 
+
+![image](https://user-images.githubusercontent.com/23373264/150381878-a5ee9379-77b5-4540-b5e6-c3b2cb8a091e.png)
+
+credit: [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document)
+
+![image](https://user-images.githubusercontent.com/23373264/150382089-b97df4de-c889-4069-a11a-d3aa15335dff.png)
+
+credit: [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document)
 
 ## CityGML 3.0 Versioning Module doc
 
