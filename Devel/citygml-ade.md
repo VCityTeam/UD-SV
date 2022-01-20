@@ -1,4 +1,4 @@
-# CityGML ADEs and the Temporal
+# CityGML ADEs (and the temporal extentions)
 
 This document will explain how the ADE mechanism works, and the temporal ADE proposed in [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) and [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf).
 
