@@ -101,6 +101,8 @@ The following is a version of the city.
 
 ## Workspace and Scenarios
 
+The above notions of versions, transactions and version transitions introduced in CityGML 3.0 have been further extended in [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf). 
+
 ![image](https://user-images.githubusercontent.com/8275121/150520355-642a9511-7dce-4940-9a91-b8edf13d4684.png)
 
 
