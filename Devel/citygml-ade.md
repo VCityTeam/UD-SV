@@ -1,4 +1,4 @@
-# CityGML ADEs (and the temporal extentions)
+# CityGML ADEs
 
 This document will explain how the ADE mechanism works in CityGML works.
 
