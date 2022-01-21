@@ -104,6 +104,8 @@ Version transitions have been classified as either:
 * **Regular** as in [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html)
 * **Influenced**: This is used to represent when we use to show the influence of a version in the past to a version in the future. This is useful to represent the proposed project in a city (e.g., an industrial zone, road infrastructure)
 
+![image](https://user-images.githubusercontent.com/23373264/150551588-1d80a624-b5ce-406b-81f0-54f08c5caf2b.png)
+
 Here is an example of a possible Workspace for the study of urban evolution:
 
 ![image](https://user-images.githubusercontent.com/23373264/150550282-1edca381-3a23-41d0-9477-116a72a1b7db.png)
