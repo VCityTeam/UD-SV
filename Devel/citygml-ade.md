@@ -14,7 +14,7 @@ Generic objects can be created by extending *GenericCityObject* that has three a
 
 One major limitation of using these attributes is the difficulty in validating the extended data. Domain experts may propose may propose names, data types and cardinality information of the extended generic objects and attributes. However, the CityGML parser may not have this additional information and hence, it is impossible to verify whether the data types/cardinality information is respected in the instances of generic objects/attributes. This is where ADE comes into picture.
 
-The conceptual model of *GenericCityObject* and *_genericAttribute* is given below:
+The conceptual model of *GenericCityObject* and *_genericAttribute* is given below ([[Page 164, OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842) OGC City Geography Markup Language (CityGML) Encoding Standard Version: 2.0.0):
 
 ![image](https://user-images.githubusercontent.com/8275121/150536248-a1cf2408-1a67-4e53-9f44-f4999b7e099b.png)
 
