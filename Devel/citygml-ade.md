@@ -11,6 +11,12 @@ Some helpful OGC vocabulary:
 - **Encoding**: A computer readable formalization of a data model, e.g. models expressed in XML Schema, [JSON-Schema](https://json-schema.org/), [Database Schema](https://www.ibm.com/cloud/learn/database-schema), etc.
 - **Feature**: A representation of a real world thing such as a Building
 
+## CityGML ADE 
+* Examples
+* CityGML ADE (Temporal)
+
+## Generic Attributes
+
 
 ## CityGML ADE mechanism doc
 > "An Application Domain Extension (ADE) is a formal and systematic extension of the CityGML Conceptual Model (CM) for a specific application or domain." [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html)
