@@ -89,6 +89,8 @@ We see three transactions
 
 The above notions of versions, transactions and version transitions introduced in CityGML 3.0 have been further extended in [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf). 
 
+Scenarios are used to represent a sequence of changes to one or more city objects. [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf) introduced the concept of space, which is a collection of one or more scenarios. A consensus space has only one scenario, which represents the official scenario of the urban evolution or the evolution of urban objects. Proposition space, on the other hand may have zero or more scenario, with each scenario is a proposed scenario of changes. Proposition space is particularly useful when the researchers wish to propose hypotheses related to urban evolution.
+
 ![image](https://user-images.githubusercontent.com/8275121/150520355-642a9511-7dce-4940-9a91-b8edf13d4684.png)
 
 ## See also
