@@ -1,8 +1,17 @@
 # CityGML ADEs
 
-CityGML is used to represent urban information, especially the information related to various city objects like buildings, bridges, vegetation, road infrastructure etc. However, not all information are covered by CityGML. This is where ADE comes into picture. ADE or Application Domain Extension helps domain experts to extend CityGML for representing relevant information related to their domains in an interoperable manner. These domain extensions and the associated data could be easily shared to build a more enriched model.
+CityGML is used to represent urban information, especially the information related to various city objects like buildings, bridges, vegetation, road infrastructure etc. However, not all information are covered by CityGML. Hence, there are two possible ways of CityGML extensions:
 
-However these possible extensions must respect some conditions. This document will explain how the ADE mechanism works in CityGML works.
+1.  *Generic attributes and objects*
+2.  *ADE (Application Domain Extension)*
+
+## Generic attributes and objects
+The CityGML classes *GenericCityObject* and *_genericAttribute* can be extended to introduce new *generic objects* and *generic attributes*.
+
+One major limitation of using these attributes is the difficulty in validating the extended data. Domain experts may propose may propose names, data types and cardinality information of the extended generic objects and attributes. However, the CityGML parser may not have this additional information and hence, it is impossible to verify whether the data types/cardinality information is respected in the instances of generic objects/attributes. This is where ADE comes into picture.
+
+## ADE (Application Domain Extension)
+ ADE or Application Domain Extension helps domain experts to extend CityGML for representing relevant information related to their domains in an interoperable manner. These domain extensions and the associated data could be easily shared to build a more enriched model. However these possible extensions must respect some conditions. This document will explain how the ADE mechanism works in CityGML.
 
 Some helpful knowledge you should be a little familiar with before reading:
 - [Wikipedia: Unified Modeling Lanugage](https://en.wikipedia.org/wiki/Unified_Modeling_Language)
@@ -15,6 +24,10 @@ Some helpful OGC vocabulary:
 
 ## CityGML ADE mechanism
 > "An Application Domain Extension (ADE) is a formal and systematic extension of the CityGML Conceptual Model (CM) for a specific application or domain." [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html)
+
+Informally, ADE allows the following extensions
+1. addition of new properties to existing CityGML classes
+2. addition of new feature types
 
 In CityGML, ADEs must be formalized as an encoding (the most popular format being XML Schema) and can be expressed using UML.
 
@@ -33,6 +46,8 @@ In the case of the image above, \_AbstracBuilding is extended using method 2.
 With CityGML 3.0, it is not yet clear what the best practice for formalizing an ADE will be but using model transformation tools to automatically create an XML Schema from a UML model will likely be a good [model-driven-engineering](https://en.wikipedia.org/wiki/Model-driven_engineering) option. This is possible since the CityGML 3.0 Conceptual Model itself is formalized and publicly available as an [Enterprise Architect file](https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap) to be exploited by model transformation tools such as [Shapechange](https://shapechange.net/).
 
 ## Examples
+* ADE for Noise Immission Simulation: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)]
+* DE for Ubiquitous Network Robots Services: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)]
 * [Versioning Module in CityGML](citygml-ade-versioning.md )
 
 ## Biblio
