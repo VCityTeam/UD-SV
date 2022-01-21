@@ -61,13 +61,19 @@ In this example, there are two representations of the two versions of the buildi
 * **B1020_t1** is a valid physical representation of the building **B1020** between the dates *2012-08-02* and *2013-10-09* and having the function *Office*.
 * **B1020_t2** is a valid physical representation of the building **B1020** from *2013-10-09* and having the function *Living*. Since there is no use of the attribute *terminationDate*, it means that the current function of the building is *Living*. 
 
-In order to identify that the versions are of the building **B1020**, the *identifier* attribute of both  use the same value **B1020**. The building parts are specified using `xLinks`.
-This will also allow us to find the multiple versions of the building part **BP12**
+In order to identify that the versions are of the building **B1020**, the *identifier* attribute of both  use the same value **B1020**. In this example, we have only building part with the identifier with the value  **BP12**. However, the building part is specified using `xLink`. This will also allow us to find the multiple versions of the building part **BP12** (as shown below). 
+
 ```
     <consistsOfBuildingPart>
         <BuildingPart xlink:href="//identifier[text()='BP12']/.."/> 
     </consistsOfBuildingPart>
 ```
+The example version of the building part   **BP12** is given below:
+
+![image](https://user-images.githubusercontent.com/8275121/150503006-ecda395d-9591-46d3-8fbe-3b54c50f261a.png)
+
+The above version of the building part has the following attribute values
+* **BP_t1** is a valid physical representation of the building part **BP12** between the dates *2012-08-02* and *2014-06-03* and having a *Flat* *roofType*.
 
 ## CityGML 3.0 Versioning Module doc
 
