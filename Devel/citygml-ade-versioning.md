@@ -63,10 +63,20 @@ Take for example, the following use case of two versions:
 ![image](https://user-images.githubusercontent.com/8275121/150516759-c5d52a84-3f82-41dd-b8f9-5781eea8ff2b.png)
 
 
-The following is a version of the city.
+The following is a snippet from the example dataset. It has two buildings **BU_69381AL47** and **BU_69381AL49** which have undergone changes in two versions. 
+
+![image](https://user-images.githubusercontent.com/8275121/150540875-7b2473af-3d30-4774-b9a1-604b2c4a6a13.png)
+
+![image](https://user-images.githubusercontent.com/8275121/150541151-3e78e936-c2ce-4dff-9bfa-0bea783c5de4.png)
+
+The two versions *v1.0* (**LYON_1ER_snapshot_2000-01-01**) and *v2.0* (**LYON_1ER_snapshot_2015-01-01**) are given below:
+
+![image](https://user-images.githubusercontent.com/8275121/150546693-bd56ab0c-2499-4203-9c78-9d89dc27d415.png)
 
 
-![image](https://user-images.githubusercontent.com/8275121/150505138-50b57856-a955-4a14-84fc-ee222bb97155.png)
+![image](https://user-images.githubusercontent.com/8275121/150546763-affa4257-6c89-4b20-8bc4-8132080cec2a.png)
+
+
 
 ## Workspace and Scenarios
 
