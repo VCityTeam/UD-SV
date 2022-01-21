@@ -47,7 +47,7 @@ credit: [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/docume
 
 credit: [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document)
 
-An example GML file using XLinks is available in [3DUSE](https://github.com/VCityTeam/3DUSE/blob/master/doc/ADE/Temporel/1.%20xlinks/GML_test_ADE.gml)
+An example GML file using XLinks is available in [3DUSE](https://github.com/VCityTeam/3DUSE/blob/master/doc/ADE/Temporel/1.%20xlinks/GML_test_ADE.gml).
 
 Take, for example, the building has changed its function from "Office" (see the screenshot given below) to
 
@@ -57,7 +57,9 @@ Take, for example, the building has changed its function from "Office" (see the 
 
 ![image](https://user-images.githubusercontent.com/8275121/150499675-6b1eaf4d-86a5-4a0e-840e-572ae874b6c6.png)
 
-
+In this example, there are two representations of the two versions of the building identified by the identifiers **B1020_t1** and **B1020_t2**.
+* **B1020_t1** is a valid physical representation of the building **B1020** between the dates *2012-08-02* and *2013-10-09* and having the function *Office*.
+* **B1020_t2** is a valid physical representation of the building **B1020** from *2013-10-09* and having the function *Living*. Since there is no use of the attribute *terminationDate*, it means that the current function of the building is *Living*. 
 
 ## CityGML 3.0 Versioning Module doc
 
