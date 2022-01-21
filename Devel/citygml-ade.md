@@ -59,11 +59,13 @@ In the image given below, we see that a new feature *noise::NoiseCityFurnitureSe
 With CityGML 3.0, it is not yet clear what the best practice for formalizing an ADE will be but using model transformation tools to automatically create an XML Schema from a UML model will likely be a good [model-driven-engineering](https://en.wikipedia.org/wiki/Model-driven_engineering) option. This is possible since the CityGML 3.0 Conceptual Model itself is formalized and publicly available as an [Enterprise Architect file](https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap) to be exploited by model transformation tools such as [Shapechange](https://shapechange.net/).
 
 ## Examples
+* CityGML Application Domain Extension (ADE): overview of developments [[Biljecki 2018]](https://opengeospatialdata.springeropen.com/track/pdf/10.1186/s40965-018-0055-6.pdf)
 * ADE for Noise Immission Simulation: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)
-* DE for Ubiquitous Network Robots Services: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)
+* ADE for Ubiquitous Network Robots Services: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)
 * [Versioning Module in CityGML](citygml-ade-versioning.md )
 
 ## Biblio
+- [[Biljecki 2018]](https://opengeospatialdata.springeropen.com/track/pdf/10.1186/s40965-018-0055-6.pdf) F. Biljecki, K. Kumar, and C. Nagel, “CityGML Application Domain Extension (ADE): overview of developments,” Open Geospatial Data, Software and Standards, vol. 3, no. 1, p. 13, Aug. 2018, doi: 10.1186/s40965-018-0055-6.
 - [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html) OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard Version: 3.0.0
 - [[OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842) OGC City Geography Markup Language (CityGML) Encoding Standard Version: 2.0.0
 - [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) Kanishk Chaturvedi, Carl Stephen Smyth, Gilles Gesquière, Tatjana Kutzner, Thomas H. Kolbe. Managing Versions and History Within Semantic 3D City Models for the Next Generation of CityGML. Abdul-Rahman, Alias. Lecture Notes in Geoinformation and Cartography, Springer, pp.191 - 206, 2017, Advances in 3D Geoinformation, 978-3-319-25689-4. ⟨10.1007/978-3-319-25691-7_11⟩. ⟨hal-01386247⟩
