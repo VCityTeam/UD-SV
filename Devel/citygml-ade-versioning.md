@@ -112,6 +112,7 @@ Here is an example of a possible Workspace for the study of urban evolution:
 
 ## See also
 * [CityGML ADEs](citygml-ade.md)
+* [CityGML 3.0 Versioning Module: Basic Versioning Example](https://github.com/opengeospatial/CityGML-3.0Encodings/blob/master/CityGML/Examples/Versioning/Basic%20examples/CityGML%203.0%20-%20Versioning%20Module.pdf)
 * [CityGML 3.0 Conceptual Model Section 7.13: Versioning](https://docs.ogc.org/is/20-010/20-010.html#toc41)
 
 ## Bibliography
