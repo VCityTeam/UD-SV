@@ -89,15 +89,20 @@ We see three transactions
 
 The above notions of versions, transactions and version transitions introduced in CityGML 3.0 have been further extended in [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf). 
 
-Scenarios are used to represent a sequence of changes to one or more city objects. [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf) introduced the concept of space, which is a collection of one or more scenarios. A consensus space has only one scenario, which represents the official scenario of the urban evolution or the evolution of urban objects. Proposition space, on the other hand may have zero or more scenario, with each scenario is a proposed scenario of changes. Proposition space is particularly useful when the researchers wish to propose hypotheses related to urban evolution.
+This work proposes the following concepts as enchancements to the model:
+- **Workspace** - "A workspace manages various scenarios of urban evolution proposed by agents (e.g., researchers, users, domain experts, enterprises etc.)... A workspace consists of two spaces: Consensus Space and Proposition Space."
+- **Scenarios** - used to represent a sequence of changes to one or more city objects. [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf)
+- **Space** -  a collection of one or more scenarios.
+  - **Consensus Space** - has only one scenario, which represents the official scenario of the urban evolution or the evolution of urban objects. **Proposition space**, on the other hand may have zero or more scenario, with each scenario is a proposed scenario of changes.
+  - **Proposition Space** - is particularly useful when the researchers wish to propose hypotheses related to urban evolution.
 
 Versions have been classified to two:
-* *Existing*: This is to represent versions which existed physically during the past, whose existence have been (officially) confirmed
-* *Imagined*: This is to represent project propositions like the construction of an indstrial zone, highways etc.
+* **Existing**: This is to represent versions which existed physically during the past, whose existence have been (officially) confirmed
+* **Imagined**: This is to represent project propositions like the construction of an indstrial zone, highways etc.
 
 Version transitions have been classified to two:
-* *regular* as in [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html)
-* *influenced*: This is used to represent when we use to show the influence of a version in the past to a version in the future. This is useful to represent the proposed project in a city (e.g., an industrial zone, road infrastructure)
+* **Regular** as in [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html)
+* **Influenced**: This is used to represent when we use to show the influence of a version in the past to a version in the future. This is useful to represent the proposed project in a city (e.g., an industrial zone, road infrastructure)
 
 Here is an example of a possible Workspace for the study of urban evolution:
 
@@ -112,15 +117,3 @@ Here is an example of a possible Workspace for the study of urban evolution:
 - [[OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842) OGC City Geography Markup Language (CityGML) Encoding Standard Version: 2.0.0
 - [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) Kanishk Chaturvedi, Carl Stephen Smyth, Gilles Gesquière, Tatjana Kutzner, Thomas H. Kolbe. Managing Versions and History Within Semantic 3D City Models for the Next Generation of CityGML. Abdul-Rahman, Alias. Lecture Notes in Geoinformation and Cartography, Springer, pp.191 - 206, 2017, Advances in 3D Geoinformation, 978-3-319-25689-4. ⟨10.1007/978-3-319-25691-7_11⟩. ⟨hal-01386247⟩
 - [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf) J. Samuel, S. Servigne, and G. Gesquière, “Representation of concurrent points of view of urban changes for city models,” J Geogr Syst, vol. 22, no. 3, pp. 335–359, Jul. 2020, doi: 10.1007/s10109-020-00319-1.
-
-
-
-
-
-
-## Workspace and Scenarios
-
-Here is an example of a possible Workspace for the study of urban evolution:
-
-![image](https://user-images.githubusercontent.com/23373264/150550282-1edca381-3a23-41d0-9477-116a72a1b7db.png)
-
