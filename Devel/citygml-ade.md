@@ -53,6 +53,10 @@ The conceptual model of the versioning module as given below is proposed in [ op
 CityGML-3.0CM ](https://github.com/opengeospatial/CityGML-3.0CM/blob/master/Conceptual%20Model/CityGML_3.0_UML-Diagrams.pdf).
 ![image](https://user-images.githubusercontent.com/8275121/150493650-78704aa5-dc8a-4d15-b482-f741d09447ef.png)
 
+Some examples of the versioning module are available in [ opengeospatial /
+CityGML-3.0Encodings
+](https://github.com/opengeospatial/CityGML-3.0Encodings/tree/master/CityGML/Examples/Versioning). 
+
 ## Biblio
 - [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html) OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard Version: 3.0.0
 - [[OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842) OGC City Geography Markup Language (CityGML) Encoding Standard Version: 2.0.0
