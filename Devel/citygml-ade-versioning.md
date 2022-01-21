@@ -80,6 +80,10 @@ The version transition from *v1.0* (**LYON_1ER_snapshot_2000-01-01**) to *v2.0* 
 
 ![image](https://user-images.githubusercontent.com/8275121/150547254-79cb1e84-0c74-4d4c-b7be-48bcc07c0f71.png)
 
+We see three transactions
+* *insert*: A new building unit **BU_69381AL50_2015-01-01** has been introduced 
+* *replace*: The building unit **BU_69381AL49_2000-01-01** has been undergone a change and is represented by **BU_69381AL49_2015-01-01**.
+* *delete*: The building unit identified by **BU_69381AL47_2000-01-01** has been deleted
 
 ## Workspace and Scenarios
 
