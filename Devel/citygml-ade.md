@@ -61,6 +61,8 @@ In this example, there are two representations of the two versions of the buildi
 * **B1020_t1** is a valid physical representation of the building **B1020** between the dates *2012-08-02* and *2013-10-09* and having the function *Office*.
 * **B1020_t2** is a valid physical representation of the building **B1020** from *2013-10-09* and having the function *Living*. Since there is no use of the attribute *terminationDate*, it means that the current function of the building is *Living*. 
 
+In order to identify that thes versions are of the building **B1020**, the *identifier* attribute both these version use the same value **B1020**.
+
 ## CityGML 3.0 Versioning Module doc
 
 The conceptual model of the versioning module as given below is proposed in [ opengeospatial /
