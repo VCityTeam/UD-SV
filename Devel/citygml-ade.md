@@ -89,7 +89,14 @@ CityGML-3.0Encodings
 
 Since versions have now their own classes in CityGML 3.0, it is now possible to represent them.
 
+Take for example, the following use case of two versions:
+
+![image](https://user-images.githubusercontent.com/8275121/150516759-c5d52a84-3f82-41dd-b8f9-5781eea8ff2b.png)
+
+
 The following is a version of the city.
+
+
 ![image](https://user-images.githubusercontent.com/8275121/150505138-50b57856-a955-4a14-84fc-ee222bb97155.png)
 
 
