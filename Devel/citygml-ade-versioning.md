@@ -93,6 +93,15 @@ Scenarios are used to represent a sequence of changes to one or more city object
 
 ![image](https://user-images.githubusercontent.com/8275121/150520355-642a9511-7dce-4940-9a91-b8edf13d4684.png)
 
+
+Versions have been classified to two:
+* *Existing*: This is to represent versions which existed physically during the past, whose existence have been (officially) confirmed
+* *Imagined*: This is to represent project propositions like the construction of an indstrial zone, highways etc.
+
+Version transitions have been classified to two:
+* *regular* as in [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html)
+* *influenced*: This is used to represent when we use to show the influence of a version in the past to a version in the future. This is useful to represent the proposed project in a city (e.g., an industrial zone, road infrastructure)
+
 ## See also
 * [CityGML ADEs](citygml-ade.md)
 
