@@ -6,7 +6,7 @@ Some helpful knowledge you should be a little familiar with before reading:
 - [Wikipedia: Unified Modeling Lanugage](https://en.wikipedia.org/wiki/Unified_Modeling_Language)
 - [What is XML Schema (XSD)?](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms765537%28v=vs.85%29)
 
-Some helpful OGC vocab:
+Some helpful OGC vocabulary:
 - **Conceptual Model**: A highly conceptual - and often human friendly - data model,e.g. a model expressed in UML
 - **Encoding**: A computer readable formalization of a data model, e.g. models expressed in XML Schema, [JSON-Schema](https://json-schema.org/), [Database Schema](https://www.ibm.com/cloud/learn/database-schema), etc.
 - **Feature**: A representation of a real world thing such as a Building
@@ -46,6 +46,18 @@ credit: [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/docume
 ![image](https://user-images.githubusercontent.com/23373264/150382089-b97df4de-c889-4069-a11a-d3aa15335dff.png)
 
 credit: [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document)
+
+An example GML file using XLinks is available in [3DUSE](https://github.com/VCityTeam/3DUSE/blob/master/doc/ADE/Temporel/1.%20xlinks/GML_test_ADE.gml)
+
+Take, for example, the building has changed its function from "Office" (see the screenshot given below) to
+
+![image](https://user-images.githubusercontent.com/8275121/150499602-926b0e72-f121-43d7-b984-f319981fa731.png)
+
+"Living" (see the screenshot given below).
+
+![image](https://user-images.githubusercontent.com/8275121/150499675-6b1eaf4d-86a5-4a0e-840e-572ae874b6c6.png)
+
+
 
 ## CityGML 3.0 Versioning Module doc
 
