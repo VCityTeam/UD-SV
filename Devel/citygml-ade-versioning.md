@@ -26,7 +26,11 @@ Take, for example, the building has changed its function from "Office" (see the 
 
 ![image](https://user-images.githubusercontent.com/8275121/150499675-6b1eaf4d-86a5-4a0e-840e-572ae874b6c6.png)
 
-In this example, there are two representations of the two versions of the building identified by the identifiers **B1020_t1** and **B1020_t2**.
+These examples use two types of identifiers:
+* **Major Identifiers** - the identifier of a Feature _independent of a version_. These are sometimes refered to as "global" identifiers.
+* **Minor Identifiers** - the identifier of a Feature _dependent on a version_. These idenfiers must be unique within the dataset. These are sometimes refered to as "local" identifiers.
+
+In this example, there are two representations of the two versions of the building identified by the minor identifiers `gml:id="B1020_t1"` and `gml:id="B1020_t2"`. Both of these representations reference their common Feature with the identifier `<identifier>B1020</identifier>`. Thus:
 * **B1020_t1** is a valid physical representation of the building **B1020** between the dates *2012-08-02* and *2013-10-09* and having the function *Office*.
 * **B1020_t2** is a valid physical representation of the building **B1020** from *2013-10-09* and having the function *Living*. Since there is no use of the attribute *terminationDate*, it means that the current function of the building is *Living*. 
 
