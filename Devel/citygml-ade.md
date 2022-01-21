@@ -37,7 +37,7 @@ The Versioning ADE was initially proposed in [[Chaturvedi 2017]](https://hal.arc
 3 concepts were proposed and formalized in this paper:
 1. **Version**: a snapshot of a city model.
 2. **VersionTransition**: a composition of all of the changes between two versions. Proposed transition types include: planned, realized, historical succession, fork, and merge 
-3. **Transaction**: an replacement, addition, or deletion of a feature between two versions. 
+3. **Transaction**: a replacement, addition, or deletion of a feature between two versions. 
 
 ![image](https://user-images.githubusercontent.com/23373264/150381878-a5ee9379-77b5-4540-b5e6-c3b2cb8a091e.png)
 
@@ -74,6 +74,8 @@ The example version of the building part   **BP12** is given below:
 
 The above version of the building part has the following attribute values
 * **BP_t1** is a valid physical representation of the building part **BP12** between the dates *2012-08-02* and *2014-06-03* and having a *Flat* *roofType*.
+
+The above proposition has now been accepted with some enhancements in CityGML 3.0, which we describe below.
 
 ## CityGML 3.0 Versioning Module doc
 
