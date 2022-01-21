@@ -10,9 +10,14 @@ The CityGML classes *GenericCityObject* and *_genericAttribute* can be extended 
 
 An extended generic attribute may belong to any of the following data types: string, integer, double (floating point number), date, URI or a measure (*gml:MeasureType*). It is also possible to create complex generic attribute by making use of *genericAttributeSet*, which in itself is a generic attribute.  
 
-Generic objects can be created by extending *GenericCityObject* that has three attributes: *class*, *function* and *usage*. *GenericCityObject* may also have explicit geometry or/and *ImplicitGeometry* (useful for specifying prototypical geometry). And it is also possible to specify the intersections between the explicit geometry of the generic object with the digital terrain model.
+Generic objects can be created by extending *GenericCityObject* that has three attributes: *class*, *function* and *usage*. *GenericCityObject* may also have explicit geometry or/and *ImplicitGeometry* (useful for specifying prototypical geometry of objects like trees, traffic lights etc.). And it is also possible to specify the intersections between the explicit geometry of the generic object with the digital terrain model.
 
 One major limitation of using these attributes is the difficulty in validating the extended data. Domain experts may propose may propose names, data types and cardinality information of the extended generic objects and attributes. However, the CityGML parser may not have this additional information and hence, it is impossible to verify whether the data types/cardinality information is respected in the instances of generic objects/attributes. This is where ADE comes into picture.
+
+The conceptual model of *GenericCityObject* and *_genericAttribute* is given below:
+
+![image](https://user-images.githubusercontent.com/8275121/150536248-a1cf2408-1a67-4e53-9f44-f4999b7e099b.png)
+
 
 ## ADE (Application Domain Extension)
  ADE or Application Domain Extension helps domain experts to extend CityGML for representing relevant information related to their domains in an interoperable manner. These domain extensions and the associated data could be easily shared to build a more enriched model. However these possible extensions must respect some conditions. This document will explain how the ADE mechanism works in CityGML.
