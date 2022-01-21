@@ -76,6 +76,9 @@ The two versions *v1.0* (**LYON_1ER_snapshot_2000-01-01**) and *v2.0* (**LYON_1E
 
 ![image](https://user-images.githubusercontent.com/8275121/150546763-affa4257-6c89-4b20-8bc4-8132080cec2a.png)
 
+The version transition from *v1.0* (**LYON_1ER_snapshot_2000-01-01**) to *v2.0* (**LYON_1ER_snapshot_2015-01-01**) and the associated transactions is given below:
+
+![image](https://user-images.githubusercontent.com/8275121/150547254-79cb1e84-0c74-4d4c-b7be-48bcc07c0f71.png)
 
 
 ## Workspace and Scenarios
