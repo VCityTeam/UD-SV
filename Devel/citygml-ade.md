@@ -8,6 +8,8 @@ CityGML is used to represent urban information, especially the information relat
 ## Generic attributes and objects
 The CityGML classes *GenericCityObject* and *_genericAttribute* can be extended to introduce new *generic objects* and *generic attributes*.
 
+An extended generic attribute may belong to any of the following data types: string, integer, double (floating point number), date, URI or a measure (*gml:MeasureType*). It is also possible to create complex generic attribute by making use of *genericAttributeSet*, which in itself is a generic attribute.  
+
 One major limitation of using these attributes is the difficulty in validating the extended data. Domain experts may propose may propose names, data types and cardinality information of the extended generic objects and attributes. However, the CityGML parser may not have this additional information and hence, it is impossible to verify whether the data types/cardinality information is respected in the instances of generic objects/attributes. This is where ADE comes into picture.
 
 ## ADE (Application Domain Extension)
@@ -46,8 +48,8 @@ In the case of the image above, \_AbstracBuilding is extended using method 2.
 With CityGML 3.0, it is not yet clear what the best practice for formalizing an ADE will be but using model transformation tools to automatically create an XML Schema from a UML model will likely be a good [model-driven-engineering](https://en.wikipedia.org/wiki/Model-driven_engineering) option. This is possible since the CityGML 3.0 Conceptual Model itself is formalized and publicly available as an [Enterprise Architect file](https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap) to be exploited by model transformation tools such as [Shapechange](https://shapechange.net/).
 
 ## Examples
-* ADE for Noise Immission Simulation: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)]
-* DE for Ubiquitous Network Robots Services: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)]
+* ADE for Noise Immission Simulation: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)
+* DE for Ubiquitous Network Robots Services: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)
 * [Versioning Module in CityGML](citygml-ade-versioning.md )
 
 ## Biblio
