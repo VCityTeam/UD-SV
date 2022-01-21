@@ -111,7 +111,7 @@ Here is an example of a possible Workspace for the study of urban evolution:
 ## See also
 * [CityGML ADEs](citygml-ade.md)
 * [CityGML 3.0 Conceptual Model Section 7.13: Versioning](https://docs.ogc.org/is/20-010/20-010.html#toc41)
-* 
+
 ## Bibliography
 - [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html) OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard Version: 3.0.0
 - [[OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842) OGC City Geography Markup Language (CityGML) Encoding Standard Version: 2.0.0
