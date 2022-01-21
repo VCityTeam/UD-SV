@@ -96,11 +96,11 @@ This work proposes the following concepts as enchancements to the model:
   - **Consensus Space** - has only one scenario, which represents the official scenario of the urban evolution or the evolution of urban objects. **Proposition space**, on the other hand may have zero or more scenario, with each scenario is a proposed scenario of changes.
   - **Proposition Space** - is particularly useful when the researchers wish to propose hypotheses related to urban evolution.
 
-Versions have been classified to two:
+Versions have been classified as either:
 * **Existing**: This is to represent versions which existed physically during the past, whose existence have been (officially) confirmed
 * **Imagined**: This is to represent project propositions like the construction of an indstrial zone, highways etc.
 
-Version transitions have been classified to two:
+Version transitions have been classified as either:
 * **Regular** as in [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html)
 * **Influenced**: This is used to represent when we use to show the influence of a version in the past to a version in the future. This is useful to represent the proposed project in a city (e.g., an industrial zone, road infrastructure)
 
