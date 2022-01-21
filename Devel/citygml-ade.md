@@ -99,6 +99,10 @@ The following is a version of the city.
 
 ![image](https://user-images.githubusercontent.com/8275121/150505138-50b57856-a955-4a14-84fc-ee222bb97155.png)
 
+## Workspace and Scenarios
+
+![image](https://user-images.githubusercontent.com/8275121/150520355-642a9511-7dce-4940-9a91-b8edf13d4684.png)
+
 
 ## Biblio
 - [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html) OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard Version: 3.0.0
