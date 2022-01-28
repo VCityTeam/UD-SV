@@ -17,12 +17,20 @@ and here is another tentative (closer, yet not strictly, [an UML component diagr
 
 ### Class diagram
 
-Abstract data model of geagraphically attached multimedia assets
-![](https://github.com/VCityTeam/UD-Serv/blob/master/API_Enhanced_City/doc/img/diagram_api.png)
+Abstract data model of geographically attached multimedia assets
+![](https://raw.githubusercontent.com/VCityTeam/Spatial-Multimedia-DB/master/doc/img/diagram_api.png)
+
+### Class diagram juxtaposed with component diagrams
+
+
+![](Pictures/2022_01_28_-_Activity_with_Component_technical_diagram.png)
+
+![](Pictures/2022_01_28_-_Activity_with_Component_diagram.png)
 
 ### UD-SV sequence diagrams examples
 
-#### Preprocessing of 3d-tiles tileset computations.
+#### Preprocessing of 3d-tiles tileset computations
+
 **[Puml source](Diagrams/ApplicationSetup.puml)**
 
 On first stage, an admin creates a view on 3DCityDB (e.g. with some scripts). This view will contain each
@@ -31,14 +39,15 @@ feature wanted in the dataset, its ids and any attribute related to the features
 ![](Diagrams/ApplicationSetup.png)
 
 #### GUI navigation in a 3D representation of a city
-**Navigation in a City in 3D diagram:**[Puml source](Diagrams/3DNavigation.puml)
+
+**Navigation in a City in 3D diagram:** [Puml source](Diagrams/3DNavigation.puml)
 
 ![](Diagrams/3DNavigation.png)
-
 
 ## Architecture related recommended material
 
 ### UD-SV level
+
 At the level of the UD-SV project:
  * [Thick client vs Thin Client server strategy](./ThickVsThinClientStrategy.md)
  * [Tools for diagramming](/Tools/ToolForDiagramming.md)
@@ -51,7 +60,6 @@ At the level of the UD-SV project:
  * [Difference between CRUD and REST](https://softwareengineering.stackexchange.com/questions/120716/difference-between-rest-and-crud): [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) means the basic operations to be done in a data repository. [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) operates on resource  representations (complex objects abstractions), each one identified by an URL. In short: **same thing, different layers** (CRUD falls within the Data Access layer while REST fits in the Business layer).
  * [Stateless vs Stateful](https://en.wikipedia.org/wiki/Stateless_protocol) protocols: there can be **complex interactions between stateful and stateless protocols** among **different protocol layers**. For example, HTTP is an example of a stateless protocol layered on top of TCP, a stateful protocol, which is layered on top of IP, another stateless protocol, which is routed on a network that employs BGP, another stateful protocol. Note: REST**ful** is state**less**.
 
-
  # IMUV Diagrams
 
 Repo Git [UD-IMUV](https://github.com/VCityTeam/UD-Imuv)
@@ -59,4 +67,3 @@ Repo Git [UD-IMUV](https://github.com/VCityTeam/UD-Imuv)
 [Puml source](./Diagrams/GlobalDiagramIMUV.puml)
 
 ![](./Diagrams/GlobalDiagramIMUV.png)
-
