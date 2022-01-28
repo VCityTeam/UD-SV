@@ -1,5 +1,19 @@
 # Representing Temporal Information and Versions in CityGML
 
+## Year of Construction/Destruction for buildings
+Initially, [[Morel 2014]](https://diglib.eg.org/xmlui/bitstream/handle/10.2312/udmv.20141076.037-042/037-042.pdf) proposed the use of attributes `yearOfConstruction`and `yearOfDemolition` for representing the lifespan of the buildings. For visualization with a temporal cursor, such a solution meant that a building needs to be visualized (or shown) in the virtual environment if the time corresponding to the temporal cursor is within the physical lifespan of the building(s).
+
+An example is given below:
+
+```
+  <cityObjectMember>
+    <bldg:Building gml:id="0_Building">
+      <bldg:yearOfConstruction>1865</bldg:yearOfConstruction>
+      <bldg:yearOfDemolition>1934</bldg:yearOfDemolition>
+      <app:appearance/>
+      <bldg:boundedBy>
+```
+
 ## CityGML 2.0 Temporal ADEs doc
 The Versioning ADE was initially proposed in [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) in order to provide a framework for supporting multiple 'Versions' of a city model in a single CityGML document and storing the changes between features in the model.
 
@@ -122,5 +136,6 @@ Here is an example of a possible Workspace for the study of urban evolution:
 ## Bibliography
 - [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html) OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard Version: 3.0.0
 - [[OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842) OGC City Geography Markup Language (CityGML) Encoding Standard Version: 2.0.0
+- [[Morel 2014]](https://diglib.eg.org/xmlui/bitstream/handle/10.2312/udmv.20141076.037-042/037-042.pdf), M. Morel and G. Gesquière, Managing temporal change of cities with CityGML, Eurographics Workshop on Urban Data Modelling and Visualization (2014)
 - [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) Kanishk Chaturvedi, Carl Stephen Smyth, Gilles Gesquière, Tatjana Kutzner, Thomas H. Kolbe. Managing Versions and History Within Semantic 3D City Models for the Next Generation of CityGML. Abdul-Rahman, Alias. Lecture Notes in Geoinformation and Cartography, Springer, pp.191 - 206, 2017, Advances in 3D Geoinformation, 978-3-319-25689-4. ⟨10.1007/978-3-319-25691-7_11⟩. ⟨hal-01386247⟩
 - [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf) J. Samuel, S. Servigne, and G. Gesquière, “Representation of concurrent points of view of urban changes for city models,” J Geogr Syst, vol. 22, no. 3, pp. 335–359, Jul. 2020, doi: 10.1007/s10109-020-00319-1.
