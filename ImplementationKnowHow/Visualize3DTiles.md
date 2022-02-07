@@ -5,13 +5,13 @@ If you want to produce 3DTiles from CityGML, GeoJSON, OBJ or IFC files, you can 
 
 ## Cesium Ion
 
+___Note__: your 3DTiles must be in the [EPSG:4978](https://epsg.io/4978)_
+
 Go to [Cesium ion](https://cesium.com/ion/) and sign in.
 
 Then, go to `My Assets` and `Add data`.
 
 Upload a zipped folder containing your tileset (the folder must contain a `.json` file and the tiles).
-
-___Note__: your 3DTiles must be the [EPSG:4978](https://epsg.io/4978)_
 
 Select `3D Tiles` in '_What kind of data is this?_' and select the main JSON of your tileset in the `3D Tiles options`.
 
@@ -27,10 +27,115 @@ Click on `Open complete code example` to open the full view.
 
 ## iTowns
 
+___Note 1__: Visualizing 3DTiles in iTowns requires [NodeJS](https://nodejs.org/en/download/)_  
+___Note 2__: your 3DTiles must be in the [EPSG:3946](https://epsg.io/3946)_
+
+Download the [bundle.zip](https://github.com/iTowns/itowns/releases/download/v2.36.2/bundles.zip) of iTowns.
+
+Create a folder and, in this folder, create a `itowns.html` file and a `js` folder. In the `js` folder, extract the content of the `bundle.zip`.
+
+![image](https://user-images.githubusercontent.com/32875283/152770304-e75e261a-1a1a-4d35-a86a-fbb3aac35bad.png)
+
+![image](https://user-images.githubusercontent.com/32875283/152770332-b4782e37-7ace-4f3b-a9eb-a00b9ecc1ba9.png)
+
+Open `itowns.html` in a code editor and create an empty view:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>3D-tiles mesh data</title>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        overflow: hidden;
+        height: 100%;
+      }
+      #viewerDiv {
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="viewerDiv"></div>
+    <script src="js/itowns.js"></script>
+    <script type="text/javascript">
+      // Retrieve the view container
+      const viewerDiv = document.getElementById('viewerDiv');
+
+      // Define the view geographic extent
+      itowns.proj4.defs(
+        'EPSG:3946',
+        '+proj=lcc +lat_1=45.25 +lat_2=46.75 +lat_0=46 +lon_0=3 +x_0=1700000 +y_0=5200000 +ellps=GRS80 ' +
+          '+towgs84=0,0,0,0,0,0,0 +units=m +no_defs'
+      );
+      const viewExtent = new itowns.Extent(
+        'EPSG:3946', 1837816.94334, 1847692.32501, 5170036.4587, 5178412.82698
+      );
+
+      // Define the camera initial placement
+      const placement = {
+        coord: viewExtent.center(), tilt: 12, heading: 40, range: 6200,
+      };
+
+      // Create the planar view
+      const view = new itowns.PlanarView(viewerDiv, viewExtent, {
+        placement: placement,
+      });
+    </script>
+  </body>
+</html>
+```
+
+To add a 3DTiles tileset, create a 3DTiles layer:
+
+```javascript
+      // Define the source of our 3d-tiles data
+      const buildingsSource = new itowns.C3DTilesSource({
+        url:
+          'https://raw.githubusercontent.com/iTowns/iTowns2-sample-data/master/3DTiles/' +
+          'dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Lyon_2015_TileSet/tileset.json',
+      });
+
+      // Create a layer to display our 3d-tiles data and add it to the view
+      const buildingsLayer = new itowns.C3DTilesLayer(
+        'buildings',
+        { source: buildingsSource },
+        view
+      );
+      itowns.View.prototype.addLayer.call(view, buildingsLayer);
+```
+
+Add a directional light in the view:
+
+```javascript
+      // Add directional light effect to the view
+      const directionalLight = new itowns.THREE.DirectionalLight(0xffffff, 1);
+      directionalLight.position.set(-0.9, 0.3, 1);
+      directionalLight.updateMatrixWorld();
+      view.scene.add(directionalLight);
+```
+
+Save your file and open it in a browser.
+
+![image](https://user-images.githubusercontent.com/32875283/152789884-b2c1a0a8-de9b-4b3b-9db0-d396e36b7a72.png)
+
+To add other layers (elevation, ortho-images, etc) see the [full iTowns tutorial](https://mgermerie.github.io/itowns/docs/out/#tutorials/3dTiles-mesh-data).
+
 ## UD-Viz
 
 ___Note 1__: Visualizing 3DTiles in UD-Viz requires [NodeJS](https://nodejs.org/en/download/)_  
-___Note 2__: your 3DTiles must be the [EPSG:3946](https://epsg.io/3946)_
+___Note 2__: your 3DTiles must be in the [EPSG:3946](https://epsg.io/3946)_
 
 Clone [UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template) on your computer.
 
