@@ -30,6 +30,19 @@ Click on `Open complete code example` to open the full view.
 ___Note 1__: Visualizing 3DTiles in iTowns requires [NodeJS](https://nodejs.org/en/download/)_  
 ___Note 2__: your 3DTiles must be in the [EPSG:3946](https://epsg.io/3946)_
 
+In a shell, run:
+
+```bash
+npm install -g http-server
+```
+
+Then, in command line, go into your 3DTiles tileset and host it on `localhost:8081`:
+
+```bash
+cd path/to/tileset
+http-server --cors --port 8081
+```
+
 Download the [bundle.zip](https://github.com/iTowns/itowns/releases/download/v2.36.2/bundles.zip) of iTowns.
 
 Create a folder and, in this folder, create a `itowns.html` file and a `js` folder. In the `js` folder, extract the content of the `bundle.zip`.
@@ -103,8 +116,7 @@ To add a 3DTiles tileset, create a 3DTiles layer:
       // Define the source of our 3d-tiles data
       const buildingsSource = new itowns.C3DTilesSource({
         url:
-          'https://raw.githubusercontent.com/iTowns/iTowns2-sample-data/master/3DTiles/' +
-          'dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Lyon_2015_TileSet/tileset.json',
+          'http://localhost:8081/tileset.json',
       });
 
       // Create a layer to display our 3d-tiles data and add it to the view
