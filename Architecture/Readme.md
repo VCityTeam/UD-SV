@@ -1,7 +1,9 @@
 # Architecture<a name="top"></a>
 
-## Quick links for UD-SV [Sofware Architecture](https://en.wikipedia.org/wiki/Software_architecture)
- * A list of [Software Components](https://github.com/VCityTeam/UD-SV/tree/master/SoftwareComponents) and their description/usage
+**Quick links**
+ * List of [UD-SV software Components](https://github.com/VCityTeam/UD-SV/tree/master/SoftwareComponents)
+ * Wikipedia's [Sofware Architecture page](https://en.wikipedia.org/wiki/Software_architecture)
+ * Martin Fowler's [Sofware Architecture Guide](https://martinfowler.com/architecture/)
 
 ## Examples of architectural diagrams of the project
 
