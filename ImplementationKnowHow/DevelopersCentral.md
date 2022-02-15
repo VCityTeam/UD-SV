@@ -35,6 +35,9 @@ Adopt the best practices
  * Clone, install and run the [UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template)
    - display your tileset (the one you computed) by configuring configuration file.  
 
+### Create a release
+- Following this [documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/Doc/Devel/ReleasePublish.md)
+
 FIXME:
  - UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
  - Try to [install them](https://github.com/VCityTeam/UD-SV/tree/master/Install) on your local desktop.
