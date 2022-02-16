@@ -40,11 +40,13 @@ Only the buildings should be present in your QGIS project now.
 
 ![image](https://user-images.githubusercontent.com/32875283/154084471-48bbbbfe-e5c2-4901-b271-72cff223ce29.png)
 
-Export the buildings as GeoJSON and choose a name for your file.
+__Known issue__: OSM data doesn't handle holed polygons properly. To fix the holed polygons, export your buildings as `ESRI Shapefile` then open the shapefile in QGIS. Use this new layer in the next steps.
+
+Export the buildings as GeoJSON in __EPSG:2154__ and choose a name for your file.
 
 ![image](https://user-images.githubusercontent.com/32875283/154085658-7c2bcd71-621f-41ad-9795-05df72957254.png)
 
-![image](https://user-images.githubusercontent.com/32875283/154085867-b915ef65-6cce-4dbf-80e8-235b926bb090.png)
+![image](https://user-images.githubusercontent.com/32875283/154236715-b3111ee4-7c21-456e-bd40-489270ca0010.png)
 
 A GeoJSON file of the choosen name will be downloaded.
 
@@ -66,7 +68,7 @@ geojson-tiler --path path/to/osm_buildings.geojson --z 0 --height 6
 If you want to project your 3DTiles into another CRS, you can choose the input and output CRS with `--crs_in` and `--crs_out` flags:
 
 ```bash
-geojson-tiler --path path/to/osm_buildings.geojson --z 0 --height 6 --crs_in EPSG:4326 --crs_out EPSG:4978
+geojson-tiler --path path/to/osm_buildings.geojson --z 0 --height 6 --crs_in EPSG:2154 --crs_out EPSG:4978
 ```
 
 The 3DTiles are created in a directory called _geojson_tilesets_. To visualize this tileset in Cesium, iTowns or UD-Viz, see [__how to visualize 3DTiles__](Visualize3DTiles.md).
