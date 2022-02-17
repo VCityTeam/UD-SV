@@ -18,20 +18,36 @@ The conceptual model of *GenericCityObject* and *_genericAttribute* is given bel
 
 ![image](https://user-images.githubusercontent.com/8275121/150536248-a1cf2408-1a67-4e53-9f44-f4999b7e099b.png)
 
-The following example shows a generic string attribute from [ADV 2019].
+The following example shows a generic string attribute from [ADV 2019] (CityGML 2.0).
 ```
 <gen:stringAttribute name=“DatenquelleDachhoehe“>
   <gen:value>1000</gen:value>
 </gen:stringAttribute>
 ```
 
+An example from [Morel 2014]
+
 ```
-   <gen:doubleAttribute name="AbsoluteRidgeHeight">
-      <gen:value>16.167</gen:value>
-   </gen:doubleAttribute>
+   <bldg:Building gml:id="...">
+        <gen:StringAttribute name="usage">
+             <gen:value>house</gen:value>
+        </gen:StringAttribute>
 ```
 
-The following examples from [[Kumar 2019]] shows the use of a set of generic attributes
+Another example of a [string attribute in CityGML 3.0](https://github.com/opengeospatial/CityGML-3.0/blob/master/Test%20data/Building_CityGML_3.0.xml)
+
+```
+    <cityObjectMember>
+        <bldg:Building gml:id="DEBY_LOD2_5744682">
+            <genericAttribute>
+                <gen:StringAttribute>
+                    <gen:name>Gemeindeschluessel</gen:name>
+                    <gen:value>09175128</gen:value>
+                </gen:StringAttribute>
+            </genericAttribute>
+```
+
+The following examples from [Biljecki 2018] shows the use of a set of generic attributes
 
 ```
 <gen:genericAttributeSet name="BaseHeights" codeSpace="https://www.example_authority.com"
@@ -41,6 +57,8 @@ The following examples from [[Kumar 2019]] shows the use of a set of generic att
    ...
 </gen:genericAttributeSet>
 ```
+
+[Kumar 2019] states that the CityGML files with generic attributes cannot be completely validated since there is no consensus on the use of names and datatypes. This is a major limitation, when it comes to the possibility of sharing without any syntactic and semantic interoperability issues. 
 
 ## ADE (Application Domain Extension)
  ADE or Application Domain Extension helps domain experts to extend CityGML for representing relevant information related to their domains in an interoperable manner. These domain extensions and the associated data could be easily shared to build a more enriched model. However these possible extensions must respect some conditions. This document will explain how the ADE mechanism works in CityGML.
@@ -92,6 +110,7 @@ With CityGML 2.0 and 3.0 the best practice for formalizing an ADE is using [mode
 ## Biblio
 - [[Biljecki 2018]](https://opengeospatialdata.springeropen.com/track/pdf/10.1186/s40965-018-0055-6.pdf) F. Biljecki, K. Kumar, and C. Nagel, “CityGML Application Domain Extension (ADE): overview of developments,” Open Geospatial Data, Software and Standards, vol. 3, no. 1, p. 13, Aug. 2018, doi: 10.1186/s40965-018-0055-6.
 - [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html) OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard Version: 3.0.0
+- [[Morel 2014]](https://diglib.eg.org/xmlui/bitstream/handle/10.2312/udmv.20141076.037-042/037-042.pdf), M. Morel and G. Gesquière, Managing temporal change of cities with CityGML, Eurographics Workshop on Urban Data Modelling and Visualization (2014)
 - [[OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842) OGC City Geography Markup Language (CityGML) Encoding Standard Version: 2.0.0
 - [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) Kanishk Chaturvedi, Carl Stephen Smyth, Gilles Gesquière, Tatjana Kutzner, Thomas H. Kolbe. Managing Versions and History Within Semantic 3D City Models for the Next Generation of CityGML. Abdul-Rahman, Alias. Lecture Notes in Geoinformation and Cartography, Springer, pp.191 - 206, 2017, Advances in 3D Geoinformation, 978-3-319-25689-4. ⟨10.1007/978-3-319-25691-7_11⟩. ⟨hal-01386247⟩
 - [[Kumar 2019]] Kumar, Kavisha, et al. « Harmonising the OGC Standards for the Built Environment: A CityGML Extension for LandInfra ». ISPRS International Journal of Geo-Information, vol. 8, no 6, juin 2019, p. 246. www.mdpi.com, https://doi.org/10.3390/ijgi8060246.
