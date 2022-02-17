@@ -6,6 +6,7 @@ CityGML is used to represent urban information, especially the information relat
 2.  *ADE (Application Domain Extension)*
 
 ## Generic attributes and objects
+<a name="genericattributes"></a>
 The CityGML classes *GenericCityObject* and *_genericAttribute* can be extended to introduce new *generic objects* and *generic attributes*.
 
 An extended generic attribute may belong to any of the following data types: string, integer, double (floating point number), date, URI or a measure (*gml:MeasureType*). It is also possible to create complex generic attribute by making use of *genericAttributeSet*, which in itself is a generic attribute.  
