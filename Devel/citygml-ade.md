@@ -18,6 +18,29 @@ The conceptual model of *GenericCityObject* and *_genericAttribute* is given bel
 
 ![image](https://user-images.githubusercontent.com/8275121/150536248-a1cf2408-1a67-4e53-9f44-f4999b7e099b.png)
 
+The following example shows a generic string attribute from [ADV 2019].
+```
+<gen:stringAttribute name=“DatenquelleDachhoehe“>
+  <gen:value>1000</gen:value>
+</gen:stringAttribute>
+```
+
+```
+   <gen:doubleAttribute name="AbsoluteRidgeHeight">
+      <gen:value>16.167</gen:value>
+   </gen:doubleAttribute>
+```
+
+The following examples from [[Kumar 2019]] shows the use of a set of generic attributes
+
+```
+<gen:genericAttributeSet name="BaseHeights" codeSpace="https://www.example_authority.com"
+   <gen:doubleAttribute name="AbsoluteRidgeHeight">
+      <gen:value>16.167</gen:value>
+   </gen:doubleAttribute>
+   ...
+</gen:genericAttributeSet>
+```
 
 ## ADE (Application Domain Extension)
  ADE or Application Domain Extension helps domain experts to extend CityGML for representing relevant information related to their domains in an interoperable manner. These domain extensions and the associated data could be easily shared to build a more enriched model. However these possible extensions must respect some conditions. This document will explain how the ADE mechanism works in CityGML.
@@ -71,4 +94,6 @@ With CityGML 2.0 and 3.0 the best practice for formalizing an ADE is using [mode
 - [[OGC 20-010]](https://docs.ogc.org/is/20-010/20-010.html) OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard Version: 3.0.0
 - [[OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842) OGC City Geography Markup Language (CityGML) Encoding Standard Version: 2.0.0
 - [[Chaturvedi 2017]](https://hal.archives-ouvertes.fr/hal-01386247/document) Kanishk Chaturvedi, Carl Stephen Smyth, Gilles Gesquière, Tatjana Kutzner, Thomas H. Kolbe. Managing Versions and History Within Semantic 3D City Models for the Next Generation of CityGML. Abdul-Rahman, Alias. Lecture Notes in Geoinformation and Cartography, Springer, pp.191 - 206, 2017, Advances in 3D Geoinformation, 978-3-319-25689-4. ⟨10.1007/978-3-319-25691-7_11⟩. ⟨hal-01386247⟩
+- [[Kumar 2019]] Kumar, Kavisha, et al. « Harmonising the OGC Standards for the Built Environment: A CityGML Extension for LandInfra ». ISPRS International Journal of Geo-Information, vol. 8, no 6, juin 2019, p. 246. www.mdpi.com, https://doi.org/10.3390/ijgi8060246.
 - [[Samuel 2020]](https://hal.archives-ouvertes.fr/hal-02454953/file/article.pdf) J. Samuel, S. Servigne, and G. Gesquière, “Representation of concurrent points of view of urban changes for city models,” J Geogr Syst, vol. 22, no. 3, pp. 335–359, Jul. 2020, doi: 10.1007/s10109-020-00319-1.
+- [[ADV 2019]][Data format specification of the Official 3D Building Model of Germany in Level of Detail 1 and 2](https://www.adv-online.de/AdV-Produkte/Standards-und-Produktblaetter/ZSHH/binarywriterservlet?imgUid=67550b74-08c1-9c61-699f-dce303b36c4c&uBasVariant=11111111-1111-1111-1111-111111111111)
