@@ -1,6 +1,7 @@
 # Representing Temporal Information and Versions in CityGML
 
 ## Year of Construction/Destruction for buildings
+<a name="anchor-Year-of-Construction-Destruction"></a>
 Initially, [[Morel 2014]](https://diglib.eg.org/xmlui/bitstream/handle/10.2312/udmv.20141076.037-042/037-042.pdf) proposed the use of attributes `yearOfConstruction`and `yearOfDemolition` for representing the lifespan of the buildings. For visualization with a temporal cursor, such a solution meant that a building needs to be visualized (or shown) in the virtual environment if the time corresponding to the temporal cursor is within the physical lifespan of the building(s). If it is outside the lifespan, the building is not shown.
 
 An example is given below:
