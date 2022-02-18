@@ -100,6 +100,15 @@ In the image given below, we see that a new feature *noise::NoiseCityFurnitureSe
 
 The advantage of using ADE is that domain experts could share their data along with the (XML schema/XSD) or UML diagrams of their proposed ADE. This ensures interoperability and proper validation of data with the XML parsers (unlike the case of *generic attributes and objects* as explained above).
 
+Take for example, the newly added attributes for Noise ADE in `_AbstractBuilding`
+
+```
+<xsd:element name="buildingReflection" type="xsd:string"
+  substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingReflectionCorrection" type="gml:MeasureType"
+  substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+```
+
 With CityGML 2.0 and 3.0 the best practice for formalizing an ADE is using [model-driven-engineering](https://en.wikipedia.org/wiki/Model-driven_engineering) or model transformation tools to automatically create an XML Schema from a UML model. In the case of CityGML 3.0, this is possible since the Conceptual Model itself is formalized and publicly available as an [Enterprise Architect file](https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap) to be exploited by model transformation tools such as [Shapechange](https://shapechange.net/).
 
 ## Examples
