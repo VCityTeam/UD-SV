@@ -1,8 +1,8 @@
 # Representing Temporal Information and Versions in CityGML
 
-- [Year of Construction/Destruction for buildings](#Year-of-Construction/Destruction-for-buildings)
-- [CityGML 2.0 Temporal ADEs doc](#CityGML-2.0-Temporal-ADEs-doc)
-- [CityGML 3.0 Versioning Module doc](#CityGML-3.0-Versioning-Module-doc)
+- [Year of Construction/Destruction for buildings](#Year-of-ConstructionDestruction-for-buildings)
+- [CityGML 2.0 Temporal ADEs doc](#CityGML-20-Temporal-ADEs-doc)
+- [CityGML 3.0 Versioning Module doc](#citygml-30-versioning-module-doc)
 - [Workspace and Scenarios](#Workspace-and-Scenarios)
 - [See also](#See-also)
 - [Bibliography](#Bibliography)
