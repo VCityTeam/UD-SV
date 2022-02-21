@@ -5,7 +5,7 @@
 - [CityGML 3.0 Versioning Module doc](#CityGML-3.0-Versioning-Module-doc)
 - [Workspace and Scenarios](#Workspace-and-Scenarios)
 - [See also](#See-also)
-- [Bibliography](##Bibliography)
+- [Bibliography](#Bibliography)
 
 ## Year of Construction/Destruction for buildings
 <a name="anchor-Year-of-Construction-Destruction"></a>
