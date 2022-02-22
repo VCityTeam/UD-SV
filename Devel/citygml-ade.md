@@ -119,10 +119,12 @@ Take for example, the newly added attributes for Noise ADE in `_AbstractBuilding
 With CityGML 2.0 and 3.0 the best practice for formalizing an ADE is using [model-driven-engineering](https://en.wikipedia.org/wiki/Model-driven_engineering) or model transformation tools to automatically create an XML Schema from a UML model. In the case of CityGML 3.0, this is possible since the Conceptual Model itself is formalized and publicly available as an [Enterprise Architect file](https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap) to be exploited by model transformation tools such as [Shapechange](https://shapechange.net/).
 
 ### EA-Tips
-ADE profile
-classes
-properies
-ADE association
+⚠️ Under construction ⚠️
+
+CityGML EA ADE profile
+- classes
+- attributes
+- associations
 
 ## Examples
 * CityGML Application Domain Extension (ADE): overview of developments [[Biljecki 2018]](https://opengeospatialdata.springeropen.com/track/pdf/10.1186/s40965-018-0055-6.pdf)
