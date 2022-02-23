@@ -1,9 +1,9 @@
 # CityGML ADEs
 
 - [Generic attributes and objects](#Generic-attributes-and-objects)
-- [ADE (Application Domain Extension)](#ADE (Application Domain Extension))
+- [ADE (Application Domain Extension)](#ADE-(Application-Domain-Extension))
 - [CityGML ADE mechanism](#CityGML-ADE-mechanism)
-  - [EA Tips](#EA-Tips)
+  - [EA Modeling for Shapechange](#EA-Modeling-for-Shapechange)
 - [Examples](#Examples)
 - [Biblio](#Biblio)
 
@@ -118,13 +118,35 @@ Take for example, the newly added attributes for Noise ADE in `_AbstractBuilding
 
 With CityGML 2.0 and 3.0 the best practice for formalizing an ADE is using [model-driven-engineering](https://en.wikipedia.org/wiki/Model-driven_engineering) or model transformation tools to automatically create an XML Schema from a UML model. In the case of CityGML 3.0, this is possible since the Conceptual Model itself is formalized and publicly available as an [Enterprise Architect file](https://github.com/opengeospatial/CityGML-3.0CM/releases/download/3.0.0-final.2021.02.23/CityGML_3.0_Consolidated_Draft.eap) to be exploited by model transformation tools such as [Shapechange](https://shapechange.net/).
 
-### EA-Tips
-⚠️ Under construction ⚠️
+### EA Modeling for Shapechange
+When using Enterprise Architect to create conceptual UML data models for CityGML ADEs to transform into physical data models - such as XML Schema or OWL ontologies - with the [shapechange](https://shapechange.net/) transformation tool, there are several concepts and configurations to take into account.
 
-CityGML EA ADE profile
-- classes
-- attributes
-- associations
+For a broader overview of implementing CityGML ADEs with EA, see the following documentation:
+- [OGC 12-066 document: Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice](https://github.com/VCityTeam/3DUSE/blob/master/doc/ADE/1.%20doc/12-066_Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice%20(1).pdf)
+- [ShapeChange documentation](https://shapechange.net/targets/xsd/)
+
+#### UML Profile
+In both CityGML 2.0 the `CityGML UML Profile` UML profile must be loaded in order to identify and map certain CityGML specific ADE concepts to an XML Schema. Example EA UML models can be found in the [UD-Graph repository](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/test-data/UML)
+
+The following Stereotypes must be used for properly declaring the following UML elements
+| UML | EA Stereotype |
+|---|---|
+| ADE Application Schema package | `CityGML UML Profile::ApplicationSchema` |
+| ADE Leaf package | `CityGML UML Profile::Leaf` |
+| ADE of existing CityGML Class | `CityGML UML Profile::ADEElement` |
+| ADE Feature Class | `CityGML UML Profile::FeatureType` |
+| ADE Datatype | `CityGML UML Profile::DataType` |
+| ADE Enumeration | `CityGML UML Profile::Enumeration` |
+| ADE Type | `CityGML UML Profile::Type` |
+| ADE CodeList | `CityGML UML Profile::CodeList` |
+| ADE Union | `CityGML UML Profile::Union` |
+
+![Example Enterprise Architect Stereotype definition for a new ADE FeatureType](https://user-images.githubusercontent.com/23373264/155375191-e6cbfa11-8aee-4056-b492-f29b1f6a0e85.png)
+
+#### ShapeChange configuration
+To take advantage of these 'hooks' in the UML profile use the `<rule name="rule-xsd-cls-adeelement"/>` to transform these UML elements to XSD. See this [shapechange configuration file](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/ShapeChange) as an example.
+
+
 
 ## Examples
 * CityGML Application Domain Extension (ADE): overview of developments [[Biljecki 2018]](https://opengeospatialdata.springeropen.com/track/pdf/10.1186/s40965-018-0055-6.pdf)
