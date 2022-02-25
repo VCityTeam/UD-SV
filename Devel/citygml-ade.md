@@ -127,6 +127,7 @@ For a broader overview of implementing CityGML ADEs with EA, see the following d
 - [ShapeChange documentation](https://shapechange.net/targets/xsd/)
 
 <a name="XML-Data-Validation"/>
+
 ### XML Data Validation
 A possible XML validation tool is the [XML extention](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml) for vscode which enables XSD and DTD [XML validation](https://github.com/redhat-developer/vscode-xml/blob/master/docs/Validation.md#validation-with-xsd-grammar) with local and online files.
 
