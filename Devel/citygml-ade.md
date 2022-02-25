@@ -4,6 +4,7 @@
 - [ADE (Application Domain Extension)](#ADE-(Application-Domain-Extension))
 - [CityGML ADE mechanism](#CityGML-ADE-mechanism)
   - [EA Modeling for Shapechange](#EA-Modeling-for-Shapechange)
+  - [XML Data Validation](#XML-Data-Validation)
 - [Examples](#Examples)
 - [Biblio](#Biblio)
 
@@ -124,6 +125,9 @@ When using Enterprise Architect to create conceptual UML data models for CityGML
 For a broader overview of implementing CityGML ADEs with EA, see the following documentation:
 - [OGC 12-066 document: Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice](https://github.com/VCityTeam/3DUSE/blob/master/doc/ADE/1.%20doc/12-066_Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice%20(1).pdf)
 - [ShapeChange documentation](https://shapechange.net/targets/xsd/)
+
+# XML Data Validation
+<a name="XML-Data-Validation"></a>
 
 #### UML Profile
 In both CityGML 2.0 the `CityGML UML Profile` UML profile must be loaded in order to identify and map certain CityGML specific ADE concepts to an XML Schema. Example EA UML models can be found in the [UD-Graph repository](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/test-data/UML)
