@@ -155,10 +155,11 @@ To take advantage of these 'hooks' in the UML profile use the `<rule name="rule-
 
 
 ## Examples
+* [ADE examples from 3DUse](https://github.com/VCityTeam/3DUSE/tree/master/doc/ADE) (versioning, workspace, document examples)
 * CityGML Application Domain Extension (ADE): overview of developments [[Biljecki 2018]](https://opengeospatialdata.springeropen.com/track/pdf/10.1186/s40965-018-0055-6.pdf)
 * ADE for Noise Immission Simulation: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)
 * ADE for Ubiquitous Network Robots Services: [Annex H, [OGC 12-019]](https://portal.ogc.org/files/?artifact_id=47842)
-* [Versioning Module in CityGML](citygml-ade-versioning.md )
+* [Versioning Module in CityGML](citygml-ade-versioning.md)
 
 ## Biblio
 - [[Biljecki 2018]](https://opengeospatialdata.springeropen.com/track/pdf/10.1186/s40965-018-0055-6.pdf) F. Biljecki, K. Kumar, and C. Nagel, “CityGML Application Domain Extension (ADE): overview of developments,” Open Geospatial Data, Software and Standards, vol. 3, no. 1, p. 13, Aug. 2018, doi: 10.1186/s40965-018-0055-6.
