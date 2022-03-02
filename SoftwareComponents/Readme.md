@@ -34,7 +34,7 @@ Third party components:<br>
      - "Links" (between documents and some city objects)
    * [UD-Serv/CityGML2Stripper](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGML2Stripper): a utility that strips a CityGML 2.0 (XML) file from its appearences and generic attributes features
    * [UD-Serv/CityGMLBuildingBlender](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGMLBuildingBlender): a utility that merges a set of CityGML into a single CityGML resulting file
- - <a name="ComponentUD-ServCityTilers"></a>[City Tilers](https://github.com/MEPP-team/py3dtiles/tree/Tiler/Tilers/CityTiler): various algorithms computing [3dTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) (e.g. [City Temporal Tiler](https://github.com/MEPP-team/py3dtiles/blob/Tiler/Tilers/CityTiler/CityTemporalTiler.py))
+ - <a name="ComponentUD-ServCityTilers"></a>[py3dtilers](https://github.com/VCityTeam/py3dtilers): various algorithms computing [3dTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles)
  - LibCityProcess: a library [repackaging 3DUse filters](https://github.com/MEPP-team/3DUSE/issues/39) as a separate component
    * <a name="ComponentUD-ServSplitBuilding"></a>[SplitBuilding](https://github.com/EricBoix/3DUSE/blob/master/src/utils/cmdline/splitCityGMLBuildings.cxx)
    * <a name="ComponentUD-ServChangeDetection"></a>[ChangeDetection](https://github.com/EricBoix/3DUSE/blob/master/src/utils/cmdline/extractBuildingsConstructionDemolitionDates.cxx)
