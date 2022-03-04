@@ -655,5 +655,7 @@ A research topic is a bundle of information gathered around some given research 
 * pictures: diagrams, screen dumps...
 * links to related articles
 * links to vidéos
+* links to online démo
+* ...
 
 [Examples](https://projet.liris.cnrs.fr/vcity/research/): a [visibility example](https://projet.liris.cnrs.fr/vcity/research/visibility/)
