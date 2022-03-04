@@ -75,6 +75,10 @@
 * [Vertex](#Vertex)
 * [Atlas de texture](Atlas-de-texture)
 
+**Project/organisational notions**
+* Projet
+* [Research Topic](#ResearchTopic)
+
 ---
 ## Definitions
 
@@ -639,3 +643,17 @@ C'est le nom que l'on donne aux sommets des triangles (souvent se sont des trian
 
 #### Atlas de texture
 Un atlas de texture c'est le regroupement de plusieurs textures misent côte à côte dans le but de simplifier l'exploitation de celles-ci par la suite. Il faut faire attention car les UV des sommets ne correspondent plus aux bons pixels de la texture (qui est en fait composée maintenant de plusieurs textures), il faut adapter les proportions grâce à un calcul.
+
+---
+## Project/Organisational notions
+
+### Research Topic
+<a name="ResearchTopic"></a>
+
+A research topic is a bundle of information gathered around some given research activity:
+* a textual description (possibly with a [TL;DR](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)/summary)
+* pictures: diagrams, screen dumps...
+* links to related articles
+* links to vidéos
+
+[Examples](https://projet.liris.cnrs.fr/vcity/research/): a [visibility example](https://projet.liris.cnrs.fr/vcity/research/visibility/)
