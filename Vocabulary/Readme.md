@@ -76,7 +76,7 @@
 * [Atlas de texture](Atlas-de-texture)
 
 **Project/organisational notions**
-* Projet
+* Project
 * [Research Topic](#ResearchTopic)
 
 ---
