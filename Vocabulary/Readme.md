@@ -649,7 +649,7 @@ Un atlas de texture c'est le regroupement de plusieurs textures misent côte à 
 ## Project/Organisational notions
 
 ### Task Force
-<a name="TaskFroce"></a>
+<a name="TaskForce"></a>
 
 A Task Force is a [project](#Project) with a short duration (couple weeks) a reduced project team (couple actors) and an aim with limited ambition/scope. 
 Reference: [Wikipedia definition](https://en.wikipedia.org/wiki/Task_force)
