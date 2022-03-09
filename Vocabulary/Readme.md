@@ -76,7 +76,8 @@
 * [Atlas de texture](Atlas-de-texture)
 
 **Project/organisational notions**
-* Project
+* [Project](#Project)
+* [Task Force](#TaskForce)
 * [Research Topic](#ResearchTopic)
 
 ---
@@ -646,6 +647,17 @@ Un atlas de texture c'est le regroupement de plusieurs textures misent côte à 
 
 ---
 ## Project/Organisational notions
+
+### Task Force
+<a name="TaskFroce"></a>
+
+A Task Force is a [project](#Project) with a short duration (couple weeks) a reduced project team (couple actors) and an aim with limited ambition/scope. 
+Reference: [Wikipedia definition](https://en.wikipedia.org/wiki/Task_force)
+
+### Project
+<a name="Project"></a>
+
+As adapted from the [wikipedia definition](https://en.wikipedia.org/wiki/Project), a **project** is any undertaking, carried out individually (by a project manager or by a project planner) or collaboratively (by a project team) and possibly involving research or design, that is carefully planned to achieve a particular aim.
 
 ### Research Topic
 <a name="ResearchTopic"></a>
