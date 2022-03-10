@@ -1,0 +1,89 @@
+// The bipratite graph (refer to
+//   https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Bipartite_graph )
+// with first vertex set being the file formats and the second vertex set
+// being the treatments (activity in UML terminology) and expressed in DOT
+// graph description language (refer to
+//    https://en.wikipedia.org/wiki/DOT_(graph_description_language )
+// and that can be rendered (layout and graphic computations) with the
+// graphviz tool (refer to
+//   https://graphviz.org/ )
+
+
+digraph example {
+  layout=neato;
+  splines=true;
+  overlap=scale;
+  node [fontname=Helvetica, fontsize=10, width=0.5, height=0.2];
+
+
+// Formats
+node [shape=rect];
+"3DCityDB"
+   [ URL="https://3dcitydb-docs.readthedocs.io/en/release-v4.3.0/"];
+"CityGML:XMLencoding"
+   [ URL="https://portal.ogc.org/files/?artifact_id=47842"];
+"OBJ" 
+   [ URL="https://en.wikipedia.org/wiki/Wavefront_.obj_file"];
+"GLB" 
+   [ URL="https://en.wikipedia.org/wiki/GlTF#GLB"];
+"Visualization"
+   [ URL="https://en.wikipedia.org/wiki/Visualization_(graphics)"];
+"3dTiles"
+   [ URL="https://github.com/CesiumGS/3d-tiles#readme"];
+"IFC"
+   [ URL="https://en.wikipedia.org/wiki/Industry_Foundation_Classes"];
+"GeoJSON"
+   [ URL="https://en.wikipedia.org/wiki/GeoJSON"];
+
+// Treatments
+node [shape=Mrecord, width=0.5, height=0.2];
+"3DCityDB-Importer"
+    [ URL="https://3dcitydb-docs.readthedocs.io/en/release-v4.3.0/impexp/index.html"];
+"3DCityDB-Exporter"
+    [ URL="https://3dcitydb-docs.readthedocs.io/en/release-v4.3.0/impexp/index.html"];
+"Da-POM-Ville-Unity"
+    [ URL="https://github.com/VCityTeam/UD-Reproducibility/blob/master/Computations/DatAgora-Deambulation-Bron/BlenderModelingPipeline.md#anchor-convertion-CityGML-to-OBJ"];
+"Blender"
+    [ URL="https://en.wikipedia.org/wiki/Blender_(software)"];
+"UD-Viz"
+    [ URL="https://github.com/VCityTeam/UD-Viz#readme"];
+"py3dTilers"
+    [ URL="https://github.com/VCityTeam/py3dtilers#readme"];
+
+// Relationships
+"CityGML:XMLencoding" -> "3DCityDB-Importer";
+"3DCityDB-Importer" -> "3DCityDB";
+
+"3DCityDB" -> "3DCityDB-Exporter";
+"3DCityDB-Exporter" -> "CityGML:XMLencoding";
+
+"CityGML:XMLencoding" -> "Da-POM-Ville-Unity";
+"Da-POM-Ville-Unity"  -> "OBJ";
+
+"Blender"  -> "OBJ";
+"OBJ"  -> "Blender";
+
+"Blender"  -> "GLB";
+
+"GLB"  -> "UD-Viz";
+"UD-Viz"  -> "Visualization";
+
+"3DCityDB-Importer" -> "py3dTilers";
+"OBJ" -> "py3dTilers";
+"IFC" -> "py3dTilers";
+"GeoJSON" -> "py3dTilers";
+{edge [style=invis];
+  "GeoJSON" -> "IFC";
+}
+"py3dTilers" -> "3dTiles";
+
+"3dTiles"  -> "UD-Viz";
+
+}
+
+// subgraph cluster_legend {
+//   label="Notation: object flow of UML activity diagram";
+//   URL="https://www.uml-diagrams.org/activity-diagrams.html";
+//   "Data Format"  [shape=rect, URL="https://www.uml-diagrams.org/activity-diagrams-objects.html#object-node"];
+//   "Activity"     [shape=Mrecord, URL="https://www.uml-diagrams.org/activity-diagrams.html#activity"];
+// }
