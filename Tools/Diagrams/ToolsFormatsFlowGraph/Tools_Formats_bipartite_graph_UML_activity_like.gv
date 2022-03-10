@@ -11,8 +11,9 @@
 
 digraph example {
   layout=neato;
-  splines=true;
-  overlap=scale;
+  // neato options for layout optimization
+  splines=true;      // Allow spline arcs/edges when necessary
+  overlap=scale;     // Scale the picture so boxes do not overlap
   node [fontname=Helvetica, fontsize=10, width=0.5, height=0.2];
 
 
@@ -72,9 +73,7 @@ node [shape=Mrecord, width=0.5, height=0.2];
 "OBJ" -> "py3dTilers";
 "IFC" -> "py3dTilers";
 "GeoJSON" -> "py3dTilers";
-{edge [style=invis];
-  "GeoJSON" -> "IFC";
-}
+"GeoJSON" -> "IFC" [style=invis];        // Layout hint
 "py3dTilers" -> "3dTiles";
 
 "3dTiles"  -> "UD-Viz";
