@@ -55,11 +55,3 @@ Third party components:<br>
      alt="ComponentDiagram-macro-components-and-subcomponents.png"
      width="400"
      border="0">
-       
-## Historical notes
-Here is a list of aging/deprecated components
-### Client side
- - [UD-Viz/EarlyPrototype](https://github.com/MEPP-team/UD-Viz/tree/master/EarlyPrototype) holds the first prototype version
- - Vilo3D: refers to an ancient [UD-Viz release tag](https://github.com/MEPP-team/UD-Viz/releases/tag/Vilo3D-Demo-1.0) used in the context of [Vilo3D project](http://imu.universite-lyon.fr/projet/vilo-3d-la-fabrique-urbaine-des-processus-a-leurs-representations-3d/) )
-### Backend      
- - [building-server](https://github.com/MEPP-team/building-server/): a fork of [Oslandia's building-server](https://github.com/Oslandia/building-server/) that can be seen as API delivering 3DTiles (build with [py3dtiles](https://github.com/MEPP-Team/py3dtiles/)) and using a pre-computed index.
