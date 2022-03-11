@@ -1,6 +1,6 @@
 # Diagrams
 
-<img src="Tools_Formats_bipartite_graph_UML_activity_like.svg" alt="drawing" width="600"/>
+<img src="./Tools_Formats_bipartite_graph_UML_activity_like.svg" alt="drawing" width="600"/>
 
 Notice that boxes can be clicked.
 
