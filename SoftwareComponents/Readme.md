@@ -28,7 +28,7 @@ Third party components:<br>
  
 ### Data servers (software)
 
-* <a name="ComponentSpatial-Multimedia-DB"></a>[Spatial-Multimedia-DB)](https://github.com/VCityTeam/Spatial-Multimedia-DB): 
+* <a name="ComponentSpatial-Multimedia-DB"></a>[Spatial-Multimedia-DB](https://github.com/VCityTeam/Spatial-Multimedia-DB): 
   enables to attach/serve various types of documents to urban data e.g.
    * "Documents" (file and metadata), 
    * Guided tours (sequences of documents with additional texts),
