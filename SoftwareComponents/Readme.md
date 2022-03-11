@@ -11,7 +11,8 @@ This directory holds
      
 Main [component diagram](https://www.uml-diagrams.org/component-diagrams.html)
 
-## Tools (software components) brief description
+## Software components (used in UD-SV) list
+
 ### Visualization (client side)
 <a name="ComponentUD-Viz"></a>[Urban Data Vizualisation (UD-Viz)](https://github.com/MEPP-team/UD-Viz) 
 is an npm (javascript) package based on [iTowns](https://github.com/iTowns/itowns) (in turn based on [ThreeJS](https://threejs.org/) 
@@ -44,8 +45,15 @@ Third party components:<br>
 * <a name="ComponentUD-SimpleServer"></a>[UD-SimpleServer](https://github.com/VCityTeam/UD-SimpleServer): a [node.js](https://nodejs.org/en/) based simple file server (used to serv JS client code/assets)
 * <a name="Component3DTilesSamples"></a>[3DTiles samples](https://github.com/AnalyticalGraphicsInc/3d-tiles-samples): a [node.js](https://nodejs.org/en/) based simple file server (provide by by [Analytical Graphics Inc](https://github.com/AnalyticalGraphicsInc)) used to web deliver [3dTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles) (developing context)
 
-### Data servers (deployed)
+## Data servers (deployed)
 
+In house:
+* [3dTiles dataset](https://datasets.liris.cnrs.fr/3dtiles-tilesets-metropolis-lyon-version1),
+* [Vcity sample data](https://datasets.liris.cnrs.fr/vcity-sample-data-version1) and
+* [3dtiles produced out of CityGML](https://datasets.liris.cnrs.fr/citygml-3dtiles-computations-version1)
+* [Small Urban Datasets](https://github.com/VCityTeam/UD-Sample-data)
+
+Third party:
 * <a name="data-metropole-lyon-orthophotographie-2009"></a> [Lyon Metropole open data "ortho-photo" (2009)](https://data.beta.grandlyon.com/fr/jeux-de-donnees/orthophotographie-2009-metropole-lyon/donnees): [WMS](https://en.wikipedia.org/wiki/Web_Map_Service), serving e.g. [such request](https://download.data.grandlyon.com/wms/grandlyon?SERVICE=WMS&REQUEST=GetMap&LAYERS=Ortho2009_vue_ensemble_16cm_CC46&VERSION=1.3.0&STYLES=&FORMAT=image/jpeg&TRANSPARENT=false&BBOX=1841306.75,5174961.00,1843030.13,5176364.50&CRS=EPSG:3946&WIDTH=256&HEIGHT=256)
 * <a name="data-metropole-lyon-orthophotographie-2009"></a> [Lyon Metropole open data elevation (2012)](https://data.beta.grandlyon.com/fr/jeux-de-donnees/image-relief-2012-metropole-lyon/donnees): [WMS](https://en.wikipedia.org/wiki/Web_Map_Service), serving e.g. [such request](https://download.data.grandlyon.com/wms/grandlyon?SERVICE=WMS&REQUEST=GetMap&LAYERS=MNT2012_Altitude_10m_CC46&VERSION=1.3.0&STYLES=&FORMAT=image/jpeg&TRANSPARENT=false&BBOX=1843030.13,5176364.50,1844753.50,5177768.00&CRS=EPSG:3946&WIDTH=256&HEIGHT=256)
 * <a name="rict-3dtiles-sample-server-lyon"></a> UD-SV's 3DTiles samples server: serving e.g. [such request](http://rict.liris.cnrs.fr/DataStore/TileSet_LyonFull_Villeurbanne_Bron_2015/tileset.json)
