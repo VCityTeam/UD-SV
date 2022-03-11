@@ -1,6 +1,4 @@
-This directory holds
- - a general description of the software components used in the UD-SV context
- - documentation concerning external components
+# Software components used in the UD-SV context
 
 <a name="top"></a>
 <img src="Diagrams/ComponentDiagram-macro-components-with-notes.png"
@@ -10,8 +8,6 @@ This directory holds
      border="0">
      
 Main [component diagram](https://www.uml-diagrams.org/component-diagrams.html)
-
-## Software components (used in UD-SV) list
 
 ### Visualization (client side)
 <a name="ComponentUD-Viz"></a>[Urban Data Vizualisation (UD-Viz)](https://github.com/MEPP-team/UD-Viz) 
