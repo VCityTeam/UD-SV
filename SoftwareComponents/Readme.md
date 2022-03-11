@@ -16,8 +16,8 @@ itself based on [WebGL](https://en.wikipedia.org/wiki/WebGL) dedicated to the vi
       
 ### Data Processing
  - <a name="Componentpy3dtilers"></a>[py3dtilers](https://github.com/VCityTeam/py3dtilers): various algorithms computing [3dTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles)
- - [UD-Serv/CityGML2Stripper](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGML2Stripper): a utility that strips a CityGML 2.0 (XML) file from its appearences and generic attributes features
- - [UD-Serv/CityGMLBuildingBlender](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGMLBuildingBlender): a utility that merges a set of CityGML into a single CityGML resulting file
+ - [CityGML2Stripper](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGML2Stripper): a utility that strips a CityGML 2.0 (XML) file from its appearences and generic attributes features
+ - [CityGMLBuildingBlender](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGMLBuildingBlender): a utility that merges a set of CityGML into a single CityGML resulting file
  - LibCityProcess: a library [repackaging 3DUse filters](https://github.com/MEPP-team/3DUSE/issues/39) as a separate component
    * <a name="ComponentUD-ServSplitBuilding"></a>[SplitBuilding](https://github.com/VCityTeam/3DUSE/blob/master/src/utils/cmdline/splitCityGMLBuildings.cxx)
    * <a name="ComponentUD-ServChangeDetection"></a>[ChangeDetection](https://github.com/VCityTeam/3DUSE/blob/master/src/utils/cmdline/extractBuildingsConstructionDemolitionDates.cxx)
