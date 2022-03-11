@@ -13,7 +13,7 @@ digraph example {
   layout=neato;
   // neato options for layout optimization
   splines=true;      // Allow spline arcs/edges when necessary
-  overlap=scale;     // Scale the picture so boxes do not overlap
+  overlap=scale;   // Scale the picture so boxes do not overlap
   node [fontname=Helvetica, fontsize=10, width=0.5, height=0.2];
 
 
@@ -35,12 +35,12 @@ node [shape=rect];
    [ URL="https://en.wikipedia.org/wiki/Industry_Foundation_Classes"];
 "GeoJSON"
    [ URL="https://en.wikipedia.org/wiki/GeoJSON"];
+"GraphML/RDF"
+   [ URL="FIXME" ]
 
 // Treatments
 node [shape=Mrecord, width=0.5, height=0.2];
 "3DCityDB-Importer"
-    [ URL="https://3dcitydb-docs.readthedocs.io/en/release-v4.3.0/impexp/index.html"];
-"3DCityDB-Exporter"
     [ URL="https://3dcitydb-docs.readthedocs.io/en/release-v4.3.0/impexp/index.html"];
 "Da-POM-Ville-Unity"
     [ URL="https://github.com/VCityTeam/UD-Reproducibility/blob/master/Computations/DatAgora-Deambulation-Bron/BlenderModelingPipeline.md#anchor-convertion-CityGML-to-OBJ"];
@@ -50,33 +50,53 @@ node [shape=Mrecord, width=0.5, height=0.2];
     [ URL="https://github.com/VCityTeam/UD-Viz#readme"];
 "py3dTilers"
     [ URL="https://github.com/VCityTeam/py3dtilers#readme"];
+"3DUse-SplitBuildings"
+    [ URL="https://github.com/VCityTeam/3DUSE/blob/master/src/utils/cmdline/splitCityGMLBuildings.cxx"];
+"3DUse-ChangeDetection"
+    [ URL="https://github.com/VCityTeam/3DUSE/blob/master/src/utils/cmdline/extractBuildingsConstructionDemolitionDates.cxx"];
+
 
 // Relationships
+
+//////////////// Around 3DCity*
 "CityGML:XMLencoding" -> "3DCityDB-Importer";
 "3DCityDB-Importer" -> "3DCityDB";
 
-"3DCityDB" -> "3DCityDB-Exporter";
-"3DCityDB-Exporter" -> "CityGML:XMLencoding";
+// This messes the layout and we are de facto not using the exporter
+// "3DCityDB-Exporter"
+//    [ URL="https://3dcitydb-docs.readthedocs.io/en/release-v4.3.0/impexp/index.html"];
+// "3DCityDB" -> "3DCityDB-Exporter";
+// "3DCityDB-Exporter" -> "CityGML:XMLencoding";
+// "3DCityDB-Exporter" -> "3DCityDB-Importer" [style=invis];        // Layout hint
 
 "CityGML:XMLencoding" -> "Da-POM-Ville-Unity";
 "Da-POM-Ville-Unity"  -> "OBJ";
 
-"Blender"  -> "OBJ";
-"OBJ"  -> "Blender";
+"CityGML:XMLencoding" -> "3DUse-SplitBuildings";
+"3DUse-SplitBuildings"  -> "CityGML:XMLencoding";
 
-"Blender"  -> "GLB";
+"CityGML:XMLencoding" -> "3DUse-ChangeDetection";
+"CityGML:XMLencoding" -> "GraphML/RDF";
 
+// /////////////// Around UD-Viz
 "GLB"  -> "UD-Viz";
 "UD-Viz"  -> "Visualization";
+"3dTiles"  -> "UD-Viz";
 
-"3DCityDB-Importer" -> "py3dTilers";
+//////////////// Around py3dTilers
+"3DCityDB" -> "py3dTilers";
 "OBJ" -> "py3dTilers";
 "IFC" -> "py3dTilers";
 "GeoJSON" -> "py3dTilers";
 "GeoJSON" -> "IFC" [style=invis];        // Layout hint
 "py3dTilers" -> "3dTiles";
 
-"3dTiles"  -> "UD-Viz";
+// Various stuff
+"Blender"  -> "OBJ";
+"OBJ"  -> "Blender";
+
+"Blender"  -> "GLB";
+
 
 }
 
