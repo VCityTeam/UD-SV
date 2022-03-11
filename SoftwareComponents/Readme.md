@@ -12,18 +12,10 @@ This directory holds
 Main [component diagram](https://www.uml-diagrams.org/component-diagrams.html)
 
 ## Tools (software components) brief description
-### Client side
-<a name="ComponentUD-Viz"></a>[Urban Data Vizualisation (UD-Viz)](https://github.com/MEPP-team/UD-Viz) is a repository gathering [WebGL](https://en.wikipedia.org/wiki/WebGL), [iTowns](https://github.com/iTowns/itowns), javascript components dedicated to Urban Data (respecting the city specific [_CityGML_](http://www.citygml.org/) data model and as such with a 3D geospatial description) visualisation. The UD-Viz sub-components are regrouped in [UD-Viz/UD-Viz-Core](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core) and include
- - <a name="ComponentUD-VizGuidedTour"></a>[UD-Viz/Guided Tour](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Modules/GuidedTour)
- - <a name="ComponentUD-VizTemporal"></a>[UD-Viz/Temporal](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Modules/Temporal)
- - <a name="ComponentUD-VizDocuments"></a>[UD-Viz/Documents](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Modules/Documents), [UD-Viz/DocumentComments](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/DocumentComments), [UD-Viz/DocumentValidation](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/DocumentValidation)
- - <a name="ComponentUD-VizContribute"></a>[UD-Viz/Crontibute](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/Contribute)
- - <a name="ComponentUD-VizAuthentication"></a>[UD-Viz/Authentication](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/Authentication)
- - <a name="ComponentUD-VizLinks"></a>[UD-Viz/Links](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Modules/Links)
- - <a name="ComponentUD-VizGeocoding"></a>[UD-Viz/Geocoding](https://github.com/MEPP-team/UD-Viz/tree/master/UD-Viz-Core/src/Extensions/Geocoding)
-
-Third party components:<br>
- - [iTowns](https://github.com/iTowns/itowns)
+### Visualization (client side)
+<a name="ComponentUD-Viz"></a>[Urban Data Vizualisation (UD-Viz)](https://github.com/MEPP-team/UD-Viz) 
+is an npm (javascript) package based on [iTowns](https://github.com/iTowns/itowns) (in turn based on [ThreeJS](https://threejs.org/) 
+itself based on [WebGL](https://en.wikipedia.org/wiki/WebGL) dedicated to the visualization of Urban Data.
       
 ### Backend 
  - <a name="ComponentUD-Serv"></a>[Urban Data Service (UD-Serv)](https://github.com/MEPP-team/UD-Serv) is a repository gathering backend support features and utilities
