@@ -124,6 +124,7 @@ When using Enterprise Architect to create conceptual UML data models for CityGML
 
 For a broader overview of implementing CityGML ADEs with EA, see the following documentation:
 - [OGC 12-066 document: Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice](https://github.com/VCityTeam/3DUSE/blob/master/doc/ADE/1.%20doc/12-066_Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice%20(1).pdf)
+- [Example Urban Planning ADE (Very well documented)](https://github.com/nob140/CityGML3_ADE/blob/6e3127d7c48288c1fc53c15b3ddc3bcb9653473a/document/annex-examples-ADE-realworld.adoc)
 - [ShapeChange documentation](https://shapechange.net/targets/xsd/)
 
 #### UML Profile
