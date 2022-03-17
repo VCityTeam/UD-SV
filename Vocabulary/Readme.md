@@ -6,9 +6,9 @@
 * [Requirement](#Requirement)
 
 **Data modeling and semantic web**
-* [Feature](#feature)
 * [Data Modelling](#Data-Modelling)
   * [Data Model](#Data-model)
+  * [Model Driven Architecture](#model-driven-architecture)
 * [Ontology](#Ontology)
   * [Conceptualization](#Conceptualization)
   * [Formalization](#Formalization)
@@ -124,9 +124,6 @@ A requirement **targets a technical audience** as its readers, like engineers, d
 
 ---
 
-## Feature
-"**abstraction of real world phenomena** NOTE: A feature may occur as a type or an instance. Feature type or feature instance should be used when only one is meant.[Victoria Terminology Harmonization Meeting]This class describes how a feature class shall be constructed in an Application Schema. In accordance with the conformance clause of the standard, instances of this class are instanciated as feature classes in an Application Schema" - ISO 19101
-
 ## Data Modelling
 In *[Klein 1987] H. K. Klein and R. A. Hirschheim, “A Comparative Framework of Data Modelling Paradigms and Approaches,” The Computer Journal, vol. 30, no. 1, pp. 8–15, Jan. 1987, doi: 10.1093/comjnl/30.1.8.* data modelling is defined as:
 > the activity by which a [data model](#Data-Model) is applied to derive a logical organization that is documented in a (conceptual) schema.
@@ -153,6 +150,16 @@ In addition two types of models are defined by Kühne:
 
 **An example of a token model (below) and a type model (above)**
 ![Khune 2005 Model Types](./Pictures/KhuneModelTypes.png)
+
+### Model Driven Architecture
+"Model-driven architecture (MDA) is a software design approach for the development of software systems... Model Driven Architecture (MDA) was introduced by the Object Management Group (OMG) in 2001... MDA defines two types of models: Platform Independent Models (PIM) and Platform-Specific Models (PSMs). A PIM provides the definition of a data and/or computing capability which is independent of the implementing technology. A PSM defines how the PIM capability is realized using a specific implementing technology. The corresponding OGC and ISO terms are:"
+
+| MDA | OGC/ISO |	Model Formats |
+|---|---|---|
+| Platform Independent Model (PIM) | Conceptual Model | UML |
+| Platform-Specific Model (PSM) | Implementation Specification | XML Schema, JSON Schema, SQL, OWL/RDF, others. |
+
+Source : [OGC Testbed 17 Call for participation](https://portal.ogc.org/files/?artifact_id=95726#ModelDrivenStandards)
 
 ## Ontology
 "A formal model that allows knowledge to be represented for a specific domain. An ontology describes the types of things that exist (classes), the relationships between them (properties) and the logical ways those classes and properties can be used together ([axioms](#axiom))."
@@ -568,6 +575,8 @@ Documentation on 3D Tiles [here](https://github.com/VCityTeam/GMAOBIM/wiki/3D-ti
 ### Features
 
 The starting point for modeling of geographic information. Abstraction of a real worldphenomenon [1]
+
+"**abstraction of real world phenomena** NOTE: A feature may occur as a type or an instance. Feature type or feature instance should be used when only one is meant.[Victoria Terminology Harmonization Meeting]This class describes how a feature class shall be constructed in an Application Schema. In accordance with the conformance clause of the standard, instances of this class are instanciated as feature classes in an Application Schema" - ISO 19101
 
 ---
 **bib** : 
