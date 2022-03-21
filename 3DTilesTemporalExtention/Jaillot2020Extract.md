@@ -1,7 +1,7 @@
 # 3DTiles Temporal Extention documentation extracted from Jaillot 2020
-**[Jaillot 2020] Vincent Jaillot. 3D, temporal and documented cities : formalization, visualization and navigation. Computer Vision and Pattern Recognition [cs.CV]. Université de Lyon, 2020. English. NNT : 2020LYSE2026. tel-03228436** Pages 38-45
+**[[Jaillot 2020] Vincent Jaillot. 3D, temporal and documented cities : formalization, visualization and navigation. Computer Vision and Pattern Recognition [cs.CV]. Université de Lyon, 2020. English. NNT : 2020LYSE2026. tel-03228436](https://tel.archives-ouvertes.fr/tel-03228436/document)**
 
-# 3.2 Specification into 3D Tiles
+# 3.2 Specification into 3D Tiles (Page 38)
 
 ## 3.2.1 3D Tiles logical model and temporal extension
 
