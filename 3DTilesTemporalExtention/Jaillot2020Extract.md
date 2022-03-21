@@ -1,11 +1,5 @@
 # 3DTiles Temporal Extention documentation extracted from Jaillot 2020
-**[Jaillot 2020] Vincent Jaillot. 3D, temporal and documented cities : formalization, visualization and navigation. Computer Vision and Pattern Recognition [cs.CV]. Université de Lyon, 2020. English. NNT : 2020LYSE2026. tel-03228436**
-
-Pages 38-45
-
-...
-In section3.2, we specify Gen4DCity at the logical and specification levels in the 3D
-Tiles standard format.
+**[Jaillot 2020] Vincent Jaillot. 3D, temporal and documented cities : formalization, visualization and navigation. Computer Vision and Pattern Recognition [cs.CV]. Université de Lyon, 2020. English. NNT : 2020LYSE2026. tel-03228436** Pages 38-45
 
 # 3.2 Specification into 3D Tiles
 
@@ -55,9 +49,7 @@ _Spatial Node_ ’s _Period_ (from _Gen4DCity_ ) is aggregated in the _Bounding 
 not in the _Tile_ (which could have been done by direct mapping since _Spatial Node_ is
 mapped to _Tile_ ). This way, not only can the _Tile_ ’s _boundingVolume_ attribute have a
 
-(^1) https://archive.softwareheritage.org/browse/directory/657e37e75fcc50bc0fc4e8fbb20adb6a88149a1d/
-?origin=https://github.com/AnalyticalGraphicsInc/3d-tiles
-**3.2** Specification into 3D Tiles **39**
+* (^1) https://archive.softwareheritage.org/browse/directory/657e37e75fcc50bc0fc4e8fbb20adb6a88149a1d/?origin=https://github.com/AnalyticalGraphicsInc/3d-tiles
 
 ![Figure 3.5](https://user-images.githubusercontent.com/23373264/159284795-f6f7b5a7-364c-4f4e-9cdd-4197237f5166.png)
 
@@ -69,10 +61,6 @@ representation of the batch_table_hierarchy extension of 3D Tiles.
 
 Period , but also its viewerRequestVolume and the TileContent ’s boundingVolume. The
 boundingVolumes make it possible to index Geographic Features using spatio-temporal
-
-**40 Chapter 3** Delivering time-evolving 3D city models for web visualization
-
-
 indexing methods. The viewerRequestVolume makes it possible to show the content
 of a Tile only when the display date (date at which the data is displayed to the user)
 is inside its Period.
@@ -96,9 +84,6 @@ ExtensionSet and an ExtraSet.
 ![Figure 3.6](https://user-images.githubusercontent.com/23373264/159288540-d64002f1-ec29-4932-b738-2682f9dc8898.png)
 
 Figure 3.6.: Description of the concepts for extending 3D Tiles.
-
-
-3.2 Specification into 3D Tiles 41
 
 The 3DTiles_temporal extension specification is described with JSON schemas, which
 we make available online^2. It uses the Extension concept. This way, the core of the
@@ -133,9 +118,7 @@ standards (section3.3.2). We finish with the proposition of visualization rules 
 urban evolution visualization and apply them for the visualization of a time-evolving
 3D city model (section3.3.3).
 
-(^2) https://doi.org/10.5281/zenodo.
-**42 Chapter 3** Delivering time-evolving 3D city models for web visualization
-
+* (^2) https://doi.org/10.5281/zenodo.
 
 ## 3.3.1 Software architecture
 
@@ -161,11 +144,8 @@ tions between objects) and the 3DTiles_temporal extension. We also implemented
 two processes respectively allowing to create 3D city models in 3D Tiles ( City Tiler^4 )
 and time-evolving 3D city models in 3D Tiles extended with 3DTiles_temporal ( City
 
-(^3) https://archive.softwareheritage.org/swh:1:rev:27c1ec918630215002da5e2115fa5d3775ed5210;
-origin=https://github.com/Oslandia/py3dtiles/
-(^4) https://archive.softwareheritage.org/swh:1:cnt:3fe3b38bf74758e1ac649e16d05c3c11f09076d4;
-origin=https://github.com/VCityTeam/py3dtiles/
-**3.3** Implementation and evaluation **43**
+* (^3) https://archive.softwareheritage.org/swh:1:rev:27c1ec918630215002da5e2115fa5d3775ed5210;origin=https://github.com/Oslandia/py3dtiles/
+* (^4) https://archive.softwareheritage.org/swh:1:cnt:3fe3b38bf74758e1ac649e16d05c3c11f09076d4;origin=https://github.com/VCityTeam/py3dtiles/
 
 
 
@@ -197,25 +177,18 @@ are currently available on specific versions of UD-Viz^9 and of iTowns^10. They 
 planned to be integrated to the main versions of iTowns and UD-Viz after a few steps
 of cleaning and refactoring.
 
-(^5) https://archive.softwareheritage.org/swh:1:cnt:e9fca4145806c85d1ab4eec05cba628311fd3370;
-6 origin=https://github.com/VCityTeam/py3dtiles/
-https://archive.softwareheritage.org/swh:1:rev:39b23180b47ed3b995aeb5b8fa45aff56b88d353;
-7 origin=https://github.com/VCityTeam/py3dtiles/
-https://archive.softwareheritage.org/swh:1:rev:b5a523825862a3f2dd440c2922485cdd30009834;
-8 origin=https://github.com/VCityTeam/UD-Viz/
-https://archive.softwareheritage.org/swh:1:rev:e996369f1da742b8ca923f4c64d656f8d1a537db;
-9 origin=https://github.com/iTowns/itowns
-https://archive.softwareheritage.org/swh:1:rev:e915ff94f9902fa0def310e159beb3caf461ab59;
-origin=https://github.com/jailln/UDV/
-(^10) https://archive.softwareheritage.org/swh:1:snp:1f61a61af2dc46834e108c586373f043defcd687;
-origin=https://github.com/jailln/itowns//
-**44 Chapter 3** Delivering time-evolving 3D city models for web visualization
+* (^5) https://archive.softwareheritage.org/swh:1:cnt:e9fca4145806c85d1ab4eec05cba628311fd3370;origin=https://github.com/VCityTeam/py3dtiles/
+* (^6) https://archive.softwareheritage.org/swh:1:rev:39b23180b47ed3b995aeb5b8fa45aff56b88d353;origin=https://github.com/VCityTeam/py3dtiles/
+* (^7) https://archive.softwareheritage.org/swh:1:rev:b5a523825862a3f2dd440c2922485cdd30009834;origin=https://github.com/VCityTeam/UD-Viz/
+* (^8) https://archive.softwareheritage.org/swh:1:rev:e996369f1da742b8ca923f4c64d656f8d1a537db;origin=https://github.com/iTowns/itowns
+* (^9) https://archive.softwareheritage.org/swh:1:rev:e915ff94f9902fa0def310e159beb3caf461ab59;origin=https://github.com/jailln/UDV/
+* (^10) https://archive.softwareheritage.org/swh:1:snp:1f61a61af2dc46834e108c586373f043defcd687;origin=https://github.com/jailln/itowns//
 
 Since the formalization of the temporal dimension has been integrated to 3D Tiles
 as an extension (following the recommendations of the standard), it could be
 implemented into other software components supporting 3D Tiles (e.g. Cesium^11 ).
 
-(^11) https://cesiumjs.org/
-(^12) https://data.grandlyon.com/
+* (^11) https://cesiumjs.org/
+* (^12) https://data.grandlyon.com/
 
 
