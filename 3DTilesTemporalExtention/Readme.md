@@ -11,7 +11,7 @@ A dockerized version of the tileset creation data pipeline can be found in the [
 
 To construct a tileset with the temporal extention, first the differences between each city snapshot must be created using the `demo_extract_building_dates.py` script in the [cityGMLto3DTiles temporal workflow](https://github.com/VCityTeam/cityGMLto3DTiles/tree/master/PythonCallingDocker#running-the-temporal-tiler-workflow).
 
-Once the differences files are created the [CityTemporalTiler of py3dTileRs](https://github.com/VCityTeam/py3dtilers/blob/master/py3dtilers/CityTiler/CityTemporalTiler.py#L4) can be used to create a tileset with the temporal extention. Here, the CityTemporalTiler uses the [TemporalTileSet of py3dTiles](https://github.com/VCityTeam/py3dtiles/blob/Tiler/py3dtiles/temporal_extension_tileset.py#L8).
+Once the differences files are created the [CityTemporalTiler of py3dTileRs](https://github.com/VCityTeam/py3dtilers/blob/master/py3dtilers/CityTiler/CityTemporalTiler.py#L4) can be used to create a tileset with the temporal extention. Here, the CityTemporalTiler uses the [TemporalTileSet class of py3dTiles](https://github.com/VCityTeam/py3dtiles/blob/Tiler/py3dtiles/temporal_extension_tileset.py#L8).
 
 * [Py3DTilers CityTemporalTiler CLI documentation](https://github.com/VCityTeam/py3dtilers/tree/master/py3dtilers/CityTiler#citytemporaltiler-features)
 
