@@ -189,6 +189,3 @@ as an extension (following the recommendations of the standard), it could be
 implemented into other software components supporting 3D Tiles (e.g. Cesium^11 ).
 
 * (^11) https://cesiumjs.org/
-* (^12) https://data.grandlyon.com/
-
-
