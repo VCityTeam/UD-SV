@@ -1,12 +1,12 @@
 # 3DTiles Temporal Extention
 Within the UD-SV project several data models, tools, and components are used to create 3DTiles with a temporal extention.
 
-### 3DTiles Specification
+## Extention Specification
 The original documentation for the specification of these 3DTiles can be found in [chapter 3.2 of the thesis of Vincent Jaillot](./Jaillot2020Extract.md) 
 
 The JSON schemas for the 3DTiles Temporal extension can be found on [Zenodo](https://zenodo.org/record/3596881) 
 
-### Tileset Creation
+## Tileset Creation
 A dockerized version of the tileset creation data pipeline can be found in the [cityGMLto3DTiles](https://github.com/VCityTeam/cityGMLto3DTiles) repository.
 
 To construct a tileset with the temporal extention, first the differences between each city snapshot must be created using the `demo_extract_building_dates.py` script in the [cityGMLto3DTiles temporal workflow](https://github.com/VCityTeam/cityGMLto3DTiles/tree/master/PythonCallingDocker#running-the-temporal-tiler-workflow).
@@ -15,7 +15,9 @@ Once the differences files are created the [CityTemporalTiler of py3dTileRs](htt
 
 * [Py3DTilers CityTemporalTiler CLI documentation](https://github.com/VCityTeam/py3dtilers/tree/master/py3dtilers/CityTiler#citytemporaltiler-features)
 
-### Tileset Visualization concerning the client side 
+## Tileset Visualization
+
+### Concerning the client side 
 * The rendering style is hardcoded in the [TemporalProvider:: initCOStyles()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L67) function.
 
 ### Concerning the relationship between the slider position and the data
