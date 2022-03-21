@@ -1,33 +1,27 @@
 # 3DTiles Temporal Extention documentation extracted from Jaillot 2020
 **[Jaillot 2020] Vincent Jaillot. 3D, temporal and documented cities : formalization, visualization and navigation. Computer Vision and Pattern Recognition [cs.CV]. Université de Lyon, 2020. English. NNT : 2020LYSE2026. tel-03228436**
 
-```
+Pages 38-45
+
 ...
 In section3.2, we specify Gen4DCity at the logical and specification levels in the 3D
 Tiles standard format.
-```
+
 # 3.2 Specification into 3D Tiles
 
 ## 3.2.1 3D Tiles logical model and temporal extension
 
-```
-Figure3.5presents both Logic3DGeo and Logic4DCity. Logic3DGeo (in white)
+Figure 3.5 presents both Logic3DGeo and Logic4DCity. Logic3DGeo (in white)
 is a proposition of logical model of the 3D Tiles standard. It depicts the current
 state of 3D Tiles (version 1.0) [Ope19] and covers all the data modelling part
 of the specification. Logic3DGeo is a specification of Gen3DGeo. Logic4DCity is a
 logical model for delivering time-evolving 3D city models on the web. It integrates the
-```
-```
-38 Chapter 3 Delivering time-evolving 3D city models for web visualization
-```
-
-```
 formalization of the temporal dimension to Logic3DGeo. Logic4DCity is a specification
 of Gen4DCity. The recursive composition association of Geographic Feature (thick
 line) is a proposition of conceptual representation of hierarchical relationships
 between geographic features of 3D city models (i.e. a conceptual representation of
 the batch table hierarchy extension of 3D Tiles^1 ).
-```
+
 3D Tiles is composed of a _Tileset_ (corresponding to _Set_ of _Gen3DGeo_ ). _Asset_ ’s at-
 tributes _version_ (version of 3D Tiles) and _tilesetVersion_ (identifier for tracking updates
 of a _Tileset_ ) are not related to representing the evolution of the city over time. A
@@ -66,31 +60,28 @@ mapped to _Tile_ ). This way, not only can the _Tile_ ’s _boundingVolume_ attr
 **3.2** Specification into 3D Tiles **39**
 
 ![Figure 3.5](https://user-images.githubusercontent.com/23373264/159284795-f6f7b5a7-364c-4f4e-9cdd-4197237f5166.png)
-```
+
 Figure 3.5.: Logic4DCity : logical model for delivering time-evolving 3D city models on the
 web based on extending 3D Tiles. A logical model of 3D Tiles, Logic3DGeo , is
 proposed in white and the temporal extension is represented in gray. The recur-
 sive composition association of Geographic Feature (thick line) is a conceptual
 representation of the batch_table_hierarchy extension of 3D Tiles.
-```
-```
+
 Period , but also its viewerRequestVolume and the TileContent ’s boundingVolume. The
 boundingVolumes make it possible to index Geographic Features using spatio-temporal
-```
+
 **40 Chapter 3** Delivering time-evolving 3D city models for web visualization
 
 
-```
 indexing methods. The viewerRequestVolume makes it possible to show the content
 of a Tile only when the display date (date at which the data is displayed to the user)
 is inside its Period.
 In section3.2.2, we propose the technical specification of the temporal formalization.
 This technical specification is an extension of 3D tiles. We name it 3DTiles_temporal
 (following the naming convention of 3D Tiles extensions).
-```
+
 ## 3.2.2 Technical specification of the temporal extension
 
-```
 3D Tiles contains concepts named extension and extra that allow to extend the
 core specification. Figure3.6is a proposition of description of these concepts.
 Extension makes it possible to extend 3D Tiles entities. It has a name and it is
@@ -101,16 +92,14 @@ it possible to add specific metadata to 3D Tiles entities. All the entities of t
 Tiles specification can have an ExtensionSet and an ExtraSet. In other words, all the
 implemented classes of Logic3DGeo (i.e. of the 3D Tiles specification) can have an
 ExtensionSet and an ExtraSet.
-```
-![Figure 3.6](https://user-images.githubusercontent.com/23373264/159288540-d64002f1-ec29-4932-b738-2682f9dc8898.png)
-```
-Figure 3.6.: Description of the concepts for extending 3D Tiles.
-```
-```
-3.2 Specification into 3D Tiles 41
-```
 
-```
+![Figure 3.6](https://user-images.githubusercontent.com/23373264/159288540-d64002f1-ec29-4932-b738-2682f9dc8898.png)
+
+Figure 3.6.: Description of the concepts for extending 3D Tiles.
+
+
+3.2 Specification into 3D Tiles 41
+
 The 3DTiles_temporal extension specification is described with JSON schemas, which
 we make available online^2. It uses the Extension concept. This way, the core of the
 standard is not modified, but there is still an impact on users of 3D Tiles.
@@ -133,10 +122,9 @@ stated in the introduction of this chapter. In the next section, we propose an
 implementation of these propositions, demonstrating that they allow to achieve
 interactive spatio-temporal visualization of large-scale time-evolving 3D city datasets
 on the web.
-```
+
 # 3.3 Implementation and evaluation
 
-```
 In this section we present an implementation allowing to deliver and visualize time-
 evolving 3D city models on the web with the 3DTiles_temporal extension proposed in
 this chapter. We start with a presentation of the software architecture (section3.3.1).
@@ -144,28 +132,27 @@ We continue with an evaluation of our propositions in comparison with existing
 standards (section3.3.2). We finish with the proposition of visualization rules for
 urban evolution visualization and apply them for the visualization of a time-evolving
 3D city model (section3.3.3).
-```
+
 (^2) https://doi.org/10.5281/zenodo.
 **42 Chapter 3** Delivering time-evolving 3D city models for web visualization
 
 
 ## 3.3.1 Software architecture
 
-```
+
 We propose an open-source web prototype allowing to create, deliver and visualize
 time-evolving 3D city models, implementing the 3DTiles_temporal extension. The
 software architecture of this prototype is represented in figure3.7. In this section,
 we only give an overview of this architecture to facilitate understanding of the
 evaluation of our contributions. A more detailed view of the software architecture
 and implementations are presented in chapter 5.
-```
+
 ![Figure 3.7](https://user-images.githubusercontent.com/23373264/159288646-9be898e1-ad31-4e3b-9409-9462deb117ce.png)
 
-```
+
 Figure 3.7.: Software architecture for creating, delivering and visualizing time-evolving 3D
 city models, implementing the 3DTiles_temporal extension.
-```
-```
+
 py3dtiles^3 allows to create 3D Tiles datasets from various sources (e.g. 3DCi-
 tyDB [Yao+18], LAS files [PRS11], etc.). We contributed to the implementa-
 tion of the 3D Tiles specification in py3dtiles. In addition, we implemented the
@@ -173,7 +160,7 @@ batch_table_hierarchy extension of 3D Tiles (allowing to represent hierarchical 
 tions between objects) and the 3DTiles_temporal extension. We also implemented
 two processes respectively allowing to create 3D city models in 3D Tiles ( City Tiler^4 )
 and time-evolving 3D city models in 3D Tiles extended with 3DTiles_temporal ( City
-```
+
 (^3) https://archive.softwareheritage.org/swh:1:rev:27c1ec918630215002da5e2115fa5d3775ed5210;
 origin=https://github.com/Oslandia/py3dtiles/
 (^4) https://archive.softwareheritage.org/swh:1:cnt:3fe3b38bf74758e1ac649e16d05c3c11f09076d4;
@@ -181,7 +168,7 @@ origin=https://github.com/VCityTeam/py3dtiles/
 **3.3** Implementation and evaluation **43**
 
 
-```
+
 Temporal Tiler^5 ). The City Tiler process allows to go from a 3DCityDB database
 containing 3D city objects to 3D city models in 3D Tiles with tiles represented in
 the b3dm format. The City Temporal Tiler takes two inputs: 3DCityDB databases
@@ -209,7 +196,7 @@ information of a building selected from the 3D scene). These implementations
 are currently available on specific versions of UD-Viz^9 and of iTowns^10. They are
 planned to be integrated to the main versions of iTowns and UD-Viz after a few steps
 of cleaning and refactoring.
-```
+
 (^5) https://archive.softwareheritage.org/swh:1:cnt:e9fca4145806c85d1ab4eec05cba628311fd3370;
 6 origin=https://github.com/VCityTeam/py3dtiles/
 https://archive.softwareheritage.org/swh:1:rev:39b23180b47ed3b995aeb5b8fa45aff56b88d353;
@@ -224,12 +211,10 @@ origin=https://github.com/jailln/UDV/
 origin=https://github.com/jailln/itowns//
 **44 Chapter 3** Delivering time-evolving 3D city models for web visualization
 
-
-```
 Since the formalization of the temporal dimension has been integrated to 3D Tiles
 as an extension (following the recommendations of the standard), it could be
 implemented into other software components supporting 3D Tiles (e.g. Cesium^11 ).
-```
+
 (^11) https://cesiumjs.org/
 (^12) https://data.grandlyon.com/
 
