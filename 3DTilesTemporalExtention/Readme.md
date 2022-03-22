@@ -32,3 +32,14 @@ Once the differences files are created the [CityTemporalTiler of py3dTileRs](htt
   
   * Both those `TileManager` and `model` are [provided to the TemporalProvider at instantiation](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/TemporalModule.js#L24) and it is this instantiantion context that instantiates the [`$3DTemporalExtension` model](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/TemporalModule.js#L21)
 * Now, [TemporalProvider::changeVisibleTilesStates() function](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L333) calls [TemporalProvider::computeTileState()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L336) for each `tiles[i].tileId` that [is visible](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L334)
+* [TemporalProvider::computeTileState()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L336) 
+  uses the [`TemporalProvider.COStyles`](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L39)
+  optimization data structure that `computeTileState()`
+  * [initializes on first traversal](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L296)
+  * updates/set the [features rendering style on further traveral](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L287)
+* In order to [set the rendering mode (display styles)]([TemporalProvider::computeTileState()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L336) of the features of tile (for a given currentTime), `TemporalProvider::computeTileState()` calls 
+  [TemporalProvider::culling()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L178) that 
+  * If the feature exists at the currentTime, [displays it in gray](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L188),
+  * If there is a transaction between the feature and another feature at the currentTime AND
+     * if the currentTime lies within the first half duration of the transaction THEN [displayed geometry is the one of the old feature](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L211)
+     * if the currentTime lies within the second half of the duration THEN [the displayed geometry is the one of the new feature](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L229) 
