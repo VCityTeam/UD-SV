@@ -49,3 +49,6 @@ In order to [set the rendering mode (display styles)](https://github.com/VCityTe
 
 ### Concerning the client side color rendering 
 * The rendering style is hardcoded in the [TemporalProvider:: initCOStyles()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L67) function.
+
+### Concerning the client side temporal tileset model
+* The code for parsing and storing the temporal tileset can be found in the [model](https://github.com/VCityTeam/UD-Viz/tree/master/src/Widgets/Temporal/Model) 
