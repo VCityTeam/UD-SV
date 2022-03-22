@@ -44,4 +44,7 @@ In order to [set the rendering mode (display styles)](https://github.com/VCityTe
 * If there is a transaction between the feature and another feature at the currentTime AND
   * if the currentTime lies within the first half duration of the transaction THEN [displayed geometry is the one of the old feature](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L211) and [set the color](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L211)
   * if the currentTime lies within the second half of the duration THEN [the displayed geometry is the one of the new feature](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L229) and [set the color](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L229)
-* [hides the feature otherwise](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L264)
+* If there is no existing feature or transaction at the currentTime :
+  * If there a feature that exists in the next vintage, [display it as green (construction)](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L253)
+  * If there a feature that exists in the previous vintage, [display it as red (destruction)](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L253)
+  * Otherwise [hide the feature](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L264)
