@@ -16,11 +16,12 @@ Once the differences files are created the [CityTemporalTiler of py3dTileRs](htt
 * [Py3DTilers CityTemporalTiler CLI documentation](https://github.com/VCityTeam/py3dtilers/tree/master/py3dtilers/CityTiler#citytemporaltiler-features)
 
 ## Tileset Visualization
+The general documentation of how these tilesets are visualized in UD-Viz can be found [here](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/Docs/configuration_temporalGraphOption.md). For more details on how the functionality and code of this implementation, please see below.
 
-### Concerning the client side 
+### Concerning the client side color rendering 
 * The rendering style is hardcoded in the [TemporalProvider:: initCOStyles()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L67) function.
 
-### Concerning the relationship between the slider position and the data
+#### Concerning the relationship between the slider position and the data
 A [TemporalView calls](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L46) a [refreshCallback](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L31) function every time the slider is moved.
 * The refreshCallback is defined as the [TemporalView::currentTimeUpdated(...)](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L25) function.
 * The TemporalView passes this refreshCallback to the [TemporalSliderWindow constructor](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L46) .
