@@ -1,10 +1,14 @@
 # 3DTiles Temporal Extention
-Within the UD-SV project several data models, tools, and components are used to create 3DTiles with a temporal extention.
+
+## Introduction
+The [3DTiles](https://github.com/CesiumGS/3d-tiles/blob/main/README.md) is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geospatial content. Yet 3DTiles is restricted to __static__ geometrical features as opposed to __dynamic__ features that is
+features changing/evolving with time.
+3DTiles-temporal is a [3Dtiles extention](https://github.com/CesiumGS/3d-tiles/tree/main/extensions#about) (a mechanism allowing the base 3D Tiles specification to be extended with new features) dedicated to the representation of temporal (dynamic) tilesets.  
 
 ## Extention Specification
-The original documentation for the specification of these 3DTiles can be found in [chapter 3.2 of the thesis of Vincent Jaillot](./Jaillot2020Extract.md) 
+The theoretical work, backing this specification of 3DTiles-temporal, can be found in [Vincent Jaillot's Phd](https://tel.archives-ouvertes.fr/tel-03228436). The following [Phd extracts/snipets](./Jaillot2020Extract.md) (mainly taken from chapter 3.2 [Vincent Jaillot's Phd](https://tel.archives-ouvertes.fr/tel-03228436)) highlight the central notions of the 3DTiles-temporal specification.
 
-The JSON schemas for the 3DTiles Temporal extension can be found on [Zenodo](https://zenodo.org/record/3596881) 
+In addition, the [JSON schemas](https://json-schema.org/) underlying the definition of the 3DTiles-temporal extension can be found on [Zenodo](https://zenodo.org/record/3596881) (as well as e.g. [py3dTiles](https://github.com/VCityTeam/py3dtiles/tree/Tiler/py3dtiles/jsonschemas)). 
 
 ## Tileset Creation
 A dockerized version of the tileset creation data pipeline can be found in the [cityGMLto3DTiles](https://github.com/VCityTeam/cityGMLto3DTiles) repository.
