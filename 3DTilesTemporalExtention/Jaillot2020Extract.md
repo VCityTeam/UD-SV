@@ -5,7 +5,7 @@
 
 ## 3.2.1 3D Tiles logical model and temporal extension
 
-[Figure 3.5](#Figure_3.5) presents both Logic3DGeo and Logic4DCity. Logic3DGeo (in white)
+[Figure 3.5](#Figure_3_5) presents both Logic3DGeo and Logic4DCity. Logic3DGeo (in white)
 is a proposition of logical model of the 3D Tiles standard. It depicts the current
 state of 3D Tiles (version 1.0) [Ope19] and covers all the data modelling part
 of the specification. Logic3DGeo is a specification of Gen3DGeo. Logic4DCity is a
@@ -53,7 +53,7 @@ mapped to _Tile_ ). This way, not only can the _Tile_ ’s _boundingVolume_ attr
 
 ![Figure 3.5](https://user-images.githubusercontent.com/23373264/159284795-f6f7b5a7-364c-4f4e-9cdd-4197237f5166.png)
 
-<a href="#Figure_3.5"></a>
+<a href="#Figure_3_5"></a>
 
 **Figure 3.5.**: Logic4DCity : logical model for delivering time-evolving 3D city models on the
 web based on extending 3D Tiles. A logical model of 3D Tiles, Logic3DGeo , is
