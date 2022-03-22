@@ -18,10 +18,7 @@ Once the differences files are created the [CityTemporalTiler of py3dTileRs](htt
 ## Tileset Visualization
 The general documentation of how these tilesets are visualized in UD-Viz can be found [here](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/Docs/configuration_temporalGraphOption.md). For more details on how the functionality and code of this implementation, please see below.
 
-### Concerning the client side color rendering 
-* The rendering style is hardcoded in the [TemporalProvider:: initCOStyles()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L67) function.
-
-#### Concerning the relationship between the slider position and the data
+### Concerning the relationship between the slider position and the data
 A [TemporalView calls](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L46) a [refreshCallback](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L31) function every time the slider is moved.
 * The refreshCallback is defined as the [TemporalView::currentTimeUpdated(...)](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L25) function.
 * The TemporalView passes this refreshCallback to the [TemporalSliderWindow constructor](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L46) .
@@ -49,3 +46,6 @@ In order to [set the rendering mode (display styles)](https://github.com/VCityTe
   * If there a feature that exists in the next vintage, [display it as green (construction)](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L253)
   * If there a feature that exists in the previous vintage, [display it as red (destruction)](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L253)
   * Otherwise [hide the feature](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L264)
+
+### Concerning the client side color rendering 
+* The rendering style is hardcoded in the [TemporalProvider:: initCOStyles()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L67) function.
