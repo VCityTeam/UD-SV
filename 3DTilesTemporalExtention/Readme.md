@@ -17,13 +17,13 @@ This extension allows to, for example:
   an aggregation of transactions between two versions).
 
 ## Extention Specification
-In addition, the [JSON schemas](https://json-schema.org/) of the 3DTiles-temporal extension currently
+The [JSON schemas](https://json-schema.org/) of the 3DTiles-temporal extension currently
 constitute a concrete format specification of the 3DTiles-temporal extention.
 Those 3dTiles-temporal JSON schemas can currently be found 
 
-* at [Zenodo](https://zenodo.org/record/3596881) for the schemas per se,
+* On [Zenodo](https://zenodo.org/record/3596881) for the schemas per se,
 * embedded within the 
-  [py3dTiles](https://github.com/VCityTeam/py3dtiles/tree/Tiler/py3dtiles/jsonschemas))
+  ([py3dTiles](https://github.com/VCityTeam/py3dtiles/tree/Tiler/py3dtiles/jsonschemas))
   [python](https://en.wikipedia.org/wiki/Python_(programming_language)) based implementation
   of the (memory) representation of the 3DTiles-temporal extention,
 * or within the 
@@ -75,9 +75,9 @@ A dockerized version of the tileset creation data pipeline can be found in the [
        border="0">
 </a>
 
-In order to construct a 3dTiles-temporal tileset, a succession/pipeline (illustrated above) of treatments must be realized, mainly:
+In order to construct a 3dTiles-temporal tileset, a data pipeline (illustrated above) must be realized in order to:
 
-* sanitize each snapshot/vintage data and respectively host them [3DCityDB databases](https://3dcitydb-docs.readthedocs.io/en/version-2021.1/),
+* sanitize each snapshot/vintage dataset and respectively host them within a [3DCityDB databases](https://3dcitydb-docs.readthedocs.io/en/version-2021.1/),
 * then compute the differences between each city snapshot/vintage and its succeeding vintage data 
   using e.g. the `demo_extract_building_dates.py` script in the 
   [cityGMLto3DTiles temporal workflow](https://github.com/VCityTeam/cityGMLto3DTiles/tree/master/PythonCallingDocker#running-the-temporal-tiler-workflow),
