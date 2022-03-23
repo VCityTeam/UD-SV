@@ -29,12 +29,21 @@ Those 3dTiles-temporal JSON schemas can currently be found
 * or within the 
   [Temporal Widget](https://github.com/VCityTeam/UD-Viz/tree/master/src/Widgets/Temporal/Model/jsonSchemas)
   of the [UD-Viz](https://github.com/VCityTeam/UD-Viz) visualization package.
+  
+<a href="./">
+    <img src="https://user-images.githubusercontent.com/23373264/159284795-f6f7b5a7-364c-4f4e-9cdd-4197237f5166.png"
+       align=center  
+       alt="UML conceptual model of 3DTiles-temporal extension"
+       width="800"
+       border="0">
+  </a>
+
 
 ## 3dTiles-temporal tileset examples
 
 * A dataset, representing of the city of Lyon between 2009 and 2015 is openly
-  available online at https://doi.org/10.5281/zenodo.3596861 (and 
-  [hosted at Zenodo](https://zenodo.org/record/3596861)) 
+  available online ([hosted at Zenodo](https://zenodo.org/record/3596861)) at  
+     https://doi.org/10.5281/zenodo.3596861
 * Several 3dTiles-temporal tileset examples are hosted at
   [LIRIS lab online dataset](https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/):
   look for tilesets containing Temporal within their name. 
