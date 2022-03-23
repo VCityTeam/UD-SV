@@ -30,7 +30,7 @@ Those 3dTiles-temporal JSON schemas can currently be found
   [Temporal Widget](https://github.com/VCityTeam/UD-Viz/tree/master/src/Widgets/Temporal/Model/jsonSchemas)
   of the [UD-Viz](https://github.com/VCityTeam/UD-Viz) visualization package.
   
-<a href="./">
+<a href="./Jaillot2020Extract.md">
     <img src="https://user-images.githubusercontent.com/23373264/159284795-f6f7b5a7-364c-4f4e-9cdd-4197237f5166.png"
        align=center  
        alt="UML conceptual model of 3DTiles-temporal extension"
@@ -68,11 +68,23 @@ The following [Phd extracts/snipets](./Jaillot2020Extract.md) (mainly taken from
 ## Tileset Creation
 A dockerized version of the tileset creation data pipeline can be found in the [cityGMLto3DTiles](https://github.com/VCityTeam/cityGMLto3DTiles) repository.
 
-To construct a tileset with the temporal extention, first the differences between each city snapshot must be created using the `demo_extract_building_dates.py` script in the [cityGMLto3DTiles temporal workflow](https://github.com/VCityTeam/cityGMLto3DTiles/tree/master/PythonCallingDocker#running-the-temporal-tiler-workflow).
+<a href="./https://github.com/VCityTeam/cityGMLto3DTiles">
+    <img src="https://raw.githubusercontent.com/VCityTeam/cityGMLto3DTiles/master/Images/TilerActivityDiagramWithoutRendering.png"
+       align=center  
+       alt="3dTiles-temporal tileset creation pipeline"
+       width="800"
+       border="0">
+  </a>
 
-Once the differences files are created the [CityTemporalTiler of py3dTileRs](https://github.com/VCityTeam/py3dtilers/blob/master/py3dtilers/CityTiler/CityTemporalTiler.py#L4) can be used to create a tileset with the temporal extention. Here, the CityTemporalTiler uses the [TemporalTileSet class of py3dTiles](https://github.com/VCityTeam/py3dtiles/blob/Tiler/py3dtiles/temporal_extension_tileset.py#L8).
+In order to construct a 3dTiles-temporal tileset, a succession/pipeline (illustrated above) of treatments must be realized, mainly:
 
-* [Py3DTilers CityTemporalTiler CLI documentation](https://github.com/VCityTeam/py3dtilers/tree/master/py3dtilers/CityTiler#citytemporaltiler-features)
+* sanitize each snapshot/vintage data and respectively host them [3DCityDB databases](https://3dcitydb-docs.readthedocs.io/en/version-2021.1/),
+* then compute the differences between each city snapshot/vintage and its succeeding vintage data 
+  using e.g. the `demo_extract_building_dates.py` script in the 
+  [cityGMLto3DTiles temporal workflow](https://github.com/VCityTeam/cityGMLto3DTiles/tree/master/PythonCallingDocker#running-the-temporal-tiler-workflow),
+* once the differences files are created use the [CityTemporalTiler of py3dTileRs](https://github.com/VCityTeam/py3dtilers/blob/master/py3dtilers/CityTiler/CityTemporalTiler.py#L4) to create a tileset with the temporal extention (for this the CityTemporalTiler uses the [TemporalTileSet class of py3dTiles](https://github.com/VCityTeam/py3dtiles/blob/Tiler/py3dtiles/temporal_extension_tileset.py#L8)).
+
+Refer to [Py3DTilers CityTemporalTiler CLI documentation](https://github.com/VCityTeam/py3dtilers/tree/master/py3dtilers/CityTiler#citytemporaltiler-features) for usage documentation.
 
 ## Tileset Visualization
 **[UD-Viz Temporal Widget Documentation](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/Docs/configuration_temporalGraphOption.md).**
