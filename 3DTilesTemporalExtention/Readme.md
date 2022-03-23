@@ -1,7 +1,7 @@
 # 3DTiles Temporal Extention
 
 ## Introduction
-The [3DTiles](https://github.com/CesiumGS/3d-tiles/blob/main/README.md) is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geospatial content. Yet 3DTiles is restricted to __static__ geometrical features as opposed to __dynamic__ features that is
+[3DTiles](https://github.com/CesiumGS/3d-tiles/blob/main/README.md) is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geospatial content. Yet 3DTiles is restricted to __static__ geometrical features as opposed to __dynamic__ features that is
 features changing/evolving with time.
 3DTiles-temporal is a [3Dtiles extention](https://github.com/CesiumGS/3d-tiles/tree/main/extensions#about) (a mechanism allowing the base 3D Tiles specification to be extended with new features) dedicated to the representation of temporal (dynamic) tilesets.  
 
