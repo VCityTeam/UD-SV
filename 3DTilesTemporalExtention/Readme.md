@@ -6,12 +6,11 @@ features changing/evolving with time.
 3DTiles-temporal is a [3Dtiles extention](https://github.com/CesiumGS/3d-tiles/tree/main/extensions#about) dedicated to 
 the **representation of temporal (dynamic) 3dTiles tilesets**.
 
-This extension allows, for example, to 
+This extension allows to, for example: 
 
 * add dates of existence to [(3dTiles) features](https://github.com/CesiumGS/3d-tiles/tree/main/specification#readme),
-* define feature transitions, called transactions (e.g. `creation`, `modification`,
-  `demolition`, `union`, `division` or compositions of these transactions), between
-  two features,
+* define transitions between two features, called transactions (e.g. `creation`, `modification`,
+  `demolition`, `union`, `division` or compositions of these transactions),
 * describe versions of the city (an aggregation of city objects for a given
   period of time),
 * version transitions (transitions between two versions together with
