@@ -36,8 +36,7 @@ Those 3dTiles-temporal JSON schemas can currently be found
        alt="UML conceptual model of 3DTiles-temporal extension"
        width="800"
        border="0">
-  </a>
-
+</a>
 
 ## 3dTiles-temporal tileset examples
 
@@ -74,7 +73,7 @@ A dockerized version of the tileset creation data pipeline can be found in the [
        alt="3dTiles-temporal tileset creation pipeline"
        width="800"
        border="0">
-  </a>
+</a>
 
 In order to construct a 3dTiles-temporal tileset, a succession/pipeline (illustrated above) of treatments must be realized, mainly:
 
@@ -87,41 +86,18 @@ In order to construct a 3dTiles-temporal tileset, a succession/pipeline (illustr
 Refer to [Py3DTilers CityTemporalTiler CLI documentation](https://github.com/VCityTeam/py3dtilers/tree/master/py3dtilers/CityTiler#citytemporaltiler-features) for usage documentation.
 
 ## Tileset Visualization
-**[UD-Viz Temporal Widget Documentation](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/Docs/configuration_temporalGraphOption.md).**
 
-For more details on how the functionality and code of this implementation, please see below.
+Visualizing and interacting with 3dTiles-temporal tilesets, can be done through the
+**[UD-Viz Temporal Widget](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/Docs/Readme.md)**
+software component.
 
-### Concerning the relationship between the slider position and the data
-A [TemporalView calls](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L46) a [refreshCallback](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L31) function every time the slider is moved.
-* The refreshCallback is defined as the [TemporalView::currentTimeUpdated(...)](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L25) function.
-* The TemporalView passes this refreshCallback to the [TemporalSliderWindow constructor](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L46) .
-* Eventually the callback is [invoked by the TemporalSliderWindow](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalSliderWindow.js#L88) when e.g. the slider is acted upon the user.
+This widget proposes to render the transactions diffently according to the position of the temporal slider
+as illustrated by the following illustration
 
-In order to get the proper slide-bar refresh, the [TemporalView::currentTimeUpdated(...)](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L25) callback function uses a [provider](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L18) (that is [handled over to the constructor](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/TemporalModule.js#L29)) that triggers a [provider.changeVisibleTilesStates()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/View/TemporalView.js#L29).
-* In turn the [TemporalProvider::changeVisibleTilesStates() function](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L333) uses 
-  * a [TileManager](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L334) ([provided to the constructor](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L29)) to retrieve the visible tiles,
-  * a [`$3DTemporalExtension` model](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/TemporalModule.js#L21) (also [provided to the constructor](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L27))  
-* Both those `TileManager` and `model` are [provided to the TemporalProvider at instantiation](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/TemporalModule.js#L24) and it is this instantiantion context that instantiates the [`$3DTemporalExtension` model](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/TemporalModule.js#L21)
-
-Now, [TemporalProvider::changeVisibleTilesStates() function](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L333) calls [TemporalProvider::computeTileState()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L336) for each `tiles[i].tileId` that [is visible](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L334)
-[TemporalProvider::computeTileState()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L336) 
-  uses the [`TemporalProvider.COStyles`](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L39)
-  optimization data structure that `computeTileState()`
-* [initializes on first traversal](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L296)
-* updates/set the [features rendering style on further traveral](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L287)
-
-In order to [set the rendering mode (display styles)](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L336) of the features of tile (for a given currentTime), `TemporalProvider::computeTileState()` calls [TemporalProvider::culling()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L178) that 
-* If the feature exists at the currentTime, [displays it in gray](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L188),
-* If there is a transaction between the feature and another feature at the currentTime AND
-  * if the currentTime lies within the first half duration of the transaction THEN [displayed geometry is the one of the old feature](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L211) and [set the color](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L211)
-  * if the currentTime lies within the second half of the duration THEN [the displayed geometry is the one of the new feature](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L229) and [set the color](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L229)
-* If there is no existing feature or transaction at the currentTime :
-  * If there a feature that exists in the next vintage, [display it as green (construction)](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L253)
-  * If there a feature that exists in the previous vintage, [display it as red (destruction)](https://github.com/VCityTeam/UD-Viz/blob/86ff907a5d00b944de895a735fe4c42162d2251c/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L253)
-  * Otherwise [hide the feature](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L264)
-
-### Concerning the client side color rendering 
-* The rendering style is hardcoded in the [TemporalProvider:: initCOStyles()](https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/ViewModel/TemporalProvider.js#L67) function.
-
-### Concerning the client side temporal tileset model
-* The code for parsing and storing the temporal tileset can be found in the [model](https://github.com/VCityTeam/UD-Viz/tree/master/src/Widgets/Temporal/Model) 
+<a href="https://github.com/VCityTeam/UD-Viz/blob/master/src/Widgets/Temporal/Docs/Readme.md">
+    <img src="https://raw.githubusercontent.com/VCityTeam/UD-Viz/master/src/Widgets/Temporal/Docs/visu-transactions.png"
+       align=center  
+       alt="Tansaction rendering with UD-Viz Temporal Widget"
+       width="800"
+       border="0">
+</a>
