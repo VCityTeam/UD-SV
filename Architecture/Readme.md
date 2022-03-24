@@ -5,17 +5,29 @@
  * Wikipedia's [Sofware Architecture page](https://en.wikipedia.org/wiki/Software_architecture)
  * Martin Fowler's [Sofware Architecture Guide](https://martinfowler.com/architecture/)
 
-## Examples of architectural diagrams of the project
+## Structural diagrams examples of the UD-SV project
 
-### UD-SV GUI application structural diagrams
+### [Component diagrams](https://www.uml-diagrams.org/component-diagrams.html)
 
-The following diagram depicts, with a loose notation (not UML), the generic structure of an UD-SV GUI application
+<img src="/SoftwareComponents/Diagrams/ComponentDiagram-macro-components-with-notes.png"
+     align=center
+     alt="ComponentDiagram-macro-components-with-notes.png"
+     width="600"
+     border="0">
+     
+The component diagram of the [UD-Imuv application](https://github.com/VCityTeam/UD-Imuv) (and it's [Puml source](./Diagrams/GlobalDiagramIMUV.puml))
 
-![](Diagrams/SoftwareArchitecture.png)
+![https://github.com/VCityTeam/UD-Imuv](./Diagrams/GlobalDiagramIMUV.png)
 
-and here is another tentative (closer, yet not strictly, [an UML component diagram](https://www.uml-diagrams.org/component-diagrams.html)
+Another example of a UML look-alike (not strictly UML) diagram
 
-![Sketchy iTowns usage/developing  context](Diagrams/OslandiaiTown2Context.png)
+<img src="Diagrams/OslandiaiTown2Context.png"
+     alt="Sketchy iTowns usage/developing  context"
+     width="600">
+
+An informal artistic depiction of some generic structure of an UD-SV GUI application
+
+<img src="Diagrams/SoftwareArchitecture.png" alt="Artist view" width="600">
 
 ### Class diagram
 
@@ -61,11 +73,3 @@ At the level of the UD-SV project:
  * [A Reminder On Three/MultiTier Layer Architecture Design](https://www.hanselman.com/blog/AReminderOnThreeMultiTierLayerArchitectureDesignBroughtToYouByMyLateNightFrustrations.aspx) (by Scott Hanselman): **"If you are designing a layer, know your in's and out's and for Goodness' Sake know your responsibility.  If you don't, back to the drawing board until you do."**
  * [Difference between CRUD and REST](https://softwareengineering.stackexchange.com/questions/120716/difference-between-rest-and-crud): [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) means the basic operations to be done in a data repository. [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) operates on resource  representations (complex objects abstractions), each one identified by an URL. In short: **same thing, different layers** (CRUD falls within the Data Access layer while REST fits in the Business layer).
  * [Stateless vs Stateful](https://en.wikipedia.org/wiki/Stateless_protocol) protocols: there can be **complex interactions between stateful and stateless protocols** among **different protocol layers**. For example, HTTP is an example of a stateless protocol layered on top of TCP, a stateful protocol, which is layered on top of IP, another stateless protocol, which is routed on a network that employs BGP, another stateful protocol. Note: REST**ful** is state**less**.
-
- # IMUV Diagrams
-
-Repo Git [UD-IMUV](https://github.com/VCityTeam/UD-Imuv)
-
-[Puml source](./Diagrams/GlobalDiagramIMUV.puml)
-
-![](./Diagrams/GlobalDiagramIMUV.png)
