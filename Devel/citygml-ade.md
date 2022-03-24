@@ -125,10 +125,14 @@ When using Enterprise Architect to create conceptual UML data models for CityGML
 For a broader overview of implementing CityGML ADEs with EA, see the following documentation:
 - [OGC 12-066 document: Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice](https://github.com/VCityTeam/3DUSE/blob/master/doc/ADE/1.%20doc/12-066_Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice%20(1).pdf)
 - [Example Urban Planning ADE (Very well documented)](https://github.com/nob140/CityGML3_ADE/blob/6e3127d7c48288c1fc53c15b3ddc3bcb9653473a/document/annex-examples-ADE-realworld.adoc)
+- [ShapeChange getting started](/Tools/ShapeChange.md)
 - [ShapeChange documentation](https://shapechange.net/targets/xsd/)
 
+
 #### UML Profile
-In **CityGML 2.0** the `UML Profile for CityGML ADEs` and `UML Profile for GML Application Schemas` UML profiles must be loaded in order to identify and map certain CityGML specific ADE concepts to an XML Schema. 
+In **CityGML 2.0** the `UML Profile for CityGML ADEs` and `UML Profile for GML Application Schemas` UML profiles must be used in order to identify and map certain CityGML specific ADE concepts to an XML Schema.
+
+For example to declare an ADE element of an existing CityGML class use the `UML Profile for CityGML ADEs::ADEElement` Stereotype as follows :
 
 ![example ADE declaration](https://user-images.githubusercontent.com/23373264/159905244-fb7f9aaa-2243-4690-8043-dce63005c225.png)
 
