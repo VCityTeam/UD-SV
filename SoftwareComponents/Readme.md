@@ -12,7 +12,7 @@ Main [component diagram](https://www.uml-diagrams.org/component-diagrams.html)
 ### Visualization (client side)
 <a name="ComponentUD-Viz"></a>[Urban Data Vizualisation (UD-Viz)](https://github.com/MEPP-team/UD-Viz) 
 is an npm (javascript) package based on [iTowns](https://github.com/iTowns/itowns) (in turn based on [ThreeJS](https://threejs.org/) 
-itself based on [WebGL](https://en.wikipedia.org/wiki/WebGL) dedicated to the visualization of Urban Data.
+itself based on [WebGL](https://en.wikipedia.org/wiki/WebGL) dedicated to the visualization of Urban Data).
       
 ### Data Processing
  - <a name="Componentpy3dtilers"></a>[py3dtilers](https://github.com/VCityTeam/py3dtilers): various algorithms computing [3dTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles)
