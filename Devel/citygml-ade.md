@@ -128,7 +128,7 @@ For a broader overview of implementing CityGML ADEs with EA, see the following d
 - [ShapeChange documentation](https://shapechange.net/targets/xsd/)
 
 #### UML Profile
-In both CityGML 2.0 the `CityGML UML Profile` UML profile must be loaded in order to identify and map certain CityGML specific ADE concepts to an XML Schema. Example EA UML models can be found in the [UD-Graph repository](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/test-data/UML)
+In **CityGML 2.0** the `CityGML UML Profile` UML profile must be loaded in order to identify and map certain CityGML specific ADE concepts to an XML Schema. Example EA UML models can be found in the [UD-Graph repository](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/test-data/UML)
 
 The following Stereotypes must be used for properly declaring the following UML elements
 | UML | EA Stereotype |
