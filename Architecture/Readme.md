@@ -45,9 +45,7 @@ Preprocessing stage of a 3d-tiles tileset computation (and its **[Puml source](D
 
 ![](Diagrams/ApplicationSetup.png)
 
-#### GUI navigation in a 3D representation of a city
-
-**Navigation in a City in 3D diagram:** [Puml source](Diagrams/3DNavigation.puml)
+Another sequence diagram depicting a GUI navigation in a representation of a City (and its [Puml source](Diagrams/3DNavigation.puml))
 
 ![](Diagrams/3DNavigation.png)
 
