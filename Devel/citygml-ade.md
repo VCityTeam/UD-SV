@@ -128,22 +128,11 @@ For a broader overview of implementing CityGML ADEs with EA, see the following d
 - [ShapeChange documentation](https://shapechange.net/targets/xsd/)
 
 #### UML Profile
-In **CityGML 2.0** the `CityGML UML Profile` UML profile must be loaded in order to identify and map certain CityGML specific ADE concepts to an XML Schema. Example EA UML models can be found in the [UD-Graph repository](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/test-data/UML)
+In **CityGML 2.0** the `UML Profile for CityGML ADEs` and `UML Profile for GML Application Schemas` UML profiles must be loaded in order to identify and map certain CityGML specific ADE concepts to an XML Schema. 
 
-The following Stereotypes must be used for properly declaring the following UML elements
-| UML | EA Stereotype |
-|---|---|
-| ADE Application Schema package | `CityGML UML Profile::ApplicationSchema` |
-| ADE Leaf package | `CityGML UML Profile::Leaf` |
-| ADE of existing CityGML Class | `CityGML UML Profile::ADEElement` |
-| ADE Feature Class | `CityGML UML Profile::FeatureType` |
-| ADE Datatype | `CityGML UML Profile::DataType` |
-| ADE Enumeration | `CityGML UML Profile::Enumeration` |
-| ADE Type | `CityGML UML Profile::Type` |
-| ADE CodeList | `CityGML UML Profile::CodeList` |
-| ADE Union | `CityGML UML Profile::Union` |
+![example ADE declaration](https://user-images.githubusercontent.com/23373264/159905244-fb7f9aaa-2243-4690-8043-dce63005c225.png)
 
-![Example Enterprise Architect Stereotype definition for a new ADE FeatureType](https://user-images.githubusercontent.com/23373264/155375191-e6cbfa11-8aee-4056-b492-f29b1f6a0e85.png)
+Example EA UML models can be found in the [UD-Graph repository](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/test-data/UML).
 
 #### ShapeChange configuration
 To take advantage of these 'hooks' in the UML profile use the `<rule name="rule-xsd-cls-adeelement"/>` to transform these UML elements to XSD. See this [shapechange configuration file](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/ShapeChange) as an example.
