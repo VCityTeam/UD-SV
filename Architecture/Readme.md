@@ -5,9 +5,9 @@
  * Wikipedia's [Sofware Architecture page](https://en.wikipedia.org/wiki/Software_architecture)
  * Martin Fowler's [Sofware Architecture Guide](https://martinfowler.com/architecture/)
 
-## Structural diagrams examples of the UD-SV project
+## [Structure diagrams](https://www.uml-diagrams.org/uml-25-diagrams.html#structure-diagram) examples of the UD-SV project
 
-### [Component diagrams](https://www.uml-diagrams.org/component-diagrams.html)
+### [Component diagrams](https://www.uml-diagrams.org/component-diagrams.html) examples
 
 <img src="/SoftwareComponents/Diagrams/ComponentDiagram-macro-components-with-notes.png"
      align=center
@@ -29,26 +29,19 @@ An informal artistic depiction of some generic structure of an UD-SV GUI applica
 
 <img src="Diagrams/SoftwareArchitecture.png" alt="Artist view" width="600">
 
-### Class diagram
+### [Class diagrams](https://www.uml-diagrams.org/class-diagrams-overview.html) examples
 
-Abstract data model of geographically attached multimedia assets
+Abstract data model of geographically attached multimedia assets (of the 
+[Spatial-Multimedia-DB](https://github.com/VCityTeam/Spatial-Multimedia-DB) component)
+
 ![](https://raw.githubusercontent.com/VCityTeam/Spatial-Multimedia-DB/master/doc/img/diagram_api.png)
 
-### Class diagram juxtaposed with component diagrams
 
+## [Behavior diagrams](https://www.uml-diagrams.org/uml-25-diagrams.html#behavior-diagram) examples of the UD-SV project
 
-![](Pictures/2022_01_28_-_Activity_with_Component_technical_diagram.png)
+### [sequence diagrams](https://www.uml-diagrams.org/sequence-diagrams.html) examples
 
-![](Pictures/2022_01_28_-_Activity_with_Component_diagram.png)
-
-### UD-SV sequence diagrams examples
-
-#### Preprocessing of 3d-tiles tileset computations
-
-**[Puml source](Diagrams/ApplicationSetup.puml)**
-
-On first stage, an admin creates a view on 3DCityDB (e.g. with some scripts). This view will contain each
-feature wanted in the dataset, its ids and any attribute related to the features that will be added in the b3dm files.
+Preprocessing stage of a 3d-tiles tileset computation (and its **[Puml source](Diagrams/ApplicationSetup.puml)**)
 
 ![](Diagrams/ApplicationSetup.png)
 
@@ -57,6 +50,14 @@ feature wanted in the dataset, its ids and any attribute related to the features
 **Navigation in a City in 3D diagram:** [Puml source](Diagrams/3DNavigation.puml)
 
 ![](Diagrams/3DNavigation.png)
+
+## Hybrid/combination-of diagrams (not strictly UML)
+
+Two examples of class diagrams juxtaposed with component diagrams
+
+![](Pictures/2022_01_28_-_Activity_with_Component_technical_diagram.png)
+
+![](Pictures/2022_01_28_-_Activity_with_Component_diagram.png)
 
 ## Architecture related recommended material
 
