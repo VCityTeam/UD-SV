@@ -9,6 +9,13 @@ The short answer is: forget it.
 
 Below are some failed trials...
 
+## Markdown direct : FAILS image present but links are not clickable
+
+```markdown
+![](/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg)
+```
+
+![](/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg)
 
 ## Using `html image` will fail: the links won't work. Period. 
 
