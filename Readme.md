@@ -7,6 +7,11 @@
 
 <object data="https://raw.githubusercontent.com/VCityTeam/UD-SV/master/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg" type="image/svg+xml" width="600"></object>
 
+<img src="https://raw.githubusercontent.com/VCityTeam/UD-SV/master/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg"
+     align=center
+     alt="Components sorted by categories"
+     width="600"
+     border="0">
 
 <img src="SoftwareComponents/Diagrams/ComponentSortedByCategories.svg"
      align=center
