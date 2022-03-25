@@ -5,7 +5,7 @@
 
 * [Online demos](https://projet.liris.cnrs.fr/vcity/demos/)
 
-<object data="SoftwareComponents/Diagrams/ComponentSortedByCategories.svg" type="image/svg+xml" width="600"></object>
+<object data="https://raw.githubusercontent.com/VCityTeam/UD-SV/master/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg" type="image/svg+xml" width="600"></object>
 
 
 <img src="SoftwareComponents/Diagrams/ComponentSortedByCategories.svg"
