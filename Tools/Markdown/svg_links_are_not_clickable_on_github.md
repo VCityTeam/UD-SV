@@ -17,6 +17,10 @@ an image as opposed to svg...
      
 ### With plain `html img`: FAILS image present but links are not clickable
 
+```html
+<img src="/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg" ....>
+```
+
 <img src="/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg"
      align=center
      alt="Components sorted by categories"
@@ -38,6 +42,11 @@ Some html tags are sanitized by github's markdown renderer: [refer here](https:/
 Hence the following will fail
      
 ### With object and raw.githubusercontent.com : FAILS with nothing displayed
+
+```html
+<object type="data:image/svg+xml" data="https://raw.githubusercontent.com/VCityTeam/UD-SV/master/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg"></object>
+```
+
 <object type="data:image/svg+xml" data="https://raw.githubusercontent.com/VCityTeam/UD-SV/master/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg"></object>
 
 ### With object and relative path : FAILS with nothing displayed
