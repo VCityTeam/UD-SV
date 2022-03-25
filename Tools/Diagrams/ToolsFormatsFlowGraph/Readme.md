@@ -2,8 +2,6 @@
 
 <img src="./Tools_Formats_bipartite_graph_UML_activity_like.svg" alt="drawing" width="600"/>
 
-Notice that boxes can be clicked.
-
 ## Recomputing the target images
 
 After editing a diagram source (e.g. a dia diagram or a [graphviz](https://graphviz.org/) .gv file)
