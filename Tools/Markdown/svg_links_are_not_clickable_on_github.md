@@ -1,3 +1,15 @@
+## Objective
+As stated in [this stackOverflow post](https://stackoverflow.com/questions/70545385/github-markdown-svg-file-links-not-working):
+```
+I'm creating markdown file on a Github repo and want to embed a SVG 
+file in the markdown in which the links from the SVG file are clickable.
+My SVG file is saved in the same folder in the repo.
+```
+The short answer is: forget it.
+
+Below are some failed trials...
+
+
 ## Using `html image` will fail: the links won't work. Period. 
 
 Links won't work because the rendered html will present that as
