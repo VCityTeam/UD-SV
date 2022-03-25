@@ -49,8 +49,10 @@ As proposed by https://stackoverflow.com/questions/46381436/github-svg-not-rende
 
 ## Using `html object` will fail: its sanitized
      
-Some html tags are sanitized by github's markdown renderer: [refer here](https://github.com/github/markup/issues/245#issuecomment-682231577).
-Hence the following will fail
+Some html tags are [sanitized by github's markdown renderer](https://github.com/github/markup/issues/245#issuecomment-682231577)
+that uses a [while of allowed html tags](https://github.com/gjtorikian/html-pipeline/blob/main/lib/html/pipeline/sanitization_filter.rb#L67).
+
+Hence the following, based on `html object`, will fail
      
 ### With object and raw.githubusercontent.com : FAILS with nothing displayed
 
