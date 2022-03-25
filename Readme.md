@@ -71,7 +71,6 @@ Data formats and tools activity as a graph
      width="600"
      border="0">
 
-Comp
 <img src="SoftwareComponents/Diagrams/ComponentDiagram-macro-components-with-notes.png"
      align=center
      alt="ComponentDiagram-macro-components-with-notes.png"
