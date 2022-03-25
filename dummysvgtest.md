@@ -1,4 +1,8 @@
-## Using html image will fail: the links won't work. Period. 
+## Using `html image` will fail: the links won't work. Period. 
+
+Links won't work because the rendered html will present that as
+an image as opposed to svg...
+
 ### With sanitize = true: FAILS image present but links are not clickable
 As proposed by https://stackoverflow.com/questions/46381436/github-svg-not-rendering-at-all use sanitize=true
 <img src="https://raw.githubusercontent.com/VCityTeam/UD-SV/master/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg?sanitize=true"
@@ -14,7 +18,7 @@ As proposed by https://stackoverflow.com/questions/46381436/github-svg-not-rende
      width="600"
      border="0">
 
-## Using <object> will fail
+## Using `html object` will fail: its sanitized
      
 Some html tags are sanitized by github's markdown renderer: [refer here](https://github.com/github/markup/issues/245#issuecomment-682231577).
 Hence the following will fail
