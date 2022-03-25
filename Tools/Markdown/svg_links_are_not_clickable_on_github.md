@@ -37,6 +37,10 @@ an image as opposed to svg...
 ### `html img` with a trailing `sanitize=true`: FAILS image present but links are not clickable
 As proposed by https://stackoverflow.com/questions/46381436/github-svg-not-rendering-at-all use sanitize=true
 
+```hmtl
+<img src="https://raw.githubusercontent.com/...<myimage>.svg?sanitize=true"
+```
+
 <img src="https://raw.githubusercontent.com/VCityTeam/UD-SV/master/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg?sanitize=true"
      align=center
      alt="Components sorted by categories"
