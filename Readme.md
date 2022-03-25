@@ -4,8 +4,6 @@
 **Quick links**
 
 * [Online demos](https://projet.liris.cnrs.fr/vcity/demos/)
-* [Architecture](Architecture/Readme.md)
-* [Developers' gateway](/ImplementationKnowHow/DevelopersCentral.md)
 
 ---
 
