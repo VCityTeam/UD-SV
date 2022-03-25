@@ -63,4 +63,9 @@ Hence the following, based on `html object`, will fail
 <object type="data:image/svg+xml" data="https://raw.githubusercontent.com/VCityTeam/UD-SV/master/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg"></object>
 
 ### With object and relative path : FAILS with nothing displayed
+
+```html
+<object type="data:image/svg+xml" data="/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg"></object>
+```
+
 <object type="data:image/svg+xml" data="/SoftwareComponents/Diagrams/ComponentSortedByCategories.svg"></object>
