@@ -4,13 +4,15 @@ First, install PostgreSQL and Postgis
 
 ```bash
 $ sudo apt-get update
-$ sudo apt-get install postgresql postgresql-12-postgis-3 postgresql-contrib
+$ sudo apt-get install postgresql-10 postgresql-10-postgis-2.4
+$ sudo service postgresql restart
 ```
 
 Setup a password for `postgres` user
 
 ```bash
-$ sudo -u postgres psql
+$ sudo su - postgres
+$ psql
 postgres=# \password postgres
 Enter new password: <new-password>
 postgres=# \q
@@ -19,10 +21,7 @@ postgres=# \q
 Locate and edit 'pg_hba.conf'
 
 ```bash
-$ sudo apt install mlocate
-$ locate pg_hba.conf
-/etc/postgresql/12/main/pg_hba.conf
-$ sudo vim /etc/postgresql/12/main/pg_hba.conf
+$ sudo vim /etc/postgresql/10/main/pg_hba.conf
 ```
 
 The line:
