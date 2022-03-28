@@ -8,6 +8,17 @@ $ sudo apt-get install postgresql-10 postgresql-10-postgis-2.4
 $ sudo service postgresql restart
 ```
 
+If the package `postgresql-10` couldn't be located, try:
+
+```bash
+$ sudo apt-get install wget ca-certificates
+$ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+$ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+$ sudo apt-get update
+$ sudo apt-get install postgresql-10 postgresql-10-postgis-2.4
+$ sudo service postgresql restart
+```
+
 Setup a password for `postgres` user
 
 ```bash
