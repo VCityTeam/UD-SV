@@ -4,7 +4,7 @@ First, install PostgreSQL and Postgis
 
 ```bash
 $ sudo apt-get update
-$ sudo apt-get install postgresql-10 postgresql-10-postgis-2.4
+$ sudo apt-get install postgresql-10 postgresql-10-postgis-2.4 postgis
 $ sudo service postgresql restart
 ```
 
