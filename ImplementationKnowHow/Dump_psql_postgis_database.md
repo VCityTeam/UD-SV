@@ -26,8 +26,30 @@ In `Options`, check `Use Column Inserts` and `Use Insert Commands`.
 
 Then, run the backup.
 
-## Issues
+## Issues on restore
 
 ### Schema
 
+Sometimes, after importing your data, SQL can't find the path to find the functions if the schema isn't specified.
+
+To handle this issue:
+
+1. delete the line `SELECT pg_catalog.set_config('search_path', '', false);` from your dump file
+2. before importing the data, run `ALTER DATABASE <db_name> SET search_path TO <schema>;`
+
 ### PostGIS version
+
+If you try to import the dump with different version of PostgreSQL/PostGIS than the one used to create the dump, you may encounter some issues.
+
+#### __postgis\_raster extension__
+
+`postgis_raster` is an extension used only in Postgis versions >= 3.0. Trying to create this extension with Postgis < 3.0 will result in an error.
+
+The best way to deal with the raster extension is to delete/add the line `CREATE EXTENSION IF NOT EXISTS postgis_raster WITH SCHEMA public;` in your dump, depending on your Postgis version. If you want to add the line, always put it __after__ the creation of `postgis` extension.
+
+#### __Compability with older versions__
+
+If your dump was created with a recent version of Postgis and you try to import it a database with an old version of Postgis, some lines may have to be deleted.
+
+The only way to do it, is to try to import and delete each line causing an error.
+
