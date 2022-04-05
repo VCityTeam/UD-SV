@@ -1,7 +1,7 @@
 # CityGML ADEs
 
 - [Generic attributes and objects](#Generic-attributes-and-objects)
-- [ADE (Application Domain Extension)](#ADE-(Application-Domain-Extension))
+- [ADE (Application Domain Extension)](#ade-application-domain-extension)
 - [CityGML ADE mechanism](#CityGML-ADE-mechanism)
   - [EA Modeling for Shapechange](#EA-Modeling-for-Shapechange)
   - [XML Data Validation](#XML-Data-Validation)
