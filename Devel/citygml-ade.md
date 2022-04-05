@@ -124,12 +124,13 @@ When using Enterprise Architect to create conceptual UML data models for CityGML
 
 For a broader overview of implementing CityGML ADEs with EA, see the following documentation:
 - [OGC 12-066 document: Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice](https://github.com/VCityTeam/3DUSE/blob/master/doc/ADE/1.%20doc/12-066_Modeling_an_application_domain_extension_of_CityGML_in_UML_-_candidate_best_practice%20(1).pdf)
-- [Example Urban Planning ADE in CityGML 3.0 (Very well documented)](https://github.com/nob140/CityGML3_ADE/blob/6e3127d7c48288c1fc53c15b3ddc3bcb9653473a/document/annex-examples-ADE-realworld.adoc)
 - [ShapeChange getting started](/Tools/ShapeChange.md)
 - [ShapeChange documentation](https://shapechange.net/targets/xsd/)
 
+#### ... in CityGML 3.0
+Refer to the documentation in the [example Urban Planning ADE in CityGML 3.0](https://github.com/nob140/CityGML3_ADE/blob/6e3127d7c48288c1fc53c15b3ddc3bcb9653473a/document/annex-examples-ADE-realworld.adoc) for a concise examples on how to model CityGML ADEs in EA and how to create a shapechange configuration file.
 
-#### UML Profile
+#### ... in CityGML 2.0
 In **CityGML 2.0** the `UML Profile for CityGML ADEs` and `UML Profile for GML Application Schemas` UML profiles must be used in order to identify and map certain CityGML specific ADE concepts to an XML Schema.
 
 For example to declare an ADE element of an existing CityGML class use the `UML Profile for CityGML ADEs::ADEElement` Stereotype as follows :
@@ -138,14 +139,12 @@ For example to declare an ADE element of an existing CityGML class use the `UML 
 
 Example EA UML models can be found in the [UD-Graph repository](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/test-data/UML).
 
-#### ShapeChange configuration
 To take advantage of these 'hooks' in the UML profile use the `<rule name="rule-xsd-cls-adeelement"/>` to transform these UML elements to XSD. See this [shapechange configuration file](https://github.com/VCityTeam/UD-Graph/tree/versioning-graph/Transformations/ShapeChange) as an example.
 
 <a name="XML-Data-Validation"/>
 
 ### XML Data Validation
 A possible XML validation tool is the [XML extention](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml) for vscode which enables XSD and DTD [XML validation](https://github.com/redhat-developer/vscode-xml/blob/master/docs/Validation.md#validation-with-xsd-grammar) with local and online files.
-
 
 ## Examples
 * [ADE examples from 3DUse](https://github.com/VCityTeam/3DUSE/tree/master/doc/ADE) (versioning, workspace, document examples)
