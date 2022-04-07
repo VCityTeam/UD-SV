@@ -80,7 +80,7 @@ Each demo should have its own repository whose name is of the form
 `UD-Demo-<project_name>[-<illustrated_feature_name>][-<territory_name>]`
 that should reflect the purpose and dependencies of that demo. 
 For example 
- - the repository [UD-Demo-vcity-lods-lyon](https://github.com/VCityTeam/UD-Demo-vcity-lods-lyon) collects
+ - the repository [UD-Demo-vcity-py3dtilers-lyon](https://github.com/VCityTeam/UD-Demo-vcity-py3dtilers-lyon) collects
    all the elements required for a demo realised by the `vcity` project, illustrating
    `lods` (Level Of Detail) related functionnality and using data related to the
    city (territory) of Lyon
