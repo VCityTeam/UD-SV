@@ -578,10 +578,12 @@ The starting point for modeling of geographic information. Abstraction of a real
 
 "**abstraction of real world phenomena** NOTE: A feature may occur as a type or an instance. Feature type or feature instance should be used when only one is meant.[Victoria Terminology Harmonization Meeting]This class describes how a feature class shall be constructed in an Application Schema. In accordance with the conformance clause of the standard, instances of this class are instanciated as feature classes in an Application Schema" - ISO 19101
 
+In 3D Tiles, an individual component of a tile, such as a 3D model in a Batched 3D Model or a point in a Point Cloud which contains position, appearance, and metadata properties.[2]
+
 ---
 **bib** : 
 - [1] The  OpenGIS®  Abstract  Specification  Topic  6:   The  Coverage  Type  and  its  Subtypes - OGC
-
+- [2] [3D Tiles OGC Specification](http://docs.opengeospatial.org/cs/18-053r2/18-053r2.html#7)
 ### Representation
 
 In database : Data Representation refers to the form in which data is stored, processed, and transmitted
