@@ -90,7 +90,7 @@ node ./bin/3d-tiles-tools.js glbToB3dm -i ./model.glb -o ./model.b3dm
 b3dm to glb:
 
 ```bash
-node ./bin/3d-tiles-tools.js b3dmToGlb -i ./model.glb -o ./model.b3dm
+node ./bin/3d-tiles-tools.js b3dmToGlb -i ./model.b3dm -o ./model.glb
 ```
 
 ## Compress 3DTiles
