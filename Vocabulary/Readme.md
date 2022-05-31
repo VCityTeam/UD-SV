@@ -66,7 +66,7 @@
    7. [Symbole](#symbole)
    8. [Contextual View](#contextual-view)
    9. [Event](#event)
-
+   10. [Knowledge-Base](#knowledge-base)
 **Texture in a 3DTiles production context**
 * [Tuile](#Tuile)
 * [Texture](#Texture)
@@ -632,10 +632,20 @@ The view can be either from :
 
 ### Event
 --- 
+
 Own definition in CMMS : An object without representations, such as work orders or disorders, that is linked to an asset. It can be associated with a documentation.
 
 ---
 
+### Knowledge base
+---
+
+A knowledge-based system consists of a knowledge-base representing facts about the world and ways of reasoning about those facts to deduce new facts or highlight inconsistencie[1]
+
+---
+**bib**: Hayes-Roth, Frederick; Donald Waterman; Douglas Lenat (1983). Building Expert Systems. Addison-Wesley. ISBN 0-201-10686-8.
+
+---
 Ici se trouve les différentes notions que j'ai pu aborder lors de la réalisation de mon projet. Il m'est arrivé de nombreuses fois de ne pas comprendre exactement ce que je devais faire car un ou plusieurs mots m'étaient inconnus. Cette page doit servir à rensegner toutes les personnes recherchant du vocabulaire en rappport avec l'informatique graphique. 
 
 #### Tuile
