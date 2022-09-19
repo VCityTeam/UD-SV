@@ -17,14 +17,14 @@ The geometric error is formulated based on a metric like point density, tile siz
 Important points:
 
 - The _geometricError_ is the metric used to refine the tiles.
-- The greater is the geometricError, the sooner a tile will be refined.
-- All the tiles must have a geometricError. The tileset itself must have a _geometricError_ too.
-- The tileset should have the greatest geometricError. A tile should always have a lower _geometricError_ than its parent (or equal to its parent).
+- The greater is the _geometricError_, the sooner a tile will be refined.
+- All the tiles must have a _geometricError_. The tileset itself must have a _geometricError_ too.
+- The tileset should have the greatest _geometricError_. A tile should always have a lower _geometricError_ than its parent (or equal to its parent).
   - Tileset GE >= Root tile GE >= child tiles GE
 
 ## Choose the geometricError
 
-The _geometricError_ values for each tile and for the tileset are __arbitrary__. There is no predefined algorithm to compute the geometricError. However, different strategies can be adopted to choose a geometricError.
+The _geometricError_ values for each tile and for the tileset are __arbitrary__. There is no predefined algorithm to compute the _geometricError_. However, different strategies can be adopted to choose a _geometricError_.
 
 ### Cesium
 
@@ -84,4 +84,5 @@ graph TD;
 
 Chosing a _geometricError_ for each level of detail can be empirical, but certain guidelines should be respected:
 
-- the more detailled is a tile, the less should be its geometricError
+- the more detailled is a tile, the less should be its _geometricError_.
+- TODO
