@@ -1,4 +1,4 @@
-# [NPM](https://en.wikipedia.org/wiki/Npm_(software)) (Network Package Manager) 
+# [NPM](https://en.wikipedia.org/wiki/Npm_(software)) (Node Package Manager) 
 
 ## Installing npm
 
