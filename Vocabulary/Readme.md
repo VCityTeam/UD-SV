@@ -612,6 +612,8 @@ The main difference between Symbology and Semiotics is that semiotics is the stu
 
 This situation contains surrounding and linked objects
 
+[Towards a Better Understanding of Context and Context-Awareness, Abowd et al](http://link.springer.com/10.1007/3-540-48157-5_29) : Context is any information that can be used to characterize the situation of an entity. An entity is a person, place, or object that is considered relevant to the interaction between a user and an application, including the user and applications themselves.
+
 ### Environment
 --- 
 [Definition](https://www.dictionary.com/browse/environment): The aggregate of surrounding things, conditions, or influences; surroundings; milieu.
