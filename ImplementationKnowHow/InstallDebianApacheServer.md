@@ -45,3 +45,23 @@ Trouble shoot by looking at server's error and log files:
 Notes and references:
  * [Ubuntu Apache2 configuration](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts)
  * [Ubuntu Apache2 install](https://help.ubuntu.com/lts/serverguide/httpd.html)
+
+
+## Apache server using httpd docker image with CORS enabled
+
+Minimalistic Dockerfile to create the apache server
+
+```
+FROM httpd:2.4
+
+LABEL maintainer "VCityTeam"
+
+# Copy the website (the directory has to be named public-html)
+COPY ./public-html/ /usr/local/apache2/htdocs/
+
+# Copy the configuration files if specific configuration 
+# COPY ./conf/* /usr/local/apache2/conf/
+# or to just enable CORS (add the line at the beging of the file)
+RUN sed -i '1i Header set Access-Control-Allow-Origin "*"' /usr/local/apache2/conf/httpd.conf
+```
+
