@@ -12,7 +12,6 @@
 | N/A | [UD-Serv](https://github.com/VCityTeam/UD-Serv) | :grey_question: |
 | [![Build status](https://app.travis-ci.com/VCityTeam/py3dtiles.svg?branch=Tiler)](https://app.travis-ci.com/github/VCityTeam/py3dtiles/tree/Tiler) | [Py3dTiles (Oslandia's fork)](https://github.com/VCityTeam/py3dtiles) | :grey_question: |
 | [![Build status](https://app.travis-ci.com/VCityTeam/py3dtilers.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/py3dtilers) | [Py3dTileRs](https://github.com/VCityTeam/py3dtilers) | [![Build status](https://app.travis-ci.com/VCityTeam/py3dtilers-docker.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-Viz-docker) [py3dtilers-docker](https://github.com/VCityTeam/py3dtilers-docker) |
-| [![Build Status](https://travis-ci.com/VCityTeam/UD-SimpleServer.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-SimpleServer) | [UD-SimpleServer](https://github.com/VCityTeam/UD-SimpleServer) | Has to be wrapped with the content it serves | 
 | [![Build Status](https://travis-ci.com/VCityTeam/UrbanCO2Fab.svg?token=y3vK8xhKoXzzexQzPa9z&branch=master)](https://app.travis-ci.com/github/VCityTeam/UrbanCO2Fab) | [UrbanCO2Fab](https://github.com/VCityTeam/UrbanCO2Fab/) | :grey_question:|
 | [![Build Status](https://travis-ci.com/VCityTeam/UD-Graph.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-Graph) | [UD-Graph](https://github.com/VCityTeam/UD-Graph) |  [UD-Graph-docker](https://github.com/VCityTeam/UD-Graph-docker) |
 
@@ -29,3 +28,7 @@
 | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-IMU-Imuv.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-IMU-Imuv) | [UD-Demo-IMU-Imuv](https://github.com/VCityTeam/UD-Demo-IMU-Imuv) | N/A: Multicontainer demo (using docker-compose)|
 | coming soon! | [https://github.com/VCityTeam/UD-Demo-Graph-SPARQL](https://github.com/VCityTeam/UD-Demo-Graph-SPARQL) | N/A: Multicontainer demo (using docker-compose) |
 
+### Archived repositories (CI disactivated)
+| Badge | Component | Docker Container |
+|------:|-----------|------------------|
+| [![Build Status](https://travis-ci.com/VCityTeam/UD-SimpleServer.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-SimpleServer) | [UD-SimpleServer](https://github.com/VCityTeam/UD-SimpleServer) | Has to be wrapped with the content it serves | 
