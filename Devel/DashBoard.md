@@ -2,7 +2,6 @@
 | Badge | Component | Docker Container |
 |------:|-----------|------------------|
 | [![Build status](https://travis-ci.com/VCityTeam/3DUSE.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/3DUSE)| [3DUse](https://github.com/VCityTeam/3DUSE) | :grey_question: |
-|[![Build status](https://travis-ci.com/VCityTeam/pyud.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/pyud) | [pyud](https://github.com/VCityTeam/pyud) | :grey_question: |
 |[![Build status](https://travis-ci.com/VCityTeam/UD-Viz.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-Viz)<br>[![CodeQL](https://github.com/VCityTeam/UD-Viz/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/VCityTeam/UD-Viz/actions/workflows/codeql-analysis.yml) | [UD-Viz](https://github.com/VCityTeam/UD-Viz) | [![Build status](https://app.travis-ci.com/VCityTeam/UD-Viz-docker.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-Viz-docker) [UD-Viz-docker](https://github.com/VCityTeam/UD-Viz-docker) |
 | :grey_question: | [Geoserver-Setup](https://github.com/VCityTeam/Geoserver-Setup) | [![Build status](https://travis-ci.com/VCityTeam/Geoserver-Setup-docker.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/Geoserver-Setup-docker) [Geoserver-Setup-docker](https://github.com/VCityTeam/Geoserver-Setup-docker) |
 |[![Build status](https://travis-ci.com/VCityTeam/UD-Imuv.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-Imuv) | [UD-Imuv](https://github.com/VCityTeam/UD-Imuv) | [![Build status](https://app.travis-ci.com/VCityTeam/UD-Imuv-docker.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-Imuv-docker) [UD-Imuv-docker](https://github.com/VCityTeam/UD-Imuv-docker) |
@@ -31,4 +30,5 @@
 | Badge | Component | Docker Container |
 |------:|-----------|------------------|
 | [![Build status](https://travis-ci.com/VCityTeam/docker-helper-py.svg?branch=main)](https://app.travis-ci.com/github/VCityTeam/docker-helper-py) |  [docker-helper-py](https://github.com/VCityTeam/docker-helper-py) | :grey_question: |
+|[![Build status](https://travis-ci.com/VCityTeam/pyud.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/pyud) | [pyud](https://github.com/VCityTeam/pyud) | :grey_question: |
 | [![Build Status](https://travis-ci.com/VCityTeam/UD-SimpleServer.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-SimpleServer) | [UD-SimpleServer](https://github.com/VCityTeam/UD-SimpleServer) | Has to be wrapped with the content it serves |
