@@ -26,10 +26,9 @@
 | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018) | [UD-Demo-Vcity-Point-Cloud-Lyon-2018](https://github.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018) | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker) [UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker](https://github.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker)|
 | coming soon! | [UD-Demo-Graph-SPARQL](https://github.com/VCityTeam/UD-Demo-Graph-SPARQL) | N/A: Multicontainer demo (using docker-compose) |
 
-### Archived repositories (CI disactivated)
-| Badge | Component | Docker Container |
-|------:|-----------|------------------|
-| [![Build status](https://travis-ci.com/VCityTeam/docker-helper-py.svg?branch=main)](https://app.travis-ci.com/github/VCityTeam/docker-helper-py) |  [docker-helper-py](https://github.com/VCityTeam/docker-helper-py) | :grey_question: |
-|[![Build status](https://travis-ci.com/VCityTeam/pyud.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/pyud) | [pyud](https://github.com/VCityTeam/pyud) | :grey_question: |
-| [![Build Status](https://travis-ci.com/VCityTeam/UD-SimpleServer.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-SimpleServer) | [UD-SimpleServer](https://github.com/VCityTeam/UD-SimpleServer) | Has to be wrapped with the content it serves |
-| N/A | [UD-Serv](https://github.com/VCityTeam/UD-Serv) | :grey_question: |
+### Archived repositories (CI disactivated)| Component | Docker Container |
+|-----------|------------------|
+| [docker-helper-py](https://github.com/VCityTeam/docker-helper-py) | :grey_question: |
+| [pyud](https://github.com/VCityTeam/pyud) | :grey_question: |
+| [UD-SimpleServer](https://github.com/VCityTeam/UD-SimpleServer) | Has to be wrapped with the content it serves |
+| [UD-Serv](https://github.com/VCityTeam/UD-Serv) | :grey_question: |
