@@ -31,3 +31,4 @@
 | [![Build status](https://travis-ci.com/VCityTeam/docker-helper-py.svg?branch=main)](https://app.travis-ci.com/github/VCityTeam/docker-helper-py) |  [docker-helper-py](https://github.com/VCityTeam/docker-helper-py) | :grey_question: |
 |[![Build status](https://travis-ci.com/VCityTeam/pyud.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/pyud) | [pyud](https://github.com/VCityTeam/pyud) | :grey_question: |
 | [![Build Status](https://travis-ci.com/VCityTeam/UD-SimpleServer.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-SimpleServer) | [UD-SimpleServer](https://github.com/VCityTeam/UD-SimpleServer) | Has to be wrapped with the content it serves |
+| N/A | [UD-Serv](https://github.com/VCityTeam/UD-Serv) | :grey_question: |
