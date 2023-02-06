@@ -21,7 +21,8 @@
     iex (new-object net.webclient).downstring(‘https://get.scoop.sh’)
     scoop install nodejs
     ```
-    
+  * [nodist](https://github.com/nullivex/nodist)
+ 
  ### MacOS
  ```bash
  brew install npm
