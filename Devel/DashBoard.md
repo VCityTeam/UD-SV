@@ -30,7 +30,6 @@
 ### Stale Demos
 | Badge |   Demo  | Docker Container |
 |------:|---------|------------------|
-|    | [UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template) |  ❓    |
 | ❓  | [UD-Demo-Anthropocene-GratteCiel](https://github.com/VCityTeam/UD-Demo-Anthropocene-GratteCiel-) | [UD-Demo-Anthropocene-GratteCiel-docker](https://github.com/VCityTeam/UD-Demo-Anthropocene-GratteCiel-docker) |
 
 ### Archived repositories (CI disactivated)
