@@ -27,6 +27,12 @@
 | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018) | [UD-Demo-Vcity-Point-Cloud-Lyon-2018](https://github.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018) | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker) [UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker](https://github.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker)|
 | coming soon! | [UD-Demo-Graph-SPARQL](https://github.com/VCityTeam/UD-Demo-Graph-SPARQL) | N/A: Multicontainer demo (using docker-compose) |
 
+### Stale Demos
+| Badge |   Demo  | Docker Container |
+|------:|---------|------------------|
+|    | [UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template) |  ❓    |
+| ❓  | [UD-Demo-Anthropocene-GratteCiel](https://github.com/VCityTeam/UD-Demo-Anthropocene-GratteCiel-) | [UD-Demo-Anthropocene-GratteCiel-docker](https://github.com/VCityTeam/UD-Demo-Anthropocene-GratteCiel-docker) |
+
 ### Archived repositories (CI disactivated)
 | Component | Docker Container |
 |-----------|------------------|
