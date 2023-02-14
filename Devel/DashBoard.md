@@ -27,7 +27,8 @@
 | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018) | [UD-Demo-Vcity-Point-Cloud-Lyon-2018](https://github.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018) | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker) [UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker](https://github.com/VCityTeam/UD-Demo-Vcity-Point-Cloud-Lyon-2018-docker)|
 | coming soon! | [UD-Demo-Graph-SPARQL](https://github.com/VCityTeam/UD-Demo-Graph-SPARQL) | N/A: Multicontainer demo (using docker-compose) |
 
-### Archived repositories (CI disactivated)| Component | Docker Container |
+### Archived repositories (CI disactivated)
+| Component | Docker Container |
 |-----------|------------------|
 | [docker-helper-py](https://github.com/VCityTeam/docker-helper-py) | :grey_question: |
 | [pyud](https://github.com/VCityTeam/pyud) | :grey_question: |
