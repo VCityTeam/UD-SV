@@ -28,7 +28,6 @@
 ### Stale Demos
 | Badge |   Demo  | Docker Container |
 |------:|---------|------------------|
-| ❓  | [UD-Demo-Anthropocene-GratteCiel](https://github.com/VCityTeam/UD-Demo-Anthropocene-GratteCiel-) | [UD-Demo-Anthropocene-GratteCiel-docker](https://github.com/VCityTeam/UD-Demo-Anthropocene-GratteCiel-docker) |
 | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-DatAgora-Deambulation-Bron.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-DatAgora-Deambulation-Bron) | [UD-Demo-DatAgora-Deambulation-Bron](https://github.com/VCityTeam/UD-Demo-DatAgora-Deambulation-Bron) | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-DatAgora-Deambulation-Bron-docker.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-DatAgora-Deambulation-Bron-docker) [UD-Demo-DatAgora-Deambulation-Bron-docker](https://github.com/VCityTeam/UD-Demo-DatAgora-Deambulation-Bron-docker) |
 | [![Build Status](https://app.travis-ci.com/VCityTeam/UD-Demo-DatAgora-Vegetalisation-PartDieu.svg?branch=master)](https://app.travis-ci.com/VCityTeam/UD-Demo-DatAgora-Vegetalisation-PartDieu) | [UD-Demo-DatAgora-Vegetalisation-PartDieu](https://github.com/VCityTeam/UD-Demo-DatAgora-Vegetalisation-PartDieu) | N/A: Multicontainer demo (using docker-compose) |
 
