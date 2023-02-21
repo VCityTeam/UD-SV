@@ -39,3 +39,4 @@
 | [pyud](https://github.com/VCityTeam/pyud) | :grey_question: |
 | [UD-SimpleServer](https://github.com/VCityTeam/UD-SimpleServer) | Has to be wrapped with the content it serves |
 | [UD-Serv](https://github.com/VCityTeam/UD-Serv) | :grey_question: |
+| [building-server (Oslandia's fork)](https://github.com/VCityTeam/building-server) | :grey_question: |
