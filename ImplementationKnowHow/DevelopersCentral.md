@@ -26,6 +26,7 @@ Adopt the best practices
  * **Submit often**: it is much better to often submit small yet effective and mature PR than jumbo/bulk code once in a while...
  * [Submit trough pull request (PR)](https://github.com/VCityTeam/UD-SV/blob/master/ImplementationKnowHow/GitWorflow/DevelopersGithubCycle.md#submitting-a-pull-request-pr): don't forget to provide a template.
  * Place and maintain some gentle pressure on the guilty parties when [asking for your pull request (PR) acceptation](https://github.com/VCityTeam/UD-SV/blob/master/ImplementationKnowHow/GitWorflow/DevelopersGithubCycle.md#pull-request-pr-acceptance-policy)
+ * Note: when defining a link in markdown only use relative path for references (don't write `[link-name](/b)` but e.g. `[link-name](../../b)`) 
 
 ### Install the demos
  * If you need to compute a 3Dtiles tile-set
