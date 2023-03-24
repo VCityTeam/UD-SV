@@ -130,7 +130,7 @@ web resource, or a module that encapsulates a set of related functions (or data)
 
 ### Application
 
-**Definition ([Wikipedia, computing](https://en.wikipedia.org/wiki/Application_software)):
+**Definition** ([Wikipedia, computing](https://en.wikipedia.org/wiki/Application_software)):
 An application program (software application, or application, or app for short)
 is a computer program designed to carry out a specific task other than one
 relating to the operation of the computer itself, typically to be used by 
