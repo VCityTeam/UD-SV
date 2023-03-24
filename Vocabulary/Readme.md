@@ -1,92 +1,78 @@
-## Index
+# Vocabulary
 
-**Software project management**
-* [Demo](#Demo)
-* [Need](#Need)
-* [Requirement](#Requirement)
+<!-- The following Table Of Content can be automatically updated with -->
+<!-- the Markdown-TOC vscode Extension. Do not edit manually. -->
 
-**Data modeling and semantic web**
-* [Data Modelling](#Data-Modelling)
-  * [Data Model](#Data-model)
-  * [Model Driven Architecture](#model-driven-architecture)
-* [Ontology](#Ontology)
-  * [Conceptualization](#Conceptualization)
-  * [Formalization](#Formalization)
-  * [Network of Ontologies](#Network-of-Ontologies)
-  * [Ontology Matching](#Ontology-Matching)
-    * [Alignment](#Alignment)
-    * [Correspondence](#Correspondence)
-* [The Semantic Web](#Semantic-Web)
-  * [Linked Data](#Linked-Data)
-  * [Semantic Web Stack](#Semantic-Web-Stack)
-    * [Triple](#Triple)
-    * [Resource Description Framework (RDF)](#Resource-Description-Framework)
-    * [Uniform Resource Identifier](#Uniform-Resource-Identifier)
-    * [Uniform Resource Locator](#Uniform-Resource-Locator)
-    * [Internationalized Resource Identifier](#Internationalized-Resource-Identifier)
-    * [Web Ontology Language (OWL)](#Web-Ontology-Language)
-    * [SPARQL Queries](#SPARQL)
-    * [SPARQL Endpoint](#SPARQL-Endpoint)
-    * [Triple Store](#Triple-Store)
-* [Description Logic](#Description-Logic)
-  * [Axiom](#Axiom)
-  * [ABox](#ABox)
-  * [TBox](#TBox)
-  * [Individual](#Individual)
-  * [Decidability](#Decidability)
-  * [Expressivity](#Expressivity)
-  * [Reasoning](#Reasoning)
+<!-- TOC -->
 
-**Computerized Maintenance Management System (CCMS),BIM ,CIM, GIS modeling**
-- [CMMS](#cmms--computerized-maintenance-management-system-or-software)/ [EAM](#eam)
-    1. [Equipment](#equipment)
-    2. [Urban Object](#urban-object)
-    3. [Equipment park](#equipment-park--fleet--pool)  / pool / fleet 
-    4. [Site](#site)
-    5. [AEC](#aec)
+- [Software engineering](#software-engineering)
+  - [Demo](#demo)
+  - [Need](#need)
+  - [Requirement](#requirement)
+  - [Component](#component)
+  - [Application](#application)
+- [Data Modelling](#data-modelling)
+  - [Data Model](#data-model)
+  - [Model Driven Architecture](#model-driven-architecture)
+- [Ontology](#ontology)
+  - [Conceptualization](#conceptualization)
+  - [Formalization](#formalization)
+  - [Network of Ontologies](#network-of-ontologies)
+  - [Ontology Matching](#ontology-matching)
+- [Semantic Web](#semantic-web)
+  - [Linked Data](#linked-data)
+  - [Semantic Web Stack](#semantic-web-stack)
+- [Description Logic](#description-logic)
+  - [Axiom](#axiom)
+  - [ABox](#abox)
+  - [TBox](#tbox)
+  - [Individual](#individual)
+  - [Decidability](#decidability)
+  - [Expressivity](#expressivity)
+  - [Reasoning](#reasoning)
+- [CMMS : Computerized Maintenance Management System or Software](#cmms--computerized-maintenance-management-system-or-software)
+- [EAM](#eam)
+- [CMMS / EAM differences](#cmms--eam-differences)
+  - [Equipment](#equipment)
+  - [Urban Object](#urban-object)
+  - [Equipment park / fleet / pool](#equipment-park--fleet--pool)
+  - [Site](#site)
+  - [AEC](#aec)
+- [Process](#process)
+  - [BIM - building information modelling](#bim---building-information-modelling)
+  - [CIM - City Information Modelling](#cim---city-information-modelling)
+- [Framework](#framework)
+  - [GIS - geographic information system](#gis---geographic-information-system)
+- [Standard](#standard)
+  - [WFS / WMS](#wfs--wms)
+  - [ThreeDTiles/3DTiles](#threedtiles3dtiles)
+- [Unclassified](#unclassified)
+  - [Features](#features)
+  - [Representation](#representation)
+  - [Symbology](#symbology)
+  - [Semiology / Semiotics](#semiology--semiotics)
+  - [Context](#context)
+  - [Environment](#environment)
+  - [Symbole](#symbole)
+  - [Contextual view](#contextual-view)
+  - [Event](#event)
+  - [Knowledge base](#knowledge-base)
+- [Project/Organizational notions](#projectorganizational-notions)
+  - [Task Force](#task-force)
+  - [Project](#project)
+  - [Research Topic](#research-topic)
 
-- [Process](#process): 
-    1. [BIM](#bim---building-information-modelling)
-    2. [CIM](#cim---city-information-modelling)
-
-- [Conceptual Framework](#conceptual-framework) :
-    1. [GIS](#gis---geographic-information-system)
-
-- [Standard](#standard) :
-    1. [WFS / WMS](#wfs--wms)
-    2. [3DTiles](#3dtiles)
-
-- Other : 
-   1. [Features](#features)
-   2. [Representation](#representation)
-   3. [Symbology](#symbology)
-   4. [Semiology](#semiology--semiotics)
-   5. [Context](#context)
-   6. [Environment](#environment)
-   7. [Symbole](#symbole)
-   8. [Contextual View](#contextual-view)
-   9. [Event](#event)
-   10. [Knowledge-Base](#knowledge-base)
-**Texture in a 3DTiles production context**
-* [Tuile](#Tuile)
-* [Texture](#Texture)
-* [Mesh](#Mesh)
-* [UVs](#UVs)
-* [Vertex](#Vertex)
-* [Atlas de texture](Atlas-de-texture)
-
-**Project/organisational notions**
-* [Project](#Project)
-* [Task Force](#TaskForce)
-* [Research Topic](#ResearchTopic)
+<!-- /TOC -->
 
 ---
-## Definitions
+## Software engineering
 
 ### Demo
 Demo stands as a short for 
 [Technology Demonstration](https://en.wikipedia.org/wiki/Technology_demonstration) that [wikipedia](https://en.wikipedia.org/wiki/Technology_demonstration) 
-defines as "a prototype, rough example [...], put together as proof of concept with the primary purpose of showcasing the possible applications, feasibility, performance and method of an idea for a new technology". 
+defines as "a prototype, rough example \[...\], put together as proof of concept with the primary purpose of showcasing the possible applications, feasibility, performance and method of an idea for a new technology". 
+
+---
 
 ### Need
 **Definition**: a **need** or [feature](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/) is a set of related requirements that allows the user to satisfy a "business" objective or need.
@@ -105,8 +91,8 @@ The key purpose of a need is thus to untangle the initial idea, its implicit/exp
 
 The description of a need should have the following items:
  * **Identifier**: a string of the form `N<integer_need_number>` e.g. `N042`.
- * **User story**: a suggestive one liner description in the form "As a [role], I want to [do something] so that [reason/benefit]".
- * **Beneficiary role**: the role (researcher, developper, operations) that would directly benefit from the realisation of the need. 
+ * **User story**: a suggestive one liner description in the form "As a \[role\], I want to \[do something\] so that \[reason/benefit\]".
+ * **Beneficiary role**: the role (researcher, developer, operations) that would directly benefit from the realization of the need. 
  * **Impact**: choose among critical (project maker), major (would have heavy/significant benefits) or minor (nice to have).
  * **Maturity**: choose among immature, ongoing, mature, complete. (Note: this express the maturity of the need and not of the realization of the need).
  * **Cost evaluation**: some ball park estimation in man weeks or man months for its full realization (requirements, designs, implementation, tests, packaging, integration, documentation).
@@ -118,20 +104,48 @@ The description of a need should have the following items:
 ### Requirement
 **Definition**: a **[requirement](http://pmblog.accompa.com/2009/07/13/features-vs-requirements-requirements-management-basics/)** is a capability that a product must possess or something a product must do in order to ultimately satisfy a customer need.
 
-A requirement **targets a technical audience** as its readers, like engineers, developers, project manager and testers. Requirements might be described with a bias of a particular implementation and must outline and detail exactly **what needs to be delivered** (as a componennt of the product). For example:
+A requirement **targets a technical audience** as its readers, like engineers, developers, project manager and testers. Requirements might be described with a bias of a particular implementation and must outline and detail exactly **what needs to be delivered** (as a component of the product). For example:
  * Requirement 1: "The system (i.e. delivered system or product) shall be able to register a customer item through the specification of the following attributes: an textual ID (20 characters long), comments (2000 characters long) and its retail price (currency)."
  * Requirement 2: "The system shall be able to visualize up to 1024 building (for the 3D model)." 
 
 ---
 
+### Component
+
+**Definition** ([in UML-diagrams](https://www.uml-diagrams.org/component.html)): A 
+component is a class representing a modular part of a system with encapsulated
+content and whose manifestation is replaceable within its environment.
+
+**Definition** ([Wikipedia, UML](https://en.wikipedia.org/wiki/Component_(UML)):
+A component in the Unified Modeling Language represents a modular part of a 
+system that encapsulates the state and behavior of a number of classifiers. Its 
+behavior is defined in terms of provided and required interfaces, is 
+self-contained, and substitutable. 
+
+**Definition** ([Wikipedia, software engineering](https://en.wikipedia.org/wiki/Component-based_software_engineering#Definition_and_characteristics_of_components)):
+An individual software component is a software package, a web service, a 
+web resource, or a module that encapsulates a set of related functions (or data).
+
+---
+
+### Application
+
+**Definition ([Wikipedia, computing](https://en.wikipedia.org/wiki/Application_software)):
+An application program (software application, or application, or app for short)
+is a computer program designed to carry out a specific task other than one
+relating to the operation of the computer itself, typically to be used by 
+end-users.
+
+---
+
 ## Data Modelling
-In *[Klein 1987] H. K. Klein and R. A. Hirschheim, “A Comparative Framework of Data Modelling Paradigms and Approaches,” The Computer Journal, vol. 30, no. 1, pp. 8–15, Jan. 1987, doi: 10.1093/comjnl/30.1.8.* data modelling is defined as:
+In *\[Klein 1987\] H. K. Klein and R. A. Hirschheim, “A Comparative Framework of Data Modelling Paradigms and Approaches,” The Computer Journal, vol. 30, no. 1, pp. 8–15, Jan. 1987, doi: 10.1093/comjnl/30.1.8.* data modelling is defined as:
 > the activity by which a [data model](#Data-Model) is applied to derive a logical organization that is documented in a (conceptual) schema.
 
 In this article 3 data modelling paradigms are identified:
-- *Objectivism* (entity-based approach): "Under this interpretation a [[data model]](#Data-Model) is like a mirror or picture of reality. Reality is a given, 'out there' and made up of discrete chuncks called entities. Entities have properties or attributes. Both entities and their properties have an objective existence..."
-- *Subjectivism* (rule-based approach): "[Rule-based approach] proponents see the main task of data modelling as a formalising the meaning of messages which are to be exchanged among a professional community... All computer data ulimately have to be interpreted in terms of their natural language meaning(s). Hence data can at best convey meaning from someone to someone, but they cannot 'have' any objective meaning."
-- *Eclecticism* (frame-based approach): "... A frame is a particular type of abstraction concept and it suggests how one might arrive at a particular categorisation of phenomena. Frame-based approaches can be used to implement either subjectivist or objectivist interpretations of data, but it is possible to conceive of them as predisposed towards subjectivism, because the difficulty with defining frame contents makes it obvious that there are no objective rules for this. Unlike entities, frames are not perceived to exist 'out there' as objective facts."
+- *Objectivism* (entity-based approach): "Under this interpretation a [[data model]](#Data-Model) is like a mirror or picture of reality. Reality is a given, 'out there' and made up of discrete chunks called entities. Entities have properties or attributes. Both entities and their properties have an objective existence..."
+- *Subjectivism* (rule-based approach): "\[Rule-based approach\] proponents see the main task of data modelling as a formalizing the meaning of messages which are to be exchanged among a professional community... All computer data ultimately have to be interpreted in terms of their natural language meaning(s). Hence data can at best convey meaning from someone to someone, but they cannot 'have' any objective meaning."
+- *Eclecticism* (frame-based approach): "... A frame is a particular type of abstraction concept and it suggests how one might arrive at a particular categorization of phenomena. Frame-based approaches can be used to implement either subjectivist or objectivist interpretations of data, but it is possible to conceive of them as predisposed towards subjectivism, because the difficulty with defining frame contents makes it obvious that there are no objective rules for this. Unlike entities, frames are not perceived to exist 'out there' as objective facts."
 
 Note that the UML models belong to the frame-based data modelling approach. *L. Brink, P. Janssen, W. Quak, and J. Stoter, “Linking spatial data: automated conversion of geo-information models and GML data to RDF,” International Journal of Spatial Data Infrastructures Research, vol. 9, pp. 59–85, Oct. 2014, doi: 10.2902/1725-0463.2014.09.art3.*
 
@@ -141,12 +155,12 @@ In *Herbert Stachowiak. Allgemeine Modelltheorie. Springer-Verlag, Wien and New 
 - Reduction feature: A model only refects a (relevant) selection of the original's properties.
 - Pragmatic feature: A model needs to usable in place of the original with respect to some purpose.
 
-In *[Kühne 2005] T. Kühne, “What is a Model?,” presented at the Language Engineering for Model-Driven Software Development, Dagstuhl, Germany, 2005.*, Kühne elaborates on this definition within the context of software engineering:
+In *\[Kühne 2005\] T. Kühne, “What is a Model?,” presented at the Language Engineering for Model-Driven Software Development, Dagstuhl, Germany, 2005.*, Kühne elaborates on this definition within the context of software engineering:
 > The first two features are covered simultaneously if one speaks of a model as a projection" as this implies both something that is projected (the original) and that some information is lost during the projection. Of course exactly what information is dropped - by an activity called "abstraction" - and what is retained depends on the ultimate purpose the model is going to be used for.
 
 In addition two types of models are defined by Kühne:
-- Token Model: "Elements of a token model capture singular aspects of the original's elements. When using UML, one would use an object diagram to create a token model as the original's elements one is interested in are captured in a one-to-one mapping and are shown with their individual attributes. In UML parlance such models are sometimes referred to as "snapshot models" since they capture a single confguration of a typically highly dynamic system. Other possible names are "representation model" (due to the direct representation character) or "instance model" (since the model elements are instances as opposed to types)."
-- Type Model: "The human mind exploits the power of type models by using object properties (e.g., "four legged, fury, sharp teeth, and stereovision") to classify objects (e.g., as "predator") and drawing conclusions... Most models used in model driven development are type models. In contrast to the singular aspects captured by token models, type models capture the universal aspects of an original's elements."
+- Token Model: "Elements of a token model capture singular aspects of the original's elements. When using UML, one would use an object diagram to create a token model as the original's elements one is interested in are captured in a one-to-one mapping and are shown with their individual attributes. In UML parlance such models are sometimes referred to as "snapshot models" since they capture a single configuration of a typically highly dynamic system. Other possible names are "representation model" (due to the direct representation character) or "instance model" (since the model elements are instances as opposed to types)."
+- Type Model: "The human mind exploits the power of type models by using object properties (e.g., "four legged, fury, sharp teeth, and stereo-vision") to classify objects (e.g., as "predator") and drawing conclusions... Most models used in model driven development are type models. In contrast to the singular aspects captured by token models, type models capture the universal aspects of an original's elements."
 
 **An example of a token model (below) and a type model (above)**
 ![Khune 2005 Model Types](./Pictures/KhuneModelTypes.png)
@@ -173,7 +187,7 @@ Also,
 > ..., the degree to which an ontology specifies a [conceptualization](#conceptualization) depends 
 > (1) on the richness of the domain of discourse;
 > (2) on the richness of the vocabulary chosen;
-> (3) on the axiomatization. In turn, the axiomatization depends on language expressiveness issues 
+> (3) on the axiomatisation. In turn, the axiomatisation depends on language expressiveness issues 
 
 ![Ontology Example](./Pictures/ontology_example.png)
 
@@ -195,9 +209,9 @@ Different languages approach formalization differently. Formal under the context
 Source: [What is an ontology? [Guarnio 2009]](https://link.springer.com/chapter/10.1007/978-3-540-92673-3_0)
 
 ### Network of Ontologies
-Otherwise refered to as an _ontology network_. This is a collection of interlinked ontologies. This is often implemented in systems which require supporting knowledge from different domains of information.
+Otherwise referred to as an _ontology network_. This is a collection of interlinked ontologies. This is often implemented in systems which require supporting knowledge from different domains of information.
 
-The creation of links between ontologies is the definition of relationships (properties) between concepts (or classes) in each ontology. [Ontology matching](#ontology-matching) approachs can be used for defining and verifying these links.
+The creation of links between ontologies is the definition of relationships (properties) between concepts (or classes) in each ontology. [Ontology matching](#ontology-matching) approaches can be used for defining and verifying these links.
 
 There are 3 main types of ontology networks:
 1. Single ontology - A monolithic global ontology is created to describe several domains of knowledge
@@ -323,7 +337,7 @@ For more information on RDF refer to the W3.org [RDF Primer document](https://ww
 #### Web Ontology Language
 Web ontology language (OWL) is a language that can be used to:
 > "explicitly represent the meaning of terms in vocabularies and the relationships between those terms. This representation of terms and their interrelationships is called an [ontology](#ontology)."
-These ontologies are intepretable by computers and thus [reasoners](#reasoning) can be used to inference new relationships between these terms. - [OWL Web Ontology Language Overview](https://www.w3.org/TR/owl-features/)
+These ontologies are interpretable by computers and thus [reasoners](#reasoning) can be used to inference new relationships between these terms. - [OWL Web Ontology Language Overview](https://www.w3.org/TR/owl-features/)
 
 OWL uses the following structures to describe these concepts and relationships:
 * Classes - describes a concept, idea, object, etc.
@@ -352,7 +366,7 @@ SPARQL Protocol and RDF Query Language (SPARQL) 1.1 is a set of specifications t
 3. `ASK` - return True or False based on if the query returns one or more triples or nothing
 4. `DESCRIBE` - return an RDF graph from the endpoint determined by the endpoint itself
 
-Each type of query also takes a `WHERE` statement (except for DESCRIBE where it is optional) composed of [triples](#triple) to restrict the query. Each triple statement must end with a `.`. Triples which share the same subject can use a `;` instead of a period for readability. Varables are prefixed by a `?`.
+Each type of query also takes a `WHERE` statement (except for DESCRIBE where it is optional) composed of [triples](#triple) to restrict the query. Each triple statement must end with a `.`. Triples which share the same subject can use a `;` instead of a period for readability. Variables are prefixed by a `?`.
 
 Example query to find the creation date and termination date of all buildings (based on the CityGML 3.0 conceptual model):
 ```SQL
@@ -374,7 +388,7 @@ See the [SPARQL 1.1 Query Language Specification Document](https://www.w3.org/TR
 A web service that accepts, computes, and returns results from [SPARQL queries](#SPARQL). These often work in conjunction with [Triple Stores](#triple-store).
 
 Example SPARQL Endpoints:
-* [GeoSPARQL (the website, not the SPARQL extention or the ontology)](http://www.geosparql.org/) based on the [Apache Jena Framework](https://jena.apache.org/)
+* [GeoSPARQL (the website, not the SPARQL extension or the ontology)](http://www.geosparql.org/) based on the [Apache Jena Framework](https://jena.apache.org/)
 * [dbpedia](https://dbpedia.org/sparql)
 
 #### Triple Store
@@ -433,12 +447,12 @@ For example:
 FR: **Gestion de Maintenance Assistée par Ordinateur**
 
 
-A Computerized Maintenance Management System (CMMS), also known as Computerized Maintenance Management Information System (CMMIS), is a software package that maintains a computer database of information about an organization's maintenance operations [1]. 
+A Computerized Maintenance Management System (CMMS), also known as Computerized Maintenance Management Information System (CMMIS), is a software package that maintains a computer database of information about an organization's maintenance operations \[1\].
 A CMMS aims to achieve two goals : 
 - to help companies in managing their assets by storing information such as location, position, statistics, model and type ...
 - to help maintenance workers by storing information such as documentation and comprehension of all available information about an asset
 
-According to [2], a CMMS support the following capabilities :
+According to \[2\], a CMMS support the following capabilities :
 - Resource and labor management: Track available employees and equipment certifications. Assign specific tasks and assemble crews. Organize shifts and manage pay rates.
 
 - Asset registry: Store, access and share asset information
@@ -452,11 +466,12 @@ According to [2], a CMMS support the following capabilities :
 - Reporting, analysis and auditing : Analyze information to understand asset availability, performance trends, MRO inventory optimization and other information to support business decisions and gather and organize information for audits.
 
 
+Bibliography: 
+- \[1\] Cato, William; Mobley, Keith (2002). Computer-managed Maintenance Systems: A Step-by-step Guide to Effective Management of Maintenance, Labor, and Inventory. Butterworth-Heinemann. p. 33. ISBN 0-7506-7473-3.
+- \[2\] https://www.ibm.com/topics/what-is-a-cmms
+
 ---
-**Bib**: 
-- [1] Cato, William; Mobley, Keith (2002). Computer-managed Maintenance Systems: A Step-by-step Guide to Effective Management of Maintenance, Labor, and Inventory. Butterworth-Heinemann. p. 33. ISBN 0-7506-7473-3.
-- [2] https://www.ibm.com/topics/what-is-a-cmms
----
+
 ## EAM
 
 From [IBM](https://www.ibm.com/topics/enterprise-asset-management) :
@@ -484,14 +499,13 @@ Also known as Asset, equipment is a technical object belonging to a company and 
 
 FR: **Objet urbain** ou **Mobilier urbain**
 
-According to [1], Urban Object can be defined as "All public or private objects or devices installed in the public space and related to a function or service offered by the community"
+According to \[1\], Urban Object can be defined as "All public or private objects or devices installed in the public space and related to a function or service offered by the community"
 
 In our project, the scope of this term is not enough to regroup all of the assets that a company can own.
 Also, through time, the term evolved and is usually used to refer to street furniture. In order to avoid any confusion, we will not use the term Urban Object in our project.
 
----
-**bib**:
-- [1] Annie Boyer, Élisabeth Rojat-Lefebvre, Aménager les espaces publics. Le mobilier urbain, Paris, éd. du Moniteur, 1994, 327 p. (ISBN 978-2-281-19084-7 et 2-281-19084-6), p. 20
+Bibliography:
+- \[1\] Annie Boyer, Élisabeth Rojat-Lefebvre, Aménager les espaces publics. Le mobilier urbain, Paris, éd. du Moniteur, 1994, 327 p. (ISBN 978-2-281-19084-7 et 2-281-19084-6), p. 20
 ---
 
 ### Equipment park / fleet / pool
@@ -523,7 +537,7 @@ ISO Description :
   - Operational phase of the assets.
   - Security-minded approach to information management.
 
-- ISO 19650:2019 defines BIM as the use of a shared digital representation of a built asset to facilitate design, construction and operation processes to form a reliable basis for decisions.[31]
+- ISO 19650:2019 defines BIM as the use of a shared digital representation of a built asset to facilitate design, construction and operation processes to form a reliable basis for decisions.
 
 Used in the AEC industry, BIM is a process of creation, production, exchange, integration, visualization and exploitation of data during all the life cycle of an AEC construction. A BIM tool will often allow the creation of a digital twin of the construction, containing the geometry, relation and attributes of the object.
 
@@ -531,15 +545,12 @@ Used in the AEC industry, BIM is a process of creation, production, exchange, in
 ### CIM - City Information Modelling
 
 CIM has no official definition to this day.
-It can be seen as an evolution from GIS, where the main difference will be that the object, at a city scale, will evolve from physical object to relationnal object (example : with raster, we only know the place and id of each object). The objective here is to have a similar process as the BIM but for City Object in order to obtain information and relation between object to facilitate analysis, decision making, communication around urbanism.
+It can be seen as an evolution from GIS, where the main difference will be that the object, at a city scale, will evolve from physical object to relational object (example : with raster, we only know the place and id of each object). The objective here is to have a similar process as the BIM but for City Object in order to obtain information and relation between object to facilitate analysis, decision making, communication around urbanism.
  
 ---
 
 ## Framework
 
----
-**bib** : 
----
 ### GIS - geographic information system
 
 FR: **SIG** ou **système d'information géographique**
@@ -561,34 +572,36 @@ A Geographic Information System (GIS) is a computer system that analyzes and dis
 The  OGC  defined  several  Open  Web  Services  for  accessing  geographical  data.The  two  main  existing  servicing  are  the  Web  Feature  Services  (WFS)  and the  Web  Map  Services  (WMS).  Those  services  allows  to provide accesses to features.
 
 ---
-### 3DTiles
+### ThreeDTiles/3DTiles
 
 Cesium : 
 
-3D Tiles is an open specification for sharing, visu-alizing, fusing, and interacting with massive heterogenous 3Dgeospatial  content  across  desktop,  web,  and  mobile  applica-tions.
+3D Tiles is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geo-spatial  content  across  desktop,  web,  and  mobile  applications.
 
 Documentation on 3D Tiles [here](https://github.com/VCityTeam/GMAOBIM/wiki/3D-tiles)
 
 
-## Other : 
+## Unclassified
 
 ### Features
 
-The starting point for modeling of geographic information. Abstraction of a real worldphenomenon [1]
+The starting point for modeling of geographic information. Abstraction of a real world phenomenon \[1\]
 
-"**abstraction of real world phenomena** NOTE: A feature may occur as a type or an instance. Feature type or feature instance should be used when only one is meant.[Victoria Terminology Harmonization Meeting]This class describes how a feature class shall be constructed in an Application Schema. In accordance with the conformance clause of the standard, instances of this class are instanciated as feature classes in an Application Schema" - ISO 19101
+"**abstraction of real world phenomena** NOTE: A feature may occur as a type or an instance. Feature type or feature instance should be used when only one is meant.\[Victoria Terminology Harmonization Meeting\] This class describes how a feature class shall be constructed in an Application Schema. In accordance with the conformance clause of the standard, instances of this class are instantiated as feature classes in an Application Schema" - ISO 19101
 
-In 3D Tiles, an individual component of a tile, such as a 3D model in a Batched 3D Model or a point in a Point Cloud which contains position, appearance, and metadata properties.[2]
+In 3D Tiles, an individual component of a tile, such as a 3D model in a Batched 3D Model or a point in a Point Cloud which contains position, appearance, and metadata properties.\[2\]
+
+Bibliography : 
+- \[1\] The  OpenGIS®  Abstract  Specification  Topic  6:   The  Coverage  Type  and  its  Subtypes - OGC
+- \[2\] [3D Tiles OGC Specification](http://docs.opengeospatial.org/cs/18-053r2/18-053r2.html#7)
 
 ---
-**bib** : 
-- [1] The  OpenGIS®  Abstract  Specification  Topic  6:   The  Coverage  Type  and  its  Subtypes - OGC
-- [2] [3D Tiles OGC Specification](http://docs.opengeospatial.org/cs/18-053r2/18-053r2.html#7)
+
 ### Representation
 
 In database : Data Representation refers to the form in which data is stored, processed, and transmitted
 
-In Cumputers Graphic : Data visualization is an interdisciplinary field that deals with the graphic representation of data, where representation refers to an image, figure, symbol, sign, or geometry that represents a phenomenon, an idea, or a feature.
+In Computers Graphic : Data visualization is an interdisciplinary field that deals with the graphic representation of data, where representation refers to an image, figure, symbol, sign, or geometry that represents a phenomenon, an idea, or a feature.
 
 In order to avoid any confusion in our project, we will use 3D representation for the second definition.
 
@@ -640,15 +653,13 @@ Own definition in CMMS : An object without representations, such as work orders 
 ---
 
 ### Knowledge base
----
 
-A knowledge-based system consists of a knowledge-base representing facts about the world and ways of reasoning about those facts to deduce new facts or highlight inconsistencie[1]
+A knowledge-based system consists of a knowledge-base representing facts about the world and ways of reasoning about those facts to deduce new facts or highlight inconsistencies. \[1\]
+
+Bibliography: 
+- \[1\] Hayes-Roth, Frederick; Donald Waterman; Douglas Lenat (1983). Building Expert Systems. Addison-Wesley. ISBN 0-201-10686-8.
 
 ---
-**bib**: Hayes-Roth, Frederick; Donald Waterman; Douglas Lenat (1983). Building Expert Systems. Addison-Wesley. ISBN 0-201-10686-8.
-
----
-Ici se trouve les différentes notions que j'ai pu aborder lors de la réalisation de mon projet. Il m'est arrivé de nombreuses fois de ne pas comprendre exactement ce que je devais faire car un ou plusieurs mots m'étaient inconnus. Cette page doit servir à rensegner toutes les personnes recherchant du vocabulaire en rappport avec l'informatique graphique. 
 
 #### Tuile
 Une tuile c'est un ensemble d'éléments (ici bâtiments) regroupés et traités ensembles. Ainsi on s'occupe d'une tuile directement au lieu de s'occuper de chaque élément individuellement. Il permet notamment de regrouper les éléments proche et de mieux gérer le parcours d'objet dans l'espace (voir [BVH](https://en.wikipedia.org/wiki/Bounding_volume_hierarchy))
@@ -669,7 +680,7 @@ C'est le nom que l'on donne aux sommets des triangles (souvent se sont des trian
 Un atlas de texture c'est le regroupement de plusieurs textures misent côte à côte dans le but de simplifier l'exploitation de celles-ci par la suite. Il faut faire attention car les UV des sommets ne correspondent plus aux bons pixels de la texture (qui est en fait composée maintenant de plusieurs textures), il faut adapter les proportions grâce à un calcul.
 
 ---
-## Project/Organisational notions
+## Project/Organizational notions
 
 ### Task Force
 <a name="TaskForce"></a>
