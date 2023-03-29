@@ -116,7 +116,7 @@ A requirement **targets a technical audience** as its readers, like engineers, d
 component is a class representing a modular part of a system with encapsulated
 content and whose manifestation is replaceable within its environment.
 
-**Definition** ([Wikipedia, UML](https://en.wikipedia.org/wiki/Component_(UML)):
+**Definition** ([Wikipedia, UML](https://en.wikipedia.org/wiki/Component_(UML))):
 A component in the Unified Modeling Language represents a modular part of a 
 system that encapsulates the state and behavior of a number of classifiers. Its 
 behavior is defined in terms of provided and required interfaces, is 
