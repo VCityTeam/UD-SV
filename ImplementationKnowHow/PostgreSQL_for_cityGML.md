@@ -1,4 +1,29 @@
-# PostgreSQL for cityGML
+# Install 3DCityDB with Docker
+
+Assert that docker is properly installed.
+
+Pull the latest [3DCityDB Image](https://hub.docker.com/r/3dcitydb/3dcitydb-pg) :
+```
+docker pull 3dcitydb/3dcitydb-pg:latest
+```
+Run the image on a chosen port (/!\ assert that this port is not already used by another program):
+
+```
+docker run --name citydb -p $YOURPORT:5432 -d -e POSTGRES_PASSWORD=$YOURPASSWORD 3dcitydb/3dcitydb-pg:latest
+```
+
+You can now use pgAdmin4 to connect to the 3DCityDB and check if its running (both db and user should be by default "postgres")
+
+/!\ Do not use 'localhost' but use your local ip adress to point to the 3DCityDB 
+
+Fill the 3DCityDB using the [3DCityDB/impexp](https://hub.docker.com/r/3dcitydb/impexp) docker :
+
+```
+docker pull 3dcitydb/impexp:latest
+docker run --rm --name impexp -v $PATH_TO_YOUR_REPO_HOLDING_YOUR_DATA:/data 3dcitydb/impexp:latest import -H $YOUR_LOCAL_IP -p $WYOURPORT -d postgres -u postgres -p $YOURPASSWORD /data/$YOURFILE.gml
+```
+
+# Install 3DCityDB with CL
 
 This note explains how to setup PostgreSQL to be able to create cityGML databases, for example in order to run [py3dtilers](https://github.com/VCityTeam/py3dtilers).
 
