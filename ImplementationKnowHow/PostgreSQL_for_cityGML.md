@@ -20,7 +20,7 @@ Fill the 3DCityDB using the [3DCityDB/impexp](https://hub.docker.com/r/3dcitydb/
 
 ```
 docker pull 3dcitydb/impexp:latest
-docker run --rm --name impexp -v $PATH_TO_YOUR_REPO_HOLDING_YOUR_DATA:/data 3dcitydb/impexp:latest import -H $YOUR_LOCAL_IP -p $WYOURPORT -d postgres -u postgres -p $YOURPASSWORD /data/$YOURFILE.gml
+docker run --rm --name impexp -v $PATH_TO_YOUR_REPO_HOLDING_YOUR_DATA:/data 3dcitydb/impexp:latest import -H $YOUR_LOCAL_IP -P $YOURPORT -d postgres -u postgres -p $YOURPASSWORD /data/$YOURFILE.gml
 ```
 
 # Install 3DCityDB with CL
