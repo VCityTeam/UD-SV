@@ -9,7 +9,7 @@ docker pull 3dcitydb/3dcitydb-pg:latest
 Run the image on a chosen port (/!\ assert that this port is not already used by another program):
 
 ```
-docker run --name citydb -p $YOURPORT:5432 -d -e POSTGRES_PASSWORD=$YOURPASSWORD 3dcitydb/3dcitydb-pg:latest
+docker run --name citydb -p $YOURPORT:5432 -d -e POSTGRES_PASSWORD=$YOURPASSWORD -e SRID=$EPSGCODE 3dcitydb/3dcitydb-pg:latest
 ```
 
 You can now use pgAdmin4 to connect to the 3DCityDB and check if its running (both db and user should be by default "postgres")
