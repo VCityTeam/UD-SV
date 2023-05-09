@@ -1,6 +1,6 @@
 
 Below a list of a few [git](https://en.wikipedia.org/wiki/Git) commands/concepts that you should be familiar with when contributing to this project.
-You can learn about them through e.g. [this tutorial](https://www.atlassian.com/git/tutorials) or [that tutorial](https://git-scm.com/docs/gittutorial). 
+You can learn about them through e.g. [the beginner's W3School git tutorial],  [the Atlassian tutorial](https://www.atlassian.com/git/tutorials) or [the official git tutorial](https://git-scm.com/docs/gittutorial). 
 If you happen to discover such commands then we highly recommend you to browse the suggested documentation resources
  * `git [commit](https://git-scm.com/docs/git-commit)`
  * `git [log](https://git-scm.com/docs/git-log)` 
