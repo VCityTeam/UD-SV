@@ -19,7 +19,7 @@ In order to contribute code/info
  * learn how to use a **[debugger](https://en.wikipedia.org/wiki/Debugger)** (depends on the language and the considered IDE)
  * [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) e.g. [Travis](https://github.com/VCityTeam/py3dtilers/blob/master/.travis.yml)
  * Containers, mainly [docker](/Tools/ToolDocker)
- * **coding styles** e.g. [eslint.rc](https://github.com/VCityTeam/UD-Viz-demo/blob/master/DemoFull/.eslintrc.json), for [C++](https://github.com/VCityTeam/VCity/wiki/Coding-Style) or [flake8](https://github.com/VCityTeam/py3dtilers/blob/master/.flake8)
+ * **coding styles** e.g. [eslint.rc](https://github.com/VCityTeam/UD-Viz-demo/blob/master/DemoFull/.eslintrc.json), for [C++]([https://github.com/VCityTeam/VCity/wiki/Coding-Style](https://github.com/VCityTeam/VCity/blob/master/Developers/Coding-Style) or [flake8](https://github.com/VCityTeam/py3dtilers/blob/master/.flake8)
  * When working on [Markdown](https://en.wikipedia.org/wiki/Markdown) based documentation [validate the links and references](DevelopersValidatingMardownLinks.md)
 
 Adopt the best practices
