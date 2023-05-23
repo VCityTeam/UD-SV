@@ -33,7 +33,7 @@ When creating a PR, start the discussion with the following template:
  - [ ] No build warnings raised (Travis, Appveyor)
  - [ ] All continuous integration tests pass (Travis, Appveyor)
  - [ ] Doxygen builds without new warnings
- - [ ] Coding Style(https://github.com/MEPP-team/VCity/wiki/Coding-Style) respected
+ - [ ] Coding Style (https://github.com/VCityTeam/VCity/blob/master/Developers/Coding-Style.md) respected
  - [ ] Changes.md updated
 ```
 Checkbox might have an `N/A` content (in addition to being empty or have an x).
