@@ -37,7 +37,7 @@ Adopt the best practices
    - display your tileset (the one you computed) by configuring configuration file.  
 
 ### Create a release
-- Following this [documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/Doc/Devel/ReleasePublish.md)
+- Following this [documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/Devel/ReleasePublish.md)
 
 FIXME:
  - UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
