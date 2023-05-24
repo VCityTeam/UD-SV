@@ -3,7 +3,7 @@
 Note: [Schema svg source file SVG file](Image/DevelopersGithubCycleProcess.svg)
 
 ### Refrain from cloning the master: fork it instead
-If you intend to contribute to any of the (Github) git repositories of the MUTS project (e.g. MEPP V2) it is **strongly advised to refrain from cloning the master**. [[Master is for integration, not development|http://www.kdgregory.com/index.php?page=scm.git]]. Instead, the recommended workflow goes like:
+If you intend to contribute to any of the (Github) git repositories of the MUTS project (e.g. MEPP V2) it is **strongly advised to refrain from cloning the master**. [Master is for integration, not development](http://www.kdgregory.com/index.php?page=scm.git). Instead, the recommended workflow goes like:
  1. start with a [`fork` of the concerned repository](https://help.github.com/articles/fork-a-repo/)
  1. work on your fork (by first cloning it and then pushing to it)
  1. [create a Pull Request](https://help.github.com/articles/creating-a-pull-request/) (PR)
