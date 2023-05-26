@@ -11,23 +11,23 @@ Main [component diagram](https://www.uml-diagrams.org/component-diagrams.html)
 
 ## Visualization (client side)
 
-<a name="ComponentUD-Viz"></a>[Urban Data Vizualisation (UD-Viz)](https://github.com/MEPP-team/UD-Viz)
+<a name="ComponentUD-Viz"></a>[Urban Data Vizualisation (UD-Viz)](https://github.com/VCityTeam/UD-Viz)
 is an npm (javascript) package based on [iTowns](https://github.com/iTowns/itowns) (in turn based on [ThreeJS](https://threejs.org/)
 itself based on [WebGL](https://en.wikipedia.org/wiki/WebGL) dedicated to the visualization of Urban Data).
 
 ## Data Processing
 
 - <a name="Componentpy3dtilers"></a>[py3dtilers](https://github.com/VCityTeam/py3dtilers): various algorithms computing [3dTiles tilesets](https://github.com/AnalyticalGraphicsInc/3d-tiles)
-- [CityGML2Stripper](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGML2Stripper): a utility that strips a CityGML 2.0 (XML) file from its appearances and generic attributes features
-- [CityGMLBuildingBlender](https://github.com/MEPP-team/UD-Serv/tree/master/Utils/CityGMLBuildingBlender): a utility that merges a set of CityGML into a single CityGML resulting file
-- LibCityProcess: a library [repackaging 3DUse filters](https://github.com/MEPP-team/3DUSE/issues/39) as a separate component
+- [CityGML2Stripper](https://github.com/VCityTeam/UD-Serv/tree/master/Utils/CityGML2Stripper): a utility that strips a CityGML 2.0 (XML) file from its appearances and generic attributes features
+- [CityGMLBuildingBlender](https://github.com/VCityTeam/UD-Serv/tree/master/Utils/CityGMLBuildingBlender): a utility that merges a set of CityGML into a single CityGML resulting file
+- LibCityProcess: a library [repackaging 3DUse filters](https://github.com/VCityTeam/3DUSE/issues/39) as a separate component
 
   - <a name="ComponentUD-ServSplitBuilding"></a>[SplitBuilding](https://github.com/VCityTeam/3DUSE/blob/master/src/utils/cmdline/splitCityGMLBuildings.cxx)
   - <a name="ComponentUD-ServChangeDetection"></a>[ChangeDetection](https://github.com/VCityTeam/3DUSE/blob/master/src/utils/cmdline/extractBuildingsConstructionDemolitionDates.cxx)
 
 Third party components:
 
-- <a name="ComponentUD-ServPy3DTiles"></a>[py3dtiles](https://github.com/MEPP-Team/py3dtiles/) : a fork of [Oslandia's py3dtiles](https://github.com/Oslandia/py3dtiles/) that is a [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) implementation of the [3DTiles data model](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for city geometrical data.
+- <a name="ComponentUD-ServPy3DTiles"></a>[py3dtiles](https://github.com/VCityTeam/py3dtiles/) : a fork of [Oslandia's py3dtiles](https://github.com/Oslandia/py3dtiles/) that is a [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) implementation of the [3DTiles data model](https://github.com/AnalyticalGraphicsInc/3d-tiles) the tiled interchange format for city geometrical data.
 
 ### Data servers (software)
 
