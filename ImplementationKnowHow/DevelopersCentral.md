@@ -39,7 +39,3 @@ Adopt the best practices
 ### Create a release
 - Following this [documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/Devel/ReleasePublish.md)
 
-FIXME:
- - UD-SV proposes some [online demos](http://rict2.liris.cnrs.fr/UD-Viz/UD-Viz-Core/examples/DemoStable/Demo.html). 
- - Try to [install them](https://github.com/VCityTeam/UD-SV/tree/master/Install) on your local desktop.
-
