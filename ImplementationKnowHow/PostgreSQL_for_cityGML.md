@@ -54,7 +54,7 @@ If your PostgreSQL password isn't set yet, launch pgAdmin4 to set it.
 _Note_: To be able to use the `psql` command in Windows shell, add the `bin` folder path (for example _C:\Program Files\PostgreSQL\10\bin_) in PATH environmental variable. You can now use the `psql -U postgres <...>` commands on Windows.
 
 ## 2. Create a 3DCityDB database
-_Warning_: Java must [installed and setted](https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html) to continue.
+_Warning_: Java JDK version 11 or higher must [installed and setted](https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html) to continue.
 
 Download and install [3DCityDB](https://www.3dcitydb.org/3dcitydb/downloads/).
 
