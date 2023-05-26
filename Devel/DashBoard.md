@@ -1,4 +1,4 @@
-### Components
+### [Components](../Vocabulary/Readme.md#component)
 | Badge | Component | Docker Container |
 |------:|-----------|------------------|
 | [![Build status](https://travis-ci.com/VCityTeam/3DUSE.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/3DUSE)| [3DUse](https://github.com/VCityTeam/3DUSE) | :grey_question: |
@@ -12,7 +12,7 @@
 |[![Build status](https://app.travis-ci.com/VCityTeam/GeoVolume-Server.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/GeoVolume-Server)| [GeoVolume-Server](https://github.com/VCityTeam/GeoVolume-Server) | [![Build Status](https://app.travis-ci.com/VCityTeam/GeoVolume-Server-docker.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/GeoVolume-Server-docker) [GeoVolume-Server-docker](https://github.com/VCityTeam/GeoVolume-Server-docker) |
 
 
-### Demos/Applications
+### [Demos/Applications](../Vocabulary/Readme.md#application)
 | Badge |   Demo  | Docker Container |
 |------:|---------|------------------|
 |[![Build status](https://travis-ci.com/VCityTeam/UD-Viz-Template.svg?branch=master)](https://app.travis-ci.com/github/VCityTeam/UD-Viz-Template) | [UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template) |[![Build status](https://travis-ci.com/VCityTeam/UD-Viz-Template-docker.svg?branch=main)](https://app.travis-ci.com/github/VCityTeam/UD-Viz-Template-docker) [UD-Viz-Template-docker](https://github.com/VCityTeam/UD-Viz-Template-docker) |
