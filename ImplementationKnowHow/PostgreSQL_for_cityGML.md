@@ -66,7 +66,13 @@ Select your database and open the `Query tool`.
 
 ![image](https://user-images.githubusercontent.com/32875283/154266657-0bc83528-f30c-4fe0-96e2-12b36e0ba85f.png)
 
-Create `postgis` and `postgis_raster` extensions. Execute the query.
+Create `postgis` and `postgis_raster` extensions. Execute the query :
+```pgsql
+create extension postgis;
+create extension postgis_raster;
+```
+
+And in the Query Editor :
 
 ![image](https://user-images.githubusercontent.com/32875283/141961178-9fe74cab-2988-499e-a501-25247a6a81fa.png)
 
