@@ -144,7 +144,7 @@ Save your file and open it in a browser.
 
 To add other layers (elevation, ortho-images, etc) see the [full iTowns tutorial](https://mgermerie.github.io/itowns/docs/out/#tutorials/3dTiles-mesh-data).
 
-## UD-Viz
+## UD-Viz (⚠️Outdated Doc FIXME or go to [readme](https://github.com/VCityTeam/UD-Viz-Template#readme))
 
 ___Note 1__: Visualizing 3DTiles in UD-Viz requires [NodeJS](https://nodejs.org/en/download/)_  
 ___Note 2__: your 3DTiles must be in the [EPSG:3946](https://epsg.io/3946)_
