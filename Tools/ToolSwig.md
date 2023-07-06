@@ -9,8 +9,12 @@ We prefer using [SWIG](https://en.wikipedia.org/wiki/SWIG) rather than [Cython](
 - it's more flexible with [a support of a variety of high-level programming languages](https://www.swig.org/compare.html).
 - it's easy to use, because it's generated all wrapping files based on a simple interface file.
 
-## Other Links
+## SWIG Tutorial
 - SWIG repository : https://github.com/swig/swig/tree/master
 - Full documentation on SWIG's support of Python : https://www.swig.org/Doc4.1/SWIGDocumentation.html#Python
 - List of examples showing several use cases : https://github.com/swig/swig/tree/master/Examples/python
 - Step-by-step wrapping tutorial : https://dridk.me/swig.html
+
+## Cython Tutorial
+- Basic tutorial : https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html
+- Use C++ in Cython : https://cython.readthedocs.io/en/latest/src/userguide/wrapping_CPlusPlus.html
