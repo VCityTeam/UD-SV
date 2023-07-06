@@ -19,4 +19,4 @@ We prefer using [SWIG](https://en.wikipedia.org/wiki/SWIG) rather than [Cython](
 - [Hello World](https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html)
 - [Use C++ in Cython](https://cython.readthedocs.io/en/latest/src/userguide/wrapping_CPlusPlus.html)
 - [Use CMake with Cython](https://github.com/kmhsonnenkind/cmake-cython-example)
-- [Solving the C++/Python bindings challenge with Cython](https://github.com/kmhsonnenkind/cmake-cython-example)
+- [Solving the C++/Python bindings challenge with Cython](https://dmtn-013.lsst.io/#solving-the-c-python-bindings-challenge-with-cython)
