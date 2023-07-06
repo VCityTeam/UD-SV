@@ -10,12 +10,13 @@ We prefer using [SWIG](https://en.wikipedia.org/wiki/SWIG) rather than [Cython](
 - it's easy to use, because it's generated all wrapping files based on a simple interface file.
 
 ## SWIG Links
-- SWIG repository : https://github.com/swig/swig/tree/master
-- Full documentation on SWIG's support of Python : https://www.swig.org/Doc4.1/SWIGDocumentation.html#Python
-- List of examples showing several use cases : https://github.com/swig/swig/tree/master/Examples/python
-- Step-by-step wrapping tutorial : https://dridk.me/swig.html
+- [SWIG repository](https://github.com/swig/swig/tree/master)
+- [Full documentation on SWIG's support of Python](https://www.swig.org/Doc4.1/SWIGDocumentation.html#Python)
+- [List of examples showing several use cases](https://github.com/swig/swig/tree/master/Examples/python)
+- [Step-by-step wrapping tutorial](https://dridk.me/swig.html) 
 
 ## Cython Links
-- Hello World : https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html
-- Use C++ in Cython : https://cython.readthedocs.io/en/latest/src/userguide/wrapping_CPlusPlus.html
-- Use CMake with Cython : https://github.com/kmhsonnenkind/cmake-cython-example
+- [Hello World](https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html)
+- [Use C++ in Cython](https://cython.readthedocs.io/en/latest/src/userguide/wrapping_CPlusPlus.html)
+- [Use CMake with Cython](https://github.com/kmhsonnenkind/cmake-cython-example)
+- [Solving the C++/Python bindings challenge with Cython](https://github.com/kmhsonnenkind/cmake-cython-example)https://github.com/kmhsonnenkind/cmake-cython-example
