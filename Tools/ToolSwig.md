@@ -16,5 +16,5 @@ We prefer using [SWIG](https://en.wikipedia.org/wiki/SWIG) rather than [Cython](
 - Step-by-step wrapping tutorial : https://dridk.me/swig.html
 
 ## Cython Tutorial
-- Basic tutorial : https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html
+- Hello World : https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html
 - Use C++ in Cython : https://cython.readthedocs.io/en/latest/src/userguide/wrapping_CPlusPlus.html
