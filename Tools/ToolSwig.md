@@ -18,3 +18,4 @@ We prefer using [SWIG](https://en.wikipedia.org/wiki/SWIG) rather than [Cython](
 ## Cython Links
 - Hello World : https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html
 - Use C++ in Cython : https://cython.readthedocs.io/en/latest/src/userguide/wrapping_CPlusPlus.html
+- Use CMake with Cython : https://github.com/kmhsonnenkind/cmake-cython-example
