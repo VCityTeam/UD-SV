@@ -13,7 +13,8 @@ We prefer using [SWIG](https://en.wikipedia.org/wiki/SWIG) rather than [Cython](
 - [SWIG repository](https://github.com/swig/swig/tree/master)
 - [Full documentation on SWIG's support of Python](https://www.swig.org/Doc4.1/SWIGDocumentation.html#Python)
 - [List of examples showing several use cases](https://github.com/swig/swig/tree/master/Examples/python)
-- [Step-by-step wrapping tutorial](https://dridk.me/swig.html) 
+- [Step-by-step wrapping tutorial](https://dridk.me/swig.html)
+- [SWIG and CMake example](https://iamsorush.com/posts/cpp-csharp-swig/)
 
 ## Cython Links
 - [Hello World](https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html)
