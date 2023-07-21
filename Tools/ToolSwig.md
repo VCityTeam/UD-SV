@@ -10,6 +10,7 @@ We prefer using [SWIG](https://en.wikipedia.org/wiki/SWIG) rather than [Cython](
 - it's easy to use, because it's generated all wrapping files based on a simple interface file.
 
 ## SWIG Links
+- [Install SWIG](../Install/InstallSwig.md)
 - [SWIG repository](https://github.com/swig/swig/tree/master)
 - [Full documentation on SWIG's support of Python](https://www.swig.org/Doc4.1/SWIGDocumentation.html#Python)
 - [List of examples showing several use cases](https://github.com/swig/swig/tree/master/Examples/python)
