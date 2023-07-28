@@ -37,5 +37,5 @@ Adopt the best practices
    - display your tileset (the one you computed) by configuring configuration file.  
 
 ### Create a release
-- Following this [documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/Devel/ReleasePublish.md)
+- Following this [documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/ReleasePublish.md)
 
