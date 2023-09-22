@@ -57,7 +57,7 @@ If not, you can consult the [SWIG manual](https://www.swig.org/Doc4.0/SWIGDocume
 ### For Windows
 1. Download SWIG for Windows from SWIG [Download Page](https://sourceforge.net/projects/swig/files/swigwin/swigwin-4.0.2/). Unzip the files after downloading.
 
-2. Add the SWIG folder in your environments variables under SYSTEM PATH.
+2. Add the SWIG folder in your system environments variables in Path.
 
 3. Open a terminal and check your swig version :
 ```
