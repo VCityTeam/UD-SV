@@ -72,6 +72,6 @@ def main():
 
 ### Conclusion
 
-Even if gltf_Blender_IO has the best support for glTF and its extensions in Python, the lib isn't designed to be used in a Python package. The API isn't dev friendly and `bpy` limits the Python version. GlTf_Blender_IO would require some refactos and contributions before we could use it as a package in Py3DTiles.
+Even if gltf_Blender_IO has the best support for glTF and its extensions in Python, the lib isn't designed to be used in a Python package. The API isn't dev friendly (no doc, tricky imports and arguments) and `bpy` limits the Python version. GlTf_Blender_IO would require some refactos and contributions before we could use it as a package in Py3DTiles.
 
 ## Pygltflib
