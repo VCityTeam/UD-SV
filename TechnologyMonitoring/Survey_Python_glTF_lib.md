@@ -1,6 +1,6 @@
 # GlTF lib for Python
 
-3D Tiles use glTF to store their geometry. [Py3DTiles](https://gitlab.com/Oslandia/py3dtiles) cerates this glTF part, but using a glTF library would ensure better support for glTF writing and glTF extensions. [An issue exists on Py3DTiles about this survey](https://gitlab.com/Oslandia/py3dtiles/-/issues/184).
+3D Tiles use glTF to store their geometry. [Py3DTiles](https://gitlab.com/Oslandia/py3dtiles) creates this glTF part, but using a glTF library would ensure better support for glTF writing and glTF extensions. [This survey continues Oslandia's survey](https://gitlab.com/Oslandia/py3dtiles/-/issues/184).
 
 ## glTF_Blender_IO
 
