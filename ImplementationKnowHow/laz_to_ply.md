@@ -1,19 +1,28 @@
 # LAZ to PLY conversion
 
-## Using pdal
+## Using pdal (Point Data Abstraction Library)
 
-Clone pdal docker:
+First pull the [pdal](https://pdal.io/en/) docker
+[image (pdal/pdal)](https://hub.docker.com/r/pdal/pdal/tags/#!)
+with
 
 ```bash
 docker pull pdal/pdal
 ```
 
-Convert LAZ to PLY using `translate`:
+Then convert LAZ to PLY using
+- the `pdal translate` command that runs the 
+  [translate method](https://pdal.io/en/2.6.0/apps/translate.html) method
+- that takes its input as first argument and the second argument as its output.
 
-```
-docker run -v //G//Data//://data pdal/pdal pdal translate /data/my_pointcloud.laz /data/my_pointcloud.ply
-```
+Example:
 
-- `//G//Data//://data` mount the (Windows) path `G:/Data` in `/data`
-- `pdal/pdal` is the docker image to run
-- `pdal translate` runs the [translate method](https://pdal.io/en/2.6.0/apps/translate.html), the first argument is the input and the second argument is the output. If no option is given, PDAL infers input/output type from file nme extension.
+* On windows
+  ```bash
+  docker run -v //G//Data//://data pdal/pdal pdal translate /data/my_pointcloud.laz /data/my_pointcloud.ply
+  ```
+  where `//G//Data//://data` mounts the (Windows) path `G:/Data` in `/data`
+* On Un*x
+  ```bash
+  docker run -v `pwd`:/data pdal/pdal pdal translate /data/my_pointcloud.laz /data/my_pointcloud.ply
+  ```
