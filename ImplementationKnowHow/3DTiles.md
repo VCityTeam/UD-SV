@@ -1,10 +1,10 @@
 ## Notes
 
 ### Concerning CRS (Coordinates Reference System)
-3dTiles does not allow to specify a (geographical) projection system. Most often it 
-implicitly uses [WGS84](https://docs.ogc.org/cs/18-053r2/18-053r2.html#25) but the
-responsability of tracking the CRS belongs to the user and is carried as metadata
-(has to be stored outside of a 3DTiles file).
+3dTiles format does not allow to specify a [CRS (Coordinate Reference System)](https://docs.ogc.org/cs/18-053r2/18-053r2.html#25).
+Although it most often implicitly uses [WGS84](https://docs.ogc.org/cs/18-053r2/18-053r2.html#25)
+as coordinate reference system, the responsability of tracking the CRS belongs to the user 
+and is carried as metadata (has to be "stored" outside of a 3DTiles file).
 
 For examle Cesium conventionaly considers that all the 3DTiles it uses should be 
 implicitely refer to [EPSG4978](https://epsg.io/4978). 
