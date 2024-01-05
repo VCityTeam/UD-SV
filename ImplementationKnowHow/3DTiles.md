@@ -13,7 +13,9 @@ implicitely refer to [EPSG4978](https://epsg.io/4978).
 - [iTowns and 3DTiles](iTowns3Dtiles.md): quick noes on what you'll need to 
   know when working-with/using 3DTiles in an [iTowns context](http://www.itowns-project.org/)
 - [Compression within 3Dtiles](3DTilesCompression.md): quick notes on how compression is
-  supported/used within 3DTiles/
+  supported/used within 3DTiles.
+- [Geomtric error within 3DTiles](3DTiles_GeometricError.md): quick notes on how geometric
+  error can be dealt with when using 3DTiles.
 - [Visualize 3DTiles](Visualize3DTiles.md)
 
 ## References:
