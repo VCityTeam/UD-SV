@@ -39,5 +39,5 @@ Once we have our data organization and know which city object must be batched to
 
 First, we select all the city objects of the tile to create in the database. Each tuple retrieved from the database will ultimately be a selectable element in the viewing application, so the SQL request has to be carefully crafted to allow the necessary granularity.
 
-Afterwards, we use py3dtiles to generate the tile files. py3dtiles offers functions to convert data from a geospatial database to a 3D Tiles formats.
+Afterwards, we use py3dTilers to generate the tile files. [py3dtilers](https://github.com/VCityTeam/py3dtilers) offers functions to convert data from a geospatial database to a 3D Tiles formats.
 
