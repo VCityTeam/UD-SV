@@ -10,6 +10,9 @@ For examle Cesium conventionaly considers that all the 3DTiles it uses should be
 implicitely refer to [EPSG4978](https://epsg.io/4978). 
 
 ## Links
+- [iTowns and 3DTiles](iTowns3Dtiles.md): a quick introduction of what you'll need to 
+  know when working-with/using 3DTiles in an [iTowns context](http://www.itowns-project.org/)
+
 - [Visualize 3DTiles](Visualize3DTiles.md)
 
 ## References:
