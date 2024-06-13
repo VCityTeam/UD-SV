@@ -28,6 +28,9 @@ Adopt the best practices
  * Place and maintain some gentle pressure on the guilty parties when [asking for your pull request (PR) acceptation](https://github.com/VCityTeam/UD-SV/blob/master/ImplementationKnowHow/GitWorflow/DevelopersGithubCycle.md#pull-request-pr-acceptance-policy)
  * Note: when defining a link in markdown only use relative path for references (don't write `[link-name](/b)` but e.g. `[link-name](../../b)`) 
 
+> [!TIP]
+> If contributing to [UD-Viz](https://github.com/VCityTeam/UD-Viz/tree/master), make sure to take a look at the [developer documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/Developers.md)!
+
 ### Install the demos
  * If you need to compute a 3Dtiles tile-set
    - Understand what [py3dTilers](https://github.com/VCityTeam/py3dtilers) is made for
@@ -35,9 +38,6 @@ Adopt the best practices
    - Alternatively understand is your work on Lyon métropole opendata [get acquainted with PythonCallingDocker](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Computations/3DTiles/LyonTemporal/PythonCallingDocker#readme): for example try to [compute this tile-set](https://github.com/VCityTeam/UD-Reproducibility/tree/master/Demos/ValleeChimie#1-compute-correct-data-for-your-demo)
  * Clone, install and run the [UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template)
    - display your tileset (the one you computed) by configuring configuration file.  
-
-> [!TIP]
-> If contributing to [UD-Viz](https://github.com/VCityTeam/UD-Viz/tree/master), take a look at the [developer documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/Developers.md)!
 
 ### Create a release
 - Following this [documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/ReleasePublish.md)
