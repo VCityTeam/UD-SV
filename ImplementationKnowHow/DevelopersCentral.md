@@ -36,6 +36,9 @@ Adopt the best practices
  * Clone, install and run the [UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template)
    - display your tileset (the one you computed) by configuring configuration file.  
 
+> [!TIP]
+> If contributing to [UD-Viz](https://github.com/VCityTeam/UD-Viz/tree/master), take a look at the [developer documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/Developers.md)!
+
 ### Create a release
 - Following this [documentation](https://github.com/VCityTeam/UD-Viz/blob/master/docs/static/ReleasePublish.md)
 
