@@ -56,6 +56,7 @@ python BiblioTools3.2/all_in_one.py -i BiblioTools/rawdata -o BiblioTools/
 # For this test answer 'y' to user input and '1' for cluster sizes when prompted
 # Once the json/gephi files are extracted at the publication level input 'n' to end the script 
 python BiblioTools3.2/biblio_coupling.py -i bibliotools -v
+mkdir BiblioTools/server
 cp -r BiblioTools3.2/BIBLIOMAPS_myprojectname/* BiblioTools/server
 cp -r BiblioTools/freqs BiblioTools/server/data
 cp -r BiblioTools/jsonfiles/* BiblioTools/server/data
@@ -68,6 +69,13 @@ python -m http.server -d BiblioTools/server/
 
 Navigate to [localhost:8000](http://localhost:8000) to see the visualization
 
+> [!WARNING]
+> After initial setup BC pages sometimes error with the following message:
+> ```
+> Uncaught ReferenceError: Awesomplete is not defined at bibliomap_BCclusters.js:28:19
+> ```
+> **Reloading the page** after a few seconds sometimes fixes this issue.
+> This seems to be because the `awesomplete.js` file is loaded asyncronously (see line 11 of the [BCpublis.html](data\bibliotools\server\BCpublis.html) file).
 
 > [!IMPORTANT]
 > To have access to Bibliographic Coupling at the publication level, uncomment line 14 of the [headermenu.html](./BiblioTools/server/headermenu.html) file.
@@ -130,21 +138,6 @@ Groups records into topics (clusters) and subtopicsbased on the shared reference
   - number of publications per year and if a year had above or below the average number of publications
 
 <img src="./Images/bc-clusters.png" width="800px"/>
-
-> [!WARNING]
-> After initial setup this page errored with the following message:
-> ```
-> Uncaught ReferenceError: Awesomplete is not defined at bibliomap_BCclusters.js:28:19
-> Uncaught TypeError: Cannot set properties of undefined (setting 'list')
->   at update (bibliomap_BCclusters.js:185:19)
->   at bibliomap_BCclusters.js:164:5
->   at d3.min.js:1:11180
->   at Object.<anonymous> (d3.min.js:1:10988)
->   at Object.t (d3.min.js:1:1368)
->   at XMLHttpRequest.u (d3.min.js:1:9850)
-> ```
-> This seems to be because the `awesomplete.js` file is loaded asyncronously (see line 11 of the [BCpublis.html](data\bibliotools\server\BCpublis.html) file).
-> Reloading the page after a few minutes sometimes fixes this issue.
 
 ### BC Network
 
