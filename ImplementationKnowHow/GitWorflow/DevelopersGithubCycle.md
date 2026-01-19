@@ -51,3 +51,22 @@ A given Pull Request (PR) is handled over to a PR validator that will evaluate t
 The PR submitter/validator exchanges will be written on github's PR submission interface. It is nevertheless always encouraged, whenever if possible, to first exchange through informal conversations/discussions prior to leaving some written traces of the work to be done (in the form of short concrete items).
 
 In order to avoid any [possible conflict of interest](https://en.wikipedia.org/wiki/Conflict_of_interest), and for a given PR, the submitter and the validator shall not be the same person.
+
+### Issue Types
+There are currently 6 issue types used in the VCityTeam github organisation :
+<img width="952" height="491" alt="image" src="https://github.com/user-attachments/assets/97ad0b46-b4e2-4ab9-a686-9f5856f3d436" />
+
+While the level of granularity of an issue can sometimes be vague, the following hierarchy is proposed for creating parent-child relationships between issues.
+Notably, a `Study` is a very research-oriented piece of work at the same level of granularity as a `Feature`.
+`Requirements` can be used for reporting needs as a project sees fit.
+Use these issue types as your project needs.
+
+```mermaid
+classDiagram
+    Requirement *-- Feature
+    Requirement *-- Study
+    Feature *-- Task
+    Feature *-- Bug
+    Feature *-- Spike
+    Study *-- Spike
+```
