@@ -1,0 +1,52 @@
+name: Check Markdown Links
+
+on:
+  schedule:
+    - cron: "0 20 * * THU"
+  workflow_dispatch:
+
+jobs:
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Check npm version
+        run: npm --version
+
+      - name: Install remark-cli and remark-validate-links
+        run: npm install --global remark-cli remark-validate-links
+
+      - name: Check for whitespace in markdown filenames
+        run: |
+          problems=$(find . -name "*.md" | grep " " | wc -l)
+          if [ "$problems" -gt 0 ]; then
+            echo "The following files have whitespace in their name: fix that !"
+            find . -name "*.md" | grep " "
+            exit 1
+          fi
+
+      - name: Replace absolute markdown links with full URLs
+        # When an absolute markdown link is found (e.g. "/Readme.md")
+        # replace it (overwrite the file) with a full URL (referencing
+        # the repository, refer to BASE_URI variable) link 
+        # (e.g "https://github.com/VCityTeam/UD-SV/blob/master/Readme.md")
+        run: |
+          BASE_URI='https://github.com/VCityTeam/UD-SV/blob/master'
+          files=$(find . -name '*.md')
+          for f in $files; do
+            grep -E '\[{1}.*\]{1}\({1}/{1}.*\){1}' "$f" && sed -i "s|](/|]($BASE_URI/|g" "$f"
+          done
+          echo done
+
+      - name: Validate markdown links
+        # use output variable according to this discussion:
+        # https://github.com/orgs/community/discussions/83102
+        id: validate_md
+        run: remark -q -f -u validate-links .
