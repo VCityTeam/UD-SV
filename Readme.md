@@ -1,6 +1,9 @@
 # Urban Data Services and Visualization (UD-SV) project
 
 <a name="top"></a>
+
+[![Check Markdown Links](https://github.com/VCityTeam/UD-SV/actions/workflows/check-links.yml/badge.svg)](https://github.com/VCityTeam/UD-SV/actions/workflows/check-links.yml)
+
 **Quick links**
 
 * [Online demos](https://projet.liris.cnrs.fr/vcity/demos/)
