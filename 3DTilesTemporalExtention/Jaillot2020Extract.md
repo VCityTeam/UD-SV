@@ -5,7 +5,7 @@
 
 ## 3.2.1 3D Tiles logical model and temporal extension
 
-[Figure 3.5](#Figure_35) presents both Logic3DGeo and Logic4DCity. Logic3DGeo (in white)
+[Figure 3.5](#figure-35) presents both Logic3DGeo and Logic4DCity. Logic3DGeo (in white)
 is a proposition of logical model of the 3D Tiles standard. It depicts the current
 state of 3D Tiles (version 1.0) [Ope19] and covers all the data modelling part
 of the specification. Logic3DGeo is a specification of Gen3DGeo. Logic4DCity is a
@@ -72,7 +72,7 @@ This technical specification is an extension of 3D tiles. We name it 3DTiles_tem
 ## 3.2.2 Technical specification of the temporal extension
 
 3D Tiles contains concepts named extension and extra that allow to extend the
-core specification. [Figure 3.6](#Figure_36) is a proposition of description of these concepts.
+core specification. [Figure 3.6](#figure-36) is a proposition of description of these concepts.
 Extension makes it possible to extend 3D Tiles entities. It has a name and it is
 composed of an application-specific Object. An Object can be composed of other
 Objects and/or Attributes. Extensions can be aggregated in an ExtensionSet. An
@@ -126,7 +126,7 @@ urban evolution visualization and apply them for the visualization of a time-evo
 
 We propose an open-source web prototype allowing to create, deliver and visualize
 time-evolving 3D city models, implementing the 3DTiles_temporal extension. The
-software architecture of this prototype is represented in [figure 3.7.](#figure_37) In this section,
+software architecture of this prototype is represented in [figure 3.7.](#figure-37) In this section,
 we only give an overview of this architecture to facilitate understanding of the
 evaluation of our contributions. A more detailed view of the software architecture
 and implementations are presented in chapter 5.
