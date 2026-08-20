@@ -57,13 +57,13 @@ is inside its Period.
 
 <img src="https://user-images.githubusercontent.com/23373264/159284795-f6f7b5a7-364c-4f4e-9cdd-4197237f5166.png" alt="Figure 3.5" width="1400">
 
-<a name="#Figure_3_5"></a>
+### Figure 3.5
 
-**Figure 3.5.**: Logic4DCity : logical model for delivering time-evolving 3D city models on the
+_Logic4DCity : logical model for delivering time-evolving 3D city models on the
 web based on extending 3D Tiles. A logical model of 3D Tiles, Logic3DGeo , is
 proposed in white and the temporal extension is represented in gray. The recur-
 sive composition association of Geographic Feature (thick line) is a conceptual
-representation of the batch_table_hierarchy extension of 3D Tiles.
+representation of the batch_table_hierarchy extension of 3D Tiles._
 
 In section 3.2.2, we propose the technical specification of the temporal formalization.
 This technical specification is an extension of 3D tiles. We name it 3DTiles_temporal
@@ -84,9 +84,9 @@ ExtensionSet and an ExtraSet.
 
 <img src="https://user-images.githubusercontent.com/23373264/159288540-d64002f1-ec29-4932-b738-2682f9dc8898.png" alt="Figure 3.6" width="350">
 
-<a name="#Figure_3_6"></a>
+### Figure 3.6
 
-**Figure 3.6.**: Description of the concepts for extending 3D Tiles.
+_Description of the concepts for extending 3D Tiles._
 
 The 3DTiles_temporal extension specification is described with JSON schemas, which
 we make [available online](https://doi.org/10.5281/zenodo). It uses the Extension concept. This way, the core of the
@@ -133,10 +133,10 @@ and implementations are presented in chapter 5.
 
 <img src="https://user-images.githubusercontent.com/23373264/159288646-9be898e1-ad31-4e3b-9409-9462deb117ce.png" alt="Figure 3.7" width="700">
 
-<a name="#figure_3_7"></a>
+### Figure 3.7
 
-**Figure 3.7.**: Software architecture for creating, delivering and visualizing time-evolving 3D
-city models, implementing the 3DTiles_temporal extension.
+_Software architecture for creating, delivering and visualizing time-evolving 3D
+city models, implementing the 3DTiles_temporal extension._
 
 [py3dtiles](https://archive.softwareheritage.org/swh:1:rev:27c1ec918630215002da5e2115fa5d3775ed5210;origin=https://github.com/Oslandia/py3dtiles/) allows to create 3D Tiles datasets from various sources (e.g. 3DCi-
 tyDB [Yao+18], LAS files [PRS11], etc.). We contributed to the implementa-
