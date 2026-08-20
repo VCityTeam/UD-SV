@@ -49,4 +49,4 @@ jobs:
         # use output variable according to this discussion:
         # https://github.com/orgs/community/discussions/83102
         id: validate_md
-        run: remark -q -f -u validate-links .
+        run: remark -q -f -i ‎.remarkignore -u validate-links .
